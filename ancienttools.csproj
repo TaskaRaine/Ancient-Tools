@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFA0BC49-33EA-4605-B57D-D37D6E2BB6EC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AncientTools</RootNamespace>
+    <AssemblyName>ancienttools</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(ProjectDir)\bin</OutputPath>
+    <IntermediateOutputPath>..\..\obj\Debug\ancienttools\</IntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(ProjectDir)\bin</OutputPath>
+    <IntermediateOutputPath>..\..\obj\Release\ancienttools\</IntermediateOutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VintagestoryAPI">
+      <HintPath>H:\VintageStory 1.14.10\VintagestoryAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VSSurvivalMod">
+      <HintPath>H:\VintageStory 1.14.10\Mods\VSSurvivalMod.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VSEssentials">
+      <HintPath>H:\VintageStory 1.14.10\Mods\VSEssentials.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VSCreativeMod">
+      <HintPath>H:\VintageStory 1.14.10\Mods\VSCreativeMod.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>H:\VintageStory 1.14.10\Lib\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\ancienttools\credits.txt" />
+    <Content Include="assets\ancienttools\sounds\block\mortargrind.ogg" />
+    <Content Include="assets\ancienttools\textures\block\mortar\mortar_grain.png" />
+    <Content Include="modinfo.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\ancienttools\config\handbook\guide.json" />
+    <None Include="assets\ancienttools\itemtypes\pestle.json" />
+    <None Include="assets\ancienttools\lang\en.json" />
+    <None Include="assets\ancienttools\recipes\grid\tools\pestle.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resource_game_bone.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resource_game_rawcassava_dried.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resource_default.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resource_game_grain_amaranth.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resource_game_grain_rice.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resource_game_grain_rye.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resource_game_grain_spelt.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resource_game_grain_flax.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resource_game_grain_sunflower.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resource_game_ore_borax.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resource_game_ore_sulfur.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resource_game_ore_sylvite.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resource_game_stone_halite.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resource_game_stone_limestone.json" />
+    <None Include="assets\ancienttools\shapes\item\pestle.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\ancienttools\shapes\entity\" />
+    <Folder Include="src\entities\" />
+    <Folder Include="src\items\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\ancienttools\blocktypes\mortar.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\ancienttools\recipes\grid\mortar.json" />
+    <Compile Include="src\blockentity\BEMortar.cs" />
+    <Compile Include="src\blockentity\RegisterBlockEntities.cs" />
+    <Compile Include="src\blocks\Mortar.cs" />
+    <Compile Include="src\blocks\RegisterBlocks.cs" />
+    <Compile Include="src\utility\ParticleColor.cs" />
+    <Compile Include="src\utility\Init.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+copy "$(TargetPath)" "$(ProjectDir)" 
+copy "$(TargetDir)\$(TargetName).pdb" "$(ProjectDir)" 
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

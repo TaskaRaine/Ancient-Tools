@@ -1,0 +1,22 @@
+﻿{
+	ingredientPattern: "  RRS RR ",
+	width: 3,
+	height: 3,
+	ingredients: {
+		"R": { 
+			type: "item", 
+			name: "rock",
+			allowedVariants: ["andesite", "granite", "basalt", "peridotite"],
+			code: "game:stone-*" 
+		},
+		"S": { 
+			type: "item", 
+			code: "game:stick" 
+		}
+	},
+	output: { 
+		type: "item", 
+		code: "pestle-{rock}",
+		quantity: 1
+	}
+}

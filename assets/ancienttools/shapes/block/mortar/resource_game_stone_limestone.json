@@ -1,0 +1,28 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"elements": [
+		{
+			"name": "Cube",
+			"from": [ 5.5, 4.2, 6.0 ], 
+			"to": [ 10.5, 6.2, 10.0 ], 
+			"rotationOrigin": [ 8.0, 4.0, 8.0 ],
+			"rotationY": 45.0,
+			"rotationZ": -112.5,
+			"faces": {
+				"north": { "texture": "#limestone", "uv": [ 0.0, 8.0, 5.0, 10.0 ] },
+				"east": { "texture": "#limestone", "uv": [ 10.0, 13.0, 14.0, 15.0 ] },
+				"south": { "texture": "#limestone", "uv": [ 2.0, 10.0, 7.0, 12.0 ] },
+				"west": { "texture": "#limestone", "uv": [ 7.0, 5.0, 11.0, 7.0 ] },
+				"up": { "texture": "#limestone", "uv": [ 5.0, 7.0, 10.0, 11.0 ] },
+				"down": { "texture": "#limestone", "uv": [ 7.0, 2.0, 12.0, 6.0 ] }
+			}
+		}
+	]
+}

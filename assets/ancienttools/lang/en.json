@@ -1,0 +1,27 @@
+﻿{
+	"game:tabname-ancienttools": "Ancient Tools",
+
+	"game:ancienttools-quickstart-guide": "Ancient Tools",
+	"game:ancienttools-quickstart-title": "Ancient Tools Guide",
+	"game:ancienttools-quickstart-text": 
+"<font weight='bold' align='center'>Ancient Tools Guide</font><br>
+<font weight='bold'>Mortar and Pestle</font>
+The classic <a href=\'handbook://block-ancienttools:mortar-granite\'>mortar</a> and <a href=\'handbook://item-ancienttools:pestle-basalt\'>pestle</a>. These two tools have been in use in some form since the Paleolithic era for grinding substances such as spices and oats.
+
+To use these items in Vintage Story you must first craft each. Place the mortar on the ground then insert the pestle with <icon name='rightmousebutton'></icon>. Insert any grindable item with <icon name='rightmousebutton'></icon> then crouch and hold <icon name='rightmousebutton'></icon> to begin grinding away!
+	",
+
+	"blockhelp-place-pestle": "Place Pestle",
+	"blockhelp-place-resource": "Place Grindable Resource",
+	"blockhelp-grind-mortar": "Grind Resource",
+
+	"block-mortar-peridotite": "Peridotite Mortar",
+	"block-mortar-andesite": "Andesite Mortar",
+	"block-mortar-granite": "Granite Mortar",
+	"block-mortar-basalt": "Basalt Mortar",
+
+	"item-pestle-peridotite": "Peridotite Pestle",
+	"item-pestle-andesite": "Andesite Pestle",
+	"item-pestle-granite": "Granite Pestle",
+	"item-pestle-basalt": "Basalt Pestle",
+}

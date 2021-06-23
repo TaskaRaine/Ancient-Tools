@@ -1,0 +1,71 @@
+﻿{
+    code: "mortar",
+    class: "BlockMortar",
+    entityClass: "BEMortar",
+    renderpass: "OpaqueNoCull",
+    creativeinventory: { "general": ["*"], "ancienttools": ["*"] },
+    attributes: {
+		handbook: {
+			groupBy: ["mortar-*"]
+		}
+	},
+    variantgroups: [
+        { code: "stone", states: ["granite", "andesite", "basalt", "peridotite"] }
+    ],
+    behaviors: [{name: "UnstableFalling"}],
+    drawtype: "json",
+    shape: { base: "block/mortar" },
+    textures: {
+        stone: { base: "game:block/stone/rock/{stone}1" },
+        pestlestone: { base: "game:block/stone/rock/slate1" },
+        pestlewood: { base: "game:block/wood/oak" },
+        default: { base: "game:block/stone/rock/whitemarble1" },
+        bone: { base: "game:block/bone" },
+        grain: { base: "block/mortar/mortar_grain" },
+        flax: { base: "block/mortar/mortar_flax" },
+        spelt: { base: "block/mortar/mortar_spelt" },
+        rye: { base: "block/mortar/mortar_rye" },
+        rice: { base: "block/mortar/mortar_rice" },
+        sunflower: { base: "block/mortar/mortar_sunflower" },
+        amaranth: { base: "block/mortar/mortar_amaranth" },
+        chalk: { base: "game:block/stone/rock/chalk1" },
+        limestone: { base: "game:block/stone/rock/limestone1" },
+        halite: { base: "game:block/stone/rock/halite1" },
+        sulfur: { base: "game:item/resource/ungraded/sulfur" },
+        borax: { base: "game:item/resource/ungraded/borax" },
+        sylvite: { base: "game:item/resource/ungraded/sylvite" },
+        cassava: { base: "game:item/food/vegetable/cassava-dried" }
+    },
+    blockmaterial: "Stone",
+    sidesolid: { all: false },
+    sideopaque: { all: false },
+    lightAbsorption: 0,
+    maxStackSize: 8,
+	replaceable: 600,
+	resistance: 1.5,
+	collisionSelectionBoxes: [
+		{ 
+            x1: 0.15, y1: 0, z1: 0.15, 
+            x2: 0.85, y2: 0.40, z2: 0.85 
+        }
+	],
+    guiTransform: {
+		origin: { x: 0.5, y: 0.25, z: 0.5 },
+		scale: 1.8
+	},
+    fpHandTransform: {
+		translation: { x: 0, y: 0, z: 0.25 },
+		scale: 1.4
+	},
+    tpHandTransform: {
+		translation: { x: -1.7, y: -0.8, z: -1 },
+		rotation: { x: 22, y: -7, z: -78 },
+		scale: 0.46
+	},
+    groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: -45, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.5
+	}
+}

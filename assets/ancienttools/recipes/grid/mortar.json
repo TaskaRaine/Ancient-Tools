@@ -1,0 +1,22 @@
+﻿{
+	ingredientPattern: "R RR RSRS",
+	width: 3,
+	height: 3,
+	ingredients: {
+		"R": { 
+			type: "item", 
+			name: "rock",
+			allowedVariants: ["andesite", "granite", "basalt", "peridotite"],
+			code: "game:stone-*" 
+		},
+		"S": { 
+			type: "item", 
+			code: "game:resin" 
+		}
+	},
+	output: { 
+		type: "block", 
+		code: "mortar-{rock}",
+		quantity: 1
+	}
+}
