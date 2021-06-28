@@ -16,7 +16,7 @@ A few steps is all it takes.
 
 ![Screenshot](folderstructure.png)
 
-5. Export your resource shape into the shapes folder. IMPORTANT: The file name MUST be named a specific way. The name will always begin with 'resource', then must be followed up by the domain that the resource comes from, followed by the resources specific code path. As such: 'resource_domain_firstcodepart_secondcodepart.json'. If I wanted to create a shape for rice grain then the file name would be 'resource_game_grain_rice.json'.
+5. Remove the mortar shape from the file then export your resource shape into the shapes folder. IMPORTANT: The file name MUST be named a specific way. The name will always begin with 'resource', then must be followed up by the domain that the resource comes from, followed by the resources specific code path. As such: 'resource_domain_firstcodepart_secondcodepart.json'. If I wanted to create a shape for rice grain then the file name would be 'resource_game_grain_rice.json'.
 
 6. Remove any textures references at the top of the shape file. Ensure that your shape faces have a unique "texture" value, though. "texture": "#mymod_resource" for example.
 
