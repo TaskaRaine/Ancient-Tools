@@ -127,35 +127,7 @@ namespace AncientTools.BlockEntity
 
             if (!ResourceSlot.Empty)
             {
-                string shapeBase = "ancienttools:shapes/";
-
-                string firstCodePart = ResourceSlot.Itemstack.Item.FirstCodePart();
-                string lastCodePart = ResourceSlot.Itemstack.Item.LastCodePart();
-
-                string resourcePath;
-
-                if(ResourceSlot.Itemstack.Item.FirstCodePart() == ResourceSlot.Itemstack.Item.LastCodePart())
-                {
-                    //-- Used when only one codePart is present on the object. Example: game:bone --//
-                    resourcePath = "block/mortar/resource_" + ResourceSlot.Itemstack.Item.Code.Domain + "_" + firstCodePart;
-                }
-                else
-                {
-                    //-- Otherwise, multiple parts are used. Currently only the first code part and last code part are used. Example: game:grain-spelt --//
-                    resourcePath = "block/mortar/resource_" + ResourceSlot.Itemstack.Item.Code.Domain + "_" + firstCodePart + "_" + lastCodePart;
-                }
-
-                //-- If no shape asset with the first/first and last parts are found then a simple, default mesh is used. --//
-                if (Api.Assets.Exists(new AssetLocation(shapeBase + resourcePath + ".json")))
-                {
-                    this.AddMesh(block, mesher, shapeBase + resourcePath, tessThreadTesselator.GetTextureSource(ResourceSlot.Itemstack.Item));
-                }
-                else
-                {
-                    resourcePath = "block/mortar/resource_default";
-
-                    this.AddMesh(block, mesher, shapeBase + resourcePath, tessThreadTesselator.GetTextureSource(ResourceSlot.Itemstack.Item));
-                }
+                PrepareMesh("ancienttools:shapes/block/mortar/resource_", ResourceSlot, block, mesher, tessThreadTesselator);
             }
 
             return false;
@@ -354,6 +326,31 @@ namespace AncientTools.BlockEntity
             }
 
             MarkDirty(true);
+        }
+        private void PrepareMesh(string shapeFolderLocation, ItemSlot inventorySlot, BlockMortar block, ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator)
+        {
+            string codePath = inventorySlot.Itemstack.Collectible.Code.Path;
+            string resourcePath = shapeFolderLocation + inventorySlot.Itemstack.Collectible.Code.Domain + "_";
+
+            foreach (char character in codePath)
+            {
+                if (character != '-')
+                    resourcePath += character;
+                else
+                    resourcePath += '_';
+            }
+
+            //-- If no shape asset is found then a default mesh is used. --//
+            if (Api.Assets.Exists(new AssetLocation(resourcePath + ".json")))
+            {
+                this.AddMesh(block, mesher, resourcePath, tessThreadTesselator.GetTexSource(block));
+            }
+            else
+            {
+                resourcePath = "ancienttools:shapes/block/mortar/resource_default";
+
+                this.AddMesh(block, mesher, resourcePath, tessThreadTesselator.GetTexSource(block));
+            }
         }
         private void AddMesh(BlockMortar block, ITerrainMeshPool mesher, string path, ITexPositionSource textureSource)
         {

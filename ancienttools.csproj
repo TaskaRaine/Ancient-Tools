@@ -67,6 +67,7 @@
     <Content Include="assets\ancienttools\sounds\block\mortargrind.ogg" />
     <Content Include="assets\ancienttools\textures\block\mortar\mortar_grain.png" />
     <Content Include="modinfo.json" />
+    <Content Include="resources\images\mortars.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\ancienttools\config\handbook\guide.json" />
@@ -86,9 +87,11 @@
     <None Include="assets\ancienttools\shapes\block\mortar\resource_game_ore_borax.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resource_game_ore_sulfur.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resource_game_ore_sylvite.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resource_game_stone_chalk.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resource_game_stone_halite.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resource_game_stone_limestone.json" />
     <None Include="assets\ancienttools\shapes\item\pestle.json" />
+    <None Include="resources\guide\mortarshapes_guide.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets\ancienttools\shapes\entity\" />
