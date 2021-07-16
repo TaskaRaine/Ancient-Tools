@@ -359,8 +359,7 @@ namespace AncientTools.BlockEntity
         }
         private void InsertObject(ItemSlot playerActiveSlot, ItemSlot inventorySlot, Item item, int takeQuantity)
         {
-            inventorySlot.Itemstack = new ItemStack(item, takeQuantity);
-            playerActiveSlot.TakeOut(takeQuantity);
+            playerActiveSlot.TryPutInto(Api.World, inventorySlot, takeQuantity);
             MarkDirty(true);
         }
         private void GiveObject(IPlayer byPlayer, ItemSlot inventorySlot)
