@@ -10,12 +10,22 @@
 
 ### Releases
 
+#### Vintage Story 1.15.0+
+[Version 1.0.2](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.2/AncientTools_V1.0.2.zip)
+
 #### Vintage Story 1.14.10
 [Version 1.0.1](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.1/AncientTools_V1.0.1.zip)
 
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+
+#### Version 1.0.2
+Compiled mod to be compatible with Vintage Story 1.15.0
+
+New grindable items introduced in Vintage Story 1.15.0 are grindable in the mortar(previously implemented, but inaccessible)
+
+Fixed an exploit where players could insert old foods into the mortar then pull out fresh food. 
 
 #### Version 1.0.1
 Adds a chalk stone shape for the mortar, forgotten with the first release.
