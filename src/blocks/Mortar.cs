@@ -70,9 +70,7 @@ namespace AncientTools.Blocks
         {
             if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BEMortar mortarEntity)
             {
-                mortarEntity.OnSneakInteract(byPlayer);
-
-                return true;
+                return mortarEntity.OnSneakInteract(byPlayer); ;
             }
             return false;
         }

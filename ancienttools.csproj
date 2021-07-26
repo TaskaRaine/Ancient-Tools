@@ -54,7 +54,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>H:\VintageStory1.15.0\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.15.0\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -97,18 +97,18 @@
     <Folder Include="assets\ancienttools\shapes\entity\" />
     <Folder Include="src\entities\" />
     <Folder Include="src\items\" />
+    <Folder Include="src\utility\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\ancienttools\blocktypes\mortar.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\ancienttools\recipes\grid\mortar.json" />
+    <Compile Include="src\blockentityrenderer\MortarPestleRenderer.cs" />
     <Compile Include="src\blockentity\BEMortar.cs" />
     <Compile Include="src\blockentity\RegisterBlockEntities.cs" />
     <Compile Include="src\blocks\Mortar.cs" />
     <Compile Include="src\blocks\RegisterBlocks.cs" />
-    <Compile Include="src\utility\ParticleColor.cs" />
-    <Compile Include="src\utility\Init.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

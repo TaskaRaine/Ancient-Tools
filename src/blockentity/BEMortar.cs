@@ -1,5 +1,5 @@
-﻿using AncientTools.Blocks;
-using AncientTools.Utility;
+﻿using AncientTools.BlockEntityRenderer;
+using AncientTools.Blocks;
 using System;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
@@ -11,38 +11,25 @@ namespace AncientTools.BlockEntity
 {
     class BEMortar : BlockEntityDisplay
     {
-
         public override InventoryBase Inventory => inventory;
         public override string InventoryClassName => "mortarcontainer";
 
         private const float GRIND_TIME_IN_SECONDS = 4;
 
         private long grindStartTime = -1;
+        private bool isGrinding = false;
+        private bool isRendered = false;
+        private long grindTickListener = -1;
 
         internal InventoryGeneric inventory;
 
         private ILoadedSound ambientSound, stoneSound;
 
         private SimpleParticleProperties grindingParticles;
-        private int particleColor;
 
-        private Vec3f lookAtPlayerVector = new Vec3f(0.0f, 0.0f, 0.0f);
-        private float[] animationPositions = { 0.050f, 0.050f, 0.075f, 0.1f, 0.125f, 0.150f, 0.125f, 0.1f, 0.070f, 0.050f, 0.050f };
-        private Vec3f[] animationRotations = { 
-            new Vec3f(0.0f, 0.15f, 0.0f), 
-            new Vec3f(0.0f, 0.10f, 0.0f), 
-            new Vec3f(0.0f, 0.05f, 0.0f), 
-            new Vec3f(0f, 0.025f, 0f), 
-            new Vec3f(0f, 0.0f, 0f), 
-            new Vec3f(0f, 0.0f, 0f), 
-            new Vec3f(0f, 0.0f, 0f), 
-            new Vec3f(0f, 0.025f, 0f), 
-            new Vec3f(0.0f, 0.05f, 0.0f), 
-            new Vec3f(0.0f, 0.10f, 0.0f), 
-            new Vec3f(0.0f, 0.15f, 0.0f) 
-        };
-
-        private int animPosition = 0;
+        private MortarPestleRenderer pestleRenderer;
+        private Vec3f lookAtPlayerVector = Vec3f.Zero;
+        private Vec3f initialAnimationRotation = new Vec3f(0.0f, 0.15f, 0.0f);
 
         public ItemSlot ResourceSlot
         {
@@ -61,13 +48,16 @@ namespace AncientTools.BlockEntity
         {
             if (ambientSound != null) ambientSound.Dispose();
             if (stoneSound != null) stoneSound.Dispose();
+            if (grindTickListener != -1) Api.Event.UnregisterGameTickListener(grindTickListener);
         }
         public override void Initialize(ICoreAPI api)
         {
             //-- Holds mesh data of items inserted into the mortar. The resource mesh is NOT used as the resource appearance is not actually represented by the inserted resrouce. --//
             meshes = new MeshData[2];
 
-            if(api.Side == EnumAppSide.Client)
+            base.Initialize(api);
+
+            if (api.Side == EnumAppSide.Client)
             {
                 InitializeGindingParticles();
 
@@ -88,9 +78,18 @@ namespace AncientTools.BlockEntity
                     Volume = 1.0f,
                     Range = 32
                 });
-            }
 
-            base.Initialize(api);
+                //-- The renderer is responsible for drawing and animating the pestle while a pestle is in the mortar inventory --//
+                pestleRenderer = new MortarPestleRenderer(api as ICoreClientAPI, Pos);
+                (api as ICoreClientAPI).Event.RegisterRenderer(pestleRenderer, EnumRenderStage.Opaque, "mortar");
+
+                if (!PestleSlot.Empty)
+                {
+                    pestleRenderer.UpdateMesh(meshes[1]);
+                    pestleRenderer.SetPestleLookAtVector(lookAtPlayerVector.X, lookAtPlayerVector.Y, lookAtPlayerVector.Z);
+                    pestleRenderer.ShouldRender = true;
+                }
+            }
         }
         public override void OnBlockRemoved()
         {
@@ -106,24 +105,20 @@ namespace AncientTools.BlockEntity
                 stoneSound.Stop();
                 stoneSound.Dispose();
             }
+
+            if(pestleRenderer != null)
+                pestleRenderer.Dispose();
+        }
+        public override void OnBlockUnloaded()
+        {
+            base.OnBlockUnloaded();
+
+            if (pestleRenderer != null)
+                pestleRenderer.Dispose();
         }
         public override bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator)
         {
             BlockMortar block = Api.World.BlockAccessor.GetBlock(Pos) as BlockMortar;
-
-            if (!PestleSlot.Empty)
-            {
-                //-- Each time the block is set to dirty, animPostion is changed. This modifies which translate/rotate keyframe is used to transform the pestle mesh --// 
-                if (PestleSlot.Itemstack.Item.FirstCodePart() == "pestle")
-                {
-                    mesher.AddMeshData(meshes[1].Clone()
-                        .Translate(new Vec3f(0, animationPositions[animPosition], 0))
-                        .Rotate(new Vec3f(0.5f, 0.0f, 0.5f), 
-                        lookAtPlayerVector.X + animationRotations[animPosition].X, 
-                        lookAtPlayerVector.Y + animationRotations[animPosition].Y, 
-                        lookAtPlayerVector.Z + animationRotations[animPosition].Z));
-                }
-            }
 
             if (!ResourceSlot.Empty)
             {
@@ -136,18 +131,58 @@ namespace AncientTools.BlockEntity
         {
             base.FromTreeAttributes(tree, worldForResolving);
 
-            particleColor = tree.GetInt("particleColor");
             lookAtPlayerVector = new Vec3f(tree.GetFloat("x"), tree.GetFloat("y"), tree.GetFloat("z"));
+            isGrinding = tree.GetBool("isGrinding", false);
+            isRendered = tree.GetBool("isRendered", false);
+
+            if(pestleRenderer != null)
+            {
+                //-- If the isRendered value retreived from the server is true, then display the pestle --//
+                if (isRendered)
+                {
+                    this.updateMesh(1);
+                    pestleRenderer.UpdateMesh(meshes[1]);
+                    pestleRenderer.ShouldRender = true;
+
+                    //-- If the isGrinding value retreived from the server is true, then begin to animate the pestle. Start playing the repeating ambient grind sound and begin a tick listener that spawns particles --//
+                    if (isGrinding)
+                    {
+                        pestleRenderer.ShouldAnimate = true;
+
+                        if(!ambientSound.IsPlaying)
+                            ambientSound.Start();
+
+                        if (grindTickListener == -1)
+                            grindTickListener = this.Api.Event.RegisterGameTickListener(Grind, 16);
+                    }
+                    else
+                    {
+                        pestleRenderer.ShouldAnimate = false;
+
+                        if (ambientSound.IsPlaying)
+                            ambientSound.Stop();
+
+                        this.Api.Event.UnregisterGameTickListener(grindTickListener);
+                        grindTickListener = -1;
+                    }
+                }
+                else
+                {
+                    pestleRenderer.ShouldRender = false;
+                }
+            }
         }
-        //-- Particle color and pestle rotation is saved so that things look as they were left proper on game load --//
+        //-- Pestle rotation is saved so that things look as they were left proper on game load --//
         public override void ToTreeAttributes(ITreeAttribute tree)
         {
             base.ToTreeAttributes(tree);
 
-            tree.SetInt("particleColor", particleColor);
-            tree.SetFloat("x", lookAtPlayerVector.X + animationRotations[0].X);
-            tree.SetFloat("y", lookAtPlayerVector.Y + animationRotations[0].Y);
-            tree.SetFloat("z", lookAtPlayerVector.Z + animationRotations[0].Z);
+            tree.SetFloat("x", lookAtPlayerVector.X + initialAnimationRotation.X);
+            tree.SetFloat("y", lookAtPlayerVector.Y + initialAnimationRotation.Y);
+            tree.SetFloat("z", lookAtPlayerVector.Z + initialAnimationRotation.Z);
+
+            tree.SetBool("isRendered", !PestleSlot.Empty);
+            tree.SetBool("isGrinding", isGrinding);
         }
         public void OnInteract(IPlayer byPlayer)
         {
@@ -161,7 +196,11 @@ namespace AncientTools.BlockEntity
                     if (!PestleSlot.Empty)
                     {
                         GiveObject(byPlayer, PestleSlot);
-                        this.updateMesh(1);
+
+                        if (Api.Side == EnumAppSide.Client)
+                        {
+                            pestleRenderer.ShouldRender = false;
+                        }
                     }
                     else if (!ResourceSlot.Empty)
                     {
@@ -183,11 +222,17 @@ namespace AncientTools.BlockEntity
                             {
                                 if (activeSlot.Itemstack.Item.FirstCodePart() == "pestle")
                                 {
-                                    if(Api.Side == EnumAppSide.Client)
-                                        stoneSound.Start();
-
                                     InsertObject(activeSlot, PestleSlot, activeSlot.Itemstack.Item, 1);
-                                    this.updateMesh(1);
+
+                                    if (Api.Side == EnumAppSide.Client)
+                                    {
+                                        this.updateMesh(1);
+
+                                        pestleRenderer.UpdateMesh(meshes[1]);
+                                        pestleRenderer.ShouldRender = true;
+
+                                        stoneSound.Start();
+                                    }
                                 }
                             }
                         }
@@ -198,9 +243,6 @@ namespace AncientTools.BlockEntity
                             {
                                 if (activeSlot.Itemstack.Item.GrindingProps != null)
                                 {
-                                    if (Api.Side == EnumAppSide.Client)
-                                        SetGrindingParticlesColor(activeSlot.Itemstack.Item.LastCodePart(), activeSlot.Itemstack.Item.FirstCodePart());
-
                                     InsertObject(activeSlot, ResourceSlot, activeSlot.Itemstack.Item, 1);
                                 }
                             }
@@ -213,81 +255,69 @@ namespace AncientTools.BlockEntity
         {
             if (!byPlayer.Entity.Controls.Sneak || PestleSlot.Empty || ResourceSlot.Empty || !byPlayer.InventoryManager.ActiveHotbarSlot.Empty)
             {
-                OnInteractStop();
-
                 return false;
             }
 
-            BeginGrind();
+            BeginGrind(byPlayer);
             PerformGrind(byPlayer);
 
             return true;
         }
-        private void BeginGrind()
+        private void BeginGrind(IPlayer byPlayer)
         {
             if (grindStartTime < 0)
             {
                 grindStartTime = Api.World.ElapsedMilliseconds;
+                isGrinding = true;
+
+                SetPestleLookAtVector(byPlayer);
+
+                if (Api.Side == EnumAppSide.Client)
+                {
+                    ambientSound.Start();
+
+                    pestleRenderer.ShouldAnimate = true;
+                }
+
+                MarkDirty(true);
             }
         }
         private void PerformGrind(IPlayer byPlayer)
         {
             if (Api.World.ElapsedMilliseconds < grindStartTime + GRIND_TIME_IN_SECONDS * 1000)
             {
-                SetPestleLookAtVector(byPlayer);
-                SetPestleAnimationFrame();
-
-                ClientGrind();
+                if (Api.Side == EnumAppSide.Client)
+                    pestleRenderer.SetPestleLookAtVector(byPlayer);
             }
             else
             {
                 FinishGrind(byPlayer);
+                OnInteractStop();
             }
 
-            MarkDirty(true);
-        }
-        //-- Sets the look at vector in such a way that the pestle appears to be held in hand anytime the mortar is being used --//
-        private void SetPestleLookAtVector(IPlayer byPlayer)
-        {
-            Vec3f normal = ((this.Pos.ToVec3f() + new Vec3f(0.5f, 0, 0.5f)) - byPlayer.Entity.Pos.XYZFloat);
-            normal.Y = 0.325f;
-
-            double pitch = Math.Asin(normal.Y);
-            double yaw = Math.Atan2(normal.X, normal.Z);
-
-            lookAtPlayerVector.Y = (float)yaw;
-            lookAtPlayerVector.Z = (float)pitch;
-        }
-        //-- Tick to the next animation frame any time the pestle is being used --//
-        private void SetPestleAnimationFrame()
-        {
-            if (animPosition < animationPositions.Length - 1)
-                animPosition++;
-            else
-                animPosition = 0;
-        }
-        private void ClientGrind()
-        {
-            if(Api.Side == EnumAppSide.Client)
+            if(isGrinding)
             {
+                if (grindTickListener == -1)
+                    grindTickListener = this.Api.Event.RegisterGameTickListener(Grind, 16);
+            }
+        }
+        //-- Spawns grind particles every time the function is called --//
+        private void Grind(float deltaTime)
+        {
+            if (Api.Side == EnumAppSide.Client)
+            {
+                grindingParticles.Color = ResourceSlot.Itemstack.Collectible.GetRandomColor(capi, ResourceSlot.Itemstack);
                 this.Api.World.SpawnParticles(grindingParticles);
-
-                if (!ambientSound.IsPlaying)
-                    ambientSound.Start();
             }
         }
         private void FinishGrind(IPlayer byPlayer)
         {
-            grindStartTime = -1;
-
-            if(Api.Side == EnumAppSide.Server)
+            if (Api.Side == EnumAppSide.Server)
             {
                 GiveGroundItem(byPlayer);
             }
-            else if(Api.Side == EnumAppSide.Client)
-            {
-                StopAudio();
-            }
+
+            SetPestleLookAtVector(byPlayer);
         }
         //-- Try to give the player the contents of the mortar resource stack whenever the grind is finished. Puts resource on the ground if there is no room. --//
         private void GiveGroundItem(IPlayer byPlayer)
@@ -314,18 +344,31 @@ namespace AncientTools.BlockEntity
         }
         public void OnInteractStop()
         {
-            animPosition = 0;
             grindStartTime = -1;
+            isGrinding = false;
 
             if (Api.Side == EnumAppSide.Client)
             {
-                if (ambientSound.IsPlaying)
-                {
-                    ambientSound.Stop();
-                }
+                //-- Immediately stop audio and animation when the interacting player stops using the pestle, or grind has completed --//
+                StopAudio();
+                pestleRenderer.ShouldAnimate = false;
+
+                this.Api.Event.UnregisterGameTickListener(grindTickListener);
+                grindTickListener = -1;
             }
 
             MarkDirty(true);
+        }
+        public void SetPestleLookAtVector(IPlayer byPlayer)
+        {
+            Vec3f normal = ((this.Pos.ToVec3f() + new Vec3f(0.5f, 0, 0.5f)) - byPlayer.Entity.Pos.XYZFloat);
+            normal.Y = 0.325f;
+
+            double pitch = Math.Asin(normal.Y);
+            double yaw = Math.Atan2(normal.X, normal.Z);
+
+            lookAtPlayerVector.Y = (float)yaw;
+            lookAtPlayerVector.Z = (float)pitch;
         }
         private void PrepareMesh(string shapeFolderLocation, ItemSlot inventorySlot, BlockMortar block, ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator)
         {
@@ -360,11 +403,13 @@ namespace AncientTools.BlockEntity
         private void InsertObject(ItemSlot playerActiveSlot, ItemSlot inventorySlot, Item item, int takeQuantity)
         {
             playerActiveSlot.TryPutInto(Api.World, inventorySlot, takeQuantity);
+
             MarkDirty(true);
         }
         private void GiveObject(IPlayer byPlayer, ItemSlot inventorySlot)
         {
             byPlayer.InventoryManager.TryGiveItemstack(inventorySlot.TakeOutWhole());
+
             MarkDirty(true);
         }
         private void InitializeGindingParticles()
@@ -383,24 +428,19 @@ namespace AncientTools.BlockEntity
                 MinQuantity = 1,
                 AddQuantity = 2,
 
-                LifeLength = 1.2f,
-                addLifeLength = 1.4f,
+                LifeLength = 0.2f,
+                addLifeLength = 0.4f,
 
                 ShouldDieInLiquid = true,
 
                 WithTerrainCollision = true,
 
-                Color = particleColor,
+                Color = 0,
+                VertexFlags = 0,
                 OpacityEvolve = new EvolvingNatFloat(EnumTransformFunction.LINEARREDUCE, 255),
 
                 ParticleModel = EnumParticleModel.Quad
             };
-        }
-        private void SetGrindingParticlesColor(string color1, string color2)
-        {
-            grindingParticles.Color = ParticleColor.GetColour(color1, color2);
-
-            particleColor = grindingParticles.Color;
         }
     }
 }
