@@ -142,6 +142,7 @@ namespace AncientTools.BlockEntity
                 {
                     this.updateMesh(1);
                     pestleRenderer.UpdateMesh(meshes[1]);
+                    pestleRenderer.SetPestleLookAtVector(lookAtPlayerVector.X, lookAtPlayerVector.Y, lookAtPlayerVector.Z);
                     pestleRenderer.ShouldRender = true;
 
                     //-- If the isGrinding value retreived from the server is true, then begin to animate the pestle. Start playing the repeating ambient grind sound and begin a tick listener that spawns particles --//
@@ -253,7 +254,7 @@ namespace AncientTools.BlockEntity
         }
         public bool OnSneakInteract(IPlayer byPlayer)
         {
-            if (!byPlayer.Entity.Controls.Sneak || PestleSlot.Empty || ResourceSlot.Empty || !byPlayer.InventoryManager.ActiveHotbarSlot.Empty)
+            if (!byPlayer.Entity.Controls.Sneak || PestleSlot.Empty || ResourceSlot.Empty || !byPlayer.InventoryManager.ActiveHotbarSlot.Empty || ResourceSlot.Itemstack.Item.GrindingProps == null)
             {
                 return false;
             }
@@ -314,7 +315,8 @@ namespace AncientTools.BlockEntity
         {
             if (Api.Side == EnumAppSide.Server)
             {
-                GiveGroundItem(byPlayer);
+                if(ResourceSlot.Itemstack.Item.GrindingProps != null)
+                    GiveGroundItem(byPlayer);
             }
 
             SetPestleLookAtVector(byPlayer);

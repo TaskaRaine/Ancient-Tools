@@ -1,0 +1,22 @@
+﻿{
+	ingredientPattern: "SMS",
+	width: 1,
+	height: 3,
+	ingredients: {
+		"S": {
+			type: "item",
+			code: "game:salt"
+		},
+		"M": {
+			type: "item",
+			name: "meat",
+			code: "game:*-raw",
+			allowedVariants: ["redmeat", "poultry", "bushmeat"]
+		}
+	},
+	output: {
+		type: "item",
+		code: "saltedmeat-{meat}-raw",
+		quantity: 1
+	}
+}

@@ -1,0 +1,16 @@
+﻿{
+    ingredientPattern: " B  B BBB",
+    width: 3,
+    height: 3,
+    ingredients: {
+        "B": {
+            type: "item",
+            code: "game:bone"
+        }
+    },
+    output: {
+        type: "item",
+        code: "curinghook-bone",
+        quantity: 1
+    }
+}

@@ -73,6 +73,8 @@
     <None Include="assets\ancienttools\config\handbook\guide.json" />
     <None Include="assets\ancienttools\itemtypes\pestle.json" />
     <None Include="assets\ancienttools\lang\en.json" />
+    <None Include="assets\ancienttools\recipes\grid\blocks\curingrack.json" />
+    <None Include="assets\ancienttools\recipes\grid\food\saltedmeat.json" />
     <None Include="assets\ancienttools\recipes\grid\tools\pestle.json" />
     <None Include="assets\ancienttools\shapes\block\mortar.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resource_game_bone.json" />
@@ -96,17 +98,21 @@
   <ItemGroup>
     <Folder Include="assets\ancienttools\shapes\entity\" />
     <Folder Include="src\entities\" />
-    <Folder Include="src\items\" />
-    <Folder Include="src\utility\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\ancienttools\blocktypes\mortar.json" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="assets\ancienttools\recipes\grid\mortar.json" />
+    <None Include="assets\ancienttools\recipes\grid\tools\curinghook.json" />
+    <Compile Include="src\items\RegisterItems.cs" />
+    <Compile Include="src\items\ItemSaltedMeat.cs" />
+    <Compile Include="src\utility\UITools.cs" />
+    <None Include="assets\ancienttools\recipes\grid\blocks\mortar.json" />
     <Compile Include="src\blockentityrenderer\MortarPestleRenderer.cs" />
+    <Compile Include="src\blockentity\BECuringRack.cs" />
     <Compile Include="src\blockentity\BEMortar.cs" />
     <Compile Include="src\blockentity\RegisterBlockEntities.cs" />
+    <Compile Include="src\blocks\CuringRack.cs" />
     <Compile Include="src\blocks\Mortar.cs" />
     <Compile Include="src\blocks\RegisterBlocks.cs" />
   </ItemGroup>

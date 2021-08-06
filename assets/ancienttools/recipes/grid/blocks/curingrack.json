@@ -1,0 +1,24 @@
+﻿{
+	ingredientPattern: "SSSSRSW W",
+	width: 3,
+	height: 3,
+	ingredients: {
+		"S": {
+			type: "item",
+			code: "game:stick"
+		},
+		"R": {
+			type: "item",
+			code: "game:rope"
+		},
+		"W": {
+			type: "block",
+			code: "game:log-placed-*-ud",
+			name: "wood"
+		}
+	},
+	output: {
+		type: "block",
+		code: "curingrack-{wood}-ns-full"
+	}
+}

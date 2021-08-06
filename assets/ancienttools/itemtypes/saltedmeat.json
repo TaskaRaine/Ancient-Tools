@@ -1,0 +1,172 @@
+﻿{
+	code: "saltedmeat",
+	class: "ItemSaltedMeat",
+	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
+	variantgroups: [
+		{ code: "type", states: [ "redmeat", "bushmeat", "poultry" ] },
+		{ code: "state", states: [ "raw", "cooked" ] }
+	],
+	attributesbytype: {
+		"*-redmeat-raw": {
+			displaycaseable: true,
+			shelvable: true,
+			curinghoursremaining: 480.00,
+			inFirePitProps: {
+				transform: {
+					scale: 0.85,
+					origin: { x: 0.5, y: 0.0625, z: 0.5 },
+					translation: { x: -0.03125, y: 0.0625, z: 0.046875 },
+					rotation: { x: 0, y: 0, z: 90 }
+				},
+				useFirepitModel: "Spit"
+			},
+		},
+		"*-redmeat-cooked": {
+			displaycaseable: true,
+			shelvable: true,
+			inFirePitProps: {
+				transform: {
+					scale: 0.85,
+					origin: { x: 0.5, y: 0.0625, z: 0.5 },
+					translation: { x: -0.03125, y: 0.0625, z: 0.046875 },
+					rotation: { x: 0, y: 0, z: 90 }
+				},
+				useFirepitModel: "Spit"
+			},
+		},
+		"*-raw": {
+			displaycaseable: true,
+			shelvable: true,
+			curinghoursremaining: 480.00,
+			inFirePitProps: {
+				transform: {
+					scale: 0.85,
+					origin: { x: 0.5, y: 0.0625, z: 0.5 },
+					translation: { x: -0.03125, y: 0.125, z: 0 },
+					rotation: { x: 0, y: 0, z: 90 }
+				},
+				useFirepitModel: "Spit"
+			},
+		},
+		"*-cooked": {
+			displaycaseable: true,
+			shelvable: true,
+			inFirePitProps: {
+				transform: {
+					scale: 0.85,
+					origin: { x: 0.5, y: 0.0625, z: 0.5 },
+					translation: { x: -0.03125, y: 0.125, z: 0 },
+					rotation: { x: 0, y: 0, z: 90 }
+				},
+				useFirepitModel: "Spit"
+			},
+		}
+	},
+	shapebytype: { 
+		"*-redmeat-*": { base: "game:item/food/meat/red" },
+		"*-bushmeat-*": { base: "game:item/food/meat/bushmeat" },
+		"*-poultry-*": { base: "game:item/food/meat/poultry" },
+	},
+	texturesbytype: {
+		"*-raw": {
+			"meat": { base: "item/saltedmeat/salted" }
+		},
+		"*-cooked": {
+			"meat": { base: "item/saltedmeat/saltedcooked" }
+		}
+	},
+	transitionablepropsbytype: {
+		"*-raw": [
+			{
+				type: "Perish",
+				freshHours: { avg: 144 },
+				transitionHours: { avg: 96 },
+				transitionedStack: { type: "item", code: "game:rot" },
+				transitionRatio: 1
+			}
+		],
+		"*-cooked": [
+			{
+				type: "Perish",
+				freshHours: { avg: 288 },
+				transitionHours: { avg: 192 },
+				transitionedStack: { type: "item", code: "game:rot" },
+				transitionRatio: 1
+			}
+		],
+	},
+	nutritionPropsByType: {
+		"*-poultry-cooked": { satiety: 100, foodcategory: "Protein" },
+		"*-bushmeat-cooked": { satiety: 60, foodcategory: "Protein" },
+		"*-redmeat-cooked": { satiety: 120, foodcategory: "Protein" },
+	},
+	combustiblePropsByType: {
+		"*-redmeat-raw": {
+			meltingPoint: 150,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltingType: "cook",
+			smeltedStack: { type: "item", code: "saltedmeat-redmeat-cooked" },
+			requiresContainer: false
+		},
+		"*-bushmeat-raw": {
+			meltingPoint: 150,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltingType: "cook",
+			smeltedStack: { type: "item", code: "saltedmeat-bushmeat-cooked" },
+			requiresContainer: false
+		},
+		"*-poultry-raw": {
+			meltingPoint: 150,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltingType: "cook",
+			smeltedStack: { type: "item", code: "saltedmeat-poultry-cooked" },
+			requiresContainer: false
+		},
+	},
+	maxstacksize: 64,
+	tpHandTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 5, y: 41, z: -31 },
+		origin: { x: 0.23, y: 0, z: 0.13 },
+		scale: 0.75
+	},
+	
+	guiTransformByType: {
+		"*-redmeat-*": {
+			rotate: false,
+			translation: { x: 0.5, y: 0, z: 0 },
+			rotation: { x: 171, y: -122, z: 33 },
+			origin: { x: 0.4, y: 0.08, z: 0.5 },
+			scale: 4.72
+		},
+		"*-bushmeat-*": {
+			rotate: false,
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 171, y: -122, z: 33 },
+			origin: { x: 0.5, y: 0.04, z: 0.53 },
+			scale: 4.7199
+		},
+		"*-poultry-*": {
+			rotate: false,
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 171, y: -122, z: 33 },
+			origin: { x: 0.5, y: 0.04, z: 0.53 },
+			scale: 4.7199
+		}
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 180, y: 33, z: -180 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 5
+	},
+	fpHandTransform: {
+		translation: { x: -0.06, y: 0.36, z: 0.23 },
+		rotation: { x: 40, y: 91, z: 15 },
+		origin: { x: 0.5, y: 0.1, z: 0.5 },
+		scale: 2.5
+	},
+}

@@ -1,0 +1,40 @@
+﻿{
+	code: "curinghook",
+	creativeinventory: { "general": ["*"], "tools": ["*"], "ancienttools": ["*"] },
+	attributes: {
+		handbook: {
+			groupBy: ["curinghook-*"]
+		}
+	},
+	variantgroups: [
+        { code: "material", states: ["bone"] }
+    ],
+	drawtype: "json",
+    shape: { base: "item/curinghook" },
+    textures: {
+        material: { base: "game:block/bone" }
+    },
+	maxstacksize: 64,
+	guiTransform: {
+		translation: { x: 3, y: 0, z: 0 },
+		rotation: { x: 0, y: 45, z: 180 },
+		origin: { x: 0, y: 0.5, z: 0 },
+		scale: 4.5
+	},
+	fpHandTransform: {
+		translation: { x: 0.05, y: -0.35, z: 0 },
+		rotation: { x: -2, y: 5, z: -4 },
+		scale: 1.6
+	},
+	tpHandTransform: {
+		translation: { x: -0.8, y: -1, z: -0.8 },
+		rotation: { x: -20, y: -80, z: 18 },
+		scale: 0.61
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 90, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.5, z: 0.5299 },
+		scale: 3.5
+	}
+}

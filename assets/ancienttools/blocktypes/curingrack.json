@@ -1,0 +1,52 @@
+﻿{
+	code: "curingrack",
+	class: "BlockCuringRack",
+	entityClass: "BECuringRack",
+	creativeinventory: { "general": ["*-ns-full"], "ancienttools": ["*-ns-full"] },
+    attributes: {
+		handbook: {
+			groupBy: ["curingrack-*-ns-full"]
+		},
+		perishrate: {
+			"normal": {
+				"unknown": 0.15
+			}
+		}
+	},
+	variantgroups: [
+        { code: "wood", loadFromProperties: "game:block/wood", states:["aged"] },
+		{ code: "rotation", states: ["ew", "ns"] },
+		{ code: "supports", states: ["full", "right", "left", "none"] }
+    ],
+	drawtype: "json",
+	shapebytype: { 
+		"*-ns-*": { 
+			base: "block/{supports}_curingrack" 
+		},
+		"*-ew-*": {
+			base: "block/{supports}_curingrack", rotateY: 90
+		}
+	},
+	texturesByType: { 
+		"*": {
+			"core": { base: "game:block/wood/debarked/{wood}" }
+		} 
+	},
+	blockmaterial: "Wood",
+    sidesolid: { all: false },
+    sideopaque: { all: false },
+    lightAbsorption: 0,
+	collisionSelectionBoxesByType: {
+		"*-ns-*": [
+			{ x1: 0, y1: 0, z1: 0.33, x2: 0.5, y2: 1, z2: 0.66 },
+			{ x1: 0.5, y1: 0, z1: 0.33, x2: 1, y2: 1, z2: 0.66 },
+		],
+		"*-ew-*": [
+			{ x1: 0.33, y1: 0, z1: 0, x2: 0.66, y2: 1, z2: 0.5 },
+			{ x1: 0.33, y1: 0, z1: 0.5, x2: 0.66, y2: 1, z2: 1 },
+		]
+	},
+	drops: [
+		{ type: "block", code: "curingrack-{wood}-ns-full" }
+	]
+}

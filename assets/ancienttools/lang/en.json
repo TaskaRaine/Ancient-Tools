@@ -9,19 +9,59 @@
 The classic <a href=\'handbook://block-ancienttools:mortar-granite\'>mortar</a> and <a href=\'handbook://item-ancienttools:pestle-basalt\'>pestle</a>. These two tools have been in use in some form since the Paleolithic era for grinding substances such as spices and oats.
 
 To use these items in Vintage Story you must first craft each. Place the mortar on the ground then insert the pestle with <icon name='rightmousebutton'></icon>. Insert any grindable item with <icon name='rightmousebutton'></icon> then crouch and hold <icon name='rightmousebutton'></icon> to begin grinding away!
-	",
+
+<font weight='bold'>Curing Rack</font>
+Curing meats with <a href=\'handbook://item-salt\'>salt</a> is a centuries-old practice of preservation. This requires a carefully controlled environment to ensure the meat doesn't rot before the meat is cured. A cellar is recommended!
+
+A <a href=\'handbooksearch://curing rack\'>curing rack</a> can be equipped with two <a href=\'handbooksearch://curing hook\'>hooks</a> with <icon name='rightmousebutton'></icon>. Hang any variety of salted meat(<a href=\'handbook://item-ancienttools:saltedmeat-redmeat-raw\'>redmeat</a>,<a href=\'handbook://item-ancienttools:saltedmeat-poultry-raw\'>poultry</a>,<a href=\'handbook://item-ancienttools:saltedmeat-bushmeat-raw\'>bushmeat</a>) and wait until your delicious meat is perfectly cured!
+
+Salted meats can also be cooked in a firepit for a quick meal solution.	
+",
 
 	"blockhelp-place-pestle": "Place Pestle",
 	"blockhelp-place-resource": "Place Grindable Resource",
 	"blockhelp-grind-mortar": "Grind Resource",
+
+	"blockhelp-place-curinghook": "Place Curing Hook",
+	"blockhelp-place-saltedmeat": "Hang Salted Meat",
+
+	"blockinfo-curingrack-no-entity": "Something went wrong with this block. The BlockEntity does not exist. Please break the block and place it again.",
+	"blockinfo-curingrack-hook-missing": "Curing Hook Missing",
+	"blockinfo-curingrack-meat-status": "- Cures In: {0} Days | Rots In: {1} Days",
+	"blockinfo-curingrack-meat-perish": "Stored meat perish speed: {0}x",
 
 	"block-mortar-peridotite": "Peridotite Mortar",
 	"block-mortar-andesite": "Andesite Mortar",
 	"block-mortar-granite": "Granite Mortar",
 	"block-mortar-basalt": "Basalt Mortar",
 
+	"block-curingrack-birch-*": "Birch Curing Rack",
+	"block-curingrack-oak-*": "Oak Curing Rack",
+	"block-curingrack-maple-*": "Maple Curing Rack",
+	"block-curingrack-pine-*": "Pine Curing Rack",
+	"block-curingrack-acacia-*": "Acacia Curing Rack",
+	"block-curingrack-kapok-*": "Kapok Curing Rack",
+	"block-curingrack-baldcypress-*": "Bald Cypress Curing Rack",
+	"block-curingrack-larch-*": "Larch Curing Rack",
+	"block-curingrack-redwood-*": "Redwood Curing Rack",
+	"block-curingrack-ebony-*": "Ebony Curing Rack",
+	"block-curingrack-walnut-*": "Walnut Curing Rack",
+	"block-curingrack-purpleheart-*": "Purpleheart Curing Rack",
+	"block-curingrack-aged-*": "Aged Curing Rack",
+
+	"itemdesc-saltedmeat-cure-x-days": "When Racked: Will cure in {0} days",
+
 	"item-pestle-peridotite": "Peridotite Pestle",
 	"item-pestle-andesite": "Andesite Pestle",
 	"item-pestle-granite": "Granite Pestle",
 	"item-pestle-basalt": "Basalt Pestle",
+
+	"item-curinghook-bone": "Bone Curing Hook",
+
+	"item-saltedmeat-poultry-raw": "Raw Salted Poultry",
+	"item-saltedmeat-bushmeat-raw": "Raw Salted Bushmeat",
+	"item-saltedmeat-redmeat-raw": "Raw Salted Redmeat",
+	"item-saltedmeat-poultry-cooked": "Cooked Salted Poultry",
+	"item-saltedmeat-bushmeat-cooked": "Cooked Salted Bushmeat",
+	"item-saltedmeat-redmeat-cooked": "Cooked Salted Redmeat"
 }

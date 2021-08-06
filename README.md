@@ -11,6 +11,8 @@
 ### Releases
 
 #### Vintage Story 1.15.0+
+[Version 1.1.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.1.0/AncientTools_V1.1.0.zip)
+
 [Version 1.0.3](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.3/AncientTools_V1.0.3.zip)
 
 [Version 1.0.2](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.2/AncientTools_V1.0.2.zip)
@@ -21,6 +23,23 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+
+#### Version 1.1.0
+---Curing Rack
+Implements a salted meat item that is intended to be cured on a rack. Redmeat, poultry and bushmeant. Can be cooked.
+
+Implements a curing rack block made of any wood type that can be visually extended across multple blocks and/or hung with the proper support.
+
+Bone curing hooks can be crafted and placed on the rack, then meat can be added.
+
+Rack meat perish rate is modified based on the environment in which it is placed... will need a controlled environment to properly cure.
+
+Meats attached to the rack will cure over 20 ingame days 
+
+---Mortar and Pestle
+Fixed a rare crash that occurred when an item rots in the mortar, and is then attempted to be ground down.
+
+Pestle rotation now syncs upon starting and finishing a grind.
 
 #### Version 1.0.3
 Particle colours should now sync between all players.
