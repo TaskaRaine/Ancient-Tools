@@ -1,0 +1,385 @@
+﻿[
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:log-placed-birch-ud",
+				returnedStack: { type: "block", code: "strippedlog-birch-ud" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-birch",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:log-placed-oak-ud",
+				returnedStack: { type: "block", code: "strippedlog-oak-ud" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-oak",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:log-placed-maple-ud",
+				returnedStack: { type: "block", code: "strippedlog-maple-ud" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-maple",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:log-placed-pine-ud",
+				returnedStack: { type: "block", code: "strippedlog-pine-ud" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-pine",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:log-placed-acacia-ud",
+				returnedStack: { type: "block", code: "strippedlog-acacia-ud" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-acacia",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:log-placed-kapok-ud",
+				returnedStack: { type: "block", code: "strippedlog-kapok-ud" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-kapok",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:log-placed-baldcypress-ud",
+				returnedStack: { type: "block", code: "strippedlog-baldcypress-ud" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-baldcypress",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:log-placed-larch-ud",
+				returnedStack: { type: "block", code: "strippedlog-larch-ud" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-larch",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:log-placed-redwood-ud",
+				returnedStack: { type: "block", code: "strippedlog-redwood-ud" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-redwood",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:log-placed-ebony-ud",
+				returnedStack: { type: "block", code: "strippedlog-ebony-ud" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-ebony",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:log-placed-walnut-ud",
+				returnedStack: { type: "block", code: "strippedlog-walnut-ud" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-walnut",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:log-placed-purpleheart-ud",
+				returnedStack: { type: "block", code: "strippedlog-purpleheart-ud" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-purpleheart",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:log-placed-aged-ud",
+				returnedStack: { type: "block", code: "strippedlog-aged-ud" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-aged",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": {
+				type: "block",
+				name: "log",
+				code: "strippedlog-*",
+				allowedVariants: ["birch-ud", "oak-ud", "maple-ud", "pine-ud", "acacia-ud", "redwood-ud", "larch-ud", "baldcypress-ud", "walnut-ud"]
+			},
+			"A": {
+				type: "item",
+				code: "game:axe-*",
+				isTool: true
+			}
+		},
+		output: { 
+			type: "item", 
+			code: "game:firewood", 
+			quantity: 3  
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": {
+				type: "block",
+				name: "log",
+				code: "strippedlog-*-ud",
+				allowedVariants: ["ebony-ud", "kapok-ud", "purpleheart-ud"]
+			},
+			"A": {
+				type: "item",
+				code: "game:axe-*",
+				isTool: true
+			}
+		},
+		output: { 
+			type: "item", 
+			code: "game:firewood", 
+			quantity: 2  
+		}
+	},
+	{
+		ingredientPattern: "LS",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": {
+				type: "block",
+				name: "log",
+				code: "strippedlog-*-ud"
+			},
+			"S": {
+				type: "item",
+				code: "game:saw-*",
+				isTool: true
+			}
+		},
+		output: { 
+			type: "item", 
+			code: "game:plank-{log}", 
+			quantity: 8  
+		}
+	}
+]

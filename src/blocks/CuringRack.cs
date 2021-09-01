@@ -15,7 +15,11 @@ namespace AncientTools.Blocks
 {
     class BlockCuringRack: Block
     {
-        WorldInteraction[] interactions = null;
+        WorldInteraction[] emptyInteractions = null;
+        WorldInteraction[] hookEmptyInteractions = null;
+        WorldInteraction[] partialMeatInteractions = null;
+        WorldInteraction[] fullInteractions = null;
+
         int selectionBoxSelected = -1;
 
         public override void OnLoaded(ICoreAPI api)
@@ -38,7 +42,7 @@ namespace AncientTools.Blocks
                 }
             }
 
-            interactions = ObjectCacheUtil.GetOrCreate(api, "curingRackInteractions", () =>
+            emptyInteractions = ObjectCacheUtil.GetOrCreate(api, "emptyCuringRackInteractions", () =>
             {
                 return new WorldInteraction[] {
                     new WorldInteraction()
@@ -46,6 +50,19 @@ namespace AncientTools.Blocks
                         ActionLangCode = "ancienttools:blockhelp-place-curinghook",
                         MouseButton = EnumMouseButton.Right,
                         Itemstacks = curingHook.ToArray()
+                    }
+                };
+            });
+
+            hookEmptyInteractions = ObjectCacheUtil.GetOrCreate(api, "emptyHookCuringRackInteractions", () =>
+            {
+                return new WorldInteraction[]
+                {
+                    new WorldInteraction()
+                    {
+                        ActionLangCode = "ancienttools:blockhelp-take-curinghook",
+                        RequireFreeHand = true,
+                        MouseButton = EnumMouseButton.Right,
                     },
                     new WorldInteraction()
                     {
@@ -55,16 +72,57 @@ namespace AncientTools.Blocks
                     }
                 };
             });
+
+            partialMeatInteractions = ObjectCacheUtil.GetOrCreate(api, "partialCuringRackInteractions", () =>
+            {
+                return new WorldInteraction[]
+                {
+                    new WorldInteraction()
+                    {
+                        ActionLangCode = "ancienttools:blockhelp-place-saltedmeat",
+                        MouseButton = EnumMouseButton.Right,
+                        Itemstacks = saltedMeat.ToArray()
+                    },
+                    new WorldInteraction()
+                    {
+                        ActionLangCode = "ancienttools:blockhelp-take-meat",
+                        RequireFreeHand = true,
+                        MouseButton = EnumMouseButton.Right
+                    }
+                };
+            });
+
+            fullInteractions = ObjectCacheUtil.GetOrCreate(api, "fullRackInteractions", () =>
+            {
+                return new WorldInteraction[]
+                {
+                    new WorldInteraction()
+                    {
+                        ActionLangCode = "ancienttools:blockhelp-take-meat",
+                        RequireFreeHand = true,
+                        MouseButton = EnumMouseButton.Right
+                    }
+                };
+            });
         }
         public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos pos, IPlayer forPlayer)
         {
+            StringBuilder stringBuilder;
             BECuringRack entityCuringRack = world.BlockAccessor.GetBlockEntity(pos) as BECuringRack;
 
             if (entityCuringRack == null)
-                return Lang.Get("ancienttools:blockinfo-curingrack-no-entity");
+            {
+                stringBuilder = new StringBuilder();
+                stringBuilder.Append("\n");
+                stringBuilder.AppendLine(Lang.Get("ancienttools:blockinfo-curingrack-no-entity"));
+
+                return stringBuilder.ToString();
+            }
 
             string originalBlockInfo = base.GetPlacedBlockInfo(world, pos, forPlayer);
-            StringBuilder stringBuilder = new StringBuilder(originalBlockInfo);
+            
+            stringBuilder = new StringBuilder(originalBlockInfo);
+            stringBuilder.Append("\n");
 
             //-- Display information based on which selection box is selected. Only shows information for right hook OR left hook --//
             switch(selectionBoxSelected)
@@ -133,9 +191,50 @@ namespace AncientTools.Blocks
         }
         public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
         {
-            selectionBoxSelected = selection.SelectionBoxIndex;
+            if(world.BlockAccessor.GetBlockEntity(selection.Position) is BECuringRack entityCuringRack)
+            {
+                selectionBoxSelected = selection.SelectionBoxIndex;
 
-            return interactions;
+                switch (selectionBoxSelected)
+                {
+                    case 1:
+                        if (entityCuringRack.HookItemslot1.Empty)
+                        {
+                            return emptyInteractions;
+                        }
+                        else if(entityCuringRack.MeatSlot(1).Empty)
+                        {
+                            return hookEmptyInteractions;
+                        }
+                        else if(!entityCuringRack.MeatSlot(4).Empty)
+                        {
+                            return fullInteractions;
+                        }
+                        else
+                        {
+                            return partialMeatInteractions;
+                        }
+                    case 0:
+                        if(entityCuringRack.HookItemslot2.Empty)
+                        {
+                            return emptyInteractions;
+                        }
+                        else if(entityCuringRack.MeatSlot(5).Empty)
+                        {
+                            return hookEmptyInteractions;
+                        }
+                        else if(!entityCuringRack.MeatSlot(8).Empty)
+                        {
+                            return fullInteractions;
+                        }
+                        else
+                        {
+                            return partialMeatInteractions;
+                        }
+                    default: break;
+                }
+            }
+            return null;
         }
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {

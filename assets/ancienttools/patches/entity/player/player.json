@@ -1,0 +1,22 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/client/animations/-",
+		"value": {
+			code: "adzestrip",
+			animation: "AdzeStrip",
+			animationSpeed: 1.0,
+			blendMode: "Add",
+			elementWeight: {
+				"UpperArmR": 7,
+				"UpperArmL": 7,
+			},
+			elementBlendMode: {
+				"UpperArmR": "AddAverage",
+				"UpperArmL": "AddAverage",
+			}
+		},
+		"file": "game:entities/humanoid/player",
+		"side": "Server"
+	},
+]

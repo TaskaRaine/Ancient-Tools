@@ -1,0 +1,105 @@
+﻿{
+	code: "adze",
+	class: "ItemAdze",
+	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"], "ancienttools": ["*"] },
+	attributes: {
+		handbook: {
+			groupBy: ["adze-*"]
+		},
+		toolrackTransform: {
+			rotation: { y: 1, z: -1 },
+			translation: { x: -0.3, y: 0.6 },
+			scale: 1.25,
+		},
+		strippingTimeModifierByType: {
+			"@adze-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": 1.2,
+			"@adze-(copper|silver|gold)": 1.0,
+			"@adze-(tinbronze|bismuthbronze|blackbronze)": 0.8,
+			"@adze-(iron|meteoriciron)": 0.6,
+			"@adze-(steel)": 0.5,
+		}
+	},
+	variantgroups: [
+        { code: "material", states: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron", "meteoriciron", "steel" ] },
+    ],
+	drawtype: "json",
+    shapeByType: {
+		"@adze-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": { base: "item/tool/adze-stone" },
+		"@adze-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": { base: "item/tool/adze-metal" }
+	},
+	texturesByType: {
+		"@adze-(chert|granite|andesite|basalt|obsidian|peridotite)": { 
+			"material": { base: "game:block/stone/rock/{material}1" },
+			"string": { base: "game:item/tool/material/string" },
+			"handle": { base: "game:item/tool/material/handle" }
+		},
+		"adze-flint": { 
+			"material": { base: "game:block/stone/{material}" },
+			"string": { base: "game:item/tool/material/string" },
+			"handle": { base: "game:item/tool/material/handle" } 
+		},
+		"@adze-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": {
+			"metal": { base: "game:block/metal/ingot/{material}" },
+			"handle": { base: "game:item/tool/material/handle" }
+		}
+	},
+	tool: "axe",
+	maxstacksize: 1,
+	attackRange: 2,
+	tooltierbytype: {
+		"@adze-(chert|granite|andesite|basalt|obsidian|peridotite)": 1,
+		"@adze-(copper|silver|gold)": 2,
+		"@adze-(tinbronze|bismuthbronze|blackbronze)": 3,
+		"@adze-(iron|meteoriciron)": 4,
+		"@adze-(steel)": 5
+	},
+	heldTpHitAnimation: "smithing",
+	damagedby: ["blockbreaking", "attacking"],
+	durabilitybytype: {
+		"@adze-(chert|granite|andesite|basalt|obsidian|peridotite)": 50,
+		"*-flint": 60,
+		"*-obsidian": 90,
+		"@adze-(silver|gold)": 125,
+		"*-copper": 250,
+		"*-tinbronze": 400,
+		"*-bismuthbronze": 500,
+		"*-blackbronze": 600,
+		"*-iron": 900,
+		"*-meteoriciron": 1200,
+		"*-steel": 1800
+	},
+	attackpowerbytype: {
+		"@adze-(chert|granite|andesite|basalt|obsidian|peridotite)": 0.75,
+		"*-flint": 1.25,
+		"*-obsidian": 1.5,
+		"*-copper": 2,
+		"@adze-(bismuthbronze|silver|gold)": 2.5,
+		"*-tinbronze": 2.75,
+		"@adze-(blackbronze|iron)": 3,
+		"*-medeoriciron": 3.5,
+		"*-steel": 4
+	},
+	guiTransform: {
+		translation: { x: -2, y: 0, z: 0 },
+		rotation: { x: -89, y: 41, z: 33 },
+		origin: { x: 0.48, y: 0, z: 0.38 },
+		scale: 1.57
+	},
+	fpHandTransform: {
+		translation: { x: -0.24, y: 0, z: 0.1 },
+		rotation: { x: 15, y: 15, z: 90 },
+		scale: 2.45
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 3.4
+	},
+	tpHandTransform: {
+		translation: { x: -0.9, y: 0.01, z: -0.65 },
+		rotation: { x: 90, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.8
+	}
+}

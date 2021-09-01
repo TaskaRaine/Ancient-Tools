@@ -1,0 +1,66 @@
+﻿{
+	code: "bark",
+	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
+	attributesByType: {
+		"@bark-(birch|pine)": {
+			isMedicinalBark: true
+		},
+		"*": {
+			isMedicinalBark: false
+		}
+	},
+	behaviors: [
+		{ name: "SalveIngredient" },
+	],
+	variantgroups: [
+        { code: "bark", loadFromProperties: "game:block/wood", states:["aged"] }
+    ],
+	drawtype: "json",
+    shape: { base: "item/resource/bark" },
+    textures: {
+        bark: { base: "game:block/wood/bark/{bark}" }
+    },
+	maxstacksize: 64,
+	combustiblePropsByType: {
+		"@bark-(birch|aged)": {
+			burnTemperature: 800,
+			burnDuration: 4,
+		},
+		"*": {
+			burnTemperature: 800,
+			burnDuration: 8,
+		}
+	},
+	grindingPropsByType: {
+		"*-birch": {
+			grindedStack: { type: "item", code: "game:flour-birch" }
+		},
+		"*-pine": {
+			grindedStack: { type: "item", code: "game:flour-pine" }
+		}
+	},
+	guiTransform: {
+		translation: { x: 3, y: 4, z: 0 },
+		rotation: { x: -25, y: -44, z: -168 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 3.47
+	},
+	fpHandTransform: {
+		translation: { x: 0.05, y: 0.5, z: 0 },
+		rotation: { x: 17, y: -8, z: 14 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.21
+	},
+	tpHandTransform: {
+		translation: { x: -1, y: 0, z: -0.8 },
+		rotation: { x: 0, y: -86, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.57
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5299 },
+		scale: 3.5
+	}
+}

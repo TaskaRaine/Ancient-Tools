@@ -21,10 +21,10 @@
 	drawtype: "json",
 	shapebytype: { 
 		"*-ns-*": { 
-			base: "block/{supports}_curingrack" 
+			base: "block/curingrack/{supports}_curingrack" 
 		},
 		"*-ew-*": {
-			base: "block/{supports}_curingrack", rotateY: 90
+			base: "block/curingrack/{supports}_curingrack", rotateY: 90
 		}
 	},
 	texturesByType: { 
@@ -45,6 +45,12 @@
 			{ x1: 0.33, y1: 0, z1: 0, x2: 0.66, y2: 1, z2: 0.5 },
 			{ x1: 0.33, y1: 0, z1: 0.5, x2: 0.66, y2: 1, z2: 1 },
 		]
+	},
+	sounds: {
+		"place": "game:block/planks",
+		"hit": "game:block/planks",
+		"break": "game:block/planks",
+		"walk": "game:walk/wood"
 	},
 	drops: [
 		{ type: "block", code: "curingrack-{wood}-ns-full" }

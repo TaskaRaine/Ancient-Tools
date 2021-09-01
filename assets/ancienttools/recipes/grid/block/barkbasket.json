@@ -1,0 +1,18 @@
+﻿{
+	ingredientPattern: "BBBB BBBB",
+	width: 3,
+	height: 3,
+	ingredients: {
+		"B": { 
+			type: "item", 
+			name: "bark",
+			code: "bark-*",
+			quantity: 3
+		}
+	},
+	output: { 
+		type: "block", 
+		code: "barkbasket-{bark}-east",
+		quantity: 1
+	}
+}

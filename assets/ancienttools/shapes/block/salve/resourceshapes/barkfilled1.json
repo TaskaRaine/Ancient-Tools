@@ -1,0 +1,30 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 8,
+	"textureHeight": 8,
+	"textureSizes": {
+	},
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "Base83",
+			"from": [ 5.0, 1.0, 10.0 ], 
+			"to": [ 7.0, 1.5, 16.0 ], 
+			"rotationOrigin": [ 5.0, 1.0, 10.0 ],
+			"rotationX": -36.254658025842815,
+			"rotationY": 89.9802127184967,
+			"rotationZ": 36.254658025842815,
+			"faces": {
+				"north": { "texture": "#bark", "uv": [ 4.5, 2.0, 6.5, 2.5 ], "enabled": false },
+				"east": { "texture": "#bark", "uv": [ 4.5, 1.0, 5.0, 7.0 ], "rotation": 90 },
+				"south": { "texture": "#bark", "uv": [ 3.0, 2.0, 5.0, 2.5 ], "enabled": false },
+				"west": { "texture": "#bark", "uv": [ 2.0, 1.0, 2.5, 7.0 ], "rotation": 90 },
+				"up": { "texture": "#bark", "uv": [ 2.0, 1.0, 4.0, 7.0 ] },
+				"down": { "texture": "#bark", "uv": [ 4.0, 1.0, 6.0, 7.0 ] }
+			}
+		}
+	]}

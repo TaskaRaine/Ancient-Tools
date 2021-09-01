@@ -122,7 +122,7 @@ namespace AncientTools.BlockEntity
 
             if (!ResourceSlot.Empty)
             {
-                PrepareMesh("ancienttools:shapes/block/mortar/resource_", ResourceSlot, block, mesher, tessThreadTesselator);
+                PrepareMesh("ancienttools:shapes/block/mortar/resourceshapes/resource_", ResourceSlot, block, mesher, tessThreadTesselator);
             }
 
             return false;
@@ -392,7 +392,7 @@ namespace AncientTools.BlockEntity
             }
             else
             {
-                resourcePath = "ancienttools:shapes/block/mortar/resource_default";
+                resourcePath = "ancienttools:shapes/block/mortar/resourceshapes/resource_default";
 
                 this.AddMesh(block, mesher, resourcePath, tessThreadTesselator.GetTexSource(block));
             }

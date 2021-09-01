@@ -1,0 +1,36 @@
+﻿[
+	{
+		ingredient: { type: "item", code: "game:flint" },
+		pattern: [[
+			"____##____",
+			"___####___",
+			"___####___",
+			"___####___",
+			"__######__",
+			"__######__",
+			"__######__",
+			"_########_",
+			"_########_",
+			"_########_"
+		]],
+		name: "Flint Adze",
+		output: { type: "item", code: "game:adzehead-flint"  }
+	},
+	{
+		ingredient: { type: "item", code: "game:stone-*", name: "stone", allowedVariants: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite"] },
+		pattern: [[
+			"____##____",
+			"___####___",
+			"___####___",
+			"___####___",
+			"__######__",
+			"__######__",
+			"__######__",
+			"_########_",
+			"_########_",
+			"_########_"
+		]],
+		name: "Stone Adze",
+		output: { type: "item", code: "game:adzehead-{stone}"  }
+	}
+]

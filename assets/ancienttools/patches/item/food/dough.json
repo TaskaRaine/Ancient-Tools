@@ -1,0 +1,70 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/variantgroups/0/states/-",
+		"value": "birch",
+		"file": "game:itemtypes/food/dough",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/variantgroups/0/states/-",
+		"value": "pine",
+		"file": "game:itemtypes/food/dough",
+		"side": "Server"
+	},
+	{
+		"op": "remove",
+		"path": "/attributes/nutritionPropsWhenInMealByType/*",
+		"file": "game:itemtypes/food/dough",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/nutritionPropsWhenInMealByType/*-birch",
+		"value": {
+			satiety: 100, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/dough",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/nutritionPropsWhenInMealByType/*-pine",
+		"value": {
+			satiety: 100, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/dough",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/nutritionPropsWhenInMealByType/*",
+		"value": {
+			satiety: 240, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/dough",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/creativeinventory/ancienttools",
+		"value": ["*-birch-*", "*-pine-*"],
+		"file": "game:itemtypes/food/bread",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/ingredients/F/allowedVariants/-",
+		"value": "birch",
+		"file": "game:recipes/grid/dough",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/ingredients/F/allowedVariants/-",
+		"value": "pine",
+		"file": "game:recipes/grid/dough",
+		"side": "Server"
+	}
+]

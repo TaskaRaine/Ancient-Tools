@@ -1,0 +1,61 @@
+﻿{
+	code: "adzehead",
+	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
+	attributes: {
+		handbook: {
+			groupBy: ["adzehead-*"]
+		}
+	},
+	variantgroups: [
+        { code: "material", states: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron", "meteoriciron", "steel" ] },
+    ],
+	drawtype: "json",
+    shapeByType: { 
+		"@adzehead-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": { base: "ancienttools:item/toolhead/adze-stone" },
+		"@adzehead-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": { base: "ancienttools:item/toolhead/adze-metal" }
+	},
+	texturesByType: {
+		"@adzehead-(chert|granite|andesite|basalt|obsidian|peridotite)": { 
+			"material": { base: "game:block/stone/rock/{material}1" },
+		},
+		"adzehead-flint": { 
+			"material": { base: "game:block/stone/{material}" },
+		},
+		"@adzehead-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": {
+			"metal": { base: "game:block/metal/ingot/{material}" }
+		}
+	},
+	maxstacksize: 4,
+	guiTransformByType: {
+		"@adzehead-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": {
+			translation: { x: -2, y: 0, z: 0 },
+			rotation: { x: -85, y: 47, z: -47 },
+			origin: { x: 0.5, y: 0, z: 0.4 },
+			scale: 3.63
+		},
+		"@adzehead-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": {
+			translation: { x: 2, y: -2, z: 0 },
+			rotation: { x: -11, y: -131, z: -89 },
+			origin: { x: 0.5, y: 0, z: 0.4 },
+			scale: 3.09
+		}
+	},
+	fpHandTransform: {
+		translation: { x: 0.05, y: 0.5, z: 0.25 },
+		rotation: { x: 180, y: 180, z: -90 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.9, y: 0, z: -0.8 },
+		rotation: { x: 0, y: -90, z: 90 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.61
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 90, y: 1, z: 59 },
+		origin: { x: 0.5, y: 0, z: 0.5299 },
+		scale: 2.81
+	}
+}

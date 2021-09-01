@@ -1,0 +1,217 @@
+﻿{
+	code: "strippedlog",
+	creativeinventory: { "general": ["*-ud"], "flora": ["*-ud"], "construction": ["*-ud"], "ancienttools": ["*-ud"] },
+    attributes: {
+		handbook: {
+			groupBy: ["strippedlog-*"],
+			extraSections: [
+				{ title: "handbook-crafting-title-strippedlog", text: "handbook-crafting-text-strippedlog" }
+			]
+		}
+	},
+	behaviors: [
+		{ name: "Pillar" }
+	],
+	variantgroups: [
+        { code: "wood", loadFromProperties: "game:block/wood", states:["aged"] },
+		{ code: "rotation", states: ["ud", "ns", "we"] },
+    ],
+	blockmaterial: "Wood",
+	requiredMiningTier: 1,
+	shape: { base: "game:block/basic/cube" },
+	drawtype: "cube",
+	texturesbytype: {
+		"*-purpleheart-ud": {
+			"north": { base: "block/strippedlog/purpleheart_outer", rotation: 90 },
+			"south": { base: "block/strippedlog/purpleheart_outer", rotation: 90 },
+			"east": { base: "block/strippedlog/purpleheart_outer", rotation: 90 },
+			"west": { base: "block/strippedlog/purpleheart_outer", rotation: 90 },
+
+			"inside-north": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+			"inside-east": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+			"inside-south": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+			"inside-west": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+
+			"up": { base: "block/strippedlog/{wood}" },
+			"down": { base: "block/strippedlog/{wood}" }
+		},
+		"*-purpleheart-ns": {
+			"up": { base: "block/strippedlog/purpleheart_outer", rotation: 90 },
+			"down": { base: "block/strippedlog/purpleheart_outer", rotation: 90 },
+			"east": { base: "block/strippedlog/purpleheart_outer" },
+			"west": { base: "block/strippedlog/purpleheart_outer" },
+
+			"inside-up": { base: "game:block/wood/debarked/{wood}", rotation: 90  },
+			"inside-down": { base: "game:block/wood/debarked/{wood}", rotation: 90  },
+			"inside-west": { base: "game:block/wood/debarked/{wood}" },
+			"inside-east": { base: "game:block/wood/debarked/{wood}"  },
+
+			"north": { base: "block/strippedlog/{wood}" },
+			"south": { base: "block/strippedlog/{wood}" }
+		},
+		"*-purpleheart-we": {
+			"up": { base: "block/strippedlog/purpleheart_outer" },
+			"down": { base: "block/strippedlog/purpleheart_outer" },
+			"north": { base: "block/strippedlog/purpleheart_outer" },
+			"south": { base: "block/strippedlog/purpleheart_outer" },
+
+			"inside-up": { base: "game:block/wood/debarked/{wood}"  },
+			"inside-down": { base: "game:block/wood/debarked/{wood}"  },
+			"inside-north": { base: "game:block/wood/debarked/{wood}"  },
+			"inside-south": { base: "game:block/wood/debarked/{wood}"  },
+
+			"west": { base: "block/strippedlog/{wood}" },
+			"east": { base: "block/strippedlog/{wood}" }
+		},
+		"*-ebony-ud": {
+			"north": { base: "block/strippedlog/ebony_outer", rotation: 90 },
+			"south": { base: "block/strippedlog/ebony_outer", rotation: 90 },
+			"east": { base: "block/strippedlog/ebony_outer", rotation: 90 },
+			"west": { base: "block/strippedlog/ebony_outer", rotation: 90 },
+
+			"inside-north": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+			"inside-east": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+			"inside-south": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+			"inside-west": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+
+			"up": { base: "block/strippedlog/{wood}" },
+			"down": { base: "block/strippedlog/{wood}" }
+		},
+		"*-ebony-ns": {
+			"up": { base: "block/strippedlog/ebony_outer", rotation: 90 },
+			"down": { base: "block/strippedlog/ebony_outer", rotation: 90 },
+			"east": { base: "block/strippedlog/ebony_outer" },
+			"west": { base: "block/strippedlog/ebony_outer" },
+
+			"inside-up": { base: "game:block/wood/debarked/{wood}", rotation: 90  },
+			"inside-down": { base: "game:block/wood/debarked/{wood}", rotation: 90  },
+			"inside-west": { base: "game:block/wood/debarked/{wood}" },
+			"inside-east": { base: "game:block/wood/debarked/{wood}"  },
+
+			"north": { base: "block/strippedlog/{wood}" },
+			"south": { base: "block/strippedlog/{wood}" }
+		},
+		"*-ebony-we": {
+			"up": { base: "block/strippedlog/ebony_outer" },
+			"down": { base: "block/strippedlog/ebony_outer" },
+			"north": { base: "block/strippedlog/ebony_outer" },
+			"south": { base: "block/strippedlog/ebony_outer" },
+
+			"inside-up": { base: "game:block/wood/debarked/{wood}"  },
+			"inside-down": { base: "game:block/wood/debarked/{wood}"  },
+			"inside-north": { base: "game:block/wood/debarked/{wood}"  },
+			"inside-south": { base: "game:block/wood/debarked/{wood}"  },
+
+			"west": { base: "block/strippedlog/{wood}" },
+			"east": { base: "block/strippedlog/{wood}" }
+		},
+		"*-ud": {
+			"north": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+			"south": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+			"east": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+			"west": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+
+			"inside-north": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+			"inside-east": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+			"inside-south": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+			"inside-west": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+
+			"up": { base: "block/strippedlog/{wood}" },
+			"down": { base: "block/strippedlog/{wood}" }
+		},
+		"*-ns": {
+			"up": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+			"down": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+			"east": { base: "game:block/wood/debarked/{wood}" },
+			"west": { base: "game:block/wood/debarked/{wood}" },
+
+			"inside-up": { base: "game:block/wood/debarked/{wood}", rotation: 90  },
+			"inside-down": { base: "game:block/wood/debarked/{wood}", rotation: 90  },
+			"inside-west": { base: "game:block/wood/debarked/{wood}" },
+			"inside-east": { base: "game:block/wood/debarked/{wood}"  },
+
+			"north": { base: "block/strippedlog/{wood}" },
+			"south": { base: "block/strippedlog/{wood}" }
+		},
+		"*-we": {
+			"up": { base: "game:block/wood/debarked/{wood}" },
+			"down": { base: "game:block/wood/debarked/{wood}" },
+			"north": { base: "game:block/wood/debarked/{wood}" },
+			"south": { base: "game:block/wood/debarked/{wood}" },
+
+			"inside-up": { base: "game:block/wood/debarked/{wood}"  },
+			"inside-down": { base: "game:block/wood/debarked/{wood}"  },
+			"inside-north": { base: "game:block/wood/debarked/{wood}"  },
+			"inside-south": { base: "game:block/wood/debarked/{wood}"  },
+
+			"west": { base: "block/strippedlog/{wood}" },
+			"east": { base: "block/strippedlog/{wood}" }
+		}
+	},
+	replaceable: 500,
+	resistance: 4.5,
+	sounds: {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood",
+		"hit": "game:block/planks",
+		"break": "game:block/planks",
+		byTool: {
+			"Axe": { hit: "game:block/chop", break: "game:block/planks" }
+		}
+	},
+	combustiblePropsByType: {
+		"*-birch-*": {
+			burnTemperature: 800,
+			burnDuration: 78,
+		},
+		"*-oak-*": {
+			burnTemperature: 800,
+			burnDuration: 98,
+		},
+		"*-ebony-*": {
+			burnTemperature: 800,
+			burnDuration: 110,
+		},
+		"*-pine-*": {
+			burnTemperature: 800,
+			burnDuration: 60,
+		},
+		"*-acacia-*": {
+			burnTemperature: 800,
+			burnDuration: 89,
+		},
+		"*-kapok-*": {
+			burnTemperature: 800,
+			burnDuration: 47,
+		},
+		"*-maple-*": {
+			burnTemperature: 800,
+			burnDuration: 79,
+		},
+		"*-redwood-*": {
+			burnTemperature: 800,
+			burnDuration: 72,
+		},
+		"*-aged-*": {
+			burnTemperature: 700,
+			burnDuration: 40,
+		},
+		"*": {
+			burnTemperature: 800,
+			burnDuration: 72,
+		}
+	},
+	maxStackSize: 16,
+	materialDensity: 700,
+	heldTpIdleAnimation: "holdbothhandslarge", heldTpUseAnimation: "twohandplaceblock",
+	tpHandTransform: {
+		translation: { x: -1.2, y: -1.1, z: -0.8 },
+		rotation: { x: -2, y: 25, z: -78 },
+		scale: 0.37
+	},
+	dropsByType: {
+		"*": [
+			{ type: "block", code: "strippedlog-{wood}-ud" }
+		]
+	}
+}

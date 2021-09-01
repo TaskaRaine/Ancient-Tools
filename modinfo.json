@@ -2,9 +2,9 @@
   "type": "code",
   "modid": "ancienttools",
   "name": "Ancient Tools",
-  "author": "Taska Raine",
+  "authors": ["Taska Raine"],
   "description": "A collection of useful tools from ancient times.",
-  "version": "1.1.0",
+  "version": "1.2.1",
   "dependency": {
     "game": "1.15.0"
   }

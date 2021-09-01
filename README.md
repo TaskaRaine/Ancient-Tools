@@ -11,6 +11,10 @@
 ### Releases
 
 #### Vintage Story 1.15.0+
+[Version 1.2.1](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.2.1/AncientTools_V1.2.1.zip)
+
+[Version 1.2.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.2.0/AncientTools_V1.2.0.zip)
+
 [Version 1.1.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.1.0/AncientTools_V1.1.0.zip)
 
 [Version 1.0.3](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.3/AncientTools_V1.0.3.zip)
@@ -23,6 +27,41 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+
+#### Version 1.2.1
+--Adze(and related)
+Stripped logs now only drop the ud directional variant when broken. 
+
+Created a compatibility recipe for Building+ derbarked wooden supports. They can be crafted directly by using stripped logs.
+
+Added the molds to the Ancient Tools creative tab.
+
+--Curing Rack(and related)
+Fixed an issue where the curing hook GUI image hid the number of hooks in the stack.
+
+Improved the block interaction tooltips for the curing rack.
+
+#### Version 1.2.0
+--Adze(and related)
+Added an adze tool(with multiple variants) that can strip bark from trees.
+
+Added stone(created through knapping) and metal(created through smithing/smelting) adze heads that can be used to create adze tools.
+
+Added a stripped log block with variants matching all tree types. These stripped logs can used for decorative purposes, chiseled, used for firewood, or planks.
+
+Added bark for each tree type. These have various crafting purposes, and can be used as a firestarter/kindling in place of firewood. Short burn time.
+
+Birch and pine bark can be ground down into flour, then crafted into a dough that can then be baked into breads with the clay oven.
+
+Healing salves made from oils extracted from birch/pine bark can be crafted for significant healing over time. There's a detailed guide in-game describing this process.
+
+All bark can be used to create cute little bark baskets that can store items. Equivalent to the reed basket. Carry Capacity compatible.
+
+--Curing Rack
+Hopefully fixed a text issue in the curing rack blockinfo.
+
+--Mortar and Pestle
+Added shapes for pine bark and birch bark
 
 #### Version 1.1.0
 ---Curing Rack

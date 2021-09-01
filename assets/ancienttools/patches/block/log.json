@@ -1,0 +1,12 @@
+﻿[
+    {
+        "op": "add",
+        "path": "/attributes/woodStrippable",
+        "value": {
+          "barkAmount": 4,
+          "strippingTime": 1.0
+        },
+        "file": "game:blocktypes/wood/woodtyped/log",
+		"side": "Server"
+    }
+]

@@ -1,0 +1,21 @@
+﻿{
+	ingredientPattern: "HS",
+	width: 1,
+	height: 2,
+	ingredients: {
+		"H": { 
+			type: "item", 
+			name: "head",
+			code: "game:adzehead-*" 
+		},
+		"S": { 
+			type: "item", 
+			code: "game:stick" 
+		}
+	},
+	output: { 
+		type: "item", 
+		code: "adze-{head}",
+		quantity: 1
+	}
+}

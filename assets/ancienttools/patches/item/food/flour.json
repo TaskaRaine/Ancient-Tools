@@ -1,0 +1,23 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/variantgroups/0/states/-",
+		"value": "birch",
+		"file": "game:itemtypes/food/flour",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/variantgroups/0/states/-",
+		"value": "pine",
+		"file": "game:itemtypes/food/flour",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/creativeinventory/ancienttools",
+		"value": ["*-birch", "*-pine"],
+		"file": "game:itemtypes/food/flour",
+		"side": "Server"
+	}
+]

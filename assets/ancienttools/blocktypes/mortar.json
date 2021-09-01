@@ -14,7 +14,7 @@
     ],
     behaviors: [{name: "UnstableFalling"}],
     drawtype: "json",
-    shape: { base: "block/mortar" },
+    shape: { base: "block/mortar/mortar" },
     textures: {
         stone: { base: "game:block/stone/rock/{stone}1" },
         pestlestone: { base: "game:block/stone/rock/slate1" },
@@ -34,7 +34,9 @@
         sulfur: { base: "game:item/resource/ungraded/sulfur" },
         borax: { base: "game:item/resource/ungraded/borax" },
         sylvite: { base: "game:item/resource/ungraded/sylvite" },
-        cassava: { base: "game:item/food/vegetable/cassava-dried" }
+        cassava: { base: "game:item/food/vegetable/cassava-dried" },
+        birch: { base: "game:block/wood/bark/birch" },
+        pine: { base: "game:block/wood/bark/pine" }
     },
     blockmaterial: "Stone",
     sidesolid: { all: false },

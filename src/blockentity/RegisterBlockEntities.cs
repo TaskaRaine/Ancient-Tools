@@ -10,6 +10,8 @@ namespace AncientTools.BlockEntity
 
             api.RegisterBlockEntityClass("BEMortar", typeof(BEMortar));
             api.RegisterBlockEntityClass("BECuringRack", typeof(BECuringRack));
+            api.RegisterBlockEntityClass("BESalveContainer", typeof(BESalveContainer));
+            api.RegisterBlockEntityClass("BEFinishedSalve", typeof(BEFinishedSalve));
         }
     }
 }

@@ -10,6 +10,19 @@ The classic <a href=\'handbook://block-ancienttools:mortar-granite\'>mortar</a> 
 
 To use these items in Vintage Story you must first craft each. Place the mortar on the ground then insert the pestle with <icon name='rightmousebutton'></icon>. Insert any grindable item with <icon name='rightmousebutton'></icon> then crouch and hold <icon name='rightmousebutton'></icon> to begin grinding away!
 
+<font weight='bold'>Adze</font>
+This <a href=\'handbook://item-ancienttools:adze-copper\'>adze</a>, introduced in the Neolithic era, was a tool commonly used by ancient carpenters to shape wood into various objects or architecture. In its current implementation in the Ancient Tools mod, the adze is used to strip <a href=\'handbook://item-ancienttools:bark-oak\'>bark</a> from trees.  
+
+To create an adze, an <a href=\'handbooksearch://adze head\'>adze head</a> must first be created either through stone <a href=\"handbook://craftinginfo-knapping\">knapping</a>, <a href=\"handbook://craftinginfo-smelting\">smelting</a> or <a href=\"handbook://craftinginfo-smithing\">smithing</a>. Craft the resulting adze head with a stick and you'll now have yourself a handy tool for collecting bark! Approach the nearest tree with adze in hand then crouch and hold <icon name='rightmousebutton'></icon> to begin stripping away.
+
+The <a href=\'handbook://item-ancienttools:bark-oak\'>tree bark</a> that you collect can be used for a variety of different purposes. Bark can make for an excellent firestarter in place of firewood. Or, it can be woven to create cute little <a href=\'handbooksearch://bark basket\'>bark baskets</a> to place things in.
+
+<a href=\'handbook://item-ancienttools:bark-birch\'>Birch bark</a> and <a href=\'handbook://item-ancienttools:bark-pine\'>pine bark</a> are a special arboreal resource in that they possess some unique properties that we can take advantage of. 
+
+The inner layer of bark from either tree is edible can be ground down into a <a href=\'handbooksearch://flour\'>flour</a> that can then be baked into <a href=\'handbooksearch://bread\'>bread</a>. This was a Scandanavian tradition of the indigenous Sami culture. 
+
+Both varities of bark also have various medicinal properties. Have a look at the <a href=\"handbook://ancienttools-quickstart-guide-salve\">salve preparation guide</a> if you're interested in taking advantage of them!
+
 <font weight='bold'>Curing Rack</font>
 Curing meats with <a href=\'handbook://item-salt\'>salt</a> is a centuries-old practice of preservation. This requires a carefully controlled environment to ensure the meat doesn't rot before the meat is cured. A cellar is recommended!
 
@@ -17,6 +30,20 @@ A <a href=\'handbooksearch://curing rack\'>curing rack</a> can be equipped with 
 
 Salted meats can also be cooked in a firepit for a quick meal solution.	
 ",
+	"game:ancienttools-quickstart-guide-salve": "Salve Guide",
+	"game:ancienttools-quickstart-title-salve": "Crafting Mechanic: Salve Creation",
+	"game:ancienttools-quickstart-text-salve": "
+<font weight='bold' align='center'>Ancient Tools Salve Creation Guide</font><br>
+Tree bark has had many various uses throughout history. Many trees, such as <a href=\'handbooksearch://birch\'>birch</a> and <a href=\'handbooksearch://pine\'>pine</a>, have various beneficial healing properties. Birch is most commonly used to ease joint pain, whilst pine is most commonly used to reduce inflammation.
+
+<a href=\'handbook://item-ancienttools:salveportion\'>Salves</a> are sometimes created by homesteaders then applied to the skin to take advantage of these properties. To create a salve with Ancient Tools, first, you must convert two cooking pots into <a href=\'handbook://block-ancienttools:salvepot-empty\'>empty salve containers</a>. This can be done by crouching then pressing <icon name='rightmousebutton'></icon> with a salve ingredient(<a href=\'handbook://item-ancienttools:bark-birch\'>birch</a>/<a href=\'handbook://item-ancienttools:bark-birch\'>pine</a> bark, <a href=\'handbook://item-fat\'>fat</a>, or <a href=\'handbook://item-beeswax\'>beeswax</a>) or by crafting a <a href=\'handbook://block-ckaypot-burned\'>cooking pot</a> in the grid with a medicinal bark.
+
+Place both <a href=\'handbook://block-ancienttools:salvepot-empty\'>empty containers</a> on the ground. Fill one with <a href=\'handbook://item-ancienttools:bark-birch\'>birch</a>OR<a href=\'handbook://item-ancienttools:bark-birch\'>pine</a> bark and <a href=\'handbook://item-fat\'>fat</a>, then the other with <a href=\'handbook://item-beeswax\'>beeswax</a>. Heat both in a firepit to convert them to prepared versions. 
+
+Finally, place one prepared container on the ground then crouch and hold <icon name='rightmousebutton'></icon> with the other container in hand to pour them together. Congratulations, you made a healing salve! <icon name='rightmousebutton'></icon> the finished salve to extract a <a href=\'handbook://item-ancienttools:salveportion\'>portion</a> that will heal over time when used.
+
+Empty salve containers can be placed in the crafting grid to convert them back into cooking pots.
+	",
 
 	"blockhelp-place-pestle": "Place Pestle",
 	"blockhelp-place-resource": "Place Grindable Resource",
@@ -24,11 +51,36 @@ Salted meats can also be cooked in a firepit for a quick meal solution.
 
 	"blockhelp-place-curinghook": "Place Curing Hook",
 	"blockhelp-place-saltedmeat": "Hang Salted Meat",
+	"blockhelp-take-curinghook": "Take Curing Hook",
+	"blockhelp-take-meat": "Take Meat",
+
+	"blockhelp-pour-barkoil": "Pour melted wax into bark oil",
+	"blockhelp-pour-wax": "Pour bark oil into melted wax",
+	"blockhelp-take-salveportion": "Take Salve Portion",
 
 	"blockinfo-curingrack-no-entity": "Something went wrong with this block. The BlockEntity does not exist. Please break the block and place it again.",
 	"blockinfo-curingrack-hook-missing": "Curing Hook Missing",
 	"blockinfo-curingrack-meat-status": "- Cures In: {0} Days | Rots In: {1} Days",
 	"blockinfo-curingrack-meat-perish": "Stored meat perish speed: {0}x",
+
+	"blockinfo-salve-empty-fillwithbark": "A salve container must be filled with birch/pine bark and fat OR beeswax.",
+	"blockinfo-salve-empty-crouch": "Crouch and insert an item to get started.",
+	"blockinfo-salve-empty-partial": "Contains: ",
+	"blockinfo-salve-empty-bark": "{0}/{1} bark",
+	"blockinfo-salve-empty-wax": "{0}/{1} beeswax",
+	"blockinfo-salve-empty-fat": "{0}/{1} fat",
+	"blockinfo-salve-mixwithoil": "Must be mixed with bark oil to create a healing salve.",
+	"blockinfo-salve-mixwithwax": "Must be mixed with melted wax to create a healing salve.",
+	"blockinfo-salve-filled-remaining": "{0} salve portions remaining.",
+
+	"game:handbook-crafting-title-strippedlog": "Created by",
+	"game:handbook-crafting-text-strippedlog": "Stripping wood from logs using an adze. Additionally, a stripped log will be returned when an adze is used with a log in the crafting grid.",
+
+	"game:handbook-crafting-title-finishedsalve": "Created by",
+	"game:handbook-crafting-text-finishedsalve": "Mixing a pot of <a href=\'handbook://block-ancienttools:salvepot-softwax\'>melted wax</a> with a pot of <a href=\'handbook://block-ancienttools:salvepot-barkoil\'>prepared bark oil</a> in-world to create a finished salve containing multiple portions. Portions can be taken from this salve with <icon name='rightmousebutton'></icon>.",
+
+	"game:handbook-crafting-title-salveportion": "Created by",
+	"game:handbook-crafting-text-salveportion": "Mixing a pot of <a href=\'handbook://block-ancienttools:salvepot-softwax\'>melted wax</a> with a pot of <a href=\'handbook://block-ancienttools:salvepot-barkoil\'>prepared bark oil</a> in-world to create a finished salve containing multiple portions. Portions can be taken from this salve with <icon name='rightmousebutton'></icon>.",
 
 	"block-mortar-peridotite": "Peridotite Mortar",
 	"block-mortar-andesite": "Andesite Mortar",
@@ -49,6 +101,64 @@ Salted meats can also be cooked in a firepit for a quick meal solution.
 	"block-curingrack-purpleheart-*": "Purpleheart Curing Rack",
 	"block-curingrack-aged-*": "Aged Curing Rack",
 
+	"block-strippedlog-birch-*": "Stripped Birch Log",
+	"block-strippedlog-oak-*": "Stripped Oak Log",
+	"block-strippedlog-maple-*": "Stripped Maple Log",
+	"block-strippedlog-pine-*": "Stripped Pine Log",
+	"block-strippedlog-acacia-*": "Stripped Acacia Log",
+	"block-strippedlog-kapok-*": "Stripped Kapok Log",
+	"block-strippedlog-baldcypress-*": "Stripped Bald Cypress Log",
+	"block-strippedlog-larch-*": "Stripped Larch Log",
+	"block-strippedlog-redwood-*": "Stripped Redwood Log",
+	"block-strippedlog-ebony-*": "Stripped Ebony Log",
+	"block-strippedlog-walnut-*": "Stripped Walnut Log",
+	"block-strippedlog-purpleheart-*": "Stripped Purpleheart Log",
+	"block-strippedlog-aged-*": "Stripped Aged Log",
+
+	"block-basket-barkbasket-birch-*": "Birch Bark Basket",
+	"block-basket-barkbasket-oak-*": "Oak Bark Basket",
+	"block-basket-barkbasket-maple-*": "Maple Bark Basket",
+	"block-basket-barkbasket-pine-*": "Pine Bark Basket",
+	"block-basket-barkbasket-acacia-*": "Acacia Bark Basket",
+	"block-basket-barkbasket-kapok-*": "Kapok Bark Basket",
+	"block-basket-barkbasket-baldcypress-*": "Bald Cypress Bark Basket",
+	"block-basket-barkbasket-larch-*": "Larch Bark Basket",
+	"block-basket-barkbasket-redwood-*": "Redwood Bark Basket",
+	"block-basket-barkbasket-ebony-*": "Ebony Bark Basket",
+	"block-basket-barkbasket-walnut-*": "Walnut Bark Basket",
+	"block-basket-barkbasket-purpleheart-*": "Purpleheart Bark Basket",
+	"block-basket-barkbasket-aged-*": "Aged Bark Basket",
+
+	"block-salvepot-empty": "Empty Salve Container",
+	"block-salvepot-birch": "Unprepared Salve Mixture(birch bark/fat)",
+	"block-salvepot-pine": "Unprepared Salve Mixture(pine bark/fat)",
+	"block-salvepot-barkoil": "Prepared Salve Mixture(barkoil)",
+	"block-salvepot-hardwax": "Hardened Salve Thickener(beeswax)",
+	"block-salvepot-softwax": "Melted Salve Thickener(beeswax)",
+	"block-salvepot-finishedsalve": "Bark Healing Salve",
+
+	"itemhelp-adze-stripbark": "Strip Bark",
+	"itemhelp-heal": "Heal",
+
+	"iteminfo-salve-heal": "Heals {0} health over {1} seconds when used.",
+
+	"item-adze-chert": "Chert Adze",
+	"item-adze-granite": "Granite Adze",
+	"item-adze-andesite": "Andesite Adze",
+	"item-adze-basalt": "Basalt Adze",
+	"item-adze-obsidian": "Obsidian Adze",
+	"item-adze-peridotite": "Peridotite Adze",
+	"item-adze-flint": "Flint Adze",
+	"item-adze-copper": "Copper Adze",
+	"item-adze-tinbronze": "Tin Bronze Adze",
+	"item-adze-bismuthbronze": "Bismuth Bronze Adze",
+	"item-adze-blackbronze": "Black Bronze Adze",
+	"item-adze-gold": "Gold Adze",
+	"item-adze-silver": "Silver Adze",
+	"item-adze-iron": "Iron Adze",
+	"item-adze-meteoriciron": "Meteoric Iron Adze",
+	"item-adze-steel": "Steel Adze",
+
 	"itemdesc-saltedmeat-cure-x-days": "When Racked: Will cure in {0} days",
 
 	"item-pestle-peridotite": "Peridotite Pestle",
@@ -63,5 +173,56 @@ Salted meats can also be cooked in a firepit for a quick meal solution.
 	"item-saltedmeat-redmeat-raw": "Raw Salted Redmeat",
 	"item-saltedmeat-poultry-cooked": "Cooked Salted Poultry",
 	"item-saltedmeat-bushmeat-cooked": "Cooked Salted Bushmeat",
-	"item-saltedmeat-redmeat-cooked": "Cooked Salted Redmeat"
+	"item-saltedmeat-redmeat-cooked": "Cooked Salted Redmeat",
+
+	"game:item-adzehead-chert": "Chert Adze Head",
+	"game:item-adzehead-granite": "Granite Adze Head",
+	"game:item-adzehead-andesite": "Andesite Adze Head",
+	"game:item-adzehead-basalt": "Basalt Adze Head",
+	"game:item-adzehead-obsidian": "Obsidian Adze Head",
+	"game:item-adzehead-peridotite": "Peridotite Adze Head",
+	"game:item-adzehead-flint": "Flint Adze Head",
+	"game:item-adzehead-copper": "Copper Adze Head",
+	"game:item-adzehead-tinbronze": "Tin Bronze Adze Head",
+	"game:item-adzehead-bismuthbronze": "Bismuth Bronze Adze Head",
+	"game:item-adzehead-blackbronze": "Black Bronze Adze Head",
+	"game:item-adzehead-gold": "Gold Adze Head",
+	"game:item-adzehead-silver": "Silver Adze Head",
+	"game:item-adzehead-iron": "Iron Adze Head",
+	"game:item-adzehead-meteoriciron": "Meteoric Iron Adze Head",
+	"game:item-adzehead-steel": "Steel Adze Head",
+
+	"game:block-toolmold-raw-adze": "Raw Adzehead Mold",
+	"game:block-toolmold-burned-adze": "Adzehead Mold",
+
+	"item-bark-birch": "Birch Bark",
+	"item-bark-oak": "Oak Bark",
+	"item-bark-maple": "Maple Bark",
+	"item-bark-pine": "Pine Bark",
+	"item-bark-acacia": "Acacia Bark",
+	"item-bark-kapok": "Kapok Bark",
+	"item-bark-baldcypress": "Bald Cypress Bark",
+	"item-bark-larch": "Larch Bark",
+	"item-bark-redwood": "Redwood Bark",
+	"item-bark-ebony": "Ebony Bark",
+	"item-bark-walnut": "Walnut Bark",
+	"item-bark-purpleheart": "Purpleheart Bark",
+	"item-bark-aged": "Aged Bark",
+
+	"game:item-flour-birch": "Birch Flour",
+	"game:item-flour-pine": "Pine Flour",
+
+	"game:item-dough-birch": "Birch Dough",
+	"game:item-dough-pine": "Pine Dough",
+
+	"game:item-bread-birch-partbaked": "Birch Bread(part-baked)",
+	"game:item-bread-pine-partbaked": "Pine Bread(part-baked)",
+
+	"game:item-bread-birch-perfect": "Birch Bread",
+	"game:item-bread-pine-perfect": "Pine Bread",
+
+	"game:item-bread-birch-charred": "Birch Bread(charred)",
+	"game:item-bread-pine-charred": "Pine Bread(charred)",
+
+	"item-salveportion": "Bark Healing Salve Portion",
 }

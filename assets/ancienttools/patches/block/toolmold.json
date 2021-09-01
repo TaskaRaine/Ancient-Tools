@@ -1,0 +1,16 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/variantgroups/1/states/-",
+		"value": "adze",
+		"file": "game:blocktypes/clay/mold/toolmold",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/creativeinventory/ancienttools",
+		"value": ["*-adze"],
+		"file": "game:blocktypes/clay/mold/toolmold",
+		"side": "Server"
+	}
+]

@@ -1,0 +1,42 @@
+﻿{
+	code: "salveportion",
+	class: "ItemSalvePortion",
+	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
+	attributes: {
+		totalhealing: 10,
+		healingtime: 30,
+
+		handbook: {
+			extraSections: [
+				{ title: "handbook-crafting-title-salveportion", text: "handbook-crafting-text-salveportion" }
+			]
+		}
+	},
+	shape: { base: "item/resource/salveportion" },
+	textures: { 
+		salveportion: { base: "item/medicine/salveportion" } 
+	},
+	maxstacksize: 16,
+	guiTransform: {
+		translation: { x: 5, y: 3, z: 0 },
+		rotation: { x: -33, y: -46, z: 180 },
+		origin: { x: 0.5, y: 0.05, z: 0.5 },
+		scale: 3
+	},
+	fpHandTransform: {
+		translation: { x: 0.05, y: 0.25, z: 0 },
+		rotation: { x: 41, y: -50, z: 21 },
+		origin: { x: 0.5, y: 0.05, z: 0.5 }
+	},
+	tpHandTransform: {
+		translation: { x: -1.58, y: 0.2, z: -1.35 },
+		rotation: { x: 0, y: 0, z: -88 },
+		origin: { x: 0.5, y: 0, z: 0.5 }
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -1, y: 0, z: -2 },
+		origin: { x: 0.5, y: 0, z: 0.5299 },
+		scale: 2.02
+	}
+}

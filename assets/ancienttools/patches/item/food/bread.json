@@ -1,0 +1,122 @@
+﻿[
+    {
+		"op": "add",
+		"path": "/variantgroups/0/states/-",
+		"value": "birch",
+		"file": "game:itemtypes/food/bread",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/variantgroups/0/states/-",
+		"value": "pine",
+		"file": "game:itemtypes/food/bread",
+		"side": "Server"
+	},
+	{
+		"op": "remove",
+		"path": "/nutritionPropsByType/*-partbaked",
+		"file": "game:itemtypes/food/bread",
+		"side": "Server"
+	},
+	{
+		"op": "remove",
+		"path": "/nutritionPropsByType/*-perfect",
+		"file": "game:itemtypes/food/bread",
+		"side": "Server"
+	},
+	{
+		"op": "remove",
+		"path": "/nutritionPropsByType/*-charred",
+		"file": "game:itemtypes/food/bread",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-birch-partbaked",
+		"value": {
+			saturation: 60, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-birch-perfect",
+		"value": {
+			saturation: 150, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-birch-charred",
+		"value": {
+			saturation: 90, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-pine-partbaked",
+		"value": {
+			saturation: 60, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-pine-perfect",
+		"value": {
+			saturation: 150, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-pine-charred",
+		"value": {
+			saturation: 90, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-partbaked",
+		"value": {
+			saturation: 150, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-perfect",
+		"value": {
+			saturation: 300, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-charred",
+		"value": {
+			saturation: 210, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/creativeinventory/ancienttools",
+		"value": ["*-birch-*", "*-pine-*"],
+		"file": "game:itemtypes/food/bread",
+		"side": "Server"
+	}
+]
