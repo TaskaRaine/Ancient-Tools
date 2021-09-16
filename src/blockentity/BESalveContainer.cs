@@ -120,13 +120,19 @@ namespace AncientTools.BlockEntity
                 return;
 
             if (activeCollectible.Attributes["isMedicinalBark"].Exists)
+            {
+                if (!LiquidSlot.Empty)
+                    if (LiquidSlot.Itemstack.Collectible.Attributes["isSalveThickener"].Exists)
+                        return;
+
                 if(activeCollectible.Attributes["isMedicinalBark"].AsBool() == true)
                 {
                     InsertObject(activeSlot, ResourceSlot, 1);
                     return;
                 }
+            }
 
-            if(activeCollectible.Attributes["isSalveOil"].Exists)
+            if (activeCollectible.Attributes["isSalveOil"].Exists)
                 if(activeCollectible.Attributes["isSalveOil"].AsBool() == true)
                 {
                     if(LiquidSlot.Empty || LiquidSlot.Itemstack.Collectible == activeSlot.Itemstack.Collectible)
@@ -134,7 +140,7 @@ namespace AncientTools.BlockEntity
                     return;
                 }
 
-            if(activeCollectible.Attributes["isSalveThickener"].Exists)
+            if(activeCollectible.Attributes["isSalveThickener"].Exists && ResourceSlot.Empty)
                 if(activeCollectible.Attributes["isSalveThickener"].AsBool() == true)
                 {
                     if (LiquidSlot.Empty || LiquidSlot.Itemstack.Collectible == activeSlot.Itemstack.Collectible)

@@ -11,6 +11,8 @@
 ### Releases
 
 #### Vintage Story 1.15.0+
+[Version 1.2.2](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.2.2/AncientTools_V1.2.2.zip)
+
 [Version 1.2.1](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.2.1/AncientTools_V1.2.1.zip)
 
 [Version 1.2.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.2.0/AncientTools_V1.2.0.zip)
@@ -27,6 +29,15 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+
+#### Version 1.2.2
+Salve containers now have world interaction information that should help clarify the salve creation process.
+
+The tooltip shown when beeswax is inserted into an empty salve container should now show correct information.
+
+Bark baskets now are properly named immediately after crafting.
+
+Fixed an issue where bark and beeswax could be combined to create barkoil, instead of bark and fat as intended.
 
 #### Version 1.2.1
 --Adze(and related)
