@@ -4,20 +4,23 @@
 		"path": "/variantgroups/0/states/-",
 		"value": "birch",
 		"file": "game:itemtypes/food/dough",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
 		"path": "/variantgroups/0/states/-",
 		"value": "pine",
 		"file": "game:itemtypes/food/dough",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "remove",
 		"path": "/attributes/nutritionPropsWhenInMealByType/*",
 		"file": "game:itemtypes/food/dough",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
@@ -26,7 +29,8 @@
 			satiety: 100, foodcategory: "Grain"
 		},
 		"file": "game:itemtypes/food/dough",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
@@ -35,7 +39,8 @@
 			satiety: 100, foodcategory: "Grain"
 		},
 		"file": "game:itemtypes/food/dough",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
@@ -44,27 +49,31 @@
 			satiety: 240, foodcategory: "Grain"
 		},
 		"file": "game:itemtypes/food/dough",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
 		"path": "/creativeinventory/ancienttools",
 		"value": ["*-birch-*", "*-pine-*"],
 		"file": "game:itemtypes/food/bread",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
 		"path": "/ingredients/F/allowedVariants/-",
 		"value": "birch",
 		"file": "game:recipes/grid/dough",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
 		"path": "/ingredients/F/allowedVariants/-",
 		"value": "pine",
 		"file": "game:recipes/grid/dough",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	}
 ]

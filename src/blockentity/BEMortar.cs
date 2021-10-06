@@ -14,7 +14,8 @@ namespace AncientTools.BlockEntity
         public override InventoryBase Inventory => inventory;
         public override string InventoryClassName => "mortarcontainer";
 
-        private const float GRIND_TIME_IN_SECONDS = 4;
+        private float mortarGrindTime;
+        private int mortarOutputModifier;
 
         private long grindStartTime = -1;
         private bool isGrinding = false;
@@ -52,6 +53,9 @@ namespace AncientTools.BlockEntity
         }
         public override void Initialize(ICoreAPI api)
         {
+            mortarGrindTime = api.World.Config.GetFloat("MortarGrindTime", 4.0f);
+            mortarOutputModifier = api.World.Config.GetInt("MortarOutputModifier", 1);
+
             //-- Holds mesh data of items inserted into the mortar. The resource mesh is NOT used as the resource appearance is not actually represented by the inserted resrouce. --//
             meshes = new MeshData[2];
 
@@ -285,7 +289,7 @@ namespace AncientTools.BlockEntity
         }
         private void PerformGrind(IPlayer byPlayer)
         {
-            if (Api.World.ElapsedMilliseconds < grindStartTime + GRIND_TIME_IN_SECONDS * 1000)
+            if (Api.World.ElapsedMilliseconds < grindStartTime + mortarGrindTime * 1000)
             {
                 if (Api.Side == EnumAppSide.Client)
                     pestleRenderer.SetPestleLookAtVector(byPlayer);
@@ -328,6 +332,8 @@ namespace AncientTools.BlockEntity
 
             if (groundItem.StackSize == 0)
                 groundItem.StackSize = 1;
+
+            groundItem.StackSize *= mortarOutputModifier;
 
             if (!byPlayer.InventoryManager.TryGiveItemstack(groundItem, true))
             {

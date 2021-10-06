@@ -1,4 +1,5 @@
-﻿using Vintagestory.API.Client;
+﻿using AncientTools.Utility;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
@@ -10,8 +11,8 @@ namespace AncientTools.Items
         WorldInteraction[] interactions = null;
 
         private bool canStripBark = false;
-        private int barkAmount = 4;
-        private double strippingTime = 1.0;
+        private int barkAmount;
+        private double strippingTime;
 
         private SimpleParticleProperties woodParticles;
 
@@ -30,6 +31,9 @@ namespace AncientTools.Items
                         },
                 };
             });
+
+            barkAmount = api.World.Config.GetInt("BarkPerLog", 4);
+            strippingTime = api.World.Config.GetDouble("BaseBarkStrippingSpeed", 1.0);
 
             woodParticles = InitializeWoodParticles();
         }
@@ -51,10 +55,8 @@ namespace AncientTools.Items
             {
                 canStripBark = true;
 
-                barkAmount = interactedBlock.Attributes["woodStrippable"]["barkAmount"].AsInt();
-
                 //-- Stripping time modifier increases the speed at which the wood is stripped. By default, it's based on tool tier --//
-                strippingTime = interactedBlock.Attributes["woodStrippable"]["strippingTime"].AsDouble() * this.Attributes["strippingTimeModifier"].AsDouble();
+                strippingTime = api.World.Config.GetDouble("BaseBarkStrippingSpeed", 1.0) * this.Attributes["strippingTimeModifier"].AsDouble();
 
                 byEntity.StartAnimation("adzestrip");
 
@@ -105,7 +107,7 @@ namespace AncientTools.Items
                 api.World.BlockAccessor.SetBlock(api.World.GetBlock(new AssetLocation("ancienttools", "strippedlog-" + logType + "-" + logRotation)).Id, blockSel.Position);
                 api.World.BlockAccessor.MarkBlockDirty(blockSel.Position);
 
-                for (int i = 0; i < barkAmount; i++)
+                for (int i = 0; i < api.World.Config.GetInt("BarkPerLog"); i++)
                     api.World.SpawnItemEntity(new ItemStack(api.World.GetItem(new AssetLocation("ancienttools", "bark-" + logType)), 1), blockSel.Position.ToVec3d() +
                         new Vec3d(0.5, 0.5, 0.5));
                     

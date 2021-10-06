@@ -1,5 +1,4 @@
 ﻿using AncientTools.BlockEntity;
-using AncientTools.Utility;
 using System;
 using System.Text;
 using Vintagestory.API.Client;
@@ -14,8 +13,8 @@ namespace AncientTools.Blocks
     {
         public WorldInteraction[] interactions = null;
         public SimpleParticleProperties salveParticles;
-        
-        private double salveMixTime = 1.5;
+
+        private double salveMixTime;
 
         public override void OnLoaded(ICoreAPI api)
         {
@@ -82,6 +81,8 @@ namespace AncientTools.Blocks
             {
                 salveParticles.Color = ColorUtil.ToRgba(100, 194, 135, 20);
             }
+
+            salveMixTime = api.World.Config.GetDouble("SalveMixTime", 1.5);
         }
         public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos pos, IPlayer forPlayer)
         {

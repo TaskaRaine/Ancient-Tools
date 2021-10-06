@@ -6,7 +6,8 @@
 			"isSalveOil": true
 		},
 		"file": "game:itemtypes/resource/fat",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "SalveEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
@@ -15,6 +16,7 @@
 			{ "name": "SalveIngredient" }
 		],
 		"file": "game:itemtypes/resource/fat",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "SalveEnabled", "isValue": "true" }
 	}
 ]

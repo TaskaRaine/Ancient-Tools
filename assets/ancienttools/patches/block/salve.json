@@ -1,0 +1,42 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/enabled",
+		"value": "false",
+		"file": "ancienttools:blocktypes/salvepot",
+		"side": "Server",
+		"condition": { "when": "SalveEnabled", "isValue": "false" }
+	},
+	{
+		"op": "add",
+		"path": "/enabled",
+		"value": "false",
+		"file": "ancienttools:itemtypes/resources/salveportion",
+		"side": "Server",
+		"condition": { "when": "SalveEnabled", "isValue": "false" }
+	},
+	{
+		"op": "add",
+		"path": "/0/enabled",
+		"value": "false",
+		"file": "recipes/grid/block/salvepot",
+		"side": "Server",
+		"condition": { "when": "SalveEnabled", "isValue": "false" }
+	},
+	{
+		"op": "add",
+		"path": "/1/enabled",
+		"value": "false",
+		"file": "recipes/grid/block/salvepot",
+		"side": "Server",
+		"condition": { "when": "SalveEnabled", "isValue": "false" }
+	},
+	{
+		"op": "add",
+		"path": "/2/enabled",
+		"value": "false",
+		"file": "recipes/grid/block/salvepot",
+		"side": "Server",
+		"condition": { "when": "SalveEnabled", "isValue": "false" }
+	}
+]

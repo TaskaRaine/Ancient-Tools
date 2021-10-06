@@ -9,9 +9,11 @@
 			isMedicinalBark: false
 		}
 	},
-	behaviors: [
-		{ name: "SalveIngredient" },
-	],
+	behaviorsByType: {
+		"@bark-(birch|pine)": [
+			{ name: "SalveIngredient" }
+		]
+	},
 	variantgroups: [
         { code: "bark", loadFromProperties: "game:block/wood", states:["aged"] }
     ],

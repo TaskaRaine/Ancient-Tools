@@ -4,32 +4,37 @@
 		"path": "/variantgroups/0/states/-",
 		"value": "birch",
 		"file": "game:itemtypes/food/bread",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
 		"path": "/variantgroups/0/states/-",
 		"value": "pine",
 		"file": "game:itemtypes/food/bread",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "remove",
 		"path": "/nutritionPropsByType/*-partbaked",
 		"file": "game:itemtypes/food/bread",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "remove",
 		"path": "/nutritionPropsByType/*-perfect",
 		"file": "game:itemtypes/food/bread",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "remove",
 		"path": "/nutritionPropsByType/*-charred",
 		"file": "game:itemtypes/food/bread",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
@@ -38,7 +43,8 @@
 			saturation: 60, foodcategory: "Grain"
 		},
 		"file": "game:itemtypes/food/bread",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
@@ -47,7 +53,8 @@
 			saturation: 150, foodcategory: "Grain"
 		},
 		"file": "game:itemtypes/food/bread",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
@@ -56,7 +63,8 @@
 			saturation: 90, foodcategory: "Grain"
 		},
 		"file": "game:itemtypes/food/bread",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
@@ -65,7 +73,8 @@
 			saturation: 60, foodcategory: "Grain"
 		},
 		"file": "game:itemtypes/food/bread",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
@@ -74,7 +83,8 @@
 			saturation: 150, foodcategory: "Grain"
 		},
 		"file": "game:itemtypes/food/bread",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
@@ -83,7 +93,8 @@
 			saturation: 90, foodcategory: "Grain"
 		},
 		"file": "game:itemtypes/food/bread",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",

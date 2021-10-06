@@ -113,6 +113,7 @@
     <None Include="assets\ancienttools\blocktypes\curingrack.json" />
     <None Include="assets\ancienttools\blocktypes\salvepot.json" />
     <None Include="assets\ancienttools\blocktypes\strippedlog.json" />
+    <None Include="assets\ancienttools\compatibility\carrycapacity\patches\barkbasket.json" />
     <None Include="assets\ancienttools\config\handbook\guide.json" />
     <None Include="assets\ancienttools\config\handbook\salveguide.json" />
     <None Include="assets\ancienttools\itemtypes\resources\bark.json" />
@@ -120,8 +121,10 @@
     <None Include="assets\ancienttools\itemtypes\food\saltedmeat.json" />
     <None Include="assets\ancienttools\itemtypes\tools\pestle.json" />
     <None Include="assets\ancienttools\itemtypes\resources\salveportion.json" />
+    <None Include="assets\ancienttools\patches\block\salve.json" />
     <None Include="assets\ancienttools\patches\entity\player\player.json" />
     <None Include="assets\ancienttools\patches\entity\player\seraph-faceless.json" />
+    <None Include="assets\ancienttools\patches\item\resources\bark.json" />
     <None Include="assets\ancienttools\recipes\grid\block\barkbasket.json" />
     <None Include="assets\ancienttools\recipes\grid\block\strippedlog.json" />
     <None Include="assets\ancienttools\recipes\smithing\adze.json" />
@@ -219,6 +222,8 @@
     <None Include="assets\ancienttools\blocktypes\mortar.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\utility\ModConfig.cs" />
+    <Compile Include="src\utility\RegisterConfig.cs" />
     <None Include="assets\ancienttools\recipes\grid\tool\curinghook.json" />
     <None Include="assets\ancienttools\patches\item\food\bread.json" />
     <Compile Include="src\blockentity\BEFinishedSalve.cs" />
@@ -229,6 +234,7 @@
     <Compile Include="src\blocks\salves\UnmixedSalve.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorSalveIngredient.cs" />
     <Compile Include="src\collectiblebehavior\RegisterCollectibleBehaviors.cs" />
+    <Compile Include="src\config\AncientToolsConfig.cs" />
     <Compile Include="src\entity\behavior\SalveHeal.cs" />
     <Compile Include="src\items\ItemAdze.cs" />
     <Compile Include="src\items\ItemSalvePortion.cs" />

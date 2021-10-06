@@ -1,0 +1,16 @@
+﻿[
+	{
+		"op": "remove",
+		"path": "/grindingPropsByType",
+		"file": "itemtypes/resources/bark",
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "false" }
+	},
+	{
+		"op": "remove",
+		"path": "/behaviorsByType",
+		"file": "itemtypes/resources/bark",
+		"side": "Server",
+		"condition": { "when": "SalveEnabled", "isValue": "false" }
+	}
+]
