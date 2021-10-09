@@ -11,6 +11,8 @@
 ### Releases
 
 #### Vintage Story 1.15.0+
+[Version 1.2.4](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.2.4/AncientTools_V1.2.4.zip)
+
 [Version 1.2.3](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.2.3/AncientTools_V1.2.3.zip)
 
 [Version 1.2.2](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.2.2/AncientTools_V1.2.2.zip)
@@ -31,6 +33,9 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+
+#### Version 1.2.4
+The bark recipe output count is now based on the config variable BarkPerLog.
 
 #### Version 1.2.3
 Implemented various configuration options for Ancient Tools, including the ability to disable bark bread and salves. Other options can be seen in the config file that generates on first load of this version.

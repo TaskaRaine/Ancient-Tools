@@ -1,5 +1,6 @@
 ﻿{
 	code: "bark",
+	class: "ItemBark",
 	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
 	attributesByType: {
 		"@bark-(birch|pine)": {

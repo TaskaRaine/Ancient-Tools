@@ -222,6 +222,7 @@
     <None Include="assets\ancienttools\blocktypes\mortar.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\items\ItemBark.cs" />
     <Compile Include="src\utility\ModConfig.cs" />
     <Compile Include="src\utility\RegisterConfig.cs" />
     <None Include="assets\ancienttools\recipes\grid\tool\curinghook.json" />

@@ -8,6 +8,7 @@ namespace AncientTools.Items
         {
             api.RegisterItemClass("ItemSaltedMeat", typeof(ItemSaltedMeat));
             api.RegisterItemClass("ItemAdze", typeof(ItemAdze));
+            api.RegisterItemClass("ItemBark", typeof(ItemBark));
             api.RegisterItemClass("ItemSalvePortion", typeof(ItemSalvePortion));
         }
     }
