@@ -36,6 +36,7 @@ namespace AncientTools.Utility
             api.World.Config.SetDouble("SalveMixTime", config.SalveMixTime);
             api.World.Config.SetBool("BarkBreadEnabled", config.BarkBreadEnabled);
             api.World.Config.SetBool("SalveEnabled", config.SalveEnabled);
+            api.World.Config.SetFloat("SkinningTime", config.SkinningTime);
         }
         private static AncientToolsConfig LoadConfig(ICoreAPI api)
         {

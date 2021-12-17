@@ -1,0 +1,46 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.1, var: 0 } 
+		},
+		"file": "game:entities/land/chicken-hen",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.1, var: 0 } 
+		},
+		"file": "game:entities/land/chicken-rooster",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.1, var: 0 } 
+		},
+		"file": "game:entities/land/chicken-henpoult",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.1, var: 0 } 
+		},
+		"file": "game:entities/land/chicken-roosterpoult",
+		"side": "Server"
+	},
+]

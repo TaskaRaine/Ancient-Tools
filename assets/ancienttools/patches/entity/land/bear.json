@@ -1,0 +1,24 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.3, var: 0 } 
+		},
+		"file": "game:entities/land/bear-male",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.3, var: 0 } 
+		},
+		"file": "game:entities/land/bear-female",
+		"side": "Server"
+	},
+]

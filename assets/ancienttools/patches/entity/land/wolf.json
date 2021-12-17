@@ -1,0 +1,35 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.2, var: 0 } 
+		},
+		"file": "game:entities/land/wolf-male",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.2, var: 0 } 
+		},
+		"file": "game:entities/land/wolf-female",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.1, var: 0 } 
+		},
+		"file": "game:entities/land/wolf-pup",
+		"side": "Server"
+	},
+]

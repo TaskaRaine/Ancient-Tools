@@ -1,0 +1,38 @@
+﻿{
+	code: "brain",
+	class: "ItemBrain",
+	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
+	drawtype: "json",
+    shape: { base: "item/resource/brain" },
+    textures: {
+        brain: { base: "item/resource/brain" }
+    },
+	maxstacksize: 64,
+	transitionableProps: [{
+		type: "Perish",
+		freshHours: { avg: 36 },
+		transitionHours: { avg: 24 },
+		transitionedStack: { type: "item", code: "game:rot" },
+		transitionRatio: 1
+	}],
+	guiTransform: {
+		rotation: { x: -22, y: -23, z: -180 },
+		origin: { x: 0.7, y: -0.1, z: 0 },
+		scale: 2.8
+	},
+	fpHandTransform: {
+		rotation: { x: 35, y: 90, z: -30 },
+		scale: 1.5
+	},
+	tpHandTransform: {
+		translation: { x: -1.3, y: -1.6, z: -0.8 },
+		rotation: { x: 4, y: 4, z: -80 },
+		origin: { x: 0.1, y: 0.95, z: 0.45 },
+		scale: 0.45
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0.3, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 3
+	}
+}

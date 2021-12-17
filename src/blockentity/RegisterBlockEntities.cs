@@ -12,6 +12,8 @@ namespace AncientTools.BlockEntity
             api.RegisterBlockEntityClass("BECuringRack", typeof(BECuringRack));
             api.RegisterBlockEntityClass("BESalveContainer", typeof(BESalveContainer));
             api.RegisterBlockEntityClass("BEFinishedSalve", typeof(BEFinishedSalve));
+            api.RegisterBlockEntityClass("BEStretchingFrame", typeof(BEStretchingFrame));
+            api.RegisterBlockEntityClass("BEHideWaterSack", typeof(BEHideWaterSack));
         }
     }
 }

@@ -23,13 +23,20 @@ namespace AncientTools.CollectibleBehaviors
             {
                 Block interactedBlock = api.World.BlockAccessor.GetBlock(blockSel.Position);
 
-                if (interactedBlock is BlockCookingContainer)
+                if (interactedBlock is BlockGroundStorage)
                 {
-                    api.World.BlockAccessor.SetBlock(api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-empty")).Id, blockSel.Position);
-                    api.World.BlockAccessor.MarkBlockDirty(blockSel.Position);
+                    if(api.World.BlockAccessor.GetBlockEntity(blockSel.Position) is BlockEntityGroundStorage groundStorageEntity)
+                    {
+                        if (groundStorageEntity.TotalStackSize == 1 && groundStorageEntity.Inventory.FirstNonEmptySlot.Itemstack.Collectible is BlockCookingContainer)
+                        {
+                            api.World.BlockAccessor.RemoveBlockEntity(blockSel.Position);
+                            api.World.BlockAccessor.SetBlock(api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-empty")).Id, blockSel.Position);
+                            api.World.BlockAccessor.MarkBlockDirty(blockSel.Position);
 
-                    handling = EnumHandling.PreventDefault;
-                    handHandling = EnumHandHandling.PreventDefault;
+                            handling = EnumHandling.PreventDefault;
+                            handHandling = EnumHandHandling.PreventDefault;
+                        }
+                    }
                     return;
                 }
             }

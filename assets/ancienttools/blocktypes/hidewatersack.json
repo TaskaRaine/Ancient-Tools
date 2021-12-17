@@ -1,0 +1,71 @@
+﻿{
+	code: "hidewatersack",
+	class: "BlockHideWaterSack",
+	entityClassByType: {
+		"*-raw-*": "BEHideWaterSack"
+	},
+	behaviorsByType: {
+		"*-raw-*": [
+			{ name: "UnstableFalling" }, 
+			{ name: "RightClickPickup" }
+		],
+		"*-soaked-*": [
+			{ name: "UnstableFalling" }, 
+		]
+	},
+	creativeinventory: { "general": ["*"], "ancienttools": ["*"] },
+	attributes: {
+		conversiontime: 24.0
+	},
+	variantgroups: [
+		{ code: "hide", states: ["raw", "soaked"] },
+		{ code: "size", states: ["huge", "large", "medium", "small"] }
+	],
+	drawtype: "json",
+	shapebytype: {
+		"*-huge": {
+			base: "block/hidewatersack/hidewatersack_xl"
+		},
+		"*-large": {
+			base: "block/hidewatersack/hidewatersack_l"
+		},
+		"*-medium": {
+			base: "block/hidewatersack/hidewatersack_m"
+		},
+		"*-small": {
+			base: "block/hidewatersack/hidewatersack_s"
+		}
+	},
+	texturesbytype: {
+		"*-raw-*": {
+			hide: { base: "game:item/resource/hide/raw" },
+			string: { base: "game:item/tool/material/string" }
+		},
+		"*-soaked-*": { 
+			hide: { base: "game:item/resource/hide/soaked" },
+			string: { base: "game:item/tool/material/string" }
+		}
+	},
+	blockmaterial: "Cloth",
+    sidesolid: { all: false },
+    sideopaque: { all: false },
+    lightAbsorption: 0,
+	collisionSelectionBoxesByType: {
+		"*-huge": [
+			{ x1: 0.1875, y1: 0, z1: 0.1875, x2: 0.8125, y2: 0.625, z2: 0.8125 }
+		],
+		"*-large": [
+			{ x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.5625, z2: 0.75 }
+		],
+		"*-medium": [
+			{ x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.5, z2: 0.75 }
+		],
+		"*-small": [
+			{ x1: 0.3125, y1: 0, z1: 0.3125, x2: 0.6875, y2: 0.4375, z2: 0.6875 }
+		]
+	},
+	guiTransform: {
+		origin: { x: 0.5, y: 0.3, z: 0.5 },
+		scale: 1.4
+	}
+}

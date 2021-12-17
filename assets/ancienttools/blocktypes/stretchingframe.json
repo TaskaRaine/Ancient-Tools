@@ -1,0 +1,46 @@
+﻿{
+	code: "stretchingframe",
+	class: "BlockStretchingFrame",
+	entityClass: "BEStretchingFrame",
+	behaviors: [{name: "HorizontalOrientable", properties: {  dropBlockFace: "north", drop: { type: "block", code: "ancienttools:stretchingframe-{wood}-north" }  }}],
+	creativeinventory: { "general": ["*-north"], "ancienttools": ["*-north"] },
+	variantgroups: [
+        { code: "wood", loadFromProperties: "game:block/wood", states:["aged"] },
+		{ code: "rotation", states: ["north", "south", "east", "west"] }
+	],
+	drawtype: "json",
+	shapebytype: { 
+		"*-north": {
+			base: "block/stretchingframe/stretchingframe", rotateY: 180 
+		},
+		"*-east": {
+			base: "block/stretchingframe/stretchingframe", rotateY: 90
+		},
+		"*-south": {
+			base: "block/stretchingframe/stretchingframe"
+		},
+		"*-west": {
+			base: "block/stretchingframe/stretchingframe", rotateY: 270
+		}
+	},
+	texturesByType: { 
+		"*": {
+			core: { base: "game:block/wood/debarked/{wood}" },
+			soaked: { base: "game:item/resource/hide/soaked"},
+			string: { base: "game:item/tool/material/string"},
+		} 
+	},
+	blockmaterial: "Wood",
+    sidesolid: { all: false },
+    sideopaque: { all: false },
+    lightAbsorption: 0,
+	sounds: {
+		"place": "game:block/planks",
+		"hit": "game:block/planks",
+		"break": "game:block/planks",
+		"walk": "game:walk/wood"
+	},
+	drops: [
+		{ type: "block", code: "stretchingframe-{wood}-north" }
+	]
+}

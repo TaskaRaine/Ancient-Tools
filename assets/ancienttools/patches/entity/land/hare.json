@@ -1,0 +1,24 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.1, var: 0 } 
+		},
+		"file": "game:entities/land/hare-female",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.1, var: 0 } 
+		},
+		"file": "game:entities/land/hare-male",
+		"side": "Server"
+	},
+]

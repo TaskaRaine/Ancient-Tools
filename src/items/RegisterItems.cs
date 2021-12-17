@@ -10,6 +10,7 @@ namespace AncientTools.Items
             api.RegisterItemClass("ItemAdze", typeof(ItemAdze));
             api.RegisterItemClass("ItemBark", typeof(ItemBark));
             api.RegisterItemClass("ItemSalvePortion", typeof(ItemSalvePortion));
+            api.RegisterItemClass("ItemBrain", typeof(ItemBrain));
         }
     }
 }

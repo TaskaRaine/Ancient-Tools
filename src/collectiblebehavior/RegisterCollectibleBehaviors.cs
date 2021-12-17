@@ -14,6 +14,7 @@ namespace AncientTools.CollectibleBehaviors
             base.Start(api);
 
             api.RegisterCollectibleBehaviorClass("SalveIngredient", typeof(CollectibleBehaviorSalveIngredient));
+            api.RegisterCollectibleBehaviorClass("ConvertHide", typeof(CollectibleBehaviorConvertHide));
         }
     }
 }

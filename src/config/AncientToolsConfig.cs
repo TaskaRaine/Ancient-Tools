@@ -12,6 +12,7 @@ namespace AncientTools.Config
         public double SalveMixTime = 1.5;
         public bool BarkBreadEnabled = true;
         public bool SalveEnabled = true;
+        public float SkinningTime = 4.0f;
 
         public AncientToolsConfig()
         {
@@ -26,6 +27,7 @@ namespace AncientTools.Config
             SalveMixTime = previousConfig.SalveMixTime;
             BarkBreadEnabled = previousConfig.BarkBreadEnabled;
             SalveEnabled = previousConfig.SalveEnabled;
+            SkinningTime = previousConfig.SkinningTime;
         }
     }
 }

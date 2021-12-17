@@ -12,6 +12,8 @@ namespace AncientTools.Blocks
             api.RegisterBlockClass("BlockUnmixedSalve", typeof(BlockUnmixedSalve));
             api.RegisterBlockClass("BlockSalve", typeof(BlockSalve));
             api.RegisterBlockClass("BlockBarkBasket", typeof(BlockBarkBasket));
+            api.RegisterBlockClass("BlockStretchingFrame", typeof(BlockStretchingFrame));
+            api.RegisterBlockClass("BlockHideWaterSack", typeof(BlockHideWaterSack));
 
             base.Start(api);
         }

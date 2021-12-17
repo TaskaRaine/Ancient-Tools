@@ -29,6 +29,12 @@ Curing meats with <a href=\'handbook://item-salt\'>salt</a> is a centuries-old p
 A <a href=\'handbooksearch://curing rack\'>curing rack</a> can be equipped with two <a href=\'handbooksearch://curing hook\'>hooks</a> with <icon name='rightmousebutton'></icon>. Hang any variety of salted meat(<a href=\'handbook://item-ancienttools:saltedmeat-redmeat-raw\'>redmeat</a>,<a href=\'handbook://item-ancienttools:saltedmeat-poultry-raw\'>poultry</a>,<a href=\'handbook://item-ancienttools:saltedmeat-bushmeat-raw\'>bushmeat</a>) and wait until your delicious meat is perfectly cured!
 
 Salted meats can also be cooked in a firepit for a quick meal solution.	
+
+<font weight='bold'>Native American Tanning</font>
+
+Pre-contact Native American cultures used a different technique for tanning animal hides than colonial European settlers to create their iconic leather products.
+
+Ancient Tools implements a simplified version of this technique to give you another means of crafting leather! Want to give it a try? Visit the <a href=\"handbook://ancienttools-quickstart-guide-tanning\">Native American Tanning Guide</a>.  
 ",
 	"game:ancienttools-quickstart-guide-salve": "Salve Guide",
 	"game:ancienttools-quickstart-title-salve": "Crafting Mechanic: Salve Creation",
@@ -44,7 +50,29 @@ Finally, place one prepared container on the ground then crouch and hold <icon n
 
 Empty salve containers can be placed in the crafting grid to convert them back into cooking pots.
 	",
+	"game:ancienttools-quickstart-guide-tanning": "Native American Tanning Guide",
+	"game:ancienttools-quickstart-title-tanning": "Crafting Mechanic: Native American Tanning",
+	"game:ancienttools-quickstart-text-tanning": "
+<font weight='bold' align='center'>Native American Tanning Guide</font><br>
 
+Grab your nearest <a href=\'handbooksearch://raw hide\'>raw hide</a> and let's get started!
+
+To make removal of undesirable fleshy bits easier, hides were tied into sacks with the flesh side inward and filled with water to soften the flesh. To do this, simply <icon name='rightmousebutton'></icon> your hide on a water source or craft a <a href=\'handbook://block-ancienttools:hidewatersack-raw-huge\'>sack</a> using a filled <a href=\'handbook://block-woodbucket\'>bucket</a> of water.
+
+Place the sack on the ground someplace and wait. When it is ready, it will become a <a href=\'handbooksearch://soaked hide water sack\'>soaked hide sack</a>.
+
+While waiting it could be useful to craft up a <a href=\'handbooksearch://stretching frame\'>stretching frame</a> in preparation! Simply take the hide when it's ready and stretch it on the frame.
+
+Using a trusty <a href=\'handbooksearch://knife\'>knife</a>, crouch and begin scraping away hair, fat and other undesirable materials from the hide using <icon name='rightmousebutton'></icon>. 
+
+The next step might sound disgusting, but it's essential to create a soft, pliable leather. We need to create a 'braining solution' to soak our hide in. Any <a href=\'handbook://item-ancienttools:animalbrain\'>animal brain</a> will do. Take the brain and combine it with 10L of water in a barrel to create the solution. 
+
+Now, take the hide from the stretching frame and seal it in the barrel with the braining solution you just made. This will take several days.
+
+When the hide has been thoroughly <a href=\'handbook://item-hide-soaked-huge\'>soaked</a> in solution, the next step is to smoke the hide. This makes the hide water resistant and gives the leather its iconic golden color. Hang your hide over a fire pit and wait for it to become a <a href=\'handbook://item-hide-smoked-huge\'>smoked hide</a>.
+
+Now, the final part! Take your smoked hide and, using a knife, carefully cut it into strips of <a href=\'handbook://item-leather\'>leather</a>. 
+	",
 	"blockhelp-place-pestle": "Place Pestle",
 	"blockhelp-place-resource": "Place Grindable Resource",
 	"blockhelp-grind-mortar": "Grind Resource",
@@ -63,6 +91,11 @@ Empty salve containers can be placed in the crafting grid to convert them back i
 	"blockhelp-pour-barkoil": "Pour melted wax into bark oil",
 	"blockhelp-pour-wax": "Pour bark oil into melted wax",
 	"blockhelp-take-salveportion": "Take Salve Portion",
+
+	"blockhelp-place-hide": "Place Soaked Hide",
+	"blockhelp-take-hide": "Take Hide",
+	"blockhelp-skin-hide": "Scrape Hide",
+	"blockhelp-take-hide-sack": "Take Hide Sack",
 
 	"blockinfo-curingrack-no-entity": "Something went wrong with this block. The BlockEntity does not exist. Please break the block and place it again.",
 	"blockinfo-curingrack-hook-missing": "Curing Hook Missing",
@@ -143,10 +176,34 @@ Empty salve containers can be placed in the crafting grid to convert them back i
 	"block-salvepot-softwax": "Melted Salve Thickener(beeswax)",
 	"block-salvepot-finishedsalve": "Bark Healing Salve",
 
+	"block-stretchingframe-birch-*": "Birch Stretching Frame",
+	"block-stretchingframe-oak-*": "Oak Stretching Frame",
+	"block-stretchingframe-maple-*": "Maple Stretching Frame",
+	"block-stretchingframe-pine-*": "Pine Stretching Frame",
+	"block-stretchingframe-acacia-*": "Acacia Stretching Frame",
+	"block-stretchingframe-kapok-*": "Kapok Stretching Frame",
+	"block-stretchingframe-baldcypress-*": "Bald Cypress Stretching Frame",
+	"block-stretchingframe-larch-*": "Larch Stretching Frame",
+	"block-stretchingframe-redwood-*": "Redwood Stretching Frame",
+	"block-stretchingframe-ebony-*": "Ebony Stretching Frame",
+	"block-stretchingframe-walnut-*": "Walnut Stretching Frame",
+	"block-stretchingframe-purpleheart-*": "Purpleheart Stretching Frame",
+	"block-stretchingframe-aged-*": "Aged Stretching Frame",
+
+	"block-hidewatersack-raw-huge": "Huge Raw Hide Water Sack",
+	"block-hidewatersack-raw-large": "Large Raw Hide Water Sack",
+	"block-hidewatersack-raw-medium": "Medium Raw Hide Water Sack",
+	"block-hidewatersack-raw-small": "Small Raw Hide Water Sack",
+	"block-hidewatersack-soaked-huge": "Huge Soaked Hide Water Sack",
+	"block-hidewatersack-soaked-large": "Large Soaked Hide Water Sack",
+	"block-hidewatersack-soaked-medium": "Medium Soaked Hide Water Sack",
+	"block-hidewatersack-soaked-small": "Small Soaked Hide Water Sack",
+
 	"itemhelp-adze-stripbark": "Strip Bark",
 	"itemhelp-heal": "Heal",
 
 	"iteminfo-salve-heal": "Heals {0} health over {1} seconds when used.",
+	"iteminfo-brain": "Used for hide tanning. Place in a barrel with 10L of water to create braining solution.",
 
 	"item-adze-chert": "Chert Adze",
 	"item-adze-granite": "Granite Adze",
@@ -165,7 +222,10 @@ Empty salve containers can be placed in the crafting grid to convert them back i
 	"item-adze-meteoriciron": "Meteoric Iron Adze",
 	"item-adze-steel": "Steel Adze",
 
-	"itemdesc-saltedmeat-cure-x-days": "When Racked: Will cure in {0} days",
+	"itemdesc-saltedmeat-cure-x-days": "When Racked: Will cure in {0} days.",
+
+	"blockdesc-hidewatersack-soak-x-hours-when-placed": "When Placed: Fully soaked in {0} hours.",
+	"blockdesc-hidewatersack-soak-x-hours": "Fully soaked in {0} hours.",
 
 	"item-pestle-peridotite": "Peridotite Pestle",
 	"item-pestle-andesite": "Andesite Pestle",
@@ -231,4 +291,17 @@ Empty salve containers can be placed in the crafting grid to convert them back i
 	"game:item-bread-pine-charred": "Pine Bread(charred)",
 
 	"item-salveportion": "Bark Healing Salve Portion",
+
+	"game:item-hide-brained-huge": "Brained Hide(Huge)",
+	"game:item-hide-brained-large": "Brained Hide(Large)",
+	"game:item-hide-brained-medium": "Brained Hide(Medium)",
+	"game:item-hide-brained-small": "Brained Hide(Small)",
+	"game:item-hide-smoked-huge": "Smoked Hide(Huge)",
+	"game:item-hide-smoked-large": "Smoked Hide(Large)",
+	"game:item-hide-smoked-medium": "Smoked Hide(Medium)",
+	"game:item-hide-smoked-small": "Smoked Hide(Small)",
+
+	"item-brain": "Animal Brain",
+	"item-brainingsolutionportion": "Braining Solution",
+	"game:incontainer-item-brainingsolutionportion": "Braining Solution"
 }

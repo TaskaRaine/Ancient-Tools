@@ -1,0 +1,26 @@
+﻿{
+	ingredientPattern: "WH",
+	width: 1,
+	height: 2,
+	ingredients: {
+		"W": { 
+			type: "block", 
+			code: "game:woodbucket"
+		},
+		"H": {
+			type: "item",
+			code: "game:hide-raw-*",
+			name: "size"
+		}
+	},
+	attributes: {
+		liquidContainerProps: {
+			requiresContent: { type: "item", code: "game:waterportion" },
+			requiresLitres: 10
+		}
+	},
+	output: {
+		type: "block",
+		code: "hidewatersack-raw-{size}"
+	}
+}

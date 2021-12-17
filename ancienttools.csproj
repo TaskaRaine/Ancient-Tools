@@ -42,23 +42,23 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="VintagestoryAPI">
-      <HintPath>H:\VintageStory 1.15.0\VintagestoryAPI.dll</HintPath>
+      <HintPath>H:\VintageStory 1.16.0 Pre-5\VintagestoryAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>H:\VintageStory 1.15.0\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.16.0 Pre-5\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>H:\VintageStory 1.15.0\Mods\VSEssentials.dll</HintPath>
+      <HintPath>H:\VintageStory 1.16.0 Pre-5\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>H:\VintageStory 1.15.0\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.16.0 Pre-5\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>H:\VintageStory 1.15.0\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>H:\VintageStory 1.16.0 Pre-5\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -67,6 +67,7 @@
     <Content Include="assets\ancienttools\sounds\block\mortargrind.ogg" />
     <Content Include="assets\ancienttools\sounds\block\salvepour.ogg" />
     <Content Include="assets\ancienttools\sounds\block\stripwood.ogg" />
+    <Content Include="assets\ancienttools\textures\block\liquid\brainingsolution.png" />
     <Content Include="assets\ancienttools\textures\block\salve\barkoil.png" />
     <Content Include="assets\ancienttools\textures\block\salve\softwax.png" />
     <Content Include="assets\ancienttools\textures\block\strippedlog\acacia.png" />
@@ -86,6 +87,7 @@
     <Content Include="assets\ancienttools\textures\block\strippedlog\walnut.png" />
     <Content Include="assets\ancienttools\textures\block\mortar\mortar_grain.png" />
     <Content Include="assets\ancienttools\textures\item\medicine\salveportion.png" />
+    <Content Include="assets\ancienttools\textures\item\resource\brain.png" />
     <Content Include="assets\game\textures\block\food\pie\birch1.png" />
     <Content Include="assets\game\textures\block\food\pie\birch2.png" />
     <Content Include="assets\game\textures\block\food\pie\birch3.png" />
@@ -104,6 +106,8 @@
     <Content Include="assets\game\textures\item\food\grain\pinebread.png" />
     <Content Include="assets\game\textures\item\food\grain\pinebread1.png" />
     <Content Include="assets\game\textures\item\food\grain\pinebread2.png" />
+    <Content Include="assets\game\textures\item\resource\hide\brained.png" />
+    <Content Include="assets\game\textures\item\resource\hide\smoked.png" />
     <Content Include="modinfo.json" />
     <Content Include="resources\guide\ancienttoolsfolderstructure.png" />
     <Content Include="resources\images\mortars.png" />
@@ -111,24 +115,48 @@
   <ItemGroup>
     <None Include="assets\ancienttools\blocktypes\barkbasket.json" />
     <None Include="assets\ancienttools\blocktypes\curingrack.json" />
+    <None Include="assets\ancienttools\blocktypes\hidewatersack.json" />
     <None Include="assets\ancienttools\blocktypes\salvepot.json" />
+    <None Include="assets\ancienttools\blocktypes\stretchingframe.json" />
     <None Include="assets\ancienttools\blocktypes\strippedlog.json" />
     <None Include="assets\ancienttools\compatibility\carrycapacity\patches\barkbasket.json" />
     <None Include="assets\ancienttools\config\handbook\guide.json" />
     <None Include="assets\ancienttools\config\handbook\salveguide.json" />
+    <None Include="assets\ancienttools\config\handbook\tanningguide.json" />
+    <None Include="assets\ancienttools\itemtypes\liquids\brainingsolution.json" />
     <None Include="assets\ancienttools\itemtypes\resources\bark.json" />
+    <None Include="assets\ancienttools\itemtypes\resources\brain.json" />
     <None Include="assets\ancienttools\itemtypes\tools\curinghook.json" />
     <None Include="assets\ancienttools\itemtypes\food\saltedmeat.json" />
     <None Include="assets\ancienttools\itemtypes\tools\pestle.json" />
     <None Include="assets\ancienttools\itemtypes\resources\salveportion.json" />
     <None Include="assets\ancienttools\patches\block\salve.json" />
+    <None Include="assets\ancienttools\patches\entity\land\bear.json" />
+    <None Include="assets\ancienttools\patches\entity\land\chicken.json" />
+    <None Include="assets\ancienttools\patches\entity\land\fox.json" />
+    <None Include="assets\ancienttools\patches\entity\land\hare.json" />
+    <None Include="assets\ancienttools\patches\entity\land\hyena.json" />
+    <None Include="assets\ancienttools\patches\entity\land\pig.json" />
+    <None Include="assets\ancienttools\patches\entity\land\raccoon.json" />
+    <None Include="assets\ancienttools\patches\entity\land\sheep.json" />
+    <None Include="assets\ancienttools\patches\entity\land\wolf.json" />
     <None Include="assets\ancienttools\patches\entity\player\player.json" />
     <None Include="assets\ancienttools\patches\entity\player\seraph-faceless.json" />
     <None Include="assets\ancienttools\patches\item\resources\bark.json" />
+    <None Include="assets\ancienttools\patches\item\resources\hide.json" />
+    <None Include="assets\ancienttools\recipes\barrel\brainedhide.json" />
+    <None Include="assets\ancienttools\recipes\barrel\brainingsolution.json" />
     <None Include="assets\ancienttools\recipes\grid\block\barkbasket.json" />
+    <None Include="assets\ancienttools\recipes\grid\block\hidewatersack.json" />
+    <None Include="assets\ancienttools\recipes\grid\block\stretchingframe.json" />
     <None Include="assets\ancienttools\recipes\grid\block\strippedlog.json" />
+    <None Include="assets\ancienttools\recipes\grid\item\leather.json" />
     <None Include="assets\ancienttools\recipes\smithing\adze.json" />
     <None Include="assets\ancienttools\shapes\block\barkbasket.json" />
+    <None Include="assets\ancienttools\shapes\block\hidewatersack\hidewatersack_l.json" />
+    <None Include="assets\ancienttools\shapes\block\hidewatersack\hidewatersack_m.json" />
+    <None Include="assets\ancienttools\shapes\block\hidewatersack\hidewatersack_s.json" />
+    <None Include="assets\ancienttools\shapes\block\hidewatersack\hidewatersack_xl.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_ancienttools_bark_birch.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_ancienttools_bark_pine.json" />
     <None Include="assets\ancienttools\shapes\block\salve\barkoilsalve.json" />
@@ -137,7 +165,41 @@
     <None Include="assets\ancienttools\shapes\block\curingrack\none_curingrack.json" />
     <None Include="assets\ancienttools\shapes\block\curingrack\right_curingrack.json" />
     <None Include="assets\ancienttools\shapes\block\salve\softwaxsalve.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\pelthide_huge.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\pelthide_large.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\pelthide_medium.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\pelthide_small.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\preparedhide_huge.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\preparedhide_large.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\preparedhide_medium.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\preparedhide_small.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\oiledhide_huge.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\oiledhide_large.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\oiledhide_medium.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\oiledhide_small.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\smokedhide_huge.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\smokedhide_large.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\smokedhide_medium.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\smokedhide_small.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\rawhide_huge.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\brainedhide_huge.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\rawhide_large.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\rawhide_medium.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\rawhide_small.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\scrapedhide_huge.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\brainedhide_large.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\brainedhide_medium.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\brainedhide_small.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\soakedhide_huge.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\scrapedhide_large.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\soakedhide_large.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\scrapedhide_medium.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\soakedhide_medium.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\scrapedhide_small.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\soakedhide_small.json" />
+    <None Include="assets\ancienttools\shapes\block\stretchingframe\stretchingframe.json" />
     <None Include="assets\ancienttools\shapes\item\resource\bark.json" />
+    <None Include="assets\ancienttools\shapes\item\resource\brain.json" />
     <None Include="assets\ancienttools\shapes\item\tool\curinghook.json" />
     <None Include="assets\ancienttools\shapes\item\toolhead\adze-metal.json" />
     <None Include="assets\ancienttools\shapes\item\toolhead\adze-stone.json" />
@@ -222,7 +284,13 @@
     <None Include="assets\ancienttools\blocktypes\mortar.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\blockentity\BEHideWaterSack.cs" />
+    <Compile Include="src\blockentity\BEStretchingFrame.cs" />
+    <Compile Include="src\blocks\HideWaterSack.cs" />
+    <Compile Include="src\blocks\StretchingFrame.cs" />
+    <Compile Include="src\collectiblebehavior\CollectibleBehaviorConvertHide.cs" />
     <Compile Include="src\items\ItemBark.cs" />
+    <Compile Include="src\items\ItemBrain.cs" />
     <Compile Include="src\utility\ModConfig.cs" />
     <Compile Include="src\utility\RegisterConfig.cs" />
     <None Include="assets\ancienttools\recipes\grid\tool\curinghook.json" />

@@ -1,0 +1,8 @@
+﻿{
+	code: "brainingsolution",
+	ingredients: [
+		{ type: "item", code: "game:waterportion", litres: 10 },
+		{ type: "item", code: "ancienttools:brain", quantity: 1 }
+	],
+	output: { type: "item", code: "ancienttools:brainingsolutionportion", litres: 10 }
+}

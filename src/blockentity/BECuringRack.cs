@@ -62,9 +62,9 @@ namespace AncientTools.BlockEntity
 
             base.Initialize(api);
         }
-        public override void OnBlockBroken()
+        public override void OnBlockBroken(IPlayer player)
         {
-            base.OnBlockBroken();
+            base.OnBlockBroken(player);
 
             if (Api.Side == EnumAppSide.Server)
                 Api.World.UnregisterGameTickListener(tickListener);

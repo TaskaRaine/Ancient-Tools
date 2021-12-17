@@ -13,7 +13,7 @@ namespace AncientTools.Blocks
     class BlockBarkBasket: BlockGenericTypedContainer
     {
         //-- Copied from Block. The BlockContainer version was causing 'unknown texture' particles --//
-        public override int GetRandomColor(ICoreClientAPI capi, BlockPos pos, BlockFacing facing)
+        public override int GetRandomColor(ICoreClientAPI capi, BlockPos pos, BlockFacing facing, int rndIndex)
         {
             if (Textures == null || Textures.Count == 0) return 0;
             CompositeTexture tex;
