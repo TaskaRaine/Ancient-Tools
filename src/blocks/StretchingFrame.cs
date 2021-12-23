@@ -81,6 +81,10 @@ namespace AncientTools.Blocks
                 };
             });
         }
+        public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos pos, IPlayer forPlayer)
+        {
+            return String.Empty;
+        }
         public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
         {
             if (world.BlockAccessor.GetBlockEntity(selection.Position) is BEStretchingFrame stretchingFrameEntity)

@@ -57,6 +57,9 @@ namespace AncientTools.Blocks
         }
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
+            if (blockSel == null)
+                return false;
+
             if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BEMortar mortarEntity)
             {
                 mortarEntity.OnInteract(byPlayer);
@@ -68,6 +71,9 @@ namespace AncientTools.Blocks
         }
         public override bool OnBlockInteractStep(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
+            if (blockSel == null)
+                return false;
+
             if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BEMortar mortarEntity)
             {
                 return mortarEntity.OnSneakInteract(byPlayer); ;
@@ -76,6 +82,9 @@ namespace AncientTools.Blocks
         }
         public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
+            if (blockSel == null)
+                return;
+
             if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BEMortar mortarEntity)
             {
                 mortarEntity.OnInteractStop();
@@ -83,14 +92,15 @@ namespace AncientTools.Blocks
         }
         public override bool OnBlockInteractCancel(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, EnumItemUseCancelReason cancelReason)
         {
+            if (blockSel == null)
+                return true;
+
             if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BEMortar mortarEntity)
             {
                 mortarEntity.OnInteractStop();
-
-                return true;
             }
 
-            return false;
+            return true;
         }
         public MeshData GenMesh(ICoreClientAPI capi, string shapePath, ITexPositionSource texture)
         {

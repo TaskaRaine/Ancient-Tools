@@ -3,7 +3,7 @@
     class: "BlockMortar",
     entityClass: "BEMortar",
     renderpass: "OpaqueNoCull",
-    creativeinventory: { "general": ["*"], "ancienttools": ["*"] },
+    creativeinventory: { "general": ["*"], "decorative": ["*"], "mechanics": ["*"], "ancienttools": ["*"] },
     attributes: {
 		handbook: {
 			groupBy: ["mortar-*"]

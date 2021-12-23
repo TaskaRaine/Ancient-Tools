@@ -26,6 +26,13 @@
 	},
 	{
 		"op": "add",
+		"path": "/creativeinventory/ancienttools",
+		"value": ["*-brained-*", "*-smoked-*"],
+		"file": "game:itemtypes/resource/hide",
+		"side": "Server"
+	},
+	{
+		"op": "add",
 		"path": "/attributes/inFirePitPropsByType",
 		"value": { 
 			"*-huge":

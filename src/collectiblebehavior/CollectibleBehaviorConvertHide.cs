@@ -1,4 +1,5 @@
 ﻿using Vintagestory.API.Common;
+using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.Server;
 
@@ -12,28 +13,37 @@ namespace AncientTools.CollectibleBehaviors
         }
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling, ref EnumHandling handling)
         {
-            if (blockSel == null)
+            if (!(byEntity is EntityPlayer))
                 return;
 
-            if (byEntity is EntityPlayer)
+            Block interactedBlock;
+
+            //-- If a block is not selected, the method will use the block that is 3 blocks away in the players look direction to check for water pickup --//
+            if (blockSel == null)
             {
-                Block interactedBlock = byEntity.Api.World.BlockAccessor.GetBlock(blockSel.Position.Copy().Offset(blockSel.Face));
+                EntityPos pos = byEntity.SidedPos.AheadCopy(3.0);
 
-                if (interactedBlock.BlockMaterial == EnumBlockMaterial.Liquid)
+                interactedBlock = byEntity.Api.World.BlockAccessor.GetBlock(pos.AsBlockPos);
+            }
+            else
+            {
+                interactedBlock = byEntity.Api.World.BlockAccessor.GetBlock(blockSel.Position.Copy().Offset(blockSel.Face));
+            }
+
+            if (interactedBlock.BlockMaterial == EnumBlockMaterial.Liquid)
+            {
+                if (interactedBlock.Code.Domain == "game" && interactedBlock.FirstCodePart() == "water")
                 {
-                    if (interactedBlock.Code.Domain == "game" && interactedBlock.FirstCodePart() == "water")
-                    {
-                        ItemStack hideWaterSack = new ItemStack(byEntity.Api.World.GetBlock(new AssetLocation("ancienttools", "hidewatersack-raw-" + slot.Itemstack.Item.LastCodePart())));
+                    ItemStack hideWaterSack = new ItemStack(byEntity.Api.World.GetBlock(new AssetLocation("ancienttools", "hidewatersack-raw-" + slot.Itemstack.Item.LastCodePart())));
 
-                        slot.TakeOut(1);
-                        slot.MarkDirty();
+                    slot.TakeOut(1);
+                    slot.MarkDirty();
 
-                        if (!byEntity.TryGiveItemStack(hideWaterSack))
-                            byEntity.Api.World.SpawnItemEntity(hideWaterSack, byEntity.Pos.AsBlockPos.ToVec3d(), null);
+                    if (!byEntity.TryGiveItemStack(hideWaterSack))
+                        byEntity.Api.World.SpawnItemEntity(hideWaterSack, byEntity.Pos.AsBlockPos.ToVec3d(), null);
 
-                        handHandling = EnumHandHandling.PreventDefault;
-                        return;
-                    }
+                    handHandling = EnumHandHandling.PreventDefault;
+                    return;
                 }
             }
 

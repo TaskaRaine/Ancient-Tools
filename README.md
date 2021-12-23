@@ -9,6 +9,8 @@
  Hello and welcome to the GitHub repository for Ancient Tools. This project is a mod for the survival adventure game Vintage Story which adds an assortment of immersive, interactive tools to the game.
 
 ### Releases
+#### Vintage Story 1.16.0+
+[Version 1.3.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.0/AncientTools_V1.3.0.zip)
 
 #### Vintage Story 1.15.0+
 [Version 1.2.4](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.2.4/AncientTools_V1.2.4.zip)
@@ -33,6 +35,26 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+
+#### Version 1.3.0
+--Brain Tanning
+Added a whole new technique for creating leather inspired by Native American techniques, Brain Tanning.
+
+Added a stretching frame block that can be used to scrape soaked hides. All hides can be stretched on the frame for decoration.
+
+Added a hide water sack block that is used to convert raw hide into soaked hide.
+
+Added two new hide types required for the brain tanning process, a 'brained hide' and a 'smoked hide'.
+
+All wild animals have the chance to drop a new item when killed, a brain!
+
+Added a new liquid, braining solution, crafted from brain and water in a barrel.
+
+--Bark
+Craft logs with an adze in the crafting grid should now return the correct number of bark pieces.
+
+--Adze
+Fixed a crash related to block selection while the adze is in use.
 
 #### Version 1.2.4
 The bark recipe output count is now based on the config variable BarkPerLog.

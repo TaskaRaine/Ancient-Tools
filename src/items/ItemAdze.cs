@@ -70,6 +70,10 @@ namespace AncientTools.Items
         }
         public override bool OnHeldInteractStep(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
+
+            if (blockSel == null)
+                return false;
+
             if (secondsUsed >= strippingTime)
                 SpawnLoot(blockSel, byEntity);
 

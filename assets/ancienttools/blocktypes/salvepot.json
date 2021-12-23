@@ -32,6 +32,8 @@
 		{ code:"type", states: ["empty", "birch", "pine", "hardwax", "softwax", "barkoil", "finishedsalve"] },
 	],
 	creativeinventory: { "general": ["salvepot-empty", "salvepot-birch", "salvepot-pine", "salvepot-hardwax", "salvepot-softwax", "salvepot-barkoil"], 
+	"decorative": ["salvepot-empty", "salvepot-birch", "salvepot-pine", "salvepot-hardwax", "salvepot-softwax", "salvepot-barkoil"], 
+	"mechanics": ["salvepot-empty", "salvepot-birch", "salvepot-pine", "salvepot-hardwax", "salvepot-softwax", "salvepot-barkoil"], 
 	"ancienttools": ["salvepot-empty", "salvepot-birch", "salvepot-pine", "salvepot-hardwax", "salvepot-softwax", "salvepot-barkoil"] },
 	shapeByType: {
 		"@salvepot-(empty|finishedsalve)": { base: "game:block/clay/pot-opened-empty" },
