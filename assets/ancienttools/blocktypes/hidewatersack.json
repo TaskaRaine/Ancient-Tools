@@ -14,9 +14,6 @@
 		]
 	},
 	creativeinventory: { "general": ["*"], "ancienttools": ["*"] },
-	attributes: {
-		conversiontime: 24.0
-	},
 	variantgroups: [
 		{ code: "hide", states: ["raw", "soaked"] },
 		{ code: "size", states: ["huge", "large", "medium", "small"] }

@@ -43,7 +43,6 @@
 			"handle": { base: "game:item/tool/material/handle" }
 		}
 	},
-	tool: "axe",
 	maxstacksize: 1,
 	attackRange: 2,
 	tooltierbytype: {

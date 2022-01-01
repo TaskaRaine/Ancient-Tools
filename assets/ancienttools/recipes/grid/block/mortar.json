@@ -1,5 +1,5 @@
 ﻿{
-	ingredientPattern: "R RR RSRS",
+	ingredientPattern: "R RR RRRR",
 	width: 3,
 	height: 3,
 	ingredients: {
@@ -8,10 +8,6 @@
 			name: "rock",
 			allowedVariants: ["andesite", "granite", "basalt", "peridotite"],
 			code: "game:stone-*" 
-		},
-		"S": { 
-			type: "item", 
-			code: "game:resin" 
 		}
 	},
 	output: { 

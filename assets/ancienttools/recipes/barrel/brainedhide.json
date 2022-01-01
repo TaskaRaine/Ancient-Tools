@@ -1,6 +1,6 @@
 ﻿{
 	code: "brainedhide",
-	sealHours: 48,
+	sealHours: 48.0,
 	ingredients: [
 		{ type: "item", code: "ancienttools:brainingsolutionportion", litres: 10 },
 		{ type: "item", name: "size", code: "game:hide-scraped-*", quantity: 1 }

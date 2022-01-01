@@ -1,0 +1,10 @@
+﻿[
+	{
+		"op": "replace",
+		"path": "/sealHours",
+		"value": 48.0,
+		"file": "recipes/barrel/brainedhide",
+		"side": "Server",
+		"condition": { "when": "BrainedHideSealHours", "useValue": true }
+	}
+]

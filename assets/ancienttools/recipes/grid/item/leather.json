@@ -18,7 +18,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "game:leather",
+			code: "game:leather-plain",
 			quantity: 1
 		}
 	},
@@ -41,7 +41,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "game:leather",
+			code: "game:leather-plain",
 			quantity: 2
 		}
 	},
@@ -64,7 +64,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "game:leather",
+			code: "game:leather-plain",
 			quantity: 3
 		}
 	},
@@ -87,7 +87,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "game:leather",
+			code: "game:leather-plain",
 			quantity: 5
 		}
 	}

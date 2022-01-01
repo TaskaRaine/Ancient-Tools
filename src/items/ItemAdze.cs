@@ -45,27 +45,31 @@ namespace AncientTools.Items
         {
             base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, firstEvent, ref handling);
 
-            //-- Do not process the stripping action if the player is not sneaking, or no block is selected --//
-            if (!byEntity.Controls.Sneak || blockSel == null)
+            //-- Do not process the stripping action if the player is not sneaking, sprinting, or no block is selected --//
+            if (blockSel == null)
                 return;
 
-            Block interactedBlock = api.World.BlockAccessor.GetBlock(blockSel.Position);
-
-            if (interactedBlock.Attributes["woodStrippable"].Exists)
+            if (byEntity.Controls.Sneak || byEntity.Controls.Sprint)
             {
-                canStripBark = true;
 
-                //-- Stripping time modifier increases the speed at which the wood is stripped. By default, it's based on tool tier --//
-                strippingTime = api.World.Config.GetDouble("BaseBarkStrippingSpeed", 1.0) * this.Attributes["strippingTimeModifier"].AsDouble();
+                Block interactedBlock = api.World.BlockAccessor.GetBlock(blockSel.Position);
 
-                byEntity.StartAnimation("adzestrip");
+                if (interactedBlock.Attributes["woodStrippable"].Exists)
+                {
+                    canStripBark = true;
 
-                if(api.Side == EnumAppSide.Server)
-                    api.World.PlaySoundAt(new AssetLocation("ancienttools", "sounds/block/stripwood"), byEntity, null, true, 32f, 0.75f);
-                else
-                    SetParticleColourAndPosition(interactedBlock.GetRandomColor((ICoreClientAPI)api, blockSel.Position, BlockFacing.NORTH), blockSel.Position.ToVec3d()); 
-                
-                handling = EnumHandHandling.Handled;
+                    //-- Stripping time modifier increases the speed at which the wood is stripped. By default, it's based on tool tier --//
+                    strippingTime = api.World.Config.GetDouble("BaseBarkStrippingSpeed", 1.0) * this.Attributes["strippingTimeModifier"].AsDouble();
+
+                    byEntity.StartAnimation("adzestrip");
+
+                    if (api.Side == EnumAppSide.Server)
+                        api.World.PlaySoundAt(new AssetLocation("ancienttools", "sounds/block/stripwood"), byEntity, null, true, 32f, 0.75f);
+                    else
+                        SetParticleColourAndPosition(interactedBlock.GetRandomColor((ICoreClientAPI)api, blockSel.Position, BlockFacing.NORTH), blockSel.Position.ToVec3d());
+
+                    handling = EnumHandHandling.Handled;
+                }
             }
         }
         public override bool OnHeldInteractStep(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)

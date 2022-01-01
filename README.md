@@ -50,11 +50,18 @@ All wild animals have the chance to drop a new item when killed, a brain!
 
 Added a new liquid, braining solution, crafted from brain and water in a barrel.
 
+Scraping, water sack soaking, and scraped hide brain soaking times are all configurable in the mod config file.
+
 --Bark
 Craft logs with an adze in the crafting grid should now return the correct number of bark pieces.
 
 --Adze
 Fixed a crash related to block selection while the adze is in use.
+
+Adze can also use sprint instead of sneak to begin bark stripping.
+
+--Mortar and Pestle
+Resin has been removed from the crafting recipe and replaced with more stone.
 
 #### Version 1.2.4
 The bark recipe output count is now based on the config variable BarkPerLog.

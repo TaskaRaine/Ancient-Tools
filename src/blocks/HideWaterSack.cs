@@ -14,9 +14,13 @@ namespace AncientTools.Blocks
     {
         WorldInteraction[] pickupInteraction = null;
 
+        private float _conversionTime;
+
         public override void OnLoaded(ICoreAPI api)
         {
             base.OnLoaded(api);
+
+            _conversionTime = api.World.Config.GetFloat("ConversionTime");
 
             pickupInteraction = ObjectCacheUtil.GetOrCreate(api, "sackPickUp", () =>
             {
@@ -50,7 +54,7 @@ namespace AncientTools.Blocks
                 if (inSlot.Itemstack.Attributes.HasAttribute("timeremaining"))
                     dsc.Append("\n" + Lang.Get("ancienttools:blockdesc-hidewatersack-soak-x-hours-when-placed", (int)(inSlot.Itemstack.Attributes.GetDouble("timeremaining") + 0.5)));
                 else
-                    dsc.Append("\n" + Lang.Get("ancienttools:blockdesc-hidewatersack-soak-x-hours-when-placed", this.Attributes["conversiontime"]));
+                    dsc.Append("\n" + Lang.Get("ancienttools:blockdesc-hidewatersack-soak-x-hours-when-placed", api.World.Config.GetFloat("WaterSackConversionHours", 24.0f)));
                 }
             }
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)

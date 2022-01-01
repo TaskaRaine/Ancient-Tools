@@ -13,6 +13,8 @@ namespace AncientTools.Config
         public bool BarkBreadEnabled = true;
         public bool SalveEnabled = true;
         public float SkinningTime = 4.0f;
+        public float WaterSackConversionHours = 24.0f;
+        public float BrainedHideSealHours = 48.0f;
 
         public AncientToolsConfig()
         {
@@ -28,6 +30,8 @@ namespace AncientTools.Config
             BarkBreadEnabled = previousConfig.BarkBreadEnabled;
             SalveEnabled = previousConfig.SalveEnabled;
             SkinningTime = previousConfig.SkinningTime;
+            WaterSackConversionHours = previousConfig.WaterSackConversionHours;
+            BrainedHideSealHours = previousConfig.BrainedHideSealHours;
         }
     }
 }

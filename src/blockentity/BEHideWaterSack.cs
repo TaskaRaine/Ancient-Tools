@@ -19,7 +19,7 @@ namespace AncientTools.BlockEntity
             if (api.Side == EnumAppSide.Server)
                 tickListener = api.World.RegisterGameTickListener(HourlyTicker, (int)(3600000 / api.World.Calendar.SpeedOfTime));
 
-            timeRemaining = Block.Attributes["conversiontime"].AsDouble();
+            timeRemaining = api.World.Config.GetFloat("WaterSackConversionHours", 24.0f);
             previousHourChecked = api.World.Calendar.TotalHours;
 
             base.Initialize(api);
