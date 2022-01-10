@@ -15,6 +15,8 @@ This <a href=\'handbook://item-ancienttools:adze-copper\'>adze</a>, introduced i
 
 To create an adze, an <a href=\'handbooksearch://adze head\'>adze head</a> must first be created either through stone <a href=\"handbook://craftinginfo-knapping\">knapping</a>, <a href=\"handbook://craftinginfo-smelting\">smelting</a> or <a href=\"handbook://craftinginfo-smithing\">smithing</a>. Craft the resulting adze head with a stick and you'll now have yourself a handy tool for collecting bark! Approach the nearest tree with adze in hand then crouch and hold <icon name='rightmousebutton'></icon> to begin stripping away.
 
+Stone adze heads can also be crafted with bone for an extra sturdy tool!
+
 The <a href=\'handbook://item-ancienttools:bark-oak\'>tree bark</a> that you collect can be used for a variety of different purposes. Bark can make for an excellent firestarter in place of firewood. Or, it can be woven to create cute little <a href=\'handbooksearch://bark basket\'>bark baskets</a> to place things in.
 
 <a href=\'handbook://item-ancienttools:bark-birch\'>Birch bark</a> and <a href=\'handbook://item-ancienttools:bark-pine\'>pine bark</a> are a special arboreal resource in that they possess some unique properties that we can take advantage of. 
@@ -71,7 +73,7 @@ Now, take the hide from the stretching frame and seal it in the barrel with the 
 
 When the hide has been thoroughly <a href=\'handbook://item-hide-soaked-huge\'>soaked</a> in solution, the next step is to smoke the hide. This makes the hide water resistant and gives the leather its iconic golden color. Hang your hide over a fire pit and wait for it to become a <a href=\'handbook://item-hide-smoked-huge\'>smoked hide</a>.
 
-Now, the final part! Take your smoked hide and, using a knife, carefully cut it into strips of <a href=\'handbook://item-leather\'>leather</a>. 
+Now, the final part! Take your smoked hide and, using a knife, carefully cut it into strips of <a href=\'handbook://item-leather\'>leather</a>. This is performed in the crafting grid.
 	",
 	"blockhelp-place-pestle": "Place Pestle",
 	"blockhelp-place-resource": "Place Grindable Resource",
@@ -205,22 +207,22 @@ Now, the final part! Take your smoked hide and, using a knife, carefully cut it 
 	"iteminfo-salve-heal": "Heals {0} health over {1} seconds when used.",
 	"iteminfo-brain": "Used for hide tanning. Place in a barrel with 10L of water to create braining solution.",
 
-	"item-adze-chert": "Chert Adze",
-	"item-adze-granite": "Granite Adze",
-	"item-adze-andesite": "Andesite Adze",
-	"item-adze-basalt": "Basalt Adze",
-	"item-adze-obsidian": "Obsidian Adze",
-	"item-adze-peridotite": "Peridotite Adze",
-	"item-adze-flint": "Flint Adze",
-	"item-adze-copper": "Copper Adze",
-	"item-adze-tinbronze": "Tin Bronze Adze",
-	"item-adze-bismuthbronze": "Bismuth Bronze Adze",
-	"item-adze-blackbronze": "Black Bronze Adze",
-	"item-adze-gold": "Gold Adze",
-	"item-adze-silver": "Silver Adze",
-	"item-adze-iron": "Iron Adze",
-	"item-adze-meteoriciron": "Meteoric Iron Adze",
-	"item-adze-steel": "Steel Adze",
+	"item-adze-*-chert": "Chert Adze",
+	"item-adze-*-granite": "Granite Adze",
+	"item-adze-*-andesite": "Andesite Adze",
+	"item-adze-*-basalt": "Basalt Adze",
+	"item-adze-*-obsidian": "Obsidian Adze",
+	"item-adze-*-peridotite": "Peridotite Adze",
+	"item-adze-*-flint": "Flint Adze",
+	"item-adze-*-copper": "Copper Adze",
+	"item-adze-*-tinbronze": "Tin Bronze Adze",
+	"item-adze-*-bismuthbronze": "Bismuth Bronze Adze",
+	"item-adze-*-blackbronze": "Black Bronze Adze",
+	"item-adze-*-gold": "Gold Adze",
+	"item-adze-*-silver": "Silver Adze",
+	"item-adze-*-iron": "Iron Adze",
+	"item-adze-*-meteoriciron": "Meteoric Iron Adze",
+	"item-adze-*-steel": "Steel Adze",
 
 	"itemdesc-saltedmeat-cure-x-days": "When Racked: Will cure in {0} days.",
 

@@ -1,0 +1,25 @@
+﻿[
+	{
+		"file": "game:config/remaps.json",
+		"op": "add",
+		"path": "/ancienttools:ancienttools",
+		"value": [
+			"/iir remapq ancienttools:adze-wood-chert ancienttools:adze-chert force",
+			"/iir remapq ancienttools:adze-wood-granite ancienttools:adze-granite force",
+			"/iir remapq ancienttools:adze-wood-andesite ancienttools:adze-andesite force",
+			"/iir remapq ancienttools:adze-wood-basalt ancienttools:adze-basalt force",
+			"/iir remapq ancienttools:adze-wood-peridotite ancienttools:adze-peridotite force",
+			"/iir remapq ancienttools:adze-wood-obsidian ancienttools:adze-obsidian force",
+			"/iir remapq ancienttools:adze-wood-flint ancienttools:adze-flint force",
+			"/iir remapq ancienttools:adze-wood-copper ancienttools:adze-copper force",
+			"/iir remapq ancienttools:adze-wood-tinbronze ancienttools:adze-tinbronze force",
+			"/iir remapq ancienttools:adze-wood-bismuthbronze ancienttools:adze-bismuthbronze force",
+			"/iir remapq ancienttools:adze-wood-blackbronze ancienttools:adze-blackbronze force",
+			"/iir remapq ancienttools:adze-wood-silver ancienttools:adze-silver force",
+			"/iir remapq ancienttools:adze-wood-gold ancienttools:adze-gold force",
+			"/iir remapq ancienttools:adze-wood-iron ancienttools:adze-iron force",
+			"/iir remapq ancienttools:adze-wood-meteoriciron ancienttools:adze-meteoriciron force",
+			"/iir remapq ancienttools:adze-wood-steel ancienttools:adze-steel force",
+		]
+	}
+]

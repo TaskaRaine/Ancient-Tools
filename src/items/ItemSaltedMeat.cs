@@ -13,6 +13,14 @@ namespace AncientTools.Items
         {
             base.OnCreatedByCrafting(allInputslots, outputSlot, byRecipe);
 
+            //-- The handbook uses dummy slots instead of proper inventory item slots. When trying to perform attribute functions on a dummy slot, recipes break --//
+            //-- This check ensures that the handbook will display the salted meat item, and its recipe, without breaking the item handbook entries --//
+            if(allInputslots.GetLength(0) > 0)
+            {
+                if (allInputslots[0] is DummySlot)
+                    return;
+            }
+
             string inputCode;
             
             //-- Ensures that the meat perish and curing values are accurately set so that the player has a sense of how much time remains for both when crafted --//

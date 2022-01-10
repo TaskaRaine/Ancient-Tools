@@ -9,7 +9,10 @@
  Hello and welcome to the GitHub repository for Ancient Tools. This project is a mod for the survival adventure game Vintage Story which adds an assortment of immersive, interactive tools to the game.
 
 ### Releases
+
 #### Vintage Story 1.16.0+
+[Version 1.3.1](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.1/AncientTools_V1.3.1.zip)
+
 [Version 1.3.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.0/AncientTools_V1.3.0.zip)
 
 #### Vintage Story 1.15.0+
@@ -35,6 +38,17 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+
+#### Version 1.3.1
+--Adze
+Adze tools can now be crafted using bones for handles. 
+
+Adze tools can once again be placed on a tool rack.
+
+--Other
+Fixed an issue where salted meat recipes would mysteriously stop appearing.
+
+Updated the handbook entry for Native American Brain Tanning for extra clarity on the crafting process.
 
 #### Version 1.3.0
 --Brain Tanning

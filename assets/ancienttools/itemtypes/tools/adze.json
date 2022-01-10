@@ -6,39 +6,62 @@
 		handbook: {
 			groupBy: ["adze-*"]
 		},
+		rackable: true,
 		toolrackTransform: {
 			rotation: { y: 1, z: -1 },
 			translation: { x: -0.3, y: 0.6 },
 			scale: 1.25,
 		},
 		strippingTimeModifierByType: {
-			"@adze-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": 1.2,
-			"@adze-(copper|silver|gold)": 1.0,
-			"@adze-(tinbronze|bismuthbronze|blackbronze)": 0.8,
-			"@adze-(iron|meteoriciron)": 0.6,
-			"@adze-(steel)": 0.5,
+			"@adze-(wood|bone)-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": 1.2,
+			"@adze-wood-(copper|silver|gold)": 1.0,
+			"@adze-wood-(tinbronze|bismuthbronze|blackbronze)": 0.8,
+			"@adze-wood-(iron|meteoriciron)": 0.6,
+			"@adze-wood-(steel)": 0.5,
 		}
 	},
 	variantgroups: [
+		{ code: "handle", states: ["wood", "bone"] },
         { code: "material", states: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron", "meteoriciron", "steel" ] },
     ],
+	skipVariants: [
+		"adze-bone-copper",
+		"adze-bone-tinbronze",
+		"adze-bone-bismuthbronze",
+		"adze-bone-blackbronze",
+		"adze-bone-gold", 
+		"adze-bone-silver", 
+		"adze-bone-iron", 
+		"adze-bone-meteoriciron", 
+		"adze-bone-steel"
+	],
 	drawtype: "json",
     shapeByType: {
-		"@adze-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": { base: "item/tool/adze-stone" },
-		"@adze-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": { base: "item/tool/adze-metal" }
+		"@adze-(wood|bone)-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": { base: "item/tool/adze-stone" },
+		"@adze-wood-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": { base: "item/tool/adze-metal" }
 	},
 	texturesByType: {
-		"@adze-(chert|granite|andesite|basalt|obsidian|peridotite)": { 
+		"@adze-wood-(chert|granite|andesite|basalt|obsidian|peridotite)": { 
 			"material": { base: "game:block/stone/rock/{material}1" },
 			"string": { base: "game:item/tool/material/string" },
 			"handle": { base: "game:item/tool/material/handle" }
 		},
-		"adze-flint": { 
+		"@adze-bone-(chert|granite|andesite|basalt|obsidian|peridotite)": { 
+			"material": { base: "game:block/stone/rock/{material}1" },
+			"string": { base: "game:item/tool/material/string" },
+			"handle": { base: "game:block/bone-yellow" }
+		},
+		"adze-wood-flint": { 
 			"material": { base: "game:block/stone/{material}" },
 			"string": { base: "game:item/tool/material/string" },
 			"handle": { base: "game:item/tool/material/handle" } 
 		},
-		"@adze-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": {
+		"adze-bone-flint": { 
+			"material": { base: "game:block/stone/{material}" },
+			"string": { base: "game:item/tool/material/string" },
+			"handle": { base: "game:block/bone-yellow" }
+		},
+		"@adze-wood-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": {
 			"metal": { base: "game:block/metal/ingot/{material}" },
 			"handle": { base: "game:item/tool/material/handle" }
 		}
@@ -46,19 +69,22 @@
 	maxstacksize: 1,
 	attackRange: 2,
 	tooltierbytype: {
-		"@adze-(chert|granite|andesite|basalt|obsidian|peridotite)": 1,
-		"@adze-(copper|silver|gold)": 2,
-		"@adze-(tinbronze|bismuthbronze|blackbronze)": 3,
-		"@adze-(iron|meteoriciron)": 4,
-		"@adze-(steel)": 5
+		"@adze-(wood|bone)-(chert|granite|andesite|basalt|peridotite|flint|obsidian)": 1,
+		"@adze-wood-(copper|silver|gold)": 2,
+		"@adze-wood-(tinbronze|bismuthbronze|blackbronze)": 3,
+		"@adze-wood-(iron|meteoriciron)": 4,
+		"@adze-wood-(steel)": 5
 	},
 	heldTpHitAnimation: "smithing",
 	damagedby: ["blockbreaking", "attacking"],
 	durabilitybytype: {
-		"@adze-(chert|granite|andesite|basalt|obsidian|peridotite)": 50,
-		"*-flint": 60,
-		"*-obsidian": 90,
-		"@adze-(silver|gold)": 125,
+		"@adze-wood-(chert|granite|andesite|basalt|peridotite)": 50,
+		"@adze-bone-(chert|granite|andesite|basalt|peridotite)": 60,
+		"*-wood-flint": 60,
+		"*-bone-flint": 70,
+		"*-wood-obsidian": 90,
+		"*-bone-obsidian": 100,
+		"@adze-wood-(silver|gold)": 125,
 		"*-copper": 250,
 		"*-tinbronze": 400,
 		"*-bismuthbronze": 500,
@@ -68,13 +94,13 @@
 		"*-steel": 1800
 	},
 	attackpowerbytype: {
-		"@adze-(chert|granite|andesite|basalt|obsidian|peridotite)": 0.75,
+		"@adze-(wood|bone)-(chert|granite|andesite|basalt|peridotite)": 0.75,
 		"*-flint": 1.25,
 		"*-obsidian": 1.5,
 		"*-copper": 2,
-		"@adze-(bismuthbronze|silver|gold)": 2.5,
+		"@adze-wood-(bismuthbronze|silver|gold)": 2.5,
 		"*-tinbronze": 2.75,
-		"@adze-(blackbronze|iron)": 3,
+		"@adze-wood-(blackbronze|iron)": 3,
 		"*-medeoriciron": 3.5,
 		"*-steel": 4
 	},
