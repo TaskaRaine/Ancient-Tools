@@ -5,7 +5,7 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.1, var: 0 } 
+			quantity: { avg: 0.35, var: 0 } 
 		},
 		"file": "game:entities/land/fox-arctic-female",
 		"side": "Server"
@@ -16,7 +16,7 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.1, var: 0 } 
+			quantity: { avg: 0.35, var: 0 } 
 		},
 		"file": "game:entities/land/fox-arctic-male",
 		"side": "Server"
@@ -27,7 +27,7 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.1, var: 0 } 
+			quantity: { avg: 0.35, var: 0 } 
 		},
 		"file": "game:entities/land/fox-female",
 		"side": "Server"
@@ -38,7 +38,7 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.1, var: 0 } 
+			quantity: { avg: 0.35, var: 0 } 
 		},
 		"file": "game:entities/land/fox-arctic-male",
 		"side": "Server"

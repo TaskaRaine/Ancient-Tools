@@ -1,0 +1,44 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/ingredients/0/validStacks/-",
+		"value": {
+			"type": "item",
+			"code": "ancienttools:brain",
+			"shapeElement": "bowl/meat stew/*",
+			"textureMapping": [
+				"meat",
+				"brain"
+			]
+		},
+		"file": "recipes/cooking/meatystew.json"
+	},
+	{
+		"op": "add",
+		"path": "/ingredients/2/validStacks/-",
+		"value": {
+			"type": "item",
+			"code": "ancienttools:brain",
+			"shapeElement": "bowl/red meat/*",
+			"textureMapping": [
+				"meat",
+				"brain"
+			]
+		},
+		"file": "recipes/cooking/meatystew.json"
+	},
+	{
+		"op": "add",
+		"path": "/ingredients/3/validStacks/-",
+		"value": {
+			"type": "item",
+			"code": "ancienttools:brain",
+			"shapeElement": "bowl/red meat 2/*",
+			"textureMapping": [
+				"meat",
+				"brain"
+			]
+		},
+		"file": "recipes/cooking/meatystew.json"
+	},
+]

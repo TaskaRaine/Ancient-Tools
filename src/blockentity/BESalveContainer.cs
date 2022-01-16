@@ -44,6 +44,7 @@ namespace AncientTools.BlockEntity
             LiquidSlot.MaxSlotStackSize = 4;
 
             UpdateMeshes();
+            MarkDirty(true);
         }
         public override bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator)
         {

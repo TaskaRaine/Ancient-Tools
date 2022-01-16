@@ -16,27 +16,6 @@
 		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
-		"op": "remove",
-		"path": "/nutritionPropsByType/*-partbaked",
-		"file": "game:itemtypes/food/bread",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
-		"op": "remove",
-		"path": "/nutritionPropsByType/*-perfect",
-		"file": "game:itemtypes/food/bread",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
-		"op": "remove",
-		"path": "/nutritionPropsByType/*-charred",
-		"file": "game:itemtypes/food/bread",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
 		"op": "add",
 		"path": "/nutritionPropsByType/*-birch-partbaked",
 		"value": {
@@ -97,31 +76,52 @@
 		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
-		"op": "add",
+		"op": "move",
+		"frompath": "/nutritionPropsByType/*-partbaked",
+		"path": "/temp",
+		"file": "game:itemtypes/food/bread",
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
 		"path": "/nutritionPropsByType/*-partbaked",
-		"value": {
-			saturation: 150, foodcategory: "Grain"
-		},
 		"file": "game:itemtypes/food/bread",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
-		"op": "add",
+		"op": "move",
+		"frompath": "/nutritionPropsByType/*-perfect",
+		"path": "/temp",
+		"file": "game:itemtypes/food/bread",
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
 		"path": "/nutritionPropsByType/*-perfect",
-		"value": {
-			saturation: 300, foodcategory: "Grain"
-		},
 		"file": "game:itemtypes/food/bread",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
-		"op": "add",
-		"path": "/nutritionPropsByType/*-charred",
-		"value": {
-			saturation: 210, foodcategory: "Grain"
-		},
+		"op": "move",
+		"frompath": "/nutritionPropsByType/*-charred",
+		"path": "/temp",
 		"file": "game:itemtypes/food/bread",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
+		"path": "/nutritionPropsByType/*-charred",
+		"file": "game:itemtypes/food/bread",
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",

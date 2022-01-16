@@ -4,15 +4,25 @@
 	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
 	attributesByType: {
 		"@bark-(birch|pine)": {
-			isMedicinalBark: true
+			isMedicinalBark: true,
+			handbook: {
+				groupBy: ["bark-*"]
+			},
 		},
 		"*": {
-			isMedicinalBark: false
+			isMedicinalBark: false,
+			handbook: {
+				groupBy: ["bark-*"]
+			}
 		}
 	},
 	behaviorsByType: {
 		"@bark-(birch|pine)": [
-			{ name: "SalveIngredient" }
+			{ name: "SalveIngredient" },
+			{ "name": "GroundStorable", "properties": { "layout": "Quadrants" } }
+		],
+		"*": [
+			{ "name": "GroundStorable", "properties": { "layout": "Quadrants" } }
 		]
 	},
 	variantgroups: [

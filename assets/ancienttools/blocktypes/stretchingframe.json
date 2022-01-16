@@ -8,6 +8,11 @@
         { code: "wood", loadFromProperties: "game:block/wood", states:["aged"] },
 		{ code: "rotation", states: ["north", "south", "east", "west"] }
 	],
+	attributes: {
+		handbook: {
+			groupBy: ["stretchingframe-*-north"]
+		},
+	},
 	drawtype: "json",
 	shapebytype: { 
 		"*-north": {

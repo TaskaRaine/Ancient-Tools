@@ -1,0 +1,38 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.2, var: 0 } 
+		},
+		"file": "medievalexpansion:entities/land/aurochs-male",
+		"dependsOn": [{ "modid": "medievalexpansion" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.2, var: 0 } 
+		},
+		"file": "medievalexpansion:entities/land/aurochs-female",
+		"dependsOn": [{ "modid": "medievalexpansion" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.1, var: 0 } 
+		},
+		"file": "medievalexpansion:entities/land/aurochs-lamb",
+		"dependsOn": [{ "modid": "medievalexpansion" }],
+		"side": "Server"
+	}
+]

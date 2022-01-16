@@ -117,6 +117,17 @@ namespace AncientTools.BlockEntity
         {
             base.OnBlockUnloaded();
 
+            if (ambientSound != null)
+            {
+                ambientSound.Stop();
+                ambientSound.Dispose();
+            }
+            if (stoneSound != null)
+            {
+                stoneSound.Stop();
+                stoneSound.Dispose();
+            }
+
             if (pestleRenderer != null)
                 pestleRenderer.Dispose();
         }

@@ -2,12 +2,16 @@
 	code: "brain",
 	class: "ItemBrain",
 	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
+	attributes: {
+		nutritionPropsWhenInMeal: { satiety: 560, foodcategory: "Protein" },
+	},
 	drawtype: "json",
     shape: { base: "item/resource/brain" },
     textures: {
         brain: { base: "item/resource/brain" }
     },
 	maxstacksize: 64,
+	nutritionProps: { foodcategory: "Protein" },
 	transitionableProps: [{
 		type: "Perish",
 		freshHours: { avg: 36 },

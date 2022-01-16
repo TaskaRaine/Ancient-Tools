@@ -19,7 +19,6 @@ namespace AncientTools.BlockEntity
             if (api.Side == EnumAppSide.Server)
                 tickListener = api.World.RegisterGameTickListener(HourlyTicker, (int)(3600000 / api.World.Calendar.SpeedOfTime));
 
-            timeRemaining = api.World.Config.GetFloat("WaterSackConversionHours", 24.0f);
             previousHourChecked = api.World.Calendar.TotalHours;
 
             base.Initialize(api);
@@ -60,6 +59,10 @@ namespace AncientTools.BlockEntity
         public string GetTimeRemainingInfo()
         {
             return Lang.Get("ancienttools:blockdesc-hidewatersack-soak-x-hours", (int)(timeRemaining + 0.5)); 
+        }
+        public void SetTimeRemaining(double remaining)
+        {
+            timeRemaining = remaining;
         }
         public double GetTimeRemaining()
         {

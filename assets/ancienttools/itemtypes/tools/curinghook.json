@@ -4,8 +4,14 @@
 	attributes: {
 		handbook: {
 			groupBy: ["curinghook-*"]
+		},
+		groundStorageTransform: {
+			"translation": { "y": -0.17 }
 		}
 	},
+	behaviors: [
+		{ "name": "GroundStorable", "properties": { "layout": "Quadrants" } }
+	],
 	variantgroups: [
         { code: "material", states: ["bone"] }
     ],

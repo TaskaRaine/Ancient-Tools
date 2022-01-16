@@ -35,7 +35,7 @@ namespace AncientTools.Blocks
         }
         public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
         {
-            return pickupInteraction;
+            return pickupInteraction.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
         }
         public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos pos, IPlayer forPlayer)
         {
@@ -59,6 +59,9 @@ namespace AncientTools.Blocks
             }
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
+            if (byPlayer.Entity.Controls.Sneak)
+                return false;
+
             if(this.FirstCodePart(1) == "soaked")
             {
                 ItemStack soakedHide = new ItemStack(world.GetItem(new AssetLocation("game", "hide-soaked-" + this.LastCodePart())));
@@ -74,7 +77,6 @@ namespace AncientTools.Blocks
                 api.World.SpawnCubeParticles(byPlayer.Entity.Pos.AheadCopy(0.25).XYZ.Add(0, byPlayer.Entity.CollisionBox.Y2 / 2, 0), waterItemstack, 0.75f, 10 * 2, 0.45f);
 
                 world.BlockAccessor.SetBlock(0, blockSel.Position);
-                world.BlockAccessor.RemoveBlockEntity(blockSel.Position);
 
                 return true;
             }
@@ -95,6 +97,18 @@ namespace AncientTools.Blocks
             }
 
             return false;
+        }
+        public override void OnBlockPlaced(IWorldAccessor world, BlockPos blockPos, ItemStack byItemStack)
+        {
+            base.OnBlockPlaced(world, blockPos, byItemStack);
+
+            if (byItemStack == null)
+                return;
+
+            if (world.BlockAccessor.GetBlockEntity(blockPos) is BEHideWaterSack waterSackEntity)
+            {
+                waterSackEntity.SetTimeRemaining(byItemStack.Attributes.GetDouble("timeremaining", api.World.Config.GetDouble("WaterSackConversionHours", 24.0)));
+            }
         }
     }
 }

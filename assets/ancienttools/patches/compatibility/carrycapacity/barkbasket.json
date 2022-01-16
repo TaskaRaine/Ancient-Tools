@@ -26,6 +26,7 @@
 			} 
 		},
 		"file": "ancienttools:blocktypes/barkbasket",
+		"dependsOn": [{ "modid": "carrycapacity" }],
 		"side": "Server"
 	}
 ]

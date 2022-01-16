@@ -166,42 +166,42 @@ namespace AncientTools.Blocks
                 {
                     if(salveContainer.ResourceSlot.StackSize == salveContainer.ResourceSlot.MaxSlotStackSize)
                     {
-                        return barkFilledInteractions;
+                        return barkFilledInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                     }
                     else if(!salveContainer.LiquidSlot.Empty)
                     {
                         if(salveContainer.LiquidSlot.StackSize == salveContainer.LiquidSlot.MaxSlotStackSize)
                         {
                             if (salveContainer.ResourceSlot.Itemstack.Item.LastCodePart() == "birch")
-                                return oilFilledBirchInteractions;
+                                return oilFilledBirchInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                             else
-                                return oilFilledPineInteractions;
+                                return oilFilledPineInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                         }
                     }
 
                     if (salveContainer.ResourceSlot.Itemstack.Item.LastCodePart() == "birch")
-                        return birchBarkAndOilInteractions;
+                        return birchBarkAndOilInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                     else
-                        return pineBarkAndOilInteractions;
+                        return pineBarkAndOilInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                 }
                 else if(!salveContainer.LiquidSlot.Empty)
                 {
                     if(salveContainer.LiquidSlot.Itemstack.Item.Attributes["isSalveThickener"].AsBool() == true)
                     {
-                        return thickenerInteractions;
+                        return thickenerInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                     }
                     else
                     {
                         if (salveContainer.LiquidSlot.StackSize == salveContainer.LiquidSlot.MaxSlotStackSize)
                         {
-                            return oilFilledInteractions;
+                            return oilFilledInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                         }
 
-                        return barkAndOilInteractions;
+                        return barkAndOilInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                     }
                 }
 
-                return emptyInteractions;
+                return emptyInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
             }
 
             return null;

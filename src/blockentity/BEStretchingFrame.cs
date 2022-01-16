@@ -14,10 +14,18 @@ namespace AncientTools.BlockEntity
         private float skinningTime;
         private float skinningStartTime = -1;
 
+        private bool isSkinning = false;
+
+        private ILoadedSound skinningSound;
+
         public BEStretchingFrame()
         {
             InventorySize = 1;
             InitializeInventory();
+        }
+        ~BEStretchingFrame()
+        {
+            if (skinningSound != null) skinningSound.Dispose();
         }
 
         public ItemSlot HideSlot
@@ -40,15 +48,62 @@ namespace AncientTools.BlockEntity
             HideSlot.MaxSlotStackSize = 1;
 
             UpdateMeshes();
+
+            if(api.Side == EnumAppSide.Client)
+            {
+                skinningSound = ((IClientWorldAccessor)api.World).LoadSound(new SoundParams()
+                {
+                    Location = new AssetLocation("game", "sounds/player/scrape.ogg"),
+                    ShouldLoop = false,
+                    Position = Pos.ToVec3f().Add(0.5f, 0.25f, 0.5f),
+                    Range = 12.0f,
+                    DisposeOnFinish = false,
+                    Volume = 1.0f
+                });
+            }
+        }
+        public override void OnBlockRemoved()
+        {
+            base.OnBlockRemoved();
+
+            if(skinningSound != null)
+            {
+                skinningSound.Stop();
+                skinningSound.Dispose();
+            }
+        }
+        public override void OnBlockUnloaded()
+        {
+            base.OnBlockUnloaded();
+
+            if (skinningSound != null)
+            {
+                skinningSound.Stop();
+                skinningSound.Dispose();
+            }
+        }
+        public override void ToTreeAttributes(ITreeAttribute tree)
+        {
+            base.ToTreeAttributes(tree);
+
+            tree.SetBool("isSkinning", isSkinning);
         }
         public override void FromTreeAttributes(ITreeAttribute tree, IWorldAccessor worldForResolving)
         {
+            base.FromTreeAttributes(tree, worldForResolving);
+
             if (worldForResolving.Side == EnumAppSide.Client && Api != null)
             {
-                UpdateMeshes();
-            }
+                tree.SetBool("isSkinning", false);
 
-            base.FromTreeAttributes(tree, worldForResolving);
+                UpdateMeshes();
+
+                if (isSkinning)
+                {
+                    if (!skinningSound.IsPlaying)
+                        skinningSound.Start();
+                }
+            }
         }
         public override bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator)
         {
@@ -124,8 +179,12 @@ namespace AncientTools.BlockEntity
             if(skinningStartTime < 0)
             {
                 skinningStartTime = Api.World.ElapsedMilliseconds;
-                Api.World.PlaySoundAt(new AssetLocation("game", "sounds/player/scrape"), player.Entity, (player as EntityPlayer)?.Player, false, 12);
+                isSkinning = true;
 
+                if (Api.Side == EnumAppSide.Client)
+                    skinningSound.Start();
+
+                MarkDirty(false);
                 return true;
             }
 
@@ -141,17 +200,19 @@ namespace AncientTools.BlockEntity
             if (skinningStartTime == -1)
                 return false;
 
-            if (Api.World.ElapsedMilliseconds < skinningStartTime + skinningTime * 1000)
-            {
+            if (Api.Side == EnumAppSide.Client)
                 AnimateSkinning(player, (Api.World.ElapsedMilliseconds - skinningStartTime) * 0.001f);
-
-                return true;
-            }
             else
             {
-                FinishPreparing(player);
-                return false;
+                if (Api.World.ElapsedMilliseconds > skinningStartTime + skinningTime * 1000)
+                {
+                    FinishPreparing(player);
+
+                    return false;
+                }
             }
+
+            return true;
         }
         /// <summary>
         /// Convert the hide and update the frame mesh.
@@ -170,11 +231,17 @@ namespace AncientTools.BlockEntity
 
             Reset();
             UpdateMeshes();
-            MarkDirty(true);
         }
         public void Reset()
         {
             skinningStartTime = -1;
+            isSkinning = false;
+
+            if(Api.Side == EnumAppSide.Client)
+            {
+                if (skinningSound.IsPlaying)
+                    skinningSound.Stop();
+            }
 
             MarkDirty(true);
         }

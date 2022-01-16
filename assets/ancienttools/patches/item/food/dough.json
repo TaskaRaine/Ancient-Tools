@@ -16,13 +16,6 @@
 		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
-		"op": "remove",
-		"path": "/attributes/nutritionPropsWhenInMealByType/*",
-		"file": "game:itemtypes/food/dough",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
 		"op": "add",
 		"path": "/attributes/nutritionPropsWhenInMealByType/*-birch",
 		"value": {
@@ -37,16 +30,6 @@
 		"path": "/attributes/nutritionPropsWhenInMealByType/*-pine",
 		"value": {
 			satiety: 100, foodcategory: "Grain"
-		},
-		"file": "game:itemtypes/food/dough",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
-		"op": "add",
-		"path": "/attributes/nutritionPropsWhenInMealByType/*",
-		"value": {
-			satiety: 240, foodcategory: "Grain"
 		},
 		"file": "game:itemtypes/food/dough",
 		"side": "Server",
@@ -89,6 +72,22 @@
 		"path": "/1/ingredients/F/allowedVariants/-",
 		"value": "pine",
 		"file": "game:recipes/grid/dough",
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "move",
+		"frompath": "/attributes/nutritionPropsWhenInMealByType/*",
+		"path": "/temp",
+		"file": "game:itemtypes/food/dough",
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
+		"path": "/attributes/nutritionPropsWhenInMealByType/*",
+		"file": "game:itemtypes/food/dough",
 		"side": "Server",
 		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	}

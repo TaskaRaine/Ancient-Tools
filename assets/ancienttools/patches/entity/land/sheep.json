@@ -5,7 +5,7 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.2, var: 0 } 
+			quantity: { avg: 0.45, var: 0 } 
 		},
 		"file": "game:entities/land/sheep-bighorn-male",
 		"side": "Server"
@@ -16,7 +16,7 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.2, var: 0 } 
+			quantity: { avg: 0.45, var: 0 } 
 		},
 		"file": "game:entities/land/sheep-bighorn-female",
 		"side": "Server"
@@ -27,7 +27,7 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.1, var: 0 } 
+			quantity: { avg: 0.35, var: 0 } 
 		},
 		"file": "game:entities/land/sheep-bighorn-lamb",
 		"side": "Server"

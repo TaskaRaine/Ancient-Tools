@@ -1,0 +1,18 @@
+﻿[
+	{
+		"op": "replace",
+		"path": "/0/ingredients/0/quantity",
+		"value": 4,
+		"file": "recipes/barrel/tannin",
+		"side": "Server",
+		"condition": { "when": "BarkPerLog", "useValue": true }
+	},
+	{
+		"op": "replace",
+		"path": "/1/ingredients/0/quantity",
+		"value": 4,
+		"file": "recipes/barrel/tannin",
+		"side": "Server",
+		"condition": { "when": "BarkPerLog", "useValue": true }
+	}
+]

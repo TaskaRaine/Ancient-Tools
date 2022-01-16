@@ -119,7 +119,10 @@
     <None Include="assets\ancienttools\blocktypes\salvepot.json" />
     <None Include="assets\ancienttools\blocktypes\stretchingframe.json" />
     <None Include="assets\ancienttools\blocktypes\strippedlog.json" />
-    <None Include="assets\ancienttools\compatibility\carrycapacity\patches\barkbasket.json" />
+    <None Include="assets\ancienttools\patches\block\pot.json" />
+    <None Include="assets\ancienttools\patches\compatibility\carrycapacity\barkbasket.json" />
+    <None Include="assets\ancienttools\patches\compatibility\carrycapacity\hidewatersack.json" />
+    <None Include="assets\ancienttools\patches\compatibility\carrycapacity\salvepot.json" />
     <None Include="assets\ancienttools\config\handbook\guide.json" />
     <None Include="assets\ancienttools\config\handbook\salveguide.json" />
     <None Include="assets\ancienttools\config\handbook\tanningguide.json" />
@@ -131,6 +134,9 @@
     <None Include="assets\ancienttools\itemtypes\tools\pestle.json" />
     <None Include="assets\ancienttools\itemtypes\resources\salveportion.json" />
     <None Include="assets\ancienttools\patches\block\salve.json" />
+    <None Include="assets\ancienttools\patches\compatibility\lichen\deer.json" />
+    <None Include="assets\ancienttools\patches\compatibility\lichen\white-hart.json" />
+    <None Include="assets\ancienttools\patches\compatibility\medievalexpansion\auroch.json" />
     <None Include="assets\ancienttools\patches\config\remaps.json" />
     <None Include="assets\ancienttools\patches\entity\land\bear.json" />
     <None Include="assets\ancienttools\patches\entity\land\chicken.json" />
@@ -146,6 +152,9 @@
     <None Include="assets\ancienttools\patches\item\resources\bark.json" />
     <None Include="assets\ancienttools\patches\item\resources\hide.json" />
     <None Include="assets\ancienttools\patches\recipes\brainedhide.json" />
+    <None Include="assets\ancienttools\patches\recipes\tannin.json" />
+    <None Include="assets\ancienttools\recipes\barrel\tannin.json" />
+    <None Include="assets\game\patches\recipes\cooking\meatystew.json" />
     <None Include="assets\ancienttools\recipes\barrel\brainedhide.json" />
     <None Include="assets\ancienttools\recipes\barrel\brainingsolution.json" />
     <None Include="assets\ancienttools\recipes\grid\block\barkbasket.json" />
@@ -278,7 +287,7 @@
   <ItemGroup>
     <Folder Include="assets\ancienttools\shapes\entity\" />
     <Folder Include="assets\ancienttools\textures\item\food\flour\" />
-    <Folder Include="assets\game\patches\" />
+    <Folder Include="assets\game\recipes\" />
     <Folder Include="src\blockbehavior\" />
     <Folder Include="src\entities\" />
   </ItemGroup>
@@ -286,6 +295,7 @@
     <None Include="assets\ancienttools\blocktypes\mortar.json" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assets\ancienttools\patches\compatibility\lichen\gemsbok.json" />
     <Compile Include="src\blockentity\BEHideWaterSack.cs" />
     <Compile Include="src\blockentity\BEStretchingFrame.cs" />
     <Compile Include="src\blocks\HideWaterSack.cs" />

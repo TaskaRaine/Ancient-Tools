@@ -6,14 +6,25 @@
 	},
 	behaviorsByType: {
 		"*-raw-*": [
-			{ name: "UnstableFalling" }, 
-			{ name: "RightClickPickup" }
+			{ name: "UnstableFalling" },
 		],
 		"*-soaked-*": [
 			{ name: "UnstableFalling" }, 
 		]
 	},
 	creativeinventory: { "general": ["*"], "ancienttools": ["*"] },
+	attributesByType: {
+		"*-raw-*": {
+			handbook: {
+				groupBy: ["*-raw-*"]
+			},
+		},
+		"*-soaked-*": {
+			handbook: {
+				groupBy: ["*-soaked-*"]
+			},
+		}
+	},
 	variantgroups: [
 		{ code: "hide", states: ["raw", "soaked"] },
 		{ code: "size", states: ["huge", "large", "medium", "small"] }

@@ -4,8 +4,15 @@
 	attributes: {
 		handbook: {
 			groupBy: ["pestle-*"]
+		},
+		groundStorageTransform: {
+			"translation": { "y": -0.2, "z": 0.05 },
+			"rotation": { "x": 90 }
 		}
 	},
+	behaviors: [
+		{ "name": "GroundStorable", "properties": { "layout": "Halves" } }
+	],
 	variantgroups: [
         { code: "stone", states: ["granite", "andesite", "basalt", "peridotite"] }
     ],

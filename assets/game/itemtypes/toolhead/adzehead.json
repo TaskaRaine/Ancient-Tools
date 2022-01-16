@@ -4,8 +4,19 @@
 	attributes: {
 		handbook: {
 			groupBy: ["adzehead-*"]
+		},
+		groundStorageTransformByType: {
+			"@adzehead-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": {
+				"translation": { "z": 0.025 }
+			},
+			"@adzehead-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": {
+				"translation": { "z": 0.075 }
+			}
 		}
 	},
+	behaviors: [
+		{ "name": "GroundStorable", "properties": { "layout": "Quadrants" } }
+	],
 	variantgroups: [
         { code: "material", states: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron", "meteoriciron", "steel" ] },
     ],

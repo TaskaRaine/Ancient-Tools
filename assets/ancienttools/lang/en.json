@@ -206,6 +206,7 @@ Now, the final part! Take your smoked hide and, using a knife, carefully cut it 
 
 	"iteminfo-salve-heal": "Heals {0} health over {1} seconds when used.",
 	"iteminfo-brain": "Used for hide tanning. Place in a barrel with 10L of water to create braining solution.",
+	"iteminfo-brain-food": "Can also be used to cook stews.",
 
 	"item-adze-*-chert": "Chert Adze",
 	"item-adze-*-granite": "Granite Adze",
@@ -304,6 +305,12 @@ Now, the final part! Take your smoked hide and, using a knife, carefully cut it 
 	"game:item-hide-smoked-small": "Smoked Hide(Small)",
 
 	"item-brain": "Animal Brain",
+
+	"recipeingredient-item-brain": "brain",
+	"recipeingredient-item-brain-insturmentalcase": "brains",
+	"game:meal-ingredient-stew-primary-brain": "Brain",
+	"game:meal-ingredient-stew-secondary-brain": "Brain",
+
 	"item-brainingsolutionportion": "Braining Solution",
-	"game:incontainer-item-brainingsolutionportion": "Braining Solution"
+	"game:incontainer-item-brainingsolutionportion": "Braining Solution",
 }

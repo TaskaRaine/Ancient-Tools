@@ -11,6 +11,8 @@
 ### Releases
 
 #### Vintage Story 1.16.0+
+[Version 1.3.2](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.2/AncientTools_V1.3.2.zip)
+
 [Version 1.3.1](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.1/AncientTools_V1.3.1.zip)
 
 [Version 1.3.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.0/AncientTools_V1.3.0.zip)
@@ -38,6 +40,34 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.3.2
+--Brain Tanning
+Fixed an issue where the client/server interactions related to the stretching frame were causing some issues.
+
+Fixed an issue where the raw hide water sacks would reset their timer after being picked up, then placed again.
+
+Fixed an issue where the raw hide water sacks would reset their timer on world reload.
+
+Water sacks can now be picked up using Carry Capacity.
+
+Animal brain drop percentage has been increased by 25%. Decay timer is unchanged(this is to encourage preparing the braining solution in advance. It doesn't decay!)
+
+Aurochs from Medieval Expansion, deer and gemsbok from Lichen will all now drop brains if the mods are installed alongside Ancient Tools.
+
+Brains can now be used to create stews. Mmmmm brain food.
+
+--Other
+Some items are now ground storable. Namely, curing hooks, bark, pestles and adze heads.
+
+Fixed an issue where Carry Capacity patches were not being applied to blocks on first game load.
+
+Salve containers can now be picked up using Carry Capacity(contents will appear again when placed).
+
+Bark bread patches were modified to eliminate remove operations, replaced with move operations instead.
+
+Oak bark can now be used as a replacement for oak logs in tannin recipes. Amount of bark required is equivalent to the BarkPerLog value in the Ancient Tools config.
+
+All Ancient Tools blocks and items (should)now be properly grouped in the handbook.
 
 #### Version 1.3.1
 --Adze
