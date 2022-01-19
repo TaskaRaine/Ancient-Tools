@@ -11,6 +11,8 @@
 ### Releases
 
 #### Vintage Story 1.16.0+
+[Version 1.3.3](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.3/AncientTools_V1.3.3.zip)
+
 [Version 1.3.2](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.2/AncientTools_V1.3.2.zip)
 
 [Version 1.3.1](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.1/AncientTools_V1.3.1.zip)
@@ -40,6 +42,19 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.3.3
+Fixed a crash that occurred with the adze when it was used on blocks that do not have attributes.
+
+Added a hack-y compatibility patch that should make it possible for raw hides to be filled by right-clicking water, as intended, when Primitive Survival is also installed.
+
+Vanilla Variants buckets can now be used in the crafting recipe to create raw hide sacks.
+
+Made some modifications to the code that controls raw hide sack creation. They should now be made consistently when raw hide is interacted on water. Also, gave it a sound!
+
+Fixed an issue where bark basket recipes couldn't be navigated to by clicking the bark basket on the bark handbook page.
+
+Big thanks to Craluminum for pointing me in the right direction for several of these fixes.
+
 #### Version 1.3.2
 --Brain Tanning
 Fixed an issue where the client/server interactions related to the stretching frame were causing some issues.

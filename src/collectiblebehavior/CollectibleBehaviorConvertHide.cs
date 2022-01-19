@@ -16,19 +16,9 @@ namespace AncientTools.CollectibleBehaviors
             if (!(byEntity is EntityPlayer))
                 return;
 
-            Block interactedBlock;
+            EntityPlayer player = (EntityPlayer)byEntity;
 
-            //-- If a block is not selected, the method will use the block that is 3 blocks away in the players look direction to check for water pickup --//
-            if (blockSel == null)
-            {
-                EntityPos pos = byEntity.SidedPos.AheadCopy(3.0);
-
-                interactedBlock = byEntity.Api.World.BlockAccessor.GetBlock(pos.AsBlockPos);
-            }
-            else
-            {
-                interactedBlock = byEntity.Api.World.BlockAccessor.GetBlock(blockSel.Position.Copy().Offset(blockSel.Face));
-            }
+            Block interactedBlock = byEntity.Api.World.BlockAccessor.GetBlock(blockSel.Position);
 
             if (interactedBlock.BlockMaterial == EnumBlockMaterial.Liquid)
             {
@@ -41,6 +31,8 @@ namespace AncientTools.CollectibleBehaviors
 
                     if (!byEntity.TryGiveItemStack(hideWaterSack))
                         byEntity.Api.World.SpawnItemEntity(hideWaterSack, byEntity.Pos.AsBlockPos.ToVec3d(), null);
+
+                    byEntity.World.PlaySoundAt(new AssetLocation("game", "sounds/effect/water-fill2"), byEntity as Entity, player.Player, true, 12.0f, 0.75f);
 
                     handHandling = EnumHandHandling.PreventDefault;
                     return;

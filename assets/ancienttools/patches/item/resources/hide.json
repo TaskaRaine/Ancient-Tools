@@ -33,9 +33,16 @@
 	},
 	{
 		"op": "add",
+		"path": "/liquidSelectable",
+		"value": 1,
+		"file": "game:itemtypes/resource/hide",
+		"side": "Server"
+	},
+	{
+		"op": "add",
 		"path": "/attributes/inFirePitPropsByType",
 		"value": { 
-			"*-huge":
+			"*-brained-huge":
 			{
 				transform: {
 					scale: 0.4,
@@ -45,7 +52,7 @@
 				  },
 				  useFirepitModel: "Spit"
 			},
-			"*-large": 
+			"*-brained-large": 
 			{
 				transform: {
 					scale: 0.35,
@@ -55,7 +62,7 @@
 				  },
 				  useFirepitModel: "Spit"
 			},
-			"*-medium": 
+			"*-brained-medium": 
 			{
 				transform: {
 					scale: 0.3,
@@ -65,7 +72,7 @@
 				  },
 				  useFirepitModel: "Spit"
 			},
-			"*-small": 
+			"*-brained-small": 
 			{
 				transform: {
 					scale: 0.25,

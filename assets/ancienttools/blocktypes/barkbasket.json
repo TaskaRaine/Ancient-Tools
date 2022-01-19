@@ -41,7 +41,7 @@
 			{
 				tabs: [ "general", "decorative", "ancienttools" ],
 				stacks: [
-					{ type: "block", code: "barkbasket-{variant}-east", attributes: { type: "basket" } }
+					{ type: "block", code: "barkbasket-{variant}-east" }
 				]
 			}
 		]

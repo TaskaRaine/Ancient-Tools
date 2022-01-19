@@ -1,0 +1,17 @@
+﻿[
+	{
+		"op": "replace",
+		"path": "/0",
+		"value": {
+			"file": "game:itemtypes/resource/hide",
+			"op": "add",
+			"path": "/classByType",
+			"value": {
+				"*-pelt-*": "itemhide"
+			}
+		},
+		"file": "primitivesurvival:patches/hide",
+		"dependsOn": [{ "modid": "primitivesurvival" }],
+		"side": "Server"
+	}
+]

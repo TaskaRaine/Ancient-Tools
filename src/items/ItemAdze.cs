@@ -54,7 +54,10 @@ namespace AncientTools.Items
 
                 Block interactedBlock = api.World.BlockAccessor.GetBlock(blockSel.Position);
 
-                if (interactedBlock.Attributes["woodStrippable"].Exists)
+                if (interactedBlock.Attributes == null)
+                    return;
+
+                if (interactedBlock.Attributes["woodStrippable"].Exists && this.Attributes["strippingTimeModifier"].Exists)
                 {
                     canStripBark = true;
 

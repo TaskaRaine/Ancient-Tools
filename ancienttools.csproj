@@ -137,6 +137,8 @@
     <None Include="assets\ancienttools\patches\compatibility\lichen\deer.json" />
     <None Include="assets\ancienttools\patches\compatibility\lichen\white-hart.json" />
     <None Include="assets\ancienttools\patches\compatibility\medievalexpansion\auroch.json" />
+    <None Include="assets\ancienttools\patches\compatibility\primitivesurvival\hide.json" />
+    <None Include="assets\ancienttools\patches\compatibility\vanillavariants\hidewatersack.json" />
     <None Include="assets\ancienttools\patches\config\remaps.json" />
     <None Include="assets\ancienttools\patches\entity\land\bear.json" />
     <None Include="assets\ancienttools\patches\entity\land\chicken.json" />
@@ -154,6 +156,7 @@
     <None Include="assets\ancienttools\patches\recipes\brainedhide.json" />
     <None Include="assets\ancienttools\patches\recipes\tannin.json" />
     <None Include="assets\ancienttools\recipes\barrel\tannin.json" />
+    <None Include="assets\ancienttools\recipes\grid\compatibility\vanillavariants\hidewatersack.json" />
     <None Include="assets\game\patches\recipes\cooking\meatystew.json" />
     <None Include="assets\ancienttools\recipes\barrel\brainedhide.json" />
     <None Include="assets\ancienttools\recipes\barrel\brainingsolution.json" />
