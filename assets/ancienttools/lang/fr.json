@@ -1,0 +1,316 @@
+﻿{
+	"game:tabname-ancienttools": "Ancient Tools",
+
+	"game:ancienttools-quickstart-guide": "Ancient Tools",
+	"game:ancienttools-quickstart-title": "Guide de Ancient Tools",
+	"game:ancienttools-quickstart-text": 
+"<font weight='bold' align='center'>Guide de Ancient Tools</font><br>
+<font weight='bold'>Mortier et pilon</font>
+Le classique <a href=\'handbook://block-ancienttools:mortar-granite\'>mortier</a> et <a href=\'handbook://item-ancienttools:pestle-basalt\'>pilon</a>. Ces deux outils sont utilisés sous diverses formes depuis le paléolithique pour moudre ou écraser des substances comme des épices ou des céréales.
+
+Pour utiliser ces outils dans Vintage Story, vous devez d'abord les fabriquer. Placez le mortier sur le sol et insérez le pilon avec <icon name='rightmousebutton'></icon>. Insérez un objet à moudre avec <icon name='rightmousebutton'></icon> puis accroupissez-vous et gardez appuyé <icon name='rightmousebutton'></icon> pour commencer à moudre!
+
+<font weight='bold'>Herminette</font>
+Cette <a href=\'handbook://item-ancienttools:adze-copper\'>herminette</a>, introduite à l'ère néolithique, était un outil commun utilisé par les charpentiers pour donner des formes au bois, soit dans l'architecture soit pour des objets. La herminette implémentée dans le mod Ancient Tools permet d'enlever <a href=\'handbook://item-ancienttools:bark-oak\'>l'écorce</a> des arbres.  
+
+Pour fabriquer une herminette une <a href=\'handbooksearch://adze head\'>tête de herminette</a> doit d'abord être créée en <a href=\"handbook://craftinginfo-knapping\">taillant la pierre</a>, <a href=\"handbook://craftinginfo-smelting\">la fonte de métaux</a> ou <a href=\"handbook://craftinginfo-smithing\">le forgeage</a>. Fabriquez l'outil en combinant un bâton et la tête de herminette et vous pourrez facilement récupérer de l'écorce! Approchez d'un arbre avec la herminette dans votre main, accroupissez-vous et <icon name='rightmousebutton'></icon> pour commencer à arracher.
+
+La tête de herminette peut également être fabriquée à partir d'os pour un outil plus robuste!
+
+<a href=\'handbook://item-ancienttools:bark-oak\'>L'écorce d'arbre</a> que vous récupérez peut être utilisée à diverses fins. L'écorce fait un excellent allume-feu à la place du bois de chauffage. Elle peut être aussi tisée pour créer des petits <a href=\'handbooksearch://bark basket\'>paniers en écorce</a> pour y stocker des choses.
+
+<a href=\'handbook://item-ancienttools:bark-birch\'>L'écorce de bouleau</a> et <a href=\'handbook://item-ancienttools:bark-pine\'>l'écorce de pin</a> sont des ressources arboricoles spéciales car elles ont des propriétés uniques dont nous pouvons profiter avantageusement.
+
+La couche intérieure de l'écorce de ces arbres est comestible et peut être moulue en <a href=\'handbooksearch://flour\'>farine</a> puis cuisinée en <a href=\'handbooksearch://bread\'>pain</a>. C'était une tradition scandinave de la culture indigène Sami.
+
+Ces variétés d'écorce ont aussi des propriétés médicinales. Jetez un oeil au <a href=\"handbook://ancienttools-quickstart-guide-salve\">Guide de préparation des pommades</a> si vous êtes intéressés d'en savoir plus!
+
+<font weight='bold'>Râtelier de salaison</font>
+Préparer la viande avec du <a href=\'handbook://item-salt\'>sel</a> est une pratique ancienne de plusieurs siècles. Cela requiert un environnement contrôlé pour s'assurer que la viande ne pourisse pas avant la fin de la salaison. Un cellier est recommandé!
+
+Un <a href=\'handbooksearch://curing rack\'>râtelier de salaison</a> peut être équipé avec deux <a href=\'handbooksearch://curing hook\'>crochets</a> avec <icon name='rightmousebutton'></icon>. Pendez n'importe quelle variété de viande (<a href=\'handbook://item-ancienttools:saltedmeat-redmeat-raw\'>viande rouge</a>,<a href=\'handbook://item-ancienttools:saltedmeat-poultry-raw\'>volaille</a>,<a href=\'handbook://item-ancienttools:saltedmeat-bushmeat-raw\'>venaison</a>) et attendez jusqu'à ce que votre délicieuse viande soit parfaitement salée!
+
+Les viandes salées peuvent également être cuites sur un feu de camp pour un repas rapide.	
+
+<font weight='bold'>Tannage amérindien</font>
+
+Les cultures amérindiennes utilisaient une technique différente pour tanner les peaux animales que les colons européens pour fabriquer leur cuir.
+
+Le mod Ancient Tools implémente une version simplifiée de cette technique pour vous donner une alternative à la fabrication de cuir! Vous voulez essayer? Visitez le <a href=\"handbook://ancienttools-quickstart-guide-tanning\">Guide pour le tannage amérindien</a>.  
+",
+	"game:ancienttools-quickstart-guide-salve": "Guide de préparation des pommades",
+	"game:ancienttools-quickstart-title-salve": "Technique de fabrication: Préparation de pommades",
+	"game:ancienttools-quickstart-text-salve": "
+<font weight='bold' align='center'>Guide de préparation des pommades de Ancient Tools</font><br>
+L'écorce d'arbre a eu de nombreuses utilisations à travers l'Histoire. Beaucoup d'arbres, comme le <a href=\'handbooksearch://birch\'>bouleau</a> et le <a href=\'handbooksearch://pine\'>pin</a>, ont des propriétés de guérison. Le bouleau est souvent utilisé pour calmer les douleurs articulaires, tandis que le pin est utilisé pour réduire les inflammations.
+
+Les <a href=\'handbook://item-ancienttools:salveportion\'>pommades</a> sont parfois fabriquées par les colons puis appliquées sur la peau pour en avoir les effets. Pour créer une pommade dans Ancient Tools, vous devez d'abord convertir deux marmites en <a href=\'handbook://block-ancienttools:salvepot-empty\'>récipients de pommade vides</a>. Cela peut être fait en vous accroupissant et en appuyant sur <icon name='rightmousebutton'></icon> avec un ingrédient pour pommade comme de l'écorce de (<a href=\'handbook://item-ancienttools:bark-birch\'>bouleau</a>/<a href=\'handbook://item-ancienttools:bark-pine\'>pin</a>,de la <a href=\'handbook://item-fat\'>graisse animale</a>, de la <a href=\'handbook://item-beeswax\'>cire d'abeille</a>), ou en fabriquant directement une <a href=\'handbook://block-claypot-burned\'>marmite</a> et une écore médicinale dans la grille de fabrication.
+
+Placez les deux <a href=\'handbook://block-ancienttools:salvepot-empty\'>récipients vides</a> sur le sol. Remplissez-en un avec de <a href=\'handbook://item-ancienttools:bark-birch\'>l'écorce de bouleau</a> OU de <a href=\'handbook://item-ancienttools:bark-pine\'>l'écorce de pin</a> et de la <a href=\'handbook://item-fat\'>graisse</a>, et l'autre avec de la <a href=\'handbook://item-beeswax\'>cire d'abeille</a>. Réchauffez les deux dans un feu de camp pour les transformer dans leur version préparée. 
+
+Pour finir, placez un des récipients sur le sol et accroupissez-vous en gardant appuyé <icon name='rightmousebutton'></icon> avec l'autre récipient en main pour les mélanger. Félicitations, vous avez fabriqué une pommade guérissante! Cliquez <icon name='rightmousebutton'></icon> sur la pommade pour en extraire une <a href=\'handbook://item-ancienttools:salveportion\'>portion</a> qui vous guérira sur la durée une fois utilisée.
+
+Les récipients de pommade vides peuvent être reconvertis en marmites dans la grille de fabrication.
+	",
+	"game:ancienttools-quickstart-guide-tanning": "Guide pour le tannage amérindien",
+	"game:ancienttools-quickstart-title-tanning": "Technique de fabrication: Le tannage amérindien",
+	"game:ancienttools-quickstart-text-tanning": "
+<font weight='bold' align='center'>Guide pour le tannage amérindien</font><br>
+
+Attrapez la <a href=\'handbooksearch://raw hide\'>peau brute</a> la plus proche et démarrons tout de suite!
+
+Pour retirer les morceaux de chair restants plus facilement, les peaux étaient attachées sous forme de sacs remplis d'eau avec la chair à l'intérieur pour la ramollir. Pour faire cela, cliquez simplement <icon name='rightmousebutton'></icon> votre peau sur une source d'eau ou fabriquez un <a href=\'handbook://block-ancienttools:hidewatersack-raw-huge\'>sac</a> en utilisant un <a href=\'handbook://block-woodbucket\'>seau</a> rempli d'eau.
+
+Placez le sac sur le sol et attendez. Quand cela sera prêt, il deviendra un <a href=\'handbooksearch://soaked hide water sack\'>sac de peau trempé</a>.
+
+Pendant que vous attendez, vous pourriez utiliser ce temps libre pour fabriquer un <a href=\'handbooksearch://stretching frame\'>cadre d'étirement</a> pour la suite! Prenez la peau une fois prête et étirez-la sur le cadre.
+
+Utilisez un de ces bons vieux <a href=\'handbooksearch://knife\'>couteaux</a>, accroupissez-vous et commencez à raser les poils, la graisse et tous les autres matériaux indésirables de la peau en utilisant le clic <icon name='rightmousebutton'></icon>. 
+
+La prochaine étape peut paraître dégoûtante, mais est essentielle pour créer un cuir doux et souple. Nous devons fabriquer une 'solution cervicale' et y tremper notre peau. N'importe quel <a href=\'handbook://item-ancienttools:animalbrain\'>cerveau d'animal</a> fera l'affaire. Prenez le cerveau et combinez-le avec 10L d'eau dans un tonneau pour créer la solution.
+
+Maintenant, prenez la peau du cadre d'étirement et scellez-là dans le tonneau avec la solution cervicale que vous venez de fabriquer. Cela va prendre un certain temps.
+
+Une fois que la peau a été correctement <a href=\'handbook://item-hide-soaked-huge\'>trempée</a> dans la solution, l'étape suivante est de fumer la peau. Cela rends la peau résistante à l'eau et donne au cuir sa couleur iconique légèrement dorée. Pendez votre peau au-dessus d'un feu de camp et attendez jusqu'a ce qu'elle devienne une <a href=\'handbook://item-hide-smoked-huge\'>peau fumée</a>.
+
+Finalement, la dernière étape! Prenez votre peau fumée et, en utilisant un couteau, découpez-là délicatement en lanières de <a href=\'handbook://item-leather\'>cuir</a>. Cela se fait dans la grille de fabrication.
+	",
+	"blockhelp-place-pestle": "Placer le pilon",
+	"blockhelp-place-resource": "Placer une ressources à moudre",
+	"blockhelp-grind-mortar": "Moudre la ressource",
+
+	"blockhelp-place-curinghook": "Placer un crochet de salaison",
+	"blockhelp-place-saltedmeat": "Pendre la viande salée",
+	"blockhelp-take-curinghook": "Prendre le crochet de salaison",
+	"blockhelp-take-meat": "Prendre la viande",
+
+	"blockhelp-insert-healingbark": "Insérer l'écorce",
+	"blockhelp-insert-birchbark": "Insérer l'écorce de bouleau",
+	"blockhelp-insert-pinebark": "Insérer l'écorce de pin",
+	"blockhelp-insert-oil": "Insérer la graisse",
+	"blockhelp-insert-thickener": "Insérer la cire d'abeille",
+
+	"blockhelp-pour-barkoil": "Verser la cire d'abeille fondue dans l'huile d'écorce",
+	"blockhelp-pour-wax": "Verser l'huile d'écorce dans la cire d'abeille fondue",
+	"blockhelp-take-salveportion": "Prendre une portion de pommade",
+
+	"blockhelp-place-hide": "Placer la peau trempée",
+	"blockhelp-take-hide": "Prendre la peau",
+	"blockhelp-skin-hide": "Gratter la peau",
+	"blockhelp-take-hide-sack": "Prendre le sac de peau",
+
+	"blockinfo-curingrack-no-entity": "Quelque chose ne s'est pas déroulé correctement. Ce BlockEntity n'existe pas. Cassez le bloc et placez-le à nouveau.",
+	"blockinfo-curingrack-hook-missing": "Il manque un crochet de salaison",
+	"blockinfo-curingrack-meat-status": "- Salaison dans: {0} jours | Pourrit dans: {1} jours",
+	"blockinfo-curingrack-meat-perish": "Vitesse de décomposition de la viande entreposée: {0}x",
+
+	"blockinfo-salve-empty-fillwithbark": "Un récipient de pommade doit être rempli avec de l'écorce de bouleau/pin et de la graisse OU de la cire d'abeille.",
+	"blockinfo-salve-empty-crouch": "Accroupissez-vous et insérez un objet pour commencer.",
+	"blockinfo-salve-empty-partial": "Contient: ",
+	"blockinfo-salve-empty-bark": "{0}/{1} écorce",
+	"blockinfo-salve-empty-wax": "{0}/{1} cire d'abeille",
+	"blockinfo-salve-empty-fat": "{0}/{1} graisse animale",
+	"blockinfo-salve-mixwithoil": "Doit être mélangé avec de l'huile d'écorce pour créer une pommade guérissante.",
+	"blockinfo-salve-mixwithwax": "Doit être mélangé avec de la cire d'abeille fondue pour créer une pommade guérissante.",
+	"blockinfo-salve-filled-remaining": "{0} portions de pommade restantes.",
+
+	"game:handbook-crafting-title-strippedlog": "Fabriqué par",
+	"game:handbook-crafting-text-strippedlog": "Arrachez de l'écorce des buches en utilisant la herminette. De plus, une bûche écorcée vous sera rendue quand vous utilisez la herminette et une buche dans la grille de fabrication.",
+
+	"game:handbook-crafting-title-finishedsalve": "Fabriqué par",
+	"game:handbook-crafting-text-finishedsalve": "Mélangez un pot de <a href=\'handbook://block-ancienttools:salvepot-softwax\'>cire d'abeille fondue</a> avec un pot <a href=\'handbook://block-ancienttools:salvepot-barkoil\'>d'huile d'écorce</a> pour créer une pommade contenant plusieurs portions. Des portions de pommade peuvent être récupérées avec le clic <icon name='rightmousebutton'></icon>.",
+
+	"game:handbook-crafting-title-salveportion": "Fabriqué par",
+	"game:handbook-crafting-text-salveportion": "Mélangez un pot de <a href=\'handbook://block-ancienttools:salvepot-softwax\'>cire d'abeille fondue</a> avec un pot <a href=\'handbook://block-ancienttools:salvepot-barkoil\'>d'huile d'écorce</a> pour créer une pommade contenant plusieurs portions. Des portions de pommade peuvent être récupérées avec le clic <icon name='rightmousebutton'></icon>.",
+
+	"block-mortar-peridotite": "Mortier de peridotite",
+	"block-mortar-andesite": "Mortier d'andésite",
+	"block-mortar-granite": "Mortier de granite",
+	"block-mortar-basalt": "Mortier de basalte",
+
+	"block-curingrack-birch-*": "Râtelier de salaison en bouleau",
+	"block-curingrack-oak-*": "Râtelier de salaison en chêne",
+	"block-curingrack-maple-*": "Râtelier de salaison en érable",
+	"block-curingrack-pine-*": "Râtelier de salaison en pin",
+	"block-curingrack-acacia-*": "Râtelier de salaison en acacia",
+	"block-curingrack-kapok-*": "Râtelier de salaison en kapok",
+	"block-curingrack-baldcypress-*": "Râtelier de salaison en cyprès chauve",
+	"block-curingrack-larch-*": "Râtelier de salaison en mélèze",
+	"block-curingrack-redwood-*": "Râtelier de salaison en séquoia",
+	"block-curingrack-ebony-*": "Râtelier de salaison en ébène",
+	"block-curingrack-walnut-*": "Râtelier de salaison en noyer",
+	"block-curingrack-purpleheart-*": "Râtelier de salaison en amarante",
+	"block-curingrack-aged-*": "Râtelier de salaison en bois vieilli",
+
+	"block-strippedlog-birch-*": "Bûche de bouleau écorcée",
+	"block-strippedlog-oak-*": "Bûche de chêne écorcée",
+	"block-strippedlog-maple-*": "Bûche d'érable écorcée",
+	"block-strippedlog-pine-*": "Bûche de pin écorcée",
+	"block-strippedlog-acacia-*": "Bûche d'acacia écorcée",
+	"block-strippedlog-kapok-*": "Bûche de kapok écorcée",
+	"block-strippedlog-baldcypress-*": "Bûche de cyprès chauve écorcée",
+	"block-strippedlog-larch-*": "Bûche de mélèze écorcée",
+	"block-strippedlog-redwood-*": "Bûche de séquoia écorcée",
+	"block-strippedlog-ebony-*": "Bûche d'ébène écorcée",
+	"block-strippedlog-walnut-*": "Bûche de noyer écorcée",
+	"block-strippedlog-purpleheart-*": "Bûche d'amarante écorcée",
+	"block-strippedlog-aged-*": "Bûche de bois vieilli écorcée",
+
+	"block-*-barkbasket-birch-*": "Panier d'écorce en bouleau",
+	"block-*-barkbasket-oak-*": "Panier d'écorce en chêne",
+	"block-*-barkbasket-maple-*": "Panier d'écorce en érable",
+	"block-*-barkbasket-pine-*": "Panier d'écorce en pin",
+	"block-*-barkbasket-acacia-*": "Panier d'écorce en acacia",
+	"block-*-barkbasket-kapok-*": "Panier d'écorce en kapok",
+	"block-*-barkbasket-baldcypress-*": "Panier d'écorce en cyprès chauve",
+	"block-*-barkbasket-larch-*": "Panier d'écorce en mélèze",
+	"block-*-barkbasket-redwood-*": "Panier d'écorce en séquoia",
+	"block-*-barkbasket-ebony-*": "Panier d'écorce en ébène",
+	"block-*-barkbasket-walnut-*": "Panier d'écorce en noyer",
+	"block-*-barkbasket-purpleheart-*": "Panier d'écorce en amarante",
+	"block-*-barkbasket-aged-*": "Panier d'écorce en bois vieilli",
+
+	"block-salvepot-empty": "Récipient pour pommade (Vide)",
+	"block-salvepot-birch": "Pommade non-préparée (écorce de bouleau/graisse)",
+	"block-salvepot-pine": "Pommade non-préparée (écorce de pin/graisse)",
+	"block-salvepot-barkoil": "Préparation de pommade (huile d'écorce)",
+	"block-salvepot-hardwax": "Épaississant de pommade durcie (cire d'abeille)",
+	"block-salvepot-softwax": "Épaississant de pommade fondu (cire d'abeille)",
+	"block-salvepot-finishedsalve": "Pommade d'écorce guérissante",
+
+	"block-stretchingframe-birch-*": "Cadre d'étirement en bouleau",
+	"block-stretchingframe-oak-*": "Cadre d'étirement en chêne",
+	"block-stretchingframe-maple-*": "Cadre d'étirement en érable",
+	"block-stretchingframe-pine-*": "Cadre d'étirement en pin",
+	"block-stretchingframe-acacia-*": "Cadre d'étirement en acacia",
+	"block-stretchingframe-kapok-*": "Cadre d'étirement en kapok",
+	"block-stretchingframe-baldcypress-*": "Cadre d'étirement en cyprès chauve",
+	"block-stretchingframe-larch-*": "Cadre d'étirement en mélèze",
+	"block-stretchingframe-redwood-*": "Cadre d'étirement en séquoia",
+	"block-stretchingframe-ebony-*": "Cadre d'étirement en ébène",
+	"block-stretchingframe-walnut-*": "Cadre d'étirement en noyer",
+	"block-stretchingframe-purpleheart-*": "Cadre d'étirement en amarante",
+	"block-stretchingframe-aged-*": "Cadre d'étirement en bois vieilli",
+
+	"block-hidewatersack-raw-huge": "Sac d'eau de peau énorme brute",
+	"block-hidewatersack-raw-large": "Sac d'eau de peau grande brute",
+	"block-hidewatersack-raw-medium": "Sac d'eau de peau moyenne brute",
+	"block-hidewatersack-raw-small": "Sac d'eau de peau petite brute",
+	"block-hidewatersack-soaked-huge": "Sac d'eau de peau énorme trempée",
+	"block-hidewatersack-soaked-large": "Sac d'eau de peau grande trempée",
+	"block-hidewatersack-soaked-medium": "Sac d'eau de peau moyenne trempée",
+	"block-hidewatersack-soaked-small": "Sac d'eau de peau petite trempée",
+
+	"itemhelp-adze-stripbark": "Écorce arrachée",
+	"itemhelp-heal": "Guérir",
+
+	"iteminfo-salve-heal": "Guérit {0} de santé pendant {1} secondes quand utilisé.",
+	"iteminfo-brain": "Utilisé pour le tannage du cuir. Placez-le dans un tonneau avec 10L d'eau pour créer une solution cervicale.",
+	"iteminfo-brain-food": "Peut aussi être cuisiné dans les potages.",
+
+	"item-adze-*-chert": "Herminette en chert",
+	"item-adze-*-granite": "Herminette en granite",
+	"item-adze-*-andesite": "Herminette en andésite",
+	"item-adze-*-basalt": "Herminette en basalte",
+	"item-adze-*-obsidian": "Herminette en obsidienne",
+	"item-adze-*-peridotite": "Herminette en péridotite",
+	"item-adze-*-flint": "Herminette en silex",
+	"item-adze-*-copper": "Herminette en cuivre",
+	"item-adze-*-tinbronze": "Herminette en bronze-étain",
+	"item-adze-*-bismuthbronze": "Herminette en bronze-bismuth",
+	"item-adze-*-blackbronze": "Herminette en bronze noir",
+	"item-adze-*-gold": "Herminette en or",
+	"item-adze-*-silver": "Herminette en argent",
+	"item-adze-*-iron": "Herminette en fer",
+	"item-adze-*-meteoriciron": "Herminette en fer météoritique",
+	"item-adze-*-steel": "Herminette en acier",
+
+	"itemdesc-saltedmeat-cure-x-days": "Quand suspendu: salaison dans {0} jours.",
+
+	"blockdesc-hidewatersack-soak-x-hours-when-placed": "Quand placé: trempée dans {0} heures.",
+	"blockdesc-hidewatersack-soak-x-hours": "Complètement trempée dans {0} heures.",
+
+	"item-pestle-peridotite": "Pilon en péridotite",
+	"item-pestle-andesite": "Pilon en andésite",
+	"item-pestle-granite": "Pilon en granite",
+	"item-pestle-basalt": "Pilon en basalte",
+
+	"item-curinghook-bone": "Crochet de salaison",
+
+	"item-saltedmeat-poultry-raw": "Volaille salée crue",
+	"item-saltedmeat-bushmeat-raw": "Venaison salée crue",
+	"item-saltedmeat-redmeat-raw": "Viande rouge salée crue",
+	"item-saltedmeat-poultry-cooked": "Volaille salée cuite",
+	"item-saltedmeat-bushmeat-cooked": "Venaison salée cuite",
+	"item-saltedmeat-redmeat-cooked": "Viande rouge salée cuite",
+
+	"game:item-adzehead-chert": "Tête de herminette en chert",
+	"game:item-adzehead-granite": "Tête de herminette en granite",
+	"game:item-adzehead-andesite": "Tête de herminette en andésite",
+	"game:item-adzehead-basalt": "Tête de herminette en basalte",
+	"game:item-adzehead-obsidian": "Tête de herminette en obsidienne",
+	"game:item-adzehead-peridotite": "Tête de herminette en péridotite",
+	"game:item-adzehead-flint": "Tête de herminette en silex",
+	"game:item-adzehead-copper": "Tête de herminette en cuivre",
+	"game:item-adzehead-tinbronze": "Tête de herminette en bronze-étain",
+	"game:item-adzehead-bismuthbronze": "Tête de herminette en bronze-bismuth",
+	"game:item-adzehead-blackbronze": "Tête de herminette en bronze noir",
+	"game:item-adzehead-gold": "Tête de herminette en or",
+	"game:item-adzehead-silver": "Tête de herminette en argent",
+	"game:item-adzehead-iron": "Tête de herminette en fer",
+	"game:item-adzehead-meteoriciron": "Tête de herminette en fer météoritique",
+	"game:item-adzehead-steel": "Tête de herminette en acier",
+
+	"game:block-toolmold-raw-adze": "Moule de tête de herminette brut",
+	"game:block-toolmold-burned-adze": "Moule de tête de herminette",
+
+	"item-bark-birch": "Écorce de bouleau",
+	"item-bark-oak": "Écorce de chêne",
+	"item-bark-maple": "Écorce d'érable",
+	"item-bark-pine": "Écorce de pin",
+	"item-bark-acacia": "Écorce d'acacia",
+	"item-bark-kapok": "Écorce de kapok",
+	"item-bark-baldcypress": "Écorce de cyprès chauve",
+	"item-bark-larch": "Écorce de mélèze",
+	"item-bark-redwood": "Écorce de séquoia",
+	"item-bark-ebony": "Écorce d'ébène",
+	"item-bark-walnut": "Écorce de noyer",
+	"item-bark-purpleheart": "Écorce d'amarante",
+	"item-bark-aged": "Écorce de bois vieilli",
+
+	"game:item-flour-birch": "Farine de bouleau",
+	"game:item-flour-pine": "Farine de pin",
+
+	"game:item-dough-birch": "Pâte d'écorce de bouleau",
+	"game:item-dough-pine": "Pâte d'écorce de pin",
+
+	"game:item-bread-birch-partbaked": "Pain d'écorce de bouleau(à moitié cuit)",
+	"game:item-bread-pine-partbaked": "Pain d'écorce de pin(à moitié cuit)",
+
+	"game:item-bread-birch-perfect": "Pain d'écorce de bouleau",
+	"game:item-bread-pine-perfect": "Pain d'écorce de pin",
+
+	"game:item-bread-birch-charred": "Pain d'écorce de bouleau(carbonisé)",
+	"game:item-bread-pine-charred": "Pain d'écorce de pin(carbonisé)",
+
+	"item-salveportion": "Portion de pommade guérissante",
+
+	"game:item-hide-brained-huge": "Peau traitée à la solution cervicale (énorme)",
+	"game:item-hide-brained-large": "Peau traitée à la solution cervicale (grande)",
+	"game:item-hide-brained-medium": "Peau traitée à la solution cervicale (moyenne)",
+	"game:item-hide-brained-small": "Peau traitée à la solution cervicale (petite)",
+	"game:item-hide-smoked-huge": "Peau fumée (énorme)",
+	"game:item-hide-smoked-large": "Peau fumée (grande)",
+	"game:item-hide-smoked-medium": "Peau fumée (moyenne)",
+	"game:item-hide-smoked-small": "Peau fumée (petite)",
+
+	"item-brain": "Cerveau animal",
+
+	"recipeingredient-item-brain": "cerveau",
+	"recipeingredient-item-brain-insturmentalcase": "cerveaux",
+	"game:meal-ingredient-stew-primary-brain": "Cerveau",
+	"game:meal-ingredient-stew-secondary-brain": "Cerveau",
+
+	"item-brainingsolutionportion": "Solution cervicale",
+	"game:incontainer-item-brainingsolutionportion": "Solution cervicale",
+}

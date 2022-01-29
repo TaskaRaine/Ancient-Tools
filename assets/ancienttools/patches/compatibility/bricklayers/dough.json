@@ -1,0 +1,11 @@
+﻿[
+	{
+		"op": "replace",
+		"path": "/0/enabled",
+		"value": "true",
+		"file": "recipes/grid/compatibility/bricklayers/dough",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" },
+		"side": "Server"
+	}
+]

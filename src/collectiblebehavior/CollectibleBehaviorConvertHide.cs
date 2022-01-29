@@ -13,7 +13,7 @@ namespace AncientTools.CollectibleBehaviors
         }
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling, ref EnumHandling handling)
         {
-            if (!(byEntity is EntityPlayer))
+            if (!(byEntity is EntityPlayer) || blockSel == null)
                 return;
 
             EntityPlayer player = (EntityPlayer)byEntity;

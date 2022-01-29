@@ -1,0 +1,11 @@
+﻿[
+	{
+		"op": "replace",
+		"path": "/0/enabled",
+		"value": "true",
+		"file": "recipes/grid/compatibility/vanillavariants/dough",
+		"dependsOn": [{ "modid": "vanvar" }],
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" },
+		"side": "Server"
+	}
+]

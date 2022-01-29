@@ -1,7 +1,31 @@
 ﻿[
 	{
 		"op": "replace",
-		"path": "/sealHours",
+		"path": "/0/sealHours",
+		"value": 48.0,
+		"file": "recipes/barrel/brainedhide",
+		"side": "Server",
+		"condition": { "when": "BrainedHideSealHours", "useValue": true }
+	},
+	{
+		"op": "replace",
+		"path": "/1/sealHours",
+		"value": 48.0,
+		"file": "recipes/barrel/brainedhide",
+		"side": "Server",
+		"condition": { "when": "BrainedHideSealHours", "useValue": true }
+	},
+	{
+		"op": "replace",
+		"path": "/2/sealHours",
+		"value": 48.0,
+		"file": "recipes/barrel/brainedhide",
+		"side": "Server",
+		"condition": { "when": "BrainedHideSealHours", "useValue": true }
+	},
+	{
+		"op": "replace",
+		"path": "/3/sealHours",
 		"value": 48.0,
 		"file": "recipes/barrel/brainedhide",
 		"side": "Server",

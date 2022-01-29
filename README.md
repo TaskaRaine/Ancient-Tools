@@ -11,7 +11,9 @@
 ### Releases
 
 #### Vintage Story 1.16.0+
-[Version 1.3.3](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.3/AncientTools_V1.3.3.zip)
+[Version 1.3.5](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.3/AncientTools_V1.3.5.zip)
+
+[Version 1.3.4](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.3/AncientTools_V1.3.4.zip)
 
 [Version 1.3.2](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.2/AncientTools_V1.3.2.zip)
 
@@ -42,7 +44,18 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
-#### Version 1.3.3
+#### Version 1.3.5
+The mod can now be enjoyed in French, courtesy of a translation offered by Cendar!
+
+Implemented compatibilty for Vanilla Variants buckets to be usable in bark dough recipes.
+
+Implemented compatibility for Bricklayers bowls to be usable in bark dough recipes.
+
+Brained hide barrel recipes don't all take 10L of braining solution now. Instead, huge takes 10, large takes 6, medium takes 4, and small takes 2.
+
+#### Version 1.3.4
+Fixed a crash that occurred when interacting with the hides against nothing.
+
 Fixed a crash that occurred with the adze when it was used on blocks that do not have attributes.
 
 Added a hack-y compatibility patch that should make it possible for raw hides to be filled by right-clicking water, as intended, when Primitive Survival is also installed.
