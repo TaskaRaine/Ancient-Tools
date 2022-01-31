@@ -1,0 +1,316 @@
+{
+	"game:tabname-ancienttools": "古代の道具",
+
+	"game:ancienttools-quickstart-guide": "古代の道具",
+	"game:ancienttools-quickstart-title": "古代の道具ガイド",
+	"game:ancienttools-quickstart-text": 
+"<font weight='bold' align='center'>古代の道具ガイド</font><br>
+<font weight='bold'>すり鉢とすりこ木</font>
+定番の<a href=\'handbook://block-ancienttools:mortar-granite\'>すり鉢</a>と<a href=\'handbook://item-ancienttools:pestle-basalt\'>すりこ木</a>。この2つの道具は、旧石器時代から何らかの形で使われており、スパイスや麦などの物質を挽くのに使われてきました。
+
+Vintage Storyでこれらのアイテムを使用するには、まずそれぞれを作成する必要があります。 すり鉢を地面に置き、<icon name='rightmousebutton'></icon>ですりこ木を差し込み、<icon name='rightmousebutton'></icon>で粉砕可能なアイテムを投入し、しゃがんで<icon name='rightmousebutton'></icon>を押し続けると、粉砕が始まります。
+
+<font weight='bold'>釿（ちょうな）</font>
+新石器時代に登場したこの<a href=\'handbooksearch://釿\'>釿</a>は、古代の大工が木材を様々なオブジェや建築物に成形する為によく使われた道具です。 現在の古代の道具modでは、釿は<a href=\'handbook://item-ancienttools:bark-oak\'>樹皮</a>を木から剥ぐ為に使用されています。  
+
+釿を作るには、まず<a href=\'handbooksearch://釿頭\'>釿の頭</a>を石の<a href=\"handbook://craftinginfo-knapping\">ナッピング</a>、<a href=\"handbook://craftinginfo-smelting\">製錬</a>、<a href=\"handbook://craftinginfo-smithing\">鍛治</a>のいずれかの方法で作らなければなりません。出来上がった釿の頭を棒で削れば、樹皮を集めるための便利な道具になります。！釿を手に近い木に近付き、しゃがんで<icon name='rightmousebutton'></icon>を押すと、剥ぎ取ります。
+
+石の釿の頭は、骨と一緒に加工することで、より頑丈な道具になります！
+
+集めた<a href=\'handbook://item-ancienttools:bark-oak\'>樹皮</a>は、様々な用途に使うことが出来ます。薪の代わりに焚き火の火種になります。また、樹皮を編んで、かわいい<a href=\'handbooksearch://樹皮バスケット\'>樹皮バスケット</a>を作ったり、物を入れたりすることも出来ます。
+
+<a　href=\'handbook：//item-ancienttools：bark-birch\'>シラカバの樹皮</a>や<a　href=\'handbook：//item-ancienttools：bark-pine\'>マツの樹皮</a>は、樹木の中でも特殊な性質を持つ資源であり、それを活用することが出来ます。 
+
+どちらの樹木も樹皮の内側は食べられるので、<a href=\'handbooksearch://粉\'>粉</a>にして焼くと<a href=\'handbooksearch://パン\'>パン</a>になります。これはスカンジナビアの先住民族サーミの文化です。 
+
+また、どちらの樹皮も様々な薬効があります。もし興味があれば、<a href=\"handbook://ancienttools-quickstart-guide-salve\">膏薬の調合ガイド</a>をご覧下さい。
+
+<font weight='bold'>熟成棚</font>
+<a href=\'handbook://item-salt\'>塩</a>を使った肉の熟成は、何世紀にも渡って行われてきた保存方法です。 その為には、肉を熟成させる前に、肉が腐らないように注意深く管理された環境が必要です。地下室がおすすめです！
+
+<a href=\'handbooksearch://熟成棚\'>熟成棚</a>は、<icon name='rightmousebutton'></icon>で<a href=\'handbooksearch://フック\'>熟成フック</a>を2つ設置出来ます。 塩漬けされた肉(<a href=\'handbook://item-ancienttools:saltedmeat-redmeat-raw\'>レッドミート</a>、<a href=\'handbook://item-ancienttools:saltedmeat-poultry-raw\'>鶏肉</a>、<a href=\'handbook://item-ancienttools:saltedmeat-bushmeat-raw\'>ブッシュミート</a>)はもちろん、どんな肉でも吊るすことが出来ます！！
+
+塩漬け肉も焚き火台で焼けば、手軽な食事になります。
+
+<font weight='bold'>ネイティブアメリカンのなめし革</font>
+
+アメリカ先住民の文化は、動物の皮をなめすのに、植民地時代のヨーロッパ人とは異なる技術を使って、彼らの象徴である革製品を作りました。
+
+古代の道具では、この技法を簡略化して実装し、レザークラフトの別の手段を提供しています。試してみたいですか？<a href=\"handbook://ancienttools-quickstart-guide-tanning\">ネイティブアメリカンのなめし革ガイド</a>をご覧下さい。 
+",
+	"game:ancienttools-quickstart-guide-salve": "膏薬（こうやく）ガイド",
+	"game:ancienttools-quickstart-title-salve": "クラフトメカニック：膏薬（こうやく）の調合",
+	"game:ancienttools-quickstart-text-salve": "
+<font weight='bold' align='center'>古代の道具の膏薬の調合ガイド</font><br>
+樹皮は歴史上、様々な用途使われてきました。<a href=\'handbooksearch://シラカバ\'>シラカバ</a>や<a href=\'handbooksearch://マツ\'>マツ</a>など、の多くの木には様々な有益な治癒効果があります。 シラカバは関節の痛みを和らげる為に、マツは炎症を軽減する為に最も一般的に使用されてます。
+
+この特性を活かす為に、各家庭では<a href=\'handbook://item-ancienttools:salveportion\'>膏薬</a>作り、肌に塗ることもあります。古代の道具で膏薬を作るには、まず、2つの調理鍋を<a href=\'handbook://block-ancienttools:salvepot-empty\'>空の膏薬容器</a>に変換する必要があります。これは、しゃがんで膏薬成分(<a href=\'handbook://item-ancienttools:bark-birch\'>シラカバ</a>/<a href=\'handbook://item-ancienttools:bark-pine\'>マツ</a>の樹皮, <a href=\'handbook://item-fat\'>脂の塊</a>、<a href=\'handbook://item-beeswax\'>蜜蝋</a>)を<icon name='rightmousebutton'></icon>を押すか、グリッドで薬用樹皮を使った<a href=\'handbook://block-claypot-burned\'>調理鍋</a>をクラフトすることで行えます。
+
+両方の<a href=\'handbook://block-ancienttools:空の膏薬容器\'>空の膏薬容器</a>を地面に置きます。 一方に<a href=\'handbook://item-ancienttools:bark-birch\'>シラカバ</a>や<a href=\'handbook://item-ancienttools:bark-pine\'>マツ</a>の樹皮と<a href=\'handbook://item-fat\'>脂の塊</a>を、もう一方に<a href=\'handbook://item-beeswax\'>蜜蝋</a>を入れます。 両方とも焚き火で加熱して、調合したものに変えます。
+
+最後に、用意した容器をしゃがんで地面に置き、もう一方の容器を手に持って<icon name='rightmousebutton'></icon>で注ぎます。おめでとうございます！治療膏薬の出来上がりです！出来上がった膏薬は<icon name='rightmousebutton'></icon>で使用すると時間経過と共に回復する<a href=\'handbook://item-ancienttools:salveportion\'>ポーション</a>です。
+
+空の膏薬容器をクラフトグリッドに置くと、再び調理鍋に戻すことが出来ます。
+	",
+	"game:ancienttools-quickstart-guide-tanning": "ネイティブアメリカンのなめし革ガイド",
+	"game:ancienttools-quickstart-title-tanning": "クラフトメカニック: ネイティブアメリカンのなめし革",
+	"game:ancienttools-quickstart-text-tanning": "
+<font weight='bold' align='center'>ネイティブアメリカンのなめし革ガイド</font><br>
+
+早速、お近くの<a href=\'handbooksearch://未加工の皮\'>生皮</a>を手に取ってみて下さい。
+
+不要な肉を取り除きやすくする為、皮は肉面を内側にして袋状に縛り、水を入れて肉を柔らかくします。水源で皮を<icon name='rightmousebutton'></icon>するか、水を張った<a href=\'handbook://block-woodbucket\'>バケツ</a>で、<a href=\'handbook://block-ancienttools:hidewatersack-raw-huge\'>袋</a>を作ります。 
+
+袋をどこか地面に置いて待ちます。出来上がると、<a href=\'handbooksearch://浸した皮の水袋\'>浸した皮の水袋</a>になります。
+
+待っている間に、<a href=\'handbooksearch://ストレッチフレーム\'>ストレッチフレーム</a>を工作して準備しておくと便利です。準備が出来たら皮を持って、フレームに伸ばします。
+
+信頼出来る<a href=\'handbooksearch://ナイフ\'>ナイフ</a>を使い、しゃがんで<icon name='rightmousebutton'></icon>で、皮の毛や脂肪など不要な物を削り落とします。 
+
+次のステップは嫌感じがするかもしれませんが、柔らかくてしなやかな革を作るために欠かせないものです。皮革を浸す為の「脳溶液」を作る必要があります。<a href=\'handbook://item-ancienttools:brain\'>動物の脳</a>なら何でも構いません。脳と樽内の10Lの水を一緒にして溶液を作ります。 
+
+さて、ストレッチフレームから皮を取り出し、先程作った脳溶液の樽に入れ、密封します。これには少し時間が掛かります。
+
+皮革に溶液を十分に<a href=\'handbook://item-hide-soaked-huge\'>染み込ませたら</a>、次は燻製にすることです。こうすることで、皮は水に強くなり、革の象徴である黄金色が生まれます。皮革を火に掛けて、<a href=\'handbook://item-hide-smoked-huge\'>燻された皮革</a>になるのを待ちます。
+
+さて、いよいよ最終段階です。燻製した皮をナイフで丁寧に<a href=\'handbook://item-leather-plain\'>短冊状</a>にカットしていきます。この作業は、クラフトグリッドで行います。
+	",
+	"blockhelp-place-pestle": "すりこ木を配置します",
+	"blockhelp-place-resource": "粉砕可能なリソースを配置する",
+	"blockhelp-grind-mortar": "粉砕リソース",
+
+	"blockhelp-place-curinghook": "熟成フックを配置します",
+	"blockhelp-place-saltedmeat": "塩漬け肉を吊るす",
+	"blockhelp-take-curinghook": "熟成フックを取る",
+	"blockhelp-take-meat": "肉を取る",
+
+	"blockhelp-insert-healingbark": "樹皮を入れる",
+	"blockhelp-insert-birchbark": "シラカバの樹皮を入れる",
+	"blockhelp-insert-pinebark": "マツの樹皮を入れる",
+	"blockhelp-insert-oil": "脂肪を入れる",
+	"blockhelp-insert-thickener": "蜜蝋を入れる",
+
+	"blockhelp-pour-barkoil": "溶けたワックスを樹皮油に注ぎます",
+	"blockhelp-pour-wax": "溶けたワックスに樹皮油を注ぎます",
+	"blockhelp-take-salveportion": "膏薬ポーションを取る",
+
+	"blockhelp-place-hide": "浸した皮を置く",
+	"blockhelp-take-hide": "皮を取る",
+	"blockhelp-skin-hide": "削られた皮",
+	"blockhelp-take-hide-sack": "皮袋を取る",
+
+	"blockinfo-curingrack-no-entity": "このブロックで問題が発生しました。 ブロックエンティティは存在しません。ブロックを壊して、もう一度置いて下さい。",
+	"blockinfo-curingrack-hook-missing": "熟成フックがありません",
+	"blockinfo-curingrack-meat-status": "- 熟成まで: {0} 日 | 腐敗まで: {1} 日",
+	"blockinfo-curingrack-meat-perish": "貯蔵肉の腐敗速度: {0}x",
+
+	"blockinfo-salve-empty-fillwithbark": "膏薬の容器には、シラカバ/マツの樹皮と脂肪または蜜蝋を入れる必要があります。",
+	"blockinfo-salve-empty-crouch": "しゃがんでアイテムを入れると開始します。",
+	"blockinfo-salve-empty-partial": "含有: ",
+	"blockinfo-salve-empty-bark": "{0}/{1} 樹皮",
+	"blockinfo-salve-empty-wax": "{0}/{1} 蜜蝋",
+	"blockinfo-salve-empty-fat": "{0}/{1} 脂肪",
+	"blockinfo-salve-mixwithoil": "治療膏薬を作るには、樹皮油と混ぜる必要があります。",
+	"blockinfo-salve-mixwithwax": "治療膏薬を作るには、液体ワックスと混ぜる必要があります。",
+	"blockinfo-salve-filled-remaining": "残りの膏薬ポーション。",
+
+	"game:handbook-crafting-title-strippedlog": "作成者：",
+	"game:handbook-crafting-text-strippedlog": "丸太から釿で丸太を剥ぎ取ります。また、クラフトグリッドの丸太で釿を使用すると、剥がれた丸太が返却されます。",
+
+	"game:handbook-crafting-title-finishedsalve": "作成者：",
+	"game:handbook-crafting-text-finishedsalve": "<a href=\'handbook://block-ancienttools:salvepot-softwax\'>溶けたワックス</a>のポットと<a href=\'handbook://block-ancienttools:salvepot-barkoil\'>準備された樹皮油</a>のポットと混ぜ合わせ、複数のポーションを含む軟膏を作成します。<icon name='rightmousebutton'></icon>で、この軟膏から一部を取り出すことが出来ます。",
+
+	"game:handbook-crafting-title-salveportion": "作成者：",
+	"game:handbook-crafting-text-salveportion": "<a href=\'handbook://block-ancienttools:salvepot-softwax\'>溶けたワックス</a>のポットと<a href=\'handbook://block-ancienttools:salvepot-barkoil\'>準備された樹皮油</a>のポットと混ぜ合わせ、複数のポーションを含む軟膏を作成します。<icon name='rightmousebutton'></icon>で、この軟膏から一部を取り出すことが出来ます。",
+
+	"block-mortar-peridotite": "かんらん岩すり鉢",
+	"block-mortar-andesite": "安山岩すり鉢",
+	"block-mortar-granite": "花崗岩すり鉢",
+	"block-mortar-basalt": "玄武岩すり鉢",
+
+	"block-curingrack-birch-*": "シラカバの熟成棚",
+	"block-curingrack-oak-*": "オークの熟成棚",
+	"block-curingrack-maple-*": "カエデの熟成棚",
+	"block-curingrack-pine-*": "マツの熟成棚",
+	"block-curingrack-acacia-*": "アカシアの熟成棚",
+	"block-curingrack-kapok-*": "カポックの熟成棚",
+	"block-curingrack-baldcypress-*": "ヌマスギの熟成棚",
+	"block-curingrack-larch-*": "カラマツの熟成棚",
+	"block-curingrack-redwood-*": "レッドウッドの熟成棚",
+	"block-curingrack-ebony-*": "コクタンの熟成棚",
+	"block-curingrack-walnut-*": "クルミの熟成棚",
+	"block-curingrack-purpleheart-*": "パープルハートの熟成棚",
+	"block-curingrack-aged-*": "古びた熟成棚",
+
+	"block-strippedlog-birch-*": "剥ぎ取られたシラカバの丸太",
+	"block-strippedlog-oak-*": "剥ぎ取られたオークの丸太",
+	"block-strippedlog-maple-*": "剥ぎ取られたカエデの丸太",
+	"block-strippedlog-pine-*": "剥ぎ取られたマツの丸太",
+	"block-strippedlog-acacia-*": "剥ぎ取られたアカシアの丸太",
+	"block-strippedlog-kapok-*": "剥ぎ取られたカポックの丸太",
+	"block-strippedlog-baldcypress-*": "剥ぎ取られたヌマスギの丸太",
+	"block-strippedlog-larch-*": "剥ぎ取られたカラマツの丸太",
+	"block-strippedlog-redwood-*": "剥ぎ取られたレッドウッドのマルタ",
+	"block-strippedlog-ebony-*": "剥ぎ取られたコクタンの丸太",
+	"block-strippedlog-walnut-*": "剥ぎ取られたクルミの木材",
+	"block-strippedlog-purpleheart-*": "剥ぎ取られたパープルハートの木材",
+	"block-strippedlog-aged-*": "剥ぎ取られた古びた丸太",
+
+	"block-*-barkbasket-birch-*": "シラカバ樹皮バスケット",
+	"block-*-barkbasket-oak-*": "オーク樹皮バスケット",
+	"block-*-barkbasket-maple-*": "カエデ樹皮バスケット",
+	"block-*-barkbasket-pine-*": "マツ樹皮バスケット",
+	"block-*-barkbasket-acacia-*": "アカシア樹皮バスケット",
+	"block-*-barkbasket-kapok-*": "カポック樹皮バスケット",
+	"block-*-barkbasket-baldcypress-*": "ヌマスギ樹皮バスケット",
+	"block-*-barkbasket-larch-*": "カラマツ樹皮バスケット",
+	"block-*-barkbasket-redwood-*": "レッドウッド樹皮バスケット",
+	"block-*-barkbasket-ebony-*": "コクタン樹皮バスケット",
+	"block-*-barkbasket-walnut-*": "クルミ樹皮バスケット",
+	"block-*-barkbasket-purpleheart-*": "パープルハート樹皮バスケット",
+	"block-*-barkbasket-aged-*": "古びた樹皮バスケット",
+
+	"block-salvepot-empty": "空の膏薬容器",
+	"block-salvepot-birch": "シラカバ樹皮と脂肪の混合物",
+	"block-salvepot-pine": "マツ樹皮と脂肪の混合物",
+	"block-salvepot-barkoil": "樹皮油の混合物",
+	"block-salvepot-hardwax": "蜜蝋の固形増粘剤",
+	"block-salvepot-softwax": "蜜蝋の液体増粘剤",
+	"block-salvepot-finishedsalve": "樹皮治癒膏薬",
+
+	"block-stretchingframe-birch-*": "シラカバのストレッチフレーム",
+	"block-stretchingframe-oak-*": "オークのストレッチフレーム",
+	"block-stretchingframe-maple-*": "カエデのストレッチフレーム",
+	"block-stretchingframe-pine-*": "マツのストレッチフレーム",
+	"block-stretchingframe-acacia-*": "アカシアのストレッチフレーム",
+	"block-stretchingframe-kapok-*": "カポックのストレッチフレーム",
+	"block-stretchingframe-baldcypress-*": "ヌマスギのストレッチフレーム",
+	"block-stretchingframe-larch-*": "カラマツのストレッチフレーム",
+	"block-stretchingframe-redwood-*": "レッドウッドのストレッチフレーム",
+	"block-stretchingframe-ebony-*": "コクタンのストレッチフレーム",
+	"block-stretchingframe-walnut-*": "クルミのストレッチフレーム",
+	"block-stretchingframe-purpleheart-*": "パープルハートのストレッチフレーム",
+	"block-stretchingframe-aged-*": "古びたストレッチフレーム",
+
+	"block-hidewatersack-raw-huge": "巨大な生皮の水袋",
+	"block-hidewatersack-raw-large": "大きな生皮の水袋",
+	"block-hidewatersack-raw-medium": "中くらいの生皮の水袋",
+	"block-hidewatersack-raw-small": "小さな生皮の水袋",
+	"block-hidewatersack-soaked-huge": "巨大な浸した皮の水袋",
+	"block-hidewatersack-soaked-large": "大きな浸した皮の水袋",
+	"block-hidewatersack-soaked-medium": "中くらいの浸した皮の水袋",
+	"block-hidewatersack-soaked-small": "小さな浸した皮の水袋",
+
+	"itemhelp-adze-stripbark": "剥かれた樹皮",
+	"itemhelp-heal": "回復",
+
+	"iteminfo-salve-heal": "使用すると{1}秒間に{0}のHPを回復する。",
+	"iteminfo-brain": "皮のなめしに使用されます。 10Lの水を入れた樽に入れて脳溶液を作成します。",
+	"iteminfo-brain-food": "煮込み料理にも使えます。",
+
+	"item-adze-*-chert": "チャート石の釿",
+	"item-adze-*-granite": "花崗岩の釿",
+	"item-adze-*-andesite": "安山岩の釿",
+	"item-adze-*-basalt": "玄武岩の釿",
+	"item-adze-*-obsidian": "黒曜石の釿",
+	"item-adze-*-peridotite": "かんらん岩の釿",
+	"item-adze-*-flint": "火打石の釿",
+	"item-adze-*-copper": "銅の釿",
+	"item-adze-*-tinbronze": "スズ青銅の釿",
+	"item-adze-*-bismuthbronze": "ビスマス青銅の釿",
+	"item-adze-*-blackbronze": "黒青銅の釿",
+	"item-adze-*-gold": "金の釿",
+	"item-adze-*-silver": "銀の釿",
+	"item-adze-*-iron": "鉄の釿",
+	"item-adze-*-meteoriciron": "隕鉄の釿",
+	"item-adze-*-steel": "鋼の釿",
+
+	"itemdesc-saltedmeat-cure-x-days": "棚に入れられた時: 熟成まで{0}日",
+
+	"blockdesc-hidewatersack-soak-x-hours-when-placed": "設置後: 完全に浸されるまで{0}時間",
+	"blockdesc-hidewatersack-soak-x-hours": "完全に浸されるまで{0}時間",
+
+	"item-pestle-peridotite": "かんらん岩のすりこ木",
+	"item-pestle-andesite": "安山岩のすりこ木",
+	"item-pestle-granite": "花崗岩のすりこ木",
+	"item-pestle-basalt": "玄武岩のすりこ木",
+
+	"item-curinghook-bone": "骨の熟成フック",
+
+	"item-saltedmeat-poultry-raw": "塩漬けの生の鶏肉",
+	"item-saltedmeat-bushmeat-raw": "塩漬けの生のブッシュミート",
+	"item-saltedmeat-redmeat-raw": "塩漬けの生のレッドミート",
+	"item-saltedmeat-poultry-cooked": "調理された塩漬け鶏肉",
+	"item-saltedmeat-bushmeat-cooked": "調理された塩漬けブッシュミート",
+	"item-saltedmeat-redmeat-cooked": "調理した塩漬けレッドミート",
+
+	"game:item-adzehead-chert": "チャート石の釿頭",
+	"game:item-adzehead-granite": "花崗岩の釿頭",
+	"game:item-adzehead-andesite": "安山岩の釿頭",
+	"game:item-adzehead-basalt": "玄武岩の釿頭",
+	"game:item-adzehead-obsidian": "黒曜石の釿頭",
+	"game:item-adzehead-peridotite": "かんらん岩の釿頭",
+	"game:item-adzehead-flint": "火打石の釿頭",
+	"game:item-adzehead-copper": "銅の釿頭",
+	"game:item-adzehead-tinbronze": "スズ青銅の釿頭",
+	"game:item-adzehead-bismuthbronze": "ビスマス青銅釿の頭",
+	"game:item-adzehead-blackbronze": "黒青銅の釿頭",
+	"game:item-adzehead-gold": "金の釿頭",
+	"game:item-adzehead-silver": "銀の釿頭",
+	"game:item-adzehead-iron": "鉄の釿頭",
+	"game:item-adzehead-meteoriciron": "隕鉄の釿頭",
+	"game:item-adzehead-steel": "鋼の釿頭",
+
+	"game:block-toolmold-raw-adze": "生の釿頭の鋳型",
+	"game:block-toolmold-burned-adze": "釿頭の鋳型",
+
+	"item-bark-birch": "シラカバの樹皮",
+	"item-bark-oak": "オークの樹皮",
+	"item-bark-maple": "カエデの樹皮",
+	"item-bark-pine": "マツの樹皮",
+	"item-bark-acacia": "アカシアの樹皮",
+	"item-bark-kapok": "カポックの樹皮",
+	"item-bark-baldcypress": "ヌマスギの樹皮",
+	"item-bark-larch": "カラマツの樹皮",
+	"item-bark-redwood": "レッドウッドの樹皮",
+	"item-bark-ebony": "コクタンの樹皮",
+	"item-bark-walnut": "クルミの樹皮",
+	"item-bark-purpleheart": "パープルハートの樹皮",
+	"item-bark-aged": "古びた樹皮",
+
+	"game:item-flour-birch": "シラカバの粉",
+	"game:item-flour-pine": "マツの粉",
+
+	"game:item-dough-birch": "シラカバの生地",
+	"game:item-dough-pine": "マツの生地",
+
+	"game:item-bread-birch-partbaked": "シラカバのパン（生焼け）",
+	"game:item-bread-pine-partbaked": "マツのパン（生焼け）",
+
+	"game:item-bread-birch-perfect": "シラカバのパン",
+	"game:item-bread-pine-perfect": "マツのパン",
+
+	"game:item-bread-birch-charred": "シラカバのパン（焦げた）",
+	"game:item-bread-pine-charred": "マツのパン（焦げた）",
+
+	"item-salveportion": "樹皮治癒膏薬ポーション",
+
+	"game:item-hide-brained-huge": "脳溶液に浸された皮(巨大)",
+	"game:item-hide-brained-large": "脳溶液に浸された皮(大)",
+	"game:item-hide-brained-medium": "脳溶液に浸された皮(中)",
+	"game:item-hide-brained-small": "脳溶液に浸された皮(小)",
+	"game:item-hide-smoked-huge": "燻された皮(巨大)",
+	"game:item-hide-smoked-large": "燻された皮(大)",
+	"game:item-hide-smoked-medium": "燻された皮(中)",
+	"game:item-hide-smoked-small": "燻された皮(小)",
+
+	"item-brain": "動物の脳",
+
+	"recipeingredient-item-brain": "脳",
+	"recipeingredient-item-brain-insturmentalcase": "脳",
+	"game:meal-ingredient-stew-primary-brain": "脳",
+	"game:meal-ingredient-stew-secondary-brain": "脳",
+
+	"item-brainingsolutionportion": "脳溶液",
+	"game:incontainer-item-brainingsolutionportion": "脳溶液",
+}
