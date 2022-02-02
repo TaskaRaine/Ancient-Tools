@@ -11,9 +11,11 @@
 ### Releases
 
 #### Vintage Story 1.16.0+
-[Version 1.3.5](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.3/AncientTools_V1.3.5.zip)
+[Version 1.3.6](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.6/AncientTools_V1.3.6.zip)
 
-[Version 1.3.4](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.3/AncientTools_V1.3.4.zip)
+[Version 1.3.5](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.5/AncientTools_V1.3.5.zip)
+
+[Version 1.3.4](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.4/AncientTools_V1.3.4.zip)
 
 [Version 1.3.2](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.2/AncientTools_V1.3.2.zip)
 
@@ -44,6 +46,14 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.3.6
+The mod can now be enjoyed in Japanese, courtesy of a translation offered by Macoto Hino!
+
+Beeswax and fat patches should no longer overwrite the vanilla game attributes. This should allow the items to be placed on shelves again. 
+This should also fix compatibility issues with From Golden Combs on my end. However, a patch needs to be made on their end too to prevent overwriting of the Ancient Tools salve creation attribute. 
+
+in-container strings in language files have been duplicated to compensate for changes made in the game engine.
+
 #### Version 1.3.5
 The mod can now be enjoyed in French, courtesy of a translation offered by Cendar!
 

@@ -11,6 +11,7 @@
 				"brain"
 			]
 		},
+		"side": "Server",
 		"file": "recipes/cooking/meatystew.json"
 	},
 	{
@@ -25,6 +26,7 @@
 				"brain"
 			]
 		},
+		"side": "Server",
 		"file": "recipes/cooking/meatystew.json"
 	},
 	{
@@ -39,6 +41,7 @@
 				"brain"
 			]
 		},
+		"side": "Server",
 		"file": "recipes/cooking/meatystew.json"
 	},
 ]

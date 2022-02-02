@@ -1,10 +1,8 @@
 ﻿[
 	{
 		"op": "add",
-		"path": "/attributes",
-		"value": {
-			"isSalveOil": true
-		},
+		"path": "/attributes/isSalveOil",
+		"value": true,
 		"file": "game:itemtypes/resource/fat",
 		"side": "Server",
 		"condition": { "when": "SalveEnabled", "isValue": "true" }

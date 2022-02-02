@@ -1,5 +1,11 @@
 ﻿Testing:
+
 Multiplayer/Bug Testing: Raio Verusia
+
+Translations: 
+
+French Translation: Cendar
+Japanese Translation: Macoto Hino
 
 Sounds:
 

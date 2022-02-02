@@ -120,6 +120,7 @@
     <None Include="assets\ancienttools\blocktypes\stretchingframe.json" />
     <None Include="assets\ancienttools\blocktypes\strippedlog.json" />
     <None Include="assets\ancienttools\lang\fr.json" />
+    <None Include="assets\ancienttools\lang\ja.json" />
     <None Include="assets\ancienttools\patches\block\pot.json" />
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\dough.json" />
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\barkbasket.json" />
