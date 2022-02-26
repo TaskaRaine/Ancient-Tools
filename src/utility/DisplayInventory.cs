@@ -65,6 +65,10 @@ namespace AncientTools.Utility
 
         protected int InventorySize = 1;
 
+        public DisplayInventory()
+        {
+
+        }
         public void InitializeInventory()
         {
             inventory = new InventoryGeneric(InventorySize, null, null);

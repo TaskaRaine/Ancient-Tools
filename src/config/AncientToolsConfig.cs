@@ -12,6 +12,7 @@ namespace AncientTools.Config
         public double SalveMixTime = 1.5;
         public bool BarkBreadEnabled = true;
         public bool SalveEnabled = true;
+        public bool AllowCarvingForResin = false;
         public float SkinningTime = 4.0f;
         public float WaterSackConversionHours = 24.0f;
         public float BrainedHideSealHours = 48.0f;
@@ -29,6 +30,7 @@ namespace AncientTools.Config
             SalveMixTime = previousConfig.SalveMixTime;
             BarkBreadEnabled = previousConfig.BarkBreadEnabled;
             SalveEnabled = previousConfig.SalveEnabled;
+            AllowCarvingForResin = previousConfig.AllowCarvingForResin;
             SkinningTime = previousConfig.SkinningTime;
             WaterSackConversionHours = previousConfig.WaterSackConversionHours;
             BrainedHideSealHours = previousConfig.BrainedHideSealHours;

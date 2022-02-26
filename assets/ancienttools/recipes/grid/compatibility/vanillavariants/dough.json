@@ -11,7 +11,8 @@
 				type: "item", 
 				code: "game:flour-*", 
 				allowedVariants: ["pine", "birch"],
-				name: "type"
+				name: "type",
+				quantity: 4
 			}
 		},
 		width: 2,

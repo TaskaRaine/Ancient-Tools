@@ -3,7 +3,7 @@
 		code: "brainedhide",
 		sealHours: 48.0,
 		ingredients: [
-			{ type: "item", code: "ancienttools:brainingsolutionportion", litres: 10 },
+			{ type: "item", code: "ancienttools:brainingsolutionportion", litres: 10, consumeLitres: 10 },
 			{ type: "item", code: "game:hide-scraped-huge", quantity: 1 }
 		],
 		output: { type: "item", code: "game:hide-brained-huge", stackSize: 1 }
@@ -12,7 +12,7 @@
 		code: "brainedhide",
 		sealHours: 48.0,
 		ingredients: [
-			{ type: "item", code: "ancienttools:brainingsolutionportion", litres: 6 },
+			{ type: "item", code: "ancienttools:brainingsolutionportion", litres: 6, consumeLitres: 6 },
 			{ type: "item", code: "game:hide-scraped-large", quantity: 1 }
 		],
 		output: { type: "item", code: "game:hide-brained-large", stackSize: 1 }
@@ -21,7 +21,7 @@
 		code: "brainedhide",
 		sealHours: 48.0,
 		ingredients: [
-			{ type: "item", code: "ancienttools:brainingsolutionportion", litres: 4 },
+			{ type: "item", code: "ancienttools:brainingsolutionportion", litres: 4, consumeLitres: 4 },
 			{ type: "item", code: "game:hide-scraped-medium", quantity: 1 }
 		],
 		output: { type: "item", code: "game:hide-brained-medium", stackSize: 1 }
@@ -30,7 +30,7 @@
 		code: "brainedhide",
 		sealHours: 48.0,
 		ingredients: [
-			{ type: "item", code: "ancienttools:brainingsolutionportion", litres: 2 },
+			{ type: "item", code: "ancienttools:brainingsolutionportion", litres: 2, consumeLitres: 2 },
 			{ type: "item", code: "game:hide-scraped-small", quantity: 1 }
 		],
 		output: { type: "item", code: "game:hide-brained-small", stackSize: 1 }

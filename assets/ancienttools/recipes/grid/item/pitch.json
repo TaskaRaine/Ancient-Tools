@@ -1,0 +1,41 @@
+﻿[
+	{
+		ingredientPattern: "PS",
+		width: 1,
+		height: 2,
+		shapeless: true,
+		ingredients: {
+			"P": {
+				type: "item",
+				code: "ancienttools:pitch-ball"
+			},
+			"S": {
+				type: "item",
+				code: "game:stick",
+			}
+		},
+		output: {
+			type: "item",
+			code: "ancienttools:pitch-stick",
+			quantity: 1
+		}
+	},
+	{
+		ingredientPattern: "P",
+		width: 1,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"P": {
+				type: "item",
+				code: "ancienttools:pitch-stick",
+				returnedStack: { type: "item", code: "game:stick" }
+			}
+		},
+		output: {
+			type: "item",
+			code: "ancienttools:pitch-ball",
+			quantity: 1
+		}
+	}
+]

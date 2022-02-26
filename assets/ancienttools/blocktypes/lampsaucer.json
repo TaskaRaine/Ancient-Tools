@@ -1,0 +1,151 @@
+﻿{
+	code: "lampsaucer",
+	classByType: {
+		"*-empty-*": "BlockLampSaucer",
+		"*": "BlockWaterproofTorch"
+	},
+	behaviorsByType: {
+		"*-up": [ {name: "UnstableFalling", properties: { ignorePlaceTest: true, attachmentArea: { x1: 5, y1: 15, z1: 5, x2: 10, y2: 16, z2: 10 } } }, { name: "RightClickPickup"} ],
+		"*": [ { name: "RightClickPickup"} ]
+	},
+	creativeinventory: { "general": ["*-up"], "decorative": ["*-up"], "ancienttools": ["*-up"] },
+    attributes: {
+		handbook: {
+			groupBy: ["*"]
+		},
+		attachmentAreas: {
+			"down": { x1: 5, y1: 0, z1: 5, x2: 10, y2: 0, z2: 10 },
+			"north": { x1: 7, y1: 6, z1: 15, x2: 8, y2: 7, z2: 15, rotateY: 180 },
+			"east": { x1: 7, y1: 6, z1: 15, x2: 8, y2: 7, z2: 15, rotateY: 270 },
+			"south": { x1: 7, y1: 6, z1: 15, x2: 8, y2: 7, z2: 15, rotateY: 0 },
+			"west": { x1: 7, y1: 6, z1: 15, x2: 8, y2: 7, z2: 15, rotateY: 90 },
+		}
+	},
+    variantgroups: [
+        { code: "metal", states: ["copper", "brass", "bismuth", "tinbronze", "bismuthbronze", "blackbronze", "molybdochalkos", "gold", "silver", "iron", "meteoriciron", "steel"] },
+		{ code: "type", states: ["empty", "candle", "pitch"] },
+		{ code: "state", states: ["extinct", "lit"] },
+		{ code: "orientation", states: ["up"], loadFromProperties: "abstract/horizontalorientation" }
+    ],
+	skipVariants: [
+		"*-empty-lit-*",
+	],
+	drawtype: "json",
+	shapeByType: {
+		"*-up": { 
+			base: "block/lampsaucer/{type}_ground_{state}" 
+		},
+		"*-north": { 
+			base: "block/lampsaucer/{type}_wall_{state}", rotateY: 0  
+		},
+		"*-east": {
+			base: "block/lampsaucer/{type}_wall_{state}", rotateY: 270 
+		},
+		"*-south": {
+			base: "block/lampsaucer/{type}_wall_{state}", rotateY: 180
+		},
+		"*-west": {
+			base: "block/lampsaucer/{type}_wall_{state}", rotateY: 90
+		}
+	},
+	texturesByType: {
+		"*-empty-extinct-*": { 
+			"metal": { base: "game:block/metal/lantern/{metal}" }, 
+		},
+		"*-candle-extinct-*": { 
+			"metal": { base: "game:block/metal/lantern/{metal}" },
+			"candle": { base: "game:block/candle-unlit" }
+		},
+		"*-candle-lit-*": { 
+			"metal": { base: "game:block/metal/lantern/{metal}" },
+			"candle": { base: "game:block/candle" }
+		},
+		"*-pitch-extinct-*": { 
+			"metal": { base: "game:block/metal/lantern/{metal}" }, 
+			"pitch": { base: "block/pitch/pitch" },
+			"wick": { base: "game:block/cloth/linen/black" }
+		},
+		"*-pitch-lit-*": { 
+			"metal": { base: "game:block/metal/lantern/{metal}" }, 
+			"pitch": { base: "block/pitch/pitch_torchlit"  },
+			"wick": { base: "block/pitch/pitch_torchlit"  }
+		},
+	},
+	sidesolid: { all: false },
+    sideopaque: { all: false },
+	replaceable: 500,
+	resistance: 1,
+	blockmaterial: "Metal",
+	lightAbsorption: 0,
+	storageFlags: 257,
+	collisionbox: null,
+	selectionBoxByType: {
+		"*-candle-*-up": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.375, z2: 0.75 },
+		"*-up": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.1875, z2: 0.75 },
+		"*-candle-*-north": { x1: 0.25, y1: 0.375, z1: 0.0625, x2: 0.75, y2: 0.75, z2: 0.5625, rotateY: 180 },
+		"*-north": { x1: 0.25, y1: 0.375, z1: 0.0625, x2: 0.75, y2: 0.5625, z2: 0.5625, rotateY: 180 },
+		"*-candle-*-east": { x1: 0.25, y1: 0.375, z1: 0.0625, x2: 0.75, y2: 0.75, z2: 0.5625, rotateY: 90 },
+		"*-east": { x1: 0.25, y1: 0.375, z1: 0.0625, x2: 0.75, y2: 0.5625, z2: 0.5625, rotateY: 90 },
+		"*-candle-*-south": { x1: 0.25, y1: 0.375, z1: 0.0625, x2: 0.75, y2: 0.75, z2: 0.5625, rotateY: 0 },
+		"*-south": { x1: 0.25, y1: 0.375, z1: 0.0625, x2: 0.75, y2: 0.5625, z2: 0.5625, rotateY: 0 },
+		"*-candle-*-west": { x1: 0.25, y1: 0.375, z1: 0.0625, x2: 0.75, y2: 0.75, z2: 0.5625, rotateY: 270 },
+		"*-west": { x1: 0.25, y1: 0.375, z1: 0.0625, x2: 0.75, y2: 0.5625, z2: 0.5625, rotateY: 270 },
+	},
+	heldRightTpIdleAnimation: "holdinglanternrighthand",
+	heldLeftTpIdleAnimation: "holdinglanternlefthand",
+	lighthsvByType: {
+		"*-candle-lit-*": [4, 2, 14],
+		"*-pitch-lit-*": [4, 2, 16]
+	},
+	sounds: {
+		"place": "block/saucer",
+		"break": "block/saucer",
+		"hit": "block/saucer"
+	},
+	guiTransform: {
+		rotation: { x: -22.6, y: 145, z: 0 },
+		origin: { x: 0.5, y: 0.1, z: 0.5 },
+		scale: 2.55
+	},
+	fpHandTransform: {
+		translation: { x: 0, y: 0.4, z: 0.5 },
+		rotation: { x: -1, y: -49, z: 5 }
+	},
+	tpHandTransform: {
+		translation: { x: -1.8, y: -0.6, z: -1.2 },
+		rotation: { x: 0, y: -85, z: 4 },
+		scale: 0.4
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: -45, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 3.02
+	},
+	particlePropertiesByType: {
+		"*-lit-*": [
+		{
+			hsvaColor: [{ avg: 20, var: 20 }, { avg: 255, var: 50 }, { avg: 255, var: 50 },  { avg: 255, var: 0 }],
+			gravityEffect: { avg: 0, var: 0 },
+			posOffset: [ { avg: 0, var: 0.1 }, { avg: 0, var: 0 }, { avg: 0, var: 0.1 }],
+			velocity: [ { avg: 0, var: 0.025 }, { avg: 0.1, var: 0.1 }, { avg: 0, var: 0.025 }],
+			quantity: { avg: 0.015 },
+			size: { avg: 0.5, var: 0 },
+			sizeEvolve: { transform: "quadratic", factor: -0.7 },
+			lifeLength: { avg: 1.5 },
+			vertexFlags: 128
+		},
+		{
+			hsvaColor: [{ avg: 0, var: 0 }, { avg: 0, var: 0 }, { avg: 40, var: 30 },  { avg: 220, var: 50 }],
+			opacityEvolve: { transform: "quadratic", factor: -16 },
+			gravityEffect: { avg: 0, var: 0 },
+			posOffset: [ { avg: 0, var: 0.1 }, { avg: 0, var: 0 }, { avg: 0, var: 0.1 }],
+			velocity: [ { avg: 0, var: 0.025 }, { avg: 0.05, var: 0.1 }, { avg: 0, var: 0.025 }],
+			quantity: { avg: 0.05 },
+			size: { avg: 0.3125, var: 0.05 },
+			sizeEvolve: { transform: "linear", factor: 0.5 },
+			particleModel: "Quad"
+		}
+	],
+	}
+}

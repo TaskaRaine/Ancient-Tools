@@ -11,7 +11,7 @@ using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
 
-namespace AncientTools.BlockEntity
+namespace AncientTools.BlockEntities
 {
     class BECuringRack : BlockEntityDisplay
     {
@@ -39,6 +39,8 @@ namespace AncientTools.BlockEntity
         private double thisHourChecked;
 
         private string facing;
+
+        private ICoreAPI coreAPI;
         private long tickListener;
 
         public BECuringRack()
@@ -49,18 +51,44 @@ namespace AncientTools.BlockEntity
         {
             meshes = new MeshData[10];
             facing = this.Block.LastCodePart(1);
-            previousHourChecked = api.World.Calendar.TotalHours;
 
             if (this.Block != null && this.Block.Attributes != null)
             {
-                inventory.PerishableFactorByFoodCategory = this.Block.Attributes["perishrate"]["normal"].AsObject<Dictionary<EnumFoodCategory, float>>();
+                inventory.TransitionableSpeedMulByType = this.Block.Attributes["transitionrate"].AsObject<Dictionary<EnumTransitionType, float>>();
             }
 
+            base.Initialize(api);
+
             //-- Check the meat every in-game hour to advance the curing process --//
-            if(api.Side == EnumAppSide.Server)
+            if (api.Side == EnumAppSide.Server)
+            {
+                coreAPI = api;
                 tickListener = api.World.RegisterGameTickListener(HourlyMeatCheck, (int)(3600000 / api.World.Calendar.SpeedOfTime));
 
-            base.Initialize(api);
+                HourlyMeatCheck(0);
+
+                this.MarkDirty(false);
+            }
+        }
+        public override void FromTreeAttributes(ITreeAttribute tree, IWorldAccessor worldForResolving)
+        {
+            base.FromTreeAttributes(tree, worldForResolving);
+
+            previousHourChecked = tree.GetDouble("previoushourchecked", worldForResolving.Calendar.TotalHours);
+        }
+        public override void ToTreeAttributes(ITreeAttribute tree)
+        {
+            base.ToTreeAttributes(tree);
+
+            if (previousHourChecked != 0)
+            {
+                tree.SetDouble("previoushourchecked", previousHourChecked);
+            }
+            else
+            {
+                tree.SetDouble("previoushourchecked", Api.World.Calendar.TotalHours);
+                previousHourChecked = Api.World.Calendar.TotalHours;
+            }
         }
         public override void OnBlockBroken(IPlayer player)
         {
@@ -237,11 +265,14 @@ namespace AncientTools.BlockEntity
         }
         public float GetCurrentPerishRate()
         {
-            return GetPerishRate() * inventory.PerishableFactorByFoodCategory[EnumFoodCategory.Unknown];
+            if(inventory.TransitionableSpeedMulByType != null)
+                return inventory.TransitionableSpeedMulByType[EnumTransitionType.Perish];
+
+            return 1.0f;
         }
         private void HourlyMeatCheck(float deltaTime)
         {
-            thisHourChecked = Api.World.Calendar.TotalHours;
+            thisHourChecked = coreAPI.World.Calendar.TotalHours;
 
             for(int i = 1; i < 9; i++)
             {
@@ -249,7 +280,10 @@ namespace AncientTools.BlockEntity
                 {
                     Item meatItem = MeatSlot(i).Itemstack.Item;
 
-                    if (meatItem.FirstCodePart() == "saltedmeat")
+                    if (meatItem == null)
+                        return;
+
+                    if (meatItem.FirstCodePart() == "saltedmeat" && meatItem.LastCodePart() == "raw")
                     {
                         double timeRemaining = MeatSlot(i).Itemstack.Attributes.GetDouble("curinghoursremaining", 480);
                         
@@ -257,7 +291,9 @@ namespace AncientTools.BlockEntity
                         {
                             string meatType = MeatSlot(i).Itemstack.Item.FirstCodePart(1) + "-cured";
 
-                            MeatSlot(i).Itemstack = new ItemStack(Api.World.GetItem(new AssetLocation("game", meatType)));
+                            MeatSlot(i).Itemstack = new ItemStack(coreAPI.World.GetItem(new AssetLocation("game", meatType)));
+
+                            this.MarkDirty(true);
                         }
                         else
                         {
@@ -270,7 +306,6 @@ namespace AncientTools.BlockEntity
             }
 
             previousHourChecked = thisHourChecked;
-            this.MarkDirty(true);
         }
         private void PositionMeshesNS(ITerrainMeshPool mesher)
         {

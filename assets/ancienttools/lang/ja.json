@@ -37,6 +37,16 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 アメリカ先住民の文化は、動物の皮をなめすのに、植民地時代のヨーロッパ人とは異なる技術を使って、彼らの象徴である革製品を作りました。
 
 古代の道具では、この技法を簡略化して実装し、レザークラフトの別の手段を提供しています。試してみたいですか？<a href=\"handbook://ancienttools-quickstart-guide-tanning\">ネイティブアメリカンのなめし革ガイド</a>をご覧下さい。 
+
+<font weight='bold'>松脂</font>
+
+<a href=\'handbook://item-ancienttools:pitch-ball\'>松脂</a>は、細かく粉砕した<a href=\'handbook://item-ancienttools:powderedcharcoal\'>木炭粉</a>、樹木の<a href=\'handbook://item-resin\'>樹脂</a>、<a href=\'handbook://item-drygrass\'>枯れ草</a>や乾燥した動物の糞などの繊維質などを混ぜ合わせて溶かした粘着性のある黒い物質です。 
+
+この素材は、防水性と粘着性に優れています。歴史的には、木造帆船の継ぎ目のコーキングや、食器などの<a href=\'handbook://block-crock-burned-east\'>容器</a>の密閉に使われてきました。Ancient Toolsでは、松脂の防水性を利用して、風雨に晒される焚き火台、窯、鍛冶屋の燃料として使用することが出来ます。 
+
+さらに、松脂を使えば、雨に濡れても消えない長持ちする<a href=\'handbook://block-ancienttools:pitchtorch-extinct-up\'>松明</a>を作ることが出来ます。また、オイルランプのような常備灯として<a href=\'handbooksearch://燭台\'>燭台</a>を作ることも出来ます。    
+
+松脂の作り方については、<a href=\"handbook://ancienttools-quickstart-guide-pitch\">松脂ガイド</a>に詳しい説明があります。
 ",
 	"game:ancienttools-quickstart-guide-salve": "膏薬（こうやく）ガイド",
 	"game:ancienttools-quickstart-title-salve": "クラフトメカニック：膏薬（こうやく）の調合",
@@ -75,6 +85,19 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 
 さて、いよいよ最終段階です。燻製した皮をナイフで丁寧に<a href=\'handbook://item-leather-plain\'>短冊状</a>にカットしていきます。この作業は、クラフトグリッドで行います。
 	",
+	"game:ancienttools-quickstart-guide-pitch": "松脂ガイド",
+	"game:ancienttools-quickstart-title-pitch": "クラフトメカニック： 松脂の作り方",
+	"game:ancienttools-quickstart-text-pitch": "
+かつて<a href=\'handbook://item-ancienttools:pitch-ball\'>接着剤</a>は、その汎用性の高さから、非常に高価な資源として扱われていました。接着剤、封止剤、燃料など、様々な用途に使用することが出来ます。
+
+松脂の作り方に「1つの方法」はありません。多くの異なる素材が組み合わされ、同じような結果が得られたのです。しかし、Ancient Toolsでは、この作業に必要な<a href=\'handbook://item-charcoal\'>木炭</a>や<a href=\'handbook://item-resin\'>樹脂</a>、<a href=\'handbook://item-drygrass\'>干し草</a>などを手元に用意しておく必要があります。
+
+まず、2つの炭を<a href=\'handbooksearch://すり鉢\'>すり鉢</a>と<a href=\'handbooksearch://すりこ木\'>すりこ木</a>などで<a href=\'handbook://item-ancienttools:powderedcharcoal\'>木炭粉</a>にする必要があります。木炭粉を1つ持って、<icon name='rightmousebutton'></icon>で調理鍋を操作すると、鍋が<a href=\'handbook://block-ancienttools:pitchpot-empty\'>空の松脂容器</a>に変化します。
+
+次に、<icon name='rightmousebutton'></icon>で容器に<a href=\'handbook://item-ancienttools:powderedcharcoal\'>木炭粉</a>2つ、<a href=\'handbook://item-resin\'>樹脂</a>4つ、<a href=\'handbook://item-drygrass\'>干し草</a>1つを入れて下さい。容器に適切に充填されると、<a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>未調製の松脂混合物</a>に変換されます。
+
+あとは、その混合物を手に取り、近くの焚き火台で加熱すると、<a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>完成した松脂</a>が出来上がります。完成したら、鍋を地面に置き、素手や<a href=\'handbook://item-stick\'>棒</a>を使って松脂を取ることが出来ます。
+	",
 	"blockhelp-place-pestle": "すりこ木を配置します",
 	"blockhelp-place-resource": "粉砕可能なリソースを配置する",
 	"blockhelp-grind-mortar": "粉砕リソース",
@@ -99,6 +122,16 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"blockhelp-skin-hide": "削られた皮",
 	"blockhelp-take-hide-sack": "皮袋を取る",
 
+	"blockhelp-insert-powderedcharcoal": "木炭粉を入れる",
+	"blockhelp-insert-resin": "樹脂を入れる",
+	"blockhelp-insert-grass": "干し草を入れる",
+
+	"blockhelp-take-pitch": "松脂を取る",
+	"blockhelp-place-pitch": "松脂を置く",
+
+	"blockhelp-saucer-insert-object": "松脂を入れる/蝋燭",
+	"blockhelp-scrape-log": "削り取る",
+
 	"blockinfo-curingrack-no-entity": "このブロックで問題が発生しました。 ブロックエンティティは存在しません。ブロックを壊して、もう一度置いて下さい。",
 	"blockinfo-curingrack-hook-missing": "熟成フックがありません",
 	"blockinfo-curingrack-meat-status": "- 熟成まで: {0} 日 | 腐敗まで: {1} 日",
@@ -114,6 +147,14 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"blockinfo-salve-mixwithwax": "治療膏薬を作るには、液体ワックスと混ぜる必要があります。",
 	"blockinfo-salve-filled-remaining": "残りの膏薬ポーション。",
 
+	"blockinfo-pitch-empty": "木炭粉、樹脂、干し草を充填し、松脂の混合物を作ります。",
+	"blockinfo-pitch-insert": "アイテムを入れて、開始します。",
+	"blockinfo-contains": "内容物: ",
+	"blockinfo-pitch-empty-charcoal": "{0}/{1} 木炭粉",
+	"blockinfo-pitch-empty-resin": "{0}/{1} 樹脂",
+	"blockinfo-pitch-empty-grass": "{0}/{1} 干し草",
+	"blockinfo-pitch-remaining": "{0}つの松脂が残っています。",
+
 	"game:handbook-crafting-title-strippedlog": "作成者：",
 	"game:handbook-crafting-text-strippedlog": "丸太から釿で丸太を剥ぎ取ります。また、クラフトグリッドの丸太で釿を使用すると、剥がれた丸太が返却されます。",
 
@@ -122,6 +163,9 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 
 	"game:handbook-crafting-title-salveportion": "作成者：",
 	"game:handbook-crafting-text-salveportion": "<a href=\'handbook://block-ancienttools:salvepot-softwax\'>溶けたワックス</a>のポットと<a href=\'handbook://block-ancienttools:salvepot-barkoil\'>準備された樹皮油</a>のポットと混ぜ合わせ、複数のポーションを含む軟膏を作成します。<icon name='rightmousebutton'></icon>で、この軟膏から一部を取り出すことが出来ます。",
+
+	"game:handbook-crafting-title-pitch": "作成者：",
+	"game:handbook-crafting-text-pitch": "<a href=\'handbook://block-ancienttools:pitchpot-empty\'>空の松脂容器</a>に<a href=\'handbook://item-ancienttools:powderedcharcoal\'>木炭粉</a>、<a href=\'handbook://item-resin\'>樹脂</a>、<a href=\'handbook://item-drygrass\'>干し草</a>を入れ、<a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>出来上がった混合物</a>を焚き火台で焼いて下さい。<a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>完成した松脂</a>を地面に置き、松脂を取り出しましょう。",
 
 	"block-mortar-peridotite": "かんらん岩すり鉢",
 	"block-mortar-andesite": "安山岩すり鉢",
@@ -200,6 +244,85 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"block-hidewatersack-soaked-large": "大きな浸した皮の水袋",
 	"block-hidewatersack-soaked-medium": "中くらいの浸した皮の水袋",
 	"block-hidewatersack-soaked-small": "小さな浸した皮の水袋",
+
+	"block-pitchpot-empty": "空の松脂容器",
+	"block-pitchpot-unmixed": "未完成の松脂混合物",
+	"block-pitchpot-finishedpitchinventory": "完成した松脂",
+	"block-pitchpot-finishedpitch": "完成した松脂",
+
+	"block-pitchtorch-extinct-*": "松脂の塗られた松明(消火)",
+	"block-pitchtorch-lit-*": "松脂の塗られた松明",
+	"block-pitchtorch-melted-*": "松脂の塗られた松明(溶解)",
+
+	"block-lampsaucer-copper-empty-extinct-*": "銅の燭台",
+	"block-lampsaucer-brass-empty-extinct-*": "真鍮の燭台",
+	"block-lampsaucer-bismuth-empty-extinct-*": "ビスマスの燭台",
+	"block-lampsaucer-tinbronze-empty-extinct-*": "スズ青銅の燭台",
+	"block-lampsaucer-bismuthbronze-empty-extinct-*": "ビスマス青銅の燭台",
+	"block-lampsaucer-blackbronze-empty-extinct-*": "黒青銅の燭台",
+	"block-lampsaucer-molybdochalkos-empty-extinct-*": "モリブドカルコスの燭台",
+	"block-lampsaucer-gold-empty-extinct-*": "金の燭台",
+	"block-lampsaucer-silver-empty-extinct-*": "銀の燭台",
+	"block-lampsaucer-iron-empty-extinct-*": "鉄の燭台",
+	"block-lampsaucer-meteoriciron-empty-extinct-*": "隕鉄の燭台",
+	"block-lampsaucer-steel-empty-extinct-*": "鋼の燭台",
+
+	"block-lampsaucer-copper-candle-extinct-*": "キャンドル付き銅の燭台(消火)",
+	"block-lampsaucer-brass-candle-extinct-*": "キャンドル付き真鍮の燭台(消火)",
+	"block-lampsaucer-bismuth-candle-extinct-*": "キャンドル付きビスマスの燭台(消火)",
+	"block-lampsaucer-tinbronze-candle-extinct-*": "キャンドル付きスズ青銅の燭台(消火)",
+	"block-lampsaucer-bismuthbronze-candle-extinct-*": "キャンドル付きビスマス青銅の燭台(消火)",
+	"block-lampsaucer-blackbronze-candle-extinct-*": "キャンドル付き黒青銅の燭台(消火)",
+	"block-lampsaucer-molybdochalkos-candle-extinct-*": "キャンドル付きモリブドカルコスの燭台(消火)",
+	"block-lampsaucer-gold-candle-extinct-*": "キャンドル付き金の燭台(消火)",
+	"block-lampsaucer-silver-candle-extinct-*": "キャンドル付き銀の燭台(消火)",
+	"block-lampsaucer-iron-candle-extinct-*": "キャンドル付き鉄の燭台(消火)",
+	"block-lampsaucer-meteoriciron-candle-extinct-*": "キャンドル付き隕鉄の燭台(消火)",
+	"block-lampsaucer-steel-candle-extinct-*": "キャンドル付き鋼の燭台(消火)",
+
+	"block-lampsaucer-copper-candle-lit-*": "キャンドル付き銅の燭台",
+	"block-lampsaucer-brass-candle-lit-*": "キャンドル付き真鍮の燭台",
+	"block-lampsaucer-bismuth-candle-lit-*": "キャンドル付きビスマスの燭台",
+	"block-lampsaucer-tinbronze-candle-lit-*": "キャンドル付きスズ青銅の燭台",
+	"block-lampsaucer-bismuthbronze-candle-lit-*": "キャンドル付きビスマス青銅の燭台",
+	"block-lampsaucer-blackbronze-candle-lit-*": "キャンドル付き黒青銅の燭台",
+	"block-lampsaucer-molybdochalkos-candle-lit-*": "キャンドル付きモリブドカルコスの燭台",
+	"block-lampsaucer-gold-candle-lit-*": "キャンドル付き金の燭台",
+	"block-lampsaucer-silver-candle-lit-*": "キャンドル付き銀の燭台",
+	"block-lampsaucer-iron-candle-lit-*": "キャンドル付き鉄の燭台",
+	"block-lampsaucer-meteoriciron-candle-lit-*": "キャンドル付き隕鉄の燭台",
+	"block-lampsaucer-steel-candle-lit-*": "キャンドル付き鋼の燭台",
+
+	"block-lampsaucer-copper-pitch-extinct-*": "松脂付き銅の燭台(消火)",
+	"block-lampsaucer-brass-pitch-extinct-*": "松脂付き真鍮の燭台(消火)",
+	"block-lampsaucer-bismuth-pitch-extinct-*": "松脂付きビスマスの燭台(消火)",
+	"block-lampsaucer-tinbronze-pitch-extinct-*": "松脂付きスズ青銅の燭台(消火)",
+	"block-lampsaucer-bismuthbronze-pitch-extinct-*": "松脂付きビスマス青銅の燭台(消火)",
+	"block-lampsaucer-blackbronze-pitch-extinct-*": "松脂付き黒青銅の燭台(消火)",
+	"block-lampsaucer-molybdochalkos-pitch-extinct-*": "松脂付きモリブドカルコスの燭台(消火)",
+	"block-lampsaucer-gold-pitch-extinct-*": "松脂付き金の燭台(消火)",
+	"block-lampsaucer-silver-pitch-extinct-*": "松脂付き銀の燭台(消火)",
+	"block-lampsaucer-iron-pitch-extinct-*": "松脂付き鉄の燭台(消火)",
+	"block-lampsaucer-meteoriciron-pitch-extinct-*": "松脂付き隕鉄の燭台(消火)",
+	"block-lampsaucer-steel-pitch-extinct-*": "松脂付き鋼の燭台(消火)",
+
+	"block-lampsaucer-copper-pitch-lit-*": "松脂付き銅の燭台",
+	"block-lampsaucer-brass-pitch-lit-*": "松脂付き真鍮の燭台",
+	"block-lampsaucer-bismuth-pitch-lit-*": "松脂付きビスマスの燭台",
+	"block-lampsaucer-tinbronze-pitch-lit-*": "松脂付きスズ青銅の燭台",
+	"block-lampsaucer-bismuthbronze-pitch-lit-*": "松脂付きビスマス青銅の燭台",
+	"block-lampsaucer-blackbronze-pitch-lit-*": "松脂付き黒青銅の燭台",
+	"block-lampsaucer-molybdochalkos-pitch-lit-*": "松脂付きモリブドカルコスの燭台",
+	"block-lampsaucer-gold-pitch-lit-*": "松脂付き金の燭台",
+	"block-lampsaucer-silver-pitch-lit-*": "松脂付き銀の燭台",
+	"block-lampsaucer-iron-pitch-lit-*": "松脂付き鉄の燭台",
+	"block-lampsaucer-meteoriciron-pitch-lit-*": "松脂付き隕鉄の燭台",
+	"block-lampsaucer-steel-pitch-lit-*": "松脂付き鋼の燭台",
+
+	"block-directionalresin-resin-pine-*": "樹液が滴る樹脂付きのマツの原木",
+	"block-directionalresin-resinharvested-pine-*": "樹液が滴るマツの原木",
+	"block-directionalresin-resin-acacia-*": "樹液が滴る樹脂付きのアカシアの原木",
+	"block-directionalresin-resinharvested-acacia-*": "樹液が滴るアカシアの原木",
 
 	"itemhelp-adze-stripbark": "剥かれた樹皮",
 	"itemhelp-heal": "回復",
@@ -314,4 +437,7 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"item-brainingsolutionportion": "脳溶液",
 	"game:incontainer-item-brainingsolutionportion": "脳溶液",
 	"incontainer-item-brainingsolutionportion": "脳溶液",
+
+	"item-powderedcharcoal": "木炭粉",
+	"item-pitch-*": "松脂",
 }

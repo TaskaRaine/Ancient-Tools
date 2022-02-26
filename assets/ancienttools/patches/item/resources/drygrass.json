@@ -1,0 +1,9 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes/isPitchGrass",
+		"value": true,
+		"file": "game:itemtypes/resource/drygrass",
+		"side": "Server",
+	},
+]

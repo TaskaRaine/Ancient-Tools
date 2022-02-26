@@ -46,6 +46,34 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.4.0
+-- Pitch
+New crafting process - Pitch!
+
+Firepits, Forges and Pit Kilns can use pitch for a fuel and will become waterproof(won't extinguish due to rain).
+
+Adds a new torch block made from pitch. Pitch torches burn longer than regular torches and will not be extinguished if put out in the rain.
+
+Adds Chambersticks which can be smithed from various metals. Empty chamberstick blocks can hold pitch or candles and work as a permenant lighting solution similar to the vanilla oil lamp. 
+
+Pitch can be used to seal crocks.
+
+Adds a new item, powdered charcoal, which is required for the crafting of pitch.
+
+-- Resin Harvest
+Adds new 'directional resin' blocks that act just like regular leaky pine/acacia blocks but have the ability to be selectively rotated.
+
+Knives can now be used to carve into the bark of pine and acacia trees. A directional resin block will be placed in the tree with leaky resin appearing on the face that was carved.
+
+Resin harvesting is turned off by default now that resin spawns have been boosted significantly in vanilla Vintage Story.
+
+-- Other
+Hide Sack and Curing Rack processes should now 'catch up' after having been unloaded. If the meat spoilage timer and curing timer both expire, though, meats will still turn to rot when they should have been cured.
+
+Compatibility for Bricklayers and Creatures and Critters(cochineal, grasshoppers, crickets) grindables to be visible in the Ancient Tools mortar.
+
+Bark doughs now require 4 flours to craft instead of just 1. Saturation values for the bread has also been reduced.
+
 #### Version 1.3.6
 The mod can now be enjoyed in Japanese, courtesy of a translation offered by Macoto Hino!
 

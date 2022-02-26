@@ -8,7 +8,7 @@ using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
-namespace AncientTools.BlockEntity
+namespace AncientTools.BlockEntities
 {
     class BESalveContainer : DisplayInventory
     {

@@ -37,6 +37,16 @@ Salted meats can also be cooked in a firepit for a quick meal solution.
 Pre-contact Native American cultures used a different technique for tanning animal hides than colonial European settlers to create their iconic leather products.
 
 Ancient Tools implements a simplified version of this technique to give you another means of crafting leather! Want to give it a try? Visit the <a href=\"handbook://ancienttools-quickstart-guide-tanning\">Native American Tanning Guide</a>.  
+
+<font weight='bold'>Pitch</font>
+
+<a href=\'handbook://item-ancienttools:pitch-ball\'>Pitch</a> is a sticky black substance produced by combining then melting finely <a href=\'handbook://item-ancienttools:powderedcharcoal\'>powdered charcoal</a>, tree <a href=\'handbook://item-resin\'>resin</a>, and various fibrous materials such as <a href=\'handbook://item-drygrass\'>dry grass</a> or dried animal feces. 
+
+This material is exceptionally waterproof and sticky. Historically, it has been used to caulk the seams of wooden sailing vessels or to seal containers, such as food <a href=\'handbook://block-crock-burned-east\'>crocks</a>. Ancient Tools takes advantage of its waterproof property by allowing you to use firepits, pit kilns, and forges exposed to the elements whenever pitch is used as the fuel. 
+
+Additionally, pitch can be used to create long-lasting, brightly burning <a href=\'handbook://block-ancienttools:pitchtorch-extinct-up\'>torches</a> that won't be extinguished by rain. It can also be used to create <a href=\'handbooksearch://Chamberstick with Pitch\'>chambersticks</a> as a permenant lighting solution similar to oil lamps.    
+
+A detailed explanation of how to produce pitch can be found in the <a href=\"handbook://ancienttools-quickstart-guide-pitch\">Pitch Guide</a>.
 ",
 	"game:ancienttools-quickstart-guide-salve": "Salve Guide",
 	"game:ancienttools-quickstart-title-salve": "Crafting Mechanic: Salve Creation",
@@ -75,6 +85,22 @@ When the hide has been thoroughly <a href=\'handbook://item-hide-soaked-huge\'>s
 
 Now, the final part! Take your smoked hide and, using a knife, carefully cut it into strips of <a href=\'handbook://item-leather\'>leather</a>. This is performed in the crafting grid.
 	",
+	"game:ancienttools-quickstart-guide-pitch": "Pitch Guide",
+	"game:ancienttools-quickstart-title-pitch": "Crafting Mechanic: Pitch Creation",
+	"game:ancienttools-quickstart-text-pitch": "
+<a href=\'handbook://item-ancienttools:pitch-ball\'>Pitch</a> was once a highly saught after resource for its versatility. It could be used as a glue, a sealant, a fuel, and for many other purposes.
+
+There was no 'one way' to create pitch. Many different resources were combined for similar results. However, with Ancient Tools, you will need some <a href=\'handbook://item-charcoal\'>charcoal</a>, <a href=\'handbook://item-resin\'>resin</a>, and <a href=\'handbook://item-drygrass\'>dry grass</a> on hand for this process.
+
+To get started, you must grind two pieces of charcoal into <a href=\'handbook://item-ancienttools:powderedcharcoal\'>powdered charcoal</a> using a <a href=\'handbooksearch://mortar\'>mortar</a> and <a href=\'handbooksearch://pestle\'>pestle</a>, or any other means of grinding items. Take one piece of powdered charcoal and interact with a cooking pot using <icon name='rightmousebutton'></icon> to transform the pot into an <a href=\'handbook://block-ancienttools:pitchpot-empty\'>empty pitch container</a>.
+
+Next, fill up the container using <icon name='rightmousebutton'></icon> with 2 parts <a href=\'handbook://item-ancienttools:powderedcharcoal\'>powdered charcoal</a>, 4 parts <a href=\'handbook://item-resin\'>resin</a>, and 1 part <a href=\'handbook://item-drygrass\'>dry grass</a>. When the container is properly filled, it will convert into an <a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>unprepared pitch mixture</a>.
+
+Now, simply pick up the mixture and heat it in the nearest firepit to create <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>prepared pitch</a>. When it's been finished, you can place the pot on the ground and take pieces of pitch with an empty hand or by using a <a href=\'handbook://item-stick\'>stick</a>.
+	",
+	"game:handbook-crafting-title-pitch": "Created by",
+	"game:handbook-crafting-text-pitch": "Combining <a href=\'handbook://item-ancienttools:powderedcharcoal\'>powdered charcoal</a>, <a href=\'handbook://item-resin\'>resin</a>, and <a href=\'handbook://item-drygrass\'>dry grass</a> into an <a href=\'handbook://block-ancienttools:pitchpot-empty\'>empty pitch container</a> and cooking the <a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>resulting mixture</a> on a firepit. Place the <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>prepared pitch</a> on the ground to take individual pitch pieces.",
+
 	"blockhelp-place-pestle": "Place Pestle",
 	"blockhelp-place-resource": "Place Grindable Resource",
 	"blockhelp-grind-mortar": "Grind Resource",
@@ -99,6 +125,16 @@ Now, the final part! Take your smoked hide and, using a knife, carefully cut it 
 	"blockhelp-skin-hide": "Scrape Hide",
 	"blockhelp-take-hide-sack": "Take Hide Sack",
 
+	"blockhelp-insert-powderedcharcoal": "Insert Powdered Charcoal",
+	"blockhelp-insert-resin": "Insert Resin",
+	"blockhelp-insert-grass": "Insert Dry Grass",
+
+	"blockhelp-take-pitch": "Take Pitch",
+	"blockhelp-place-pitch": "Place Pitch",
+
+	"blockhelp-saucer-insert-object": "Insert Pitch/Candle",
+	"blockhelp-scrape-log": "Scrape",
+
 	"blockinfo-curingrack-no-entity": "Something went wrong with this block. The BlockEntity does not exist. Please break the block and place it again.",
 	"blockinfo-curingrack-hook-missing": "Curing Hook Missing",
 	"blockinfo-curingrack-meat-status": "- Cures In: {0} Days | Rots In: {1} Days",
@@ -114,6 +150,14 @@ Now, the final part! Take your smoked hide and, using a knife, carefully cut it 
 	"blockinfo-salve-mixwithwax": "Must be mixed with melted wax to create a healing salve.",
 	"blockinfo-salve-filled-remaining": "{0} salve portions remaining.",
 
+	"blockinfo-pitch-empty": "Fill with powdered charcoal, resin, and dry grass to create a pitch mixture.",
+	"blockinfo-pitch-insert": "Insert an item to get started.",
+	"blockinfo-contains": "Contains: ",
+	"blockinfo-pitch-empty-charcoal": "{0}/{1} powdered charcoal",
+	"blockinfo-pitch-empty-resin": "{0}/{1} resin",
+	"blockinfo-pitch-empty-grass": "{0}/{1} grass",
+	"blockinfo-pitch-remaining": "{0} pitch portions remaining.",
+
 	"game:handbook-crafting-title-strippedlog": "Created by",
 	"game:handbook-crafting-text-strippedlog": "Stripping wood from logs using an adze. Additionally, a stripped log will be returned when an adze is used with a log in the crafting grid.",
 
@@ -122,6 +166,9 @@ Now, the final part! Take your smoked hide and, using a knife, carefully cut it 
 
 	"game:handbook-crafting-title-salveportion": "Created by",
 	"game:handbook-crafting-text-salveportion": "Mixing a pot of <a href=\'handbook://block-ancienttools:salvepot-softwax\'>melted wax</a> with a pot of <a href=\'handbook://block-ancienttools:salvepot-barkoil\'>prepared bark oil</a> in-world to create a finished salve containing multiple portions. Portions can be taken from this salve with <icon name='rightmousebutton'></icon>.",
+
+	"game:handbook-crafting-title-pitch": "Created by",
+	"game:handbook-crafting-text-pitch": "Combining <a href=\'handbook://item-ancienttools:powderedcharcoal\'>powdered charcoal</a>, <a href=\'handbook://item-resin\'>resin</a>, and <a href=\'handbook://item-drygrass\'>dry grass</a> into an <a href=\'handbook://block-ancienttools:pitchpot-empty\'>empty pitch container</a> and cooking the <a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>resulting mixture</a> on a firepit. Place the <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>prepared pitch</a> on the ground to take individual pitch pieces.",
 
 	"block-mortar-peridotite": "Peridotite Mortar",
 	"block-mortar-andesite": "Andesite Mortar",
@@ -200,6 +247,85 @@ Now, the final part! Take your smoked hide and, using a knife, carefully cut it 
 	"block-hidewatersack-soaked-large": "Large Soaked Hide Water Sack",
 	"block-hidewatersack-soaked-medium": "Medium Soaked Hide Water Sack",
 	"block-hidewatersack-soaked-small": "Small Soaked Hide Water Sack",
+
+	"block-pitchpot-empty": "Empty Pitch Container",
+	"block-pitchpot-unmixed": "Unprepared Pitch Mixture",
+	"block-pitchpot-finishedpitchinventory": "Prepared Pitch",
+	"block-pitchpot-finishedpitch": "Prepared Pitch",
+
+	"block-pitchtorch-extinct-*": "Unlit Pitch Torch",
+	"block-pitchtorch-lit-*": "Lit Pitch Torch",
+	"block-pitchtorch-melted-*": "Melted Pitch Torch",
+
+	"block-lampsaucer-copper-empty-extinct-*": "Copper Chamberstick",
+	"block-lampsaucer-brass-empty-extinct-*": "Brass Chamberstick",
+	"block-lampsaucer-bismuth-empty-extinct-*": "Bismuth Chamberstick",
+	"block-lampsaucer-tinbronze-empty-extinct-*": "Tin Bronze Chamberstick",
+	"block-lampsaucer-bismuthbronze-empty-extinct-*": "Bismuth Bronze Chamberstick",
+	"block-lampsaucer-blackbronze-empty-extinct-*": "Black Bronze Chamberstick",
+	"block-lampsaucer-molybdochalkos-empty-extinct-*": "Molybdochalkos Chamberstick",
+	"block-lampsaucer-gold-empty-extinct-*": "Gold Chamberstick",
+	"block-lampsaucer-silver-empty-extinct-*": "Silver Chamberstick",
+	"block-lampsaucer-iron-empty-extinct-*": "Iron Chamberstick",
+	"block-lampsaucer-meteoriciron-empty-extinct-*": "Meteoric Iron Chamberstick",
+	"block-lampsaucer-steel-empty-extinct-*": "Steel Chamberstick",
+
+	"block-lampsaucer-copper-candle-extinct-*": "Unlit Copper Chamberstick with Candle",
+	"block-lampsaucer-brass-candle-extinct-*": "Unlit Brass Chamberstick with Candle",
+	"block-lampsaucer-bismuth-candle-extinct-*": "Unlit Bismuth Chamberstick with Candle",
+	"block-lampsaucer-tinbronze-candle-extinct-*": "Unlit Tin Bronze Chamberstick with Candle",
+	"block-lampsaucer-bismuthbronze-candle-extinct-*": "Unlit Bismuth Bronze Chamberstick with Candle",
+	"block-lampsaucer-blackbronze-candle-extinct-*": "Unlit Black Bronze Chamberstick with Candle",
+	"block-lampsaucer-molybdochalkos-candle-extinct-*": "Unlit Molybdochalkos Chamberstick with Candle",
+	"block-lampsaucer-gold-candle-extinct-*": "Unlit Gold Chamberstick with Candle",
+	"block-lampsaucer-silver-candle-extinct-*": "Unlit Silver Chamberstick with Candle",
+	"block-lampsaucer-iron-candle-extinct-*": "Unlit Iron Chamberstick with Candle",
+	"block-lampsaucer-meteoriciron-candle-extinct-*": "Unlit Meteoric Iron Chamberstick with Candle",
+	"block-lampsaucer-steel-candle-extinct-*": "Unlit Steel Chamberstick with Candle",
+
+	"block-lampsaucer-copper-candle-lit-*": "Lit Copper Chamberstick with Candle",
+	"block-lampsaucer-brass-candle-lit-*": "Lit Brass Chamberstick with Candle",
+	"block-lampsaucer-bismuth-candle-lit-*": "Lit Bismuth Chamberstick with Candle",
+	"block-lampsaucer-tinbronze-candle-lit-*": "Lit Tin Bronze Chamberstick with Candle",
+	"block-lampsaucer-bismuthbronze-candle-lit-*": "Lit Bismuth Bronze Chamberstick with Candle",
+	"block-lampsaucer-blackbronze-candle-lit-*": "Lit Black Bronze Chamberstick with Candle",
+	"block-lampsaucer-molybdochalkos-candle-lit-*": "Lit Molybdochalkos Chamberstick with Candle",
+	"block-lampsaucer-gold-candle-lit-*": "Lit Gold Chamberstick with Candle",
+	"block-lampsaucer-silver-candle-lit-*": "Lit Silver Chamberstick with Candle",
+	"block-lampsaucer-iron-candle-lit-*": "Lit Iron Chamberstick with Candle",
+	"block-lampsaucer-meteoriciron-candle-lit-*": "Lit Meteoric Iron Chamberstick with Candle",
+	"block-lampsaucer-steel-candle-lit-*": "Lit Steel Chamberstick with Candle",
+
+	"block-lampsaucer-copper-pitch-extinct-*": "Unlit Copper Chamberstick with Pitch",
+	"block-lampsaucer-brass-pitch-extinct-*": "Unlit Brass Chamberstick with Pitch",
+	"block-lampsaucer-bismuth-pitch-extinct-*": "Unlit Bismuth Chamberstick with Pitch",
+	"block-lampsaucer-tinbronze-pitch-extinct-*": "Unlit Tin Bronze Chamberstick with Pitch",
+	"block-lampsaucer-bismuthbronze-pitch-extinct-*": "Unlit Bismuth Bronze Chamberstick with Pitch",
+	"block-lampsaucer-blackbronze-pitch-extinct-*": "Unlit Black Bronze Chamberstick with Pitch",
+	"block-lampsaucer-molybdochalkos-pitch-extinct-*": "Unlit Molybdochalkos Chamberstick with Pitch",
+	"block-lampsaucer-gold-pitch-extinct-*": "Unlit Gold Chamberstick with Pitch",
+	"block-lampsaucer-silver-pitch-extinct-*": "Unlit Silver Chamberstick with Pitch",
+	"block-lampsaucer-iron-pitch-extinct-*": "Unlit Iron Chamberstick with Pitch",
+	"block-lampsaucer-meteoriciron-pitch-extinct-*": "Unlit Meteoric Iron Chamberstick with Pitch",
+	"block-lampsaucer-steel-pitch-extinct-*": "Unlit Steel Chamberstick with Pitch",
+
+	"block-lampsaucer-copper-pitch-lit-*": "Lit Copper Chamberstick with Pitch",
+	"block-lampsaucer-brass-pitch-lit-*": "Lit Brass Chamberstick with Pitch",
+	"block-lampsaucer-bismuth-pitch-lit-*": "Lit Bismuth Chamberstick with Pitch",
+	"block-lampsaucer-tinbronze-pitch-lit-*": "Lit Tin Bronze Chamberstick with Pitch",
+	"block-lampsaucer-bismuthbronze-pitch-lit-*": "Lit Bismuth Bronze Chamberstick with Pitch",
+	"block-lampsaucer-blackbronze-pitch-lit-*": "Lit Black Bronze Chamberstick with Pitch",
+	"block-lampsaucer-molybdochalkos-pitch-lit-*": "Lit Molybdochalkos Chamberstick with Pitch",
+	"block-lampsaucer-gold-pitch-lit-*": "Lit Gold Chamberstick with Pitch",
+	"block-lampsaucer-silver-pitch-lit-*": "Lit Silver Chamberstick with Pitch",
+	"block-lampsaucer-iron-pitch-lit-*": "Lit Iron Chamberstick with Pitch",
+	"block-lampsaucer-meteoriciron-pitch-lit-*": "Lit Meteoric Iron Chamberstick with Pitch",
+	"block-lampsaucer-steel-pitch-lit-*": "Lit Steel Chamberstick with Pitch",
+
+	"block-directionalresin-resin-pine-*": "Leaking pine log with resin",
+	"block-directionalresin-resinharvested-pine-*": "Leaking pine log",
+	"block-directionalresin-resin-acacia-*": "Leaking acacia log with resin",
+	"block-directionalresin-resinharvested-acacia-*": "Leaking acacia log",
 
 	"itemhelp-adze-stripbark": "Strip Bark",
 	"itemhelp-heal": "Heal",
@@ -314,4 +440,7 @@ Now, the final part! Take your smoked hide and, using a knife, carefully cut it 
 	"item-brainingsolutionportion": "Braining Solution",
 	"game:incontainer-item-brainingsolutionportion": "Braining Solution",
 	"incontainer-item-brainingsolutionportion": "Braining Solution",
+
+	"item-powderedcharcoal": "Powdered Charcoal",
+	"item-pitch-*": "Pitch",
 }

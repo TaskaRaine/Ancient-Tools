@@ -1,0 +1,28 @@
+﻿{
+	ingredient: { type: "item", code: "game:ingot-*", name: "metal", 
+		allowedVariants: ["copper", "brass", "bismuth", "tinbronze", "bismuthbronze", "blackbronze", "molybdochalkos", "gold", "silver", "iron", "meteoriciron", "steel"]
+	},
+	pattern: [[
+		"____#____",
+		"____#____",
+		"___###___",
+		"__#####__",
+		"_#######_",
+		"__#####__",
+		"___###___",
+		"____#____",
+	],
+	[
+		"_________",
+		"_________",
+		"_________",
+		"___###___",
+		"___#_#___",
+		"___###___",
+		"_________",
+		"_________",
+	],
+	],
+	name: "Lamp Saucer",
+	output: { type: "block", code: "ancienttools:lampsaucer-{metal}-empty-extinct-up"  }
+}

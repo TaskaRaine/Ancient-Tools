@@ -1,0 +1,9 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes/isPitchResin",
+		"value": true,
+		"file": "game:itemtypes/resource/resin",
+		"side": "Server",
+	},
+]

@@ -1,0 +1,29 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes/buildMats/fuel/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:pitch-ball",
+			quantity: 1,
+			eleCode: "Coal",
+			textureCodeReplace: { from: "coal", to: "pitch" },
+			burnTimeHours: 12
+		},
+		"file": "game:blocktypes/wood/pitkiln",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/pitch",
+		"value": { base: "ancienttools:block/pitch/pitch" },
+		"file": "game:blocktypes/wood/pitkiln",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/entityBehaviors/-",
+		"value": { "name": "FireproofFuel" },
+		"file": "game:blocktypes/wood/pitkiln"
+	}
+]

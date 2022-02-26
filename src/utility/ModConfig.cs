@@ -36,6 +36,7 @@ namespace AncientTools.Utility
             api.World.Config.SetDouble("SalveMixTime", config.SalveMixTime);
             api.World.Config.SetBool("BarkBreadEnabled", config.BarkBreadEnabled);
             api.World.Config.SetBool("SalveEnabled", config.SalveEnabled);
+            api.World.Config.SetBool("AllowCarvingForResin", config.AllowCarvingForResin);
             api.World.Config.SetFloat("SkinningTime", config.SkinningTime);
             api.World.Config.SetFloat("WaterSackConversionHours", config.WaterSackConversionHours);
             api.World.Config.SetFloat("BrainedHideSealHours", config.BrainedHideSealHours);

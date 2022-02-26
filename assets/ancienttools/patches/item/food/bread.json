@@ -19,7 +19,7 @@
 		"op": "add",
 		"path": "/nutritionPropsByType/*-birch-partbaked",
 		"value": {
-			saturation: 60, foodcategory: "Grain"
+			saturation: 40, foodcategory: "Grain"
 		},
 		"file": "game:itemtypes/food/bread",
 		"side": "Server",
@@ -29,7 +29,7 @@
 		"op": "add",
 		"path": "/nutritionPropsByType/*-birch-perfect",
 		"value": {
-			saturation: 150, foodcategory: "Grain"
+			saturation: 100, foodcategory: "Grain"
 		},
 		"file": "game:itemtypes/food/bread",
 		"side": "Server",
@@ -39,7 +39,7 @@
 		"op": "add",
 		"path": "/nutritionPropsByType/*-birch-charred",
 		"value": {
-			saturation: 90, foodcategory: "Grain"
+			saturation: 60, foodcategory: "Grain"
 		},
 		"file": "game:itemtypes/food/bread",
 		"side": "Server",
@@ -49,7 +49,7 @@
 		"op": "add",
 		"path": "/nutritionPropsByType/*-pine-partbaked",
 		"value": {
-			saturation: 60, foodcategory: "Grain"
+			saturation: 40, foodcategory: "Grain"
 		},
 		"file": "game:itemtypes/food/bread",
 		"side": "Server",
@@ -59,7 +59,7 @@
 		"op": "add",
 		"path": "/nutritionPropsByType/*-pine-perfect",
 		"value": {
-			saturation: 150, foodcategory: "Grain"
+			saturation: 100, foodcategory: "Grain"
 		},
 		"file": "game:itemtypes/food/bread",
 		"side": "Server",
@@ -69,7 +69,7 @@
 		"op": "add",
 		"path": "/nutritionPropsByType/*-pine-charred",
 		"value": {
-			saturation: 90, foodcategory: "Grain"
+			saturation: 60, foodcategory: "Grain"
 		},
 		"file": "game:itemtypes/food/bread",
 		"side": "Server",

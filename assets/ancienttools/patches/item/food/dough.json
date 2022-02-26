@@ -44,34 +44,18 @@
 		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
-		"op": "add",
-		"path": "/0/ingredients/F/allowedVariants/-",
-		"value": "birch",
-		"file": "game:recipes/grid/dough",
+		"op": "replace",
+		"path": "/0/enabled",
+		"value": "true",
+		"file": "recipes/grid/food/barkdough",
 		"side": "Server",
 		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
-		"op": "add",
-		"path": "/0/ingredients/F/allowedVariants/-",
-		"value": "pine",
-		"file": "game:recipes/grid/dough",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
-		"op": "add",
-		"path": "/1/ingredients/F/allowedVariants/-",
-		"value": "birch",
-		"file": "game:recipes/grid/dough",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
-		"op": "add",
-		"path": "/1/ingredients/F/allowedVariants/-",
-		"value": "pine",
-		"file": "game:recipes/grid/dough",
+		"op": "replace",
+		"path": "/1/enabled",
+		"value": "true",
+		"file": "recipes/grid/food/barkdough",
 		"side": "Server",
 		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},

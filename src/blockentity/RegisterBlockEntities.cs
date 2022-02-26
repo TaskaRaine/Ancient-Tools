@@ -1,6 +1,6 @@
 ﻿using Vintagestory.API.Common;
 
-namespace AncientTools.BlockEntity
+namespace AncientTools.BlockEntities
 {
     class RegisterBlockEntities: ModSystem
     {
@@ -14,6 +14,8 @@ namespace AncientTools.BlockEntity
             api.RegisterBlockEntityClass("BEFinishedSalve", typeof(BEFinishedSalve));
             api.RegisterBlockEntityClass("BEStretchingFrame", typeof(BEStretchingFrame));
             api.RegisterBlockEntityClass("BEHideWaterSack", typeof(BEHideWaterSack));
+            api.RegisterBlockEntityClass("BEPitchContainer", typeof(BEPitchContainer));
+            api.RegisterBlockEntityClass("BEFinishedPitch", typeof(BEFinishedPitch));
         }
     }
 }

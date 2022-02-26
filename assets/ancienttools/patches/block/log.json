@@ -6,5 +6,57 @@
         },
         "file": "game:blocktypes/wood/woodtyped/log",
 		"side": "Server"
+    },
+    {
+        "op": "add",
+        "path": "/behaviorsByType/@log-grown-(pine|acacia)-(ud|ns|we)",
+        "value": [
+            { "name": "ConvertToResinLog" },
+            { "name": "PushEventOnBlockBroken",	properties: {eventName: "testForDecay"}},
+            { "name": "MyceliumHost" }
+        ],
+        "file": "game:blocktypes/wood/woodtyped/log",
+        "side": "Server",
+        "condition": { "when": "AllowCarvingForResin", "isValue": "true" }
+    },
+    {
+        "op": "move",
+		"frompath": "/behaviorsByType/*-grown-*",
+		"path": "/temp",
+		"file": "game:blocktypes/wood/woodtyped/log",
+		"side": "Server",
+        "condition": { "when": "AllowCarvingForResin", "isValue": "true" }
+    },
+    {
+        "op": "move",
+		"frompath": "/temp",
+		"path": "/behaviorsByType/*-grown-*",
+		"file": "game:blocktypes/wood/woodtyped/log",
+		"side": "Server",
+        "condition": { "when": "AllowCarvingForResin", "isValue": "true" }
+    },
+    {
+        "op": "move",
+		"frompath": "/behaviorsByType/*",
+		"path": "/temp",
+		"file": "game:blocktypes/wood/woodtyped/log",
+		"side": "Server",
+        "condition": { "when": "AllowCarvingForResin", "isValue": "true" }
+    },
+    {
+        "op": "move",
+		"frompath": "/temp",
+		"path": "/behaviorsByType/*",
+		"file": "game:blocktypes/wood/woodtyped/log",
+		"side": "Server",
+        "condition": { "when": "AllowCarvingForResin", "isValue": "true" }
+    },
+    {
+        "op": "add",
+        "path": "/enabled",
+        "value": "false",
+        "file": "blocktypes/directionalresin",
+        "side": "Server",
+        "condition": { "when": "AllowCarvingForResin", "isValue": "false" }
     }
 ]

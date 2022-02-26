@@ -1,12 +1,14 @@
 ﻿using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.Datastructures;
+using Vintagestory.API.Server;
 
-namespace AncientTools.BlockEntity
+namespace AncientTools.BlockEntities
 {
     //-- The main purpose for this block entity is to keep track of the conversion time remaining for a raw hide sack --//
     class BEHideWaterSack: Vintagestory.API.Common.BlockEntity
     {
+        private ICoreAPI coreAPI;
         private long tickListener;
 
         private double previousHourChecked;
@@ -17,21 +19,35 @@ namespace AncientTools.BlockEntity
         public override void Initialize(ICoreAPI api)
         {
             if (api.Side == EnumAppSide.Server)
-                tickListener = api.World.RegisterGameTickListener(HourlyTicker, (int)(3600000 / api.World.Calendar.SpeedOfTime));
+            {
+                coreAPI = api;
 
-            previousHourChecked = api.World.Calendar.TotalHours;
+                tickListener = api.World.RegisterGameTickListener(HourlyTicker, (int)(3600000 / api.World.Calendar.SpeedOfTime));
+                this.MarkDirty(false);
+            }
 
             base.Initialize(api);
         }
         public override void FromTreeAttributes(ITreeAttribute tree, IWorldAccessor worldAccessForResolve)
         {
             timeRemaining = tree.GetDouble("timeremaining");
+            previousHourChecked = tree.GetDouble("previoushourchecked", worldAccessForResolve.Calendar.TotalHours);
 
             base.FromTreeAttributes(tree, worldAccessForResolve);
         }
         public override void ToTreeAttributes(ITreeAttribute tree)
         {
             tree.SetDouble("timeremaining", timeRemaining);
+
+            if (previousHourChecked != 0)
+            {
+                tree.SetDouble("previoushourchecked", previousHourChecked);
+            }
+            else
+            {
+                tree.SetDouble("previoushourchecked", Api.World.Calendar.TotalHours);
+                previousHourChecked = Api.World.Calendar.TotalHours;
+            }
 
             base.ToTreeAttributes(tree);
         }
@@ -53,8 +69,7 @@ namespace AncientTools.BlockEntity
         {
             base.OnBlockUnloaded();
 
-            if (Api.Side == EnumAppSide.Server)
-                Api.World.UnregisterGameTickListener(tickListener);
+            Api.World.UnregisterGameTickListener(tickListener);
         }
         public string GetTimeRemainingInfo()
         {
@@ -70,15 +85,15 @@ namespace AncientTools.BlockEntity
         }
         private void HourlyTicker(float deltaTime)
         {
-            thisHourChecked = Api.World.Calendar.TotalHours;
+            thisHourChecked = coreAPI.World.Calendar.TotalHours;
 
             timeRemaining -= (thisHourChecked - previousHourChecked);
 
             if (timeRemaining <= 0)
             {
-                Api.World.BlockAccessor.ExchangeBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "hidewatersack-soaked-" + Block.LastCodePart())).Id, this.Pos);
+                coreAPI.World.BlockAccessor.ExchangeBlock(coreAPI.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "hidewatersack-soaked-" + Block.LastCodePart())).Id, this.Pos);
                 OnBlockRemoved();
-                Api.World.BlockAccessor.RemoveBlockEntity(this.Pos);
+                coreAPI.World.BlockAccessor.RemoveBlockEntity(this.Pos);
             }
 
             previousHourChecked = thisHourChecked;

@@ -1,0 +1,51 @@
+﻿[
+	{
+		ingredientPattern: " P TST S ",
+		width: 3,
+		height: 3,
+		ingredients: {
+			"P": { 
+				type: "item", 
+				name: "pitch",
+				code: "pitch-*" 
+			},
+			"T": {
+				type: "item",
+				name: "twine",
+				code: "game:flaxtwine"
+			},
+			"S": {
+				type: "item",
+				name: "stick",
+				code: "game:stick"
+			}
+		},
+		output: { 
+			type: "block", 
+			code: "pitchtorch-extinct-up",
+			quantity: 1
+		}
+	},
+	{
+		ingredientPattern: "   TST S ",
+		width: 3,
+		height: 3,
+		ingredients: {
+			"T": {
+				type: "item",
+				name: "twine",
+				code: "game:flaxtwine"
+			},
+			"S": {
+				type: "item",
+				name: "stick",
+				code: "game:stick"
+			}
+		},
+		output: { 
+			type: "block", 
+			code: "pitchtorch-melted-up",
+			quantity: 1
+		}
+	}
+]

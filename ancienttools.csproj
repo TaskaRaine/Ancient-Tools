@@ -61,13 +61,21 @@
       <HintPath>H:\VintageStory 1.16.0\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>H:\VintageStory 1.16.0\Lib\0Harmony.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\ancienttools\credits.txt" />
+    <Content Include="assets\ancienttools\sounds\block\knifecarve.ogg" />
     <Content Include="assets\ancienttools\sounds\block\mortargrind.ogg" />
     <Content Include="assets\ancienttools\sounds\block\salvepour.ogg" />
+    <Content Include="assets\ancienttools\sounds\block\saucer.ogg" />
     <Content Include="assets\ancienttools\sounds\block\stripwood.ogg" />
     <Content Include="assets\ancienttools\textures\block\liquid\brainingsolution.png" />
+    <Content Include="assets\ancienttools\textures\block\pitch\pitch.png" />
+    <Content Include="assets\ancienttools\textures\block\pitch\pitch_torchlit.png" />
+    <Content Include="assets\ancienttools\textures\block\pitch\pitch_torchunlit.png" />
     <Content Include="assets\ancienttools\textures\block\salve\barkoil.png" />
     <Content Include="assets\ancienttools\textures\block\salve\softwax.png" />
     <Content Include="assets\ancienttools\textures\block\strippedlog\acacia.png" />
@@ -88,6 +96,7 @@
     <Content Include="assets\ancienttools\textures\block\mortar\mortar_grain.png" />
     <Content Include="assets\ancienttools\textures\item\medicine\salveportion.png" />
     <Content Include="assets\ancienttools\textures\item\resource\brain.png" />
+    <Content Include="assets\ancienttools\textures\item\resource\crushed\powderedcharcoal.png" />
     <Content Include="assets\game\textures\block\food\pie\birch1.png" />
     <Content Include="assets\game\textures\block\food\pie\birch2.png" />
     <Content Include="assets\game\textures\block\food\pie\birch3.png" />
@@ -115,14 +124,25 @@
   <ItemGroup>
     <None Include="assets\ancienttools\blocktypes\barkbasket.json" />
     <None Include="assets\ancienttools\blocktypes\curingrack.json" />
+    <None Include="assets\ancienttools\blocktypes\directionalresin.json" />
     <None Include="assets\ancienttools\blocktypes\hidewatersack.json" />
+    <None Include="assets\ancienttools\blocktypes\lampsaucer.json" />
+    <None Include="assets\ancienttools\blocktypes\pitchpot.json" />
+    <None Include="assets\ancienttools\blocktypes\pitchtorch.json" />
     <None Include="assets\ancienttools\blocktypes\salvepot.json" />
     <None Include="assets\ancienttools\blocktypes\stretchingframe.json" />
     <None Include="assets\ancienttools\blocktypes\strippedlog.json" />
+    <None Include="assets\ancienttools\config\handbook\pitchguide.json" />
+    <None Include="assets\ancienttools\itemtypes\resources\powderedcharcoal.json" />
+    <None Include="assets\ancienttools\itemtypes\resources\pitch.json" />
     <None Include="assets\ancienttools\lang\fr.json" />
     <None Include="assets\ancienttools\lang\ja.json" />
+    <None Include="assets\ancienttools\patches\block\firepit.json" />
+    <None Include="assets\ancienttools\patches\block\forge.json" />
+    <None Include="assets\ancienttools\patches\block\pitkiln.json" />
     <None Include="assets\ancienttools\patches\block\pot.json" />
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\dough.json" />
+    <None Include="assets\ancienttools\patches\compatibility\bricklayers\mortar.json" />
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\barkbasket.json" />
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\hidewatersack.json" />
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\salvepot.json" />
@@ -137,6 +157,7 @@
     <None Include="assets\ancienttools\itemtypes\tools\pestle.json" />
     <None Include="assets\ancienttools\itemtypes\resources\salveportion.json" />
     <None Include="assets\ancienttools\patches\block\salve.json" />
+    <None Include="assets\ancienttools\patches\compatibility\dragonflies\mortar.json" />
     <None Include="assets\ancienttools\patches\compatibility\lichen\deer.json" />
     <None Include="assets\ancienttools\patches\compatibility\lichen\white-hart.json" />
     <None Include="assets\ancienttools\patches\compatibility\medievalexpansion\auroch.json" />
@@ -156,13 +177,95 @@
     <None Include="assets\ancienttools\patches\entity\player\player.json" />
     <None Include="assets\ancienttools\patches\entity\player\seraph-faceless.json" />
     <None Include="assets\ancienttools\patches\item\resources\bark.json" />
+    <None Include="assets\ancienttools\patches\item\resources\charcoal.json" />
+    <None Include="assets\ancienttools\patches\item\resources\drygrass.json" />
     <None Include="assets\ancienttools\patches\item\resources\hide.json" />
+    <None Include="assets\ancienttools\patches\item\resources\resin.json" />
     <None Include="assets\ancienttools\patches\recipes\brainedhide.json" />
     <None Include="assets\ancienttools\patches\recipes\tannin.json" />
     <None Include="assets\ancienttools\recipes\barrel\tannin.json" />
+    <None Include="assets\ancienttools\recipes\grid\block\lampsaucer.json" />
+    <None Include="assets\ancienttools\recipes\grid\block\pitchpot.json" />
+    <None Include="assets\ancienttools\recipes\grid\block\pitchtorch.json" />
     <None Include="assets\ancienttools\recipes\grid\compatibility\bricklayers\dough.json" />
     <None Include="assets\ancienttools\recipes\grid\compatibility\vanillavariants\dough.json" />
     <None Include="assets\ancienttools\recipes\grid\compatibility\vanillavariants\hidewatersack.json" />
+    <None Include="assets\ancienttools\recipes\grid\food\barkdough.json" />
+    <None Include="assets\ancienttools\recipes\grid\food\sealedcrock.json" />
+    <None Include="assets\ancienttools\recipes\grid\item\pitch.json" />
+    <None Include="assets\ancienttools\recipes\smithing\lampsaucer.json" />
+    <None Include="assets\ancienttools\shapes\block\lampsaucer\candle_ground_extinct.json" />
+    <None Include="assets\ancienttools\shapes\block\lampsaucer\candle_ground_lit.json" />
+    <None Include="assets\ancienttools\shapes\block\lampsaucer\candle_wall_extinct.json" />
+    <None Include="assets\ancienttools\shapes\block\lampsaucer\candle_wall_lit.json" />
+    <None Include="assets\ancienttools\shapes\block\lampsaucer\empty_ground_extinct.json" />
+    <None Include="assets\ancienttools\shapes\block\lampsaucer\empty_wall_extinct.json" />
+    <None Include="assets\ancienttools\shapes\block\lampsaucer\pitch_ground_extinct.json" />
+    <None Include="assets\ancienttools\shapes\block\lampsaucer\pitch_ground_lit.json" />
+    <None Include="assets\ancienttools\shapes\block\lampsaucer\pitch_wall_extinct.json" />
+    <None Include="assets\ancienttools\shapes\block\lampsaucer\pitch_wall_lit.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_yellow.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_white.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_redbrown.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_red.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_purple.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_pink.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_orange.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_malachite.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_lapislazuli.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_greenblue.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_green.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_gold.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_blue.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_brown.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_black.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_cookedbones.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_titanium.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_tin.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_rhodochrosite.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_pentlandite.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_malachite.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_magnetite.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_limonite.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_hematite.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_granite.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_gold.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_galena.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_copper.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_coal.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_lead.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_chromite.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_cassiterite.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_ilmenite.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_bauxite.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_olivine.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_quartz.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_cinnabar.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_lapislazuli.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_insect_cricket.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_insect_grasshopper.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_dragonflies_pileofdrycochineal.json" />
+    <None Include="assets\ancienttools\shapes\block\pitchtorch\pitchtorch_ground_extinct.json" />
+    <None Include="assets\ancienttools\shapes\block\pitchtorch\pitchtorch_ground_lit.json" />
+    <None Include="assets\ancienttools\shapes\block\pitchtorch\pitchtorch_ground_melted.json" />
+    <None Include="assets\ancienttools\shapes\block\pitchtorch\pitchtorch_wall_extinct.json" />
+    <None Include="assets\ancienttools\shapes\block\pitchtorch\pitchtorch_wall_lit.json" />
+    <None Include="assets\ancienttools\shapes\block\pitchtorch\pitchtorch_wall_melted.json" />
+    <None Include="assets\ancienttools\shapes\block\pitch\finishedpitch.json" />
+    <None Include="assets\ancienttools\shapes\block\pitch\preparedpitch.json" />
+    <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\charcoal1.json" />
+    <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\charcoal2.json" />
+    <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\grass1.json" />
+    <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\pitch1.json" />
+    <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\pitch2.json" />
+    <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\pitch3.json" />
+    <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\pitch4.json" />
+    <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\resin1.json" />
+    <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\resin2.json" />
+    <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\resin3.json" />
+    <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\resin4.json" />
+    <None Include="assets\ancienttools\shapes\item\resource\pitchball.json" />
+    <None Include="assets\ancienttools\shapes\item\resource\pitchstick.json" />
     <None Include="assets\game\patches\recipes\cooking\meatystew.json" />
     <None Include="assets\ancienttools\recipes\barrel\brainedhide.json" />
     <None Include="assets\ancienttools\recipes\barrel\brainingsolution.json" />
@@ -294,10 +397,10 @@
     <None Include="resources\guide\mortarshapes_guide.md" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="assets\ancienttools\patches\item\tool\" />
     <Folder Include="assets\ancienttools\shapes\entity\" />
     <Folder Include="assets\ancienttools\textures\item\food\flour\" />
     <Folder Include="assets\game\recipes\" />
-    <Folder Include="src\blockbehavior\" />
     <Folder Include="src\entities\" />
   </ItemGroup>
   <ItemGroup>
@@ -305,19 +408,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\ancienttools\patches\compatibility\lichen\gemsbok.json" />
+    <Compile Include="src\blockbehavior\BlockBehaviorConvertToResinLog.cs" />
+    <Compile Include="src\blockentitybehavior\BlockEntityBehaviorFireproofFuel.cs" />
+    <Compile Include="src\blockbehavior\RegisterBlockBehaviors.cs" />
+    <Compile Include="src\blockentitybehavior\RegisterBlockEntityBehaviors.cs" />
     <Compile Include="src\blockentity\BEHideWaterSack.cs" />
     <Compile Include="src\blockentity\BEStretchingFrame.cs" />
+    <Compile Include="src\blockentity\pitch\BEFinishedPitch.cs" />
+    <Compile Include="src\blockentity\pitch\BEPitchContainer.cs" />
     <Compile Include="src\blocks\HideWaterSack.cs" />
+    <Compile Include="src\blocks\PitchTorch.cs" />
+    <Compile Include="src\blocks\pitch\Pitch.cs" />
+    <Compile Include="src\blocks\pitch\PitchContainer.cs" />
+    <Compile Include="src\blocks\pitch\PitchInventory.cs" />
+    <Compile Include="src\blocks\LampSaucer.cs" />
     <Compile Include="src\blocks\StretchingFrame.cs" />
+    <Compile Include="src\blocks\WaterproofTorch.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorConvertHide.cs" />
+    <Compile Include="src\harmony\HarmonyBurning.cs" />
+    <Compile Include="src\harmony\HarmonyFirepit.cs" />
+    <Compile Include="src\harmony\HarmonyForge.cs" />
+    <Compile Include="src\harmony\HarmonyPitKiln.cs" />
+    <Compile Include="src\harmony\HarmonySetup.cs" />
     <Compile Include="src\items\ItemBark.cs" />
     <Compile Include="src\items\ItemBrain.cs" />
     <Compile Include="src\utility\ModConfig.cs" />
     <Compile Include="src\utility\RegisterConfig.cs" />
     <None Include="assets\ancienttools\recipes\grid\tool\curinghook.json" />
     <None Include="assets\ancienttools\patches\item\food\bread.json" />
-    <Compile Include="src\blockentity\BEFinishedSalve.cs" />
-    <Compile Include="src\blockentity\BESalveContainer.cs" />
+    <Compile Include="src\blockentity\salves\BEFinishedSalve.cs" />
+    <Compile Include="src\blockentity\salves\BESalveContainer.cs" />
     <Compile Include="src\blocks\BarkBasket.cs" />
     <Compile Include="src\blocks\salves\Salve.cs" />
     <Compile Include="src\blocks\salves\SalveContainer.cs" />

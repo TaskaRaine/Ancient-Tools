@@ -1,0 +1,85 @@
+﻿{
+	code: "pitch",
+	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
+	attributes: {
+		handbook: {
+			groupBy: ["*"],
+			extraSections: [
+				{ title: "handbook-crafting-title-pitch", text: "handbook-crafting-text-pitch" }
+			]
+		},
+		waterproofFuel: true
+	},
+	variantgroups:[
+		{ code: "type", states: [ "ball", "stick" ] }
+	],
+	drawtype: "json",
+	shapeByType: {
+		"*-ball": { base: "item/resource/pitchball" },
+		"*-stick": { base: "item/resource/pitchstick" }
+	},
+	texturesByType: { 
+		"*-ball": { 
+			pitch: { base: "block/pitch/pitch" }
+		},
+		"*-stick": { 
+			pitch: { base: "block/pitch/pitch" },
+			oak: { base: "game:block/wood/debarked/oak" }
+		}
+	},
+	maxstacksize: 64,
+	combustibleProps: {
+		burnTemperature: 1400,
+		burnDuration: 30,
+	},
+	guiTransformByType: {
+		"*-ball": {
+			rotation: { x: 151, y: -25, z: 0 },
+			origin: { x: 0.65, y: -0.02, z: 0.8 },
+			scale: 4.21
+		},
+		"*-stick": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 180, y: -25, z: -48 },
+			origin: { x: 0.65, y: 0.7, z: 1 },
+			scale: 1.85
+		}
+	},
+	fpHandTransformByType: {
+		"*-ball": {
+			rotation: { x: -2, y: 90, z: -30 },
+			scale: 1.75
+		},
+		"*-stick": {
+			translation: { x: 0.05, y: -0.2, z: 0 },
+			rotation: { x: 0, y: 93, z: -34 },
+			scale: 1.39
+		}
+	},
+	tpHandTransformByType: {
+		"*-ball": {
+			rotation: { x: -9, y: -6, z: -95 },
+			origin: { x: 0.16, y: 1, z: 0.6 },
+			scale: 0.5
+		},
+		"*-stick": {
+			rotation: { x: -2, y: 0, z: -83 },
+			origin: { x: 0.16, y: 1.1, z: 0.65 },
+			scale: 0.5
+		}
+	},
+	groundTransformByType: {
+		"*-ball": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 180, y: 0, z: 0 },
+			origin: { x: 0.5, y: 0.2, z: 0.5299 },
+			scale: 2.41
+		},
+		"*-stick": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 90, y: 0, z: 90 },
+			origin: { x: 0.45, y: 0.2, z: 0.5299 },
+			scale: 2.71
+		}
+	}
+}

@@ -7,10 +7,8 @@
 		handbook: {
 			groupBy: ["curingrack-*-ns-full"]
 		},
-		perishrate: {
-			"normal": {
-				"unknown": 0.15
-			}
+		transitionrate: {
+			"perish": 0.70
 		}
 	},
 	variantgroups: [

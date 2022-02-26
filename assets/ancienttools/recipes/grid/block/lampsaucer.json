@@ -1,0 +1,44 @@
+﻿[
+	{
+		ingredientPattern: "CS",
+		width: 1,
+		height: 2,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "game:candle"
+			},
+			"S": {
+				type: "block",
+				code: "lampsaucer-*-empty-extinct-up",
+				name: "metal"
+			}
+		},
+		output: {
+			type: "block",
+			code: "lampsaucer-{metal}-candle-extinct-up",
+			quantity: 1
+		}
+	},
+	{
+		ingredientPattern: "CS",
+		width: 1,
+		height: 2,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "pitch-*"
+			},
+			"S": {
+				type: "block",
+				code: "lampsaucer-*-empty-extinct-up",
+				name: "metal"
+			}
+		},
+		output: {
+			type: "block",
+			code: "lampsaucer-{metal}-pitch-extinct-up",
+			quantity: 1
+		}
+	}
+]

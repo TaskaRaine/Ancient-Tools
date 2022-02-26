@@ -36,7 +36,8 @@
         sylvite: { base: "game:item/resource/ungraded/sylvite" },
         cassava: { base: "game:item/food/vegetable/cassava-dried" },
         birch: { base: "game:block/wood/bark/birch" },
-        pine: { base: "game:block/wood/bark/pine" }
+        pine: { base: "game:block/wood/bark/pine" },
+        charcoal: { base: "game:block/coal/charcoal"}
     },
     blockmaterial: "Stone",
     sidesolid: { all: false },

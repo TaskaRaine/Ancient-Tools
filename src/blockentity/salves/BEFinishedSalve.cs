@@ -6,7 +6,7 @@ using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
-namespace AncientTools.BlockEntity
+namespace AncientTools.BlockEntities
 {
     class BEFinishedSalve : DisplayInventory
     {

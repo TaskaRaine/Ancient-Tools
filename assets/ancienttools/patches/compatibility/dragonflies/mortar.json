@@ -1,0 +1,32 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/textures/cochineal",
+		"value": {
+			base: "game:cochineal"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "dragonflies" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/cricket",
+		"value": {
+			base: "game:cricket"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "dragonflies" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/grasshopper",
+		"value": {
+			base: "game:grasshopper"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "dragonflies" }],
+		"side": "Server"
+	}
+]

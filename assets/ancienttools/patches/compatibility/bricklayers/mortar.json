@@ -1,0 +1,382 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/textures/cookedbone",
+		"value": {
+			base: "bricklayers:item/resource/crushed/cookedbones"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/lapislazuli",
+		"value": {
+			base: "game:item/resource/crushed/lapislazuli"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/cinnabar",
+		"value": {
+			base: "game:item/resource/crushed/cinnabar"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/quartz",
+		"value": {
+			base: "game:item/resource/crushed/quartz"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/olivine",
+		"value": {
+			base: "game:item/resource/crushed/olivine"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/bauxite",
+		"value": {
+			base: "game:item/resource/crushed/bauxite"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/ilmenite",
+		"value": {
+			base: "game:item/resource/crushed/ilmenite"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/cassiterite",
+		"value": {
+			base: "game:item/resource/crushed/cassiterite"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/chromite",
+		"value": {
+			base: "game:item/resource/crushed/chromite"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/lead",
+		"value": {
+			base: "bricklayers:item/resource/crushed/lead"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/coal",
+		"value": {
+			base: "bricklayers:item/resource/crushed/coal"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/copper",
+		"value": {
+			base: "bricklayers:item/resource/crushed/copper"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/galena",
+		"value": {
+			base: "bricklayers:item/resource/crushed/galena"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/gold",
+		"value": {
+			base: "bricklayers:item/resource/crushed/gold"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/granite",
+		"value": {
+			base: "bricklayers:item/resource/crushed/granite"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/hematite",
+		"value": {
+			base: "bricklayers:item/resource/crushed/hematite"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/limonite",
+		"value": {
+			base: "bricklayers:item/resource/crushed/limonite"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/magnetite",
+		"value": {
+			base: "bricklayers:item/resource/crushed/magnetite"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/malachite",
+		"value": {
+			base: "bricklayers:item/resource/crushed/malachite"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/pentlandite",
+		"value": {
+			base: "bricklayers:item/resource/crushed/pentlandite"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/rhodochrosite",
+		"value": {
+			base: "bricklayers:item/resource/crushed/rhodochrosite"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/tin",
+		"value": {
+			base: "bricklayers:item/resource/crushed/tin"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/titanium",
+		"value": {
+			base: "bricklayers:item/resource/crushed/titanium"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/fritblack",
+		"value": {
+			base: "bricklayers:item/resource/frit/baked/black"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/fritbrown",
+		"value": {
+			base: "bricklayers:item/resource/frit/baked/brown"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/fritblue",
+		"value": {
+			base: "bricklayers:item/resource/frit/baked/blue"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/fritgold",
+		"value": {
+			base: "bricklayers:item/resource/frit/baked/gold"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/fritgreen",
+		"value": {
+			base: "bricklayers:item/resource/frit/baked/green"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/fritgreenblue",
+		"value": {
+			base: "bricklayers:item/resource/frit/baked/greenblue"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/fritlapislazuli",
+		"value": {
+			base: "bricklayers:item/resource/frit/baked/lapislazuli"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/fritmalachite",
+		"value": {
+			base: "bricklayers:item/resource/frit/baked/malachite"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/fritorange",
+		"value": {
+			base: "bricklayers:item/resource/frit/baked/orange"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/fritpink",
+		"value": {
+			base: "bricklayers:item/resource/frit/baked/pink"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/fritpurple",
+		"value": {
+			base: "bricklayers:item/resource/frit/baked/purple"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/fritred",
+		"value": {
+			base: "bricklayers:item/resource/frit/baked/red"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/fritredbrown",
+		"value": {
+			base: "bricklayers:item/resource/frit/baked/redbrown"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/fritwhite",
+		"value": {
+			base: "bricklayers:item/resource/frit/baked/white"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/frityellow",
+		"value": {
+			base: "bricklayers:item/resource/frit/baked/yellow"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server"
+	},
+]
