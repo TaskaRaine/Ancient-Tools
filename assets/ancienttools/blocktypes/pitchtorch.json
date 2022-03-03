@@ -21,7 +21,7 @@
 			}
 		},
 		handbook: {
-			groupBy: ["*"]
+			groupBy: ["pitchtorch-*"]
 		},
 		attachmentAreas: {
 			"down": { x1: 7, y1: 15, z1: 7, x2: 8, y2: 16, z2: 8 },
@@ -97,13 +97,17 @@
 	},
 	blockmaterial: "Other",
 	combustiblePropsbyType: {
-		"@pitchtorch-(lit|melted)-up": {
+		"*-melted-up": {
 			burnTemperature: 600,
 			burnDuration: 8,
 		},
+		"*-lit-up": {
+			burnTemperature: 1400,
+			burnDuration: 30,
+		},
 		"*-extinct-up": {
-			burnTemperature: 600,
-			burnDuration: 8,
+			burnTemperature: 1400,
+			burnDuration: 30,
 			meltingPoint: 300,
 			meltingDuration: 1,
 			smeltedRatio: 1,

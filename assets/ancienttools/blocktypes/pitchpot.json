@@ -68,7 +68,7 @@
 	blockmaterial: "Ceramic",
 	combustiblePropsByType: {
 		"*-unmixed": {
-			meltingPoint: 200,
+			meltingPoint: 215,
 			meltingDuration: 60,
 			smeltedRatio: 1,
 			smeltingType: "cook",

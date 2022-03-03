@@ -90,11 +90,11 @@ namespace AncientTools.Blocks
             if (world.BlockAccessor.GetBlockEntity(selection.Position) is BEStretchingFrame stretchingFrameEntity)
             {
                 if (stretchingFrameEntity.HideSlot.Empty)
-                    return emptyInteractions;
+                    return emptyInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                 else if (stretchingFrameEntity.HideSlot.Itemstack.Item.FirstCodePart(1) == "soaked")
-                    return knifeInteractions;
+                    return knifeInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                 else
-                    return skinningFinishedInteractions;
+                    return skinningFinishedInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
             }
 
             return null;
@@ -110,6 +110,8 @@ namespace AncientTools.Blocks
             try
             {
                 world.BlockAccessor.SetBlock(id, blockSel.Position);
+                world.BlockAccessor.MarkBlockDirty(blockSel.Position);
+
                 return true;
             }
             catch

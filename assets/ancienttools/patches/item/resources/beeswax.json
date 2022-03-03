@@ -11,7 +11,13 @@
 		"op": "add",
 		"path": "/behaviors",
 		"value": [
-			{ "name": "SalveIngredient" }
+			{ 
+				name: "ConvertBlockUsingIngredient", 
+				properties: {
+					convertFromBlockCode: "game:claypot-burned",
+					convertToBlockCode: "ancienttools:salvepot-empty"
+				}
+			}
 		],
 		"file": "game:itemtypes/resource/beeswax",
 		"side": "Server",

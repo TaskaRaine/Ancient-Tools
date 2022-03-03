@@ -16,7 +16,6 @@ namespace AncientTools.Blocks
 
             ItemStack[] lightTypes = new ItemStack[]
             {
-                new ItemStack(api.World.GetItem(new AssetLocation("ancienttools", "pitch-ball"))),
                 new ItemStack(api.World.GetItem(new AssetLocation("ancienttools", "pitch-stick"))),
                 new ItemStack(api.World.GetItem(new AssetLocation("game", "candle")))
             };
@@ -63,7 +62,7 @@ namespace AncientTools.Blocks
                     return true;
                 }
             }
-            else if(interactedItemCode.BeginsWith("ancienttools", "pitch-"))
+            else if(interactedItemCode.Equals(new AssetLocation("ancienttools", "pitch-stick")))
             {
                 if (FirstCodePart(2) == "empty")
                 {
@@ -72,6 +71,9 @@ namespace AncientTools.Blocks
                     world.BlockAccessor.MarkBlockEntityDirty(blockSel.Position);
 
                     byPlayer.InventoryManager.ActiveHotbarSlot.TakeOut(1);
+
+                    if (!byPlayer.InventoryManager.TryGiveItemstack(new ItemStack(api.World.GetItem(new AssetLocation("game", "stick")))))
+                        api.World.SpawnItemEntity(new ItemStack(api.World.GetItem(new AssetLocation("game", "stick"))), byPlayer.Entity.Pos.AsBlockPos.ToVec3d());
 
                     return true;
                 }

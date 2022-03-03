@@ -3,6 +3,7 @@
 		"op": "add",
 		"path": "/entityBehaviors/-",
 		"value": { "name": "FireproofFuel" },
-		"file": "game:blocktypes/wood/firepit"
+		"file": "game:blocktypes/wood/firepit",
+		"side": "Server"
 	}
 ]

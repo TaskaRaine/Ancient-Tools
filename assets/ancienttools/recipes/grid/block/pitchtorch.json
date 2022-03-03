@@ -1,13 +1,13 @@
 ﻿[
 	{
-		ingredientPattern: " P TST S ",
+		ingredientPattern: "TPT S ",
 		width: 3,
-		height: 3,
+		height: 2,
 		ingredients: {
 			"P": { 
 				type: "item", 
 				name: "pitch",
-				code: "pitch-*" 
+				code: "pitch-stick",
 			},
 			"T": {
 				type: "item",
@@ -27,9 +27,9 @@
 		}
 	},
 	{
-		ingredientPattern: "   TST S ",
+		ingredientPattern: "TST S ",
 		width: 3,
-		height: 3,
+		height: 2,
 		ingredients: {
 			"T": {
 				type: "item",
@@ -39,7 +39,7 @@
 			"S": {
 				type: "item",
 				name: "stick",
-				code: "game:stick"
+				code: "game:stick",
 			}
 		},
 		output: { 

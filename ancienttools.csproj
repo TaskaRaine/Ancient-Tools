@@ -42,27 +42,27 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="VintagestoryAPI">
-      <HintPath>H:\VintageStory 1.16.0\VintagestoryAPI.dll</HintPath>
+      <HintPath>H:\VintageStory 1.16.4\VintagestoryAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>H:\VintageStory 1.16.0\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.16.4\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>H:\VintageStory 1.16.0\Mods\VSEssentials.dll</HintPath>
+      <HintPath>H:\VintageStory 1.16.4\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>H:\VintageStory 1.16.0\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.16.4\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>H:\VintageStory 1.16.0\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>H:\VintageStory 1.16.4\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="0Harmony">
-      <HintPath>H:\VintageStory 1.16.0\Lib\0Harmony.dll</HintPath>
+      <HintPath>H:\VintageStory 1.16.4\Lib\0Harmony.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -144,7 +144,9 @@
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\dough.json" />
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\mortar.json" />
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\barkbasket.json" />
+    <None Include="assets\ancienttools\patches\compatibility\carrycapacity\curingrack.json" />
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\hidewatersack.json" />
+    <None Include="assets\ancienttools\patches\compatibility\carrycapacity\pitchpot.json" />
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\salvepot.json" />
     <None Include="assets\ancienttools\config\handbook\guide.json" />
     <None Include="assets\ancienttools\config\handbook\salveguide.json" />
@@ -157,6 +159,7 @@
     <None Include="assets\ancienttools\itemtypes\tools\pestle.json" />
     <None Include="assets\ancienttools\itemtypes\resources\salveportion.json" />
     <None Include="assets\ancienttools\patches\block\salve.json" />
+    <None Include="assets\ancienttools\patches\compatibility\carrycapacity\stretchingframe.json" />
     <None Include="assets\ancienttools\patches\compatibility\dragonflies\mortar.json" />
     <None Include="assets\ancienttools\patches\compatibility\lichen\deer.json" />
     <None Include="assets\ancienttools\patches\compatibility\lichen\white-hart.json" />
@@ -220,6 +223,8 @@
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_brown.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_black.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_cookedbones.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_gardensnailshell.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_charcoal.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_titanium.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_tin.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_rhodochrosite.json" />
@@ -425,6 +430,7 @@
     <Compile Include="src\blocks\StretchingFrame.cs" />
     <Compile Include="src\blocks\WaterproofTorch.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorConvertHide.cs" />
+    <Compile Include="src\collectiblebehavior\CollectibleBehaviorIngredientConversion.cs" />
     <Compile Include="src\harmony\HarmonyBurning.cs" />
     <Compile Include="src\harmony\HarmonyFirepit.cs" />
     <Compile Include="src\harmony\HarmonyForge.cs" />
@@ -442,7 +448,6 @@
     <Compile Include="src\blocks\salves\Salve.cs" />
     <Compile Include="src\blocks\salves\SalveContainer.cs" />
     <Compile Include="src\blocks\salves\UnmixedSalve.cs" />
-    <Compile Include="src\collectiblebehavior\CollectibleBehaviorSalveIngredient.cs" />
     <Compile Include="src\collectiblebehavior\RegisterCollectibleBehaviors.cs" />
     <Compile Include="src\config\AncientToolsConfig.cs" />
     <Compile Include="src\entity\behavior\SalveHeal.cs" />

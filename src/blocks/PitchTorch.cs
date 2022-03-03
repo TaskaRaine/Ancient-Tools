@@ -16,7 +16,6 @@ namespace AncientTools.Blocks
 
             ItemStack[] pitch =
             {
-                new ItemStack(api.World.GetItem(new AssetLocation("ancienttools", "pitch-ball"))),
                 new ItemStack(api.World.GetItem(new AssetLocation("ancienttools", "pitch-stick")))
             };
 
@@ -50,7 +49,7 @@ namespace AncientTools.Blocks
 
             AssetLocation interactedItemCode = byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.Code;
 
-            if (interactedItemCode.BeginsWith("ancienttools", "pitch-"))
+            if (interactedItemCode.Equals(new AssetLocation("ancienttools", "pitch-stick")))
             {
                 if (CodeWithVariant("state", "melted").Equals(Code))
                 {
@@ -59,6 +58,9 @@ namespace AncientTools.Blocks
                     world.BlockAccessor.MarkBlockEntityDirty(blockSel.Position);
 
                     byPlayer.InventoryManager.ActiveHotbarSlot.TakeOut(1);
+
+                    if (!byPlayer.InventoryManager.TryGiveItemstack(new ItemStack(api.World.GetItem(new AssetLocation("game", "stick")))))
+                        api.World.SpawnItemEntity(new ItemStack(api.World.GetItem(new AssetLocation("game", "stick"))), byPlayer.Entity.Pos.AsBlockPos.ToVec3d());
 
                     return true;
                 }

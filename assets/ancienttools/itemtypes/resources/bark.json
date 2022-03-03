@@ -18,7 +18,13 @@
 	},
 	behaviorsByType: {
 		"@bark-(birch|pine)": [
-			{ name: "SalveIngredient" },
+			{ 
+				name: "ConvertBlockUsingIngredient", 
+				properties: {
+					convertFromBlockCode: "game:claypot-burned",
+					convertToBlockCode: "ancienttools:salvepot-empty"
+				}
+			},
 			{ "name": "GroundStorable", "properties": { "layout": "Quadrants" } }
 		],
 		"*": [

@@ -9,12 +9,8 @@
     },
     {
         "op": "add",
-        "path": "/behaviorsByType/@log-grown-(pine|acacia)-(ud|ns|we)",
-        "value": [
-            { "name": "ConvertToResinLog" },
-            { "name": "PushEventOnBlockBroken",	properties: {eventName: "testForDecay"}},
-            { "name": "MyceliumHost" }
-        ],
+        "path": "/behaviorsByType/*-grown-*/-",
+        "value": { "name": "ConvertToResinLog" },
         "file": "game:blocktypes/wood/woodtyped/log",
         "side": "Server",
         "condition": { "when": "AllowCarvingForResin", "isValue": "true" }

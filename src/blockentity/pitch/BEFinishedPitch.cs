@@ -61,8 +61,6 @@ namespace AncientTools.BlockEntities
         }
         public void GiveObject(IPlayer byPlayer, ItemSlot inventorySlot)
         {
-            bool stickGiven = false;
-
             if (byPlayer.InventoryManager.ActiveHotbarSlot != null)
                 if (byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack != null)
                     if (byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.Code.Domain == "game" && byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.FirstCodePart(0) == "stick")
@@ -72,16 +70,8 @@ namespace AncientTools.BlockEntities
                             {
                                 byPlayer.InventoryManager.ActiveHotbarSlot.TakeOut(1);
                                 UpdateMeshes();
-
-                                stickGiven = true;
                             }
                     }
-
-            if(stickGiven == false)
-                if (byPlayer.InventoryManager.TryGiveItemstack(inventorySlot.TakeOut(1)))
-                {
-                    UpdateMeshes();
-                }
 
             if (inventorySlot.Empty)
             {

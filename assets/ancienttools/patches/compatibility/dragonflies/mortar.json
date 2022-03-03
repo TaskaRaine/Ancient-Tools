@@ -28,5 +28,16 @@
 		"file": "blocktypes/mortar",
 		"dependsOn": [{ "modid": "dragonflies" }],
 		"side": "Server"
+	},
+	{
+		//-- This is for the snail shell texture --//
+		"op": "add",
+		"path": "/textures/latte",
+		"value": {
+			base: "game:block/tradegoods/seashell/latte"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "dragonflies" }],
+		"side": "Server"
 	}
 ]

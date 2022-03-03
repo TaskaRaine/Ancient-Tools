@@ -6,4 +6,19 @@
 		"file": "game:itemtypes/resource/drygrass",
 		"side": "Server",
 	},
+	{
+		"op": "add",
+		"path": "/behaviors",
+		"value": [
+			{ 
+				name: "ConvertBlockUsingIngredient", 
+				properties: {
+					convertFromBlockCode: "game:claypot-burned",
+					convertToBlockCode: "ancienttools:pitchpot-empty"
+				}
+			}
+		],
+		"file": "game:itemtypes/resource/drygrass",
+		"side": "Server",
+	}
 ]

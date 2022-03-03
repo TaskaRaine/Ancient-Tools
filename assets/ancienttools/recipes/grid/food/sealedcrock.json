@@ -3,18 +3,7 @@
 		ingredientPattern: "C,F",
 		ingredients: {
 			"C": { type: "block", code: "game:crock-burned-east" },
-			"F": { type: "item", code: "pitch-ball" }
-		},
-		width: 1,
-		height: 2,
-		shapeless: true,
-		output: { type: "block", code: "game:crock-burned-east", quantity: 1  }
-	},
-	{
-		ingredientPattern: "C,F",
-		ingredients: {
-			"C": { type: "block", code: "game:crock-burned-east" },
-			"F": { type: "item", code: "pitch-stick" }
+			"F": { type: "item", code: "pitch-stick", returnedStack: { type: "item", code: "game:stick" } }
 		},
 		width: 1,
 		height: 2,

@@ -200,36 +200,36 @@ namespace AncientTools.Blocks
                     case 1:
                         if (entityCuringRack.HookItemslot1.Empty)
                         {
-                            return emptyInteractions;
+                            return emptyInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                         }
                         else if(entityCuringRack.MeatSlot(1).Empty)
                         {
-                            return hookEmptyInteractions;
+                            return hookEmptyInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                         }
                         else if(!entityCuringRack.MeatSlot(4).Empty)
                         {
-                            return fullInteractions;
+                            return fullInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                         }
                         else
                         {
-                            return partialMeatInteractions;
+                            return partialMeatInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                         }
                     case 0:
                         if(entityCuringRack.HookItemslot2.Empty)
                         {
-                            return emptyInteractions;
+                            return emptyInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                         }
                         else if(entityCuringRack.MeatSlot(5).Empty)
                         {
-                            return hookEmptyInteractions;
+                            return hookEmptyInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                         }
                         else if(!entityCuringRack.MeatSlot(8).Empty)
                         {
-                            return fullInteractions;
+                            return fullInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                         }
                         else
                         {
-                            return partialMeatInteractions;
+                            return partialMeatInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                         }
                     default: break;
                 }
@@ -262,6 +262,10 @@ namespace AncientTools.Blocks
             try
             {
                 world.BlockAccessor.SetBlock(id, blockSel.Position);
+
+                world.BlockAccessor.MarkBlockDirty(blockSel.Position);
+                world.BlockAccessor.TriggerNeighbourBlockUpdate(blockSel.Position);
+
                 return true;
             }
             catch
@@ -455,6 +459,13 @@ namespace AncientTools.Blocks
             }
             else
                 return null;
+        }
+        public override void OnBlockRemoved(IWorldAccessor world, BlockPos pos)
+        {
+            api.World.BlockAccessor.TriggerNeighbourBlockUpdate(pos);
+            api.World.BlockAccessor.MarkBlockDirty(pos);
+
+            base.OnBlockRemoved(world, pos);
         }
     }
 }

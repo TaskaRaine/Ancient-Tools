@@ -5,7 +5,8 @@
         "value": {
           "base": "ancienttools:item/resource/brain"
         },
-        "file": "game:blocktypes/clay/pot.json"
+        "file": "game:blocktypes/clay/pot.json",
+        "side": "Server"
     },
     {
         "op": "add",
@@ -14,6 +15,7 @@
             "meat",
             "brain"
         ],
-        "file": "game:blocktypes/clay/pot.json"
+        "file": "game:blocktypes/clay/pot.json",
+        "side": "Server"
     },
 ]

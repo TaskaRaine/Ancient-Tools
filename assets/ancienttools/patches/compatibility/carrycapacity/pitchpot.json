@@ -1,7 +1,7 @@
 ﻿[
 	{
 		"op": "add",
-		"path": "/behaviorsByType/@salvepot-(birch|pine|softwax|hardwax|barkoil)/-",
+		"path": "/behaviorsByType/*-unmixed/-",
 		"value": {
 			name: "Carryable", properties: {
 
@@ -15,17 +15,17 @@
 				"Hands": {
 					animation: "carrycapacity:holdlight",
 					walkSpeedModifier: -0.15,
-				},
+				}
 				}
 			} 
 		},
-		"file": "ancienttools:blocktypes/salvepot",
+		"file": "ancienttools:blocktypes/pitchpot",
 		"dependsOn": [{ "modid": "carrycapacity" }],
 		"side": "Server"
 	},
 	{
 		"op": "add",
-		"path": "/behaviorsByType/@salvepot-(empty|finishedsalve)/-",
+		"path": "/behaviorsByType/@pitchpot-(empty|finishedpitch)/-",
 		"value": {
 			name: "Carryable", properties: {
 
@@ -43,7 +43,7 @@
 				}
 			} 
 		},
-		"file": "ancienttools:blocktypes/salvepot",
+		"file": "ancienttools:blocktypes/pitchpot",
 		"dependsOn": [{ "modid": "carrycapacity" }],
 		"side": "Server"
 	}

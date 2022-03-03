@@ -12,6 +12,13 @@
 		},
 		isPitchCharcoal: true
 	},
+	behaviors: [{ 
+		name: "ConvertBlockUsingIngredient",
+		properties: {
+			convertFromBlockCode: "game:claypot-burned",
+			convertToBlockCode: "ancienttools:pitchpot-empty"
+		}
+	}],
 	drawtype: "json",
     shape: { base: "game:item/resource/crushed/crushed" },
 	textures: { 

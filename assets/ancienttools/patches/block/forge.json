@@ -3,6 +3,7 @@
 		"op": "add",
 		"path": "/entityBehaviors",
 		"value": [{ "name": "FireproofFuel" }],
-		"file": "game:blocktypes/stone/generic/forge"
+		"file": "game:blocktypes/stone/generic/forge",
+		"side": "Server"
 	}
 ]

@@ -27,7 +27,8 @@
 		ingredients: {
 			"C": {
 				type: "item",
-				code: "pitch-*"
+				code: "pitch-stick",
+				returnedStack: { type: "item", code: "game:stick" }
 			},
 			"S": {
 				type: "block",

@@ -3,7 +3,7 @@
 	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
 	attributes: {
 		handbook: {
-			groupBy: ["*"],
+			groupBy: ["pitch-*"],
 			extraSections: [
 				{ title: "handbook-crafting-title-pitch", text: "handbook-crafting-text-pitch" }
 			]
@@ -30,7 +30,7 @@
 	maxstacksize: 64,
 	combustibleProps: {
 		burnTemperature: 1400,
-		burnDuration: 30,
+		burnDuration: 35,
 	},
 	guiTransformByType: {
 		"*-ball": {

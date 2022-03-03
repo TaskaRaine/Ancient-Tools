@@ -47,6 +47,8 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 さらに、松脂を使えば、雨に濡れても消えない長持ちする<a href=\'handbook://block-ancienttools:pitchtorch-extinct-up\'>松明</a>を作ることが出来ます。また、オイルランプのような常備灯として<a href=\'handbooksearch://燭台\'>燭台</a>を作ることも出来ます。    
 
 松脂の作り方については、<a href=\"handbook://ancienttools-quickstart-guide-pitch\">松脂ガイド</a>に詳しい説明があります。
+
+注意：Ancient Toolsの松脂生産には樹脂が不可欠なので、ナイフでマツやアカシアの木を削って滴る丸太を作るシステムが実装されました。このシステムはMODの設定ファイルで無効にすることが出来ます。
 ",
 	"game:ancienttools-quickstart-guide-salve": "膏薬（こうやく）ガイド",
 	"game:ancienttools-quickstart-title-salve": "クラフトメカニック：膏薬（こうやく）の調合",
@@ -88,6 +90,8 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"game:ancienttools-quickstart-guide-pitch": "松脂ガイド",
 	"game:ancienttools-quickstart-title-pitch": "クラフトメカニック： 松脂の作り方",
 	"game:ancienttools-quickstart-text-pitch": "
+<font weight='bold' align='center'>松脂ガイド</font><br>
+
 かつて<a href=\'handbook://item-ancienttools:pitch-ball\'>接着剤</a>は、その汎用性の高さから、非常に高価な資源として扱われていました。接着剤、封止剤、燃料など、様々な用途に使用することが出来ます。
 
 松脂の作り方に「1つの方法」はありません。多くの異なる素材が組み合わされ、同じような結果が得られたのです。しかし、Ancient Toolsでは、この作業に必要な<a href=\'handbook://item-charcoal\'>木炭</a>や<a href=\'handbook://item-resin\'>樹脂</a>、<a href=\'handbook://item-drygrass\'>干し草</a>などを手元に用意しておく必要があります。
@@ -96,7 +100,7 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 
 次に、<icon name='rightmousebutton'></icon>で容器に<a href=\'handbook://item-ancienttools:powderedcharcoal\'>木炭粉</a>2つ、<a href=\'handbook://item-resin\'>樹脂</a>4つ、<a href=\'handbook://item-drygrass\'>干し草</a>1つを入れて下さい。容器に適切に充填されると、<a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>未調製の松脂混合物</a>に変換されます。
 
-あとは、その混合物を手に取り、近くの焚き火台で加熱すると、<a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>完成した松脂</a>が出来上がります。完成したら、鍋を地面に置き、素手や<a href=\'handbook://item-stick\'>棒</a>を使って松脂を取ることが出来ます。
+あとは、その混合物を手に取り、近くの焚き火台で加熱すると、<a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>完成したら、地面に鉢を置き、<a href=\'handbook://item-stick\'>棒</a>でピッチの破片を取る
 	",
 	"blockhelp-place-pestle": "すりこ木を配置します",
 	"blockhelp-place-resource": "粉砕可能なリソースを配置する",

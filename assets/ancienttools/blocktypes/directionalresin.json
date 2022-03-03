@@ -18,7 +18,7 @@
 	attributesByType: {
 		"directionalresin-resinharvested-*": {
 			handbook: {
-				groupBy: ["*"]
+				groupBy: ["directionalresin-*-{wood}-*"]
 			},
 			transientProps: {
 				convertFrom: "directionalresin-resinharvested-{wood}-ud-{direction}", 

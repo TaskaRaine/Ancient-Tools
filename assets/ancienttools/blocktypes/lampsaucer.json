@@ -11,7 +11,7 @@
 	creativeinventory: { "general": ["*-up"], "decorative": ["*-up"], "ancienttools": ["*-up"] },
     attributes: {
 		handbook: {
-			groupBy: ["*"]
+			groupBy: ["lampsaucer-*"]
 		},
 		attachmentAreas: {
 			"down": { x1: 5, y1: 0, z1: 5, x2: 10, y2: 0, z2: 10 },

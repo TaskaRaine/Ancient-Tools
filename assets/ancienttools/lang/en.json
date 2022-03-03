@@ -47,6 +47,8 @@ This material is exceptionally waterproof and sticky. Historically, it has been 
 Additionally, pitch can be used to create long-lasting, brightly burning <a href=\'handbook://block-ancienttools:pitchtorch-extinct-up\'>torches</a> that won't be extinguished by rain. It can also be used to create <a href=\'handbooksearch://Chamberstick with Pitch\'>chambersticks</a> as a permenant lighting solution similar to oil lamps.    
 
 A detailed explanation of how to produce pitch can be found in the <a href=\"handbook://ancienttools-quickstart-guide-pitch\">Pitch Guide</a>.
+
+Note: Since resin is so integral to Ancient Tools pitch production, a system has been implemented that allows knives to scrape pine and acacia trees to create leaking logs. This system can be disabled in the mod config files.
 ",
 	"game:ancienttools-quickstart-guide-salve": "Salve Guide",
 	"game:ancienttools-quickstart-title-salve": "Crafting Mechanic: Salve Creation",
@@ -88,6 +90,8 @@ Now, the final part! Take your smoked hide and, using a knife, carefully cut it 
 	"game:ancienttools-quickstart-guide-pitch": "Pitch Guide",
 	"game:ancienttools-quickstart-title-pitch": "Crafting Mechanic: Pitch Creation",
 	"game:ancienttools-quickstart-text-pitch": "
+<font weight='bold' align='center'>Pitch Guide</font><br>
+
 <a href=\'handbook://item-ancienttools:pitch-ball\'>Pitch</a> was once a highly saught after resource for its versatility. It could be used as a glue, a sealant, a fuel, and for many other purposes.
 
 There was no 'one way' to create pitch. Many different resources were combined for similar results. However, with Ancient Tools, you will need some <a href=\'handbook://item-charcoal\'>charcoal</a>, <a href=\'handbook://item-resin\'>resin</a>, and <a href=\'handbook://item-drygrass\'>dry grass</a> on hand for this process.
@@ -96,7 +100,7 @@ To get started, you must grind two pieces of charcoal into <a href=\'handbook://
 
 Next, fill up the container using <icon name='rightmousebutton'></icon> with 2 parts <a href=\'handbook://item-ancienttools:powderedcharcoal\'>powdered charcoal</a>, 4 parts <a href=\'handbook://item-resin\'>resin</a>, and 1 part <a href=\'handbook://item-drygrass\'>dry grass</a>. When the container is properly filled, it will convert into an <a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>unprepared pitch mixture</a>.
 
-Now, simply pick up the mixture and heat it in the nearest firepit to create <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>prepared pitch</a>. When it's been finished, you can place the pot on the ground and take pieces of pitch with an empty hand or by using a <a href=\'handbook://item-stick\'>stick</a>.
+Now, simply pick up the mixture and heat it in the nearest firepit to create <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>prepared pitch</a>. When it's been finished, you can place the pot on the ground and take pieces of pitch by using a <a href=\'handbook://item-stick\'>stick</a>.
 	",
 	"game:handbook-crafting-title-pitch": "Created by",
 	"game:handbook-crafting-text-pitch": "Combining <a href=\'handbook://item-ancienttools:powderedcharcoal\'>powdered charcoal</a>, <a href=\'handbook://item-resin\'>resin</a>, and <a href=\'handbook://item-drygrass\'>dry grass</a> into an <a href=\'handbook://block-ancienttools:pitchpot-empty\'>empty pitch container</a> and cooking the <a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>resulting mixture</a> on a firepit. Place the <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>prepared pitch</a> on the ground to take individual pitch pieces.",

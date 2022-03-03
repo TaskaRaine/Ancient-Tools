@@ -16,12 +16,12 @@
 	attributesByType: {
 		"*-raw-*": {
 			handbook: {
-				groupBy: ["*-raw-*"]
+				groupBy: ["hidewatersack-raw-*"]
 			},
 		},
 		"*-soaked-*": {
 			handbook: {
-				groupBy: ["*-soaked-*"]
+				groupBy: ["hidewatersack-soaked-*"]
 			},
 		}
 	},

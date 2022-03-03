@@ -27,18 +27,11 @@ namespace AncientTools.Blocks
                 MouseButton = EnumMouseButton.Right,
                 Itemstacks = stick
             };
-            WorldInteraction pitchInteraction = new WorldInteraction()
-            {
-                ActionLangCode = "ancienttools:blockhelp-take-pitch",
-                MouseButton = EnumMouseButton.Right,
-                RequireFreeHand = true
-            };
 
             takePitchInteractions = ObjectCacheUtil.GetOrCreate(api, "takePitchInteractions", () =>
             {
                 return new WorldInteraction[]
                 {
-                    pitchInteraction,
                     pitchStickInteraction
                 };
             });
