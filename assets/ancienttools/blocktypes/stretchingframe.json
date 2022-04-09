@@ -16,16 +16,16 @@
 	drawtype: "json",
 	shapebytype: { 
 		"*-north": {
-			base: "block/stretchingframe/stretchingframe", rotateY: 180 
+			base: "block/stretchingframe/stretchingframe_plus", rotateY: 180 
 		},
 		"*-east": {
-			base: "block/stretchingframe/stretchingframe", rotateY: 90
+			base: "block/stretchingframe/stretchingframe_plus", rotateY: 90
 		},
 		"*-south": {
-			base: "block/stretchingframe/stretchingframe"
+			base: "block/stretchingframe/stretchingframe_plus"
 		},
 		"*-west": {
-			base: "block/stretchingframe/stretchingframe", rotateY: 270
+			base: "block/stretchingframe/stretchingframe_plus", rotateY: 270
 		}
 	},
 	texturesByType: { 

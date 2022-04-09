@@ -5,7 +5,7 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.45, var: 0 } 
+			quantity: { avg: 0.35, var: 0 } 
 		},
 		"file": "lichen:entities/land/white-hart",
 		"dependsOn": [{ "modid": "lichen" }],

@@ -5,7 +5,7 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.55, var: 0 } 
+			quantity: { avg: 0.45, var: 0 } 
 		},
 		"file": "game:entities/land/bear-male",
 		"side": "Server"
@@ -16,7 +16,7 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.55, var: 0 } 
+			quantity: { avg: 0.45, var: 0 } 
 		},
 		"file": "game:entities/land/bear-female",
 		"side": "Server"

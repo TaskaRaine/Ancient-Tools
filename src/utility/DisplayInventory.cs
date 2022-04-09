@@ -19,29 +19,33 @@ namespace AncientTools.Utility
             {
                 AssetLocation texturePath = null;
 
-                //-- If the shape does not have any textures hardcoded into it, the DisplayInventory system uses the texture of the held object. --//
-                if(currentShape.Textures.Count == 0)
+                if (currentShape != null)
                 {
-                    if (currentObject.ItemClass == EnumItemClass.Item)
+                    if (currentShape.Textures == null || !currentShape.Textures.ContainsKey(textureCode))
                     {
-                        Item currentItem = currentObject as Item;
-                        texturePath = currentItem.FirstTexture.Baked.BakedName;
+                        if (currentObject.ItemClass == EnumItemClass.Item)
+                        {
+                            Item currentItem = currentObject as Item;
+
+                            if (currentItem.Textures.ContainsKey(textureCode))
+                                texturePath = currentItem.Textures[textureCode].Base;
+                            else
+                                texturePath = currentItem.FirstTexture.Base;
+                        }
+                        else
+                        {
+                            Block currentBlock = currentObject as Block;
+                            texturePath = currentBlock.Textures["all"].Base;
+                        }
                     }
                     else
-                    {
-                        Block currentBlock = currentObject as Block;
-                        texturePath = currentBlock.Textures["all"].Base;
-                    }
-                }
-                else
-                {
-                    if (currentShape != null)
-                    {
                         currentShape.Textures.TryGetValue(textureCode, out texturePath);
-                    }
                 }
 
-                TextureAtlasPosition texpos = capi.BlockTextureAtlas[texturePath];
+                TextureAtlasPosition texpos = null;
+
+                if(texturePath != null)    
+                   texpos = capi.BlockTextureAtlas[texturePath];
 
                 if (texpos == null)
                 {
@@ -96,6 +100,37 @@ namespace AncientTools.Utility
 
             capi.Tesselator.TesselateShape("container", currentShape, out MeshData wholeMesh, this);
             return wholeMesh;
+        }
+        protected MeshData GenMesh(ItemStack stack)
+        {
+            MeshData mesh;
+            var dynBlock = stack.Collectible as IContainedMeshSource;
+
+            if (dynBlock != null)
+            {
+                mesh = dynBlock.GenMesh(stack, capi.BlockTextureAtlas, Pos);
+                mesh.Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0, Block.Shape.rotateY * GameMath.DEG2RAD, 0);
+            }
+            else
+            {
+                ICoreClientAPI capi = Api as ICoreClientAPI;
+                if (stack.Class == EnumItemClass.Block)
+                {
+                    mesh = capi.TesselatorManager.GetDefaultBlockMesh(stack.Block).Clone();
+                }
+                else
+                {
+                    currentObject = stack.Collectible;
+                    currentShape = null;
+                    if (stack.Item.Shape != null)
+                    {
+                        currentShape = capi.TesselatorManager.GetCachedShape(stack.Item.Shape.Base);
+                    }
+                    capi.Tesselator.TesselateItem(stack.Item, out mesh, this);
+                }
+            }
+
+            return mesh;
         }
         /// <summary>
         /// Add a mesh to the object to be rendered, likely in OnTesselation.

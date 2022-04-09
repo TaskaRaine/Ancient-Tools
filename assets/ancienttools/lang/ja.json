@@ -1,5 +1,5 @@
 {
-	"game:tabname-ancienttools": "古代の道具",
+	"game:tabname-ancienttools": "Ancient Tools(古代の道具)",
 
 	"game:ancienttools-quickstart-guide": "古代の道具",
 	"game:ancienttools-quickstart-title": "古代の道具ガイド",
@@ -19,7 +19,7 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 
 集めた<a href=\'handbook://item-ancienttools:bark-oak\'>樹皮</a>は、様々な用途に使うことが出来ます。薪の代わりに焚き火の火種になります。また、樹皮を編んで、かわいい<a href=\'handbooksearch://樹皮バスケット\'>樹皮バスケット</a>を作ったり、物を入れたりすることも出来ます。
 
-<a　href=\'handbook：//item-ancienttools：bark-birch\'>シラカバの樹皮</a>や<a　href=\'handbook：//item-ancienttools：bark-pine\'>マツの樹皮</a>は、樹木の中でも特殊な性質を持つ資源であり、それを活用することが出来ます。 
+<a href=\'handbook://item-ancienttools:bark-birch\'>シラカバの樹皮</a>や<a href=\'handbook://item-ancienttools:bark-pine\'>マツの樹皮</a>は、樹木の中でも特殊な性質を持つ資源であり、それを活用することが出来ます。 
 
 どちらの樹木も樹皮の内側は食べられるので、<a href=\'handbooksearch://粉\'>粉</a>にして焼くと<a href=\'handbooksearch://パン\'>パン</a>になります。これはスカンジナビアの先住民族サーミの文化です。 
 
@@ -28,7 +28,7 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 <font weight='bold'>熟成棚</font>
 <a href=\'handbook://item-salt\'>塩</a>を使った肉の熟成は、何世紀にも渡って行われてきた保存方法です。 その為には、肉を熟成させる前に、肉が腐らないように注意深く管理された環境が必要です。地下室がおすすめです！
 
-<a href=\'handbooksearch://熟成棚\'>熟成棚</a>は、<icon name='rightmousebutton'></icon>で<a href=\'handbooksearch://フック\'>熟成フック</a>を2つ設置出来ます。 塩漬けされた肉(<a href=\'handbook://item-ancienttools:saltedmeat-redmeat-raw\'>レッドミート</a>、<a href=\'handbook://item-ancienttools:saltedmeat-poultry-raw\'>鶏肉</a>、<a href=\'handbook://item-ancienttools:saltedmeat-bushmeat-raw\'>ブッシュミート</a>)はもちろん、どんな肉でも吊るすことが出来ます！！
+<a href=\'handbooksearch://熟成棚\'>熟成棚</a>は、<icon name='rightmousebutton'></icon>で<a href=\'handbooksearch://骨のフック\'>熟成フック</a>を2つ設置出来ます。 塩漬けされた肉(<a href=\'handbook://item-ancienttools:saltedmeat-redmeat-raw\'>レッドミート</a>、<a href=\'handbook://item-ancienttools:saltedmeat-poultry-raw\'>鶏肉</a>、<a href=\'handbook://item-ancienttools:saltedmeat-bushmeat-raw\'>ブッシュミート</a>)はもちろん、どんな肉でも吊るすことが出来ます！！
 
 塩漬け肉も焚き火台で焼けば、手軽な食事になります。
 
@@ -94,22 +94,22 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 
 かつて<a href=\'handbook://item-ancienttools:pitch-ball\'>接着剤</a>は、その汎用性の高さから、非常に高価な資源として扱われていました。接着剤、封止剤、燃料など、様々な用途に使用することが出来ます。
 
-松脂の作り方に「1つの方法」はありません。多くの異なる素材が組み合わされ、同じような結果が得られたのです。しかし、Ancient Toolsでは、この作業に必要な<a href=\'handbook://item-charcoal\'>木炭</a>や<a href=\'handbook://item-resin\'>樹脂</a>、<a href=\'handbook://item-drygrass\'>干し草</a>などを手元に用意しておく必要があります。
+松脂の作り方に「1つの方法」はありません。多くの異なる素材が組み合わされ、同じような結果が得られたのです。しかし、Ancient Toolsでは、この作業に必要な<a href=\'handbook://item-charcoal\'>木炭</a>や<a href=\'handbook://item-resin\'>樹脂</a>、<a href=\'handbook://item-drygrass\'>枯れ草</a>などを手元に用意しておく必要があります。
 
 まず、2つの炭を<a href=\'handbooksearch://すり鉢\'>すり鉢</a>と<a href=\'handbooksearch://すりこ木\'>すりこ木</a>などで<a href=\'handbook://item-ancienttools:powderedcharcoal\'>木炭粉</a>にする必要があります。木炭粉を1つ持って、<icon name='rightmousebutton'></icon>で調理鍋を操作すると、鍋が<a href=\'handbook://block-ancienttools:pitchpot-empty\'>空の松脂容器</a>に変化します。
 
-次に、<icon name='rightmousebutton'></icon>で容器に<a href=\'handbook://item-ancienttools:powderedcharcoal\'>木炭粉</a>2つ、<a href=\'handbook://item-resin\'>樹脂</a>4つ、<a href=\'handbook://item-drygrass\'>干し草</a>1つを入れて下さい。容器に適切に充填されると、<a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>未調製の松脂混合物</a>に変換されます。
+次に、<icon name='rightmousebutton'></icon>で容器に<a href=\'handbook://item-ancienttools:powderedcharcoal\'>木炭粉</a>2つ、<a href=\'handbook://item-resin\'>樹脂</a>4つ、<a href=\'handbook://item-drygrass\'>枯れ草</a>1つを入れて下さい。容器に適切に充填されると、<a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>未調製の松脂混合物</a>に変換されます。
 
-あとは、その混合物を手に取り、近くの焚き火台で加熱すると、<a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>完成したら、地面に鉢を置き、<a href=\'handbook://item-stick\'>棒</a>でピッチの破片を取る
+あとは、その混合物を手に取り、近くの焚き火台で加熱すると、<a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>完成したら、地面に鉢を置き、<a href=\'handbook://item-stick\'>棒</a>で松脂を取ることが出来ます。
 	",
 	"blockhelp-place-pestle": "すりこ木を配置します",
 	"blockhelp-place-resource": "粉砕可能なリソースを配置する",
 	"blockhelp-grind-mortar": "粉砕リソース",
 
-	"blockhelp-place-curinghook": "熟成フックを配置します",
-	"blockhelp-place-saltedmeat": "塩漬け肉を吊るす",
-	"blockhelp-take-curinghook": "熟成フックを取る",
-	"blockhelp-take-meat": "肉を取る",
+	"blockhelp-place-curinghook": "フックを設置",
+	"blockhelp-place-saltedmeat": "対象を吊るす",
+	"blockhelp-take-curinghook": "フックを取る",
+	"blockhelp-take-meat": "対象を取る",
 
 	"blockhelp-insert-healingbark": "樹皮を入れる",
 	"blockhelp-insert-birchbark": "シラカバの樹皮を入れる",
@@ -137,9 +137,10 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"blockhelp-scrape-log": "削り取る",
 
 	"blockinfo-curingrack-no-entity": "このブロックで問題が発生しました。 ブロックエンティティは存在しません。ブロックを壊して、もう一度置いて下さい。",
-	"blockinfo-curingrack-hook-missing": "熟成フックがありません",
-	"blockinfo-curingrack-meat-status": "- 熟成まで: {0} 日 | 腐敗まで: {1} 日",
-	"blockinfo-curingrack-meat-perish": "貯蔵肉の腐敗速度: {0}x",
+	"blockinfo-curingrack-hook-missing": "フックがありません",
+	"blockinfo-curingrack-cure-status": "熟成まで: {0} 日",
+	"blockinfo-curingrack-dry-status": "乾燥まで: {0} 日",
+	"blockinfo-curingrack-perish-status": "腐敗まで: {0} 日",
 
 	"blockinfo-salve-empty-fillwithbark": "膏薬の容器には、シラカバ/マツの樹皮と脂肪または蜜蝋を入れる必要があります。",
 	"blockinfo-salve-empty-crouch": "しゃがんでアイテムを入れると開始します。",
@@ -362,7 +363,7 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"item-pestle-granite": "花崗岩のすりこ木",
 	"item-pestle-basalt": "玄武岩のすりこ木",
 
-	"item-curinghook-bone": "骨の熟成フック",
+	"item-curinghook-bone": "骨のフック",
 
 	"item-saltedmeat-poultry-raw": "塩漬けの生の鶏肉",
 	"item-saltedmeat-bushmeat-raw": "塩漬けの生のブッシュミート",

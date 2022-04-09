@@ -1,0 +1,146 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes/onCuringRackProps",
+		"value": {
+			transform: {
+				scale: { x: 0.5, y: 0.5, z: 0.5 },
+				translation: { x: 0.175, y: -0.6, z: 0.0 },
+				rotation: { x: 0, y: -90, z: 0 },
+				depthOffset: 0.1,
+				rotateAround: { x: 0, y: 1, z: 0 }
+			}
+		},
+		"file": "expandedfoods:itemtypes/food/mixing/sausage",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/onCuringRackProps",
+		"value": {
+			transform: {
+				scale: { x: 0.5, y: 0.5, z: 0.5 },
+				translation: { x: 0.175, y: -0.6, z: 0.0 },
+				rotation: { x: 0, y: -90, z: 0 },
+				depthOffset: 0.1,
+				rotateAround: { x: 0, y: 1, z: 0 }
+			}
+		},
+		"file": "expandedfoods:itemtypes/food/primitivesurvival/mixing/sausagefish",
+		"dependsOn": [{ "modid": "expandedfoods" }, { "modid": "primitivesurvival" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/onCuringRackProps",
+		"value": {
+			transform: {
+				scale: { x: 0.5, y: 0.5, z: 0.5 },
+				translation: { x: 0.175, y: -0.6, z: 0.0 },
+				rotation: { x: 0, y: -90, z: 0 },
+				depthOffset: 0.1,
+				rotateAround: { x: 0, y: 1, z: 0 }
+			}
+		},
+		"file": "expandedfoods:itemtypes/food/primitivesurvival/mixing/sausagecrab",
+		"dependsOn": [{ "modid": "expandedfoods" }, { "modid": "primitivesurvival" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/onCuringRackProps",
+		"value": {
+			transform: {
+				scale: { x: 0.5, y: 0.5, z: 0.5 },
+				translation: { x: 0.175, y: -0.6, z: 0.0 },
+				rotation: { x: 0, y: -90, z: 0 },
+				depthOffset: 0.1,
+				rotateAround: { x: 0, y: 1, z: 0 }
+			}
+		},
+		"file": "expandedfoods:itemtypes/food/primitivesurvival/mixing/sausagesnake",
+		"dependsOn": [{ "modid": "expandedfoods" }, { "modid": "primitivesurvival" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/onCuringRackProps",
+		"value": {
+			transform: {
+				scale: { x: 0.5, y: 0.5, z: 0.5 },
+				translation: { x: 0.175, y: -0.6, z: 0.0 },
+				rotation: { x: 0, y: -90, z: 0 },
+				depthOffset: 0.1,
+				rotateAround: { x: 0, y: 1, z: 0 }
+			}
+		},
+		"file": "expandedfoods:itemtypes/food/wildcraft/mixing/sausageherb",
+		"dependsOn": [{ "modid": "expandedfoods" }, { "modid": "wildcraft" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/onCuringRackProps",
+		"value": {
+			transform: {
+				scale: { x: 0.5, y: 0.5, z: 0.5 },
+				translation: { x: 0.175, y: -0.6, z: 0.0 },
+				rotation: { x: 0, y: -90, z: 0 },
+				depthOffset: 0.1,
+				rotateAround: { x: 0, y: 1, z: 0 }
+			}
+		},
+		"file": "expandedfoods:itemtypes/food/wildcraft/mixing/sausageherb",
+		"dependsOn": [{ "modid": "expandedfoods" }, { "modid": "wildcraft" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/onCuringRackProps",
+		"value": {
+			transform: {
+				scale: { x: 0.5, y: 0.5, z: 0.5 },
+				translation: { x: 0.175, y: -0.6, z: 0.0 },
+				rotation: { x: 0, y: -90, z: 0 },
+				depthOffset: 0.1,
+				rotateAround: { x: 0, y: 1, z: 0 }
+			}
+		},
+		"file": "expandedfoods:itemtypes/food/wildcraft/mixing/sausagefishherb.json",
+		"dependsOn": [{ "modid": "expandedfoods" }, { "modid": "primitivesurvival" }, { "modid": "wildcraft" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/onCuringRackProps",
+		"value": {
+			transform: {
+				scale: { x: 0.5, y: 0.5, z: 0.5 },
+				translation: { x: 0.175, y: -0.6, z: 0.0 },
+				rotation: { x: 0, y: -90, z: 0 },
+				depthOffset: 0.1,
+				rotateAround: { x: 0, y: 1, z: 0 }
+			}
+		},
+		"file": "expandedfoods:itemtypes/food/wildcraft/mixing/sausagecrabherb.json",
+		"dependsOn": [{ "modid": "expandedfoods" }, { "modid": "primitivesurvival" }, { "modid": "wildcraft" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/onCuringRackProps",
+		"value": {
+			transform: {
+				scale: { x: 0.5, y: 0.5, z: 0.5 },
+				translation: { x: 0.175, y: -0.6, z: 0.0 },
+				rotation: { x: 0, y: -90, z: 0 },
+				depthOffset: 0.1,
+				rotateAround: { x: 0, y: 1, z: 0 }
+			}
+		},
+		"file": "expandedfoods:itemtypes/food/wildcraft/mixing/sausagesnakeherb.json",
+		"dependsOn": [{ "modid": "expandedfoods" }, { "modid": "primitivesurvival" }, { "modid": "wildcraft" }],
+		"side": "Server"
+	},
+]

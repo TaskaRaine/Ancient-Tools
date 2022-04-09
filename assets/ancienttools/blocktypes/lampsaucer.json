@@ -94,7 +94,7 @@
 	heldRightTpIdleAnimation: "holdinglanternrighthand",
 	heldLeftTpIdleAnimation: "holdinglanternlefthand",
 	lighthsvByType: {
-		"*-candle-lit-*": [4, 2, 14],
+		"*-candle-lit-*": [7, 7, 14],
 		"*-pitch-lit-*": [4, 2, 16]
 	},
 	sounds: {

@@ -1,0 +1,17 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes/onCuringRackProps",
+		"value": {
+			transform: {
+				scale: { x: 0.5, y: 0.4, z: 0.5 },
+				rotation: { x: 0.0, y: 180.0, z: 90.0},
+				translation: { x: 0.175, y: -0.2, z: 0.0 },
+				rotateAround: { x: 0, y: 1, z: 0 },
+				depthOffset: 0.1,
+			}
+		},
+		"file": "game:itemtypes/resource/rot",
+		"side": "Server"
+	}
+]

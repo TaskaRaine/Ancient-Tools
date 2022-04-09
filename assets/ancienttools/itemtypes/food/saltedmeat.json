@@ -10,7 +10,6 @@
 		"*-redmeat-raw": {
 			displaycaseable: true,
 			shelvable: true,
-			curinghoursremaining: 480.00,
 			inFirePitProps: {
 				transform: {
 					scale: 0.85,
@@ -19,6 +18,22 @@
 					rotation: { x: 0, y: 0, z: 90 }
 				},
 				useFirepitModel: "Spit"
+			},
+			onCuringRackProps: {
+				transform: {
+					scale: { x: 0.8, y: 0.8, z: 0.8 },
+					rotation: { x: 0.0, y: 180.0, z: 90.0},
+					translation: { x: 0.175, y: -0.2, z: 0.0 },
+					depthOffset: 0.1,
+					horizontalOffset: 0.05,
+					verticalOffset: 0.0,
+					rotateAround: { x: 0, y: 1, z: 0 }
+				},
+				conversionProps: {
+					totalCuringHours: 480.00,
+					convertIntoItemstack: "game:redmeat-cured",
+					convertedItemstackType: "item"
+				}
 			},
 		},
 		"*-redmeat-cooked": {
@@ -33,11 +48,21 @@
 				},
 				useFirepitModel: "Spit"
 			},
+			onCuringRackProps: {
+				transform: {
+					scale: { x: 0.8, y: 0.8, z: 0.8 },
+					rotation: { x: 0.0, y: 180.0, z: 90.0},
+					translation: { x: 0.175, y: -0.2, z: 0.0 },
+					depthOffset: 0.1,
+					horizontalOffset: 0.05,
+					verticalOffset: 0.0,
+					rotateAround: { x: 0, y: 1, z: 0 }
+				}
+			}
 		},
-		"*-raw": {
+		"*-poultry-raw": {
 			displaycaseable: true,
 			shelvable: true,
-			curinghoursremaining: 480.00,
 			inFirePitProps: {
 				transform: {
 					scale: 0.85,
@@ -47,6 +72,47 @@
 				},
 				useFirepitModel: "Spit"
 			},
+			onCuringRackProps: {
+				transform: {
+					scale: { x: 0.8, y: 0.8, z: 0.8 },
+					translation: { x: 0.175, y: -0.2, z: 0.0 },
+					rotation: { x: 0.0, y: 180.0, z: 90.0},
+					depthOffset: 0.1,
+					rotateAround: { x: 0, y: 1, z: 0 }
+				},
+				conversionProps: {
+					totalCuringHours: 480.00,
+					convertIntoItemstack: "game:poultry-cured",
+					convertedItemstackType: "item"
+				}
+			}
+		},
+		"*-bushmeat-raw": {
+			displaycaseable: true,
+			shelvable: true,
+			inFirePitProps: {
+				transform: {
+					scale: 0.85,
+					origin: { x: 0.5, y: 0.0625, z: 0.5 },
+					translation: { x: -0.03125, y: 0.125, z: 0 },
+					rotation: { x: 0, y: 0, z: 90 }
+				},
+				useFirepitModel: "Spit"
+			},
+			onCuringRackProps: {
+				transform: {
+					scale: { x: 0.8, y: 0.8, z: 0.8 },
+					translation: { x: 0.175, y: -0.2, z: 0.0 },
+					rotation: { x: 0.0, y: 180.0, z: 90.0},
+					depthOffset: 0.1,
+					rotateAround: { x: 0, y: 1, z: 0 }
+				},
+				conversionProps: {
+					totalCuringHours: 480.00,
+					convertIntoItemstack: "game:bushmeat-cured",
+					convertedItemstackType: "item"
+				}
+			}
 		},
 		"*-cooked": {
 			displaycaseable: true,
@@ -60,6 +126,15 @@
 				},
 				useFirepitModel: "Spit"
 			},
+			onCuringRackProps: {
+				transform: {
+					scale: { x: 0.8, y: 0.8, z: 0.8 },
+					translation: { x: 0.175, y: -0.2, z: 0.0 },
+					rotation: { x: 0.0, y: 180.0, z: 90.0},
+					depthOffset: 0.1,
+					rotateAround: { x: 0, y: 1, z: 0 }
+				}
+			}
 		}
 	},
 	shapebytype: { 

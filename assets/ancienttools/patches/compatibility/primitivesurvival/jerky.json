@@ -1,0 +1,53 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes/onCuringRackProps",
+		"value": {
+			transform: {
+				scale: { x: 0.8, y: 0.8, z: 0.8 },
+				rotation: { x: 0.0, y: 180.0, z: 90.0},
+				translation: { x: 0.175, y: -0.2, z: 0.0 },
+				depthOffset: 0.1,
+				horizontalOffset: 0.075,
+				rotateAround: { x: 0, y: 1, z: 0 }
+			}
+		},
+		"file": "primitivesurvival:itemtypes/food/jerky-redmeat",
+		"dependsOn": [{ "modid": "primitivesurvival" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/onCuringRackProps",
+		"value": {
+			transform: {
+				scale: { x: 0.8, y: 0.8, z: 0.8 },
+				rotation: { x: 0.0, y: 180.0, z: 90.0},
+				translation: { x: 0.175, y: -0.25, z: 0.0 },
+				depthOffset: 0.09,
+				horizontalOffset: 0.025,
+				rotateAround: { x: 0, y: 1, z: 0 }
+			}
+		},
+		"file": "primitivesurvival:itemtypes/food/jerky-bushmeat",
+		"dependsOn": [{ "modid": "primitivesurvival" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/onCuringRackProps",
+		"value": {
+			transform: {
+				scale: { x: 0.8, y: 0.8, z: 0.8 },
+				rotation: { x: 0.0, y: 180.0, z: 90.0},
+				translation: { x: 0.175, y: -0.25, z: 0.0 },
+				depthOffset: 0.08,
+				horizontalOffset: 0.0125,
+				rotateAround: { x: 0, y: 1, z: 0 }
+			}
+		},
+		"file": "primitivesurvival:itemtypes/food/jerky-fish",
+		"dependsOn": [{ "modid": "primitivesurvival" }],
+		"side": "Server"
+	},
+]

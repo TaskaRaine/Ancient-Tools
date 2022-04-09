@@ -28,7 +28,7 @@ Both varities of bark also have various medicinal properties. Have a look at the
 <font weight='bold'>Curing Rack</font>
 Curing meats with <a href=\'handbook://item-salt\'>salt</a> is a centuries-old practice of preservation. This requires a carefully controlled environment to ensure the meat doesn't rot before the meat is cured. A cellar is recommended!
 
-A <a href=\'handbooksearch://curing rack\'>curing rack</a> can be equipped with two <a href=\'handbooksearch://curing hook\'>hooks</a> with <icon name='rightmousebutton'></icon>. Hang any variety of salted meat(<a href=\'handbook://item-ancienttools:saltedmeat-redmeat-raw\'>redmeat</a>,<a href=\'handbook://item-ancienttools:saltedmeat-poultry-raw\'>poultry</a>,<a href=\'handbook://item-ancienttools:saltedmeat-bushmeat-raw\'>bushmeat</a>) and wait until your delicious meat is perfectly cured!
+A <a href=\'handbooksearch://curing rack\'>curing rack</a> can be equipped with two <a href=\'handbooksearch://bone hook\'>hooks</a> with <icon name='rightmousebutton'></icon>. Hang any variety of salted meat(<a href=\'handbook://item-ancienttools:saltedmeat-redmeat-raw\'>redmeat</a>,<a href=\'handbook://item-ancienttools:saltedmeat-poultry-raw\'>poultry</a>,<a href=\'handbook://item-ancienttools:saltedmeat-bushmeat-raw\'>bushmeat</a>) and wait until your delicious meat is perfectly cured!
 
 Salted meats can also be cooked in a firepit for a quick meal solution.	
 
@@ -109,10 +109,10 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"blockhelp-place-resource": "Place Grindable Resource",
 	"blockhelp-grind-mortar": "Grind Resource",
 
-	"blockhelp-place-curinghook": "Place Curing Hook",
-	"blockhelp-place-saltedmeat": "Hang Salted Meat",
-	"blockhelp-take-curinghook": "Take Curing Hook",
-	"blockhelp-take-meat": "Take Meat",
+	"blockhelp-place-curinghook": "Place Hook",			
+	"blockhelp-place-saltedmeat": "Hang Object",	
+	"blockhelp-take-curinghook": "Take Hook",			
+	"blockhelp-take-meat": "Take Object",				
 
 	"blockhelp-insert-healingbark": "Insert Bark",
 	"blockhelp-insert-birchbark": "Insert Birch Bark",
@@ -140,8 +140,11 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"blockhelp-scrape-log": "Scrape",
 
 	"blockinfo-curingrack-no-entity": "Something went wrong with this block. The BlockEntity does not exist. Please break the block and place it again.",
-	"blockinfo-curingrack-hook-missing": "Curing Hook Missing",
-	"blockinfo-curingrack-meat-status": "- Cures In: {0} Days | Rots In: {1} Days",
+	"blockinfo-curingrack-hook-missing": "Hook Missing",		
+
+	"blockinfo-curingrack-cure-status": "Cures In: {0} Days",	
+	"blockinfo-curingrack-dry-status": "Dries In: {0} Days",	
+	"blockinfo-curingrack-perish-status": "Rots In: {0} Days",	
 	"blockinfo-curingrack-meat-perish": "Stored meat perish speed: {0}x",
 
 	"blockinfo-salve-empty-fillwithbark": "A salve container must be filled with birch/pine bark and fat OR beeswax.",
@@ -365,7 +368,7 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"item-pestle-granite": "Granite Pestle",
 	"item-pestle-basalt": "Basalt Pestle",
 
-	"item-curinghook-bone": "Bone Curing Hook",
+	"item-curinghook-bone": "Bone Hook",			
 
 	"item-saltedmeat-poultry-raw": "Raw Salted Poultry",
 	"item-saltedmeat-bushmeat-raw": "Raw Salted Bushmeat",

@@ -3,11 +3,11 @@ using Vintagestory.API.Common;
 
 namespace AncientTools.Utility
 {
-    static class ModConfig
+    class ModConfig
     {
-        private static AncientToolsConfig config;
+        private AncientToolsConfig config;
 
-        public static void ReadConfig(ICoreAPI api)
+        public void ReadConfig(ICoreAPI api)
         {
             try
             {
@@ -41,15 +41,15 @@ namespace AncientTools.Utility
             api.World.Config.SetFloat("WaterSackConversionHours", config.WaterSackConversionHours);
             api.World.Config.SetFloat("BrainedHideSealHours", config.BrainedHideSealHours);
         }
-        private static AncientToolsConfig LoadConfig(ICoreAPI api)
+        private AncientToolsConfig LoadConfig(ICoreAPI api)
         {
             return api.LoadModConfig<AncientToolsConfig>("AncientToolsConfig.json");
         }
-        private static void GenerateConfig(ICoreAPI api)
+        private void GenerateConfig(ICoreAPI api)
         {
             api.StoreModConfig<AncientToolsConfig>(new AncientToolsConfig(), "AncientToolsConfig.json");
         }
-        private static void GenerateConfig(ICoreAPI api, AncientToolsConfig previousConfig)
+        private void GenerateConfig(ICoreAPI api, AncientToolsConfig previousConfig)
         {
             api.StoreModConfig<AncientToolsConfig>(new AncientToolsConfig(previousConfig), "AncientToolsConfig.json");
         }

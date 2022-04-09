@@ -1,0 +1,252 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/textures/peanutkernels",
+		"value": {
+			base: "expandedfoods:item/food/peanut/cooked"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/cassava-dried",
+		"value": {
+			base: "game:item/food/vegetable/cassava-dried"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/soyroasted",
+		"value": {
+			base: "expandedfoods:item/food/soyprep/roasted"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/soywetshell",
+		"value": {
+			base: "expandedfoods:item/food/soyprep/wetshell"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/amaranthpartbaked",
+		"value": {
+			base: "game:item/food/grain/amaranthbread2"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/amaranthperfect",
+		"value": {
+			base: "game:item/food/grain/amaranthbread"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/amaranthcharred",
+		"value": {
+			base: "game:item/food/grain/amaranthbread1"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/cassavapartbaked",
+		"value": {
+			base: "game:item/food/grain/cassavabread2"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/cassavaperfect",
+		"value": {
+			base: "game:item/food/grain/cassavabread"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/cassavacharred",
+		"value": {
+			base: "game:item/food/grain/cassavabread1"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/flaxpartbaked",
+		"value": {
+			base: "game:item/food/grain/flaxbread2"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/flaxperfect",
+		"value": {
+			base: "game:item/food/grain/flaxbread"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/flaxcharred",
+		"value": {
+			base: "game:item/food/grain/flaxbread1"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/ricepartbaked",
+		"value": {
+			base: "game:item/food/grain/ricebread2"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/riceperfect",
+		"value": {
+			base: "game:item/food/grain/ricebread"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/ricecharred",
+		"value": {
+			base: "game:item/food/grain/ricebread1"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/ryepartbaked",
+		"value": {
+			base: "game:item/food/grain/ryebread2"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/ryeperfect",
+		"value": {
+			base: "game:item/food/grain/ryebread"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/ryecharred",
+		"value": {
+			base: "game:item/food/grain/ryebread1"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/speltpartbaked",
+		"value": {
+			base: "game:item/food/grain/speltbread2"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/speltperfect",
+		"value": {
+			base: "game:item/food/grain/speltbread"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/speltcharred",
+		"value": {
+			base: "game:item/food/grain/speltbread1"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/sunflowerpartbaked",
+		"value": {
+			base: "game:item/food/grain/sunflowerbread2"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/sunflowerperfect",
+		"value": {
+			base: "game:item/food/grain/sunflowerbread"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/sunflowercharred",
+		"value": {
+			base: "game:item/food/grain/sunflowerbread1"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+]

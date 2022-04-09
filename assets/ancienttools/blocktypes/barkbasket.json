@@ -73,6 +73,10 @@
 			"basket-inside": { base: "game:block/wood/debarked/{variant}", rotation: 90 },
 		}
 	},
+	combustibleProps: {
+		burnTemperature: 800,
+		burnDuration: 60,
+	},
 	heldTpIdleAnimation: "holdbothhands",
 	heldTpUseAnimation: "twohandplaceblock",
 	blockmaterial: "Wood",

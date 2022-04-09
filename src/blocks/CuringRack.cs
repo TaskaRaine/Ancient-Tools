@@ -1,13 +1,10 @@
 ﻿using AncientTools.BlockEntities;
-using AncientTools.Items;
-using AncientTools.Utility;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
-using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
 
@@ -33,11 +30,11 @@ namespace AncientTools.Blocks
             {
                 if (item.Code == null) continue;
 
-                if (item.Code.Domain == "ancienttools")
+                if (item.Code.BeginsWith("ancienttools", "curinghook"))
+                    curingHook.Add(new ItemStack(item));
+                else if (item.Attributes != null)
                 {
-                    if (item.FirstCodePart() == "curinghook")
-                        curingHook.Add(new ItemStack(item));
-                    else if (item.FirstCodePart() == "saltedmeat" && item.LastCodePart() == "raw")
+                    if(item.Attributes["onCuringRackProps"].Exists)
                         saltedMeat.Add(new ItemStack(item));
                 }
             }
@@ -145,11 +142,8 @@ namespace AncientTools.Blocks
 
                             stringBuilder.AppendLine(entityCuringRack.MeatSlot(i).Itemstack.GetName());
 
-                            if (entityCuringRack.MeatSlot(i).Itemstack.Item is ItemSaltedMeat)
-                            {
-                                stringBuilder.AppendLine(GetMeatStatus(entityCuringRack.MeatSlot(i)));
-                                stringBuilder.Append("\n");
-                            }
+                            stringBuilder.AppendLine(GetMeatStatus(entityCuringRack.MeatSlot(i)));
+                            stringBuilder.Append("\n");
                         }
 
                         break;
@@ -172,11 +166,8 @@ namespace AncientTools.Blocks
 
                             stringBuilder.AppendLine(entityCuringRack.MeatSlot(i).Itemstack.GetName());
 
-                            if(entityCuringRack.MeatSlot(i).Itemstack.Item is ItemSaltedMeat)
-                            {
-                                stringBuilder.AppendLine(GetMeatStatus(entityCuringRack.MeatSlot(i)));
-                                stringBuilder.Append("\n");
-                            }
+                            stringBuilder.AppendLine(GetMeatStatus(entityCuringRack.MeatSlot(i)));
+                            stringBuilder.Append("\n");
                         }
 
                         break;
@@ -352,13 +343,65 @@ namespace AncientTools.Blocks
         }
         private string GetMeatStatus(ItemSlot meatSlot)
         {
-            TransitionState state = meatSlot.Itemstack.Collectible.UpdateAndGetTransitionState(api.World, meatSlot, EnumTransitionType.Perish);
-            float multiplier = meatSlot.Itemstack.Collectible.GetTransitionRateMul(api.World, meatSlot, EnumTransitionType.Perish);
+            TransitionState[] transitionStates = meatSlot.Itemstack.Collectible.UpdateAndGetTransitionStates(api.World, meatSlot);
 
+            string[] stateText = { string.Empty, string.Empty, string.Empty };
+            string finalText = string.Empty;
 
-            return Lang.Get("ancienttools:blockinfo-curingrack-meat-status", 
-                Math.Ceiling(meatSlot.Itemstack.Attributes.GetDouble("curinghoursremaining") / 24), 
-                Math.Round((((state.FreshHours + state.TransitionHours) - state.TransitionedHours) / multiplier) / 24));
+            if(transitionStates != null)
+                foreach(TransitionState state in transitionStates)
+                {
+                    switch(state.Props.Type)
+                    {
+                        case EnumTransitionType.Perish:
+                            {
+                                float perishMultiplier = meatSlot.Itemstack.Collectible.GetTransitionRateMul(api.World, meatSlot, EnumTransitionType.Perish);
+
+                                stateText[0] = Lang.Get("ancienttools:blockinfo-curingrack-perish-status",
+                                    Math.Round((((state.FreshHours + state.TransitionHours) - state.TransitionedHours) / perishMultiplier) / api.World.Calendar.HoursPerDay));
+                            
+                                break;
+                            }
+                        case EnumTransitionType.Cure:
+                            {
+                                float cureMultiplier = meatSlot.Itemstack.Collectible.GetTransitionRateMul(api.World, meatSlot, EnumTransitionType.Cure);
+
+                                stateText[1] = Lang.Get("ancienttools:blockinfo-curingrack-cure-status",
+                                    Math.Round((((state.FreshHours + state.TransitionHours) - state.TransitionedHours) / cureMultiplier) / api.World.Calendar.HoursPerDay));
+                                break;
+                            }
+                        case EnumTransitionType.Dry:
+                            {
+                                float dryMultiplier = meatSlot.Itemstack.Collectible.GetTransitionRateMul(api.World, meatSlot, EnumTransitionType.Dry);
+
+                                stateText[2] = Lang.Get("ancienttools:blockinfo-curingrack-dry-status",
+                                    Math.Round((((state.FreshHours + state.TransitionHours) - state.TransitionedHours) / dryMultiplier) / api.World.Calendar.HoursPerDay));
+                                break;
+                            }
+                    }
+                }
+
+            if (meatSlot.Itemstack.Attributes.TryGetDouble("curinghoursremaining") != null)
+            {
+                stateText[1] = Lang.Get("ancienttools:blockinfo-curingrack-cure-status",
+                    Math.Ceiling(meatSlot.Itemstack.Attributes.GetDouble("curinghoursremaining") / api.World.Calendar.HoursPerDay));
+            }
+
+            for (int i = 0; i < stateText.Length; i++)
+            {
+                if (stateText[i] != string.Empty)
+                {
+                    if (finalText != string.Empty)
+                        finalText += " | ";
+
+                    finalText += stateText[i];
+                }
+            }
+
+            if (finalText == string.Empty)
+                return string.Empty;
+
+            return "- " + finalText;
         }
         private string GetBlockRotation(BlockFacing selectedFace, Vec3i playerPos, Vec3i blockPos)
         {

@@ -1,0 +1,30 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes/onCuringRackPropsByType",
+		"value": {
+			"@agedmeat-redmeat-(normal|cut|raw|tenderpartbaked|tender|tendercharred)": {
+				transform: {
+					scale: { x: 0.8, y: 0.8, z: 0.8 },
+					rotation: { x: 0.0, y: 180.0, z: 90.0},
+					translation: { x: 0.175, y: -0.2, z: 0.0 },
+					horizontalOffset: 0.05,
+					depthOffset: 0.1,
+					rotateAround: { x: 0, y: 1, z: 0 }
+				}
+			},
+			"@agedmeat-(bushmeat|poultry)-(normal|cut|raw|tenderpartbaked|tender|tendercharred)": {
+				transform: {
+					scale: { x: 0.8, y: 0.8, z: 0.8 },
+					rotation: { x: 0.0, y: 180.0, z: 90.0},
+					translation: { x: 0.175, y: -0.2, z: 0.0 },
+					depthOffset: 0.1,
+					rotateAround: { x: 0, y: 1, z: 0 }
+				}
+			}
+		},
+		"file": "expandedfoods:itemtypes/food/agedmeat",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	}
+]

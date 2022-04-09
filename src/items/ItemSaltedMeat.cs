@@ -46,7 +46,7 @@ namespace AncientTools.Items
 
                             outputSlot.Itemstack.Attributes["transitionstate"] = modifiedAttributes;
 
-                            outputSlot.Itemstack.Attributes.SetDouble("curinghoursremaining", outputSlot.Itemstack.ItemAttributes["curinghoursremaining"].AsDouble());
+                            outputSlot.Itemstack.Attributes.SetDouble("curinghoursremaining", outputSlot.Itemstack.ItemAttributes["onCuringRackProps"]["conversionProps"]["totalCuringHours"].AsDouble());
                         }
                     }
                 }
@@ -65,7 +65,7 @@ namespace AncientTools.Items
             }
             else
             {
-                dsc.AppendLine(Lang.Get("ancienttools:itemdesc-saltedmeat-cure-x-days", Math.Ceiling(inSlot.Itemstack.Item.Attributes["curinghoursremaining"].AsDouble() / 24)));
+                dsc.AppendLine(Lang.Get("ancienttools:itemdesc-saltedmeat-cure-x-days", Math.Ceiling(inSlot.Itemstack.Item.Attributes["onCuringRackProps"]["conversionProps"]["totalCuringHours"].AsDouble() / 24)));
             }
         }
     }

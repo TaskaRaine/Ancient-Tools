@@ -5,7 +5,7 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.2, var: 0 } 
+			quantity: { avg: 0.35, var: 0 } 
 		},
 		"file": "medievalexpansion:entities/land/aurochs-male",
 		"dependsOn": [{ "modid": "medievalexpansion" }],
@@ -17,7 +17,7 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.2, var: 0 } 
+			quantity: { avg: 0.35, var: 0 } 
 		},
 		"file": "medievalexpansion:entities/land/aurochs-female",
 		"dependsOn": [{ "modid": "medievalexpansion" }],
@@ -29,7 +29,7 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.1, var: 0 } 
+			quantity: { avg: 0.25, var: 0 } 
 		},
 		"file": "medievalexpansion:entities/land/aurochs-lamb",
 		"dependsOn": [{ "modid": "medievalexpansion" }],

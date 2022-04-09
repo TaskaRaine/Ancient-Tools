@@ -48,6 +48,25 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.4.1
+-- Curing Rack
+Curing rack shapes have been modified to better fit the Vintage Story aesthetic.
+
+The curing rack can now be used for drying objects, storage, as well as curing. They just need to have an onCuringRackProps attribute(detailed in a guide in the resources folder)
+
+Added compatibility for Expanded Foods, Primitive Survival, and Wildcraft. Various items can be hung on the curing rack from each mod. 
+
+-- Other
+Updated the Japanese language file(thank you, Macoto Hino!)
+
+Expanded Foods grindables now have their own custom meshes for the mortar.
+
+Lowered drop rates of brains, now 25% chance for smaller animals, and 35% for larger animals.
+
+The chamberstick blocks now emit a warmer hue.
+
+Unwanted bark baskets can now be burned as fuel.
+
 #### Version 1.4.0
 -- Pitch
 New crafting process - Pitch!

@@ -5,7 +5,7 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.45, var: 0 } 
+			quantity: { avg: 0.35, var: 0 } 
 		},
 		"file": "lichen:entities/land/gemsbok-male",
 		"dependsOn": [{ "modid": "lichen" }],
@@ -17,7 +17,7 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.45, var: 0 } 
+			quantity: { avg: 0.35, var: 0 } 
 		},
 		"file": "lichen:entities/land/gemsbok-female",
 		"dependsOn": [{ "modid": "lichen" }],
@@ -29,7 +29,7 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.35, var: 0 } 
+			quantity: { avg: 0.25, var: 0 } 
 		},
 		"file": "lichen:entities/land/gemsbok-fawn",
 		"dependsOn": [{ "modid": "lichen" }],

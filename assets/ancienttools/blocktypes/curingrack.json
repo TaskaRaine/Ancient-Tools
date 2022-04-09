@@ -2,6 +2,7 @@
 	code: "curingrack",
 	class: "BlockCuringRack",
 	entityClass: "BECuringRack",
+	renderpass: "OpaqueNoCull",
 	creativeinventory: { "general": ["*-ns-full"], "decorative": ["*-ns-full"], "mechanics": ["*-ns-full"], "ancienttools": ["*-ns-full"] },
     attributes: {
 		handbook: {
@@ -19,10 +20,10 @@
 	drawtype: "json",
 	shapebytype: { 
 		"*-ns-*": { 
-			base: "block/curingrack/{supports}_curingrack" 
+			base: "block/curingrack/{supports}_curingrack_plus" 
 		},
 		"*-ew-*": {
-			base: "block/curingrack/{supports}_curingrack", rotateY: 90
+			base: "block/curingrack/{supports}_curingrack_plus", rotateY: 90
 		}
 	},
 	texturesByType: { 
