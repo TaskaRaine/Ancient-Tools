@@ -28,7 +28,7 @@ Ces variétés d'écorce ont aussi des propriétés médicinales. Jetez un oeil 
 <font weight='bold'>Râtelier de salaison</font>
 Préparer la viande avec du <a href=\'handbook://item-salt\'>sel</a> est une pratique ancienne de plusieurs siècles. Cela requiert un environnement contrôlé pour s'assurer que la viande ne pourisse pas avant la fin de la salaison. Un cellier est recommandé!
 
-Un <a href=\'handbooksearch://curing rack\'>râtelier de salaison</a> peut être équipé avec deux <a href=\'handbooksearch://bone hook\'>crochets</a> avec <icon name='rightmousebutton'></icon>. Pendez n'importe quelle variété de viande (<a href=\'handbook://item-ancienttools:saltedmeat-redmeat-raw\'>viande rouge</a>,<a href=\'handbook://item-ancienttools:saltedmeat-poultry-raw\'>volaille</a>,<a href=\'handbook://item-ancienttools:saltedmeat-bushmeat-raw\'>venaison</a>) et attendez jusqu'à ce que votre délicieuse viande soit parfaitement salée!
+Un <a href=\'handbooksearch://curing rack\'>râtelier de salaison</a> peut être équipé avec deux <a href=\'handbooksearch://curing hook\'>crochets</a> avec <icon name='rightmousebutton'></icon>. Pendez n'importe quelle variété de viande (<a href=\'handbook://item-ancienttools:saltedmeat-redmeat-raw\'>viande rouge</a>,<a href=\'handbook://item-ancienttools:saltedmeat-poultry-raw\'>volaille</a>,<a href=\'handbook://item-ancienttools:saltedmeat-bushmeat-raw\'>venaison</a>) et attendez jusqu'à ce que votre délicieuse viande soit parfaitement salée!
 
 Les viandes salées peuvent également être cuites sur un feu de camp pour un repas rapide.	
 
@@ -37,6 +37,18 @@ Les viandes salées peuvent également être cuites sur un feu de camp pour un r
 Les cultures amérindiennes utilisaient une technique différente pour tanner les peaux animales que les colons européens pour fabriquer leur cuir.
 
 Le mod Ancient Tools implémente une version simplifiée de cette technique pour vous donner une alternative à la fabrication de cuir! Vous voulez essayer? Visitez le <a href=\"handbook://ancienttools-quickstart-guide-tanning\">Guide pour le tannage amérindien</a>.  
+
+<font weight='bold'>La poix</font>
+
+<a href=\'handbook://item-ancienttools:pitch-ball\'>La poix</a> est une substance noire et collante produite en combinant et en chauffant finement de la <a href=\'handbook://item-ancienttools:powderedcharcoal\'>poudre de charbon</a>, de la <a href=\'handbook://item-resin\'>résine d'arbre</a>, et des matériaux fibreux tels que de <a href=\'handbook://item-drygrass\'>l'herbe séchée</a> ou des matières fécales animales séchées. 
+
+Ce matériau est exceptionnellement collant et étanche. Historiquement, il était utilisé pour calfater les planches des coques des navires ou pour sceller des contenants, comme par exemple des <a href=\'handbook://block-crock-burned-east\'>pots cuits</a>. Ancient Tools utilise les propriétés étanches de la poix, vous permettant d'utiliser vos feux de camp, fours à poterie et forges losqu'elles sont exposées aux éléments et que vous utilisez la poix comme combustible. 
+
+De plus, la poix peut être utilisée pour fabriquer des <a href=\'handbook://block-ancienttools:pitchtorch-extinct-up\'>torches</a> qui ne s'éteindront pas sous la pluie et dureront longtemps. La poix peut aussi être utilisée pour créer des petits <a href=\'handbooksearch://Chamberstick with Pitch\'>bougeoirs</a> comme sources de lumière permanentes, comme les lampes à huile.    
+
+Une explication détaillée sur la production de poix peut être trouvée dans le <a href=\"handbook://ancienttools-quickstart-guide-pitch\">Guide pour la création de poix</a>.
+
+Note: Puisque la résine est indispensable à la création de poix dans Ancient Tools, un système à été implémenté pour vous permettre d'utiliser les couteaux pour récolter de la résine sur du pin et de l'acacia. Ce système peut être désactivé dans les fichiers de configuration du mod.
 ",
 	"game:ancienttools-quickstart-guide-salve": "Guide de préparation des pommades",
 	"game:ancienttools-quickstart-title-salve": "Technique de fabrication: Préparation de pommades",
@@ -75,6 +87,24 @@ Une fois que la peau a été correctement <a href=\'handbook://item-hide-soaked-
 
 Finalement, la dernière étape! Prenez votre peau fumée et, en utilisant un couteau, découpez-là délicatement en lanières de <a href=\'handbook://item-leather\'>cuir</a>. Cela se fait dans la grille de fabrication.
 	",
+	"game:ancienttools-quickstart-guide-pitch": "Guide pour la création de poix",
+	"game:ancienttools-quickstart-title-pitch": "Technique de fabrication: Création de poix",
+	"game:ancienttools-quickstart-text-pitch": "
+<font weight='bold' align='center'>Guide pour la création de poix</font><br>
+
+<a href=\'handbook://item-ancienttools:pitch-ball\'>La poix</a> était une ressource très recherchée pour sa versatilité. Elle pouvait être utilisée comme colle, mastic, combustible, et bien d'autres choses.
+
+Il n'y avait pas qu'une seule façon de créer de la poix. Différentes ressources pouvaient être combinées pour des résultats similaires. Néanmoins, avec Ancient Tools, vous aurez besoin de <a href=\'handbook://item-charcoal\'>charbon de bois</a>, de la <a href=\'handbook://item-resin\'>résine</a>, et de <a href=\'handbook://item-drygrass\'>l'herbe sèche</a> pour le processus.
+
+Pour commencer, vous devez moudre deux morceaux de charbon en <a href=\'handbook://item-ancienttools:powderedcharcoal\'>poudre de charbon</a> en utilisant un <a href=\'handbooksearch://mortar\'>mortier</a> et un <a href=\'handbooksearch://pestle\'>pilon</a>, ou tout autre moyen pour moudre. Prenez un morceau de charbon et interagissez avec une marmite avec <icon name='rightmousebutton'></icon> pour transformer la marmite en <a href=\'handbook://block-ancienttools:pitchpot-empty\'>Marmite de poix vide</a>.
+
+Ensuite, remplissez le contenant en cliquant <icon name='rightmousebutton'></icon> avec 2 morceaux de <a href=\'handbook://item-ancienttools:powderedcharcoal\'>poudre de charbon</a>, 4 morceaux de <a href=\'handbook://item-resin\'>résine</a>, et 1 morceau <a href=\'handbook://item-drygrass\'>d'herbe sèche</a>. Quand le contenant est rempli avec les bons ingrédients, il se transformera en <a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>Mélange de poix non-préparé</a>.
+
+Maintenant, prenez le mélange et chauffez-le dans le feu de camp le plus proche pour créer de la <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>poix préparée</a>. Une fois terminé, vous pouvez placer la marmite sur le sol et récupérer des portions de poix avec un <a href=\'handbook://item-stick\'>bâton</a>.
+	",
+	"game:handbook-crafting-title-pitch": "Fabriqué par",
+	"game:handbook-crafting-text-pitch": "Combinez de la <a href=\'handbook://item-ancienttools:powderedcharcoal\'>poudre de charbon</a>, de la <a href=\'handbook://item-resin\'>résine</a>, et de <a href=\'handbook://item-drygrass\'>l'herbe sèche</a> dans une <a href=\'handbook://block-ancienttools:pitchpot-empty\'>marmite de poix vide</a> et cuisez le <a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>mélange obtenu</a> dans un feu de camp. Placez la <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>poix préparée</a> sur le sol pour récupérer des morceaux.",
+
 	"blockhelp-place-pestle": "Placer le pilon",
 	"blockhelp-place-resource": "Placer une ressources à moudre",
 	"blockhelp-grind-mortar": "Moudre la ressource",
@@ -98,10 +128,23 @@ Finalement, la dernière étape! Prenez votre peau fumée et, en utilisant un co
 	"blockhelp-take-hide": "Prendre la peau",
 	"blockhelp-skin-hide": "Gratter la peau",
 	"blockhelp-take-hide-sack": "Prendre le sac de peau",
+	
+	"blockhelp-insert-powderedcharcoal": "Insérer la poudre de charbon",
+	"blockhelp-insert-resin": "Insérer la résine",
+	"blockhelp-insert-grass": "Insérer l'herbe sèche",
+	
+	"blockhelp-take-pitch": "Prendre de la poix",
+	"blockhelp-place-pitch": "Placer de la poix",
+
+	"blockhelp-saucer-insert-object": "Insérer poix/bougie",
+	"blockhelp-scrape-log": "Erafler la bûche",
 
 	"blockinfo-curingrack-no-entity": "Quelque chose ne s'est pas déroulé correctement. Ce BlockEntity n'existe pas. Cassez le bloc et placez-le à nouveau.",
 	"blockinfo-curingrack-hook-missing": "Il manque un crochet de salaison",
-	"blockinfo-curingrack-meat-status": "- Salaison dans: {0} jours | Pourrit dans: {1} jours",
+	
+	"blockinfo-curingrack-cure-status": "Salaison dans: {0} jours",	
+	"blockinfo-curingrack-dry-status": "Sèche dans: {0} jours",	
+	"blockinfo-curingrack-perish-status": "Pourrit dans: {0} jours",	
 	"blockinfo-curingrack-meat-perish": "Vitesse de décomposition de la viande entreposée: {0}x",
 
 	"blockinfo-salve-empty-fillwithbark": "Un récipient de pommade doit être rempli avec de l'écorce de bouleau/pin et de la graisse OU de la cire d'abeille.",
@@ -113,6 +156,14 @@ Finalement, la dernière étape! Prenez votre peau fumée et, en utilisant un co
 	"blockinfo-salve-mixwithoil": "Doit être mélangé avec de l'huile d'écorce pour créer une pommade guérissante.",
 	"blockinfo-salve-mixwithwax": "Doit être mélangé avec de la cire d'abeille fondue pour créer une pommade guérissante.",
 	"blockinfo-salve-filled-remaining": "{0} portions de pommade restantes.",
+	
+	"blockinfo-pitch-empty": "Remplissez avec de la poudre de charbon, de la résine et de l'herbe sèche pour créer un mélange de poix.",
+	"blockinfo-pitch-insert": "Insérez un objet pour commencer",
+	"blockinfo-contains": "Contien: ",
+	"blockinfo-pitch-empty-charcoal": "{0}/{1} poudre de charbon",
+	"blockinfo-pitch-empty-resin": "{0}/{1} résine",
+	"blockinfo-pitch-empty-grass": "{0}/{1} herbe sèche",
+	"blockinfo-pitch-remaining": "{0} portion(s) de poix restante.",
 
 	"game:handbook-crafting-title-strippedlog": "Fabriqué par",
 	"game:handbook-crafting-text-strippedlog": "Arrachez de l'écorce des buches en utilisant la herminette. De plus, une bûche écorcée vous sera rendue quand vous utilisez la herminette et une buche dans la grille de fabrication.",
@@ -122,6 +173,9 @@ Finalement, la dernière étape! Prenez votre peau fumée et, en utilisant un co
 
 	"game:handbook-crafting-title-salveportion": "Fabriqué par",
 	"game:handbook-crafting-text-salveportion": "Mélangez un pot de <a href=\'handbook://block-ancienttools:salvepot-softwax\'>cire d'abeille fondue</a> avec un pot <a href=\'handbook://block-ancienttools:salvepot-barkoil\'>d'huile d'écorce</a> pour créer une pommade contenant plusieurs portions. Des portions de pommade peuvent être récupérées avec le clic <icon name='rightmousebutton'></icon>.",
+	
+	"game:handbook-crafting-title-pitch": "Fabriqué par",
+	"game:handbook-crafting-text-pitch": "Combinez de la <a href=\'handbook://item-ancienttools:powderedcharcoal\'>poudre de charbon</a>, de la <a href=\'handbook://item-resin\'>résine</a>, et de <a href=\'handbook://item-drygrass\'>l'herbe sèche</a> dans une <a href=\'handbook://block-ancienttools:pitchpot-empty\'>marmite de poix vide</a> et cuisez le <a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>mélange obtenu</a> dans un feu de camp. Placez la <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>poix préparée</a> sur le sol pour récupérer des morceaux.",
 
 	"block-mortar-peridotite": "Mortier de peridotite",
 	"block-mortar-andesite": "Mortier d'andésite",
@@ -200,6 +254,85 @@ Finalement, la dernière étape! Prenez votre peau fumée et, en utilisant un co
 	"block-hidewatersack-soaked-large": "Sac d'eau de peau grande trempée",
 	"block-hidewatersack-soaked-medium": "Sac d'eau de peau moyenne trempée",
 	"block-hidewatersack-soaked-small": "Sac d'eau de peau petite trempée",
+	
+	"block-pitchpot-empty": "Marmite de poix vide",
+	"block-pitchpot-unmixed": "Mélange de poix non-préparé",
+	"block-pitchpot-finishedpitchinventory": "Poix prête",
+	"block-pitchpot-finishedpitch": "Poix prête",
+
+	"block-pitchtorch-extinct-*": "Torche de poix éteinte",
+	"block-pitchtorch-lit-*": "Torche de poix allumée",
+	"block-pitchtorch-melted-*": "Torche de poix mélangée",
+
+	"block-lampsaucer-copper-empty-extinct-*": "Bougeoir en cuivre",
+	"block-lampsaucer-brass-empty-extinct-*": "Bougeoir en laiton",
+	"block-lampsaucer-bismuth-empty-extinct-*": "Bougeoir en bismuth",
+	"block-lampsaucer-tinbronze-empty-extinct-*": "Bougeoir en bronze-étain",
+	"block-lampsaucer-bismuthbronze-empty-extinct-*": "Bougeoir en bronze-bismuth",
+	"block-lampsaucer-blackbronze-empty-extinct-*": "Bougeoir en bronze-noir",
+	"block-lampsaucer-molybdochalkos-empty-extinct-*": "Bougeoir en molybdochalkos",
+	"block-lampsaucer-gold-empty-extinct-*": "Bougeoir en or",
+	"block-lampsaucer-silver-empty-extinct-*": "Bougeoir en argent",
+	"block-lampsaucer-iron-empty-extinct-*": "Bougeoir en fer",
+	"block-lampsaucer-meteoriciron-empty-extinct-*": "Bougeoir en fer météoritique",
+	"block-lampsaucer-steel-empty-extinct-*": "Bougeoir en acier",
+
+	"block-lampsaucer-copper-candle-extinct-*": "Bougeoir en cuivre avec bougie (éteint)",
+	"block-lampsaucer-brass-candle-extinct-*": "Bougeoir en laiton avec bougie (éteint)",
+	"block-lampsaucer-bismuth-candle-extinct-*": "Bougeoir en bismuth avec bougie (éteint)",
+	"block-lampsaucer-tinbronze-candle-extinct-*": "Bougeoir en bronze-étain avec bougie (éteint)",
+	"block-lampsaucer-bismuthbronze-candle-extinct-*": "Bougeoir en bronze-bismuth avec bougie (éteint)",
+	"block-lampsaucer-blackbronze-candle-extinct-*": "Bougeoir en bronze-noir avec bougie (éteint)",
+	"block-lampsaucer-molybdochalkos-candle-extinct-*": "Bougeoir en molybdochalkos avec bougie (éteint)",
+	"block-lampsaucer-gold-candle-extinct-*": "Bougeoir en or avec bougie (éteint)",
+	"block-lampsaucer-silver-candle-extinct-*": "Bougeoir en argent avec bougie (éteint)",
+	"block-lampsaucer-iron-candle-extinct-*": "Bougeoir en fer avec bougie (éteint)",
+	"block-lampsaucer-meteoriciron-candle-extinct-*": "Bougeoir en fer météoritique avec bougie (éteint)",
+	"block-lampsaucer-steel-candle-extinct-*": "Bougeoir en acier avec bougie (éteint)",
+
+	"block-lampsaucer-copper-candle-lit-*": "Bougeoir en cuivre avec bougie (allumé)",
+	"block-lampsaucer-brass-candle-lit-*": "Bougeoir en laiton avec bougie (allumé)",
+	"block-lampsaucer-bismuth-candle-lit-*": "Bougeoir en bismuth avec bougie (allumé)",
+	"block-lampsaucer-tinbronze-candle-lit-*": "Bougeoir en bronze-étain avec bougie (allumé)",
+	"block-lampsaucer-bismuthbronze-candle-lit-*": "Bougeoir en bronze-bismuth avec bougie (allumé)",
+	"block-lampsaucer-blackbronze-candle-lit-*": "Bougeoir en bronze-noir avec bougie (allumé)",
+	"block-lampsaucer-molybdochalkos-candle-lit-*": "Bougeoir en molybdochalkos avec bougie (allumé)",
+	"block-lampsaucer-gold-candle-lit-*": "Bougeoir en or avec bougie (allumé)",
+	"block-lampsaucer-silver-candle-lit-*": "Bougeoir en argent avec bougie (allumé)",
+	"block-lampsaucer-iron-candle-lit-*": "Bougeoir en fer avec bougie (allumé)",
+	"block-lampsaucer-meteoriciron-candle-lit-*": "Bougeoir en fer météoritique avec bougie (allumé)",
+	"block-lampsaucer-steel-candle-lit-*": "Bougeoir en acier avec bougie (allumé)",
+
+	"block-lampsaucer-copper-pitch-extinct-*": "Bougeoir en cuivre à poix (éteint)",
+	"block-lampsaucer-brass-pitch-extinct-*": "Bougeoir en laiton à poix (éteint)",
+	"block-lampsaucer-bismuth-pitch-extinct-*": "Bougeoir en bismuth à poix (éteint)",
+	"block-lampsaucer-tinbronze-pitch-extinct-*": "Bougeoir en bronze-étain à poix (éteint)",
+	"block-lampsaucer-bismuthbronze-pitch-extinct-*": "Bougeoir en bronze-bismuth à poix (éteint)",
+	"block-lampsaucer-blackbronze-pitch-extinct-*": "Bougeoir en bronze-noir à poix (éteint)",
+	"block-lampsaucer-molybdochalkos-pitch-extinct-*": "Bougeoir en molybdochalkos à poix (éteint)",
+	"block-lampsaucer-gold-pitch-extinct-*": "Bougeoir en or à poix (éteint)",
+	"block-lampsaucer-silver-pitch-extinct-*": "Bougeoir en argent à poix (éteint)",
+	"block-lampsaucer-iron-pitch-extinct-*": "Bougeoir en fer à poix (éteint)",
+	"block-lampsaucer-meteoriciron-pitch-extinct-*": "Bougeoir en fer météoritique à poix (éteint)",
+	"block-lampsaucer-steel-pitch-extinct-*": "Bougeoir en acier à poix (éteint)",
+
+	"block-lampsaucer-copper-pitch-lit-*": "Bougeoir en cuivre à poix (allumé)",
+	"block-lampsaucer-brass-pitch-lit-*": "Bougeoir en laiton à poix (allumé)",
+	"block-lampsaucer-bismuth-pitch-lit-*": "Bougeoir en bismuth à poix (allumé)",
+	"block-lampsaucer-tinbronze-pitch-lit-*": "Bougeoir en bronze-étain à poix (allumé)",
+	"block-lampsaucer-bismuthbronze-pitch-lit-*": "Bougeoir en bronze-bismuth à poix (allumé)",
+	"block-lampsaucer-blackbronze-pitch-lit-*": "Bougeoir en bronze-noir à poix (allumé)",
+	"block-lampsaucer-molybdochalkos-pitch-lit-*": "Bougeoir en molybdochalkos à poix (allumé)",
+	"block-lampsaucer-gold-pitch-lit-*": "Bougeoir en or à poix (allumé)",
+	"block-lampsaucer-silver-pitch-lit-*": "Bougeoir en argent à poix (allumé)",
+	"block-lampsaucer-iron-pitch-lit-*": "Bougeoir en fer à poix (allumé)",
+	"block-lampsaucer-meteoriciron-pitch-lit-*": "Bougeoir en fer météoritique à poix (allumé)",
+	"block-lampsaucer-steel-pitch-lit-*": "Bougeoir en acier à poix (allumé)",
+
+	"block-directionalresin-resin-pine-*": "Bûche de pin avec résine coulante",
+	"block-directionalresin-resinharvested-pine-*": "Bûche de pin avec résine coulante",
+	"block-directionalresin-resin-acacia-*": "Bûche d'acacia avec résine coulante",
+	"block-directionalresin-resinharvested-acacia-*": "Bûche d'acacia avec résine coulante",
 
 	"itemhelp-adze-stripbark": "Écorce arrachée",
 	"itemhelp-heal": "Guérir",
@@ -314,4 +447,7 @@ Finalement, la dernière étape! Prenez votre peau fumée et, en utilisant un co
 	"item-brainingsolutionportion": "Solution cervicale",
 	"game:incontainer-item-brainingsolutionportion": "Solution cervicale",
 	"incontainer-item-brainingsolutionportion": "Solution cervicale",
+	
+	"item-powderedcharcoal": "Poudre de charbon",
+	"item-pitch-*": "Poix",
 }

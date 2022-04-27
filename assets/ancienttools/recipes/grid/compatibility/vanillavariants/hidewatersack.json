@@ -15,6 +15,12 @@
 				name: "size"
 			}
 		},
+		attributes: {
+			liquidContainerProps: {
+				requiresContent: { type: "item", code: "game:waterportion" },
+				requiresLitres: 10
+			}
+		},
 		output: {
 			type: "block",
 			code: "hidewatersack-raw-{size}"

@@ -65,12 +65,12 @@ namespace AncientTools.BlockEntities
                 if (byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack != null)
                     if (byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.Code.Domain == "game" && byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.FirstCodePart(0) == "stick")
                     {
-                        if (inventorySlot.TakeOut(1) != null)
-                            if (byPlayer.InventoryManager.TryGiveItemstack(new ItemStack(Api.World.GetItem(new AssetLocation("ancienttools", "pitch-stick")))))
-                            {
-                                byPlayer.InventoryManager.ActiveHotbarSlot.TakeOut(1);
-                                UpdateMeshes();
-                            }
+                        if (byPlayer.InventoryManager.TryGiveItemstack(new ItemStack(Api.World.GetItem(new AssetLocation("ancienttools", "pitch-stick")))))
+                        {
+                            inventorySlot.TakeOut(1);
+                            byPlayer.InventoryManager.ActiveHotbarSlot.TakeOut(1);
+                            UpdateMeshes();
+                        }
                     }
 
             if (inventorySlot.Empty)

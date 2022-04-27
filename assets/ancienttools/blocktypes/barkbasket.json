@@ -3,6 +3,9 @@
 	class: "BlockBarkBasket",
 	entityclass: "GenericTypedContainer",
 	attributes: {
+		handbook: { 
+			groupBy: ["barkbasket-*"] 
+		},
 		inventoryClassName: "barkbasket",
 		defaultType: "basket",
 		openSound: "game:sounds/block/basketopen",

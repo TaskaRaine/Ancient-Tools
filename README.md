@@ -11,6 +11,10 @@
 ### Releases
 
 #### Vintage Story 1.16.0+
+[Version 1.4.2](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.2/AncientTools_V1.4.2.zip)
+
+[Version 1.4.1](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.1/AncientTools_V1.4.1.zip)
+
 [Version 1.4.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.0/AncientTools_V1.4.0.zip)
 
 [Version 1.3.6](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.3.6/AncientTools_V1.3.6.zip)
@@ -48,6 +52,15 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.4.2
+Fixed an issue where Vanilla Variants buckets would be consumed when crafting the hide sacks in the crafting grid.
+
+Fixed an issue where pitch would be removed from the finished pitch container, but the player would not be given pitch sticks because their inventory was full.
+
+Bark baskets are now properly grouped.
+
+Included the updated the French translation of Ancient Tools offered by Cendar, thank you!
+
 #### Version 1.4.1
 -- Curing Rack
 Curing rack shapes have been modified to better fit the Vintage Story aesthetic.
