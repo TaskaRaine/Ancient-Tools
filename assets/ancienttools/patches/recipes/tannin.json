@@ -1,4 +1,5 @@
 ﻿[
+	//-- Allows oak bark to be used to create tannin, alongside vanilla oak logs --//
 	{
 		"op": "replace",
 		"path": "/0/ingredients/0/quantity",
@@ -14,5 +15,22 @@
 		"file": "recipes/barrel/tannin",
 		"side": "Server",
 		"condition": { "when": "BarkPerLog", "useValue": true }
-	}
+	},
+	//-- Removes vanilla tannin recipes --//
+	{
+		"op": "add",
+		"path": "/enabled",
+		"value": "false",
+		"file": "game:recipes/barrel/weaktannin",
+		"side": "Server",
+		"condition": { "when": "DisableVanillaHideCrafting", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/enabled",
+		"value": "false",
+		"file": "game:recipes/barrel/strongtannin",
+		"side": "Server",
+		"condition": { "when": "DisableVanillaHideCrafting", "isValue": "true" }
+	},
 ]

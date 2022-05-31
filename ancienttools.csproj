@@ -46,23 +46,23 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>H:\VintageStory 1.16.4\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.16.5\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>H:\VintageStory 1.16.4\Mods\VSEssentials.dll</HintPath>
+      <HintPath>H:\VintageStory 1.16.5\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>H:\VintageStory 1.16.4\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.16.5\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>H:\VintageStory 1.16.4\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>H:\VintageStory 1.16.5\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="0Harmony">
-      <HintPath>H:\VintageStory 1.16.4\Lib\0Harmony.dll</HintPath>
+      <HintPath>H:\VintageStory 1.16.5\Lib\0Harmony.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -137,10 +137,18 @@
     <None Include="assets\ancienttools\itemtypes\resources\pitch.json" />
     <None Include="assets\ancienttools\lang\fr.json" />
     <None Include="assets\ancienttools\lang\ja.json" />
+    <None Include="assets\ancienttools\lang\ru.json" />
     <None Include="assets\ancienttools\patches\block\firepit.json" />
     <None Include="assets\ancienttools\patches\block\forge.json" />
     <None Include="assets\ancienttools\patches\block\pitkiln.json" />
     <None Include="assets\ancienttools\patches\block\pot.json" />
+    <None Include="assets\ancienttools\patches\compatibility\bricklayers\crockcoloured.json" />
+    <None Include="assets\ancienttools\patches\compatibility\immersivecrafting\hide.json" />
+    <None Include="assets\ancienttools\patches\recipes\leather.json" />
+    <None Include="assets\ancienttools\patches\recipes\scrapedhide.json" />
+    <None Include="assets\ancienttools\patches\recipes\soakedhide-borax.json" />
+    <None Include="assets\ancienttools\patches\recipes\soakedhide-lime.json" />
+    <None Include="assets\ancienttools\recipes\grid\compatibility\bricklayers\crockcoloured.json" />
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\dough.json" />
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\mortar.json" />
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\barkbasket.json" />
@@ -436,6 +444,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets\ancienttools\patches\item\tool\" />
+    <Folder Include="assets\ancienttools\patches\lang\" />
     <Folder Include="assets\ancienttools\shapes\entity\" />
     <Folder Include="assets\ancienttools\textures\item\food\flour\" />
     <Folder Include="assets\game\recipes\" />

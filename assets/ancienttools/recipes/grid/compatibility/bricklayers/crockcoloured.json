@@ -1,0 +1,14 @@
+﻿[
+	{
+		enabled: false,
+		ingredientPattern: "C,F",
+		ingredients: {
+			"C": { type: "block", name: "color", code: "bricklayers:crockcolored-burned-*-east" },
+			"F": { type: "item", code: "pitch-stick", returnedStack: { type: "item", code: "game:stick" } }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		output: { type: "block", code: "bricklayers:crockcolored-burned-{color}-east", quantity: 1  }
+	}
+]

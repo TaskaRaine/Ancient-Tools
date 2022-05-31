@@ -1,0 +1,34 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/0/enabled",
+		"value": "false",
+		"file": "game:recipes/barrel/leather",
+		"side": "Server",
+		"condition": { "when": "DisableVanillaHideCrafting", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/1/enabled",
+		"value": "false",
+		"file": "game:recipes/barrel/leather",
+		"side": "Server",
+		"condition": { "when": "DisableVanillaHideCrafting", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/2/enabled",
+		"value": "false",
+		"file": "game:recipes/barrel/leather",
+		"side": "Server",
+		"condition": { "when": "DisableVanillaHideCrafting", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/3/enabled",
+		"value": "false",
+		"file": "game:recipes/barrel/leather",
+		"side": "Server",
+		"condition": { "when": "DisableVanillaHideCrafting", "isValue": "true" }
+	},
+]

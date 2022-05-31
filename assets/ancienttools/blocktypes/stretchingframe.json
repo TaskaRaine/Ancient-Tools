@@ -2,7 +2,10 @@
 	code: "stretchingframe",
 	class: "BlockStretchingFrame",
 	entityClass: "BEStretchingFrame",
-	behaviors: [{name: "HorizontalOrientable", properties: {  dropBlockFace: "north", drop: { type: "block", code: "ancienttools:stretchingframe-{wood}-north" }  }}],
+	behaviors: [
+		{ name: "HorizontalOrientable", properties: {  dropBlockFace: "north", drop: { type: "block", code: "ancienttools:stretchingframe-{wood}-north" }  }},
+		{ name: "UnstableFalling" }
+	],
 	creativeinventory: { "general": ["*-north"], "decorative": ["*-north"], "mechanics": ["*-north"], "ancienttools": ["*-north"] },
 	variantgroups: [
         { code: "wood", loadFromProperties: "game:block/wood", states:["aged"] },

@@ -35,6 +35,7 @@ namespace AncientTools.Utility
             api.World.Config.SetDouble("BaseBarkStrippingSpeed", config.BaseBarkStrippingSpeed);
             api.World.Config.SetDouble("SalveMixTime", config.SalveMixTime);
             api.World.Config.SetBool("BarkBreadEnabled", config.BarkBreadEnabled);
+            api.World.Config.SetBool("DisableVanillaHideCrafting", config.DisableVanillaHideCrafting);
             api.World.Config.SetBool("SalveEnabled", config.SalveEnabled);
             api.World.Config.SetBool("AllowCarvingForResin", config.AllowCarvingForResin);
             api.World.Config.SetFloat("SkinningTime", config.SkinningTime);

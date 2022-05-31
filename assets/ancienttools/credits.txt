@@ -6,6 +6,7 @@ Translations:
 
 French Translation: Cendar
 Japanese Translation: Macoto Hino
+Russian Translation: MrMeg
 
 Sounds:
 

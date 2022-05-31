@@ -104,7 +104,7 @@ namespace AncientTools.Utility
         protected MeshData GenMesh(ItemStack stack)
         {
             MeshData mesh;
-            var dynBlock = stack.Collectible as IContainedMeshSource;
+            IContainedMeshSource dynBlock = stack.Collectible as IContainedMeshSource;
 
             if (dynBlock != null)
             {

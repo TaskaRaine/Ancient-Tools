@@ -12,6 +12,25 @@
 	},
 	{
 		"op": "add",
+		"path": "/behaviorsByType/*-raw-*/-",
+		"value": {
+			"name": "IC_UseOnLiquidContainer",
+			"properties": {
+			"outputStack": { "type": "block", "code": "ancienttools:hidewatersack-soaked-{size}", "quantity": 1 },
+			"liquidStack": { "type": "item", "code": "waterportion" },
+			"actionLangCode": "game:heldhelp-fill",
+			"sound": "sounds/effect/water-fill",
+			"consumeLiters": 10,
+			"ingredientQuantity": 1,
+			"spawnParticles": true
+			}
+		},
+		"file": "game:itemtypes/resource/hide",
+		"side": "Server",
+		"dependsOn": [{"modid": "immersivecrafting"}]
+	},
+	{
+		"op": "add",
 		"path": "/variantgroups/0/states/-",
 		"value": "brained",
 		"file": "game:itemtypes/resource/hide",

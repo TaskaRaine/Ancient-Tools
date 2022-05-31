@@ -11,6 +11,8 @@
 ### Releases
 
 #### Vintage Story 1.16.0+
+[Version 1.4.3](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.3/AncientTools_V1.4.3.zip)
+
 [Version 1.4.2](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.2/AncientTools_V1.4.2.zip)
 
 [Version 1.4.1](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.1/AncientTools_V1.4.1.zip)
@@ -52,12 +54,23 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.4.3
+Included the Russian translation of Ancient Tools offered by MrMeg, thanks!
+
+Added compatibility with the Immersive Crafting mod.
+
+Added further compatibility for Bricklayers. Bricklayer crocks can now be sealed using pitch.
+
+The ability to disable vanilla leather creation techniques has been added. It is still enabled by default.
+
+Bark Basket and Stretching Frame blocks have both been given the UnstableFalling behavior. 
+
 #### Version 1.4.2
 Fixed an issue where Vanilla Variants buckets would be consumed when crafting the hide sacks in the crafting grid.
 
 Fixed an issue where pitch would be removed from the finished pitch container, but the player would not be given pitch sticks because their inventory was full.
 
-Bark baskets are now properly grouped.
+Bark baskets should now be properly grouped.
 
 Included the updated the French translation of Ancient Tools offered by Cendar, thank you!
 
