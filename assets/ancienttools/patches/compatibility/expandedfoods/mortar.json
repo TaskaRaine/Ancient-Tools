@@ -249,4 +249,24 @@
 		"dependsOn": [{ "modid": "expandedfoods" }],
 		"side": "Server"
 	},
+	{
+		"op": "add",
+		"path": "/textures/seaweed",
+		"value": {
+			base: "game:block/plant/seaweed/section1"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/seaweedtop",
+		"value": {
+			base: "game:block/plant/seaweed/top1"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	}
 ]

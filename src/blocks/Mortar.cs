@@ -19,7 +19,7 @@ namespace AncientTools.Blocks
                 List<ItemStack> pestleList = new List<ItemStack>();
                 List<ItemStack> grindablesList = new List<ItemStack>();
 
-                foreach (Item item in api.World.Items)
+                foreach (CollectibleObject item in api.World.Collectibles)
                 {
                     if (item.Code == null) continue;
 

@@ -1,0 +1,26 @@
+﻿[
+	{
+		enabled: false,
+		ingredientPattern: "BP",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"B": {
+				type: "item",
+				name: "lazytweaks:powderedcharcoal",
+				code: "lazytweaks:powderedcharcoal",
+				returnedStack: { type: "item", code: "lazytweaks:powderedcharcoal" }
+			},
+			"P": { 
+				type: "block",
+				code: "game:claypot-burned" 
+			},
+		},
+		output: { 
+			type: "block", 
+			code: "pitchpot-empty",
+			quantity: 1
+		}
+	},
+]

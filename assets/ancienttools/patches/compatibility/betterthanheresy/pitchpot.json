@@ -1,0 +1,10 @@
+﻿[
+	{
+		"op": "replace",
+		"path": "/0/enabled",
+		"value": "true",
+		"file": "recipes/grid/compatibility/betterthanheresy/pitchpot",
+		"dependsOn": [{ "modid": "bth" }],
+		"side": "Server"
+	}
+]

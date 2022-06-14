@@ -1,0 +1,26 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes/isPitchCharcoal",
+		"value": true,
+		"file": "lazytweaks:itemtypes/resource/powderedcharcoal",
+		"dependsOn": [{ "modid": "bth" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/behaviors",
+		"value": [
+			{
+				name: "ConvertBlockUsingIngredient",
+				properties: {
+					convertFromBlockCode: "game:claypot-burned",
+					convertToBlockCode: "ancienttools:pitchpot-empty"
+				}
+			}
+		],
+		"file": "lazytweaks:itemtypes/resource/powderedcharcoal",
+		"dependsOn": [{ "modid": "bth" }],
+		"side": "Server"
+	}
+]

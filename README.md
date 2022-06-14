@@ -11,6 +11,8 @@
 ### Releases
 
 #### Vintage Story 1.16.0+
+[Version 1.4.4](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.4/AncientTools_V1.4.4.zip)
+
 [Version 1.4.3](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.3/AncientTools_V1.4.3.zip)
 
 [Version 1.4.2](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.2/AncientTools_V1.4.2.zip)
@@ -54,6 +56,21 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.4.4
+Block grindables can now be placed in the mortar. Seashells, in vanilla Vintage Story, now have shapes in the mortar and can be ground down into lime.
+
+Added shapes for white marble, red marble, and green marble stones when they are in the mortar.
+
+Added shapes for seaweed in the mortar. This is used by Expanded Foods. Suggestion offered by willflatt on GitHub.
+
+Modified mortar particle logic slightly. If the texture of a mortar ingredient is transparent, the grounded stack texture will be used to get the particle colour instead, to prevent particles from being white.
+
+Added compatibility for Better Than Heresy powdered charcoal. It can be used to make pitch if that mod is installed alongside Ancient Tools. Issue reported by Grem on VS Mod DB.
+
+Modified the display of the pitch container to be more flexible, allowing other modded items to appear as possible pitch ingredients.
+
+The display for curing rack cure times should be more accurate when the curing rack is loaded after having been unloaded for an extended period of time. Issue reported by Stin045 on GitHub.
+
 #### Version 1.4.3
 Included the Russian translation of Ancient Tools offered by MrMeg, thanks!
 

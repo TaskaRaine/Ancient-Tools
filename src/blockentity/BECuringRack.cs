@@ -283,7 +283,7 @@ namespace AncientTools.BlockEntities
                     {
                         double timeRemaining = MeatSlot(i).Itemstack.Attributes.GetDouble("curinghoursremaining", 480);
                         
-                        if (timeRemaining <= 0)
+                        if (timeRemaining - (thisHourChecked - previousHourChecked) <= 0)
                         {
                             switch(meatItem.Attributes["onCuringRackProps"]["conversionProps"]["convertedItemstackType"].AsString())
                             {

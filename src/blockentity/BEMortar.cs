@@ -236,9 +236,9 @@ namespace AncientTools.BlockEntities
                         {
                             if (activeSlot.Itemstack.Collectible.ItemClass == EnumItemClass.Item)
                             {
-                                if (activeSlot.Itemstack.Item.FirstCodePart() == "pestle")
+                                if (activeSlot.Itemstack.Collectible.FirstCodePart() == "pestle")
                                 {
-                                    InsertObject(activeSlot, PestleSlot, activeSlot.Itemstack.Item, 1);
+                                    InsertObject(activeSlot, PestleSlot, activeSlot.Itemstack.Collectible, 1);
 
                                     if (Api.Side == EnumAppSide.Client)
                                     {
@@ -255,12 +255,9 @@ namespace AncientTools.BlockEntities
 
                         if (ResourceSlot.Empty && !activeSlot.Empty)
                         {
-                            if (activeSlot.Itemstack.Collectible.ItemClass == EnumItemClass.Item)
+                            if (activeSlot.Itemstack.Collectible.GrindingProps != null)
                             {
-                                if (activeSlot.Itemstack.Item.GrindingProps != null)
-                                {
-                                    InsertObject(activeSlot, ResourceSlot, activeSlot.Itemstack.Item, 1);
-                                }
+                                InsertObject(activeSlot, ResourceSlot, activeSlot.Itemstack.Collectible, 1);
                             }
                         }
                     }
@@ -269,7 +266,7 @@ namespace AncientTools.BlockEntities
         }
         public bool OnSneakInteract(IPlayer byPlayer)
         {
-            if (!byPlayer.Entity.Controls.Sneak || PestleSlot.Empty || ResourceSlot.Empty || !byPlayer.InventoryManager.ActiveHotbarSlot.Empty || ResourceSlot.Itemstack.Item.GrindingProps == null)
+            if (!byPlayer.Entity.Controls.Sneak || PestleSlot.Empty || ResourceSlot.Empty || !byPlayer.InventoryManager.ActiveHotbarSlot.Empty || ResourceSlot.Itemstack.Collectible.GrindingProps == null)
             {
                 return false;
             }
@@ -323,6 +320,11 @@ namespace AncientTools.BlockEntities
             if (Api.Side == EnumAppSide.Client)
             {
                 grindingParticles.Color = ResourceSlot.Itemstack.Collectible.GetRandomColor(capi, ResourceSlot.Itemstack);
+
+                //-- Particles are white when a transparent texture is used. Therefore, the mod attempts to aquire a colour from the grinded stack in hopes of getting a colour match --//
+                if(ColorUtil.ColorA(grindingParticles.Color) != 255)
+                    grindingParticles.Color = ResourceSlot.Itemstack.Collectible.GrindingProps.GroundStack.ResolvedItemstack.Collectible.GetRandomColor(capi, ResourceSlot.Itemstack.Collectible.GrindingProps.GroundStack.ResolvedItemstack);
+
                 this.Api.World.SpawnParticles(grindingParticles);
             }
         }
@@ -330,7 +332,7 @@ namespace AncientTools.BlockEntities
         {
             if (Api.Side == EnumAppSide.Server)
             {
-                if(ResourceSlot.Itemstack.Item.GrindingProps != null)
+                if(ResourceSlot.Itemstack.Collectible.GrindingProps != null)
                     GiveGroundItem(byPlayer);
             }
 
@@ -419,7 +421,7 @@ namespace AncientTools.BlockEntities
             MeshData addMesh = block.GenMesh(Api as ICoreClientAPI, path, textureSource);
             mesher.AddMeshData(addMesh);
         }
-        private void InsertObject(ItemSlot playerActiveSlot, ItemSlot inventorySlot, Item item, int takeQuantity)
+        private void InsertObject(ItemSlot playerActiveSlot, ItemSlot inventorySlot, CollectibleObject item, int takeQuantity)
         {
             playerActiveSlot.TryPutInto(Api.World, inventorySlot, takeQuantity);
 

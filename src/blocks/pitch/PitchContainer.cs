@@ -1,4 +1,5 @@
 ﻿using AncientTools.BlockEntities;
+using System.Collections.Generic;
 using System.Text;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
@@ -22,36 +23,40 @@ namespace AncientTools.Blocks
         {
             base.OnLoaded(api);
 
-            ItemStack[] powderedCharcoal =
+            List<ItemStack> powderedCharcoalList = new List<ItemStack>();
+            List<ItemStack> resinList = new List<ItemStack>();
+            List<ItemStack> grassList = new List<ItemStack>();
+
+            foreach(Item item in api.World.Items)
             {
-                new ItemStack(api.World.GetItem(new AssetLocation("ancienttools", "powderedcharcoal")))
-            };
-            ItemStack[] resin =
-            {
-                new ItemStack(api.World.GetItem(new AssetLocation("game", "resin")))
-            };
-            ItemStack[] grass =
-            {
-                new ItemStack(api.World.GetItem(new AssetLocation("game", "drygrass")))
-            };
+                if (item.Attributes == null)
+                    continue;
+
+                if (item.Attributes["isPitchCharcoal"].Exists)
+                    powderedCharcoalList.Add(new ItemStack(item));
+                else if (item.Attributes["isPitchResin"].Exists)
+                    resinList.Add(new ItemStack(item));
+                else if (item.Attributes["isPitchGrass"].Exists)
+                    grassList.Add(new ItemStack(item));
+            }
 
             WorldInteraction charcoalInteraction = new WorldInteraction()
             {
                 ActionLangCode = "ancienttools:blockhelp-insert-powderedcharcoal",
                 MouseButton = EnumMouseButton.Right,
-                Itemstacks = powderedCharcoal
+                Itemstacks = powderedCharcoalList.ToArray()
             };
             WorldInteraction resinInteraction = new WorldInteraction()
             {
                 ActionLangCode = "ancienttools:blockhelp-insert-resin",
                 MouseButton = EnumMouseButton.Right,
-                Itemstacks = resin
+                Itemstacks = resinList.ToArray()
             };
             WorldInteraction grassInteraction = new WorldInteraction()
             {
                 ActionLangCode = "ancienttools:blockhelp-insert-grass",
                 MouseButton = EnumMouseButton.Right,
-                Itemstacks = grass
+                Itemstacks = grassList.ToArray()
             };
 
             emptyInteractions = ObjectCacheUtil.GetOrCreate(api, "emptyPitchContainerInteractions", () =>
