@@ -39,7 +39,7 @@ namespace AncientTools.Items
         }
         public override WorldInteraction[] GetHeldInteractionHelp(ItemSlot inSlot)
         {
-            return interactions;
+            return interactions.Append(base.GetHeldInteractionHelp(inSlot));
         }
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
         {
@@ -143,7 +143,7 @@ namespace AncientTools.Items
                 addLifeLength = 0.5f,
 
                 GravityEffect = 0.3f,
-                Bouncy = true,
+                Bounciness = 0.5f,
                 ParticleModel = EnumParticleModel.Cube
             };
         }

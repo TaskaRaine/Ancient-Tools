@@ -1,0 +1,114 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/server/behaviors/6/quantitySlots",
+		"value": 8,
+		"file": "moreanimals:entities/goldenpheasant-cock",
+		"dependsOn": [{ "modid": "moreanimals" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/server/behaviors/6/quantitySlots",
+		"value": 8,
+		"file": "moreanimals:entities/goldenpheasant-cockpoult",
+		"dependsOn": [{ "modid": "moreanimals" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/server/behaviors/5/quantitySlots",
+		"value": 8,
+		"file": "moreanimals:entities/goldenpheasant-hen",
+		"dependsOn": [{ "modid": "moreanimals" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/server/behaviors/5/quantitySlots",
+		"value": 8,
+		"file": "moreanimals:entities/goldenpheasant-henpoult",
+		"dependsOn": [{ "modid": "moreanimals" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/server/behaviors/6/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.25, var: 0 } 
+		},
+		"file": "moreanimals:entities/goldenpheasant-cock",
+		"dependsOn": [{ "modid": "moreanimals" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/server/behaviors/6/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.25, var: 0 } 
+		},
+		"file": "moreanimals:entities/goldenpheasant-cockpoult",
+		"dependsOn": [{ "modid": "moreanimals" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/server/behaviors/5/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.25, var: 0 } 
+		},
+		"file": "moreanimals:entities/goldenpheasant-hen",
+		"dependsOn": [{ "modid": "moreanimals" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/server/behaviors/5/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.25, var: 0 } 
+		},
+		"file": "moreanimals:entities/goldenpheasant-henpoult",
+		"dependsOn": [{ "modid": "moreanimals" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/client/behaviors/4/quantitySlots",
+		"value": 8,
+		"file": "moreanimals:entities/goldenpheasant-cock",
+		"dependsOn": [{ "modid": "moreanimals" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/client/behaviors/4/quantitySlots",
+		"value": 8,
+		"file": "moreanimals:entities/goldenpheasant-cockpoult",
+		"dependsOn": [{ "modid": "moreanimals" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/client/behaviors/5/quantitySlots",
+		"value": 8,
+		"file": "moreanimals:entities/goldenpheasant-hen",
+		"dependsOn": [{ "modid": "moreanimals" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/client/behaviors/4/quantitySlots",
+		"value": 8,
+		"file": "moreanimals:entities/goldenpheasant-henpoult",
+		"dependsOn": [{ "modid": "moreanimals" }],
+		"side": "Server"
+	},
+]

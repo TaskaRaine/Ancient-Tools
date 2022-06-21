@@ -52,8 +52,7 @@ namespace AncientTools.Utility
                     IAsset texAsset = capi.Assets.TryGet(texturePath.Clone().WithPathPrefixOnce("textures/").WithPathAppendixOnce(".png"));
                     if (texAsset != null)
                     {
-                        BitmapRef bmp = texAsset.ToBitmap(capi);
-                        capi.BlockTextureAtlas.InsertTextureCached(texturePath, bmp, out _, out texpos);
+                        capi.BlockTextureAtlas.GetOrInsertTexture(texturePath, out _, out texpos);
                     }
                 }
 

@@ -3,7 +3,7 @@
 		"op": "add",
 		"path": "/server/behaviors/6/quantitySlots",
 		"value": 8,
-		"file": "game:entities/land/bear",
+		"file": "game:entities/land/gazelle",
 		"side": "Server"
 	},
 	{
@@ -12,16 +12,16 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.45, var: 0 } 
+			quantity: { avg: 0.25, var: 0 } 
 		},
-		"file": "game:entities/land/bear",
+		"file": "game:entities/land/gazelle",
 		"side": "Server"
 	},
 	{
 		"op": "add",
 		"path": "/client/behaviors/4/quantitySlots",
 		"value": 8,
-		"file": "game:entities/land/bear",
+		"file": "game:entities/land/gazelle",
 		"side": "Server"
 	},
 ]

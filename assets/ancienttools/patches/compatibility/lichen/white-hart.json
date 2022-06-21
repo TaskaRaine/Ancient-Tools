@@ -1,7 +1,14 @@
 ﻿[
 	{
 		"op": "add",
-		"path": "/drops/-",
+		"path": "/server/behaviors/6/quantitySlots",
+		"value": 8,
+		"file": "lichen:entities/land/white-hart",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/server/behaviors/6/drops/-",
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
@@ -10,5 +17,12 @@
 		"file": "lichen:entities/land/white-hart",
 		"dependsOn": [{ "modid": "lichen" }],
 		"side": "Server"
-	}
+	},
+	{
+		"op": "add",
+		"path": "/client/behaviors/4/quantitySlots",
+		"value": 8,
+		"file": "lichen:entities/land/white-hart",
+		"side": "Server"
+	},
 ]

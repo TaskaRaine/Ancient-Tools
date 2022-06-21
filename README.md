@@ -10,6 +10,9 @@
 
 ### Releases
 
+#### Vintage Story 1.17.0+ 
+[Version 1.4.5](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.5/AncientTools_V1.4.5.zip)
+
 #### Vintage Story 1.16.0+
 [Version 1.4.4](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.4/AncientTools_V1.4.4.zip)
 
@@ -56,6 +59,17 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.4.5
+Mod updated to be compatible with Vintage Story 1.17.0
+
+Adze tools can now be placed against walls using the new ground storage mechanics in vanilla.
+
+Brains are no longer dropped on kill. Instead, they can be harvested from animals just like any other harvestable items.
+
+The new gazelle mob has the chance to drop brains when killed.
+
+Adds compatibility for the More Animals mod. Pheasants, Golden Pheasants and Capercaillie creatures should now all have harvestable brains.
+
 #### Version 1.4.4
 Block grindables can now be placed in the mortar. Seashells, in vanilla Vintage Story, now have shapes in the mortar and can be ground down into lime.
 

@@ -42,27 +42,27 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="VintagestoryAPI">
-      <HintPath>H:\VintageStory 1.16.4\VintagestoryAPI.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.0 Pre-1\VintagestoryAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>H:\VintageStory 1.16.5\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.0 Pre-1\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>H:\VintageStory 1.16.5\Mods\VSEssentials.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.0 Pre-1\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>H:\VintageStory 1.16.5\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.0 Pre-1\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>H:\VintageStory 1.16.5\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.0 Pre-1\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="0Harmony">
-      <HintPath>H:\VintageStory 1.16.5\Lib\0Harmony.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.0 Pre-1\Lib\0Harmony.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +132,7 @@
     <None Include="assets\ancienttools\blocktypes\salvepot.json" />
     <None Include="assets\ancienttools\blocktypes\stretchingframe.json" />
     <None Include="assets\ancienttools\blocktypes\strippedlog.json" />
+    <None Include="assets\ancienttools\compatibility\buildingplus\recipes\grid\strippedsupport.json" />
     <None Include="assets\ancienttools\config\handbook\pitchguide.json" />
     <None Include="assets\ancienttools\itemtypes\resources\powderedcharcoal.json" />
     <None Include="assets\ancienttools\itemtypes\resources\pitch.json" />
@@ -145,15 +146,17 @@
     <None Include="assets\ancienttools\patches\compatibility\betterthanheresy\pitchpot.json" />
     <None Include="assets\ancienttools\patches\compatibility\betterthanheresy\powderedcharcoal.json" />
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\crockcoloured.json" />
+    <None Include="assets\ancienttools\patches\compatibility\bricklayers\dough.json" />
+    <None Include="assets\ancienttools\patches\compatibility\bricklayers\mortar.json" />
     <None Include="assets\ancienttools\patches\compatibility\immersivecrafting\hide.json" />
+    <None Include="assets\ancienttools\patches\compatibility\moreanimals\capercaillie.json" />
+    <None Include="assets\ancienttools\patches\compatibility\moreanimals\goldenpheasant.json" />
+    <None Include="assets\ancienttools\patches\compatibility\moreanimals\pheasant.json" />
+    <None Include="assets\ancienttools\patches\entity\land\gazelle.json" />
     <None Include="assets\ancienttools\patches\recipes\leather.json" />
     <None Include="assets\ancienttools\patches\recipes\scrapedhide.json" />
     <None Include="assets\ancienttools\patches\recipes\soakedhide-borax.json" />
     <None Include="assets\ancienttools\patches\recipes\soakedhide-lime.json" />
-    <None Include="assets\ancienttools\recipes\grid\compatibility\betterthanheresy\pitchpot.json" />
-    <None Include="assets\ancienttools\recipes\grid\compatibility\bricklayers\crockcoloured.json" />
-    <None Include="assets\ancienttools\patches\compatibility\bricklayers\dough.json" />
-    <None Include="assets\ancienttools\patches\compatibility\bricklayers\mortar.json" />
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\barkbasket.json" />
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\curingrack.json" />
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\hidewatersack.json" />
@@ -211,6 +214,7 @@
     <None Include="assets\ancienttools\recipes\grid\compatibility\bricklayers\dough.json" />
     <None Include="assets\ancienttools\recipes\grid\compatibility\vanillavariants\dough.json" />
     <None Include="assets\ancienttools\recipes\grid\compatibility\vanillavariants\hidewatersack.json" />
+    <None Include="assets\ancienttools\recipes\grid\compatibility\betterthanheresy\pitchpot.json" />
     <None Include="assets\ancienttools\recipes\grid\food\barkdough.json" />
     <None Include="assets\ancienttools\recipes\grid\food\sealedcrock.json" />
     <None Include="assets\ancienttools\recipes\grid\item\pitch.json" />
@@ -421,7 +425,6 @@
     <None Include="assets\ancienttools\shapes\item\tool\curinghook.json" />
     <None Include="assets\ancienttools\shapes\item\toolhead\adze-metal.json" />
     <None Include="assets\ancienttools\shapes\item\toolhead\adze-stone.json" />
-    <None Include="assets\ancienttools\compatibility\buildingplus\recipes\grid\strippedsupport.json" />
     <None Include="assets\game\itemtypes\toolhead\adzehead.json" />
     <None Include="assets\ancienttools\itemtypes\tools\adze.json" />
     <None Include="assets\ancienttools\lang\en.json" />

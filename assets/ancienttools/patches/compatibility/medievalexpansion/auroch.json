@@ -1,7 +1,31 @@
 ﻿[
 	{
 		"op": "add",
-		"path": "/drops/-",
+		"path": "/server/behaviors/6/quantitySlots",
+		"value": 8,
+		"file": "medievalexpansion:entities/land/aurochs-male",
+		"dependsOn": [{ "modid": "medievalexpansion" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/server/behaviors/6/quantitySlots",
+		"value": 8,
+		"file": "medievalexpansion:entities/land/aurochs-female",
+		"dependsOn": [{ "modid": "medievalexpansion" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/server/behaviors/6/quantitySlots",
+		"value": 8,
+		"file": "medievalexpansion:entities/land/aurochs-lamb",
+		"dependsOn": [{ "modid": "medievalexpansion" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/server/behaviors/6/drops/-",
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
@@ -13,7 +37,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/drops/-",
+		"path": "/server/behaviors/6/drops/-",
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
@@ -25,7 +49,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/drops/-",
+		"path": "/server/behaviors/6/drops/-",
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
@@ -34,5 +58,29 @@
 		"file": "medievalexpansion:entities/land/aurochs-lamb",
 		"dependsOn": [{ "modid": "medievalexpansion" }],
 		"side": "Server"
-	}
+	},
+	{
+		"op": "add",
+		"path": "/client/behaviors/4/quantitySlots",
+		"value": 8,
+		"file": "medievalexpansion:entities/land/aurochs-male",
+		"dependsOn": [{ "modid": "medievalexpansion" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/client/behaviors/5/quantitySlots",
+		"value": 8,
+		"file": "medievalexpansion:entities/land/aurochs-female",
+		"dependsOn": [{ "modid": "medievalexpansion" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/client/behaviors/4/quantitySlots",
+		"value": 8,
+		"file": "medievalexpansion:entities/land/aurochs-lamb",
+		"dependsOn": [{ "modid": "medievalexpansion" }],
+		"side": "Server"
+	},
 ]
