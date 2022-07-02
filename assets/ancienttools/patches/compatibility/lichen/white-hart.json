@@ -4,6 +4,7 @@
 		"path": "/server/behaviors/6/quantitySlots",
 		"value": 8,
 		"file": "lichen:entities/land/white-hart",
+		"dependsOn": [{ "modid": "lichen" }],
 		"side": "Server"
 	},
 	{
@@ -23,6 +24,7 @@
 		"path": "/client/behaviors/4/quantitySlots",
 		"value": 8,
 		"file": "lichen:entities/land/white-hart",
+		"dependsOn": [{ "modid": "lichen" }],
 		"side": "Server"
 	},
 ]
