@@ -9,12 +9,12 @@ namespace AncientTools.BlockEntities
     {
         public ItemSlot PitchSlot
         {
-            get { return inventory[0]; }
+            get { return GenericDisplayInventory[0]; }
         }
         public MeshData PitchMesh
         {
-            get { return meshes[0]; }
-            protected set { meshes[0] = value; }
+            get { return Meshes[0]; }
+            protected set { Meshes[0] = value; }
         }
         public BEFinishedPitch(): base()
         {
@@ -55,7 +55,7 @@ namespace AncientTools.BlockEntities
             {
                 string resourcePath = "ancienttools:shapes/block/pitch/resourceshapes/pitch" + PitchSlot.Itemstack.StackSize;
 
-                currentObject = PitchSlot.Itemstack.Item;
+                CurrentObject = PitchSlot.Itemstack.Item;
                 PitchMesh = GenMesh(Api as ICoreClientAPI, resourcePath);
             }
         }

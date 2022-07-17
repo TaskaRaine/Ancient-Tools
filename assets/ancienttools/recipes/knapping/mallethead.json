@@ -2,35 +2,35 @@
 	{
 		ingredient: { type: "item", code: "game:flint" },
 		pattern: [[
-			"____##____",
-			"___####___",
-			"___####___",
+			"__________",
 			"___####___",
 			"__######__",
 			"__######__",
 			"__######__",
-			"_########_",
-			"_########_",
-			"_########_"
+			"__######__",
+			"__######__",
+			"__######__",
+			"___####___",
+			"__________"
 		]],
-		name: "Flint Adze",
-		output: { type: "item", code: "ancienttools:adzehead-flint"  }
+		name: "Flint Mallet",
+		output: { type: "item", code: "mallethead-flint"  }
 	},
 	{
 		ingredient: { type: "item", code: "game:stone-*", name: "stone", allowedVariants: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite"] },
 		pattern: [[
-			"____##____",
-			"___####___",
-			"___####___",
+			"__________",
 			"___####___",
 			"__######__",
 			"__######__",
 			"__######__",
-			"_########_",
-			"_########_",
-			"_########_"
+			"__######__",
+			"__######__",
+			"__######__",
+			"___####___",
+			"__________"
 		]],
-		name: "Stone Adze",
-		output: { type: "item", code: "ancienttools:adzehead-{stone}"  }
+		name: "Stone Mallet",
+		output: { type: "item", code: "mallethead-{stone}"  }
 	}
 ]

@@ -1,0 +1,36 @@
+﻿[
+	{
+		ingredient: { type: "item", code: "game:flint" },
+		pattern: [[
+			"_###__###_",
+			"_###__###_",
+			"__##__##__",
+			"___#__#___",
+			"__________",
+			"__________",
+			"___#__#___",
+			"__##__##__",
+			"_###__###_",
+			"_###__###_"
+		]],
+		name: "Flint Wedges",
+		output: { type: "item", code: "wedge-flint", quantity: 4  }
+	},
+	{
+		ingredient: { type: "item", code: "game:stone-*", name: "stone", allowedVariants: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite"] },
+		pattern: [[
+			"_###__###_",
+			"_###__###_",
+			"__##__##__",
+			"___#__#___",
+			"__________",
+			"__________",
+			"___#__#___",
+			"__##__##__",
+			"_###__###_",
+			"_###__###_"
+		]],
+		name: "Stone Wedges",
+		output: { type: "item", code: "wedge-{stone}", quantity: 4  }
+	}
+]

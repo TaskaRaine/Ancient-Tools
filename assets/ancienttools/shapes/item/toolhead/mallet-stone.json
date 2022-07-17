@@ -1,0 +1,74 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"string": "item/tool/material/string"
+	},
+	"elements": [
+		{
+			"name": "origin",
+			"from": [ 11.0, 0.5, 7.7 ], 
+			"to": [ 11.0, 0.5, 7.7 ], 
+			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"faces": {
+				"north": { "texture": "#string", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+				"east": { "texture": "#string", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+				"south": { "texture": "#string", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+				"west": { "texture": "#string", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+				"up": { "texture": "#string", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+				"down": { "texture": "#string", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
+			},
+			"children": [
+				{
+					"name": "Head",
+					"from": [ -5.0, -1.25, -2.25 ], 
+					"to": [ -1.0, 1.75, 2.75 ], 
+					"rotationOrigin": [ -5.0, -1.5, -1.9 ],
+					"faces": {
+						"north": { "texture": "#material", "uv": [ 3.5, 9.0, 7.5, 12.0 ] },
+						"east": { "texture": "#material", "uv": [ 7.5, 5.5, 12.5, 8.5 ] },
+						"south": { "texture": "#material", "uv": [ 1.5, 11.5, 5.5, 14.5 ] },
+						"west": { "texture": "#material", "uv": [ 3.5, 8.5, 8.5, 11.5 ] },
+						"up": { "texture": "#material", "uv": [ 11.5, 3.5, 15.5, 8.5 ] },
+						"down": { "texture": "#material", "uv": [ 7.0, 6.5, 11.0, 11.5 ] }
+					},
+					"children": [
+						{
+							"name": "Hittingface",
+							"from": [ 0.5, 0.5, -0.5 ], 
+							"to": [ 3.5, 2.5, 0.0 ], 
+							"rotationOrigin": [ 0.5, 0.5, -0.5 ],
+							"faces": {
+								"north": { "texture": "#material", "uv": [ 11.5, 12.0, 14.5, 14.0 ] },
+								"east": { "texture": "#material", "uv": [ 5.0, 8.5, 5.5, 10.5 ] },
+								"south": { "texture": "#material", "uv": [ 3.5, 12.0, 6.5, 14.0 ], "enabled": false },
+								"west": { "texture": "#material", "uv": [ 10.0, 9.5, 10.5, 11.5 ] },
+								"up": { "texture": "#material", "uv": [ 5.5, 13.5, 8.5, 14.0 ] },
+								"down": { "texture": "#material", "uv": [ 8.5, 10.0, 11.5, 10.5 ] }
+							}
+						},
+						{
+							"name": "Hittingface2",
+							"from": [ 0.5, 0.5, 5.0 ], 
+							"to": [ 3.5, 2.5, 5.5 ], 
+							"rotationOrigin": [ 0.5, 0.5, 5.0 ],
+							"faces": {
+								"north": { "texture": "#material", "uv": [ 7.5, 1.5, 10.5, 3.5 ], "enabled": false },
+								"east": { "texture": "#material", "uv": [ 4.0, 9.5, 4.5, 11.5 ] },
+								"south": { "texture": "#material", "uv": [ 9.5, 12.5, 12.5, 14.5 ] },
+								"west": { "texture": "#material", "uv": [ 4.5, 9.5, 5.0, 11.5 ] },
+								"up": { "texture": "#material", "uv": [ 1.0, 10.5, 4.0, 11.0 ] },
+								"down": { "texture": "#material", "uv": [ 7.5, 10.5, 10.5, 11.0 ] }
+							}
+						}
+					]
+				}
+			]
+		}
+	]}

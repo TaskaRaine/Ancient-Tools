@@ -30,13 +30,13 @@ namespace AncientTools.BlockEntities
 
         public ItemSlot HideSlot
         {
-            get { return inventory[0]; }
+            get { return GenericDisplayInventory[0]; }
         }
 
         public MeshData HideMesh
         {
-            get { return meshes[0]; }
-            protected set { meshes[0] = value; }
+            get { return Meshes[0]; }
+            protected set { Meshes[0] = value; }
         }
 
         public override void Initialize(ICoreAPI api)
@@ -126,7 +126,7 @@ namespace AncientTools.BlockEntities
 
                 string resourcePath = "ancienttools:shapes/block/stretchingframe/resourceshapes/" + hideType + "hide_" + hideSize;
 
-                currentObject = HideSlot.Itemstack.Item;
+                CurrentObject = HideSlot.Itemstack.Item;
                 HideMesh = GenMesh(Api as ICoreClientAPI, resourcePath);
             }
         }

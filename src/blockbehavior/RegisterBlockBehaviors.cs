@@ -7,6 +7,7 @@ namespace AncientTools.BlockBehaviors
         public override void Start(ICoreAPI api)
         {
             api.RegisterBlockBehaviorClass("ConvertToResinLog", typeof(BlockBehaviorConvertToResinLog));
+            api.RegisterBlockBehaviorClass("SplitLog", typeof(BlockBehaviorSplitLog));
         }
     }
 }

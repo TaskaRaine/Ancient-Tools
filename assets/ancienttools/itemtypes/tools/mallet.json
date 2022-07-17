@@ -1,0 +1,89 @@
+﻿{
+	code: "mallet",
+	class: "Item",
+	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"], "ancienttools": ["*"] },
+	attributes: {
+		handbook: {
+			groupBy: ["mallet-*"]
+		},
+		groundStorageTransform: {
+			translation: { x: 0.05, y: 0.05, z: 0 },
+			rotation: { x: 13, y: 88, z: -87 },
+			scale: 0.88
+		},
+		rackable: true,
+		toolrackTransform: {
+			rotation: { y: 1, z: -1 },
+			translation: { x: -0.3, y: 0.6 },
+			scale: 1.25,
+		},
+	},
+	variantgroups: [
+		{ code: "handle", states: ["wood", "bone"] },
+        { code: "material", states: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint" ] },
+    ],
+	drawtype: "json",
+    shape: { base: "item/tool/mallet-stone" },
+	texturesByType: {
+		"@mallet-wood-(chert|granite|andesite|basalt|obsidian|peridotite)": {
+			"material": { base: "game:block/stone/rock/{material}1" },
+			"string": { base: "game:item/tool/material/string" },
+			"handle": { base: "game:item/tool/material/handle" }
+		},
+		"@mallet-bone-(chert|granite|andesite|basalt|obsidian|peridotite)": {
+			"material": { base: "game:block/stone/rock/{material}1" },
+			"string": { base: "game:item/tool/material/string" },
+			"handle": { base: "game:block/bone-yellow" }
+		},
+		"mallet-wood-flint": {
+			"material": { base: "game:block/stone/{material}" },
+			"string": { base: "game:item/tool/material/string" },
+			"handle": { base: "game:item/tool/material/handle" }
+		},
+		"mallet-bone-flint": {
+			"material": { base: "game:block/stone/{material}" },
+			"string": { base: "game:item/tool/material/string" },
+			"handle": { base: "game:block/bone-yellow" }
+		}
+	},
+	maxstacksize: 1,
+	attackRange: 2,
+	heldTpHitAnimation: "smithing",
+	damagedby: ["blockbreaking", "attacking"],
+	durabilitybytype: {
+		"@mallet-wood-(chert|granite|andesite|basalt|peridotite)": 50,
+		"@mallet-bone-(chert|granite|andesite|basalt|peridotite)": 60,
+		"*-wood-flint": 60,
+		"*-bone-flint": 70,
+		"*-wood-obsidian": 90,
+		"*-bone-obsidian": 100,
+	},
+	attackpowerbytype: {
+		"@mallet-(wood|bone)-(chert|granite|andesite|basalt|peridotite)": 0.75,
+		"*-flint": 1.25,
+		"*-obsidian": 1.5,
+	},
+	guiTransform: {
+		translation: { x: 2.5, y: 3.5, z: -5 },
+		rotation: { x: -89, y: 41, z: 33 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 1.5
+	},
+	fpHandTransform: {
+		translation: { x: -0.24, y: 0, z: 0.1 },
+		rotation: { x: 15, y: 15, z: 90 },
+		scale: 2.45
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 3.4
+	},
+	tpHandTransform: {
+		translation: { x: -0.9, y: 0.01, z: -0.65 },
+		rotation: { x: 90, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.8
+	}
+}

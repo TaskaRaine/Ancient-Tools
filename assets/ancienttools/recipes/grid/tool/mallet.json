@@ -1,0 +1,44 @@
+﻿[
+	{
+		ingredientPattern: "HS",
+		width: 1,
+		height: 2,
+		ingredients: {
+			"H": { 
+				type: "item", 
+				name: "head",
+				code: "mallethead-*" 
+			},
+			"S": { 
+				type: "item", 
+				code: "game:stick" 
+			}
+		},
+		output: { 
+			type: "item", 
+			code: "mallet-wood-{head}",
+			quantity: 1
+		}
+	},
+	{
+		ingredientPattern: "HB",
+		width: 1,
+		height: 2,
+		ingredients: {
+			"H": { 
+				type: "item", 
+				name: "head",
+				code: "mallethead-*" 
+			},
+			"B": { 
+				type: "item", 
+				code: "game:bone" 
+			}
+		},
+		output: { 
+			type: "item", 
+			code: "mallet-bone-{head}",
+			quantity: 1
+		}
+	},
+]

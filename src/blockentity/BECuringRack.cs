@@ -20,16 +20,16 @@ namespace AncientTools.BlockEntities
     {
         public ItemSlot HookItemslot1
         {
-            get { return inventory[0]; }
+            get { return GenericDisplayInventory[0]; }
         }
         public ItemSlot HookItemslot2
         {
-            get { return inventory[1]; }
+            get { return GenericDisplayInventory[1]; }
         }
 
         public ItemSlot MeatSlot(int slotIndex)
         {
-            return inventory[1 + slotIndex];
+            return GenericDisplayInventory[1 + slotIndex];
         }
 
         private double previousHourChecked;
@@ -51,7 +51,7 @@ namespace AncientTools.BlockEntities
 
             if (this.Block != null && this.Block.Attributes != null)
             {
-                inventory.TransitionableSpeedMulByType = this.Block.Attributes["transitionrate"].AsObject<Dictionary<EnumTransitionType, float>>();
+                GenericDisplayInventory.TransitionableSpeedMulByType = this.Block.Attributes["transitionrate"].AsObject<Dictionary<EnumTransitionType, float>>();
             }
 
             base.Initialize(api);
@@ -261,8 +261,8 @@ namespace AncientTools.BlockEntities
         }
         public float GetCurrentPerishRate()
         {
-            if(inventory.TransitionableSpeedMulByType != null)
-                return inventory.TransitionableSpeedMulByType[EnumTransitionType.Perish];
+            if(GenericDisplayInventory.TransitionableSpeedMulByType != null)
+                return GenericDisplayInventory.TransitionableSpeedMulByType[EnumTransitionType.Perish];
 
             return 1.0f;
         }
@@ -375,11 +375,11 @@ namespace AncientTools.BlockEntities
                 switch(facing)
                 {
                     case RackFacing.NorthSouth:
-                        mesher.AddMeshData(meshes[0].Clone()
+                        mesher.AddMeshData(Meshes[0].Clone()
                         .Translate(translationHook1));
                         break;
                     case RackFacing.EastWest:
-                        mesher.AddMeshData(meshes[0].Clone()
+                        mesher.AddMeshData(Meshes[0].Clone()
                         .Translate(translationHook1)
                         .Rotate(resourceOriginHook1, 0.0f, 90 * GameMath.DEG2RAD, 0.0f));
                         break;
@@ -391,11 +391,11 @@ namespace AncientTools.BlockEntities
                 switch (facing)
                 {
                     case RackFacing.NorthSouth:
-                        mesher.AddMeshData(meshes[1].Clone()
+                        mesher.AddMeshData(Meshes[1].Clone()
                         .Translate(translationHook2));
                         break;
                     case RackFacing.EastWest:
-                        mesher.AddMeshData(meshes[1].Clone()
+                        mesher.AddMeshData(Meshes[1].Clone()
                         .Translate(translationHook2)
                         .Rotate(resourceOriginHook2, 0.0f, 90 * GameMath.DEG2RAD, 0.0f));
                         break;
@@ -419,7 +419,7 @@ namespace AncientTools.BlockEntities
 
                 Vec3f offsets = new Vec3f(-attributeHorizontalOffset, attributeVerticalOffset, -attributeDepthOffset);
 
-                mesher.AddMeshData(meshes[2].Clone()
+                mesher.AddMeshData(Meshes[2].Clone()
                     .Scale(defaultOrigin, attributeScale.X, attributeScale.Y, attributeScale.Z)
                     .Rotate(defaultOrigin, ((attributeRotateAround.X * 90 * 1) + attributeRotation.X) * GameMath.DEG2RAD, ((attributeRotateAround.Y * 90 * 1) + attributeRotation.Y) * GameMath.DEG2RAD, ((attributeRotateAround.Z * 90 * 1) + attributeRotation.Z) * GameMath.DEG2RAD)
                     .Translate(resourceTranslationHook1 + offsets + attributeTranslation + attributeManualTranslation[0]));
@@ -440,7 +440,7 @@ namespace AncientTools.BlockEntities
 
                 Vec3f offsets = new Vec3f(-attributeDepthOffset, attributeVerticalOffset, attributeHorizontalOffset);
 
-                mesher.AddMeshData(meshes[3].Clone()
+                mesher.AddMeshData(Meshes[3].Clone()
                     .Scale(defaultOrigin, attributeScale.X, attributeScale.Y, attributeScale.Z)
                     .Rotate(defaultOrigin, ((attributeRotateAround.X * 90 * 2) + attributeRotation.X) * GameMath.DEG2RAD, ((attributeRotateAround.Y * 90 * 2) + attributeRotation.Y) * GameMath.DEG2RAD, ((attributeRotateAround.Z * 90 * 2) + attributeRotation.Z) * GameMath.DEG2RAD)
                     .Translate(resourceTranslationHook1 + offsets + attributeTranslation + attributeManualTranslation[1]));
@@ -461,7 +461,7 @@ namespace AncientTools.BlockEntities
 
                 Vec3f offsets = new Vec3f(attributeHorizontalOffset, attributeVerticalOffset, attributeDepthOffset);
 
-                mesher.AddMeshData(meshes[4].Clone()
+                mesher.AddMeshData(Meshes[4].Clone()
                     .Scale(defaultOrigin, attributeScale.X, attributeScale.Y, attributeScale.Z)
                     .Rotate(defaultOrigin, ((attributeRotateAround.X * 90 * 3) + attributeRotation.X) * GameMath.DEG2RAD, ((attributeRotateAround.Y * 90 * 3) + attributeRotation.Y) * GameMath.DEG2RAD, ((attributeRotateAround.Z * 90 * 3) + attributeRotation.Z) * GameMath.DEG2RAD)
                     .Translate(resourceTranslationHook1 + offsets + attributeTranslation + attributeManualTranslation[2]));
@@ -482,7 +482,7 @@ namespace AncientTools.BlockEntities
 
                 Vec3f offsets = new Vec3f(attributeDepthOffset, attributeVerticalOffset, -attributeHorizontalOffset);
 
-                mesher.AddMeshData(meshes[5].Clone()
+                mesher.AddMeshData(Meshes[5].Clone()
                     .Scale(defaultOrigin, attributeScale.X, attributeScale.Y, attributeScale.Z)
                     .Rotate(defaultOrigin, ((attributeRotateAround.X * 90 * 4) + attributeRotation.X) * GameMath.DEG2RAD, ((attributeRotateAround.Y * 90 * 4) + attributeRotation.Y) * GameMath.DEG2RAD, ((attributeRotateAround.Z * 90 * 4) + attributeRotation.Z) * GameMath.DEG2RAD)
                     .Translate(resourceTranslationHook1 + offsets + attributeTranslation + attributeManualTranslation[3]));
@@ -503,7 +503,7 @@ namespace AncientTools.BlockEntities
 
                 Vec3f offsets = new Vec3f(-attributeHorizontalOffset, attributeVerticalOffset, -attributeDepthOffset);
 
-                mesher.AddMeshData(meshes[6].Clone()
+                mesher.AddMeshData(Meshes[6].Clone()
                     .Scale(defaultOrigin, attributeScale.X, attributeScale.Y, attributeScale.Z)
                     .Rotate(defaultOrigin, ((attributeRotateAround.X * 90 * 1) + attributeRotation.X) * GameMath.DEG2RAD, ((attributeRotateAround.Y * 90 * 1) + attributeRotation.Y) * GameMath.DEG2RAD, ((attributeRotateAround.Z * 90 * 1) + attributeRotation.Z) * GameMath.DEG2RAD)
                     .Translate(resourceTranslationHook2 + offsets + attributeTranslation + attributeManualTranslation[0]));
@@ -524,7 +524,7 @@ namespace AncientTools.BlockEntities
 
                 Vec3f offsets = new Vec3f(-attributeDepthOffset, attributeVerticalOffset, attributeHorizontalOffset);
 
-                mesher.AddMeshData(meshes[7].Clone()
+                mesher.AddMeshData(Meshes[7].Clone()
                     .Scale(defaultOrigin, attributeScale.X, attributeScale.Y, attributeScale.Z)
                     .Rotate(defaultOrigin, ((attributeRotateAround.X * 90 * 2) + attributeRotation.X) * GameMath.DEG2RAD, ((attributeRotateAround.Y * 90 * 2) + attributeRotation.Y) * GameMath.DEG2RAD, ((attributeRotateAround.Z * 90 * 2) + attributeRotation.Z) * GameMath.DEG2RAD)
                     .Translate(resourceTranslationHook2 + offsets + attributeTranslation + attributeManualTranslation[1]));
@@ -545,7 +545,7 @@ namespace AncientTools.BlockEntities
 
                 Vec3f offsets = new Vec3f(attributeHorizontalOffset, attributeVerticalOffset, attributeDepthOffset);
 
-                mesher.AddMeshData(meshes[8].Clone()
+                mesher.AddMeshData(Meshes[8].Clone()
                     .Scale(defaultOrigin, attributeScale.X, attributeScale.Y, attributeScale.Z)
                     .Rotate(defaultOrigin, ((attributeRotateAround.X * 90 * 3) + attributeRotation.X) * GameMath.DEG2RAD, ((attributeRotateAround.Y * 90 * 3) + attributeRotation.Y) * GameMath.DEG2RAD, ((attributeRotateAround.Z * 90 * 3) + attributeRotation.Z) * GameMath.DEG2RAD)
                     .Translate(resourceTranslationHook2 + offsets + attributeTranslation + attributeManualTranslation[2]));
@@ -566,7 +566,7 @@ namespace AncientTools.BlockEntities
 
                 Vec3f offsets = new Vec3f(attributeDepthOffset, attributeVerticalOffset, -attributeHorizontalOffset);
 
-                mesher.AddMeshData(meshes[9].Clone()
+                mesher.AddMeshData(Meshes[9].Clone()
                     .Scale(defaultOrigin, attributeScale.X, attributeScale.Y, attributeScale.Z)
                     .Rotate(defaultOrigin, ((attributeRotateAround.X * 90 * 4) + attributeRotation.X) * GameMath.DEG2RAD, ((attributeRotateAround.Y * 90 * 4) + attributeRotation.Y) * GameMath.DEG2RAD, ((attributeRotateAround.Z * 90 * 4) + attributeRotation.Z) * GameMath.DEG2RAD)
                     .Translate(resourceTranslationHook2 + offsets + attributeTranslation + attributeManualTranslation[3]));
@@ -791,7 +791,7 @@ namespace AncientTools.BlockEntities
         }
         public override void UpdateMeshes()
         {
-            for (int i = 0; i < meshes.Length; i++)
+            for (int i = 0; i < Meshes.Length; i++)
             {
                 UpdateMesh(i);
             }
@@ -801,13 +801,13 @@ namespace AncientTools.BlockEntities
             if (Api == null || Api.Side == EnumAppSide.Server) return;
             if (Inventory[meshIndex].Empty)
             {
-                meshes[meshIndex] = null;
+                Meshes[meshIndex] = null;
                 return;
             }
 
-            MeshData mesh = GenMesh(Inventory[meshIndex].Itemstack);
+            MeshData mesh = GenMesh(GenericDisplayInventory[meshIndex].Itemstack);
 
-            meshes[meshIndex] = mesh;
+            Meshes[meshIndex] = mesh;
             MarkDirty(true);
         }
     }

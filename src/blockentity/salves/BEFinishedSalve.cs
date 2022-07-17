@@ -12,12 +12,12 @@ namespace AncientTools.BlockEntities
     {
         public ItemSlot SalveSlot
         {
-            get { return inventory[0]; }
+            get { return GenericDisplayInventory[0]; }
         }
         public MeshData SalveMesh
         {
-            get { return meshes[0]; }
-            protected set { meshes[0] = value; }
+            get { return Meshes[0]; }
+            protected set { Meshes[0] = value; }
         }
         public BEFinishedSalve()
         {
@@ -58,7 +58,7 @@ namespace AncientTools.BlockEntities
             {
                 string resourcePath = "ancienttools:shapes/block/salve/resourceshapes/finishedsalve" + SalveSlot.Itemstack.StackSize;
 
-                currentObject = SalveSlot.Itemstack.Item;
+                CurrentObject = SalveSlot.Itemstack.Item;
                 SalveMesh = GenMesh(Api as ICoreClientAPI, resourcePath);
             }
         }

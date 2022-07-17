@@ -7,7 +7,7 @@
 			"H": { 
 				type: "item", 
 				name: "head",
-				code: "game:adzehead-*" 
+				code: "ancienttools:adzehead-*" 
 			},
 			"S": { 
 				type: "item", 
@@ -16,7 +16,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "adze-wood-{head}",
+			code: "ancienttools:adze-wood-{head}",
 			quantity: 1
 		}
 	},
@@ -28,7 +28,7 @@
 			"H": { 
 				type: "item", 
 				name: "head",
-				code: "game:adzehead-chert" 
+				code: "ancienttools:adzehead-chert" 
 			},
 			"B": { 
 				type: "item", 
@@ -37,7 +37,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "adze-bone-chert",
+			code: "ancienttools:adze-bone-chert",
 			quantity: 1
 		}
 	},
@@ -49,7 +49,7 @@
 			"H": { 
 				type: "item", 
 				name: "head",
-				code: "game:adzehead-granite" 
+				code: "ancienttools:adzehead-granite" 
 			},
 			"B": { 
 				type: "item", 
@@ -58,7 +58,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "adze-bone-granite",
+			code: "ancienttools:adze-bone-granite",
 			quantity: 1
 		}
 	},
@@ -70,7 +70,7 @@
 			"H": { 
 				type: "item", 
 				name: "head",
-				code: "game:adzehead-andesite" 
+				code: "ancienttools:adzehead-andesite" 
 			},
 			"B": { 
 				type: "item", 
@@ -79,7 +79,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "adze-bone-andesite",
+			code: "ancienttools:adze-bone-andesite",
 			quantity: 1
 		}
 	},
@@ -91,7 +91,7 @@
 			"H": { 
 				type: "item", 
 				name: "head",
-				code: "game:adzehead-basalt" 
+				code: "ancienttools:adzehead-basalt" 
 			},
 			"B": { 
 				type: "item", 
@@ -100,7 +100,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "adze-bone-basalt",
+			code: "ancienttools:adze-bone-basalt",
 			quantity: 1
 		}
 	},
@@ -112,7 +112,7 @@
 			"H": { 
 				type: "item", 
 				name: "head",
-				code: "game:adzehead-chert" 
+				code: "ancienttools:adzehead-chert" 
 			},
 			"B": { 
 				type: "item", 
@@ -121,7 +121,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "adze-bone-chert",
+			code: "ancienttools:adze-bone-chert",
 			quantity: 1
 		}
 	},
@@ -133,7 +133,7 @@
 			"H": { 
 				type: "item", 
 				name: "head",
-				code: "game:adzehead-obsidian" 
+				code: "ancienttools:adzehead-obsidian" 
 			},
 			"B": { 
 				type: "item", 
@@ -142,7 +142,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "adze-bone-obsidian",
+			code: "ancienttools:adze-bone-obsidian",
 			quantity: 1
 		}
 	},
@@ -154,7 +154,7 @@
 			"H": { 
 				type: "item", 
 				name: "head",
-				code: "game:adzehead-peridotite" 
+				code: "ancienttools:adzehead-peridotite" 
 			},
 			"B": { 
 				type: "item", 
@@ -163,7 +163,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "adze-bone-peridotite",
+			code: "ancienttools:adze-bone-peridotite",
 			quantity: 1
 		}
 	},
@@ -175,7 +175,7 @@
 			"H": { 
 				type: "item", 
 				name: "head",
-				code: "game:adzehead-flint" 
+				code: "ancienttools:adzehead-flint" 
 			},
 			"B": { 
 				type: "item", 
@@ -184,7 +184,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "adze-bone-flint",
+			code: "ancienttools:adze-bone-flint",
 			quantity: 1
 		}
 	}

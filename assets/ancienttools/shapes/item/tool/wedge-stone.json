@@ -1,0 +1,133 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "Origin",
+			"from": [ 8.0, 0.0, 8.0 ], 
+			"to": [ 9.0, 1.0, 9.0 ], 
+			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"faces": {
+				"north": { "texture": "#string", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "enabled": false },
+				"east": { "texture": "#string", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "enabled": false },
+				"south": { "texture": "#string", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "enabled": false },
+				"west": { "texture": "#string", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "enabled": false },
+				"up": { "texture": "#string", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "enabled": false },
+				"down": { "texture": "#string", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "enabled": false }
+			},
+			"children": [
+				{
+					"name": "Cube9",
+					"from": [ -1.0, 0.0, -2.5 ], 
+					"to": [ 1.0, 2.0, -1.5 ], 
+					"rotationOrigin": [ -1.0, 0.0, -2.45 ],
+					"faces": {
+						"north": { "texture": "#stone", "uv": [ 7.0, 9.0, 9.0, 11.0 ] },
+						"east": { "texture": "#stone", "uv": [ 5.5, 11.5, 6.5, 13.5 ] },
+						"south": { "texture": "#stone", "uv": [ 6.0, 5.0, 8.0, 7.0 ] },
+						"west": { "texture": "#stone", "uv": [ 3.5, 8.0, 4.5, 10.0 ] },
+						"up": { "texture": "#stone", "uv": [ 10.0, 9.5, 12.0, 10.5 ] },
+						"down": { "texture": "#stone", "uv": [ 8.0, 7.0, 10.0, 8.0 ] }
+					},
+					"children": [
+						{
+							"name": "WedgeTop",
+							"from": [ 0.5, 1.5, 0.4 ], 
+							"to": [ 1.5, 2.0, 5.4 ], 
+							"rotationOrigin": [ 1.5, 1.5, 0.4 ],
+							"rotationX": 5.75,
+							"faces": {
+								"north": { "texture": "#stone", "uv": [ 0.0, 0.0, 1.0, 0.5 ], "enabled": false },
+								"east": { "texture": "#stone", "uv": [ 7.0, 4.5, 12.0, 5.0 ] },
+								"south": { "texture": "#stone", "uv": [ 3.5, 14.5, 4.5, 15.0 ] },
+								"west": { "texture": "#stone", "uv": [ 4.5, 7.0, 9.5, 7.5 ] },
+								"up": { "texture": "#stone", "uv": [ 2.0, 5.5, 3.0, 10.5 ] },
+								"down": { "texture": "#stone", "uv": [ 6.5, 7.0, 7.5, 12.0 ] }
+							}
+						},
+						{
+							"name": "WedgeLower",
+							"from": [ 0.5, 0.0, 0.4 ], 
+							"to": [ 1.5, 0.5, 5.4 ], 
+							"rotationOrigin": [ 1.5, 0.5, 0.4 ],
+							"rotationX": -5.75,
+							"faces": {
+								"north": { "texture": "#string", "uv": [ 0.0, 0.0, 1.0, 0.5 ], "enabled": false },
+								"east": { "texture": "#stone", "uv": [ 4.5, 10.0, 9.5, 10.5 ] },
+								"south": { "texture": "#stone", "uv": [ 1.0, 12.5, 2.0, 13.0 ] },
+								"west": { "texture": "#stone", "uv": [ 4.0, 6.0, 9.0, 6.5 ] },
+								"up": { "texture": "#stone", "uv": [ 5.5, 4.0, 6.5, 9.0 ] },
+								"down": { "texture": "#stone", "uv": [ 1.5, 6.0, 2.5, 11.0 ] }
+							}
+						},
+						{
+							"name": "WedgeInner",
+							"from": [ 0.51, 1.0, 1.0 ], 
+							"to": [ 1.49, 1.5, 3.1 ], 
+							"rotationOrigin": [ 0.5, 1.2, 1.0 ],
+							"faces": {
+								"north": { "texture": "#string", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+								"east": { "texture": "#stone", "uv": [ 4.5, 6.0, 6.5, 6.5 ] },
+								"south": { "texture": "#string", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+								"west": { "texture": "#stone", "uv": [ 0.5, 10.0, 2.5, 10.5 ] },
+								"up": { "texture": "#string", "uv": [ 0.0, 0.0, 0.5, 2.0 ], "enabled": false },
+								"down": { "texture": "#string", "uv": [ 0.0, 0.0, 0.5, 2.0 ], "enabled": false }
+							}
+						},
+						{
+							"name": "Cube1",
+							"from": [ 0.0, 0.75, 0.34 ], 
+							"to": [ 0.5, 1.25, 5.34 ], 
+							"rotationOrigin": [ 0.5, 1.0, 0.3 ],
+							"rotationY": 5.65,
+							"faces": {
+								"north": { "texture": "#string", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+								"east": { "texture": "#string", "uv": [ 0.0, 0.0, 5.0, 0.5 ], "enabled": false },
+								"south": { "texture": "#stone", "uv": [ 6.0, 8.5, 6.5, 9.0 ] },
+								"west": { "texture": "#stone", "uv": [ 3.5, 14.0, 8.5, 14.5 ] },
+								"up": { "texture": "#stone", "uv": [ 10.0, 6.5, 10.5, 11.5 ] },
+								"down": { "texture": "#stone", "uv": [ 5.0, 6.0, 5.5, 11.0 ] }
+							}
+						},
+						{
+							"name": "Cube12",
+							"from": [ 1.48, 0.75, 0.34 ], 
+							"to": [ 1.98, 1.25, 5.34 ], 
+							"rotationOrigin": [ 1.5, 1.0, 0.5 ],
+							"rotationY": -5.65,
+							"faces": {
+								"north": { "texture": "#string", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+								"east": { "texture": "#stone", "uv": [ 1.0, 6.0, 6.0, 6.5 ] },
+								"south": { "texture": "#stone", "uv": [ 6.0, 7.5, 6.5, 8.0 ] },
+								"west": { "texture": "#string", "uv": [ 0.0, 0.0, 5.0, 0.5 ], "enabled": false },
+								"up": { "texture": "#stone", "uv": [ 1.5, 1.0, 2.0, 6.0 ] },
+								"down": { "texture": "#stone", "uv": [ 8.5, 6.5, 9.0, 11.5 ] }
+							}
+						},
+						{
+							"name": "WedgeInner13",
+							"from": [ 0.51, 0.5, 1.0 ], 
+							"to": [ 1.49, 1.0, 3.1 ], 
+							"rotationOrigin": [ 0.5, 0.7, 1.0 ],
+							"faces": {
+								"north": { "texture": "#string", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+								"east": { "texture": "#stone", "uv": [ 4.5, 6.0, 6.5, 6.5 ] },
+								"south": { "texture": "#string", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+								"west": { "texture": "#stone", "uv": [ 0.5, 10.0, 2.5, 10.5 ] },
+								"up": { "texture": "#string", "uv": [ 0.0, 0.0, 0.5, 2.0 ], "enabled": false },
+								"down": { "texture": "#string", "uv": [ 0.0, 0.0, 0.5, 2.0 ], "enabled": false }
+							}
+						}
+					]
+				}
+			]
+		}
+	]}

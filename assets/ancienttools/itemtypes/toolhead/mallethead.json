@@ -1,0 +1,57 @@
+﻿{
+	code: "mallethead",
+	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
+	attributes: {
+		handbook: {
+			groupBy: ["mallethead-*"]
+		},
+		groundStorageTransformByType: {
+			"@mallethead-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": {
+				"translation": { "z": 0.025 }
+			}
+		}
+	},
+	behaviors: [
+		{ "name": "GroundStorable", "properties": { "layout": "Quadrants" } }
+	],
+	variantgroups: [
+        { code: "material", states: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint" ] },
+    ],
+	drawtype: "json",
+    shapeByType: { 
+		"@mallethead-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": { base: "ancienttools:item/toolhead/mallet-stone" },
+	},
+	texturesByType: {
+		"@mallethead-(chert|granite|andesite|basalt|obsidian|peridotite)": { 
+			"material": { base: "game:block/stone/rock/{material}1" },
+		},
+		"mallethead-flint": { 
+			"material": { base: "game:block/stone/{material}" },
+		},
+	},
+	maxstacksize: 4,
+	guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -59, y: 47, z: -43 },
+		origin: { x: 0.55, y: -0.05, z: 0.5 },
+		scale: 3.18
+	},
+	fpHandTransform: {
+		translation: { x: 0.05, y: 0.5, z: 0.25 },
+		rotation: { x: 180, y: 180, z: -90 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.9, y: 0, z: -0.8 },
+		rotation: { x: 0, y: -90, z: 90 },
+		origin: { x: 0.5, y: 0, z: 0.475 },
+		scale: 0.61
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0.02, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5299 },
+		scale: 2.81
+	}
+}

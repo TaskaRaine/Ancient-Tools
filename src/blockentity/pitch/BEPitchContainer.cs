@@ -9,30 +9,30 @@ namespace AncientTools.BlockEntities
     {
         public ItemSlot GrassSlot
         {
-            get { return inventory[0]; }
+            get { return GenericDisplayInventory[0]; }
         }
         public ItemSlot ResinSlot
         {
-            get { return inventory[1]; }
+            get { return GenericDisplayInventory[1]; }
         }
         public ItemSlot CharcoalSlot
         {
-            get { return inventory[2]; }
+            get { return GenericDisplayInventory[2]; }
         }
         public MeshData GrassMesh
         {
-            get { return meshes[0]; }
-            protected set { meshes[0] = value; }
+            get { return Meshes[0]; }
+            protected set { Meshes[0] = value; }
         }
         public MeshData ResinMesh
         {
-            get { return meshes[1]; }
-            protected set { meshes[1] = value; }
+            get { return Meshes[1]; }
+            protected set { Meshes[1] = value; }
         }
         public MeshData CharcoalMesh
         {
-            get { return meshes[2]; }
-            protected set { meshes[2] = value; }
+            get { return Meshes[2]; }
+            protected set { Meshes[2] = value; }
         }
         public BEPitchContainer()
         {
@@ -85,21 +85,21 @@ namespace AncientTools.BlockEntities
             {
                 string grassPath = "ancienttools:shapes/block/pitch/resourceshapes/grass1";
 
-                currentObject = GrassSlot.Itemstack.Item;
+                CurrentObject = GrassSlot.Itemstack.Item;
                 GrassMesh = GenMesh(Api as ICoreClientAPI, grassPath);
             }
             if (!ResinSlot.Empty)
             {
                 string resinPath = "ancienttools:shapes/block/pitch/resourceshapes/resin" + ResinSlot.Itemstack.StackSize;
 
-                currentObject = ResinSlot.Itemstack.Item;
+                CurrentObject = ResinSlot.Itemstack.Item;
                 ResinMesh = GenMesh(Api as ICoreClientAPI, resinPath);
             }
             if(!CharcoalSlot.Empty)
             {
                 string charcoalPath = "ancienttools:shapes/block/pitch/resourceshapes/charcoal" + CharcoalSlot.Itemstack.StackSize;
 
-                currentObject = CharcoalSlot.Itemstack.Item;
+                CurrentObject = CharcoalSlot.Itemstack.Item;
                 CharcoalMesh = GenMesh(Api as ICoreClientAPI, charcoalPath);
             }
         }

@@ -130,12 +130,16 @@
     <None Include="assets\ancienttools\blocktypes\pitchpot.json" />
     <None Include="assets\ancienttools\blocktypes\pitchtorch.json" />
     <None Include="assets\ancienttools\blocktypes\salvepot.json" />
+    <None Include="assets\ancienttools\blocktypes\splitlog.json" />
     <None Include="assets\ancienttools\blocktypes\stretchingframe.json" />
     <None Include="assets\ancienttools\blocktypes\strippedlog.json" />
+    <None Include="assets\ancienttools\blocktypes\toolmoldancienttools.json" />
     <None Include="assets\ancienttools\compatibility\buildingplus\recipes\grid\strippedsupport.json" />
     <None Include="assets\ancienttools\config\handbook\pitchguide.json" />
     <None Include="assets\ancienttools\itemtypes\resources\powderedcharcoal.json" />
     <None Include="assets\ancienttools\itemtypes\resources\pitch.json" />
+    <None Include="assets\ancienttools\itemtypes\tools\mallet.json" />
+    <None Include="assets\ancienttools\itemtypes\tools\wedge.json" />
     <None Include="assets\ancienttools\lang\fr.json" />
     <None Include="assets\ancienttools\lang\ja.json" />
     <None Include="assets\ancienttools\lang\ru.json" />
@@ -208,6 +212,7 @@
     <None Include="assets\ancienttools\patches\recipes\brainedhide.json" />
     <None Include="assets\ancienttools\patches\recipes\tannin.json" />
     <None Include="assets\ancienttools\recipes\barrel\tannin.json" />
+    <None Include="assets\ancienttools\recipes\clayforming\wedgesmold.json" />
     <None Include="assets\ancienttools\recipes\grid\block\lampsaucer.json" />
     <None Include="assets\ancienttools\recipes\grid\block\pitchpot.json" />
     <None Include="assets\ancienttools\recipes\grid\block\pitchtorch.json" />
@@ -218,7 +223,11 @@
     <None Include="assets\ancienttools\recipes\grid\food\barkdough.json" />
     <None Include="assets\ancienttools\recipes\grid\food\sealedcrock.json" />
     <None Include="assets\ancienttools\recipes\grid\item\pitch.json" />
+    <None Include="assets\ancienttools\recipes\grid\tool\mallet.json" />
+    <None Include="assets\ancienttools\recipes\knapping\mallethead.json" />
+    <None Include="assets\ancienttools\recipes\knapping\wedge.json" />
     <None Include="assets\ancienttools\recipes\smithing\lampsaucer.json" />
+    <None Include="assets\ancienttools\shapes\block\clay\mold\wedge.json" />
     <None Include="assets\ancienttools\shapes\block\curingrack\full_curingrack_plus.json" />
     <None Include="assets\ancienttools\shapes\block\curingrack\left_curingrack_plus.json" />
     <None Include="assets\ancienttools\shapes\block\curingrack\none_curingrack_plus.json" />
@@ -367,9 +376,21 @@
     <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\resin2.json" />
     <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\resin3.json" />
     <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\resin4.json" />
+    <None Include="assets\ancienttools\shapes\block\splitlogs\splitlog_1.json" />
+    <None Include="assets\ancienttools\shapes\block\splitlogs\splitlog_2.json" />
+    <None Include="assets\ancienttools\shapes\block\splitlogs\splitlog_3.json" />
+    <None Include="assets\ancienttools\shapes\block\splitlogs\splitlog_4.json" />
+    <None Include="assets\ancienttools\shapes\block\splitlogs\splitlog_5.json" />
+    <None Include="assets\ancienttools\shapes\block\splitlogs\splitlog_6.json" />
+    <None Include="assets\ancienttools\shapes\block\splitlogs\splitlog_7.json" />
     <None Include="assets\ancienttools\shapes\block\stretchingframe\stretchingframe_plus.json" />
     <None Include="assets\ancienttools\shapes\item\resource\pitchball.json" />
     <None Include="assets\ancienttools\shapes\item\resource\pitchstick.json" />
+    <None Include="assets\ancienttools\shapes\item\toolhead\mallet-stone.json" />
+    <None Include="assets\ancienttools\shapes\item\tool\mallet-stone.json" />
+    <None Include="assets\ancienttools\shapes\item\tool\wedge-metal.json" />
+    <None Include="assets\ancienttools\shapes\item\tool\wedge-stone.json" />
+    <None Include="assets\ancienttools\itemtypes\toolhead\mallethead.json" />
     <None Include="assets\game\patches\recipes\cooking\meatystew.json" />
     <None Include="assets\ancienttools\recipes\barrel\brainedhide.json" />
     <None Include="assets\ancienttools\recipes\barrel\brainingsolution.json" />
@@ -425,7 +446,7 @@
     <None Include="assets\ancienttools\shapes\item\tool\curinghook.json" />
     <None Include="assets\ancienttools\shapes\item\toolhead\adze-metal.json" />
     <None Include="assets\ancienttools\shapes\item\toolhead\adze-stone.json" />
-    <None Include="assets\game\itemtypes\toolhead\adzehead.json" />
+    <None Include="assets\ancienttools\itemtypes\toolhead\adzehead.json" />
     <None Include="assets\ancienttools\itemtypes\tools\adze.json" />
     <None Include="assets\ancienttools\lang\en.json" />
     <None Include="assets\ancienttools\patches\block\log.json" />
@@ -444,7 +465,7 @@
     <None Include="assets\ancienttools\shapes\block\salve\fullbarksalve.json" />
     <None Include="assets\ancienttools\shapes\block\salve\fullhardwaxsalve.json" />
     <None Include="assets\ancienttools\shapes\block\mold\adzecomplex.json" />
-    <None Include="assets\game\shapes\block\clay\mold\adze.json" />
+    <None Include="assets\ancienttools\shapes\block\clay\mold\adze.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\mortar.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bark.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_bone.json" />
@@ -500,7 +521,9 @@
     <Folder Include="assets\ancienttools\patches\lang\" />
     <Folder Include="assets\ancienttools\shapes\entity\" />
     <Folder Include="assets\ancienttools\textures\item\food\flour\" />
+    <Folder Include="assets\game\itemtypes\toolhead\" />
     <Folder Include="assets\game\recipes\" />
+    <Folder Include="assets\game\shapes\block\" />
     <Folder Include="src\entities\" />
   </ItemGroup>
   <ItemGroup>
@@ -510,11 +533,14 @@
     <None Include="assets\ancienttools\patches\compatibility\lichen\gemsbok.json" />
     <None Include="assets\ancienttools\patches\item\food\curedmeats.json" />
     <Compile Include="src\blockbehavior\BlockBehaviorConvertToResinLog.cs" />
+    <Compile Include="src\blockbehavior\BlockBehaviorSplitLog.cs" />
     <Compile Include="src\blockentitybehavior\BlockEntityBehaviorFireproofFuel.cs" />
     <Compile Include="src\blockbehavior\RegisterBlockBehaviors.cs" />
+    <Compile Include="src\blockentitybehavior\BlockEntityBehaviorSplitLog.cs" />
     <Compile Include="src\blockentitybehavior\RegisterBlockEntityBehaviors.cs" />
     <Compile Include="src\blockentity\BEHideWaterSack.cs" />
     <Compile Include="src\blockentity\BEStretchingFrame.cs" />
+    <Compile Include="src\blockentity\BETest.cs" />
     <Compile Include="src\blockentity\pitch\BEFinishedPitch.cs" />
     <Compile Include="src\blockentity\pitch\BEPitchContainer.cs" />
     <Compile Include="src\blocks\HideWaterSack.cs" />
@@ -523,6 +549,7 @@
     <Compile Include="src\blocks\pitch\PitchContainer.cs" />
     <Compile Include="src\blocks\pitch\PitchInventory.cs" />
     <Compile Include="src\blocks\LampSaucer.cs" />
+    <Compile Include="src\blocks\SplitLog.cs" />
     <Compile Include="src\blocks\StretchingFrame.cs" />
     <Compile Include="src\blocks\WaterproofTorch.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorConvertHide.cs" />
@@ -534,6 +561,9 @@
     <Compile Include="src\harmony\HarmonySetup.cs" />
     <Compile Include="src\items\ItemBark.cs" />
     <Compile Include="src\items\ItemBrain.cs" />
+    <Compile Include="src\items\ItemWedge.cs" />
+    <Compile Include="src\utility\BlockEntityBehaviorBaseClasses\DisplayInventoryBehavior.cs" />
+    <Compile Include="src\utility\Interfaces\IDisplayInventory.cs" />
     <Compile Include="src\utility\ModConfig.cs" />
     <Compile Include="src\utility\RegisterConfig.cs" />
     <None Include="assets\ancienttools\recipes\grid\tool\curinghook.json" />
@@ -551,7 +581,7 @@
     <Compile Include="src\items\ItemSalvePortion.cs" />
     <Compile Include="src\items\RegisterItems.cs" />
     <Compile Include="src\items\ItemSaltedMeat.cs" />
-    <Compile Include="src\utility\DisplayInventory.cs" />
+    <Compile Include="src\utility\BlockEntityBaseClasses\DisplayInventory.cs" />
     <None Include="assets\ancienttools\recipes\grid\block\mortar.json" />
     <Compile Include="src\blockentityrenderer\MortarPestleRenderer.cs" />
     <Compile Include="src\blockentity\BECuringRack.cs" />

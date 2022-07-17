@@ -1,0 +1,63 @@
+﻿{
+	code: "wedge",
+	class: "ItemWedge",
+	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"], "ancienttools": ["*"] },
+	attributes: {
+		handbook: {
+			groupBy: ["wedge-*"]
+		},
+	},
+	variantgroups: [
+        { code: "material", states: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron", "meteoriciron", "steel" ] },
+    ],
+	drawtype: "json",
+    shapeByType: {
+		"@wedge-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)" : { 
+			base: "item/tool/wedge-metal" 
+		},
+		"@wedge-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": {
+			base: "item/tool/wedge-stone"
+		}
+	},
+	texturesByType: {
+		"@wedge-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": {
+			"metal": { 
+				base: "game:block/metal/ingot/{material}" 
+			}
+		},
+		"@wedge-(chert|granite|andesite|basalt|obsidian|peridotite)" : {
+			"stone": {
+				base: "game:block/stone/rock/{material}1"
+			}
+		},
+		"@wedge-flint": {
+			"stone": {
+				base: "game:block/stone/{material}"
+			}
+		}
+	},
+	maxstacksize: 16,
+	guiTransform: {
+		translation: { x: 7, y: -2, z: 0 },
+		rotation: { x: -67, y: 41, z: 33 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 3.98
+	},
+	fpHandTransform: {
+		translation: { x: -0.24, y: -0.2, z: 0.1 },
+		rotation: { x: 82, y: -1, z: 77 },
+		scale: 2.45
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 3.4
+	},
+	tpHandTransform: {
+		translation: { x: -0.9, y: 0.01, z: -0.65 },
+		rotation: { x: 90, y: -90, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.8
+	}
+}

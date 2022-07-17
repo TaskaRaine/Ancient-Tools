@@ -14,21 +14,21 @@ namespace AncientTools.BlockEntities
     {
         public ItemSlot ResourceSlot
         {
-            get { return inventory[0]; }
+            get { return GenericDisplayInventory[0]; }
         }
         public ItemSlot LiquidSlot
         {
-            get { return inventory[1]; }
+            get { return GenericDisplayInventory[1]; }
         }
         public MeshData ResourceMesh 
         {
-            get { return meshes[0]; }
-            protected set { meshes[0] = value; }
+            get { return Meshes[0]; }
+            protected set { Meshes[0] = value; }
         }
         public MeshData LiquidMesh 
         { 
-            get { return meshes[1]; }
-            protected set { meshes[1] = value; }
+            get { return Meshes[1]; }
+            protected set { Meshes[1] = value; }
         }
 
         public BESalveContainer()
@@ -76,7 +76,7 @@ namespace AncientTools.BlockEntities
             {
                 string resourcePath = "ancienttools:shapes/block/salve/resourceshapes/barkfilled" + ResourceSlot.Itemstack.StackSize;
 
-                currentObject = ResourceSlot.Itemstack.Item;
+                CurrentObject = ResourceSlot.Itemstack.Item;
                 ResourceMesh = GenMesh(Api as ICoreClientAPI, resourcePath);
             }
             if (!LiquidSlot.Empty)
@@ -92,7 +92,7 @@ namespace AncientTools.BlockEntities
                     liquidPath = "ancienttools:shapes/block/salve/resourceshapes/hardwax" + LiquidSlot.Itemstack.StackSize;
                 }
 
-                currentObject = LiquidSlot.Itemstack.Item;
+                CurrentObject = LiquidSlot.Itemstack.Item;
                 LiquidMesh = GenMesh(Api as ICoreClientAPI, liquidPath);
             }
         }

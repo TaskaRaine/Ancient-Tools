@@ -16,6 +16,34 @@
         "condition": { "when": "AllowCarvingForResin", "isValue": "true" }
     },
     {
+        "op": "add",
+        "path": "/behaviorsByType/*-grown-*/-",
+        "value": { "name": "SplitLog", 
+            properties: { 
+			wedgebox1: { x1: 0.2, y1: 1.0, z1: 0.4, x2: 0.4, y2: 1.1, z2: 0.6 },
+			wedgebox2: { x1: 0.6, y1: 1.0, z1: 0.4, x2: 0.8, y2: 1.1, z2: 0.6 },
+			wedgebox3: { x1: 0.2, y1: -0.1, z1: 0.4, x2: 0.4, y2: 0.0, z2: 0.6 },
+			wedgebox4: { x1: 0.6, y1: -0.1, z1: 0.4, x2: 0.8, y2: 0.0, z2: 0.6 },
+		    }  
+        },
+        "file": "game:blocktypes/wood/woodtyped/log",
+        "side": "Server",
+    },
+    {
+        "op": "add",
+        "path": "/behaviorsByType/*/-",
+        "value": { "name": "SplitLog", 
+            properties: { 
+			wedgebox1: { x1: 0.2, y1: 1.0, z1: 0.4, x2: 0.4, y2: 1.1, z2: 0.6 },
+			wedgebox2: { x1: 0.6, y1: 1.0, z1: 0.4, x2: 0.8, y2: 1.1, z2: 0.6 },
+			wedgebox3: { x1: 0.2, y1: -0.1, z1: 0.4, x2: 0.4, y2: 0.0, z2: 0.6 },
+			wedgebox4: { x1: 0.6, y1: -0.1, z1: 0.4, x2: 0.8, y2: 0.0, z2: 0.6 },
+		    }  
+        },
+        "file": "game:blocktypes/wood/woodtyped/log",
+        "side": "Server",
+    },
+    {
         "op": "move",
 		"frompath": "/behaviorsByType/*-grown-*",
 		"path": "/temp",

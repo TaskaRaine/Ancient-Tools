@@ -8,5 +8,5 @@
 		"#_______"
 	]],
 	name: "Adze",
-	output: { type: "item", code: "game:adzehead-{metal}"  }
+	output: { type: "item", code: "ancienttools:adzehead-{metal}"  }
 }
