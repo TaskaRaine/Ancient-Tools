@@ -133,7 +133,7 @@ namespace AncientTools.BlockEntities
         }
         public override bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator)
         {
-            BlockMortar block = Api.World.BlockAccessor.GetBlock(Pos) as BlockMortar;
+            BlockMortar block = Api.World.BlockAccessor.GetBlock(Pos, BlockLayersAccess.SolidBlocks) as BlockMortar;
 
             if (!ResourceSlot.Empty)
             {

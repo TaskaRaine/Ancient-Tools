@@ -52,7 +52,7 @@ namespace AncientTools.Items
             if (byEntity.Controls.Sneak || byEntity.Controls.Sprint)
             {
 
-                Block interactedBlock = api.World.BlockAccessor.GetBlock(blockSel.Position);
+                Block interactedBlock = api.World.BlockAccessor.GetBlock(blockSel.Position, BlockLayersAccess.SolidBlocks);
 
                 if (interactedBlock.Attributes == null)
                     return;
@@ -89,7 +89,7 @@ namespace AncientTools.Items
                 {
                     api.World.SpawnParticles(woodParticles);
 
-                    SetParticleColour(api.World.BlockAccessor.GetBlock(blockSel.Position).GetRandomColor((ICoreClientAPI)api, blockSel.Position, BlockFacing.NORTH));
+                    SetParticleColour(api.World.BlockAccessor.GetBlock(blockSel.Position, BlockLayersAccess.SolidBlocks).GetRandomColor((ICoreClientAPI)api, blockSel.Position, BlockFacing.NORTH));
                 }
 
             return true;
@@ -110,7 +110,7 @@ namespace AncientTools.Items
 
             if (api.Side == EnumAppSide.Server)
             {
-                Block interactedBlock = api.World.BlockAccessor.GetBlock(blockSel.Position);
+                Block interactedBlock = api.World.BlockAccessor.GetBlock(blockSel.Position, BlockLayersAccess.SolidBlocks);
 
                 string logType = interactedBlock.LastCodePart(1);
                 string logRotation = interactedBlock.LastCodePart();

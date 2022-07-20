@@ -112,7 +112,7 @@ namespace AncientTools.Blocks
                 return;
 
             if(byEntity.Controls.Sneak && 
-                api.World.BlockAccessor.GetBlock(blockSel.Position) is BlockUnmixedSalve interactedBlock && 
+                api.World.BlockAccessor.GetBlock(blockSel.Position, BlockLayersAccess.SolidBlocks) is BlockUnmixedSalve interactedBlock && 
                 interactedBlock.LastCodePart() != this.LastCodePart())
             {
                 if(api.Side == EnumAppSide.Client)
@@ -163,7 +163,7 @@ namespace AncientTools.Blocks
         public override void OnHeldInteractStop(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
             if(secondsUsed >= salveMixTime)
-            if (api.World.BlockAccessor.GetBlock(blockSel.Position) is BlockUnmixedSalve interactedBlock)
+            if (api.World.BlockAccessor.GetBlock(blockSel.Position, BlockLayersAccess.SolidBlocks) is BlockUnmixedSalve interactedBlock)
             {
                 if (interactedBlock.Id == this.Id)
                     return;

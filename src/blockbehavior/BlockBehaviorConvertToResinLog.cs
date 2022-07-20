@@ -117,7 +117,7 @@ namespace AncientTools.BlockBehaviors
         {
             Queue<Vec4i> queue = new Queue<Vec4i>();
             HashSet<BlockPos> checkedPositions = new HashSet<BlockPos>();
-            Block startBlock = world.BlockAccessor.GetBlock(startPos);
+            Block startBlock = world.BlockAccessor.GetBlock(startPos, BlockLayersAccess.SolidBlocks);
             Block block;
 
             int spreadIndex = startBlock.Attributes?["treeFellingGroupSpreadIndex"].AsInt(0) ?? 0;
@@ -132,7 +132,7 @@ namespace AncientTools.BlockBehaviors
 
                 Vec4i pos = queue.Dequeue();
 
-                block = world.BlockAccessor.GetBlock(pos.X, pos.Y, pos.Z);
+                block = world.BlockAccessor.GetBlock(pos.X, pos.Y, pos.Z, BlockLayersAccess.SolidBlocks);
                 string treeFellingGroupCode = block.Attributes?["treeFellingGroupCode"].AsString();
 
                 if (block.FirstCodePart() == "log" || block.FirstCodePart() == "directionalresin")
@@ -148,7 +148,7 @@ namespace AncientTools.BlockBehaviors
 
                     if (checkedPositions.Contains(neibPos)) continue;
 
-                    block = world.BlockAccessor.GetBlock(neibPos);
+                    block = world.BlockAccessor.GetBlock(neibPos, BlockLayersAccess.SolidBlocks);
 
                     if (block.Code == null || block.Id == 0) continue;
 

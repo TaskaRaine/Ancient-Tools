@@ -33,7 +33,7 @@ namespace AncientTools.CollectibleBehaviors
 
             if (byEntity is EntityPlayer player)
             {
-                Block interactedBlock = api.World.BlockAccessor.GetBlock(blockSel.Position);
+                Block interactedBlock = api.World.BlockAccessor.GetBlock(blockSel.Position, BlockLayersAccess.SolidBlocks);
 
                 if (interactedBlock is BlockGroundStorage)
                 {
