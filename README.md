@@ -70,6 +70,8 @@ The new gazelle mob has the chance to drop brains when killed.
 
 Adds compatibility for the More Animals mod. Pheasants, Golden Pheasants and Capercaillie creatures should now all have harvestable brains.
 
+New Acacia tannin recipes can also be disabled via config.
+
 #### Version 1.4.4
 Block grindables can now be placed in the mortar. Seashells, in vanilla Vintage Story, now have shapes in the mortar and can be ground down into lime.
 

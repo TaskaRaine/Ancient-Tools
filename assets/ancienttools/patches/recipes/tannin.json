@@ -19,7 +19,7 @@
 	//-- Removes vanilla tannin recipes --//
 	{
 		"op": "add",
-		"path": "/enabled",
+		"path": "/0/enabled",
 		"value": "false",
 		"file": "game:recipes/barrel/weaktannin",
 		"side": "Server",
@@ -27,7 +27,23 @@
 	},
 	{
 		"op": "add",
-		"path": "/enabled",
+		"path": "/1/enabled",
+		"value": "false",
+		"file": "game:recipes/barrel/weaktannin",
+		"side": "Server",
+		"condition": { "when": "DisableVanillaHideCrafting", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/0/enabled",
+		"value": "false",
+		"file": "game:recipes/barrel/strongtannin",
+		"side": "Server",
+		"condition": { "when": "DisableVanillaHideCrafting", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/1/enabled",
 		"value": "false",
 		"file": "game:recipes/barrel/strongtannin",
 		"side": "Server",
