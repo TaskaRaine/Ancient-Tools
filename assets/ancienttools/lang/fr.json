@@ -181,6 +181,7 @@ Maintenant, prenez le mélange et chauffez-le dans le feu de camp le plus proche
 	"block-mortar-andesite": "Mortier d'andésite",
 	"block-mortar-granite": "Mortier de granite",
 	"block-mortar-basalt": "Mortier de basalte",
+	"block-mortar-chert": "Mortier de chert",
 
 	"block-curingrack-birch-*": "Râtelier de salaison en bouleau",
 	"block-curingrack-oak-*": "Râtelier de salaison en chêne",
@@ -367,6 +368,7 @@ Maintenant, prenez le mélange et chauffez-le dans le feu de camp le plus proche
 	"item-pestle-andesite": "Pilon en andésite",
 	"item-pestle-granite": "Pilon en granite",
 	"item-pestle-basalt": "Pilon en basalte",
+	"item-pestle-chert": "Pilon en chert",
 
 	"item-curinghook-bone": "Crochet de salaison",
 

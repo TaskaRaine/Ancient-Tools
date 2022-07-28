@@ -51,8 +51,17 @@ namespace AncientTools.BlockEntityRenderer
             {
                 if (meshref == null)
                     meshref = api.Render.UploadMesh(mesh);
-                else
+
+                try
+                {
                     api.Render.UpdateMesh(meshref, mesh);
+                }
+                catch (Exception e)
+                {
+                    System.Console.Error.WriteLine("Something strange happened while attempting to update the pestle renderer. The block placed at x: " + pos.X, " y: " + pos.Y + " z: " + pos.Z + " may not look correct.");
+                    System.Console.Error.WriteLine(e.Message);
+                    System.Console.Error.WriteLine(e.StackTrace);
+                }
             }
         }
         public void Dispose()

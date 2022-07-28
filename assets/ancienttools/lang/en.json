@@ -181,6 +181,7 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"block-mortar-andesite": "Andesite Mortar",
 	"block-mortar-granite": "Granite Mortar",
 	"block-mortar-basalt": "Basalt Mortar",
+	"block-mortar-chert": "Chert Mortar",
 
 	"block-curingrack-birch-*": "Birch Curing Rack",
 	"block-curingrack-oak-*": "Oak Curing Rack",
@@ -367,6 +368,7 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"item-pestle-andesite": "Andesite Pestle",
 	"item-pestle-granite": "Granite Pestle",
 	"item-pestle-basalt": "Basalt Pestle",
+	"item-pestle-chert": "Chert Pestle",
 
 	"item-curinghook-bone": "Bone Hook",			
 

@@ -61,7 +61,7 @@
 		"op": "add",
 		"path": "/attributes/inFirePitPropsByType",
 		"value": { 
-			"*-brained-huge":
+			"@hide-(brained|smoked)-huge":
 			{
 				transform: {
 					scale: 0.4,
@@ -71,7 +71,7 @@
 				  },
 				  useFirepitModel: "Spit"
 			},
-			"*-brained-large": 
+			"@hide-(brained|smoked)-large": 
 			{
 				transform: {
 					scale: 0.35,
@@ -81,7 +81,7 @@
 				  },
 				  useFirepitModel: "Spit"
 			},
-			"*-brained-medium": 
+			"@hide-(brained|smoked)-medium": 
 			{
 				transform: {
 					scale: 0.3,
@@ -91,7 +91,7 @@
 				  },
 				  useFirepitModel: "Spit"
 			},
-			"*-brained-small": 
+			"@hide-(brained|smoked)-small": 
 			{
 				transform: {
 					scale: 0.25,

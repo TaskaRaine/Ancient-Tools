@@ -176,6 +176,7 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"block-mortar-andesite": "安山岩すり鉢",
 	"block-mortar-granite": "花崗岩すり鉢",
 	"block-mortar-basalt": "玄武岩すり鉢",
+	"block-mortar-chert": "チャート岩すり鉢",
 
 	"block-curingrack-birch-*": "シラカバの熟成棚",
 	"block-curingrack-oak-*": "オークの熟成棚",
@@ -362,6 +363,7 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"item-pestle-andesite": "安山岩のすりこ木",
 	"item-pestle-granite": "花崗岩のすりこ木",
 	"item-pestle-basalt": "玄武岩のすりこ木",
+	"item-pestle-chert": "チャート岩のすりこ木",
 
 	"item-curinghook-bone": "骨のフック",
 

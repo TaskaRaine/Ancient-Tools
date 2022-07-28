@@ -181,6 +181,7 @@ Note: Поскольку смола является неотъемлемой ч
 	"block-mortar-andesite": "Андезитовый ступка",
 	"block-mortar-granite": "Гранитный ступка",
 	"block-mortar-basalt": "Базальтовый ступка",
+	"block-mortar-chert": "Кремнистый ступка",
 
 	"block-curingrack-birch-*": "Стойка для сушки из березы",
 	"block-curingrack-oak-*": "Стойка для сушки из дуба",
@@ -364,9 +365,10 @@ Note: Поскольку смола является неотъемлемой ч
 	"blockdesc-hidewatersack-soak-x-hours": "Fully soaked in {0} hours.",
 
 	"item-pestle-peridotite": "Перидотитный пестик",
-	"item-pestle-andesite": "Андезит -пестик",
+	"item-pestle-andesite": "Андезит пестик",
 	"item-pestle-granite": "Гранитный пестик",
 	"item-pestle-basalt": "Базальтовый пестик",
+	"item-pestle-chert": "Kремнистый пестик",
 
 	"item-curinghook-bone": "Костяной крюк",			
 
