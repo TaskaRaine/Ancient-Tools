@@ -55,7 +55,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/client/behaviors/5/quantitySlots",
+		"path": "/client/behaviors/4/quantitySlots",
 		"value": 8,
 		"file": "game:entities/land/sheep-bighorn-male",
 		"side": "Server"
@@ -69,7 +69,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/client/behaviors/5/quantitySlots",
+		"path": "/client/behaviors/4/quantitySlots",
 		"value": 8,
 		"file": "game:entities/land/sheep-bighorn-lamb",
 		"side": "Server"

@@ -102,8 +102,6 @@ Note: Поскольку смола является неотъемлемой ч
 
 Теперь просто возьмите смесь и нагрейте ее в ближайшем камине, чтобы создать <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>подготовленную смолу</a>. Когда он будет закончен, вы можете поместить горшок на землю и взять кусочки смолы, используя a <a href=\'handbook://item-stick\'>палку</a>.
 	",
-	"game:handbook-crafting-title-pitch": "Created by",
-	"game:handbook-crafting-text-pitch": "Combining <a href=\'handbook://item-ancienttools:powderedcharcoal\'>порошкообразный древесный уголь</a>, <a href=\'handbook://item-resin\'>смолу</a>, и <a href=\'handbook://item-drygrass\'>сухую траву</a> into an <a href=\'handbook://block-ancienttools:pitchpot-empty\'>empty pitch container</a> and cooking the <a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>resulting mixture</a> on a firepit. Place the <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>prepared pitch</a> on the ground to take individual pitch pieces.",
 
 	"blockhelp-place-pestle": "Поместить Пестик",
 	"blockhelp-place-resource": "Поместить измельчаемый ресурс",

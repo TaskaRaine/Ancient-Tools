@@ -11,6 +11,8 @@
 ### Releases
 
 #### Vintage Story 1.17.0+ 
+[Version 1.4.6](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.6/AncientTools_V1.4.6.zip)
+
 [Version 1.4.5](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.5/AncientTools_V1.4.5.zip)
 
 #### Vintage Story 1.16.0+
@@ -59,6 +61,18 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.4.6
+
+Compiled the mod with VS RC-5 to prevent crashes that were happening with a 'Method Not Found' error with TesselateShape() that occurred when AT 1.4.5 was used on RC-5
+
+Fixed an issue where sheep inventories were not properly increased in size.
+
+Fixed an issue that prevented raw hides from being filled by clicking a water source.
+
+Removed the UnstableFalling behavior from bark baskets to allow them to be placed anywhere.
+
+Removed duplicate entries in all lang files.
+
 #### Version 1.4.5
 Mod updated to be compatible with Vintage Story 1.17.0
 

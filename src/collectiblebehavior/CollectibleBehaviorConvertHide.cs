@@ -18,7 +18,7 @@ namespace AncientTools.CollectibleBehaviors
 
             EntityPlayer player = (EntityPlayer)byEntity;
 
-            Block interactedBlock = byEntity.Api.World.BlockAccessor.GetBlock(blockSel.Position, BlockLayersAccess.SolidBlocks);
+            Block interactedBlock = byEntity.Api.World.BlockAccessor.GetBlock(blockSel.Position, BlockLayersAccess.Fluid);
 
             if (interactedBlock.BlockMaterial == EnumBlockMaterial.Liquid)
             {

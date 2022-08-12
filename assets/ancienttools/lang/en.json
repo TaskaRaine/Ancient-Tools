@@ -102,8 +102,6 @@ Next, fill up the container using <icon name='rightmousebutton'></icon> with 2 p
 
 Now, simply pick up the mixture and heat it in the nearest firepit to create <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>prepared pitch</a>. When it's been finished, you can place the pot on the ground and take pieces of pitch by using a <a href=\'handbook://item-stick\'>stick</a>.
 	",
-	"game:handbook-crafting-title-pitch": "Created by",
-	"game:handbook-crafting-text-pitch": "Combining <a href=\'handbook://item-ancienttools:powderedcharcoal\'>powdered charcoal</a>, <a href=\'handbook://item-resin\'>resin</a>, and <a href=\'handbook://item-drygrass\'>dry grass</a> into an <a href=\'handbook://block-ancienttools:pitchpot-empty\'>empty pitch container</a> and cooking the <a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>resulting mixture</a> on a firepit. Place the <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>prepared pitch</a> on the ground to take individual pitch pieces.",
 
 	"blockhelp-place-pestle": "Place Pestle",
 	"blockhelp-place-resource": "Place Grindable Resource",
