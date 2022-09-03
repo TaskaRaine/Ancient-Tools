@@ -10,7 +10,7 @@
 		}
 	},
     variantgroups: [
-        { code: "stone", states: ["granite", "andesite", "basalt", "peridotite"] }
+        { code: "stone", states: ["granite", "andesite", "basalt", "peridotite", "chert"] }
     ],
     behaviors: [{name: "UnstableFalling"}],
     drawtype: "json",

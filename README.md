@@ -11,6 +11,8 @@
 ### Releases
 
 #### Vintage Story 1.17.0+ 
+[Version 1.4.6](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.6/AncientTools_V1.4.6.zip)
+
 [Version 1.4.5](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.5/AncientTools_V1.4.5.zip)
 
 #### Vintage Story 1.16.0+
@@ -59,16 +61,36 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.4.6
+
+Compiled the mod with VS RC-5 to prevent crashes that were happening with a 'Method Not Found' error with TesselateShape() that occurred when AT 1.4.5 was used on RC-5
+
+Fixed an issue where sheep inventories were not properly increased in size.
+
+Fixed an issue that prevented raw hides from being filled by clicking a water source.
+
+Removed the UnstableFalling behavior from bark baskets to allow them to be placed anywhere.
+
+Removed duplicate entries in all lang files.
+
 #### Version 1.4.5
 Mod updated to be compatible with Vintage Story 1.17.0
 
-Adze tools can now be placed against walls using the new ground storage mechanics in vanilla.
-
+-- Brain Tanning(and related)
 Brains are no longer dropped on kill. Instead, they can be harvested from animals just like any other harvestable items.
 
 The new gazelle mob has the chance to drop brains when killed.
 
 Adds compatibility for the More Animals mod. Pheasants, Golden Pheasants and Capercaillie creatures should now all have harvestable brains.
+
+Smoked Hide now visibly hangs on the firepit spit after being 'cooked' from brained hide.  
+
+New Acacia tannin recipes can also be disabled via config.
+
+-- Other
+Adze tools can now be placed against walls using the new ground storage mechanics in vanilla.
+
+The mortar and pestle objects can now be crafted using chert stones.
 
 #### Version 1.4.4
 Block grindables can now be placed in the mortar. Seashells, in vanilla Vintage Story, now have shapes in the mortar and can be ground down into lime.

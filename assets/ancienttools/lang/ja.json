@@ -1,4 +1,9 @@
-{
+{ 
+　　// Japanese localization file for 'Ancient Tools'.
+  // Mod Version: v1.4.5
+  // Translated By: Macoto Hino
+  // Machine translation using PCOT and DeepL.
+  
 	"game:tabname-ancienttools": "Ancient Tools(古代の道具)",
 
 	"game:ancienttools-quickstart-guide": "古代の道具",
@@ -28,7 +33,7 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 <font weight='bold'>熟成棚</font>
 <a href=\'handbook://item-salt\'>塩</a>を使った肉の熟成は、何世紀にも渡って行われてきた保存方法です。 その為には、肉を熟成させる前に、肉が腐らないように注意深く管理された環境が必要です。地下室がおすすめです！
 
-<a href=\'handbooksearch://熟成棚\'>熟成棚</a>は、<icon name='rightmousebutton'></icon>で<a href=\'handbooksearch://骨のフック\'>熟成フック</a>を2つ設置出来ます。 塩漬けされた肉(<a href=\'handbook://item-ancienttools:saltedmeat-redmeat-raw\'>レッドミート</a>、<a href=\'handbook://item-ancienttools:saltedmeat-poultry-raw\'>鶏肉</a>、<a href=\'handbook://item-ancienttools:saltedmeat-bushmeat-raw\'>ブッシュミート</a>)はもちろん、どんな肉でも吊るすことが出来ます！！
+<a href=\'handbooksearch://熟成棚\'>熟成棚</a>は、<icon name='rightmousebutton'></icon>で2つの<a href=\'handbooksearch://骨のフック\'>フック</a>を設置出来ます。 塩漬けされた肉(<a href=\'handbook://item-ancienttools:saltedmeat-redmeat-raw\'>赤肉</a>、<a href=\'handbook://item-ancienttools:saltedmeat-poultry-raw\'>鶏肉</a>、<a href=\'handbook://item-ancienttools:saltedmeat-bushmeat-raw\'>ブッシュミート</a>)を吊るして、美味しいお肉が熟成されるまでお待ち下さい。
 
 塩漬け肉も焚き火台で焼けば、手軽な食事になります。
 
@@ -102,6 +107,7 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 
 あとは、その混合物を手に取り、近くの焚き火台で加熱すると、<a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>完成したら、地面に鉢を置き、<a href=\'handbook://item-stick\'>棒</a>で松脂を取ることが出来ます。
 	",
+
 	"blockhelp-place-pestle": "すりこ木を配置します",
 	"blockhelp-place-resource": "粉砕可能なリソースを配置する",
 	"blockhelp-grind-mortar": "粉砕リソース",
@@ -138,9 +144,11 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 
 	"blockinfo-curingrack-no-entity": "このブロックで問題が発生しました。 ブロックエンティティは存在しません。ブロックを壊して、もう一度置いて下さい。",
 	"blockinfo-curingrack-hook-missing": "フックがありません",
+	
 	"blockinfo-curingrack-cure-status": "熟成まで: {0} 日",
 	"blockinfo-curingrack-dry-status": "乾燥まで: {0} 日",
 	"blockinfo-curingrack-perish-status": "腐敗まで: {0} 日",
+	"blockinfo-curingrack-meat-perish": "貯蔵肉の腐敗速度: {0}x",
 
 	"blockinfo-salve-empty-fillwithbark": "膏薬の容器には、シラカバ/マツの樹皮と脂肪または蜜蝋を入れる必要があります。",
 	"blockinfo-salve-empty-crouch": "しゃがんでアイテムを入れると開始します。",
@@ -176,6 +184,7 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"block-mortar-andesite": "安山岩すり鉢",
 	"block-mortar-granite": "花崗岩すり鉢",
 	"block-mortar-basalt": "玄武岩すり鉢",
+	"block-mortar-chert": "チャート岩すり鉢",
 
 	"block-curingrack-birch-*": "シラカバの熟成棚",
 	"block-curingrack-oak-*": "オークの熟成棚",
@@ -362,6 +371,7 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"item-pestle-andesite": "安山岩のすりこ木",
 	"item-pestle-granite": "花崗岩のすりこ木",
 	"item-pestle-basalt": "玄武岩のすりこ木",
+	"item-pestle-chert": "チャート岩のすりこ木",
 
 	"item-curinghook-bone": "骨のフック",
 

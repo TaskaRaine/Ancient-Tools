@@ -42,7 +42,7 @@ namespace AncientTools
                         }
                     }
 
-                    if (__instance.FuelPos != __instance.FirePos && __instance.Api.World.BlockAccessor.GetBlock(__instance.FirePos).LiquidCode == "water")
+                    if (__instance.FuelPos != __instance.FirePos && __instance.Api.World.BlockAccessor.GetBlock(__instance.FirePos, BlockLayersAccess.SolidBlocks).LiquidCode == "water")
                     {
                         //__instance.KillFire(false);
                         return true;

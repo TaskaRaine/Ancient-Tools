@@ -266,7 +266,7 @@ namespace AncientTools.Blocks
         }
         public override void OnNeighbourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos)
         {
-            Block downBlock = world.BlockAccessor.GetBlock(pos.DownCopy());
+            Block downBlock = world.BlockAccessor.GetBlock(pos.DownCopy(), BlockLayersAccess.SolidBlocks);
             string[] blockCode = this.Code.Path.Split('-');
 
             //-- If the down block does NOT have an up side that is solid... --//
@@ -275,8 +275,8 @@ namespace AncientTools.Blocks
                 switch (blockCode[blockCode.Length - 2])
                 {
                     case "ns":
-                        Block eastBlock = world.BlockAccessor.GetBlock(pos.EastCopy());
-                        Block westBlock = world.BlockAccessor.GetBlock(pos.WestCopy());
+                        Block eastBlock = world.BlockAccessor.GetBlock(pos.EastCopy(), BlockLayersAccess.SolidBlocks);
+                        Block westBlock = world.BlockAccessor.GetBlock(pos.WestCopy(), BlockLayersAccess.SolidBlocks);
 
                         //-- Break the block if it does not have a support on either side --//
                         if (eastBlock.BlockMaterial == EnumBlockMaterial.Air || westBlock.BlockMaterial == EnumBlockMaterial.Air)
@@ -287,8 +287,8 @@ namespace AncientTools.Blocks
 
                         break;
                     case "ew":
-                        Block northBlock = world.BlockAccessor.GetBlock(pos.NorthCopy());
-                        Block southBlock = world.BlockAccessor.GetBlock(pos.SouthCopy());
+                        Block northBlock = world.BlockAccessor.GetBlock(pos.NorthCopy(), BlockLayersAccess.SolidBlocks);
+                        Block southBlock = world.BlockAccessor.GetBlock(pos.SouthCopy(), BlockLayersAccess.SolidBlocks);
 
                         //-- Break the block if it does not have a support on either side --//
                         if (northBlock.BlockMaterial == EnumBlockMaterial.Air || southBlock.BlockMaterial == EnumBlockMaterial.Air)
@@ -307,8 +307,8 @@ namespace AncientTools.Blocks
                 switch (blockCode[blockCode.Length - 2])
                 {
                     case "ns":
-                        Block eastBlock = world.BlockAccessor.GetBlock(pos.EastCopy());
-                        Block westBlock = world.BlockAccessor.GetBlock(pos.WestCopy());
+                        Block eastBlock = world.BlockAccessor.GetBlock(pos.EastCopy(), BlockLayersAccess.SolidBlocks);
+                        Block westBlock = world.BlockAccessor.GetBlock(pos.WestCopy(), BlockLayersAccess.SolidBlocks);
 
                         if (eastBlock.Class == this.Class && westBlock.Class == this.Class && eastBlock.LastCodePart(1) == blockCode[blockCode.Length - 2] && westBlock.LastCodePart(1) == blockCode[blockCode.Length - 2])
                             blockCode[blockCode.Length - 1] = "none";
@@ -320,8 +320,8 @@ namespace AncientTools.Blocks
                             blockCode[blockCode.Length - 1] = "full";
                         break;
                     case "ew":
-                        Block northBlock = world.BlockAccessor.GetBlock(pos.NorthCopy());
-                        Block southBlock = world.BlockAccessor.GetBlock(pos.SouthCopy());
+                        Block northBlock = world.BlockAccessor.GetBlock(pos.NorthCopy(), BlockLayersAccess.SolidBlocks);
+                        Block southBlock = world.BlockAccessor.GetBlock(pos.SouthCopy(), BlockLayersAccess.SolidBlocks);
 
                         if (northBlock.Class == this.Class && southBlock.Class == this.Class && northBlock.LastCodePart(1) == blockCode[blockCode.Length - 2] && southBlock.LastCodePart(1) == blockCode[blockCode.Length - 2])
                             blockCode[blockCode.Length - 1] = "none";
@@ -428,21 +428,21 @@ namespace AncientTools.Blocks
         }
         private string GetBlockType(BlockPos blockPos, string rotation)
         {
-            Block blockBelow = api.World.BlockAccessor.GetBlock(blockPos.DownCopy());
+            Block blockBelow = api.World.BlockAccessor.GetBlock(blockPos.DownCopy(), BlockLayersAccess.SolidBlocks);
 
             if (blockBelow.BlockMaterial == EnumBlockMaterial.Air || blockBelow.BlockMaterial == EnumBlockMaterial.Liquid || blockBelow.BlockMaterial == EnumBlockMaterial.Lava || blockBelow.SideSolid[4] == false)
             {
                 //-- If the block is placed over air, liquid, lava, or a block with no solid up side, render without the supports --//
                 if (rotation == "ew")
                 {
-                    if (api.World.BlockAccessor.GetBlock(blockPos.NorthCopy()).BlockMaterial != EnumBlockMaterial.Air && api.World.BlockAccessor.GetBlock(blockPos.SouthCopy()).BlockMaterial != EnumBlockMaterial.Air)
+                    if (api.World.BlockAccessor.GetBlock(blockPos.NorthCopy(), BlockLayersAccess.SolidBlocks).BlockMaterial != EnumBlockMaterial.Air && api.World.BlockAccessor.GetBlock(blockPos.SouthCopy(), BlockLayersAccess.SolidBlocks).BlockMaterial != EnumBlockMaterial.Air)
                         return "none";
                     else
                         return null;
                 }
                 else
                 {
-                    if (api.World.BlockAccessor.GetBlock(blockPos.EastCopy()).BlockMaterial != EnumBlockMaterial.Air && api.World.BlockAccessor.GetBlock(blockPos.WestCopy()).BlockMaterial != EnumBlockMaterial.Air)
+                    if (api.World.BlockAccessor.GetBlock(blockPos.EastCopy(), BlockLayersAccess.SolidBlocks).BlockMaterial != EnumBlockMaterial.Air && api.World.BlockAccessor.GetBlock(blockPos.WestCopy(), BlockLayersAccess.SolidBlocks).BlockMaterial != EnumBlockMaterial.Air)
                         return "none";
                     else
                         return null;
@@ -453,8 +453,8 @@ namespace AncientTools.Blocks
                 //-- Otherwise, render with supports. Double supports for single block, right/left supports for 2 lengths together, right/none/left for anything else --//
                 if (rotation == "ew")
                 {
-                    Block northBlock = api.World.BlockAccessor.GetBlock(blockPos.NorthCopy());
-                    Block southBlock = api.World.BlockAccessor.GetBlock(blockPos.SouthCopy());
+                    Block northBlock = api.World.BlockAccessor.GetBlock(blockPos.NorthCopy(), BlockLayersAccess.SolidBlocks);
+                    Block southBlock = api.World.BlockAccessor.GetBlock(blockPos.SouthCopy(), BlockLayersAccess.SolidBlocks);
 
                     if (northBlock.FirstCodePart() == this.FirstCodePart() &&
                         southBlock.FirstCodePart() == this.FirstCodePart() &&
@@ -476,8 +476,8 @@ namespace AncientTools.Blocks
                 }
                 else
                 {
-                    Block eastBlock = api.World.BlockAccessor.GetBlock(blockPos.EastCopy());
-                    Block westBlock = api.World.BlockAccessor.GetBlock(blockPos.WestCopy());
+                    Block eastBlock = api.World.BlockAccessor.GetBlock(blockPos.EastCopy(), BlockLayersAccess.SolidBlocks);
+                    Block westBlock = api.World.BlockAccessor.GetBlock(blockPos.WestCopy(), BlockLayersAccess.SolidBlocks);
 
                     if (eastBlock.FirstCodePart() == this.FirstCodePart() &&
                         westBlock.FirstCodePart() == this.FirstCodePart() &&

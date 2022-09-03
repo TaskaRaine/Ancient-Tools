@@ -32,7 +32,7 @@
 		variantByGroup: "variant",
 		variantByGroupInventory: "variant"
 	},
-	behaviors: [{name: "Lockable" }, {name: "Container"}, {name: "UnstableFalling"}],
+	behaviors: [{name: "Lockable" }, {name: "Container"}],
 	entityBehaviors: [{ name: "Animatable" }],
 	variantgroups: [
 		{ code: "variant", loadFromProperties: "game:block/wood", states:["aged"]},

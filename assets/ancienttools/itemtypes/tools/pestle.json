@@ -14,7 +14,7 @@
 		{ "name": "GroundStorable", "properties": { "layout": "Halves" } }
 	],
 	variantgroups: [
-        { code: "stone", states: ["granite", "andesite", "basalt", "peridotite"] }
+        { code: "stone", states: ["granite", "andesite", "basalt", "peridotite", "chert"] }
     ],
 	drawtype: "json",
     shape: { base: "item/tool/pestle" },

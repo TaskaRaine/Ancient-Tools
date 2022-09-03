@@ -6,7 +6,7 @@
 		"R": { 
 			type: "item", 
 			name: "rock",
-			allowedVariants: ["andesite", "granite", "basalt", "peridotite"],
+			allowedVariants: ["andesite", "granite", "basalt", "peridotite", "chert"],
 			code: "game:stone-*" 
 		},
 		"S": { 

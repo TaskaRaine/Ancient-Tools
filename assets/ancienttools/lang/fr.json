@@ -102,8 +102,6 @@ Ensuite, remplissez le contenant en cliquant <icon name='rightmousebutton'></ico
 
 Maintenant, prenez le mélange et chauffez-le dans le feu de camp le plus proche pour créer de la <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>poix préparée</a>. Une fois terminé, vous pouvez placer la marmite sur le sol et récupérer des portions de poix avec un <a href=\'handbook://item-stick\'>bâton</a>.
 	",
-	"game:handbook-crafting-title-pitch": "Fabriqué par",
-	"game:handbook-crafting-text-pitch": "Combinez de la <a href=\'handbook://item-ancienttools:powderedcharcoal\'>poudre de charbon</a>, de la <a href=\'handbook://item-resin\'>résine</a>, et de <a href=\'handbook://item-drygrass\'>l'herbe sèche</a> dans une <a href=\'handbook://block-ancienttools:pitchpot-empty\'>marmite de poix vide</a> et cuisez le <a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>mélange obtenu</a> dans un feu de camp. Placez la <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>poix préparée</a> sur le sol pour récupérer des morceaux.",
 
 	"blockhelp-place-pestle": "Placer le pilon",
 	"blockhelp-place-resource": "Placer une ressources à moudre",
@@ -181,6 +179,7 @@ Maintenant, prenez le mélange et chauffez-le dans le feu de camp le plus proche
 	"block-mortar-andesite": "Mortier d'andésite",
 	"block-mortar-granite": "Mortier de granite",
 	"block-mortar-basalt": "Mortier de basalte",
+	"block-mortar-chert": "Mortier de chert",
 
 	"block-curingrack-birch-*": "Râtelier de salaison en bouleau",
 	"block-curingrack-oak-*": "Râtelier de salaison en chêne",
@@ -367,6 +366,7 @@ Maintenant, prenez le mélange et chauffez-le dans le feu de camp le plus proche
 	"item-pestle-andesite": "Pilon en andésite",
 	"item-pestle-granite": "Pilon en granite",
 	"item-pestle-basalt": "Pilon en basalte",
+	"item-pestle-chert": "Pilon en chert",
 
 	"item-curinghook-bone": "Crochet de salaison",
 
