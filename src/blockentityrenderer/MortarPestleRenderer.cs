@@ -14,7 +14,6 @@ namespace AncientTools.BlockEntityRenderer
         private ICoreClientAPI api;
         private BlockPos pos;
 
-
         MeshRef meshref;
         public Matrixf ModelMat = new Matrixf();
 
@@ -51,16 +50,13 @@ namespace AncientTools.BlockEntityRenderer
             {
                 if (meshref == null)
                     meshref = api.Render.UploadMesh(mesh);
+                else
+                {
+                    //-- I should be able to use api.Render.UpdateMesh instead of uploading a brand new mesh object but this seems to cause a crash in VS 1.17 --//
+                    api.Render.DeleteMesh(meshref);
+                    meshref = null;
 
-                try
-                {
-                    api.Render.UpdateMesh(meshref, mesh);
-                }
-                catch (Exception e)
-                {
-                    System.Console.Error.WriteLine("Something strange happened while attempting to update the pestle renderer. The block placed at x: " + pos.X, " y: " + pos.Y + " z: " + pos.Z + " may not look correct.");
-                    System.Console.Error.WriteLine(e.Message);
-                    System.Console.Error.WriteLine(e.StackTrace);
+                    meshref = api.Render.UploadMesh(mesh);
                 }
             }
         }

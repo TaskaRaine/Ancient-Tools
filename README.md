@@ -11,6 +11,8 @@
 ### Releases
 
 #### Vintage Story 1.17.0+ 
+[Version 1.4.7](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.7/AncientTools_V1.4.7.zip)
+
 [Version 1.4.6](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.6/AncientTools_V1.4.6.zip)
 
 [Version 1.4.5](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.5/AncientTools_V1.4.5.zip)
@@ -61,6 +63,11 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.4.7
+Fixed a crash that infrequently occurred with the pestle renderer in Vintage Story 1.17. 
+
+Fixed an error in the stripped log recipes that prevented purpleheart, kapok and ebony stripped logs from being crafted into firewood.
+
 #### Version 1.4.6
 
 Compiled the mod with VS RC-5 to prevent crashes that were happening with a 'Method Not Found' error with TesselateShape() that occurred when AT 1.4.5 was used on RC-5

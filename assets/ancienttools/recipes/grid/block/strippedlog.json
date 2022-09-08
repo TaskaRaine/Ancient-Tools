@@ -344,7 +344,7 @@
 			"L": {
 				type: "block",
 				name: "log",
-				code: "strippedlog-*-ud",
+				code: "strippedlog-*",
 				allowedVariants: ["ebony-ud", "kapok-ud", "purpleheart-ud"]
 			},
 			"A": {
