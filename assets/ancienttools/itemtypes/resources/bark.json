@@ -4,16 +4,13 @@
 	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
 	attributesByType: {
 		"@bark-(birch|pine)": {
-			isMedicinalBark: true,
+			salveProperties: {
+				isMedicinalBark: true,
+				langCode: "ancienttools:blockhelp-insert-{bark}bark"
+			},
 			handbook: {
 				groupBy: ["bark-*"]
 			},
-		},
-		"*": {
-			isMedicinalBark: false,
-			handbook: {
-				groupBy: ["bark-*"]
-			}
 		}
 	},
 	behaviorsByType: {

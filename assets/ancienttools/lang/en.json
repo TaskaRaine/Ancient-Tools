@@ -377,25 +377,25 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"item-saltedmeat-bushmeat-cooked": "Cooked Salted Bushmeat",
 	"item-saltedmeat-redmeat-cooked": "Cooked Salted Redmeat",
 
-	"game:item-adzehead-chert": "Chert Adze Head",
-	"game:item-adzehead-granite": "Granite Adze Head",
-	"game:item-adzehead-andesite": "Andesite Adze Head",
-	"game:item-adzehead-basalt": "Basalt Adze Head",
-	"game:item-adzehead-obsidian": "Obsidian Adze Head",
-	"game:item-adzehead-peridotite": "Peridotite Adze Head",
-	"game:item-adzehead-flint": "Flint Adze Head",
-	"game:item-adzehead-copper": "Copper Adze Head",
-	"game:item-adzehead-tinbronze": "Tin Bronze Adze Head",
-	"game:item-adzehead-bismuthbronze": "Bismuth Bronze Adze Head",
-	"game:item-adzehead-blackbronze": "Black Bronze Adze Head",
-	"game:item-adzehead-gold": "Gold Adze Head",
-	"game:item-adzehead-silver": "Silver Adze Head",
-	"game:item-adzehead-iron": "Iron Adze Head",
-	"game:item-adzehead-meteoriciron": "Meteoric Iron Adze Head",
-	"game:item-adzehead-steel": "Steel Adze Head",
+	"item-adzehead-chert": "Chert Adze Head",
+	"item-adzehead-granite": "Granite Adze Head",
+	"item-adzehead-andesite": "Andesite Adze Head",
+	"item-adzehead-basalt": "Basalt Adze Head",
+	"item-adzehead-obsidian": "Obsidian Adze Head",
+	"item-adzehead-peridotite": "Peridotite Adze Head",
+	"item-adzehead-flint": "Flint Adze Head",
+	"item-adzehead-copper": "Copper Adze Head",
+	"item-adzehead-tinbronze": "Tin Bronze Adze Head",
+	"item-adzehead-bismuthbronze": "Bismuth Bronze Adze Head",
+	"item-adzehead-blackbronze": "Black Bronze Adze Head",
+	"item-adzehead-gold": "Gold Adze Head",
+	"item-adzehead-silver": "Silver Adze Head",
+	"item-adzehead-iron": "Iron Adze Head",
+	"item-adzehead-meteoriciron": "Meteoric Iron Adze Head",
+	"item-adzehead-steel": "Steel Adze Head",
 
-	"game:block-toolmold-raw-adze": "Raw Adzehead Mold",
-	"game:block-toolmold-burned-adze": "Adzehead Mold",
+	"block-adzemold-raw-adze": "Raw Adzehead Mold",
+	"block-adzemold-burned-adze": "Adzehead Mold",
 
 	"item-bark-birch": "Birch Bark",
 	"item-bark-oak": "Oak Bark",
@@ -450,4 +450,33 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 
 	"item-powderedcharcoal": "Powdered Charcoal",
 	"item-pitch-*": "Pitch",
+
+	"pie-single-ancienttools:saltedmeat-redmeat-raw-raw": "Salted Redmeat Pie(raw)",
+	"pie-single-ancienttools:saltedmeat-bushmeat-raw-raw": "Salted Bushmeat Pie(raw)",
+	"pie-single-ancienttools:saltedmeat-poultry-raw-raw": "Salted Poultry Pie(raw)",
+
+	"pie-single-ancienttools:saltedmeat-redmeat-raw-partbaked": "Salted Redmeat Pie(partbaked)",
+	"pie-single-ancienttools:saltedmeat-bushmeat-raw-partbaked": "Salted Bushmeat Pie(partbaked)",
+	"pie-single-ancienttools:saltedmeat-poultry-raw-partbaked": "Salted Poultry Pie(partbaked)",
+
+	"pie-single-ancienttools:saltedmeat-redmeat-raw-perfect": "Salted Redmeat Pie",
+	"pie-single-ancienttools:saltedmeat-bushmeat-raw-perfect": "Salted Bushmeat Pie",
+	"pie-single-ancienttools:saltedmeat-poultry-raw-perfect": "Salted Poultry Pie",
+
+	"pie-single-ancienttools:saltedmeat-redmeat-raw-charred": "Salted Redmeat Pie(charred)",
+	"pie-single-ancienttools:saltedmeat-bushmeat-raw-charred": "Salted Bushmeat Pie(charred)",
+	"pie-single-ancienttools:saltedmeat-poultry-raw-charred": "Salted Poultry Pie(charred)",
+
+	//-- Acorns Compatibility --//
+	"game:item-dough-acornbirch": "Acorn-Birch Dough",
+	"game:item-dough-acornpine": "Acorn-Pine Dough",
+
+	"game:item-bread-acornbirch-partbaked": "Acorn-Birch Bread(part-baked)",
+	"game:item-bread-acornpine-partbaked": "Acorn-Pine Bread(part-baked)",
+
+	"game:item-bread-acornbirch-perfect": "Acorn-Birch Bread",
+	"game:item-bread-acornpine-perfect": "Acorn-Pine Bread",
+
+	"game:item-bread-acornbirch-charred": "Acorn-Birch Bread(charred)",
+	"game:item-bread-acornpine-charred": "Acorn-Pine Bread(charred)",
 }

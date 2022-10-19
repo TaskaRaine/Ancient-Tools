@@ -1,0 +1,79 @@
+﻿[
+	//-- A patch exists in patches/item/food/dough.json to allow acorn doughs to be placed within the creativeinventory array for Ancient Tools --//
+	{
+		"op": "add",
+		"path": "/variantgroups/0/states/-",
+		"value": "acornbirch",
+		"file": "game:itemtypes/food/dough",
+		"dependsOn": [{ "modid": "acorns" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/variantgroups/0/states/-",
+		"value": "acornpine",
+		"file": "game:itemtypes/food/dough",
+		"dependsOn": [{ "modid": "acorns" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/attributes/nutritionPropsWhenInMealByType/*-acornbirch",
+		"value": {
+			satiety: 130, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/dough",
+		"dependsOn": [{ "modid": "acorns" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "replace",
+		"path": "/0/enabled",
+		"value": "true",
+		"file": "recipes/grid/compatibility/acorns/barkdough",
+		"dependsOn": [{ "modid": "acorns" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "replace",
+		"path": "/1/enabled",
+		"value": "true",
+		"file": "recipes/grid/compatibility/acorns/barkdough",
+		"dependsOn": [{ "modid": "acorns" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/attributes/nutritionPropsWhenInMealByType/*-acornpine",
+		"value": {
+			satiety: 130, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/dough",
+		"dependsOn": [{ "modid": "acorns" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "move",
+		"frompath": "/attributes/nutritionPropsWhenInMealByType/*",
+		"path": "/temp",
+		"file": "game:itemtypes/food/dough",
+		"dependsOn": [{ "modid": "acorns" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
+		"path": "/attributes/nutritionPropsWhenInMealByType/*",
+		"file": "game:itemtypes/food/dough",
+		"dependsOn": [{ "modid": "acorns" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	}
+]

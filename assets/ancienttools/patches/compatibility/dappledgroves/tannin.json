@@ -1,0 +1,20 @@
+﻿[
+	{
+		"op": "replace",
+		"path": "/0/enabled",
+		"value": true,
+		"file": "ancienttools:recipes/barrel/compatibility/dappledgroves/tannin",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"condition": { "when": "BarkPerLog", "useValue": true },
+		"side": "Server"
+	},
+	{
+		"op": "replace",
+		"path": "/1/enabled",
+		"value": true,
+		"file": "ancienttools:recipes/barrel/compatibility/dappledgroves/tannin",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"condition": { "when": "BarkPerLog", "useValue": true },
+		"side": "Server"
+	},
+]

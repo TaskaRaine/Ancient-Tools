@@ -38,8 +38,17 @@
 	{
 		"op": "add",
 		"path": "/creativeinventory/ancienttools",
-		"value": ["*-birch-*", "*-pine-*"],
-		"file": "game:itemtypes/food/bread",
+		"value": ["*-birch", "*-pine"],
+		"file": "game:itemtypes/food/dough",
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "addeach",
+		"path": "/creativeinventory/ancienttools/-",
+		"value": ["*-acornbirch", "*-acornpine"],
+		"file": "game:itemtypes/food/dough",
+		"dependsOn": [{ "modid": "acorns" }],
 		"side": "Server",
 		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},

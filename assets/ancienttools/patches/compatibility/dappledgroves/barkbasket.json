@@ -1,0 +1,10 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/creativeinventoryStacksByType/*-east/0/tabs/-",
+		"value": "ancienttools",
+		"file": "indappledgroves:blocktypes/barkbasket",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+	}
+]

@@ -11,197 +11,39 @@ namespace AncientTools.Blocks
 {
     class BlockSalveContainer: Block
     {
-        WorldInteraction[] emptyInteractions = null;
-        WorldInteraction[] barkAndOilInteractions = null;
-        WorldInteraction[] birchBarkAndOilInteractions = null;
-        WorldInteraction[] pineBarkAndOilInteractions = null;
-        WorldInteraction[] barkFilledInteractions = null;
-        WorldInteraction[] oilFilledInteractions = null;
-        WorldInteraction[] oilFilledBirchInteractions = null;
-        WorldInteraction[] oilFilledPineInteractions = null;
-        WorldInteraction[] thickenerInteractions = null;
+        List<ItemStack> healingBarks = new List<ItemStack>();
+        List<ItemStack> salveOils = new List<ItemStack>();
+        List<ItemStack> salveThickeners = new List<ItemStack>();
 
         public override void OnLoaded(ICoreAPI api)
         {
             base.OnLoaded(api);
 
-            ItemStack[] healingBarks = { 
-                new ItemStack(api.World.GetItem(new AssetLocation("ancienttools", "bark-birch"))),
-                new ItemStack(api.World.GetItem(new AssetLocation("ancienttools", "bark-pine")))
-            };
-
-            ItemStack[] birchBark = {
-                new ItemStack(api.World.GetItem(new AssetLocation("ancienttools", "bark-birch")))
-            };
-
-            ItemStack[] pineBark = {
-                new ItemStack(api.World.GetItem(new AssetLocation("ancienttools", "bark-pine")))
-            };
-
-            ItemStack[] oilIngredients = {
-                new ItemStack(api.World.GetItem(new AssetLocation("game", "fat")))
-            };
-
-            ItemStack[] thickenerIngredients = {
-                new ItemStack(api.World.GetItem(new AssetLocation("game", "beeswax")))
-            };
-
-            WorldInteraction healingBarkInteraction = new WorldInteraction()
+            foreach (CollectibleObject collectible in api.World.Collectibles)
             {
-                ActionLangCode = "ancienttools:blockhelp-insert-healingbark",
-                MouseButton = EnumMouseButton.Right,
-                Itemstacks = healingBarks
-            };
-
-            WorldInteraction birchBarkInteraction = new WorldInteraction()
-            {
-                ActionLangCode = "ancienttools:blockhelp-insert-birchbark",
-                MouseButton = EnumMouseButton.Right,
-                Itemstacks = birchBark
-            };
-
-            WorldInteraction pineBarkInteraction = new WorldInteraction()
-            {
-                ActionLangCode = "ancienttools:blockhelp-insert-pinebark",
-                MouseButton = EnumMouseButton.Right,
-                Itemstacks = pineBark
-            };
-
-            WorldInteraction oilInteraction = new WorldInteraction()
-            {
-                ActionLangCode = "ancienttools:blockhelp-insert-oil",
-                MouseButton = EnumMouseButton.Right,
-                Itemstacks = oilIngredients
-            };
-
-            WorldInteraction thickenerInteraction = new WorldInteraction()
-            {
-                ActionLangCode = "ancienttools:blockhelp-insert-thickener",
-                MouseButton = EnumMouseButton.Right,
-                Itemstacks = thickenerIngredients
-            };
-
-            emptyInteractions = ObjectCacheUtil.GetOrCreate(api, "emptySalveContainerInteractions", () =>
-            {
-                return new WorldInteraction[]
+                if(collectible.Attributes != null)
                 {
-                    healingBarkInteraction,
-                    oilInteraction,
-                    thickenerInteraction
-                };
-            });
-
-            barkAndOilInteractions = ObjectCacheUtil.GetOrCreate(api, "barkAndOilSalveContainerInteractions", () =>
-            {
-                return new WorldInteraction[]
-                {
-                    healingBarkInteraction,
-                    oilInteraction
-                };
-            });
-
-            birchBarkAndOilInteractions = ObjectCacheUtil.GetOrCreate(api, "birchBarkAndOilSalveContainerInteractions", () =>
-            {
-                return new WorldInteraction[]
-                {
-                    birchBarkInteraction,
-                    oilInteraction
-                };
-            });
-
-            pineBarkAndOilInteractions = ObjectCacheUtil.GetOrCreate(api, "pineBarkAndOilSalveContainerInteractions", () =>
-            {
-                return new WorldInteraction[]
-                {
-                    pineBarkInteraction,
-                    oilInteraction
-                };
-            });
-
-            barkFilledInteractions = ObjectCacheUtil.GetOrCreate(api, "barkFilledSalveContainerInteraction", () =>
-            {
-                return new WorldInteraction[]
-                {
-                    oilInteraction
-                };
-            });
-
-            oilFilledInteractions = ObjectCacheUtil.GetOrCreate(api, "oilFilledSalveContainerInteraction", () =>
-            {
-                return new WorldInteraction[]
-                {
-                    healingBarkInteraction
-                };
-            });
-
-            oilFilledBirchInteractions = ObjectCacheUtil.GetOrCreate(api, "oilFilledBirchSalveContainerInteraction", () =>
-            {
-                return new WorldInteraction[]
-                {
-                    birchBarkInteraction
-                };
-            });
-
-            oilFilledPineInteractions = ObjectCacheUtil.GetOrCreate(api, "oilFilledPineSalveContainerInteraction", () =>
-            {
-                return new WorldInteraction[]
-                {
-                    pineBarkInteraction
-                };
-            });
-
-            thickenerInteractions = ObjectCacheUtil.GetOrCreate(api, "thickenerSalveContainerInteraction", () =>
-            {
-                return new WorldInteraction[]
-                {
-                    thickenerInteraction
-                };
-            });
+                    if(collectible.Attributes["salveProperties"].Exists)
+                        if (collectible.Attributes["salveProperties"]["isMedicinalBark"].Exists)
+                        { 
+                            healingBarks.Add(new ItemStack(collectible));
+                        }
+                        if (collectible.Attributes["salveProperties"]["isSalveOil"].Exists)
+                        {
+                            salveOils.Add(new ItemStack(collectible));
+                        }
+                        if (collectible.Attributes["salveProperties"]["isSalveThickener"].Exists)
+                        { 
+                            salveThickeners.Add(new ItemStack(collectible));
+                        }
+                }
+            }
         }
         public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
         {
             if (api.World.BlockAccessor.GetBlockEntity(selection.Position) is BESalveContainer salveContainer)
             {
-                if(!salveContainer.ResourceSlot.Empty)
-                {
-                    if(salveContainer.ResourceSlot.StackSize == salveContainer.ResourceSlot.MaxSlotStackSize)
-                    {
-                        return barkFilledInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
-                    }
-                    else if(!salveContainer.LiquidSlot.Empty)
-                    {
-                        if(salveContainer.LiquidSlot.StackSize == salveContainer.LiquidSlot.MaxSlotStackSize)
-                        {
-                            if (salveContainer.ResourceSlot.Itemstack.Item.LastCodePart() == "birch")
-                                return oilFilledBirchInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
-                            else
-                                return oilFilledPineInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
-                        }
-                    }
-
-                    if (salveContainer.ResourceSlot.Itemstack.Item.LastCodePart() == "birch")
-                        return birchBarkAndOilInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
-                    else
-                        return pineBarkAndOilInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
-                }
-                else if(!salveContainer.LiquidSlot.Empty)
-                {
-                    if(salveContainer.LiquidSlot.Itemstack.Item.Attributes["isSalveThickener"].AsBool() == true)
-                    {
-                        return thickenerInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
-                    }
-                    else
-                    {
-                        if (salveContainer.LiquidSlot.StackSize == salveContainer.LiquidSlot.MaxSlotStackSize)
-                        {
-                            return oilFilledInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
-                        }
-
-                        return barkAndOilInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
-                    }
-                }
-
-                return emptyInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
+                return GenerateInteractions(salveContainer.ResourceSlot, salveContainer.LiquidSlot);
             }
 
             return null;
@@ -218,13 +60,13 @@ namespace AncientTools.Blocks
                     infoString.AppendLine(Lang.Get("ancienttools:blockinfo-salve-empty-fillwithbark"));
                     infoString.AppendLine(Lang.Get("ancienttools:blockinfo-salve-empty-crouch"));
                 }
-                else if (!salveContainer.ResourceSlot.Empty || salveContainer.LiquidSlot.Itemstack.Collectible.Attributes["isSalveOil"].Exists)
+                else if (!salveContainer.ResourceSlot.Empty || salveContainer.LiquidSlot.Itemstack.Collectible.Attributes["salveProperties"]["isSalveOil"].Exists)
                 {
                     infoString.AppendLine(Lang.Get("ancienttools:blockinfo-salve-empty-partial"));
                     infoString.AppendLine(Lang.Get("ancienttools:blockinfo-salve-empty-bark", salveContainer.ResourceSlot.StackSize, salveContainer.ResourceSlot.MaxSlotStackSize));
                     infoString.AppendLine(Lang.Get("ancienttools:blockinfo-salve-empty-fat", salveContainer.LiquidSlot.StackSize, salveContainer.LiquidSlot.MaxSlotStackSize));
                 }
-                else if (salveContainer.LiquidSlot.Itemstack.Collectible.Attributes["isSalveThickener"].Exists)
+                else if (salveContainer.LiquidSlot.Itemstack.Collectible.Attributes["salveProperties"]["isSalveThickener"].Exists)
                 {
                     infoString.AppendLine(Lang.Get("ancienttools:blockinfo-salve-empty-partial"));
                     infoString.AppendLine(Lang.Get("ancienttools:blockinfo-salve-empty-wax", salveContainer.LiquidSlot.StackSize, salveContainer.LiquidSlot.MaxSlotStackSize));
@@ -250,6 +92,119 @@ namespace AncientTools.Blocks
             }
 
             return false;
+        }
+        private WorldInteraction GetBarkInteractions()
+        {
+            WorldInteraction emptyBarkInteraction = new WorldInteraction
+            {
+                ActionLangCode = "ancienttools:blockhelp-insert-healingbark",
+                MouseButton = EnumMouseButton.Right,
+                Itemstacks = healingBarks.ToArray()
+            };
+
+            return emptyBarkInteraction;
+        }
+        private WorldInteraction GetBarkInteractions(ItemSlot barkSlot)
+        {
+            if (barkSlot.Empty)
+                return GetBarkInteractions();
+
+            ItemStack[] displayItemstack = new ItemStack[] { barkSlot.Itemstack.Clone() };
+            displayItemstack[0].StackSize = barkSlot.MaxSlotStackSize - displayItemstack[0].StackSize;
+
+            return new WorldInteraction
+            {
+                ActionLangCode = barkSlot.Itemstack?.Collectible?.Attributes["salveProperties"]?["langCode"]?.ToString(),
+                MouseButton = EnumMouseButton.Right,
+                Itemstacks = displayItemstack
+            };
+        }
+        private WorldInteraction GetOilInteractions()
+        {
+            WorldInteraction emptyOilInteraction = new WorldInteraction
+            {
+                ActionLangCode = "ancienttools:blockhelp-insert-oil",
+                MouseButton = EnumMouseButton.Right,
+                Itemstacks = salveOils.ToArray()
+            };
+
+            return emptyOilInteraction;
+        }
+        private WorldInteraction GetOilInteractions(ItemSlot oilSlot)
+        {
+            if (oilSlot.Empty)
+                return GetOilInteractions();
+
+            ItemStack[] displayItemstack = new ItemStack[] { oilSlot.Itemstack.Clone() };
+            displayItemstack[0].StackSize = oilSlot.MaxSlotStackSize - displayItemstack[0].StackSize;
+
+            return new WorldInteraction
+            {
+                ActionLangCode = oilSlot.Itemstack?.Collectible?.Attributes["salveProperties"]?["langCode"]?.ToString(),
+                MouseButton = EnumMouseButton.Right,
+                Itemstacks = displayItemstack
+            };
+        }
+        private WorldInteraction GetThickenerInteractions()
+        {
+            WorldInteraction emptyThickenerInteraction = new WorldInteraction
+            {
+                ActionLangCode = "ancienttools:blockhelp-insert-thickener",
+                MouseButton = EnumMouseButton.Right,
+                Itemstacks = salveThickeners.ToArray()
+            };
+
+            return emptyThickenerInteraction;
+        }
+        private WorldInteraction GetThickenerInteractions(ItemSlot thickenerSlot)
+        {
+            if (thickenerSlot.Empty)
+                return GetOilInteractions();
+
+            ItemStack[] displayItemstack = new ItemStack[] { thickenerSlot.Itemstack.Clone() };
+            displayItemstack[0].StackSize = thickenerSlot.MaxSlotStackSize - displayItemstack[0].StackSize;
+
+            return new WorldInteraction
+            {
+                ActionLangCode = thickenerSlot.Itemstack?.Collectible?.Attributes["salveProperties"]?["langCode"]?.ToString(),
+                MouseButton = EnumMouseButton.Right,
+                Itemstacks = displayItemstack
+            };
+        }
+        private WorldInteraction[] GenerateInteractions(ItemSlot resourceSlot, ItemSlot liquidSlot)
+        {
+            List<WorldInteraction> generatedInteraction = new List<WorldInteraction>();
+
+            if (resourceSlot.Empty && liquidSlot.Empty)
+            {
+                generatedInteraction.Add(GetBarkInteractions());
+                generatedInteraction.Add(GetOilInteractions());
+                generatedInteraction.Add(GetThickenerInteractions());
+            }
+            else if (!resourceSlot.Empty)
+            { 
+                if (resourceSlot.StackSize < resourceSlot.MaxSlotStackSize)
+                    generatedInteraction.Add(GetBarkInteractions(resourceSlot));
+                if (liquidSlot.StackSize < liquidSlot.MaxSlotStackSize) 
+                    generatedInteraction.Add(GetOilInteractions(liquidSlot));
+            }
+            else if (!liquidSlot.Empty)
+            {
+                if (liquidSlot.StackSize < liquidSlot.MaxSlotStackSize)
+                {
+                    if (liquidSlot.Itemstack.Collectible.Attributes["salveProperties"]["isSalveThickener"].Exists)
+                        generatedInteraction.Add(GetThickenerInteractions(liquidSlot));
+                    if (liquidSlot.Itemstack.Collectible.Attributes["salveProperties"]["isSalveOil"].Exists)
+                    {
+                        if (resourceSlot.StackSize < resourceSlot.MaxSlotStackSize)
+                            generatedInteraction.Add(GetBarkInteractions(resourceSlot));
+
+                        generatedInteraction.Add(GetOilInteractions(liquidSlot));
+                    }
+                }
+            }
+
+            return generatedInteraction.ToArray();
         }
     }
 }

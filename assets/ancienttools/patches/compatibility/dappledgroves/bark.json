@@ -1,0 +1,46 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributesByType",
+		"value": {
+			"@bark-(birch|pine)-(dry|soaked)": {
+				salveProperties: {
+					isMedicinalBark: true,
+					langCode: "ancienttools:blockhelp-insert-{bark}bark"
+				},
+				mortarProperties: {
+					shape: "ancienttools:shapes/block/mortar/resourceshapes/resource_ancienttools_bark_{bark}"
+				},
+				handbook: {
+					groupBy: ["bark-*"]
+				},
+			}
+		},
+		"file": "indappledgroves:itemtypes/resources/bark",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/grindingPropsByType",
+		"value": {
+			"*-birch-dry": {
+				grindedStack: { type: "item", code: "game:flour-birch" }
+			},
+			"*-pine-dry": {
+				grindedStack: { type: "item", code: "game:flour-pine" }
+			}
+		},
+		"file": "indappledgroves:itemtypes/resources/bark",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/creativeinventory/ancienttools",
+		"value": ["*"],
+		"file": "indappledgroves:itemtypes/resources/bark",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+	}	
+]

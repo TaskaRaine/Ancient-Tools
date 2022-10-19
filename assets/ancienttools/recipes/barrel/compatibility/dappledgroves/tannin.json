@@ -1,0 +1,22 @@
+﻿[
+	{
+		enabled: false,
+		code: "dappledbarkweaktannin",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "indappledgroves:bark-oak-*", name: "bark", quantity: 4 },
+			{ type: "item", code: "game:waterportion",  litres: 10 },
+		],
+		output: { type: "item", code: "game:weaktanninportion", litres: 10 }
+	},
+	{
+		enabled: false,
+		code: "dappledbarkstrongtannin",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "indappledgroves:bark-oak-*", name: "bark", quantity: 4 },
+			{ type: "item", code: "game:weaktanninportion",  litres: 10 },
+		],
+		output: { type: "item", code: "game:strongtanninportion", litres: 10 }
+	}
+]

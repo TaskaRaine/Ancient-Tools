@@ -1,0 +1,44 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "birchbread 1",
+			"from": [ 5.25, 2.0, 4.2 ], 
+			"to": [ 8.75, 3.5, 9.2 ], 
+			"rotationOrigin": [ 7.0, 0.0, 6.7 ],
+			"rotationX": 22.5,
+			"rotationZ": -22.5,
+			"faces": {
+				"north": { "texture": "#birchbreadperfect", "uv": [ 0.5, 6.0, 4.0, 7.5 ] },
+				"east": { "texture": "#birchbreadperfect", "uv": [ 0.0, 6.5, 5.0, 8.0 ] },
+				"south": { "texture": "#birchbreadperfect", "uv": [ 1.0, 5.5, 4.5, 7.0 ] },
+				"west": { "texture": "#birchbreadperfect", "uv": [ 0.0, 6.0, 5.0, 7.5 ] },
+				"up": { "texture": "#birchbreadperfect", "uv": [ 0.5, 1.5, 4.0, 6.5 ] },
+				"down": { "texture": "#birchbreadperfect", "uv": [ 4.5, 0.0, 8.0, 5.0 ] }
+			},
+			"children": [
+				{
+					"name": "birchbread 1 top",
+					"from": [ 0.5, 1.5, 0.5 ], 
+					"to": [ 3.0, 2.0, 4.5 ], 
+					"faces": {
+						"north": { "texture": "#birchbreadperfect", "uv": [ 1.0, 1.5, 3.5, 2.0 ] },
+						"east": { "texture": "#birchbreadperfect", "uv": [ 0.5, 2.0, 1.0, 6.0 ], "rotation": 90 },
+						"south": { "texture": "#birchbreadperfect", "uv": [ 2.0, 6.5, 4.5, 7.0 ] },
+						"west": { "texture": "#birchbreadperfect", "uv": [ 3.5, 2.0, 4.0, 6.0 ], "rotation": 90 },
+						"up": { "texture": "#birchbreadperfect", "uv": [ 1.0, 2.0, 3.5, 6.0 ] },
+						"down": { "texture": "#birchbreadperfect", "uv": [ 5.0, 2.0, 7.5, 6.0 ], "enabled": false }
+					}
+				}
+			]
+		}
+	]}

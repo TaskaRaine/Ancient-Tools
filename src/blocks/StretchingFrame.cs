@@ -26,11 +26,11 @@ namespace AncientTools.Blocks
                 if (item.Code == null)
                     continue;
 
-                if (item.FirstCodePart() == "hide" && item.FirstCodePart(1) == "soaked")
+                if (item.Attributes != null && item.Attributes.IsTrue("stretchable") && item.FirstCodePart(1) == "soaked")
                 {
                     soakedHides.Add(new ItemStack(item));
                 }
-                else if(item.FirstCodePart() == "knife")
+                else if(item.Tool == EnumTool.Knife)
                 {
                     knives.Add(new ItemStack(item));
                 }
@@ -131,7 +131,7 @@ namespace AncientTools.Blocks
                     stretchingFrameEntity.TryGiveHide(byPlayer);
                     return true;
                 }
-                else if(byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.FirstCodePart() == "hide")
+                else if(byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.Attributes.IsTrue("stretchable"))
                 {
                     stretchingFrameEntity.TryPlaceHide(byPlayer.InventoryManager.ActiveHotbarSlot);
                     return true;

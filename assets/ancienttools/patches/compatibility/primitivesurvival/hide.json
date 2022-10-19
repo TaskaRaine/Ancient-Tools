@@ -7,10 +7,25 @@
 			"op": "add",
 			"path": "/classByType",
 			"value": {
-				"*-pelt-*": "itemhide"
+				"*-pelt-*": "itempelt"
 			}
 		},
-		"file": "primitivesurvival:patches/hide",
+		"file": "primitivesurvival:patches/ps-hide",
+		"dependsOn": [{ "modid": "primitivesurvival" }],
+		"side": "Server"
+	},
+	{
+		"op": "replace",
+		"path": "/0",
+		"value": {
+			"file": "game:itemtypes/resource/hide",
+			"op": "add",
+			"path": "/classByType",
+			"value": {
+				"*-pelt-*": "itempelt"
+			}
+		},
+		"file": "primitivesurvival:patches/ps-pelt",
 		"dependsOn": [{ "modid": "primitivesurvival" }],
 		"side": "Server"
 	}

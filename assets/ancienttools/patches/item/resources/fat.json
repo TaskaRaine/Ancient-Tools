@@ -1,8 +1,11 @@
 ﻿[
 	{
 		"op": "add",
-		"path": "/attributes/isSalveOil",
-		"value": true,
+		"path": "/attributes/salveProperties",
+		"value": {
+			"isSalveOil": true,
+			"langCode": "ancienttools:blockhelp-insert-oil"
+		},
 		"file": "game:itemtypes/resource/fat",
 		"side": "Server",
 		"condition": { "when": "SalveEnabled", "isValue": "true" }

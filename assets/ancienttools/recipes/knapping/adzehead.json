@@ -14,7 +14,7 @@
 			"_########_"
 		]],
 		name: "Flint Adze",
-		output: { type: "item", code: "game:adzehead-flint"  }
+		output: { type: "item", code: "ancienttools:adzehead-flint"  }
 	},
 	{
 		ingredient: { type: "item", code: "game:stone-*", name: "stone", allowedVariants: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite"] },
@@ -31,6 +31,6 @@
 			"_########_"
 		]],
 		name: "Stone Adze",
-		output: { type: "item", code: "game:adzehead-{stone}"  }
+		output: { type: "item", code: "ancienttools:adzehead-{stone}"  }
 	}
 ]
