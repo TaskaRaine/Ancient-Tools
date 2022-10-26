@@ -52,6 +52,15 @@
 	},
 	{
 		"op": "add",
+		"path": "/attributes/stretchableByType",
+		"value": {
+			"@hide-(raw|soaked|scraped|prepared|oiled|pelt)-(small|medium|large|huge)": true
+		},
+		"file": "game:itemtypes/resource/hide",
+		"side": "Server"
+	},
+	{
+		"op": "add",
 		"path": "/liquidSelectable",
 		"value": 1,
 		"file": "game:itemtypes/resource/hide",

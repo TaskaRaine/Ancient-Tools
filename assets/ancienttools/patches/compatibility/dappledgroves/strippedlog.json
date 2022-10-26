@@ -1,0 +1,10 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/creativeinventory/ancienttools",
+		"value": ["*-ud"],
+		"file": "indappledgroves:blocktypes/strippedlog",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+	}
+]

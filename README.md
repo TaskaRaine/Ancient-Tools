@@ -11,6 +11,10 @@
 ### Releases
 
 #### Vintage Story 1.17.0+ 
+[Version 1.4.8](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.8/AncientTools_V1.4.8.zip)
+
+[Version 1.4.7](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.7/AncientTools_V1.4.7.zip)
+
 [Version 1.4.6](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.6/AncientTools_V1.4.6.zip)
 
 [Version 1.4.5](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.5/AncientTools_V1.4.5.zip)
@@ -61,6 +65,36 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.4.8
+Added compatiblity for the Acorns mod which allows acorn/bark flour breads to be made.
+
+Added more compatibility for Expanded Foods. Many more mortar shapes have been added.
+
+Added initial compatibility for the Dappled Groves mod. Adze items and components, stripped logs, barks, bark baskets and possibly more are disabled in the Ancient Tools when installed alongside Dappled Groves. Related recipes have also been removed. Compatibility has been added to Dappled Groves things where needed. Since Dappled Groves is still in development there are likely to be some compatibility issues.
+
+Fixed a crash that occurred when Hide and Fabric hides were attempted to be placed upon the stretching frame. 
+
+Fixed an issue that prevented the bark flour doughs from appearing in the creative menu.
+
+Fixed an incompatibility between Ancient Tools and Primitive Survival 3.0.3 and later that prevented raw hides from being filled when interacting with water sources.
+
+Meat pies can now be made using salted meat, salted poultry, and salted bushmeat.
+
+Modified Salve Container code to be less hardcoded. Required for Dappled Groves integration.
+
+Mortar content shapes paths can now also be defined as an attribute.
+
+Boosted cooked salted redmeat satiety slightly.
+
+Various adze assets have beem moved from the game domain to the ancienttools domain. Please apply remaps!
+
+Updated Japanese translation(Thank you macoto_hino)
+
+#### Version 1.4.7
+Fixed a crash that infrequently occurred with the pestle renderer in Vintage Story 1.17. 
+
+Fixed an error in the stripped log recipes that prevented purpleheart, kapok and ebony stripped logs from being crafted into firewood.
+
 #### Version 1.4.6
 
 Compiled the mod with VS RC-5 to prevent crashes that were happening with a 'Method Not Found' error with TesselateShape() that occurred when AT 1.4.5 was used on RC-5

@@ -33,5 +33,5 @@
 		"##############",
 	]],
 	name: "Adze Mold",
-	output: { type: "block", code: "toolmoldancienttools-raw-adze"  }
+	output: { type: "block", code: "ancienttools:adzemold-raw-adze"  }
 }

@@ -394,10 +394,10 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"item-adzehead-meteoriciron": "Meteoric Iron Adze Head",
 	"item-adzehead-steel": "Steel Adze Head",
 
-	"itemcraftdesc-adzehead-*": "For peeling bark from trees",	//
+	"itemcraftdesc-adzehead-*": "For peeling bark from trees",
 
-	"block-toolmoldancienttools-raw-adze": "Raw Adzehead Mold",	// toolmold to toolmoldancienttools
-	"block-toolmoldancienttools-burned-adze": "Adzehead Mold",	// toolmold to toolmoldancienttools
+	"block-adzemold-raw-adze": "Raw Adzehead Mold",
+	"block-adzemold-burned-adze": "Adzehead Mold",
 
 	"item-bark-birch": "Birch Bark",
 	"item-bark-oak": "Oak Bark",
@@ -453,43 +453,71 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"item-powderedcharcoal": "Powdered Charcoal",
 	"item-pitch-*": "Pitch",
 
-	"item-mallet-*-chert": "Chert Mallet",	//
-	"item-mallet-*-granite": "Granite Mallet",	//
-	"item-mallet-*-andesite": "Andesite Mallet",	//
-	"item-mallet-*-basalt": "Basalt Mallet",	//
-	"item-mallet-*-obsidian": "Obsidian Mallet",	//	
-	"item-mallet-*-peridotite": "Peridotite Mallet",	//
-	"item-mallet-*-flint": "Flint Mallet",	//
+	"item-mallet-*-chert": "Chert Mallet",
+	"item-mallet-*-granite": "Granite Mallet",
+	"item-mallet-*-andesite": "Andesite Mallet",
+	"item-mallet-*-basalt": "Basalt Mallet",
+	"item-mallet-*-obsidian": "Obsidian Mallet",
+	"item-mallet-*-peridotite": "Peridotite Mallet",
+	"item-mallet-*-flint": "Flint Mallet",
 
-	"item-mallethead-chert": "Chert Mallet Head",	//
-	"item-mallethead-granite": "Granite Mallet Head",	//
-	"item-mallethead-andesite": "Andesite Mallet Head",	//
-	"item-mallethead-basalt": "Basalt Mallet Head",	//
-	"item-mallethead-obsidian": "Obsidian Mallet Head",	//
-	"item-mallethead-peridotite": "Peridotite Mallet Head",	//
-	"item-mallethead-flint": "Flint Mallet Head",	//
+	"item-mallethead-chert": "Chert Mallet Head",
+	"item-mallethead-granite": "Granite Mallet Head",
+	"item-mallethead-andesite": "Andesite Mallet Head",
+	"item-mallethead-basalt": "Basalt Mallet Head",
+	"item-mallethead-obsidian": "Obsidian Mallet Head",
+	"item-mallethead-peridotite": "Peridotite Mallet Head",
+	"item-mallethead-flint": "Flint Mallet Head",
 
-	"itemcraftdesc-mallethead-*": "For smacking wedges to split wooden logs",	//
+	"itemcraftdesc-mallethead-*": "For smacking wedges to split wooden logs",
 
-	"item-wedge-chert": "Chert Wedge",	//
-	"item-wedge-granite": "Granite Wedge",	//
-	"item-wedge-andesite": "Andesite Wedge",	//
-	"item-wedge-basalt": "Basalt Wedge",	//
-	"item-wedge-obsidian": "Obsidian Wedge",	//
-	"item-wedge-peridotite": "Peridotite Wedge",	//
-	"item-wedge-flint": "Flint Wedge",	//	
-	"item-wedge-copper": "Copper Wedge",	//
-	"item-wedge-tinbronze": "Tin Bronze Wedge",	//
-	"item-wedge-bismuthbronze": "Bismuth Bronze Wedge",	//
-	"item-wedge-blackbronze": "Black Bronze Wedge",	//
-	"item-wedge-gold": "Gold Wedge",	//
-	"item-wedge-silver": "Silver Wedge",	//
-	"item-wedge-iron": "Iron Wedge",	//
-	"item-wedge-meteoriciron": "Meteoric Iron Wedge",	//
-	"item-wedge-steel": "Steel Wedge",	//
+	"item-wedge-chert": "Chert Wedge",
+	"item-wedge-granite": "Granite Wedge",
+	"item-wedge-andesite": "Andesite Wedge",
+	"item-wedge-basalt": "Basalt Wedge",
+	"item-wedge-obsidian": "Obsidian Wedge",
+	"item-wedge-peridotite": "Peridotite Wedge",
+	"item-wedge-flint": "Flint Wedge",
+	"item-wedge-copper": "Copper Wedge",
+	"item-wedge-tinbronze": "Tin Bronze Wedge",
+	"item-wedge-bismuthbronze": "Bismuth Bronze Wedge",
+	"item-wedge-blackbronze": "Black Bronze Wedge",
+	"item-wedge-gold": "Gold Wedge",
+	"item-wedge-silver": "Silver Wedge",
+	"item-wedge-iron": "Iron Wedge",
+	"item-wedge-meteoriciron": "Meteoric Iron Wedge",
+	"item-wedge-steel": "Steel Wedge",
 
-	"block-toolmoldancienttools-raw-wedge": "Raw Wedges Mold",	//
-	"block-toolmoldancienttools-burned-wedge": "Wedges Mold",	// 
+	"block-toolmoldancienttools-raw-wedge": "Raw Wedges Mold",
+	"block-toolmoldancienttools-burned-wedge": "Wedges Mold",	
 
-	"itemcraftdesc-wedge-*": "For splitting wooden logs with a mallet or hammer",	//
+	"itemcraftdesc-wedge-*": "For splitting wooden logs with a mallet or hammer",
+	"pie-single-ancienttools:saltedmeat-redmeat-raw-raw": "Salted Redmeat Pie(raw)",
+	"pie-single-ancienttools:saltedmeat-bushmeat-raw-raw": "Salted Bushmeat Pie(raw)",
+	"pie-single-ancienttools:saltedmeat-poultry-raw-raw": "Salted Poultry Pie(raw)",
+
+	"pie-single-ancienttools:saltedmeat-redmeat-raw-partbaked": "Salted Redmeat Pie(partbaked)",
+	"pie-single-ancienttools:saltedmeat-bushmeat-raw-partbaked": "Salted Bushmeat Pie(partbaked)",
+	"pie-single-ancienttools:saltedmeat-poultry-raw-partbaked": "Salted Poultry Pie(partbaked)",
+
+	"pie-single-ancienttools:saltedmeat-redmeat-raw-perfect": "Salted Redmeat Pie",
+	"pie-single-ancienttools:saltedmeat-bushmeat-raw-perfect": "Salted Bushmeat Pie",
+	"pie-single-ancienttools:saltedmeat-poultry-raw-perfect": "Salted Poultry Pie",
+
+	"pie-single-ancienttools:saltedmeat-redmeat-raw-charred": "Salted Redmeat Pie(charred)",
+	"pie-single-ancienttools:saltedmeat-bushmeat-raw-charred": "Salted Bushmeat Pie(charred)",
+	"pie-single-ancienttools:saltedmeat-poultry-raw-charred": "Salted Poultry Pie(charred)",
+
+	//-- Acorns Compatibility --//
+	"game:item-dough-acornbirch": "Acorn-Birch Dough",
+	"game:item-dough-acornpine": "Acorn-Pine Dough",
+
+	"game:item-bread-acornbirch-partbaked": "Acorn-Birch Bread(part-baked)",
+	"game:item-bread-acornpine-partbaked": "Acorn-Pine Bread(part-baked)",
+
+	"game:item-bread-acornbirch-perfect": "Acorn-Birch Bread",
+	"game:item-bread-acornpine-perfect": "Acorn-Pine Bread",
+
+	"game:item-bread-acornbirch-charred": "Acorn-Birch Bread(charred)",
+	"game:item-bread-acornpine-charred": "Acorn-Pine Bread(charred)",
 }

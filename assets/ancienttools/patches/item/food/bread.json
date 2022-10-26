@@ -128,6 +128,15 @@
 		"path": "/creativeinventory/ancienttools",
 		"value": ["*-birch-*", "*-pine-*"],
 		"file": "game:itemtypes/food/bread",
-		"side": "Server"
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "addeach",
+		"path": "/creativeinventory/ancienttools/-",
+		"value": ["*-acornbirch-*", "*-acornpine-*"],
+		"file": "game:itemtypes/food/bread",
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	}
 ]

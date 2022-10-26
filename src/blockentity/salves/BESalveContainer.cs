@@ -83,11 +83,11 @@ namespace AncientTools.BlockEntities
             {
                 string liquidPath = "";
 
-                if (LiquidSlot.Itemstack.Collectible.Attributes["isSalveOil"].AsBool() == true)
+                if (LiquidSlot.Itemstack.Collectible.Attributes["salveProperties"]["isSalveOil"].AsBool() == true)
                 {
                     liquidPath = "ancienttools:shapes/block/salve/resourceshapes/salveoil" + LiquidSlot.Itemstack.StackSize;
                 }
-                else if (LiquidSlot.Itemstack.Collectible.Attributes["isSalveThickener"].AsBool() == true)
+                else if (LiquidSlot.Itemstack.Collectible.Attributes["salveProperties"]["isSalveThickener"].AsBool() == true)
                 {
                     liquidPath = "ancienttools:shapes/block/salve/resourceshapes/hardwax" + LiquidSlot.Itemstack.StackSize;
                 }
@@ -120,29 +120,29 @@ namespace AncientTools.BlockEntities
             if (activeCollectible.Attributes == null)
                 return;
 
-            if (activeCollectible.Attributes["isMedicinalBark"].Exists)
+            if (activeCollectible.Attributes["salveProperties"]["isMedicinalBark"].Exists)
             {
                 if (!LiquidSlot.Empty)
-                    if (LiquidSlot.Itemstack.Collectible.Attributes["isSalveThickener"].Exists)
+                    if (LiquidSlot.Itemstack.Collectible.Attributes["salveProperties"]["isSalveThickener"].Exists)
                         return;
 
-                if(activeCollectible.Attributes["isMedicinalBark"].AsBool() == true)
+                if(activeCollectible.Attributes["salveProperties"]["isMedicinalBark"].AsBool() == true)
                 {
                     InsertObject(activeSlot, ResourceSlot, 1);
                     return;
                 }
             }
 
-            if (activeCollectible.Attributes["isSalveOil"].Exists)
-                if(activeCollectible.Attributes["isSalveOil"].AsBool() == true)
+            if (activeCollectible.Attributes["salveProperties"]["isSalveOil"].Exists)
+                if(activeCollectible.Attributes["salveProperties"]["isSalveOil"].AsBool() == true)
                 {
                     if(LiquidSlot.Empty || LiquidSlot.Itemstack.Collectible == activeSlot.Itemstack.Collectible)
                         InsertObject(activeSlot, LiquidSlot, 1);
                     return;
                 }
 
-            if(activeCollectible.Attributes["isSalveThickener"].Exists && ResourceSlot.Empty)
-                if(activeCollectible.Attributes["isSalveThickener"].AsBool() == true)
+            if(activeCollectible.Attributes["salveProperties"]["isSalveThickener"].Exists && ResourceSlot.Empty)
+                if(activeCollectible.Attributes["salveProperties"]["isSalveThickener"].AsBool() == true)
                 {
                     if (LiquidSlot.Empty || LiquidSlot.Itemstack.Collectible == activeSlot.Itemstack.Collectible)
                         InsertObject(activeSlot, LiquidSlot, 1);
@@ -179,7 +179,7 @@ namespace AncientTools.BlockEntities
                     {
                         if (LiquidSlot.Itemstack.StackSize == 4)
                         {
-                            Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-" + ResourceSlot.Itemstack.Item.LastCodePart())).Id, Pos);
+                            Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-" + ResourceSlot.Itemstack.Collectible.Variant["bark"])).Id, Pos);
                             Api.World.BlockAccessor.RemoveBlockEntity(Pos);
                             Api.World.BlockAccessor.MarkBlockDirty(Pos);
                         }
@@ -187,7 +187,7 @@ namespace AncientTools.BlockEntities
                 }
                 else if(!LiquidSlot.Empty)
                 {
-                    if (LiquidSlot.Itemstack.Item.Attributes["isSalveThickener"].Exists)
+                    if (LiquidSlot.Itemstack.Item.Attributes["salveProperties"]["isSalveThickener"].Exists)
                         if (LiquidSlot.Itemstack.StackSize == 4)
                         {
                             Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-hardwax")).Id, Pos);

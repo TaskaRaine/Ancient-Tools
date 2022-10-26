@@ -1,8 +1,11 @@
 ﻿[
 	{
 		"op": "add",
-		"path": "/attributes/isSalveThickener",
-		"value": true,
+		"path": "/attributes/salveProperties",
+		"value": {
+			"isSalveThickener": true,
+			"langCode": "ancienttools:blockhelp-insert-thickener"
+		},
 		"file": "game:itemtypes/resource/beeswax",
 		"side": "Server",
 		"condition": { "when": "SalveEnabled", "isValue": "true" }

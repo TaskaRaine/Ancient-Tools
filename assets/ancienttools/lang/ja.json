@@ -382,25 +382,25 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"item-saltedmeat-bushmeat-cooked": "調理された塩漬けブッシュミート",
 	"item-saltedmeat-redmeat-cooked": "調理した塩漬けレッドミート",
 
-	"game:item-adzehead-chert": "チャート石の釿頭",
-	"game:item-adzehead-granite": "花崗岩の釿頭",
-	"game:item-adzehead-andesite": "安山岩の釿頭",
-	"game:item-adzehead-basalt": "玄武岩の釿頭",
-	"game:item-adzehead-obsidian": "黒曜石の釿頭",
-	"game:item-adzehead-peridotite": "かんらん岩の釿頭",
-	"game:item-adzehead-flint": "火打石の釿頭",
-	"game:item-adzehead-copper": "銅の釿頭",
-	"game:item-adzehead-tinbronze": "スズ青銅の釿頭",
-	"game:item-adzehead-bismuthbronze": "ビスマス青銅釿の頭",
-	"game:item-adzehead-blackbronze": "黒青銅の釿頭",
-	"game:item-adzehead-gold": "金の釿頭",
-	"game:item-adzehead-silver": "銀の釿頭",
-	"game:item-adzehead-iron": "鉄の釿頭",
-	"game:item-adzehead-meteoriciron": "隕鉄の釿頭",
-	"game:item-adzehead-steel": "鋼の釿頭",
+	"item-adzehead-chert": "チャート石の釿頭",
+	"item-adzehead-granite": "花崗岩の釿頭",
+	"item-adzehead-andesite": "安山岩の釿頭",
+	"item-adzehead-basalt": "玄武岩の釿頭",
+	"item-adzehead-obsidian": "黒曜石の釿頭",
+	"item-adzehead-peridotite": "かんらん岩の釿頭",
+	"item-adzehead-flint": "火打石の釿頭",
+	"item-adzehead-copper": "銅の釿頭",
+	"item-adzehead-tinbronze": "スズ青銅の釿頭",
+	"item-adzehead-bismuthbronze": "ビスマス青銅釿の頭",
+	"item-adzehead-blackbronze": "黒青銅の釿頭",
+	"item-adzehead-gold": "金の釿頭",
+	"item-adzehead-silver": "銀の釿頭",
+	"item-adzehead-iron": "鉄の釿頭",
+	"item-adzehead-meteoriciron": "隕鉄の釿頭",
+	"item-adzehead-steel": "鋼の釿頭",
 
-	"game:block-toolmold-raw-adze": "生の釿頭の鋳型",
-	"game:block-toolmold-burned-adze": "釿頭の鋳型",
+	"block-adzemold-raw-adze": "生の釿頭の鋳型",
+	"block-adzemold-burned-adze": "釿頭の鋳型",
 
 	"item-bark-birch": "シラカバの樹皮",
 	"item-bark-oak": "オークの樹皮",
@@ -455,4 +455,33 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 
 	"item-powderedcharcoal": "木炭粉",
 	"item-pitch-*": "松脂",
+
+	"pie-single-ancienttools:saltedmeat-redmeat-raw-raw": "塩漬け赤肉のパイ(生)",
+	"pie-single-ancienttools:saltedmeat-bushmeat-raw-raw": "塩漬けブッシュミートパイ(生)",
+	"pie-single-ancienttools:saltedmeat-poultry-raw-raw": "塩漬け鶏肉のパイ(生)",
+
+	"pie-single-ancienttools:saltedmeat-redmeat-raw-partbaked": "塩漬け赤肉のパイ(生焼け)",
+	"pie-single-ancienttools:saltedmeat-bushmeat-raw-partbaked": "塩漬けブッシュミートパイ(生焼け)",
+	"pie-single-ancienttools:saltedmeat-poultry-raw-partbaked": "塩漬け鶏肉のパイ(生焼け)",
+
+	"pie-single-ancienttools:saltedmeat-redmeat-raw-perfect": "塩漬け赤肉のパイ",
+	"pie-single-ancienttools:saltedmeat-bushmeat-raw-perfect": "塩漬けブッシュミートパイ",
+	"pie-single-ancienttools:saltedmeat-poultry-raw-perfect": "塩漬け鶏肉のパイ",
+
+	"pie-single-ancienttools:saltedmeat-redmeat-raw-charred": "塩漬け赤肉のパイ(黒焦げ)",
+	"pie-single-ancienttools:saltedmeat-bushmeat-raw-charred": "塩漬けブッシュミートパイ(黒焦げ)",
+	"pie-single-ancienttools:saltedmeat-poultry-raw-charred": "塩漬け鶏肉のパイ(黒焦げ)",
+
+	//-- Acorns Compatibility --//
+	"game:item-dough-acornbirch": "ドングリとシラカバの生地",
+	"game:item-dough-acornpine": "ドングリとマツの生地",
+
+	"game:item-bread-acornbirch-partbaked": "ドングリとシラカバのパン(生焼け)",
+	"game:item-bread-acornpine-partbaked": "ドングリとマツのパン(生焼け)",
+
+	"game:item-bread-acornbirch-perfect": "ドングリとシラカバのパン",
+	"game:item-bread-acornpine-perfect": "ドングリとマツのパン",
+
+	"game:item-bread-acornbirch-charred": "ドングリとシラカバのパン(黒焦げ)",
+	"game:item-bread-acornpine-charred": "ドングリとマツのパン(黒焦げ)",
 }

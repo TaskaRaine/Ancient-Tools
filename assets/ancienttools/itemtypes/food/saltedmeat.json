@@ -35,6 +35,10 @@
 					convertedItemstackType: "item"
 				}
 			},
+			nutritionPropsWhenInMeal: { satiety: 210, foodcategory: "Protein" },
+			inPieProperties: {
+				texture: "ancienttools:block/food/pie/fill-saltedredmeat", partType: 'Filling' 
+			}
 		},
 		"*-redmeat-cooked": {
 			displaycaseable: true,
@@ -85,6 +89,10 @@
 					convertIntoItemstack: "game:poultry-cured",
 					convertedItemstackType: "item"
 				}
+			},
+			nutritionPropsWhenInMeal: { satiety: 150, foodcategory: "Protein" },
+			inPieProperties: {
+				texture: "ancienttools:block/food/pie/fill-saltedpoultry", partType: 'Filling' 
 			}
 		},
 		"*-bushmeat-raw": {
@@ -112,6 +120,10 @@
 					convertIntoItemstack: "game:bushmeat-cured",
 					convertedItemstackType: "item"
 				}
+			},
+			nutritionPropsWhenInMeal: { satiety: 90, foodcategory: "Protein" },
+			inPieProperties: {
+				texture: "ancienttools:block/food/pie/fill-saltedbushmeat", partType: 'Filling' 
 			}
 		},
 		"*-cooked": {
@@ -173,7 +185,7 @@
 	nutritionPropsByType: {
 		"*-poultry-cooked": { satiety: 100, foodcategory: "Protein" },
 		"*-bushmeat-cooked": { satiety: 60, foodcategory: "Protein" },
-		"*-redmeat-cooked": { satiety: 120, foodcategory: "Protein" },
+		"*-redmeat-cooked": { satiety: 140, foodcategory: "Protein" },
 	},
 	combustiblePropsByType: {
 		"*-redmeat-raw": {

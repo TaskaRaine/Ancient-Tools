@@ -3,6 +3,12 @@
 		"file": "game:config/remaps.json",
 		"op": "add",
 		"path": "/ancienttools:ancienttools",
+		"value": []
+	},
+	{
+		"file": "game:config/remaps.json",
+		"op": "addeach",
+		"path": "/ancienttools:ancienttools/-",
 		"value": [
 			"/iir remapq ancienttools:adze-wood-chert ancienttools:adze-chert force",
 			"/iir remapq ancienttools:adze-wood-granite ancienttools:adze-granite force",
@@ -20,6 +26,38 @@
 			"/iir remapq ancienttools:adze-wood-iron ancienttools:adze-iron force",
 			"/iir remapq ancienttools:adze-wood-meteoriciron ancienttools:adze-meteoriciron force",
 			"/iir remapq ancienttools:adze-wood-steel ancienttools:adze-steel force",
+		]
+	},
+	{
+		"file": "game:config/remaps.json",
+		"op": "addeach",
+		"path": "/ancienttools:ancienttools/-",
+		"value": [
+			"/iir remapq game:adzehead-chert ancienttools:adzehead-chert force",
+			"/iir remapq game:adzehead-granite ancienttools:adzehead-granite force",
+			"/iir remapq game:adzehead-andesite ancienttools:adzehead-andesite force",
+			"/iir remapq game:adzehead-basalt ancienttools:adzehead-basalt force",
+			"/iir remapq game:adzehead-peridotite ancienttools:adzehead-peridotite force",
+			"/iir remapq game:adzehead-obsidian ancienttools:adzehead-obsidian force",
+			"/iir remapq game:adzehead-flint ancienttools:adzehead-flint force",
+			"/iir remapq game:adzehead-copper ancienttools:adzehead-copper force",
+			"/iir remapq game:adzehead-tinbronze ancienttools:adzehead-tinbronze force",
+			"/iir remapq game:adzehead-bismuthbronze ancienttools:adzehead-bismuthbronze force",
+			"/iir remapq game:adzehead-blackbronze ancienttools:adzehead-blackbronze force",
+			"/iir remapq game:adzehead-silver ancienttools:adzehead-silver force",
+			"/iir remapq game:adzehead-gold ancienttools:adzehead-gold force",
+			"/iir remapq game:adzehead-iron ancienttools:adzehead-iron force",
+			"/iir remapq game:adzehead-meteoriciron ancienttools:adzehead-meteoriciron force",
+			"/iir remapq game:adzehead-steel ancienttools:adzehead-steel force",
+		]
+	},
+	{
+		"file": "game:config/remaps.json",
+		"op": "addeach",
+		"path": "/ancienttools:ancienttools/-",
+		"value": [
+			"/bir remapq ancienttools:adzemold-raw-adze game:toolmold-raw-adze force",
+			"/bir remapq ancienttools:adzemold-burnt-adze game:toolmold-burnt-adze force",
 		]
 	}
 ]

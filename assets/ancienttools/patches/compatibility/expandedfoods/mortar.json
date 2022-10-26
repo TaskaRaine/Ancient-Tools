@@ -268,5 +268,155 @@
 		"file": "blocktypes/mortar",
 		"dependsOn": [{ "modid": "expandedfoods" }],
 		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/pinebreadpartbaked",
+		"value": {
+			base: "game:item/food/grain/pinebread2"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/pinebreadperfect",
+		"value": {
+			base: "game:item/food/grain/pinebread"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/pinebreadcharred",
+		"value": {
+			base: "game:item/food/grain/pinebread1"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/birchbreadpartbaked",
+		"value": {
+			base: "game:item/food/grain/birchbread2"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/birchbreadperfect",
+		"value": {
+			base: "game:item/food/grain/birchbread"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/birchbreadcharred",
+		"value": {
+			base: "game:item/food/grain/birchbread1"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/acornbirchbreadpartbaked",
+		"value": {
+			base: "game:item/food/grain/acornbirchbread2"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods", "modid": "acorns" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/acornbirchbreadperfect",
+		"value": {
+			base: "game:item/food/grain/acornbirchbread"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods", "modid": "acorns" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/acornbirchbreadcharred",
+		"value": {
+			base: "game:item/food/grain/acornbirchbread1"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods", "modid": "acorns" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/acornpinebreadpartbaked",
+		"value": {
+			base: "game:item/food/grain/acornpinebread2"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods", "modid": "acorns" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/acornpinebreadperfect",
+		"value": {
+			base: "game:item/food/grain/acornpinebread"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods", "modid": "acorns" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/acornpinebreadcharred",
+		"value": {
+			base: "game:item/food/grain/acornpinebread1"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods", "modid": "acorns" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/acornbreadpartbaked",
+		"value": {
+			base: "game:item/food/grain/acornspeltbread2"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods", "modid": "acorns" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/acornbreadperfect",
+		"value": {
+			base: "game:item/food/grain/acornspeltbread"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods", "modid": "acorns" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/textures/acornbreadcharred",
+		"value": {
+			base: "game:item/food/grain/acornspeltbread1"
+		},
+		"file": "blocktypes/mortar",
+		"dependsOn": [{ "modid": "expandedfoods", "modid": "acorns" }],
+		"side": "Server"
 	}
 ]

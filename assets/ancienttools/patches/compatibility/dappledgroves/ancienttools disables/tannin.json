@@ -1,0 +1,18 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/0/enabled",
+		"value": false,
+		"file": "ancienttools:recipes/barrel/tannin",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/1/enabled",
+		"value": false,
+		"file": "ancienttools:recipes/barrel/tannin",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+	},
+]

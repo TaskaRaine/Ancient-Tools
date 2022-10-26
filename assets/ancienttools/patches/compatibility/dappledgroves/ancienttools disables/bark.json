@@ -1,0 +1,10 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/enabled",
+		"value": false,
+		"file": "ancienttools:itemtypes/resources/bark",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+	}
+]

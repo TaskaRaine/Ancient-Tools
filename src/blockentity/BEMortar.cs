@@ -393,15 +393,24 @@ namespace AncientTools.BlockEntities
         }
         private void PrepareMesh(string shapeFolderLocation, ItemSlot inventorySlot, BlockMortar block, ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator)
         {
-            string codePath = inventorySlot.Itemstack.Collectible.Code.Path;
-            string resourcePath = shapeFolderLocation + inventorySlot.Itemstack.Collectible.Code.Domain + "_";
+            string resourcePath;
 
-            foreach (char character in codePath)
+            if(inventorySlot.Itemstack.Collectible.Attributes == null || !inventorySlot.Itemstack.Collectible.Attributes["mortarProperties"].Exists)
             {
-                if (character != '-')
-                    resourcePath += character;
-                else
-                    resourcePath += '_';
+                string codePath = inventorySlot.Itemstack.Collectible.Code.Path;
+                resourcePath = shapeFolderLocation + inventorySlot.Itemstack.Collectible.Code.Domain + "_";
+
+                foreach (char character in codePath)
+                {
+                    if (character != '-')
+                        resourcePath += character;
+                    else
+                        resourcePath += '_';
+                }
+            }
+            else
+            {
+                resourcePath = inventorySlot.Itemstack.Collectible.Attributes["mortarProperties"]["shape"]?.ToString();
             }
 
             //-- If no shape asset is found then a default mesh is used. --//

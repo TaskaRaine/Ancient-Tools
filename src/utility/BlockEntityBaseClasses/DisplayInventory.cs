@@ -72,7 +72,7 @@ namespace AncientTools.Utility
         {
 
         }
-        public void InitializeInventory()
+        public virtual void InitializeInventory()
         {
             GenericDisplayInventory = new InventoryGeneric(InventorySize, null, null);
         }
@@ -130,6 +130,13 @@ namespace AncientTools.Utility
         {
             mesher.AddMeshData(mesh.Clone()
                 .Rotate(new Vec3f(0.5f, 0.5f, 0.5f), rotation.X, rotation.Y, rotation.Z));
+        }
+        public void SetInventoryMaxSlotSize(int maxSize)
+        {
+            foreach(ItemSlot slot in GenericDisplayInventory)
+            {
+                slot.MaxSlotStackSize = maxSize;
+            }
         }
     }
 }
