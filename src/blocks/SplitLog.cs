@@ -1,45 +1,35 @@
-﻿using Vintagestory.API.Common;
+﻿using AncientTools.BlockEntities;
+using AncientTools.Items;
+using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 
 namespace AncientTools.Blocks
 {
     class BlockSplitLog: Block
     {
-        public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref string failureCode)
+        public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
-            if (!CanPlaceBlock(world, byPlayer, blockSel, ref failureCode))
+            if (blockSel.SelectionBoxIndex != 0)
             {
-                return false;
+                ItemSlot activeSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
+
+                if(activeSlot.Empty || activeSlot.Itemstack?.Collectible is ItemWedge)
+                {
+                    if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BESplitLog splitLogEntity)
+                    {
+                        return splitLogEntity.OnInteract(byPlayer, blockSel.SelectionBoxIndex - 1, blockSel.HitPosition);
+                    }
+                }
             }
 
-            BlockFacing[] horVer = SuggestedHVOrientation(byPlayer, blockSel);
+            return false;
+        }
+        public override float OnGettingBroken(IPlayer player, BlockSelection blockSel, ItemSlot itemslot, float remainingResistance, float dt, int counter)
+        {
+            if (blockSel.SelectionBoxIndex == 0 || itemslot.Itemstack?.Collectible.GetType() != typeof(ItemMallet))
+                return base.OnBlockBreaking(player, blockSel, itemslot, remainingResistance, dt, counter);
 
-            if (blockSel.Face.IsVertical)
-            {
-                horVer[1] = blockSel.Face;
-            }
-            else
-            {
-                horVer[0] = blockSel.Face;
-            }
-
-            AssetLocation blockCode;
-
-            if (horVer[1] == null)
-            {
-                blockCode = CodeWithVariants(new string[] { "verticalorientation", "horizontalorientation" }, new string[] { "none", horVer[0].Code });
-            }
-            else
-            {
-                blockCode = CodeWithVariants(new string[] { "verticalorientation", "horizontalorientation" }, new string[] { horVer[1].Code, horVer[0].Code });
-            }
-
-            Block newBlock = world.BlockAccessor.GetBlock(blockCode);
-            if (newBlock == null) return false;
-
-            world.BlockAccessor.SetBlock(newBlock.BlockId, blockSel.Position);
-
-            return true;
+            return remainingResistance;
         }
     }
 }

@@ -394,8 +394,8 @@ Note: Поскольку смола является неотъемлемой ч
 	"item-adzehead-meteoriciron": "Оголовье тесла из метеоритного железа",
 	"item-adzehead-steel": "Стальное оголовье тесла ",
 
-	"block-adzemold-raw-adze": "Сырая Форма для тесла",
-	"block-adzemold-burned-adze": "форма для тесла",
+	"block-toolmoldancienttools-raw-adze": "Сырая Форма для тесла",
+	"block-toolmoldancienttools-burned-adze": "форма для тесла",
 
 	"item-bark-birch": "Березовая кора",
 	"item-bark-oak": "Кора дуба",

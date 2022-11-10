@@ -1,6 +1,6 @@
 ﻿{
 	code: "mallet",
-	class: "Item",
+	class: "ItemMallet",
 	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"], "ancienttools": ["*"] },
 	attributes: {
 		handbook: {

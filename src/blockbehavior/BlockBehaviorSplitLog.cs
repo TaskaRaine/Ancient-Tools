@@ -18,10 +18,7 @@ namespace AncientTools.BlockBehaviors
         private Cuboidf FallbackCuboid { get; } = new Cuboidf(0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f); 
         private Cuboidf[] OriginalSelectionBoxes { get; set; }
         private Cuboidf[] WedgeSelectionBoxes { get; set; }
-        private BlockPos BlockPosition { get; set; }
-        private string LogHorizontal { get; set; } = string.Empty;
-        private string LogVertical { get; set; } = string.Empty;
-        private string LogStage { get; set; } = string.Empty;
+        private Cuboidf[] MalletHitboxes { get; set; }
 
         ICoreClientAPI capi;
 
@@ -36,8 +33,16 @@ namespace AncientTools.BlockBehaviors
 
             OriginalSelectionBoxes = block.SelectionBoxes;
             WedgeSelectionBoxes = new Cuboidf[] {
-                properties["wedgebox1"].AsObject<Cuboidf>(FallbackCuboid),
-                properties["wedgebox2"].AsObject<Cuboidf>(FallbackCuboid)
+                properties["wedgeboxnorth"].AsObject<Cuboidf>(FallbackCuboid),
+                properties["wedgeboxeast"].AsObject<Cuboidf>(FallbackCuboid),
+                properties["wedgeboxsouth"].AsObject<Cuboidf>(FallbackCuboid),
+                properties["wedgeboxwest"].AsObject<Cuboidf>(FallbackCuboid)
+            };
+            MalletHitboxes = new Cuboidf[] {
+                properties["mallethitboxnorth"].AsObject<Cuboidf>(FallbackCuboid),
+                properties["mallethitboxeast"].AsObject<Cuboidf>(FallbackCuboid),
+                properties["mallethitboxsouth"].AsObject<Cuboidf>(FallbackCuboid),
+                properties["mallethitboxwest"].AsObject<Cuboidf>(FallbackCuboid)
             };
         }
         public override void OnLoaded(ICoreAPI api)
@@ -51,54 +56,6 @@ namespace AncientTools.BlockBehaviors
                 capi.Event.AfterActiveSlotChanged += Event_AfterActiveSlotChanged;
             }
         }
-        public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
-        {
-            if (blockSel.SelectionBoxIndex != 0)
-            {
-                ItemSlot activeSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
-
-                if(block is BlockLog)
-                {
-                    if(activeSlot.Itemstack?.Collectible is ItemWedge)
-                    {
-                        DetermineLogRotation();
-
-                        world.BlockAccessor.SetBlock(world.GetBlock(new AssetLocation("ancienttools", "splitlog-0-" + block.Variant["wood"] + "-" + LogVertical + "-" + LogHorizontal)).Id, blockSel.Position);
-
-                        if(world.BlockAccessor.GetBlockEntity(blockSel.Position) is BESplitLog splitLogEntity)
-                        {
-                            splitLogEntity.OnInteract(byPlayer, blockSel.SelectionBoxIndex, blockSel.HitPosition);
-                        }
-                    }    
-                    else
-                    {
-                        return false;
-                    }
-                }
-                else if(block is BlockSplitLog)
-                {
-                    if (activeSlot.Itemstack?.Collectible is ItemWedge)
-                    {
-                        if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BESplitLog splitLogEntity)
-                        {
-                            splitLogEntity.OnInteract(byPlayer, blockSel.SelectionBoxIndex, blockSel.HitPosition);
-                        }
-                    }
-                    else if(activeSlot.Empty)
-                    {
-                        if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BESplitLog splitLogEntity)
-                        {
-                            splitLogEntity.OnInteract(byPlayer, blockSel.SelectionBoxIndex, blockSel.HitPosition);
-                        }
-                    }
-                }
-
-                handling = EnumHandling.Handled;
-                return true;
-            }
-
-            return false;
-        }
         private void Event_AfterActiveSlotChanged(ActiveSlotChangeEventArgs obj)
         {
             ItemSlot activeHotbarSlot = capi.World.Player?.InventoryManager?.ActiveHotbarSlot;
@@ -107,52 +64,14 @@ namespace AncientTools.BlockBehaviors
             {
                 block.SelectionBoxes = OriginalSelectionBoxes.Append(WedgeSelectionBoxes);
             }
+            else if(activeHotbarSlot?.Itemstack?.Collectible is ItemMallet)
+            {
+                block.SelectionBoxes = OriginalSelectionBoxes.Append(MalletHitboxes);
+            }
             else
             {
                 block.SelectionBoxes = OriginalSelectionBoxes;
             }
         }
-        private void SetInitialLogStage()
-        {
-            LogStage = "0";
-        }
-        private void IncrementLogStage()
-        {
-            if(block.Variant.ContainsKey("stage"))
-            {
-                int nextStage = LogStage.ToInt() + 1;
-                LogStage = nextStage.ToString();
-            }
-        }
-        private void DetermineLogRotation()
-        {
-            if(block.Variant.ContainsKey("rotation"))
-            {
-                switch(block.Variant["rotation"])
-                {
-                    case "ud":
-                        LogVertical = "none";
-                        LogHorizontal = "north";
-                        break;
-                    case "ns":
-                        LogVertical = "up";
-                        LogHorizontal = "north";
-                        break;
-                    case "ew":
-                        LogVertical = "up";
-                        LogHorizontal = "east";
-                        break;
-                }
-
-                return;
-            }
-
-            if(block.Variant.ContainsKey("verticalorientation"))
-            {
-                LogVertical = block.Variant["verticalorientation"];
-                LogHorizontal = block.Variant["horizontalorientation"];
-            }
-        }
-
     }
 }

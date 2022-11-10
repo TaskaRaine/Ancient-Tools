@@ -396,8 +396,8 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 
 	"itemcraftdesc-adzehead-*": "For peeling bark from trees",
 
-	"block-adzemold-raw-adze": "Raw Adzehead Mold",
-	"block-adzemold-burned-adze": "Adzehead Mold",
+	"block-toolmoldancienttools-raw-adze": "Raw Adzehead Mold",
+	"block-toolmoldancienttools-burned-adze": "Adzehead Mold",
 
 	"item-bark-birch": "Birch Bark",
 	"item-bark-oak": "Oak Bark",

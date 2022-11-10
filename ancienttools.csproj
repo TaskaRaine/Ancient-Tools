@@ -42,31 +42,32 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="VintagestoryAPI">
-      <HintPath>H:\VintageStory 1.17.8\VintagestoryAPI.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.9\VintagestoryAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>H:\VintageStory 1.17.8\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.9\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>H:\VintageStory 1.17.8\Mods\VSEssentials.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.9\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>H:\VintageStory 1.17.8\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.9\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>H:\VintageStory 1.17.8\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.9\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="0Harmony">
-      <HintPath>H:\VintageStory 1.17.8\Lib\0Harmony.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.9\Lib\0Harmony.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\ancienttools\credits.txt" />
+    <Content Include="assets\ancienttools\sounds\item\bonk.ogg" />
     <Content Include="assets\ancienttools\sounds\block\knifecarve.ogg" />
     <Content Include="assets\ancienttools\sounds\block\mortargrind.ogg" />
     <Content Include="assets\ancienttools\sounds\block\salvepour.ogg" />
@@ -136,7 +137,6 @@
     <Content Include="resources\images\mortars.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="assets\ancienttools\blocktypes\adzemold.json" />
     <None Include="assets\ancienttools\blocktypes\barkbasket.json" />
     <None Include="assets\ancienttools\blocktypes\curingrack.json" />
     <None Include="assets\ancienttools\blocktypes\directionalresin.json" />
@@ -147,6 +147,7 @@
     <None Include="assets\ancienttools\blocktypes\salvepot.json" />
     <None Include="assets\ancienttools\blocktypes\stretchingframe.json" />
     <None Include="assets\ancienttools\blocktypes\strippedlog.json" />
+    <None Include="assets\ancienttools\blocktypes\toolmoldancienttools.json" />
     <None Include="assets\ancienttools\compatibility\buildingplus\recipes\grid\strippedsupport.json" />
     <None Include="assets\ancienttools\config\handbook\pitchguide.json" />
     <None Include="assets\ancienttools\itemtypes\resources\powderedcharcoal.json" />
@@ -237,6 +238,7 @@
     <None Include="assets\ancienttools\patches\recipes\brainedhide.json" />
     <None Include="assets\ancienttools\patches\recipes\tannin.json" />
     <None Include="assets\ancienttools\recipes\barrel\tannin.json" />
+    <None Include="assets\ancienttools\recipes\clayforming\wedgesmold.json" />
     <None Include="assets\ancienttools\recipes\grid\block\lampsaucer.json" />
     <None Include="assets\ancienttools\recipes\grid\block\pitchpot.json" />
     <None Include="assets\ancienttools\recipes\grid\block\pitchtorch.json" />
@@ -435,7 +437,16 @@
     <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\resin2.json" />
     <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\resin3.json" />
     <None Include="assets\ancienttools\shapes\block\pitch\resourceshapes\resin4.json" />
+    <None Include="assets\ancienttools\shapes\block\splitlogs\splitlog_nes.json" />
+    <None Include="assets\ancienttools\shapes\block\splitlogs\splitlog_new.json" />
+    <None Include="assets\ancienttools\shapes\block\splitlogs\splitlog_ne.json" />
+    <None Include="assets\ancienttools\shapes\block\splitlogs\splitlog_nw.json" />
+    <None Include="assets\ancienttools\shapes\block\splitlogs\splitlog_esw.json" />
+    <None Include="assets\ancienttools\shapes\block\splitlogs\splitlog_es.json" />
+    <None Include="assets\ancienttools\shapes\block\splitlogs\splitlog_sw.json" />
+    <None Include="assets\ancienttools\shapes\block\splitlogs\splitlog_nsw.json" />
     <None Include="assets\ancienttools\shapes\block\stretchingframe\stretchingframe_plus.json" />
+    <None Include="assets\ancienttools\itemtypes\resources\beam.json" />
     <None Include="assets\ancienttools\shapes\item\resource\pitchball.json" />
     <None Include="assets\ancienttools\shapes\item\resource\pitchstick.json" />
     <None Include="assets\game\patches\recipes\cooking\meatystew.json" />
@@ -567,6 +578,7 @@
   <ItemGroup>
     <Folder Include="assets\ancienttools\patches\item\tool\" />
     <Folder Include="assets\ancienttools\patches\lang\" />
+    <Folder Include="assets\ancienttools\shapes\block\piles\" />
     <Folder Include="assets\ancienttools\shapes\entity\" />
     <Folder Include="assets\ancienttools\textures\block\food\pie\" />
     <Folder Include="assets\ancienttools\textures\item\food\flour\" />
@@ -582,10 +594,12 @@
     <None Include="assets\ancienttools\patches\compatibility\lichen\gemsbok.json" />
     <None Include="assets\ancienttools\patches\item\food\curedmeats.json" />
     <Compile Include="src\blockbehavior\BlockBehaviorConvertToResinLog.cs" />
+    <Compile Include="src\blockbehavior\BlockBehaviorSplitLog.cs" />
     <Compile Include="src\blockentitybehavior\BlockEntityBehaviorFireproofFuel.cs" />
     <Compile Include="src\blockbehavior\RegisterBlockBehaviors.cs" />
     <Compile Include="src\blockentitybehavior\RegisterBlockEntityBehaviors.cs" />
     <Compile Include="src\blockentity\BEHideWaterSack.cs" />
+    <Compile Include="src\blockentity\BESplitLog.cs" />
     <Compile Include="src\blockentity\BEStretchingFrame.cs" />
     <Compile Include="src\blockentity\pitch\BEFinishedPitch.cs" />
     <Compile Include="src\blockentity\pitch\BEPitchContainer.cs" />
@@ -595,6 +609,7 @@
     <Compile Include="src\blocks\pitch\PitchContainer.cs" />
     <Compile Include="src\blocks\pitch\PitchInventory.cs" />
     <Compile Include="src\blocks\LampSaucer.cs" />
+    <Compile Include="src\blocks\SplitLog.cs" />
     <Compile Include="src\blocks\StretchingFrame.cs" />
     <Compile Include="src\blocks\WaterproofTorch.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorConvertHide.cs" />
@@ -606,6 +621,10 @@
     <Compile Include="src\harmony\HarmonySetup.cs" />
     <Compile Include="src\items\ItemBark.cs" />
     <Compile Include="src\items\ItemBrain.cs" />
+    <Compile Include="src\items\ItemMallet.cs" />
+    <Compile Include="src\items\ItemWedge.cs" />
+    <Compile Include="src\utility\BlockEntityBaseClasses\DisplayInventory.cs" />
+    <Compile Include="src\utility\Interfaces\IDisplayInventory.cs" />
     <Compile Include="src\utility\ModConfig.cs" />
     <Compile Include="src\utility\RegisterConfig.cs" />
     <None Include="assets\ancienttools\recipes\grid\tool\curinghook.json" />
@@ -623,7 +642,6 @@
     <Compile Include="src\items\ItemSalvePortion.cs" />
     <Compile Include="src\items\RegisterItems.cs" />
     <Compile Include="src\items\ItemSaltedMeat.cs" />
-    <Compile Include="src\utility\DisplayInventory.cs" />
     <None Include="assets\ancienttools\recipes\grid\block\mortar.json" />
     <Compile Include="src\blockentityrenderer\MortarPestleRenderer.cs" />
     <Compile Include="src\blockentity\BECuringRack.cs" />

@@ -9,9 +9,30 @@
 			]
 		}
 	},
-	behaviors: [
-		{ name: "Pillar" }
-	],
+	classByType: {
+		"*-ud": "BlockSplitLog"
+	},
+	entityClassByType: {
+		"*-ud": "BESplitLog"
+	},
+	behaviorsByType: {
+		"*-ud": [
+			{ name: "Pillar" }, 
+			{ name: "SplitLog", 
+				properties: { 
+					wedgeboxnorth: { x1: 0.4, y1: 1, z1: 0.2, x2: 0.6, y2: 1.1, z2: 0.4 },
+					wedgeboxeast: { x1: 0.6, y1: 1.0, z1: 0.4, x2: 0.8, y2: 1.1, z2: 0.6 },
+					wedgeboxsouth: { x1: 0.4, y1: 1, z1: 0.6, x2: 0.6, y2: 1.1, z2: 0.8 },
+					wedgeboxwest: { x1: 0.2, y1: 1.0, z1: 0.4, x2: 0.4, y2: 1.1, z2: 0.6 },
+					mallethitboxnorth: { x1: 0.4, y1: 1, z1: 0.2, x2: 0.6, y2: 1.3, z2: 0.4 },
+					mallethitboxeast: { x1: 0.6, y1: 1.0, z1: 0.4, x2: 0.8, y2: 1.3, z2: 0.6 },
+					mallethitboxsouth: { x1: 0.4, y1: 1, z1: 0.6, x2: 0.6, y2: 1.3, z2: 0.8 },
+					mallethitboxwest: { x1: 0.2, y1: 1.0, z1: 0.4, x2: 0.4, y2: 1.3, z2: 0.6 },
+				}
+			}
+		],
+		"*": [{ name: "Pillar" }]
+	},
 	variantgroups: [
         { code: "wood", loadFromProperties: "game:block/wood", states:["aged"] },
 		{ code: "rotation", states: ["ud", "ns", "we"] },
@@ -19,7 +40,7 @@
 	blockmaterial: "Wood",
 	requiredMiningTier: 1,
 	shape: { base: "game:block/basic/cube" },
-	drawtype: "cube",
+	drawtype: "json",
 	texturesbytype: {
 		"*-purpleheart-ud": {
 			"north": { base: "block/strippedlog/purpleheart_outer", rotation: 90 },
@@ -150,6 +171,9 @@
 	},
 	replaceable: 500,
 	resistance: 4.5,
+	sideopaquebytype: { 
+		"*-ud": { all: false },
+	},
 	sounds: {
 		"place": "game:block/planks",
 		"walk": "game:walk/wood",

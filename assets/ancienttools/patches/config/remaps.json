@@ -56,8 +56,17 @@
 		"op": "addeach",
 		"path": "/ancienttools:ancienttools/-",
 		"value": [
-			"/bir remapq ancienttools:adzemold-raw-adze game:toolmold-raw-adze force",
-			"/bir remapq ancienttools:adzemold-burnt-adze game:toolmold-burnt-adze force",
+			"/bir remapq ancienttools:toolmoldancienttools-raw-adze game:toolmold-raw-adze force",
+			"/bir remapq ancienttools:toolmoldancienttools-burnt-adze game:toolmold-burnt-adze force",
+		]
+	},
+	{
+		"file": "game:config/remaps.json",
+		"op": "addeach",
+		"path": "/ancienttools:ancienttools/-",
+		"value": [
+			"/bir remapq ancienttools:toolmoldancienttools-raw-adze ancienttools:adzemold-raw-adze force",
+			"/bir remapq ancienttools:toolmoldancienttools-burnt-adze ancienttools:adzemold-burnt-adze force",
 		]
 	}
 ]

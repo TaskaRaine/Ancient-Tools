@@ -399,8 +399,8 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"item-adzehead-meteoriciron": "隕鉄の釿頭",
 	"item-adzehead-steel": "鋼の釿頭",
 
-	"block-adzemold-raw-adze": "生の釿頭の鋳型",
-	"block-adzemold-burned-adze": "釿頭の鋳型",
+	"block-toolmoldancienttools-raw-adze": "生の釿頭の鋳型",
+	"block-toolmoldancienttools-burned-adze": "釿頭の鋳型",
 
 	"item-bark-birch": "シラカバの樹皮",
 	"item-bark-oak": "オークの樹皮",
