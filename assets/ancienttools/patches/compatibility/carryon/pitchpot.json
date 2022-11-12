@@ -1,0 +1,50 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/behaviorsByType/*-unmixed/-",
+		"value": {
+			name: "Carryable", properties: {
+
+			translation: [ 0, 0, 0 ],
+			rotation: [ 0, 0, 0 ],
+			origin: [ 0.5, 0.5, 0.5 ],
+			scale: [ 0.5, 0.5, 0.5 ],
+    
+			interactDelay: 0.4,
+				slots: {
+				"Hands": {
+					animation: "carryon:holdlight",
+					walkSpeedModifier: -0.15,
+				}
+				}
+			} 
+		},
+		"file": "ancienttools:blocktypes/pitchpot",
+		"dependsOn": [{ "modid": "carryon" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/behaviorsByType/@pitchpot-(empty|finishedpitch)/-",
+		"value": {
+			name: "Carryable", properties: {
+
+			translation: [ 0, 0, 0 ],
+			rotation: [ 0, 0, 0 ],
+			origin: [ 0.5, 0.5, 0.5 ],
+			scale: [ 0.5, 0.5, 0.5 ],
+    
+			interactDelay: 0.4,
+				slots: {
+				"Hands": {
+					animation: "carryon:holdlight",
+					walkSpeedModifier: -0.15,
+				},
+				}
+			} 
+		},
+		"file": "ancienttools:blocktypes/pitchpot",
+		"dependsOn": [{ "modid": "carryon" }],
+		"side": "Server"
+	}
+]

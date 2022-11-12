@@ -1,0 +1,26 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/behaviors/-",
+		"value": {
+			name: "Carryable", properties: {
+
+			translation: [ 0, 0, 0 ],
+			rotation: [ 0, 90, 0 ],
+			origin: [ 0.5, 0.5, 0.5 ],
+			scale: [ 0.5, 0.5, 0.5 ],
+    
+			interactDelay: 0.4,
+				slots: {
+				"Hands": {
+					animation: "carryon:holdlight",
+					walkSpeedModifier: -0.15,
+				}
+				}
+			} 
+		},
+		"file": "ancienttools:blocktypes/stretchingframe",
+		"dependsOn": [{ "modid": "carryon" }],
+		"side": "Server"
+	},
+]
