@@ -142,6 +142,7 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"blockhelp-saucer-insert-object": "松脂を入れる/蝋燭",
 	"blockhelp-scrape-log": "削り取る",
 
+	"blockinfo-curingrack": "一般的に塩漬け肉を熟成させる為に使用される。フックは付属していません。",
 	"blockinfo-curingrack-no-entity": "このブロックで問題が発生しました。 ブロックエンティティは存在しません。ブロックを壊して、もう一度置いて下さい。",
 	"blockinfo-curingrack-hook-missing": "フックがありません",
 	
@@ -341,6 +342,7 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"itemhelp-adze-stripbark": "剥かれた樹皮",
 	"itemhelp-heal": "回復",
 
+	"iteminfo-hook": "肉様熟成棚に設置して、様々な熟成可能な物を吊るすことが出来ます。",
 	"iteminfo-salve-heal": "使用すると{1}秒間に{0}のHPを回復する。",
 	"iteminfo-brain": "皮のなめしに使用されます。 10Lの水を入れた樽に入れて脳溶液を作成します。",
 	"iteminfo-brain-food": "煮込み料理にも使えます。",

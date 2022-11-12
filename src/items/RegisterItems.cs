@@ -6,6 +6,7 @@ namespace AncientTools.Items
     {
         public override void Start(ICoreAPI api)
         {
+            api.RegisterItemClass("ItemCuringHook", typeof(ItemCuringHook));
             api.RegisterItemClass("ItemSaltedMeat", typeof(ItemSaltedMeat));
             api.RegisterItemClass("ItemAdze", typeof(ItemAdze));
             api.RegisterItemClass("ItemBark", typeof(ItemBark));

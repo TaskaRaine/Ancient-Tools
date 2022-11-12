@@ -612,6 +612,7 @@
     <Compile Include="src\harmony\HarmonySetup.cs" />
     <Compile Include="src\items\ItemBark.cs" />
     <Compile Include="src\items\ItemBrain.cs" />
+    <Compile Include="src\items\ItemCuringHook.cs" />
     <Compile Include="src\utility\ModConfig.cs" />
     <Compile Include="src\utility\RegisterConfig.cs" />
     <None Include="assets\ancienttools\recipes\grid\tool\curinghook.json" />

@@ -137,6 +137,7 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"blockhelp-saucer-insert-object": "Insert Pitch/Candle",
 	"blockhelp-scrape-log": "Scrape",
 
+	"blockinfo-curingrack": "Typically used to cure salted meat. Hooks not included.",			//-- Needs FR and RU translation
 	"blockinfo-curingrack-no-entity": "Something went wrong with this block. The BlockEntity does not exist. Please break the block and place it again.",
 	"blockinfo-curingrack-hook-missing": "Hook Missing",		
 
@@ -336,6 +337,7 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"itemhelp-adze-stripbark": "Strip Bark",
 	"itemhelp-heal": "Heal",
 
+	"iteminfo-hook": "Can be placed on a curing rack to hang various curable objects.",				//-- Needs FR and RU translation
 	"iteminfo-salve-heal": "Heals {0} health over {1} seconds when used.",
 	"iteminfo-brain": "Used for hide tanning. Place in a barrel with 10L of water to create braining solution.",
 	"iteminfo-brain-food": "Can also be used to cook stews.",

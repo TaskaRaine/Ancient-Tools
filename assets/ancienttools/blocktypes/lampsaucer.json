@@ -112,8 +112,13 @@
 		rotation: { x: -1, y: -49, z: 5 }
 	},
 	tpHandTransform: {
-		translation: { x: -1.8, y: -0.6, z: -1.2 },
-		rotation: { x: 0, y: -85, z: 4 },
+		translation: { x: -1.8, y: -1.6, z: -1.2 },
+		rotation: { x: 90, y: -1, z: -90 },
+		scale: 0.4
+	},
+	tpOffHandTransform: {
+		translation: { x: -1.6, y: -1.6, z: -1.2 },
+		rotation: { x: 90, y: -1, z: -90 },
 		scale: 0.4
 	},
 	groundTransform: {
