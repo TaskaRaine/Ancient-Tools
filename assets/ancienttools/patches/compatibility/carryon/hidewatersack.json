@@ -1,0 +1,62 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/behaviorsByType/*-raw-*/-",
+		"value": {
+			name: "Carryable", properties: {
+
+			translation: [ 0, 0, 0 ],
+			rotation: [ 0, 0, 0 ],
+			origin: [ 0.5, 0.5, 0.5 ],
+			scale: [ 0.5, 0.5, 0.5 ],
+    
+			interactDelay: 0.4,
+				slots: {
+				"Hands": {
+					animation: "carryon:holdlight",
+					walkSpeedModifier: -0.15,
+				},
+				"Back": {
+					walkSpeedModifier: 0.0,
+					translation: [ 0.09375, 0, 0.03125 ],
+					rotation: [ 0, 0, -90 ],
+					scale: 0.6,
+				},
+				}
+			} 
+		},
+		"file": "ancienttools:blocktypes/hidewatersack",
+		"dependsOn": [{ "modid": "carryon" }],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/behaviorsByType/*-soaked-*/-",
+		"value": {
+			name: "Carryable", properties: {
+
+			translation: [ 0, 0, 0 ],
+			rotation: [ 0, 0, 0 ],
+			origin: [ 0.5, 0.5, 0.5 ],
+			scale: [ 0.5, 0.5, 0.5 ],
+    
+			interactDelay: 0.4,
+				slots: {
+				"Hands": {
+					animation: "carryon:holdlight",
+					walkSpeedModifier: -0.15,
+				},
+				"Back": {
+					walkSpeedModifier: 0.0,
+					translation: [ 0.09375, 0, 0.03125 ],
+					rotation: [ 0, 0, -90 ],
+					scale: 0.6,
+				},
+				}
+			} 
+		},
+		"file": "ancienttools:blocktypes/hidewatersack",
+		"dependsOn": [{ "modid": "carryon" }],
+		"side": "Server"
+	}
+]
