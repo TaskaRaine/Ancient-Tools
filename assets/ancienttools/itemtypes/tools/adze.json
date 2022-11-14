@@ -17,7 +17,7 @@
 			groupBy: ["adze-*"]
 		},
 		groundStorageTransform: {
-			translation: { x: 0.05, y: 0.05, z: 0 },
+			translation: { x: 0.05, y: 0.15, z: -0.05 },
 			rotation: { x: 13, y: 88, z: -87 },
 			scale: 0.88
 		},

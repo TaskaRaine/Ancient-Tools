@@ -11,6 +11,8 @@
 ### Releases
 
 #### Vintage Story 1.17.0+ 
+[Version 1.4.9](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.9/AncientTools_V1.4.9.zip)
+
 [Version 1.4.8](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.8/AncientTools_V1.4.8.zip)
 
 [Version 1.4.7](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.7/AncientTools_V1.4.7.zip)
@@ -65,6 +67,17 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.4.9
+Integrated the pull request created by NerdScurvy that enables CarryOn compatibility. Thanks so much!
+
+Chambersticks will now be held out instead of held up when viewed in third person or when held by another player.
+
+Adze tools will no longer sink into the ground when stored in ground storage.
+
+Curing hooks and curing racks now have some additional information that may help point players towards their correct usage without the need to scour the handbook.
+
+Updated the Japanese translation file with the two previously mentioned lines(Thanks Macto Hino!)
+
 #### Version 1.4.8
 Added compatiblity for the Acorns mod which allows acorn/bark flour breads to be made.
 

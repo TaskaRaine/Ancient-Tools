@@ -1,5 +1,6 @@
 ﻿{
 	code: "curinghook",
+	class: "ItemCuringHook",
 	creativeinventory: { "general": ["*"], "tools": ["*"], "ancienttools": ["*"] },
 	attributes: {
 		handbook: {

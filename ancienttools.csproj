@@ -192,6 +192,13 @@
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\hidewatersack.json" />
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\pitchpot.json" />
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\salvepot.json" />
+    <None Include="assets\ancienttools\patches\compatibility\carrycapacity\stretchingframe.json" />    
+    <None Include="assets\ancienttools\patches\compatibility\carryon\barkbasket.json" />
+    <None Include="assets\ancienttools\patches\compatibility\carryon\curingrack.json" />
+    <None Include="assets\ancienttools\patches\compatibility\carryon\hidewatersack.json" />
+    <None Include="assets\ancienttools\patches\compatibility\carryon\pitchpot.json" />
+    <None Include="assets\ancienttools\patches\compatibility\carryon\salvepot.json" />
+    <None Include="assets\ancienttools\patches\compatibility\carryon\stretchingframe.json" />    
     <None Include="assets\ancienttools\config\handbook\guide.json" />
     <None Include="assets\ancienttools\config\handbook\salveguide.json" />
     <None Include="assets\ancienttools\config\handbook\tanningguide.json" />
@@ -203,7 +210,6 @@
     <None Include="assets\ancienttools\itemtypes\tools\pestle.json" />
     <None Include="assets\ancienttools\itemtypes\resources\salveportion.json" />
     <None Include="assets\ancienttools\patches\block\salve.json" />
-    <None Include="assets\ancienttools\patches\compatibility\carrycapacity\stretchingframe.json" />
     <None Include="assets\ancienttools\patches\compatibility\dragonflies\mortar.json" />
     <None Include="assets\ancienttools\patches\compatibility\expandedfoods\agedmeat.json" />
     <None Include="assets\ancienttools\patches\compatibility\expandedfoods\mortar.json" />
@@ -625,6 +631,7 @@
     <Compile Include="src\items\ItemWedge.cs" />
     <Compile Include="src\utility\BlockEntityBaseClasses\DisplayInventory.cs" />
     <Compile Include="src\utility\Interfaces\IDisplayInventory.cs" />
+    <Compile Include="src\items\ItemCuringHook.cs" />
     <Compile Include="src\utility\ModConfig.cs" />
     <Compile Include="src\utility\RegisterConfig.cs" />
     <None Include="assets\ancienttools\recipes\grid\tool\curinghook.json" />
