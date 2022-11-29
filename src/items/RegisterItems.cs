@@ -14,6 +14,7 @@ namespace AncientTools.Items
             api.RegisterItemClass("ItemBrain", typeof(ItemBrain));
             api.RegisterItemClass("ItemWedge", typeof(ItemWedge));
             api.RegisterItemClass("ItemMallet", typeof(ItemMallet));
+            api.RegisterItemClass("ItemCart", typeof(ItemCart));
         }
     }
 }

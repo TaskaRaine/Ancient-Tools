@@ -150,8 +150,10 @@
     <None Include="assets\ancienttools\blocktypes\toolmoldancienttools.json" />
     <None Include="assets\ancienttools\compatibility\buildingplus\recipes\grid\strippedsupport.json" />
     <None Include="assets\ancienttools\config\handbook\pitchguide.json" />
+    <None Include="assets\ancienttools\entities\cart.json" />
     <None Include="assets\ancienttools\itemtypes\resources\powderedcharcoal.json" />
     <None Include="assets\ancienttools\itemtypes\resources\pitch.json" />
+    <None Include="assets\ancienttools\itemtypes\spawners\cart.json" />
     <None Include="assets\ancienttools\itemtypes\toolhead\adzehead.json" />
     <None Include="assets\ancienttools\lang\fr.json" />
     <None Include="assets\ancienttools\lang\ja.json" />
@@ -192,13 +194,13 @@
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\hidewatersack.json" />
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\pitchpot.json" />
     <None Include="assets\ancienttools\patches\compatibility\carrycapacity\salvepot.json" />
-    <None Include="assets\ancienttools\patches\compatibility\carrycapacity\stretchingframe.json" />    
+    <None Include="assets\ancienttools\patches\compatibility\carrycapacity\stretchingframe.json" />
     <None Include="assets\ancienttools\patches\compatibility\carryon\barkbasket.json" />
     <None Include="assets\ancienttools\patches\compatibility\carryon\curingrack.json" />
     <None Include="assets\ancienttools\patches\compatibility\carryon\hidewatersack.json" />
     <None Include="assets\ancienttools\patches\compatibility\carryon\pitchpot.json" />
     <None Include="assets\ancienttools\patches\compatibility\carryon\salvepot.json" />
-    <None Include="assets\ancienttools\patches\compatibility\carryon\stretchingframe.json" />    
+    <None Include="assets\ancienttools\patches\compatibility\carryon\stretchingframe.json" />
     <None Include="assets\ancienttools\config\handbook\guide.json" />
     <None Include="assets\ancienttools\config\handbook\salveguide.json" />
     <None Include="assets\ancienttools\config\handbook\tanningguide.json" />
@@ -591,12 +593,14 @@
     <Folder Include="assets\game\itemtypes\toolhead\" />
     <Folder Include="assets\game\recipes\" />
     <Folder Include="assets\game\shapes\block\clay\mold\" />
-    <Folder Include="src\entities\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\ancienttools\blocktypes\mortar.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\entity\aitask\FollowAttachedEntity.cs" />
+    <Compile Include="src\entity\aitask\RegisterAITasks.cs" />
+    <Compile Include="src\utility\TaskaMath.cs" />
     <None Include="assets\ancienttools\patches\compatibility\lichen\gemsbok.json" />
     <None Include="assets\ancienttools\patches\item\food\curedmeats.json" />
     <Compile Include="src\blockbehavior\BlockBehaviorConvertToResinLog.cs" />
@@ -620,6 +624,10 @@
     <Compile Include="src\blocks\WaterproofTorch.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorConvertHide.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorIngredientConversion.cs" />
+    <Compile Include="src\entities\EntityCart.cs" />
+    <Compile Include="src\entities\RegisterEntities.cs" />
+    <Compile Include="src\entityrenderer\CartRenderer.cs" />
+    <Compile Include="src\entityrenderer\RegisterEntityRenderer.cs" />
     <Compile Include="src\harmony\HarmonyBurning.cs" />
     <Compile Include="src\harmony\HarmonyFirepit.cs" />
     <Compile Include="src\harmony\HarmonyForge.cs" />
@@ -627,9 +635,11 @@
     <Compile Include="src\harmony\HarmonySetup.cs" />
     <Compile Include="src\items\ItemBark.cs" />
     <Compile Include="src\items\ItemBrain.cs" />
+    <Compile Include="src\items\ItemCart.cs" />
     <Compile Include="src\items\ItemMallet.cs" />
     <Compile Include="src\items\ItemWedge.cs" />
     <Compile Include="src\utility\BlockEntityBaseClasses\DisplayInventory.cs" />
+    <Compile Include="src\utility\EntityBaseClasses\EntityMobileStorage.cs" />
     <Compile Include="src\utility\Interfaces\IDisplayInventory.cs" />
     <Compile Include="src\items\ItemCuringHook.cs" />
     <Compile Include="src\utility\ModConfig.cs" />

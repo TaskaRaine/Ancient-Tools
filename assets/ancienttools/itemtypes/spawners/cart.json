@@ -1,0 +1,6 @@
+﻿{
+	code: "cart",
+	class: "ItemCart",
+	creativeinventory: { "general": ["*"], "ancienttools": ["*"] },
+	shape: { base: "entity/cart_lg" },
+}
