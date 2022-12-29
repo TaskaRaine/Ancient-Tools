@@ -1,0 +1,22 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes/cartPlacable",
+		"value": {
+			"translation": [-7.5, 6.5, -4.0],
+			"rotation": [0.0, 180.0, 0.0],
+			"scale": 1.0
+		},
+		"file": "game:blocktypes/wood/chest",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/mobileStorageProps",
+		"value": {
+			"quantitySlots": 16 
+		},
+		"file": "game:blocktypes/wood/chest",
+		"side": "Server"
+	}
+]

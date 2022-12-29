@@ -8,11 +8,56 @@ using Vintagestory.API.MathTools;
 
 namespace AncientTools.EntityRenderers
 {
-    class CartRenderer : EntityRenderer, ITexPositionSource
+    class CartRenderer : MobileStorageRenderer, ITexPositionSource
     {
-        public ICoreClientAPI Capi { get; set; }
+        public TextureAtlasPosition this[string textureCode]
+        {
+            get
+            {
+                AssetLocation texturePath = null;
+
+                if (CurrentShape != null)
+                {
+                    if (CurrentShape.Textures == null || !CurrentShape.Textures.ContainsKey(textureCode))
+                    {
+                        if (CartEntity.Properties.Client.Textures.ContainsKey(textureCode))
+                            texturePath = CartEntity.Properties.Client.Textures[textureCode].Base;
+                        else
+                        {
+                            if (InventoryShape != null)
+                            {
+                                if(InventoryShape.Textures.ContainsKey(textureCode))
+                                    texturePath = InventoryShape.Textures[textureCode];
+                            }
+                            else
+                                texturePath = CartEntity.Properties.Client.FirstTexture.Base;
+                        }   
+                    }
+                    else
+                        CurrentShape.Textures.TryGetValue(textureCode, out texturePath);
+                }
+
+                TextureAtlasPosition texpos = null;
+
+                if (texturePath != null)
+                    texpos = capi.EntityTextureAtlas[texturePath];
+
+                if (texpos == null)
+                {
+                    IAsset texAsset = Capi.Assets.TryGet(texturePath.Clone().WithPathPrefixOnce("textures/").WithPathAppendixOnce(".png"));
+                    if (texAsset != null)
+                    {
+                        Capi.EntityTextureAtlas.GetOrInsertTexture(texturePath, out _, out texpos);
+                    }
+                }
+
+                return texpos;
+            }
+        }
+
+        private const float DROPPED_HEIGHT = -0.2f;
+
         public EntityCart CartEntity { get; set; }
-        public Shape CurrentShape { get; set; }
         public ShapeElement CartElement { 
             get
             {
@@ -39,54 +84,18 @@ namespace AncientTools.EntityRenderers
                 CurrentShape.Elements[0].Children[1] = value;
             }
         }
+        public Shape InventoryShape { get; set; }
 
         public MeshRef MeshRef { get; set; }
         public MeshData MeshData { get; set; } = new MeshData();
 
         public Matrixf ModelMat = new Matrixf();
 
-        public Vec3f LookAtVector { get; set; } = new Vec3f(0.0f, 0.0f, 0.0f);
+        //public Vec3f LookAtVector { get; set; } = new Vec3f(DROPPED_HEIGHT, 0.0f, 0.0f);
+
         public Size2i AtlasSize => Capi.EntityTextureAtlas.Size;
-
-        public TextureAtlasPosition this[string textureCode]
-        {
-            get
-            {
-                AssetLocation texturePath = null;
-
-                if (CurrentShape != null)
-                {
-                    if (CurrentShape.Textures == null || !CurrentShape.Textures.ContainsKey(textureCode))
-                    {
-                        if (CartEntity.Properties.Client.Textures.ContainsKey(textureCode))
-                            texturePath = CartEntity.Properties.Client.Textures[textureCode].Base;
-                        else
-                            texturePath = CartEntity.Properties.Client.FirstTexture.Base;
-                    }
-                    else
-                        CurrentShape.Textures.TryGetValue(textureCode, out texturePath);
-                }
-
-                TextureAtlasPosition texpos = null;
-
-                if (texturePath != null)
-                    texpos = capi.EntityTextureAtlas[texturePath];
-
-                if (texpos == null)
-                {
-                    IAsset texAsset = Capi.Assets.TryGet(texturePath.Clone().WithPathPrefixOnce("textures/").WithPathAppendixOnce(".png"));
-                    if (texAsset != null)
-                    {
-                        Capi.EntityTextureAtlas.GetOrInsertTexture(texturePath, out _, out texpos);
-                    }
-                }
-
-                return texpos;
-            }
-        }
         public CartRenderer(EntityCart entity, ICoreClientAPI api): base(entity, api)
         {
-            Capi = api;
             CartEntity = entity;
 
             CartEntity.SetRendererReference(this);
@@ -94,6 +103,10 @@ namespace AncientTools.EntityRenderers
         public override void OnEntityLoaded()
         {
             InitializeShape();
+
+            //-- Required to prevent a crash on game load when an inventory is already placed on a cart --//
+            if(!CartEntity.MobileStorageInventory[0].Empty)
+                AssignStoragePlacementProperties(CartEntity.MobileStorageInventory[0]?.Itemstack?.Collectible?.Attributes["cartPlacable"]);
         }
         public void InitializeShape()
         {
@@ -105,14 +118,38 @@ namespace AncientTools.EntityRenderers
         }
         public virtual void TesselateShape()
         {
+            if(!CartEntity.MobileStorageInventory[0].Empty)
+            {
+                InventoryShape = Capi.Assets.Get<Shape>(new AssetLocation(CartEntity.MobileStorageInventory[0].Itemstack.Block.Shape.Base.Domain, "shapes/" + CartEntity.MobileStorageInventory[0].Itemstack.Block.Shape.Base.Path + ".json")) as Shape;
+            }
+            else if(CurrentShape.Elements[0].Children[2].Children != null)
+            {
+                CurrentShape.Elements[0].Children[2].Children = null;
+                InventoryShape = null;
+            }
+
             MeshData = GenMesh();
 
             UpdateMesh(MeshData);
         }
         public MeshData GenMesh()
         {
-            CurrentShape.Elements[0].RotationY = TaskaMath.ShortLerpDegrees(CurrentShape.Elements[0].RotationY, LookAtVector.Y * GameMath.RAD2DEG, 0.05);
-            CartElement.RotationX = TaskaMath.ShortLerpDegrees(CartElement.RotationX, LookAtVector.X * GameMath.RAD2DEG, 0.05);
+            CurrentShape.Elements[0].RotationY = TaskaMath.ShortLerpDegrees(CurrentShape.Elements[0].RotationY, CartEntity.LookAtVector.Y * GameMath.RAD2DEG, 0.05);
+            CartElement.RotationX = TaskaMath.ShortLerpDegrees(CartElement.RotationX, CartEntity.LookAtVector.X * GameMath.RAD2DEG, 0.05);
+            
+            if(InventoryShape != null)
+            {
+                CurrentShape.Elements[0].Children[2] = InventoryShape.Elements[0];
+                CurrentShape.Elements[0].Children[2].From = StoragePlacementProperties.Translation;
+                CurrentShape.Elements[0].Children[2].To = StoragePlacementProperties.Translation;
+                CurrentShape.Elements[0].Children[2].RotationOrigin = CartElement.RotationOrigin;
+                CurrentShape.Elements[0].Children[2].RotationX = CartElement.RotationX + StoragePlacementProperties.Rotation[0];
+                CurrentShape.Elements[0].Children[2].RotationY = StoragePlacementProperties.Rotation[1];
+                CurrentShape.Elements[0].Children[2].RotationZ = StoragePlacementProperties.Rotation[2];
+                CurrentShape.Elements[0].Children[2].ScaleX = StoragePlacementProperties.Scale;
+                CurrentShape.Elements[0].Children[2].ScaleY = StoragePlacementProperties.Scale;
+                CurrentShape.Elements[0].Children[2].ScaleZ = StoragePlacementProperties.Scale;
+            }
 
             if (CartEntity.AttachedEntity != null)
                 if (CartEntity.AttachedEntity.Controls.TriesToMove)
@@ -168,17 +205,6 @@ namespace AncientTools.EntityRenderers
                 prog.Stop();
             }
                 //Capi.Render.RenderMesh(MeshRef);
-        }
-        public void SetLookAtVector(Vec3f cartPos, Vec3f attachedEntityPos, Vec3f attachedEntityEyePos)
-        {
-            Vec3f normal = ((attachedEntityPos + (attachedEntityEyePos / 4)) - cartPos).Normalize();
-            //normal.Y = 0.325f;
-
-            double pitch = Math.Asin(normal.Y);
-            double yaw = Math.Atan2(-normal.X, -normal.Z);
-
-            LookAtVector.X = (float)pitch;
-            LookAtVector.Y = (float)yaw;
         }
         public override void Dispose()
         {

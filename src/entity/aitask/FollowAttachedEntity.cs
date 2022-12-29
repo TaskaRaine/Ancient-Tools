@@ -36,6 +36,13 @@ namespace AncientTools.Entities.Tasks
         }
         public override bool ContinueExecute(float dt)
         {
+            if (mobileStorageEntity.AttachedEntity == null)
+            {
+                pathTraverser.Stop();
+
+                return false;
+            }
+
             if (mobileStorageEntity.AttachedEntity.Controls.TriesToMove)
             {
                 pathTraverser.Retarget();
