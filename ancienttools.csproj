@@ -153,6 +153,7 @@
     <None Include="assets\ancienttools\entities\cart.json" />
     <None Include="assets\ancienttools\itemtypes\resources\powderedcharcoal.json" />
     <None Include="assets\ancienttools\itemtypes\resources\pitch.json" />
+    <None Include="assets\ancienttools\itemtypes\resources\wheel.json" />
     <None Include="assets\ancienttools\itemtypes\spawners\cart.json" />
     <None Include="assets\ancienttools\itemtypes\toolhead\adzehead.json" />
     <None Include="assets\ancienttools\lang\fr.json" />
@@ -259,6 +260,7 @@
     <None Include="assets\ancienttools\recipes\grid\compatibility\vanillavariants\dough.json" />
     <None Include="assets\ancienttools\recipes\grid\compatibility\vanillavariants\hidewatersack.json" />
     <None Include="assets\ancienttools\recipes\grid\compatibility\betterthanheresy\pitchpot.json" />
+    <None Include="assets\ancienttools\recipes\grid\spawners\cart.json" />
     <None Include="assets\ancienttools\recipes\grid\food\barkdough.json" />
     <None Include="assets\ancienttools\recipes\grid\food\sealedcrock.json" />
     <None Include="assets\ancienttools\recipes\grid\item\pitch.json" />
@@ -604,7 +606,8 @@
     <Compile Include="src\entityrenderer\MobileStorageRenderer.cs" />
     <Compile Include="src\entity\aitask\FollowAttachedEntity.cs" />
     <Compile Include="src\entity\aitask\RegisterAITasks.cs" />
-    <Compile Include="src\inventory\InventoryMobileStorageBlock.cs" />
+    <Compile Include="src\gui\GuiDialogMobileStorage.cs" />
+    <Compile Include="src\inventory\InventoryMobileStorage.cs" />
     <Compile Include="src\utility\EnumNetworkPackets.cs" />
     <Compile Include="src\utility\TaskaMath.cs" />
     <None Include="assets\ancienttools\patches\compatibility\lichen\gemsbok.json" />

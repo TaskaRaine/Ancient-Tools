@@ -1,4 +1,6 @@
 ﻿using AncientTools.EntityRenderers;
+using AncientTools.Gui;
+using AncientTools.Inventory;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,16 +18,20 @@ namespace AncientTools.Utility
     {
         protected float DroppedHeight { get; set; } = -0.2f;
         protected abstract int StorageBlocksCount { get; set; }
-        protected GuiDialogBlockEntityInventory InvDialog { get; set; }
+        protected GuiDialogMobileStorage InvDialog { get; set; }
 
         public ICoreClientAPI Capi { get; set; }
-        public InventoryGeneric MobileStorageInventory { get; set; }
-        public InventoryGeneric[] StorageBlockInventories { get; set; }
+        public InventoryMobileStorage MobileStorageInventory { get; set; }
+        //public InventoryGeneric[] StorageBlockInventories { get; set; }
 
         public EntityAgent AttachedEntity { get; set; }
         public EntityPos EntityTransform { get; set; }
         public Vec3f LookAtVector { get; set; } = new Vec3f(0.0f, 0.0f, 0.0f);
 
+        public EntityMobileStorage()
+        {
+            //AllowDespawn = false;
+        }
         public override void Initialize(EntityProperties properties, ICoreAPI api, long InChunkIndex3d)
         {
             base.Initialize(properties, api, InChunkIndex3d);
@@ -44,25 +50,22 @@ namespace AncientTools.Utility
 
             UpdateStorageContentsFromTree();
 
-            foreach (ItemSlot slot in MobileStorageInventory)
+            for(int i = 0; i < MobileStorageInventory.StorageSlotCount(); i++)
             {
-                slot.MaxSlotStackSize = 1;
+                MobileStorageInventory.GetStorageInventorySlot(0, i);
             }
-        }
-        public override void ToBytes(BinaryWriter writer, bool forClient)
-        {
-            UpdateTreesFromInventoryContents();
 
-            base.ToBytes(writer, forClient);
-        }
-        public override void FromBytes(BinaryReader reader, bool forClient)
-        {
-            base.FromBytes(reader, forClient);
-
-            //UpdateStorageContentsFromTree();
+            MobileStorageInventory.OnInventoryClosed += CloseClientDialog;
         }
         public override void OnReceivedClientPacket(IServerPlayer player, int packetid, byte[] data)
         {
+            if (packetid < 1000)
+            {
+                MobileStorageInventory.InvNetworkUtil.HandleClientPacket(player, packetid, data);
+
+                UpdateTreesFromInventoryContents();
+                return;
+            }
             if (packetid == (int)AncientToolsNetworkPackets.MobileStorageRotationSync)
             {
                 PerformServerRotationSync(data);
@@ -144,13 +147,6 @@ namespace AncientTools.Utility
 
             return inventoryShapes.ToArray();
         }
-        public void CreateNewStorageBlockInventory(int index)
-        {
-            StorageBlockInventories[index] = new InventoryGeneric(MobileStorageInventory[index].Itemstack.Collectible.Attributes["mobileStorageProps"]["quantitySlots"].AsInt(), this.Code.FirstCodePart() + "/" + EntityId.ToString(), null, Api);
-            
-            StorageBlockInventories[index].OnInventoryClosed += CloseClientDialog;
-        }
-
         protected TreeAttribute TreeData(byte[] data)
         {
             TreeAttribute tree = new TreeAttribute();
@@ -163,7 +159,7 @@ namespace AncientTools.Utility
 
             return tree;
         }
-        protected void UpdateTreesFromInventoryContents()
+        public void UpdateTreesFromInventoryContents()
         {
             if (MobileStorageInventory != null)
             {
@@ -171,41 +167,16 @@ namespace AncientTools.Utility
                 MobileStorageInventory.ToTreeAttributes(invtree);
                 WatchedAttributes["mobilestorageinventory"] = invtree;
             }
-
-            for (int i = 0; i < StorageBlocksCount; i++)
-            {
-                if (StorageBlockInventories[i] != null)
-                {
-                    ITreeAttribute invtree = new TreeAttribute();
-                    StorageBlockInventories[i].ToTreeAttributes(invtree);
-                    WatchedAttributes["storageblockinventories" + i] = invtree;
-                }
-            }
         }
-        protected void UpdateStorageContentsFromTree()
+        public void UpdateStorageContentsFromTree()
         {
             if (MobileStorageInventory == null || MobileStorageInventory.Empty)
-                GenerateBaseInventories();
+                MobileStorageInventory = new InventoryMobileStorage(this, StorageBlocksCount, this.Code.FirstCodePart() + "/" + EntityId.ToString(), null, Api);
 
             if (WatchedAttributes.HasAttribute("mobilestorageinventory"))
             {
                 MobileStorageInventory.FromTreeAttributes(WatchedAttributes.GetTreeAttribute("mobilestorageinventory"));
-
-                for (int i = 0; i < StorageBlocksCount; i++)
-                {
-                    if (WatchedAttributes.HasAttribute("storageblockinventories" + i))
-                    {
-                        CreateNewStorageBlockInventory(i);
-
-                        StorageBlockInventories[i].FromTreeAttributes(WatchedAttributes.GetTreeAttribute("storageblockinventories" + i));
-                    }
-                }
             }
-        }
-        protected void GenerateBaseInventories()
-        {
-            MobileStorageInventory = new InventoryGeneric(StorageBlocksCount, this.Code.FirstCodePart() + "/" + EntityId.ToString(), null, Api);
-            StorageBlockInventories = new InventoryGeneric[StorageBlocksCount];
         }
         protected void SendOpenInventoryPacket(EntityPlayer entityPlayer, int index)
         {
@@ -225,7 +196,7 @@ namespace AncientTools.Utility
                     writer.Write((byte)4);
                     writer.Write((byte)index);
                     TreeAttribute tree = new TreeAttribute();
-                    StorageBlockInventories[index].ToTreeAttributes(tree);
+                    MobileStorageInventory.ToTreeAttributes(tree);
                     tree.ToBytes(writer);
                     data = ms.ToArray();
                 }
@@ -237,7 +208,7 @@ namespace AncientTools.Utility
                     data
                 );
 
-                player.InventoryManager.OpenInventory(StorageBlockInventories[index]);
+                player.InventoryManager.OpenInventory(MobileStorageInventory);
             }
         }
         private void PerformServerRotationSync(byte[] data)
@@ -295,10 +266,10 @@ namespace AncientTools.Utility
                 tree.FromBytes(reader);
             }
 
-            StorageBlockInventories[index].FromTreeAttributes(tree);
-            StorageBlockInventories[index].ResolveBlocksOrItems();
+            MobileStorageInventory.FromTreeAttributes(tree);
+            MobileStorageInventory.ResolveBlocksOrItems();
 
-            InvDialog = new GuiDialogBlockEntityInventory(dialogTitle, StorageBlockInventories[index], Pos.AsBlockPos, cols, Api as ICoreClientAPI);
+            InvDialog = new GuiDialogMobileStorage(dialogTitle, this, MobileStorageInventory, cols, Api as ICoreClientAPI);
 
             /*
             Block block = Api.World.BlockAccessor.GetBlock(Pos);
@@ -306,7 +277,6 @@ namespace AncientTools.Utility
             string cs = block.Attributes?["closeSound"]?.AsString();
             AssetLocation opensound = os == null ? null : AssetLocation.Create(os, block.Code.Domain);
             AssetLocation closesound = cs == null ? null : AssetLocation.Create(cs, block.Code.Domain);
-
             invDialog.OpenSound = opensound ?? this.OpenSound;
             invDialog.CloseSound = closesound ?? this.CloseSound;
             */

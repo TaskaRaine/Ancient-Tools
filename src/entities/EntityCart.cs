@@ -44,7 +44,7 @@ namespace AncientTools.Entities
 
             if (mode == EnumInteractMode.Interact)
             {
-                if(byEntity.Controls.ShiftKey)
+                if(byEntity.ServerControls.ShiftKey)
                 {
                     if(AttachedEntity == null)
                     {
@@ -66,12 +66,14 @@ namespace AncientTools.Entities
                             DropCart();
                     }
                 }
-                else if(itemslot.Empty && !CartInventorySlot.Empty && byEntity.Controls.CtrlKey)
+                else if(itemslot.Empty && !CartInventorySlot.Empty && byEntity.ServerControls.CtrlKey)
                 {
                     if (CartInventorySlot.Itemstack?.Collectible?.Attributes?.KeyExists("cartPlacable") == true)
                     {
                         byEntity.TryGiveItemStack(CartInventorySlot.TakeOutWhole());
                         CartInventorySlot.MarkDirty();
+
+                        MobileStorageInventory.RemoveEmptyStorage(0);
                     }
                 }
                 else if(CartInventorySlot.Empty)
@@ -82,7 +84,7 @@ namespace AncientTools.Entities
                         CartInventorySlot.MarkDirty();
                         itemslot.MarkDirty();
 
-                        CreateNewStorageBlockInventory(0);
+                        MobileStorageInventory.GenerateEmptyStorageInventory(CartInventorySlot.Itemstack.Collectible.Attributes["mobileStorageProps"]["quantitySlots"].AsInt());
 
                         if (Api.Side == EnumAppSide.Client)
                             Renderer.AssignStoragePlacementProperties(CartInventorySlot.Itemstack?.Collectible?.Attributes["cartPlacable"]);

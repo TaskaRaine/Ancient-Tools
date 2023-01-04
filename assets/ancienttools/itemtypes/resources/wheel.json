@@ -1,0 +1,45 @@
+﻿{
+	code: "wheel",
+	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
+	attributes: {
+		handbook: {
+			groupBy: ["wheel-*"]
+		},
+		groundStorageTransform: {
+			translation: { x: 0.0, y: -0.15, z: -0.05 },
+			rotation: { x: 13, y: 88, z: -87 },
+			scale: 1.0
+		},
+	},
+	variantgroups: [
+        { code: "material", states: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint" ] },
+    ],
+	behaviors: [{
+		name: "GroundStorable",
+		properties: {
+			layout: 'WallHalves',
+			wallOffY: 1,
+			sprintKey: true,
+			selectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.35, z2: 1 },
+			collisionBox: { x1: 0, y1: 0, z1: 0, x2: 0, y2: 0, z2: 0 },
+		}
+	}],
+	drawtype: "json",
+	shapeByType: { 
+		"@wheel-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": { base: "ancienttools:item/resource/wheel" },
+	},
+	texturesByType: {
+		"@wheel-(chert|granite|andesite|basalt|obsidian|peridotite)": { 
+			"wheel": { base: "game:block/stone/rock/{material}1" },
+		},
+		"wheel-flint": { 
+			"wheel": { base: "game:block/stone/{material}" },
+		},
+	},
+	maxstacksize: 2,
+	guiTransform: {
+		rotation: { x: -90, y: 0, z: -18 },
+		origin: { x: 0.5, y: 0.1, z: 0.5 },
+		scale: 2.81
+	},
+}

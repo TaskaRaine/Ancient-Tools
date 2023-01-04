@@ -4,10 +4,10 @@
 	attributes: {
 	},
 	fallDamage: false,
-	SelectionBoxSize: { x: 1, y: 0.5 },
-	CollisionBoxSize: { x: 1, y: 0.5 },
-	DeadSelectionBoxSize: { x: 1, y: 0.5 },
-	DeadCollisionBoxSize: { x: 1, y: 0.5 },
+	SelectionBoxSize: { x: 1, y: 1 },
+	CollisionBoxSize: { x: 1, y: 1 },
+	DeadSelectionBoxSize: { x: 1, y: 1 },
+	DeadCollisionBoxSize: { x: 1, y: 1 },
 	eyeHeight: 0.5,
 	server: {
 		behaviors: [
