@@ -4,9 +4,7 @@
 	attributes: {
 		handbook: {
 			groupBy: ["beam-*"],
-			extraSections: [
-				{ title: "handbook-crafting-title-beam", text: "handbook-crafting-text-beam" }
-			]
+			createdBy: "ancienttools:handbook-woodsplitting-craftinfo"
 		}
 	},
 	behaviors: [{ 
@@ -82,15 +80,24 @@
 	},
 	maxStackSize: 16,
 	materialDensity: 700,
-	heldTpIdleAnimation: "holdbothhandslarge", heldTpUseAnimation: "twohandplaceblock",
 	guiTransform: {
 		rotation: { x: 0, y: 50, z: 63 },
 		origin: { x: 0.7, y: -0.1, z: 0 },
 		scale: 1.5
 	},
+	fpHandTransform: {
+		origin: { x: 0.5, y: 0.3, z: 0.5 }
+	},
 	tpHandTransform: {
 		translation: { x: -1.2, y: -1.1, z: -0.8 },
-		rotation: { x: -2, y: 25, z: -78 },
-		scale: 0.37
+		rotation: { x: 4, y: 16, z: -78 },
+		origin: { x: 0.3, y: 0.6, z: 0.45 },
+		scale: 0.42
 	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 90, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.5, z: 0.6299 },
+		scale: 3
+	}
 }

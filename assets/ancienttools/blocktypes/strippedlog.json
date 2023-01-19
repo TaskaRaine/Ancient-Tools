@@ -4,9 +4,7 @@
     attributes: {
 		handbook: {
 			groupBy: ["strippedlog-*"],
-			extraSections: [
-				{ title: "handbook-crafting-title-strippedlog", text: "handbook-crafting-text-strippedlog" }
-			]
+			createdBy: "ancienttools:handbook-barkstripping-craftinfo"
 		}
 	},
 	classByType: {

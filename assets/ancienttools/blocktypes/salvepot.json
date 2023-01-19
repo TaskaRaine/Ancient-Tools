@@ -17,6 +17,14 @@
 					translation: { x: 0, y: 0.125, z: 0 } 
 				},
 				useFirepitModel: "Wide"
+			},
+			handbook: {
+				createdBy: "ancienttools:handbook-salve-craftinfo"
+			}
+		},
+		"*": {
+			handbook: {
+				createdBy: "ancienttools:handbook-salve-craftinfo"
 			}
 		}
 	},

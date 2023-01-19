@@ -180,12 +180,6 @@ namespace AncientTools.Blocks
 
             return stringBuilder.ToString();
         }
-        public override void GetHeldItemInfo(ItemSlot inSlot, StringBuilder dsc, IWorldAccessor world, bool withDebugInfo)
-        {
-            base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
-
-            dsc.Append("\n" + Lang.Get("ancienttools:blockinfo-curingrack"));
-        }
         public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
         {
             if(world.BlockAccessor.GetBlockEntity(selection.Position) is BECuringRack entityCuringRack)

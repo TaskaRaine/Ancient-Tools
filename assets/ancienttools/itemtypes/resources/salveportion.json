@@ -7,9 +7,7 @@
 		healingtime: 30,
 
 		handbook: {
-			extraSections: [
-				{ title: "handbook-crafting-title-salveportion", text: "handbook-crafting-text-salveportion" }
-			]
+			createdBy: "ancienttools:handbook-salve-craftinfo"
 		}
 	},
 	shape: { base: "item/resource/salveportion" },

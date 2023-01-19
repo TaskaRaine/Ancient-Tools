@@ -149,13 +149,18 @@
     <None Include="assets\ancienttools\blocktypes\strippedlog.json" />
     <None Include="assets\ancienttools\blocktypes\toolmoldancienttools.json" />
     <None Include="assets\ancienttools\compatibility\buildingplus\recipes\grid\strippedsupport.json" />
+    <None Include="assets\ancienttools\config\handbook\barkstrippingguide.json" />
+    <None Include="assets\ancienttools\config\handbook\mobilestoragefeature.json" />
     <None Include="assets\ancienttools\config\handbook\pitchguide.json" />
+    <None Include="assets\ancienttools\config\handbook\woodsplittingguide.json" />
     <None Include="assets\ancienttools\entities\cart.json" />
     <None Include="assets\ancienttools\itemtypes\resources\powderedcharcoal.json" />
     <None Include="assets\ancienttools\itemtypes\resources\pitch.json" />
     <None Include="assets\ancienttools\itemtypes\resources\wheel.json" />
     <None Include="assets\ancienttools\itemtypes\spawners\cart.json" />
     <None Include="assets\ancienttools\itemtypes\toolhead\adzehead.json" />
+    <None Include="assets\ancienttools\itemtypes\tools\mallet.json" />
+    <None Include="assets\ancienttools\itemtypes\tools\wedge.json" />
     <None Include="assets\ancienttools\lang\fr.json" />
     <None Include="assets\ancienttools\lang\ja.json" />
     <None Include="assets\ancienttools\lang\ru.json" />
@@ -260,10 +265,14 @@
     <None Include="assets\ancienttools\recipes\grid\compatibility\vanillavariants\dough.json" />
     <None Include="assets\ancienttools\recipes\grid\compatibility\vanillavariants\hidewatersack.json" />
     <None Include="assets\ancienttools\recipes\grid\compatibility\betterthanheresy\pitchpot.json" />
+    <None Include="assets\ancienttools\recipes\grid\item\wheel.json" />
     <None Include="assets\ancienttools\recipes\grid\spawners\cart.json" />
     <None Include="assets\ancienttools\recipes\grid\food\barkdough.json" />
     <None Include="assets\ancienttools\recipes\grid\food\sealedcrock.json" />
     <None Include="assets\ancienttools\recipes\grid\item\pitch.json" />
+    <None Include="assets\ancienttools\recipes\grid\tool\mallet.json" />
+    <None Include="assets\ancienttools\recipes\knapping\mallethead.json" />
+    <None Include="assets\ancienttools\recipes\knapping\wedge.json" />
     <None Include="assets\ancienttools\recipes\smithing\lampsaucer.json" />
     <None Include="assets\ancienttools\shapes\block\curingrack\full_curingrack_plus.json" />
     <None Include="assets\ancienttools\shapes\block\curingrack\left_curingrack_plus.json" />
@@ -593,6 +602,7 @@
     <Folder Include="assets\ancienttools\patches\lang\" />
     <Folder Include="assets\ancienttools\shapes\block\piles\" />
     <Folder Include="assets\ancienttools\shapes\entity\cart_inventories\" />
+    <Folder Include="assets\ancienttools\sounds\effect\" />
     <Folder Include="assets\ancienttools\textures\block\food\pie\" />
     <Folder Include="assets\ancienttools\textures\item\food\flour\" />
     <Folder Include="assets\game\itemtypes\toolhead\" />
@@ -603,12 +613,17 @@
     <None Include="assets\ancienttools\blocktypes\mortar.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\collectiblebehavior\CollectibleBehaviorWedgeSmack.cs" />
     <Compile Include="src\entityrenderer\MobileStorageRenderer.cs" />
     <Compile Include="src\entity\aitask\FollowAttachedEntity.cs" />
     <Compile Include="src\entity\aitask\RegisterAITasks.cs" />
+    <Compile Include="src\entity\behavior\EntityBehaviorHealthNoRecover.cs" />
+    <Compile Include="src\entity\behavior\RegisterEntityBehaviors.cs" />
     <Compile Include="src\gui\GuiDialogMobileStorage.cs" />
     <Compile Include="src\inventory\InventoryMobileStorage.cs" />
     <Compile Include="src\utility\EnumNetworkPackets.cs" />
+    <Compile Include="src\utility\Interfaces\IAttributeVariant.cs" />
+    <Compile Include="src\utility\ItemBaseClasses\ItemAttributeVariant.cs" />
     <Compile Include="src\utility\TaskaMath.cs" />
     <None Include="assets\ancienttools\patches\compatibility\lichen\gemsbok.json" />
     <None Include="assets\ancienttools\patches\item\food\curedmeats.json" />
@@ -663,7 +678,7 @@
     <Compile Include="src\blocks\salves\UnmixedSalve.cs" />
     <Compile Include="src\collectiblebehavior\RegisterCollectibleBehaviors.cs" />
     <Compile Include="src\config\AncientToolsConfig.cs" />
-    <Compile Include="src\entity\behavior\SalveHeal.cs" />
+    <Compile Include="src\entity\behavior\EntityBehaviorSalveHeal.cs" />
     <Compile Include="src\items\ItemAdze.cs" />
     <Compile Include="src\items\ItemSalvePortion.cs" />
     <Compile Include="src\items\RegisterItems.cs" />

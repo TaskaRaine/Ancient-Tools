@@ -1,10 +1,12 @@
-﻿using Vintagestory.API.Common;
+﻿using AncientTools.Utility;
+using Vintagestory.API.Client;
+using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.MathTools;
 
 namespace AncientTools.Items
 {
-    class ItemCart : Item
+    class ItemCart : ItemAttributeVariant
     {
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
         {
@@ -16,6 +18,11 @@ namespace AncientTools.Items
 
             EntityProperties entityType = api.World.GetEntityType(new AssetLocation("ancienttools", "cart"));
             Entity entity = api.World.ClassRegistry.CreateEntity(entityType);
+
+            CurrentType = slot.Itemstack.Attributes.GetString("type", "unknown");
+
+            entity.WatchedAttributes.SetString("type", CurrentType);
+            entity.WatchedAttributes.MarkAllDirty();
 
             entity.ServerPos.SetPos(spawnPos);
 

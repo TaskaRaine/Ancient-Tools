@@ -1,0 +1,26 @@
+﻿[
+	{
+		ingredientPattern: "PBPB BPBP",
+		width: 3,
+		height: 3,
+		ingredients: {
+			"P": {
+				type: "item",
+				code: "ancienttools:beam-*",
+				name: "wood",
+				quantity: 1
+			},
+			"B": {
+				type: "item",
+				name: "wood",
+				code: "game:plank-*",
+				quantity: 2
+			}
+		},
+		output: {
+			type: "item",
+			code: "ancienttools:wheel-{wood}",
+			quantity: 1
+		}
+	}
+]

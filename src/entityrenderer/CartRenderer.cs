@@ -5,11 +5,13 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.MathTools;
+using Vintagestory.GameContent;
 
 namespace AncientTools.EntityRenderers
 {
-    class CartRenderer : MobileStorageRenderer, ITexPositionSource
+    class CartRenderer : MobileStorageRenderer
     {
+        /*
         public TextureAtlasPosition this[string textureCode]
         {
             get
@@ -54,7 +56,7 @@ namespace AncientTools.EntityRenderers
                 return texpos;
             }
         }
-
+        */
         private const float DROPPED_HEIGHT = -0.2f;
 
         public EntityCart CartEntity { get; set; }
@@ -84,7 +86,7 @@ namespace AncientTools.EntityRenderers
                 CurrentShape.Elements[0].Children[1] = value;
             }
         }
-        public Shape InventoryShape { get; set; }
+        //public Shape InventoryShape { get; set; }
 
         public MeshRef MeshRef { get; set; }
         public MeshData MeshData { get; set; } = new MeshData();
@@ -93,7 +95,7 @@ namespace AncientTools.EntityRenderers
 
         //public Vec3f LookAtVector { get; set; } = new Vec3f(DROPPED_HEIGHT, 0.0f, 0.0f);
 
-        public Size2i AtlasSize => Capi.EntityTextureAtlas.Size;
+        //public Size2i AtlasSize => Capi.EntityTextureAtlas.Size;
         public CartRenderer(EntityCart entity, ICoreClientAPI api): base(entity, api)
         {
             CartEntity = entity;
@@ -105,12 +107,21 @@ namespace AncientTools.EntityRenderers
             InitializeShape();
 
             //-- Required to prevent a crash on game load when an inventory is already placed on a cart --//
-            if(!CartEntity.MobileStorageInventory[0].Empty)
-                AssignStoragePlacementProperties(CartEntity.MobileStorageInventory[0]?.Itemstack?.Collectible?.Attributes["cartPlacable"]);
+            if (!CartEntity.MobileStorageInventory[0].Empty)
+            {
+                if (CartEntity.MobileStorageInventory[0].Itemstack.Collectible is BlockGenericTypedContainer)
+                {
+                    string type = CartEntity.MobileStorageInventory[0].Itemstack.Attributes.GetString("type");
+
+                    AssignStoragePlacementProperties(CartEntity.MobileStorageInventory[0]?.Itemstack?.Collectible?.Attributes["cartPlacable"][type]);
+                }
+                else
+                    AssignStoragePlacementProperties(CartEntity.MobileStorageInventory[0]?.Itemstack?.Collectible?.Attributes["cartPlacable"]);
+            }
         }
         public void InitializeShape()
         {
-            CurrentShape = Capi.Assets.TryGet("ancienttools:shapes/entity/cart_lg.json").ToObject<Shape>();
+            CurrentShape = Capi.Assets.TryGet("ancienttools:shapes/entity/cart_lg_woodwheel.json").ToObject<Shape>();
         }
         public override void BeforeRender(float dt)
         {
@@ -120,12 +131,26 @@ namespace AncientTools.EntityRenderers
         {
             if(!CartEntity.MobileStorageInventory[0].Empty)
             {
-                InventoryShape = Capi.Assets.Get<Shape>(new AssetLocation(CartEntity.MobileStorageInventory[0].Itemstack.Block.Shape.Base.Domain, "shapes/" + CartEntity.MobileStorageInventory[0].Itemstack.Block.Shape.Base.Path + ".json")) as Shape;
+                if (CartEntity.MobileStorageInventory[0].Itemstack.Collectible is BlockGenericTypedContainer)
+                {
+                    string type = CartEntity.MobileStorageInventory[0].Itemstack.Attributes.GetString("type");
+
+                    try 
+                    {
+                        InventoryShapes[0] = Capi.Assets.Get<Shape>(new AssetLocation(CartEntity.MobileStorageInventory[0].Itemstack.Collectible.Attributes["mobileStorageProps"][type]["shape"].AsString() + ".json"));
+                    }
+                    catch
+                    {
+                        InventoryShapes[0] = Capi.Assets.Get<Shape>(new AssetLocation(CartEntity.MobileStorageInventory[0].Itemstack.Block.Shape.Base.Domain, "shapes/" + CartEntity.MobileStorageInventory[0].Itemstack.Block.Shape.Base.Path + ".json")) as Shape;
+                    }
+                }
+                else
+                    InventoryShapes[0] = Capi.Assets.Get<Shape>(new AssetLocation(CartEntity.MobileStorageInventory[0].Itemstack.Block.Shape.Base.Domain, "shapes/" + CartEntity.MobileStorageInventory[0].Itemstack.Block.Shape.Base.Path + ".json")) as Shape;
             }
             else if(CurrentShape.Elements[0].Children[2].Children != null)
             {
                 CurrentShape.Elements[0].Children[2].Children = null;
-                InventoryShape = null;
+                InventoryShapes[0] = null;
             }
 
             MeshData = GenMesh();
@@ -137,9 +162,9 @@ namespace AncientTools.EntityRenderers
             CurrentShape.Elements[0].RotationY = TaskaMath.ShortLerpDegrees(CurrentShape.Elements[0].RotationY, CartEntity.LookAtVector.Y * GameMath.RAD2DEG, 0.05);
             CartElement.RotationX = TaskaMath.ShortLerpDegrees(CartElement.RotationX, CartEntity.LookAtVector.X * GameMath.RAD2DEG, 0.05);
             
-            if(InventoryShape != null)
+            if(InventoryShapes[0] != null)
             {
-                CurrentShape.Elements[0].Children[2] = InventoryShape.Elements[0];
+                CurrentShape.Elements[0].Children[2] = InventoryShapes[0].Elements[0];
                 CurrentShape.Elements[0].Children[2].From = StoragePlacementProperties.Translation;
                 CurrentShape.Elements[0].Children[2].To = StoragePlacementProperties.Translation;
                 CurrentShape.Elements[0].Children[2].RotationOrigin = CartElement.RotationOrigin;
@@ -208,7 +233,7 @@ namespace AncientTools.EntityRenderers
         }
         public override void Dispose()
         {
-            
+            MeshRef?.Dispose();
         }
     }
 }

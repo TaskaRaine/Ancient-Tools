@@ -17,13 +17,7 @@ To create an adze, an <a href=\'handbooksearch://adze head\'>adze head</a> must 
 
 Stone adze heads can also be crafted with bone for an extra sturdy tool!
 
-The <a href=\'handbook://item-ancienttools:bark-oak\'>tree bark</a> that you collect can be used for a variety of different purposes. Bark can make for an excellent firestarter in place of firewood. Or, it can be woven to create cute little <a href=\'handbooksearch://bark basket\'>bark baskets</a> to place things in.
-
-<a href=\'handbook://item-ancienttools:bark-birch\'>Birch bark</a> and <a href=\'handbook://item-ancienttools:bark-pine\'>pine bark</a> are a special arboreal resource in that they possess some unique properties that we can take advantage of. 
-
-The inner layer of bark from either tree is edible can be ground down into a <a href=\'handbooksearch://flour\'>flour</a> that can then be baked into <a href=\'handbooksearch://bread\'>bread</a>. This was a Scandanavian tradition of the indigenous Sami culture. 
-
-Both varities of bark also have various medicinal properties. Have a look at the <a href=\"handbook://ancienttools-quickstart-guide-salve\">salve preparation guide</a> if you're interested in taking advantage of them!
+More details about the uses for bark and stripped logs can be found in the <a href=\"handbook://ancienttools-quickstart-guide-barkstripping\">bark stripping guide</a>.
 
 <font weight='bold'>Curing Rack</font>
 Curing meats with <a href=\'handbook://item-salt\'>salt</a> is a centuries-old practice of preservation. This requires a carefully controlled environment to ensure the meat doesn't rot before the meat is cured. A cellar is recommended!
@@ -50,6 +44,21 @@ A detailed explanation of how to produce pitch can be found in the <a href=\"han
 
 Note: Since resin is so integral to Ancient Tools pitch production, a system has been implemented that allows knives to scrape pine and acacia trees to create leaking logs. This system can be disabled in the mod config files.
 ",
+	"game:ancienttools-quickstart-guide-barkstripping": "Bark Stripping Guide",
+	"game:ancienttools-quickstart-title-barkstripping": "Crafting Mechanic: Bark Stripping",
+	"game:ancienttools-quickstart-text-barkstripping": "
+<font weight='bold' align='center'>Bark Stripping Guide</font><br>
+
+After you've aquired an <a href=\'handbooksearch://adze\'>adze</a>, it's time to get stripping!
+
+The <a href=\'handbook://item-ancienttools:bark-oak\'>tree bark</a> that you collect can be used for a variety of different purposes. Bark can make for an excellent firestarter in place of firewood. Or, it can be woven to create cute little <a href=\'handbooksearch://bark basket\'>bark baskets</a> to place things in.
+
+<a href=\'handbook://item-ancienttools:bark-birch\'>Birch bark</a> and <a href=\'handbook://item-ancienttools:bark-pine\'>pine bark</a> are a special arboreal resource in that they possess some unique properties that we can take advantage of. 
+
+The inner layer of bark from either tree is edible can be ground down into a <a href=\'handbooksearch://flour\'>flour</a> that can then be baked into <a href=\'handbooksearch://bread\'>bread</a>. This was a Scandanavian tradition of the indigenous Sami culture. 
+
+Both varities of bark also have various medicinal properties. Have a look at the <a href=\"handbook://ancienttools-quickstart-guide-salve\">salve preparation guide</a> if you're interested in taking advantage of them!
+",
 	"game:ancienttools-quickstart-guide-salve": "Salve Guide",
 	"game:ancienttools-quickstart-title-salve": "Crafting Mechanic: Salve Creation",
 	"game:ancienttools-quickstart-text-salve": "
@@ -58,7 +67,7 @@ Tree bark has had many various uses throughout history. Many trees, such as <a h
 
 <a href=\'handbook://item-ancienttools:salveportion\'>Salves</a> are sometimes created by homesteaders then applied to the skin to take advantage of these properties. To create a salve with Ancient Tools, first, you must convert two cooking pots into <a href=\'handbook://block-ancienttools:salvepot-empty\'>empty salve containers</a>. This can be done by crouching then pressing <icon name='rightmousebutton'></icon> with a salve ingredient(<a href=\'handbook://item-ancienttools:bark-birch\'>birch</a>/<a href=\'handbook://item-ancienttools:bark-birch\'>pine</a> bark, <a href=\'handbook://item-fat\'>fat</a>, or <a href=\'handbook://item-beeswax\'>beeswax</a>) or by crafting a <a href=\'handbook://block-ckaypot-burned\'>cooking pot</a> in the grid with a medicinal bark.
 
-Place both <a href=\'handbook://block-ancienttools:salvepot-empty\'>empty containers</a> on the ground. Fill one with <a href=\'handbook://item-ancienttools:bark-birch\'>birch</a>OR<a href=\'handbook://item-ancienttools:bark-birch\'>pine</a> bark and <a href=\'handbook://item-fat\'>fat</a>, then the other with <a href=\'handbook://item-beeswax\'>beeswax</a>. Heat both in a firepit to convert them to prepared versions. 
+Place both <a href=\'handbook://block-ancienttools:salvepot-empty\'>empty containers</a> on the ground. Fill one with <a href=\'handbook://item-ancienttools:bark-birch\'>birch</a> OR <a href=\'handbook://item-ancienttools:bark-birch\'>pine</a> bark and <a href=\'handbook://item-fat\'>fat</a>, then the other with <a href=\'handbook://item-beeswax\'>beeswax</a>. Heat both in a firepit to convert them to prepared versions. 
 
 Finally, place one prepared container on the ground then crouch and hold <icon name='rightmousebutton'></icon> with the other container in hand to pour them together. Congratulations, you made a healing salve! <icon name='rightmousebutton'></icon> the finished salve to extract a <a href=\'handbook://item-ancienttools:salveportion\'>portion</a> that will heal over time when used.
 
@@ -102,6 +111,43 @@ Next, fill up the container using <icon name='rightmousebutton'></icon> with 2 p
 
 Now, simply pick up the mixture and heat it in the nearest firepit to create <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>prepared pitch</a>. When it's been finished, you can place the pot on the ground and take pieces of pitch by using a <a href=\'handbook://item-stick\'>stick</a>.
 	",
+	"game:ancienttools-quickstart-guide-woodsplitting": "Wood Splitting Guide",
+	"game:ancienttools-quickstart-title-woodsplitting": "Crafting Mechanic: Wood Splitting",
+	"game:ancienttools-quickstart-text-woodsplitting": "
+<font weight='bold' align='center'>Wood Splitting Guide</font><br>
+
+Sometimes, wooden logs are just too large to be useful. Wood splitting, otherwise known as cleaving, was a common technique for shaping wood into more usable dimensions during the Neolithic era right up until the Pre-Industrial era.
+
+To accomplish this task, many cultures drove <a href=\'handbooksearch://wedge\'>wedges</a> into the grain of the wood using a <a href=\'handbooksearch://wedge\'>mallet</a> to create smaller, yet sturdy wooden products.
+
+Similarly, <a href=\'handbooksearch://wedge\'>wedges</a>, either crafted from stone or forged, can be placed into any upright-standing <a href=\'handbooksearch://stripped log\'>stripped log</a> using <icon name='rightmousebutton'></icon> then smacked with a <a href=\'handbooksearch://wedge\'>mallet</a> with <icon name='leftmousebutton'></icon>. As each quarter is split away, a fancy new <a href=\'handbooksearch://beam\'>beam</a> will be yours for the taking!
+
+<a href=\'handbooksearch://beam\'>Beams</a> are an essential construction component for <a href=\'handbooksearch://wheel\'>wheels</a> and <a href=\"handbook://ancienttools-quickstart-feature-mobilestorage\">mobile storage</a> from Ancient Tools. 
+	",
+
+	"game:ancienttools-quickstart-feature-mobilestorage": "Mobile Storage Feature",
+	"game:ancienttools-quickstart-title-mobilestorage": "Feature: Mobile Storage",
+	"game:ancienttools-quickstart-text-mobilestorage": "
+<font weight='bold' align='center'>Mobile Storage</font><br>
+
+The wheel is considered by most to be the most impactful invention of human history. It is possible that the device was conceived during the late Neolithic era but, only when metal tools were more abundantly available during the Bronze era, did the wheel have a significant worldwide impact.
+
+The wheel singlehandedly revolutionized the idea of transportation across vast distances. A whole new wave on inventions were constructed to deliver objects and people from one place to another. 
+
+Ancient Tools looks to incorporate a wide variety of transportation options inspired by history.
+
+<font weight='bold' align='center'>Carts</font><br>
+
+<a href=\'handbooksearch://cart\'>Carts</a> are simple two-wheeled constructions primarily made of wooden <a href=\'handbooksearch://board\'>boards</a> and <a href=\'handbooksearch://beam\'>beams</a> that may be all a wandering trader needs in life. 
+
+To build a <a href=\'handbooksearch://cart\'>cart</a> of your own, all you need is a single <a href=\'handbook://block-woodenaxle-ud'>axle</a>, a couple of <a href=\'handbook://item-ancienttools:wheel-oak\'>wheels</a>, a handful of <a href=\'handbook://item-ancienttools:beam-oak\'>beams</a>, and a bunch of <a href=\'handbook://item-board-oak\'>boards</a> arranged neatly in the crafting grid!
+	",
+
+	"handbook-smelting-craftinfo": "<a href=\"handbook://craftinginfo-smelting\">Smelting</a>",
+	"handbook-barkstripping-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-barkstripping\">Bark Stripping</a>",
+	"handbook-salve-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-salve\">Salve Preparation</a>",
+	"handbook-mixingpitch-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-pitch\">Mixing Pitch</a>",
+	"handbook-woodsplitting-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-woodsplitting\">Wood Splitting</a>",
 
 	"blockhelp-place-pestle": "Place Pestle",
 	"blockhelp-place-resource": "Place Grindable Resource",
@@ -137,7 +183,9 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"blockhelp-saucer-insert-object": "Insert Pitch/Candle",
 	"blockhelp-scrape-log": "Scrape",
 
-	"blockinfo-curingrack": "Typically used to cure salted meat. Hooks not included.",			//-- Needs FR and RU translation
+	"blockhelp-place-wedge": "Insert Wedge",
+	"blockhelp-smack-wedge": "Smack Wedge",
+
 	"blockinfo-curingrack-no-entity": "Something went wrong with this block. The BlockEntity does not exist. Please break the block and place it again.",
 	"blockinfo-curingrack-hook-missing": "Hook Missing",		
 
@@ -164,23 +212,13 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"blockinfo-pitch-empty-grass": "{0}/{1} grass",
 	"blockinfo-pitch-remaining": "{0} pitch portions remaining.",
 
-	"game:handbook-crafting-title-strippedlog": "Created by",
-	"game:handbook-crafting-text-strippedlog": "Stripping wood from logs using an adze. Additionally, a stripped log will be returned when an adze is used with a log in the crafting grid.",
-
-	"game:handbook-crafting-title-finishedsalve": "Created by",
-	"game:handbook-crafting-text-finishedsalve": "Mixing a pot of <a href=\'handbook://block-ancienttools:salvepot-softwax\'>melted wax</a> with a pot of <a href=\'handbook://block-ancienttools:salvepot-barkoil\'>prepared bark oil</a> in-world to create a finished salve containing multiple portions. Portions can be taken from this salve with <icon name='rightmousebutton'></icon>.",
-
-	"game:handbook-crafting-title-salveportion": "Created by",
-	"game:handbook-crafting-text-salveportion": "Mixing a pot of <a href=\'handbook://block-ancienttools:salvepot-softwax\'>melted wax</a> with a pot of <a href=\'handbook://block-ancienttools:salvepot-barkoil\'>prepared bark oil</a> in-world to create a finished salve containing multiple portions. Portions can be taken from this salve with <icon name='rightmousebutton'></icon>.",
-
-	"game:handbook-crafting-title-pitch": "Created by",
-	"game:handbook-crafting-text-pitch": "Combining <a href=\'handbook://item-ancienttools:powderedcharcoal\'>powdered charcoal</a>, <a href=\'handbook://item-resin\'>resin</a>, and <a href=\'handbook://item-drygrass\'>dry grass</a> into an <a href=\'handbook://block-ancienttools:pitchpot-empty\'>empty pitch container</a> and cooking the <a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>resulting mixture</a> on a firepit. Place the <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>prepared pitch</a> on the ground to take individual pitch pieces.",
-
 	"block-mortar-peridotite": "Peridotite Mortar",
 	"block-mortar-andesite": "Andesite Mortar",
 	"block-mortar-granite": "Granite Mortar",
 	"block-mortar-basalt": "Basalt Mortar",
 	"block-mortar-chert": "Chert Mortar",
+
+	"blockdesc-mortar-*": "When used together with a pestle, can grind down all manner of things",
 
 	"block-curingrack-birch-*": "Birch Curing Rack",
 	"block-curingrack-oak-*": "Oak Curing Rack",
@@ -196,6 +234,8 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"block-curingrack-purpleheart-*": "Purpleheart Curing Rack",
 	"block-curingrack-aged-*": "Aged Curing Rack",
 
+	"blockdesc-curingrack-*": "Typically used to cure salted meat. Hooks not included.",
+
 	"block-strippedlog-birch-*": "Stripped Birch Log",
 	"block-strippedlog-oak-*": "Stripped Oak Log",
 	"block-strippedlog-maple-*": "Stripped Maple Log",
@@ -210,6 +250,8 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"block-strippedlog-purpleheart-*": "Stripped Purpleheart Log",
 	"block-strippedlog-aged-*": "Stripped Aged Log",
 
+	"blockdesc-strippedlog-*": "A wooden log with its bark removed",
+
 	"block-*-barkbasket-birch-*": "Birch Bark Basket",
 	"block-*-barkbasket-oak-*": "Oak Bark Basket",
 	"block-*-barkbasket-maple-*": "Maple Bark Basket",
@@ -223,6 +265,8 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"block-*-barkbasket-walnut-*": "Walnut Bark Basket",
 	"block-*-barkbasket-purpleheart-*": "Purpleheart Bark Basket",
 	"block-*-barkbasket-aged-*": "Aged Bark Basket",
+
+	"blockdesc-barkbasket-*": "A small basket woven from malleable tree bark used to hold just a few things",
 
 	"block-salvepot-empty": "Empty Salve Container",
 	"block-salvepot-birch": "Unprepared Salve Mixture(birch bark/fat)",
@@ -246,6 +290,8 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"block-stretchingframe-purpleheart-*": "Purpleheart Stretching Frame",
 	"block-stretchingframe-aged-*": "Aged Stretching Frame",
 
+	"blockdesc-stretchingframe-*": "A frame used to pull hides taut for tanning",
+
 	"block-hidewatersack-raw-huge": "Huge Raw Hide Water Sack",
 	"block-hidewatersack-raw-large": "Large Raw Hide Water Sack",
 	"block-hidewatersack-raw-medium": "Medium Raw Hide Water Sack",
@@ -255,6 +301,9 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"block-hidewatersack-soaked-medium": "Medium Soaked Hide Water Sack",
 	"block-hidewatersack-soaked-small": "Small Soaked Hide Water Sack",
 
+	"blockdesc-hidewatersack-raw-*": "This sack is filled with water from a nearby water source. The hide is not yet soaked through...",
+	"blockdesc-hidewatersack-soaked-*": "This sack is filled with water from a nearby water source. The hide is thoroughly soaked...",
+
 	"block-pitchpot-empty": "Empty Pitch Container",
 	"block-pitchpot-unmixed": "Unprepared Pitch Mixture",
 	"block-pitchpot-finishedpitchinventory": "Prepared Pitch",
@@ -263,6 +312,8 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"block-pitchtorch-extinct-*": "Unlit Pitch Torch",
 	"block-pitchtorch-lit-*": "Lit Pitch Torch",
 	"block-pitchtorch-melted-*": "Melted Pitch Torch",
+
+	"blockdesc-pitchtorch-*": "A long-lasting torch that is resilient to the effects of rain",
 
 	"block-lampsaucer-copper-empty-extinct-*": "Copper Chamberstick",
 	"block-lampsaucer-brass-empty-extinct-*": "Brass Chamberstick",
@@ -329,6 +380,8 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"block-lampsaucer-meteoriciron-pitch-lit-*": "Lit Meteoric Iron Chamberstick with Pitch",
 	"block-lampsaucer-steel-pitch-lit-*": "Lit Steel Chamberstick with Pitch",
 
+	"blockdesc-lampsaucer-*": "An elegant lighting solution for both interior designers and adventurers alike",
+
 	"block-directionalresin-resin-pine-*": "Leaking pine log with resin",
 	"block-directionalresin-resinharvested-pine-*": "Leaking pine log",
 	"block-directionalresin-resin-acacia-*": "Leaking acacia log with resin",
@@ -337,7 +390,6 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"itemhelp-adze-stripbark": "Strip Bark",
 	"itemhelp-heal": "Heal",
 
-	"iteminfo-hook": "Can be placed on a curing rack to hang various curable objects.",				//-- Needs FR and RU translation
 	"iteminfo-salve-heal": "Heals {0} health over {1} seconds when used.",
 	"iteminfo-brain": "Used for hide tanning. Place in a barrel with 10L of water to create braining solution.",
 	"iteminfo-brain-food": "Can also be used to cook stews.",
@@ -359,6 +411,8 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"item-adze-*-meteoriciron": "Meteoric Iron Adze",
 	"item-adze-*-steel": "Steel Adze",
 
+	"itemdesc-adze-*": "A tool used to strip bark from logs",
+
 	"itemdesc-saltedmeat-cure-x-days": "When Racked: Will cure in {0} days.",
 
 	"blockdesc-hidewatersack-soak-x-hours-when-placed": "When Placed: Fully soaked in {0} hours.",
@@ -370,7 +424,10 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"item-pestle-basalt": "Basalt Pestle",
 	"item-pestle-chert": "Chert Pestle",
 
-	"item-curinghook-bone": "Bone Hook",			
+	"itemdesc-pestle-*": "When used together with a mortar, can grind down all manner of things",
+
+	"item-curinghook-bone": "Bone Hook",		
+	"itemdesc-curinghook-*": "Can be placed on a curing rack to hang various curable objects.",
 
 	"item-saltedmeat-poultry-raw": "Raw Salted Poultry",
 	"item-saltedmeat-bushmeat-raw": "Raw Salted Bushmeat",
@@ -378,6 +435,8 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"item-saltedmeat-poultry-cooked": "Cooked Salted Poultry",
 	"item-saltedmeat-bushmeat-cooked": "Cooked Salted Bushmeat",
 	"item-saltedmeat-redmeat-cooked": "Cooked Salted Redmeat",
+
+	"itemdesc-saltedmeat-*-raw": "This meat can be hung on a curing rack to create cured meat",
 
 	"item-adzehead-chert": "Chert Adze Head",
 	"item-adzehead-granite": "Granite Adze Head",
@@ -415,6 +474,8 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"item-bark-purpleheart": "Purpleheart Bark",
 	"item-bark-aged": "Aged Bark",
 
+	"itemdesc-bark-*": "Bark pulled from a tree by an adze",
+
 	"game:item-flour-birch": "Birch Flour",
 	"game:item-flour-pine": "Pine Flour",
 
@@ -436,12 +497,18 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"game:item-hide-brained-large": "Brained Hide(Large)",
 	"game:item-hide-brained-medium": "Brained Hide(Medium)",
 	"game:item-hide-brained-small": "Brained Hide(Small)",
+
+	"game:itemdesc-hide-brained-*": "Hide soaked in brain juice. Just needs smoking to become usable leather",
+
 	"game:item-hide-smoked-huge": "Smoked Hide(Huge)",
 	"game:item-hide-smoked-large": "Smoked Hide(Large)",
 	"game:item-hide-smoked-medium": "Smoked Hide(Medium)",
 	"game:item-hide-smoked-small": "Smoked Hide(Small)",
 
+	"game:itemdesc-hide-smoked-*": "Smoked hide that's ready to be cut into leather",
+
 	"item-brain": "Animal Brain",
+	"itemdesc-brain": "Ew...but useful for hide tanning and....stews?",
 
 	"recipeingredient-item-brain": "brain",
 	"recipeingredient-item-brain-insturmentalcase": "brains",
@@ -453,7 +520,10 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"incontainer-item-brainingsolutionportion": "Braining Solution",
 
 	"item-powderedcharcoal": "Powdered Charcoal",
+	"itemdesc-powderedcharcoal": "Primary ingredient in the creation of pitch",
+
 	"item-pitch-*": "Pitch",
+	"itemdesc-pitch-*": "Flammable, water resistant substance used for various lighting purposes",
 
 	"item-mallet-*-chert": "Chert Mallet",
 	"item-mallet-*-granite": "Granite Mallet",
@@ -463,6 +533,9 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"item-mallet-*-peridotite": "Peridotite Mallet",
 	"item-mallet-*-flint": "Flint Mallet",
 
+	"itemcraftdesc-mallet-*": "For smacking wedges to split stripped logs",
+	"itemdesc-mallet-*": "For smacking wedges to split stripped logs",
+
 	"item-mallethead-chert": "Chert Mallet Head",
 	"item-mallethead-granite": "Granite Mallet Head",
 	"item-mallethead-andesite": "Andesite Mallet Head",
@@ -470,8 +543,6 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"item-mallethead-obsidian": "Obsidian Mallet Head",
 	"item-mallethead-peridotite": "Peridotite Mallet Head",
 	"item-mallethead-flint": "Flint Mallet Head",
-
-	"itemcraftdesc-mallethead-*": "For smacking wedges to split wooden logs",
 
 	"item-wedge-chert": "Chert Wedge",
 	"item-wedge-granite": "Granite Wedge",
@@ -493,7 +564,82 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 	"block-toolmoldancienttools-raw-wedge": "Raw Wedges Mold",
 	"block-toolmoldancienttools-burned-wedge": "Wedges Mold",	
 
-	"itemcraftdesc-wedge-*": "For splitting wooden logs with a mallet or hammer",
+	"itemcraftdesc-wedge-*": "For splitting stripped logs with a mallet",
+	"itemdesc-wedge-*": "For splitting stripped logs with a mallet",
+
+	"item-beam-aged": "Aged Beam",
+	"item-beam-birch": "Birch Beam",
+	"item-beam-oak": "Oak Beam",
+	"item-beam-maple": "Maple Beam",
+	"item-beam-pine": "Pine Beam",
+	"item-beam-acacia": "Acacia Beam",
+	"item-beam-kapok": "Kapok Beam",
+	"item-beam-baldcypress": "Bald Cypress Beam",
+	"item-beam-larch": "Larch Beam",
+	"item-beam-redwood": "Redwood Beam",
+	"item-beam-ebony": "Ebony Beam",
+	"item-beam-walnut": "Walnut Beam",
+	"item-beam-purpleheart": "Purpleheart Beam",
+
+	"itemdesc-beam-*": "A structural beam used in the construction of wheels and mobile storage",
+
+	"item-wood-aged-cart": "Aged Cart",
+	"item-wood-birch-cart": "Birch Cart",
+	"item-wood-oak-cart": "Oak Cart",
+	"item-wood-maple-cart": "Maple Cart",
+	"item-wood-pine-cart": "Pine Cart",
+	"item-wood-acacia-cart": "Acacia Cart",
+	"item-wood-kapok-cart": "Kapok Cart",
+	"item-wood-baldcypress-cart": "Bald Cypress Cart",
+	"item-wood-larch-cart": "Larch Cart",
+	"item-wood-redwood-cart": "Redwood Cart",
+	"item-wood-ebony-cart": "Ebony Cart",
+	"item-wood-walnut-cart": "Walnut Cart",
+	"item-wood-purpleheart-cart": "Purpleheart Cart",
+
+	"itemdesc-cart": "Mobile storage that can transport a single inventory",
+
+	"item-wheel-aged": "Aged Wheel",
+	"item-wheel-birch": "Birch Wheel",
+	"item-wheel-oak": "Oak Wheel",
+	"item-wheel-maple": "Maple Wheel",
+	"item-wheel-pine": "Pine Wheel",
+	"item-wheel-acacia": "Acacia Wheel",
+	"item-wheel-kapok": "Kapok Wheel",
+	"item-wheel-baldcypress": "Bald Cypress Wheel",
+	"item-wheel-larch": "Larch Wheel",
+	"item-wheel-redwood": "Redwood Wheel",
+	"item-wheel-ebony": "Ebony Wheel",
+	"item-wheel-walnut": "Walnut Wheel",
+	"item-wheel-purpleheart": "Purpleheart Wheel",
+
+	"itemdesc-wheel-*": "A wheel used in the construction of mobile storage",
+
+	"entity-wood-aged-cart": "Aged Cart",
+	"entity-wood-birch-cart": "Birch Cart",
+	"entity-wood-oak-cart": "Oak Cart",
+	"entity-wood-maple-cart": "Maple Cart",
+	"entity-wood-pine-cart": "Pine Cart",
+	"entity-wood-acacia-cart": "Acacia Cart",
+	"entity-wood-kapok-cart": "Kapok Cart",
+	"entity-wood-baldcypress-cart": "Bald Cypress Cart",
+	"entity-wood-larch-cart": "Larch Cart",
+	"entity-wood-redwood-cart": "Redwood Cart",
+	"entity-wood-ebony-cart": "Ebony Cart",
+	"entity-wood-walnut-cart": "Walnut Cart",
+	"entity-wood-purpleheart-cart": "Purpleheart Cart",
+	"entity-wood-walnut-cart": "Walnut Cart",
+
+	"entityinfo-cart-health": "Health: {0}/{1} hp",
+
+	"entityhelp-cart-place-inventory": "Place Inventory",
+	"entityhelp-cart-take-inventory": "Take Inventory",
+	"entityhelp-cart-pick-up": "Pick Up Cart",
+	"entityhelp-cart-drop": "Drop Cart",
+	"entityhelp-cart-open-inventory": "Open Inventory",
+
+	"gui-title-cart-inventory": "Cart Inventory",
+
 	"pie-single-ancienttools:saltedmeat-redmeat-raw-raw": "Salted Redmeat Pie(raw)",
 	"pie-single-ancienttools:saltedmeat-bushmeat-raw-raw": "Salted Bushmeat Pie(raw)",
 	"pie-single-ancienttools:saltedmeat-poultry-raw-raw": "Salted Poultry Pie(raw)",

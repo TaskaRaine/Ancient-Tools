@@ -6,35 +6,36 @@
 		ingredients: {
 			"P": {
 				type: "item",
-				name: "plank",
+				name: "wood",
 				code: "game:plank-*",
-				quantity: 3
+				allowedVariants: ["birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart"],
+				quantity: 1
 			},
 			"B": { 
-				type: "item", 
-				name: "beam",
+				type: "item",
+				name: "wood",
 				code: "ancienttools:beam-*",
-				allowedVariants: ["aged", "birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart"],
-				quantity: 3
+				allowedVariants: ["birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart"],
+				quantity: 1
 			},
 			"W": {
 				type: "item",
-				name: "wheel",
+				name: "wood",
 				code: "ancienttools:wheel-*",
+				allowedVariants: ["birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart"],
 				quantity: 1
 			},
 			"A": {
 				type: "block",
-				name: "axle",
 				code: "game:woodenaxle-ud",
 				quantity: 1
 			}
 		},
 		output: { 
 			type: "item", 
-			code: "cart",
-			quantity: 1,
-			attributes: { planks: "{plank}", beams: "{beam}", wheels: "{wheel}" }
+			code: "ancienttools:cart",
+			attributes: { type: "wood-{wood}" },
+			quantity: 1
 		}
 	}
 ]

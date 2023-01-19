@@ -1,6 +1,115 @@
 ﻿{
 	code: "cart",
 	class: "ItemCart",
-	creativeinventory: { "general": ["*"], "ancienttools": ["*"] },
-	shape: { base: "entity/cart_lg" },
+	attributes: {
+		types: ["wood-aged", "wood-birch", "wood-oak", "wood-maple", "wood-pine", "wood-acacia", "wood-kapok", "wood-baldcypress", "wood-larch", "wood-redwood", "wood-ebony", "wood-walnut", "wood-purpleheart"],
+	},
+	creativeinventoryStacks: [
+	{
+		tabs: [ "general", "ancienttools" ],
+		stacks: [
+			{ type: "item", code: "cart", attributes: { type: "wood-aged" } },
+			{ type: "item", code: "cart", attributes: { type: "wood-birch" } },
+			{ type: "item", code: "cart", attributes: { type: "wood-oak" } },
+			{ type: "item", code: "cart", attributes: { type: "wood-maple" } },
+			{ type: "item", code: "cart", attributes: { type: "wood-pine" } },
+			{ type: "item", code: "cart", attributes: { type: "wood-acacia" } },
+			{ type: "item", code: "cart", attributes: { type: "wood-kapok" } },
+			{ type: "item", code: "cart", attributes: { type: "wood-baldcypress" } },
+			{ type: "item", code: "cart", attributes: { type: "wood-larch" } },
+			{ type: "item", code: "cart", attributes: { type: "wood-redwood" } },
+			{ type: "item", code: "cart", attributes: { type: "wood-ebony" } },
+			{ type: "item", code: "cart", attributes: { type: "wood-walnut" } },
+			{ type: "item", code: "cart", attributes: { type: "wood-purpleheart" } }
+		]
+	}],
+	shape: { base: "entity/cart_lg_woodwheel" },
+	textures: {
+		"beam": { base: "game:block/wood/debarked/oak" },
+		"boards": { base: "game:block/wood/planks/oak1" },
+		"dowel": { base:"game:block/wood/table/normal/top" },
+		"beam2": { base: "game:block/wood/treetrunk/oak" },
+		"knob": { base: "game:block/linen" },
+		"axle": { base: "game:block/wood/planks/generic" },
+		"wheelaccent": { base: "game:block/stone/rock/basalt3" },
+		"wheelwood": { base: "game:block/wood/debarked/pine" },
+
+		"wood-aged-beam": { base: "game:block/wood/debarked/aged" },
+		"wood-birch-beam": { base: "game:block/wood/debarked/birch" },
+		"wood-oak-beam": { base: "game:block/wood/debarked/oak" },
+		"wood-maple-beam": { base: "game:block/wood/debarked/maple" },
+		"wood-pine-beam": { base: "game:block/wood/debarked/pine" },
+		"wood-acacia-beam": { base: "game:block/wood/debarked/acacia" },
+		"wood-kapok-beam": { base: "game:block/wood/debarked/kapok" },
+		"wood-baldcypress-beam": { base: "game:block/wood/debarked/baldcypress" },
+		"wood-larch-beam": { base: "game:block/wood/debarked/larch" },
+		"wood-redwood-beam": { base: "game:block/wood/debarked/redwood" },
+		"wood-ebony-beam": { base: "game:block/wood/debarked/ebony" },
+		"wood-walnut-beam": { base: "game:block/wood/debarked/walnut" },
+		"wood-purpleheart-beam": { base: "game:block/wood/debarked/purpleheart" },
+
+		"wood-aged-boards": { base: "game:block/wood/planks/aged1" },
+		"wood-birch-boards": { base: "game:block/wood/planks/birch1" },
+		"wood-oak-boards": { base: "game:block/wood/planks/oak1" },
+		"wood-maple-boards": { base: "game:block/wood/planks/maple1" },
+		"wood-pine-boards": { base: "game:block/wood/planks/pine1" },
+		"wood-acacia-boards": { base: "game:block/wood/planks/acacia1" },
+		"wood-kapok-boards": { base: "game:block/wood/planks/kapok1" },
+		"wood-baldcypress-boards": { base: "game:block/wood/planks/baldcypress1" },
+		"wood-larch-boards": { base: "game:block/wood/planks/larch1" },
+		"wood-redwood-boards": { base: "game:block/wood/planks/redwood1" },
+		"wood-ebony-boards": { base: "game:block/wood/planks/ebony1" },
+		"wood-walnut-boards": { base: "game:block/wood/planks/walnut1" },
+		"wood-purpleheart-boards": { base: "game:block/wood/planks/purpleheart1" },
+
+		"wood-aged-beam2": { base: "game:block/wood/treetrunk/aged" },
+		"wood-birch-beam2": { base: "game:block/wood/treetrunk/birch" },
+		"wood-oak-beam2": { base: "game:block/wood/treetrunk/oak" },
+		"wood-maple-beam2": { base: "game:block/wood/treetrunk/maple" },
+		"wood-pine-beam2": { base: "game:block/wood/treetrunk/pine" },
+		"wood-acacia-beam2": { base: "game:block/wood/treetrunk/acacia" },
+		"wood-kapok-beam2": { base: "game:block/wood/treetrunk/kapok" },
+		"wood-baldcypress-beam2": { base: "game:block/wood/treetrunk/baldcypress" },
+		"wood-larch-beam2": { base: "game:block/wood/treetrunk/larch" },
+		"wood-redwood-beam2": { base: "game:block/wood/treetrunk/redwood" },
+		"wood-ebony-beam2": { base: "game:block/wood/treetrunk/ebony" },
+		"wood-walnut-beam2": { base: "game:block/wood/treetrunk/walnut" },
+		"wood-purpleheart-beam2": { base: "game:block/wood/treetrunk/purpleheart" },
+
+		"wood-aged-wheelwood": { base: "game:block/wood/debarked/aged" },
+		"wood-birch-wheelwood": { base: "game:block/wood/debarked/birch" },
+		"wood-oak-wheelwood": { base: "game:block/wood/debarked/oak" },
+		"wood-maple-wheelwood": { base: "game:block/wood/debarked/maple" },
+		"wood-pine-wheelwood": { base: "game:block/wood/debarked/pine" },
+		"wood-acacia-wheelwood": { base: "game:block/wood/debarked/acacia" },
+		"wood-kapok-wheelwood": { base: "game:block/wood/debarked/kapok" },
+		"wood-baldcypress-wheelwood": { base: "game:block/wood/debarked/baldcypress" },
+		"wood-larch-wheelwood": { base: "game:block/wood/debarked/larch" },
+		"wood-redwood-wheelwood": { base: "game:block/wood/debarked/redwood" },
+		"wood-ebony-wheelwood": { base: "game:block/wood/debarked/ebony" },
+		"wood-walnut-wheelwood": { base: "game:block/wood/debarked/walnut" },
+		"wood-purpleheart-wheelwood": { base: "game:block/wood/debarked/purpleheart" },
+	},
+	heldTpIdleAnimation: "holdbothhandslarge", 
+	heldTpUseAnimation: "twohandplaceblock",
+	guiTransform: {
+		rotation: { x: 160, y: 36, z: 0 },
+		origin: { x: 0.5, y: 0.6, z: 0.2 },
+		scale: 0.68
+	},
+	fpHandTransform: {
+		rotation: { x: 0, y: 180, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 }
+	},
+	tpHandTransform: {
+		rotation: { x: 90, y: 0, z: -78 },
+		origin: { x: 0.3, y: 0.75, z: 0.9 },
+		scale: 0.39
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -164, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.9, z: 0.5299 },
+		scale: 2.9
+	}
 }

@@ -64,5 +64,11 @@ namespace AncientTools.Blocks
                 return;
             }
         }
+        public override BlockDropItemStack[] GetDropsForHandbook(ItemStack handbookStack, IPlayer forPlayer)
+        {
+            handbookStack.Attributes.SetString("type", "basket");
+
+            return base.GetDropsForHandbook(handbookStack, forPlayer);
+        }
     }
 }

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 
@@ -11,7 +12,7 @@ namespace AncientTools.BlockEntities
 {
     class BESplitLog : DisplayInventory
     {
-        private struct WedgeProperties 
+        private struct WedgeProperties
         {
             public EnumWedgeState WedgeState { get; set; }
             public EnumWedgeCardinalDirection CurrentCardinalPosition { get; set; }
@@ -31,7 +32,7 @@ namespace AncientTools.BlockEntities
             }
         };
 
-        private const int WEDGE_COUNT = 4;
+        public int WedgeCount { get; } = 4;
         public enum EnumWedgeState { Empty, Inserted, Smacked, Used }
         public enum EnumWedgeCardinalDirection { None, N, E, S, W }
 
@@ -55,7 +56,7 @@ namespace AncientTools.BlockEntities
 
         public BESplitLog()
         {
-            InventorySize = WEDGE_COUNT;
+            InventorySize = WedgeCount;
             InitializeInventory();
         }
         public override void InitializeInventory()
@@ -194,6 +195,37 @@ namespace AncientTools.BlockEntities
             
             return true;
         }
+        public bool IsInventoryFull()
+        {
+            for (int i = 0; i < InventorySize; i++)
+                if (WedgeSlot(i).Empty)
+                    return false;
+
+            return true;
+        }
+        public bool HasUnsmackedWedges()
+        {
+            for (int i = 0; i < InventorySize; i++)
+            {
+                if (WedgeProps[i].WedgeState == EnumWedgeState.Inserted)
+                    return true;
+            }
+
+            return false;
+        }
+        public bool InsertedExists()
+        {
+            for (int i = 0; i < InventorySize; i++)
+            {
+                if (WedgeSlot(i).Empty)
+                    continue;
+
+                if (WedgeProps[i].WedgeState == EnumWedgeState.Inserted)
+                    return true;
+            }
+
+            return false;
+        }
         public bool OnInteract(IPlayer byPlayer, int index, Vec3d hitPosition)
         {
             CollectibleObject activeCollectible = byPlayer.InventoryManager.ActiveHotbarSlot?.Itemstack?.Collectible;
@@ -208,7 +240,7 @@ namespace AncientTools.BlockEntities
             }
             else
             {
-                if (activeCollectible is ItemWedge)
+                if (activeCollectible is ItemWedge && WedgeProps[index].WedgeState == EnumWedgeState.Empty)
                 {
                     InsertWedge(byPlayer, index, hitPosition);
                     return true;
@@ -221,7 +253,9 @@ namespace AncientTools.BlockEntities
         {
             if(byPlayer.InventoryManager.TryGiveItemstack(WedgeSlot(index).TakeOutWhole()))
             {
-                WedgeProps[index].WedgeState = EnumWedgeState.Empty;
+                if (WedgeProps[index].WedgeState == EnumWedgeState.Inserted)
+                    WedgeProps[index].WedgeState = EnumWedgeState.Empty;
+
                 UpdateMeshes();
 
                 WedgeSlot(index).MarkDirty();
@@ -242,10 +276,15 @@ namespace AncientTools.BlockEntities
         }
         public void SmackWedge(int index, IPlayer byPlayer)
         {
+            if (byPlayer == null)
+                return;
+
             if (WedgeProps[index].WedgeState == EnumWedgeState.Inserted)
             {
                 WedgeProps[index].WedgePosition.Y = WedgeProps[index].WedgePosition.Y - 0.2;
                 WedgeProps[index].WedgeState = EnumWedgeState.Smacked;
+
+                WedgeSlot(index)?.Itemstack?.Collectible?.DamageItem(Api.World, byPlayer.Entity, WedgeSlot(index), 1);
 
                 ProcessPlayerInteraction(byPlayer);
 
@@ -254,6 +293,10 @@ namespace AncientTools.BlockEntities
                 UpdateMeshes();
                 MarkDirty(true);
             }
+        }
+        public int GetSmackedCount()
+        {
+            return WedgeCount;
         }
         public MeshData GenMesh(ICoreClientAPI capi, string shapePath, ITexPositionSource texture)
         {
@@ -314,7 +357,7 @@ namespace AncientTools.BlockEntities
         {
             int totalCount = smackedCount + usedCount;
 
-            if (totalCount <= 1)
+            if (totalCount <= 1 || totalCount == 2 && SmackedWedgesAreParallel())
                 return;
 
             SkipDefaultMesh = true;
@@ -341,12 +384,25 @@ namespace AncientTools.BlockEntities
                         {
                             WedgeProps[i].WedgeState = EnumWedgeState.Used;
 
-                            Api.World.SpawnItemEntity(WedgeSlot(i).TakeOutWhole(), Pos.ToVec3d());
-                            WedgeSlot(i).MarkDirty();
+                            if(!WedgeSlot(i).Empty)
+                            {    
+                                Api.World.SpawnItemEntity(WedgeSlot(i).TakeOutWhole(), Pos.ToVec3d());
+                                WedgeSlot(i).MarkDirty();
+                            }
                         }
                     }
                 }
             }
+        }
+        private bool SmackedWedgesAreParallel()
+        {
+            if (WedgeProps[0].WedgeState == EnumWedgeState.Smacked && WedgeProps[2].WedgeState == EnumWedgeState.Smacked)
+                return true;
+
+            if (WedgeProps[1].WedgeState == EnumWedgeState.Smacked && WedgeProps[3].WedgeState == EnumWedgeState.Smacked)
+                return true;
+
+            return false;
         }
     }
 }

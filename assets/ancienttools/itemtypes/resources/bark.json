@@ -9,7 +9,8 @@
 				langCode: "ancienttools:blockhelp-insert-{bark}bark"
 			},
 			handbook: {
-				groupBy: ["bark-*"]
+				groupBy: ["bark-*"],
+				createdBy: "ancienttools:handbook-barkstripping-craftinfo"
 			},
 		}
 	},

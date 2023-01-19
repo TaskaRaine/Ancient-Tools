@@ -1,5 +1,4 @@
-﻿using AncientTools.Behaviors;
-using AncientTools.Utility;
+﻿using AncientTools.Utility;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;

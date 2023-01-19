@@ -1,5 +1,7 @@
 ﻿using AncientTools.Utility;
+using System;
 using Vintagestory.API.Common;
+using Vintagestory.API.Config;
 using Vintagestory.API.MathTools;
 
 namespace AncientTools.Entities.Tasks
@@ -7,6 +9,12 @@ namespace AncientTools.Entities.Tasks
     class AITaskFollowAttachedEntity : AiTaskBase
     {
         EntityMobileStorage mobileStorageEntity = null;
+
+        private float FollowDistanceWalk { get; set; } = 0.5f;
+        private float FollowDistanceSprint { get; set; } = 0.25f;
+        private float FollowDistanceSneak { get; set; } = 0.6f;
+
+        private float ParkedDistance { get; set; } = 1.0f;
 
         public AITaskFollowAttachedEntity(EntityAgent entity) : base(entity)
         {
@@ -16,7 +24,9 @@ namespace AncientTools.Entities.Tasks
         public override bool ShouldExecute()
         {
             if (mobileStorageEntity.AttachedEntity != null)
+            {
                 return true;
+            }
 
             return false;
         }
@@ -24,41 +34,28 @@ namespace AncientTools.Entities.Tasks
         {
             base.StartExecute();
 
-            pathTraverser.WalkTowards(mobileStorageEntity.AttachedEntity.ServerPos.XYZ, 0.05f, 0.05f, OnGoalReached, OnStuck);
+            mobileStorageEntity.SetEntityPosition(mobileStorageEntity.AttachedEntity.ServerPos.BehindCopy(FollowDistanceWalk).XYZ);
         }
         private void OnGoalReached()
         {
-
+            if(!mobileStorageEntity.AttachedEntity.Controls.TriesToMove)
+                mobileStorageEntity.SetEntityPosition(mobileStorageEntity.AttachedEntity.ServerPos.BehindCopy(ParkedDistance).XYZ);
         }
-        private void OnStuck()
-        {
 
-        }
         public override bool ContinueExecute(float dt)
         {
             if (mobileStorageEntity.AttachedEntity == null)
             {
-                pathTraverser.Stop();
-
                 return false;
             }
-
             if (mobileStorageEntity.AttachedEntity.Controls.TriesToMove)
             {
-                pathTraverser.Retarget();
-
-                pathTraverser.CurrentTarget.X = mobileStorageEntity.AttachedEntity.Pos.X + mobileStorageEntity.AttachedEntity.Controls.WalkVector.X * 20;
-                pathTraverser.CurrentTarget.Y = mobileStorageEntity.AttachedEntity.Pos.Y + mobileStorageEntity.AttachedEntity.Controls.WalkVector.Y * 20;
-                pathTraverser.CurrentTarget.Z = mobileStorageEntity.AttachedEntity.Pos.Z + mobileStorageEntity.AttachedEntity.Controls.WalkVector.Z * 20;
-            }
-            else
-            {
-                if (mobileStorageEntity.AttachedEntity.Pos.DistanceTo(mobileStorageEntity.Pos) <= 0.5)
-                {
-                    mobileStorageEntity.SetEntityPosition(mobileStorageEntity.AttachedEntity.ServerPos.BehindCopy(0.5).XYZ);
-
-                    pathTraverser.Stop();
-                }
+                if (mobileStorageEntity.AttachedEntity.Controls.Sneak)
+                    mobileStorageEntity.SetEntityPosition(TaskaMath.Vec3Lerp(mobileStorageEntity.ServerPos.XYZ, mobileStorageEntity.AttachedEntity.ServerPos.BehindCopy(FollowDistanceSneak).XYZ, 0.5f));
+                else if (mobileStorageEntity.AttachedEntity.Controls.Sprint)
+                    mobileStorageEntity.SetEntityPosition(TaskaMath.Vec3Lerp(mobileStorageEntity.ServerPos.XYZ, mobileStorageEntity.AttachedEntity.ServerPos.BehindCopy(FollowDistanceSprint).XYZ, 0.5f));
+                else
+                    mobileStorageEntity.SetEntityPosition(TaskaMath.Vec3Lerp(mobileStorageEntity.ServerPos.XYZ, mobileStorageEntity.AttachedEntity.ServerPos.BehindCopy(FollowDistanceWalk).XYZ, 0.5f));
             }
 
             return base.ContinueExecute(dt);

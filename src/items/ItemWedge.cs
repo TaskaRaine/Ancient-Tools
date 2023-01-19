@@ -4,6 +4,6 @@ namespace AncientTools.Items
 {
     class ItemWedge: Item
     {
-        
+
     }
 }

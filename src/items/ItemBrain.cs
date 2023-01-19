@@ -15,6 +15,7 @@ namespace AncientTools.Items
         {
             base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
 
+            /*
             int newlineCount = 0;
             int foodInfoStartIndex = 0;
 
@@ -32,6 +33,7 @@ namespace AncientTools.Items
             dsc.Remove(foodInfoStartIndex, dsc.Length - foodInfoStartIndex);
             dsc.Append("\n" + Lang.Get("ancienttools:iteminfo-brain"));
             dsc.Append("\n" + Lang.Get("ancienttools:iteminfo-brain-food"));
+            */
         }
         public override WorldInteraction[] GetHeldInteractionHelp(ItemSlot inSlot)
         {

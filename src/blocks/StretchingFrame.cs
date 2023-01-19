@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.Config;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
 
@@ -83,7 +84,9 @@ namespace AncientTools.Blocks
         }
         public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos pos, IPlayer forPlayer)
         {
-            return String.Empty;
+            return Lang.GetMatching("ancienttools:blockdesc-stretchingframe-*");
+
+            //return base.GetPlacedBlockInfo(world, pos, forPlayer);
         }
         public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
         {

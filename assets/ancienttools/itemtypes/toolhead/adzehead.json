@@ -3,7 +3,10 @@
 	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
 	attributes: {
 		handbook: {
-			groupBy: ["adzehead-*"]
+			groupBy: ["adzehead-*"],
+			createdByByType: {
+				"@adzehead-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": "ancienttools:handbook-smelting-craftinfo"
+			}
 		},
 		groundStorageTransformByType: {
 			"@adzehead-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": {

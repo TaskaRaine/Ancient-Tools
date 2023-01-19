@@ -1,4 +1,5 @@
-﻿using Vintagestory.API.Common;
+﻿using AncientTools.Utility;
+using Vintagestory.API.Common;
 
 namespace AncientTools.Items
 {
@@ -6,6 +7,8 @@ namespace AncientTools.Items
     {
         public override void Start(ICoreAPI api)
         {
+            api.RegisterItemClass("ItemAttributeVariant", typeof(ItemAttributeVariant));
+
             api.RegisterItemClass("ItemCuringHook", typeof(ItemCuringHook));
             api.RegisterItemClass("ItemSaltedMeat", typeof(ItemSaltedMeat));
             api.RegisterItemClass("ItemAdze", typeof(ItemAdze));

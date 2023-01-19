@@ -18,12 +18,8 @@
 				},
 				useFirepitModel: "Wide"
 			},
-			handbookByType: {
-				"*-finishedpitchinventory": {
-					extraSections: [
-						{ title: "handbook-crafting-title-pitch", text: "handbook-crafting-text-pitch" }
-					]
-				}
+			handbook: {
+				createdBy: "ancienttools:handbook-mixingpitch-craftinfo"
 			}
 		}
 	},

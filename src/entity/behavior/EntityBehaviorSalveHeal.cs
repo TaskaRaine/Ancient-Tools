@@ -7,7 +7,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
 
-namespace AncientTools.Behaviors
+namespace AncientTools.EntityBehaviors
 {
     class EntityBehaviorSalveHeal : EntityBehavior
     {

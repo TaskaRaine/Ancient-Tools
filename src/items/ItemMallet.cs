@@ -26,6 +26,8 @@ namespace AncientTools.Items
                 return;
             }
 
+            handling = EnumHandHandling.NotHandled;
+
             if (blockSel.SelectionBoxIndex == 0 || byEntity.World.BlockAccessor.GetBlock(blockSel.Position).GetType() != typeof(BlockSplitLog))
             {
                 base.OnHeldAttackStart(slot, byEntity, blockSel, entitySel, ref handling);
@@ -37,7 +39,8 @@ namespace AncientTools.Items
             {
                 handling = EnumHandHandling.PreventDefaultAction;
 
-                splitLogEntity.SmackWedge(blockSel.SelectionBoxIndex - 1, byEntity as IPlayer);
+                splitLogEntity.SmackWedge(blockSel.SelectionBoxIndex - 1, byPlayer);
+                DamageItem(api.World, byEntity, slot, 1);
             }
         }
     }

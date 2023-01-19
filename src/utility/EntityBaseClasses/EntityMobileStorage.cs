@@ -4,9 +4,11 @@ using AncientTools.Inventory;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
+using Vintagestory.API.Config;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
@@ -17,7 +19,7 @@ namespace AncientTools.Utility
     abstract class EntityMobileStorage : EntityAgent
     {
         protected float DroppedHeight { get; set; } = -0.2f;
-        protected abstract int StorageBlocksCount { get; set; }
+        public abstract int StorageBlocksCount { get; protected set; }
         protected GuiDialogMobileStorage InvDialog { get; set; }
 
         public ICoreClientAPI Capi { get; set; }
@@ -50,12 +52,35 @@ namespace AncientTools.Utility
 
             UpdateStorageContentsFromTree();
 
+            /*
             for(int i = 0; i < MobileStorageInventory.StorageSlotCount(); i++)
             {
                 MobileStorageInventory.GetStorageInventorySlot(0, i);
             }
-
+            */
             MobileStorageInventory.OnInventoryClosed += CloseClientDialog;
+        }
+        public override string GetInfoText()
+        {
+            StringBuilder infotext = new StringBuilder();
+
+            /*
+             * behavior.GetInfoText(infotext) does not actually modify infotext and, therefore, the information is never passed back.
+             * Cannot be used to extract info from a behavior
+            foreach (EntityBehavior behavior in SidedProperties.Behaviors)
+            {
+                behavior.GetInfoText(infotext);
+            }
+            */
+
+            if (Api.Side == EnumAppSide.Client)
+            {
+                TreeAttribute healthTree = WatchedAttributes.GetTreeAttribute("health") as TreeAttribute;
+
+                infotext.Append(Lang.Get("ancienttools:entityinfo-cart-health", Math.Round(healthTree.GetFloat("currenthealth"), 2), healthTree.GetFloat("maxhealth")));
+            }
+
+            return infotext.ToString();
         }
         public override void OnReceivedClientPacket(IServerPlayer player, int packetid, byte[] data)
         {
@@ -191,8 +216,8 @@ namespace AncientTools.Utility
                 using (MemoryStream ms = new MemoryStream())
                 {
                     BinaryWriter writer = new BinaryWriter(ms);
-                    writer.Write("EntityInventory");
-                    writer.Write("Entity Inventory");
+                    writer.Write("CartInventory");
+                    writer.Write(Lang.Get("ancienttools:gui-title-cart-inventory"));
                     writer.Write((byte)4);
                     writer.Write((byte)index);
                     TreeAttribute tree = new TreeAttribute();
@@ -242,6 +267,8 @@ namespace AncientTools.Utility
         private void OpenInventoryDialog(byte[] data)
         {
             IClientWorldAccessor clientWorld = (IClientWorldAccessor)Api.World;
+            AssetLocation openSoundLocation;
+
             if (InvDialog != null)
             {
                 if (InvDialog?.IsOpened() == true) InvDialog.TryClose();
@@ -271,6 +298,25 @@ namespace AncientTools.Utility
 
             InvDialog = new GuiDialogMobileStorage(dialogTitle, this, MobileStorageInventory, cols, Api as ICoreClientAPI);
 
+            if (MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible is BlockGenericTypedContainer)
+            {
+                string type = MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Attributes?.GetString("type");
+
+                openSoundLocation = new AssetLocation(MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible.Attributes["mobileStorageProps"][type]["openSound"].AsString() + ".ogg");
+            }
+            else
+                openSoundLocation = new AssetLocation(MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible.Attributes["mobileStorageProps"]["openSound"].AsString() + ".ogg");
+            
+            (clientWorld).LoadSound(new SoundParams()
+            {
+                Location = openSoundLocation,
+                ShouldLoop = false,
+                Position = Pos.XYZFloat,
+                DisposeOnFinish = true,
+                Volume = 1.0f,
+                Range = 32
+            }).Start();
+
             /*
             Block block = Api.World.BlockAccessor.GetBlock(Pos);
             string os = block.Attributes?["openSound"]?.AsString();
@@ -285,10 +331,32 @@ namespace AncientTools.Utility
         }
         private void CloseClientDialog(IPlayer player)
         {
+            IClientWorldAccessor clientWorld = (IClientWorldAccessor)Api.World;
+            AssetLocation closeSoundLocation;
+
             var inv = InvDialog;
             InvDialog = null; // Weird handling because to prevent endless recursion
             if (inv?.IsOpened() == true) inv?.TryClose();
             inv?.Dispose();
+
+            if (MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible is BlockGenericTypedContainer)
+            {
+                string type = MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Attributes?.GetString("type");
+
+                closeSoundLocation = new AssetLocation(MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible.Attributes["mobileStorageProps"][type]["closeSound"].AsString() + ".ogg");
+            }
+            else
+                closeSoundLocation = new AssetLocation(MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible.Attributes["mobileStorageProps"]["closeSound"].AsString() + ".ogg");
+
+            (clientWorld).LoadSound(new SoundParams()
+            {
+                Location = closeSoundLocation,
+                ShouldLoop = false,
+                Position = Pos.XYZFloat,
+                DisposeOnFinish = true,
+                Volume = 1.0f,
+                Range = 32
+            }).Start();
         }
     }
 }

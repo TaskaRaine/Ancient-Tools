@@ -4,7 +4,10 @@
 	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"], "ancienttools": ["*"] },
 	attributes: {
 		handbook: {
-			groupBy: ["wedge-*"]
+			groupBy: ["wedge-*"],
+			createdByByType: {
+				"@wedge-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": "ancienttools:handbook-smelting-craftinfo"
+			}
 		},
 	},
 	variantgroups: [
@@ -35,6 +38,15 @@
 				base: "game:block/stone/{material}"
 			}
 		}
+	},
+	durabilityByType: {
+		"@wedge-(chert|granite|andesite|basalt|peridotite)": 5,
+		"@wedge-(flint|obsidian)": 10,
+		"@wedge-(copper)": 25,
+		"@wedge-(tinbronze|bismuthbronze|blackbronze)": 50,
+		"@wedge-(silver|gold)": 15,
+		"@wedge-(iron|meteoriciron)": 100,
+		"@wedge-(steel)": 200
 	},
 	maxstacksize: 16,
 	guiTransform: {

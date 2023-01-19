@@ -4,9 +4,7 @@
 	attributes: {
 		handbook: {
 			groupBy: ["pitch-*"],
-			extraSections: [
-				{ title: "handbook-crafting-title-pitch", text: "handbook-crafting-text-pitch" }
-			]
+			createdBy: "ancienttools:handbook-mixingpitch-craftinfo"
 		},
 		waterproofFuel: true
 	},

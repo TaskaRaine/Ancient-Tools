@@ -12,7 +12,7 @@
 		},
 	},
 	variantgroups: [
-        { code: "material", states: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint" ] },
+        { code: "material", loadFromProperties: "game:block/wood", states:["aged"] },
     ],
 	behaviors: [{
 		name: "GroundStorable",
@@ -25,21 +25,32 @@
 		}
 	}],
 	drawtype: "json",
-	shapeByType: { 
-		"@wheel-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": { base: "ancienttools:item/resource/wheel" },
-	},
-	texturesByType: {
-		"@wheel-(chert|granite|andesite|basalt|obsidian|peridotite)": { 
-			"wheel": { base: "game:block/stone/rock/{material}1" },
-		},
-		"wheel-flint": { 
-			"wheel": { base: "game:block/stone/{material}" },
-		},
+	shape: { base: "ancienttools:item/resource/wheel" },
+	textures: {
+		wheelwood: { base: "game:block/wood/debarked/{material}" },
+		wheelaccent: { base: "game:block/stone/rock/basalt3" }
 	},
 	maxstacksize: 2,
+	heldTpIdleAnimation: "holdunderarm",
 	guiTransform: {
-		rotation: { x: -90, y: 0, z: -18 },
-		origin: { x: 0.5, y: 0.1, z: 0.5 },
-		scale: 2.81
+		rotation: { x: -100, y: 0, z: -38 },
+		origin: { x: 0.46, y: 0.1, z: 0.5 },
+		scale: 3
 	},
+	fpHandTransform: {
+		rotation: { x: 0, y: 0, z: 91 },
+		origin: { x: 0.5, y: 0.1, z: 1 },
+		scale: 2.15
+	},
+	tpHandTransform: {
+		translation: { x: -0.4, y: -0.4, z: -0.83 },
+		rotation: { x: -90, y: 0, z: 5 },
+		scale: 1
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: -0.1, z: 0.5299 },
+		scale: 4
+	}
 }

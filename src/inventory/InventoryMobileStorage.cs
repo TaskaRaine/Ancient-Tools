@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
+using Vintagestory.GameContent;
 
 namespace AncientTools.Inventory
 {
@@ -132,7 +133,15 @@ namespace AncientTools.Inventory
             {
                 if(!MobileStorageInventory[i].Empty)
                 {
-                    GenerateEmptyStorageInventory(MobileStorageInventory[i].Itemstack.Collectible.Attributes["mobileStorageProps"]["quantitySlots"].AsInt());
+                    if (MobileStorageInventory[i].Itemstack.Collectible is BlockGenericTypedContainer)
+                    {
+                        string type = MobileStorageInventory[i].Itemstack.Attributes.GetString("type");
+
+                        GenerateEmptyStorageInventory(MobileStorageInventory[i].Itemstack.Collectible.Attributes["mobileStorageProps"][type]["quantitySlots"].AsInt());
+                    }
+                    else
+                        GenerateEmptyStorageInventory(MobileStorageInventory[i].Itemstack.Collectible.Attributes["mobileStorageProps"]["quantitySlots"].AsInt());
+
                     StorageContents[i].Slots = SlotsFromTreeAttributes(stitchedInventoryTrees.GetTreeAttribute("storagecontents" + i), StorageContents[i].Slots);
                 }
             }
@@ -200,6 +209,14 @@ namespace AncientTools.Inventory
         public ItemSlot GetStorageInventorySlot(int inventoryIndex, int slotIndex)
         {
             return StorageContents[inventoryIndex].GetSlotAtIndex(slotIndex);
+        }
+        public bool InventoryContainsItems(int index)
+        {
+            for (int i = 0; i < StorageContents[index].SlotCount; i++)
+                if (!StorageContents[index].Slots[i].Empty)
+                    return true;
+
+            return false;
         }
     }
 }

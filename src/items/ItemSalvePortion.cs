@@ -1,4 +1,4 @@
-﻿using AncientTools.Behaviors;
+﻿using AncientTools.EntityBehaviors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
