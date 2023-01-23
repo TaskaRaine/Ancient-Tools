@@ -19,6 +19,7 @@ namespace AncientTools.Utility
     abstract class EntityMobileStorage : EntityAgent
     {
         protected float DroppedHeight { get; set; } = -0.2f;
+        protected bool IsDropped { get; set; } = false;
         public abstract int StorageBlocksCount { get; protected set; }
         protected GuiDialogMobileStorage InvDialog { get; set; }
 
@@ -159,6 +160,8 @@ namespace AncientTools.Utility
             }
 
             Capi.Network.SendEntityPacket(this.EntityId, (int)AncientToolsNetworkPackets.MobileStorageRotationSync, data);
+            
+            IsDropped = true;
         }
         public Shape[] GetInventoryShapes()
         {

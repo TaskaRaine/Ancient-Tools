@@ -43,6 +43,14 @@ Additionally, pitch can be used to create long-lasting, brightly burning <a href
 A detailed explanation of how to produce pitch can be found in the <a href=\"handbook://ancienttools-quickstart-guide-pitch\">Pitch Guide</a>.
 
 Note: Since resin is so integral to Ancient Tools pitch production, a system has been implemented that allows knives to scrape pine and acacia trees to create leaking logs. This system can be disabled in the mod config files.
+
+<font weight='bold'>Mobile Storage</font>
+
+There will always be a need to transport things from place to place. Cultures from ancient Greece, Egypt, Assyria, and many others all envisioned various mobile transport and storage solutions to fit the needs of their people.
+
+Hand-drawn carts were among the very first forms of man-made transport. They were often little more than a set of planks or a box placed upon a frame with wheels attached. Cheap, and often accessible to the common folk.
+
+Similarly, hand-drawn carts are the very first type of mobile storage available in Ancient Tools! 
 ",
 	"game:ancienttools-quickstart-guide-barkstripping": "Bark Stripping Guide",
 	"game:ancienttools-quickstart-title-barkstripping": "Crafting Mechanic: Bark Stripping",
@@ -141,6 +149,14 @@ Ancient Tools looks to incorporate a wide variety of transportation options insp
 <a href=\'handbooksearch://cart\'>Carts</a> are simple two-wheeled constructions primarily made of wooden <a href=\'handbooksearch://board\'>boards</a> and <a href=\'handbooksearch://beam\'>beams</a> that may be all a wandering trader needs in life. 
 
 To build a <a href=\'handbooksearch://cart\'>cart</a> of your own, all you need is a single <a href=\'handbook://block-woodenaxle-ud'>axle</a>, a couple of <a href=\'handbook://item-ancienttools:wheel-oak\'>wheels</a>, a handful of <a href=\'handbook://item-ancienttools:beam-oak\'>beams</a>, and a bunch of <a href=\'handbook://item-board-oak\'>boards</a> arranged neatly in the crafting grid!
+
+Place the resulting cart item on the ground...and now you have a handy little device that can follow you around wherever you go, hauling all your goodies. 
+
+To use the cart for its intended purpose, it will need to have an empty <a href=\'handbook://block-chest-normal-generic'>chest</a> inventory placed on it with <icon name='rightmousebutton'></icon>. With an inventory set on the cart, it can now be accessed with <icon name='rightmousebutton'></icon> for storage purposes.
+
+To move the cart from place to place, simply pick it up by crouching and interacting with it using <icon name='rightmousebutton'></icon>. Wherever you travel, your cart will closely follow! To put the cart down, simply repeat the same sequences of actions you used to pick up the cart.
+
+When empty, cart inventories can also be removed! Simply press sprint, then <icon name='rightmousebutton'></icon> with an empty hand to remove it from the cart.
 	",
 
 	"handbook-smelting-craftinfo": "<a href=\"handbook://craftinginfo-smelting\">Smelting</a>",

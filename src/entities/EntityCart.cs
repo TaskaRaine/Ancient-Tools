@@ -154,15 +154,33 @@ namespace AncientTools.Entities
             {
                 if (AttachedEntity != null)
                 {
-                    SetLookAtVector(EntityTransform.XYZFloat, AttachedEntity.SidedPos.XYZFloat, AttachedEntity.LocalEyePos.ToVec3f());
+                    if (EntityTransform.DistanceTo(AttachedEntity.SidedPos) <= 2.0)
+                        SetLookAtVector(EntityTransform.XYZFloat, AttachedEntity.SidedPos.XYZFloat, AttachedEntity.LocalEyePos.ToVec3f());
+                    else
+                    {
+                        AttachedEntity.Stats.Remove("walkspeed", "cartspeedmodifier");
+
+                        DropCart();
+                        AttachedEntity = null;
+                    }
+                }
+                else if(IsDropped == false)
+                {
+                    DropCart();
                 }
 
                 Renderer.TesselateShape();
             }
-
-            if(AttachedEntity != null)
+            else
             {
-                AttachedEntity.Stats.Set("walkspeed", "cartspeedmodifier", (float)-0.2, false);
+                if (AttachedEntity != null)
+                {
+                    if (EntityTransform.DistanceTo(AttachedEntity.SidedPos) >= 2.0)
+                    {
+                        AttachedEntity = null;
+                        IsDropped = true;
+                    }
+                }
             }
         }
         public override void OnInteract(EntityAgent byEntity, ItemSlot itemslot, Vec3d hitPosition, EnumInteractMode mode)
@@ -178,8 +196,11 @@ namespace AncientTools.Entities
                         if (entityDistance <= 2.0)
                         {
                             AttachedEntity = byEntity;
+                            IsDropped = false;
 
-                            if(Api.Side == EnumAppSide.Client)
+                            AttachedEntity.Stats.Set("walkspeed", "cartspeedmodifier", (float)-0.2, false);
+
+                            if (Api.Side == EnumAppSide.Client)
                                 SetLookAtVector(EntityTransform.XYZFloat, AttachedEntity.SidedPos.XYZFloat, AttachedEntity.LocalEyePos.ToVec3f());
                         }
                     }
@@ -253,7 +274,7 @@ namespace AncientTools.Entities
                 {
                     SendOpenInventoryPacket((EntityPlayer)byEntity, 0);
 
-                    AnimateOpen();
+                    //AnimateOpen();
                 }
             }
             else if(mode == EnumInteractMode.Attack)
