@@ -18,7 +18,13 @@
 			scale: 1.25,
 		},
 	},
-	behaviors: [{ name: "WedgeSmack" }],
+	behaviors: [
+		{ name: "WedgeSmack" },
+		{ name: "MobileStorageRepair", properties: { 
+			repairRate: 5,
+			repairInterval: 1
+		}}
+	],
 	variantgroups: [
 		{ code: "handle", states: ["wood", "bone"] },
         { code: "material", states: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint" ] },

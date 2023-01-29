@@ -30,18 +30,21 @@
 				"shape": "game:shapes/block/wood/chest/normal",
 				"openSound": "game:sounds/block/largechestopen",
 				"closeSound": "game:sounds/block/largechestclose",
+				"placementSound": "game:sounds/block/planks", 
 				"quantitySlots": 16
 			},
 			"golden": { 
 				"shape": "game:shapes/block/wood/chest/treasure-golden-closed",
 				"openSound": "game:sounds/block/largechestopen",
 				"closeSound": "game:sounds/block/largechestclose",
+				"placementSound": "game:sounds/block/planks", 
 				"quantitySlots": 4
 			},
 			"owl": { 
 				"shape": "game:shapes/block/wood/chest/treasure-owl-closed",
 				"openSound": "game:sounds/block/largechestopen",
 				"closeSound": "game:sounds/block/largechestclose",
+				"placementSound": "game:sounds/block/planks", 
 				"quantitySlots": 4
 			},
 		},

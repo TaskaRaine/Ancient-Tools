@@ -15,6 +15,7 @@ namespace AncientTools.Entities.Tasks
         private float FollowDistanceSneak { get; set; } = 0.6f;
 
         private float ParkedDistance { get; set; } = 1.0f;
+        private Vec3d BehindVector { get; set; }
 
         public AITaskFollowAttachedEntity(EntityAgent entity) : base(entity)
         {
@@ -34,12 +35,12 @@ namespace AncientTools.Entities.Tasks
         {
             base.StartExecute();
 
-            mobileStorageEntity.SetEntityPosition(mobileStorageEntity.AttachedEntity.ServerPos.BehindCopy(FollowDistanceWalk).XYZ);
+            SetBehindVector(FollowDistanceWalk);
         }
         private void OnGoalReached()
         {
-            if(!mobileStorageEntity.AttachedEntity.Controls.TriesToMove)
-                mobileStorageEntity.SetEntityPosition(mobileStorageEntity.AttachedEntity.ServerPos.BehindCopy(ParkedDistance).XYZ);
+            if (!mobileStorageEntity.AttachedEntity.Controls.TriesToMove)
+                SetBehindVector(ParkedDistance);
         }
 
         public override bool ContinueExecute(float dt)
@@ -51,14 +52,21 @@ namespace AncientTools.Entities.Tasks
             if (mobileStorageEntity.AttachedEntity.Controls.TriesToMove)
             {
                 if (mobileStorageEntity.AttachedEntity.Controls.Sneak)
-                    mobileStorageEntity.SetEntityPosition(TaskaMath.Vec3Lerp(mobileStorageEntity.ServerPos.XYZ, mobileStorageEntity.AttachedEntity.ServerPos.BehindCopy(FollowDistanceSneak).XYZ, 0.5f));
+                    SetBehindVector(FollowDistanceSneak);
                 else if (mobileStorageEntity.AttachedEntity.Controls.Sprint)
-                    mobileStorageEntity.SetEntityPosition(TaskaMath.Vec3Lerp(mobileStorageEntity.ServerPos.XYZ, mobileStorageEntity.AttachedEntity.ServerPos.BehindCopy(FollowDistanceSprint).XYZ, 0.5f));
+                    SetBehindVector(FollowDistanceSprint);
                 else
-                    mobileStorageEntity.SetEntityPosition(TaskaMath.Vec3Lerp(mobileStorageEntity.ServerPos.XYZ, mobileStorageEntity.AttachedEntity.ServerPos.BehindCopy(FollowDistanceWalk).XYZ, 0.5f));
+                    SetBehindVector(FollowDistanceWalk);
             }
 
             return base.ContinueExecute(dt);
+        }
+        private void SetBehindVector(float distance)
+        {
+            BehindVector = mobileStorageEntity.AttachedEntity.ServerPos.BehindCopy(distance).XYZ;
+            BehindVector.Y = mobileStorageEntity.AttachedEntity.ServerPos.Y;
+
+            mobileStorageEntity.SetEntityPosition(BehindVector);
         }
     }
 }

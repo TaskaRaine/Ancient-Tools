@@ -163,6 +163,18 @@ namespace AncientTools.Inventory
         {
             return StorageContents[index];
         }
+        public override void OnItemSlotModified(ItemSlot slot)
+        {
+            base.OnItemSlotModified(slot);
+        }
+        public override bool TryFlipItemStack(IPlayer owningPlayer, string[] invIds, int[] slotIds, long[] lastChanged)
+        {
+            return base.TryFlipItemStack(owningPlayer, invIds, slotIds, lastChanged);
+        }
+        public override bool TryMoveItemStack(IPlayer player, string[] invIds, int[] slotIds, ref ItemStackMoveOperation op)
+        {
+            return base.TryMoveItemStack(player, invIds, slotIds, ref op);
+        }
         public override object ActivateSlot(int slotId, ItemSlot sourceSlot, ref ItemStackMoveOperation op)
         {
             object packet = base.ActivateSlot(slotId, sourceSlot, ref op);

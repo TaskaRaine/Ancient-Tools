@@ -1,0 +1,9 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/storageflags",
+		"value": 257,
+		"file": "game:itemtypes/resource/plank",
+		"side": "Server"
+	}
+]

@@ -11,6 +11,8 @@ namespace AncientTools.CollectibleBehaviors
             api.RegisterCollectibleBehaviorClass("ConvertBlockUsingIngredient", typeof(CollectibleBehaviorConvertBlockUsingIngredient));
             api.RegisterCollectibleBehaviorClass("ConvertHide", typeof(CollectibleBehaviorConvertHide));
             api.RegisterCollectibleBehaviorClass("WedgeSmack", typeof(CollectibleBehaviorWedgeSmack));
+            api.RegisterCollectibleBehaviorClass("MobileStorageDestruction", typeof(CollectibleBehaviorMobileStorageDestruction));
+            api.RegisterCollectibleBehaviorClass("MobileStorageRepair", typeof(CollectibleBehaviorMobileStorageRepair));
         }
     }
 }

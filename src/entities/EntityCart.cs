@@ -154,7 +154,7 @@ namespace AncientTools.Entities
             {
                 if (AttachedEntity != null)
                 {
-                    if (EntityTransform.DistanceTo(AttachedEntity.SidedPos) <= 2.0)
+                    if (EntityTransform.DistanceTo(AttachedEntity.SidedPos) <= 4.0)
                         SetLookAtVector(EntityTransform.XYZFloat, AttachedEntity.SidedPos.XYZFloat, AttachedEntity.LocalEyePos.ToVec3f());
                     else
                     {
@@ -175,8 +175,10 @@ namespace AncientTools.Entities
             {
                 if (AttachedEntity != null)
                 {
-                    if (EntityTransform.DistanceTo(AttachedEntity.SidedPos) >= 2.0)
+                    if (EntityTransform.DistanceTo(AttachedEntity.SidedPos) >= 4.0)
                     {
+                        SyncAttachedEntity(-1);
+
                         AttachedEntity = null;
                         IsDropped = true;
                     }
@@ -198,7 +200,10 @@ namespace AncientTools.Entities
                             AttachedEntity = byEntity;
                             IsDropped = false;
 
-                            AttachedEntity.Stats.Set("walkspeed", "cartspeedmodifier", (float)-0.2, false);
+                            AttachedEntity.Stats.Set("walkspeed", "cartspeedmodifier", -0.2f, false);
+
+                            if (Api.Side == EnumAppSide.Server)
+                                SyncAttachedEntity(byEntity.EntityId);
 
                             if (Api.Side == EnumAppSide.Client)
                                 SetLookAtVector(EntityTransform.XYZFloat, AttachedEntity.SidedPos.XYZFloat, AttachedEntity.LocalEyePos.ToVec3f());
@@ -212,6 +217,9 @@ namespace AncientTools.Entities
                         }
 
                         AttachedEntity = null;
+
+                        if (Api.Side == EnumAppSide.Server)
+                            SyncAttachedEntity(-1);
 
                         if(Api.Side == EnumAppSide.Client)
                             DropCart();
@@ -227,6 +235,9 @@ namespace AncientTools.Entities
                             CartInventorySlot.MarkDirty();
 
                             MobileStorageInventory.RemoveEmptyStorage(0);
+
+                            if(Api.Side == EnumAppSide.Server)
+                                ServerCloseClientDialogs();
                         }
                     }
                 }
@@ -257,16 +268,22 @@ namespace AncientTools.Entities
                         if (type != string.Empty)
                         {
                             MobileStorageInventory.GenerateEmptyStorageInventory(CartInventorySlot.Itemstack.Collectible.Attributes["mobileStorageProps"][type]["quantitySlots"].AsInt());
-                            
+
                             if (Api.Side == EnumAppSide.Client)
+                            {
                                 Renderer.AssignStoragePlacementProperties(CartInventorySlot.Itemstack?.Collectible?.Attributes["cartPlacable"][type]);
+                                PlayPlacementSound();
+                            }
                         }
                         else
                         {
                             MobileStorageInventory.GenerateEmptyStorageInventory(CartInventorySlot.Itemstack.Collectible.Attributes["mobileStorageProps"]["quantitySlots"].AsInt());
 
                             if (Api.Side == EnumAppSide.Client)
+                            {
                                 Renderer.AssignStoragePlacementProperties(CartInventorySlot.Itemstack?.Collectible?.Attributes["cartPlacable"]);
+                                PlayPlacementSound();
+                            }
                         }
                     }
                 }

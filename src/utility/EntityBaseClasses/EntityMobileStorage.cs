@@ -18,18 +18,22 @@ namespace AncientTools.Utility
 {
     abstract class EntityMobileStorage : EntityAgent
     {
+        private const int ATTACHED_CHECK_IN_SECONDS = 15;
         protected float DroppedHeight { get; set; } = -0.2f;
         protected bool IsDropped { get; set; } = false;
         public abstract int StorageBlocksCount { get; protected set; }
         protected GuiDialogMobileStorage InvDialog { get; set; }
 
         public ICoreClientAPI Capi { get; set; }
+        public ICoreServerAPI Sapi { get; set; }
         public InventoryMobileStorage MobileStorageInventory { get; set; }
         //public InventoryGeneric[] StorageBlockInventories { get; set; }
 
         public EntityAgent AttachedEntity { get; set; }
         public EntityPos EntityTransform { get; set; }
         public Vec3f LookAtVector { get; set; } = new Vec3f(0.0f, 0.0f, 0.0f);
+
+        private long PreviousAttachedEntityCheckTime { get; set; } = 0;
 
         public EntityMobileStorage()
         {
@@ -40,9 +44,8 @@ namespace AncientTools.Utility
             base.Initialize(properties, api, InChunkIndex3d);
 
             EntityTransform = this.SidedPos;
-
-            if (api.Side == EnumAppSide.Client)
-                Capi = (ICoreClientAPI)api;
+            Capi = api as ICoreClientAPI;
+            Sapi = api as ICoreServerAPI;
 
             if (WatchedAttributes.HasAttribute("lookAtVectorX") && WatchedAttributes.HasAttribute("lookAtVectorY") && WatchedAttributes.HasAttribute("lookAtVectorZ"))
             {
@@ -53,12 +56,6 @@ namespace AncientTools.Utility
 
             UpdateStorageContentsFromTree();
 
-            /*
-            for(int i = 0; i < MobileStorageInventory.StorageSlotCount(); i++)
-            {
-                MobileStorageInventory.GetStorageInventorySlot(0, i);
-            }
-            */
             MobileStorageInventory.OnInventoryClosed += CloseClientDialog;
         }
         public override string GetInfoText()
@@ -109,8 +106,30 @@ namespace AncientTools.Utility
             {
                 OpenInventoryDialog(data);
             }
+            if(packetid == (int)AncientToolsNetworkPackets.MobileStorageSyncAttachedEntity)
+            {
+                PerformClientAttachEntity(data);
+            }
+            if(packetid == (int)AncientToolsNetworkPackets.MobileStorageCloseInventory)
+            {
+                InvDialog?.TryClose();
+            }
 
             base.OnReceivedServerPacket(packetid, data);
+        }
+        public override void OnGameTick(float dt)
+        {
+            base.OnGameTick(dt);
+
+            if(AttachedEntity != null && Api.Side == EnumAppSide.Server)
+            {
+                if(Api.World.ElapsedMilliseconds / 1000 > PreviousAttachedEntityCheckTime + ATTACHED_CHECK_IN_SECONDS)
+                {
+                    SyncAttachedEntity(AttachedEntity.EntityId);
+
+                    PreviousAttachedEntityCheckTime = Api.World.ElapsedMilliseconds / 1000;
+                }
+            }
         }
         public void SetEntityPosition(Vec3d position)
         {
@@ -141,6 +160,29 @@ namespace AncientTools.Utility
 
             LookAtVector.X = (float)pitch;
             LookAtVector.Y = (float)yaw;
+        }
+        /// <summary>
+        /// Sends the entity ID that the cart should attach to so that all can assign their AttachedEntity for accurate visual rotation. 
+        /// </summary>
+        /// <param name="entityID">The ID of the entity a cart is attached to. If -1, the AttachedEntity should be removed.</param>
+        public void SyncAttachedEntity(long entityID)
+        {
+            byte[] data;
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                BinaryWriter writer = new BinaryWriter(ms);
+                TreeAttribute tree = new TreeAttribute();
+                tree.SetLong("attachedID", entityID);
+                tree.ToBytes(writer);
+                data = ms.ToArray();
+            }
+
+            foreach (IServerPlayer eachPlayer in Sapi.Server.Players)
+            {
+                if (eachPlayer.ConnectionState == EnumClientState.Playing)
+                    Sapi.Network.SendEntityPacket(eachPlayer, this.EntityId, (int)AncientToolsNetworkPackets.MobileStorageSyncAttachedEntity, data);
+            }
         }
         public void DropCart()
         {
@@ -239,6 +281,38 @@ namespace AncientTools.Utility
                 player.InventoryManager.OpenInventory(MobileStorageInventory);
             }
         }
+        protected void PlayPlacementSound()
+        {
+            AssetLocation placementSoundLocation;
+
+            //-- Type is also checked in in EntityCart before this method is called --//
+            if (MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible is BlockGenericTypedContainer)
+            {
+                string type = MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Attributes?.GetString("type");
+
+                placementSoundLocation = new AssetLocation(MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible.Attributes["mobileStorageProps"][type]["placementSound"].AsString() + ".ogg");
+            }
+            else
+                placementSoundLocation = new AssetLocation(MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible.Attributes["mobileStorageProps"]["placementSound"].AsString() + ".ogg");
+
+            (Capi.World).LoadSound(new SoundParams()
+            {
+                Location = placementSoundLocation,
+                ShouldLoop = false,
+                Position = Pos.XYZFloat,
+                DisposeOnFinish = true,
+                Volume = 1.0f,
+                Range = 32
+            }).Start();
+        }
+        protected void ServerCloseClientDialogs()
+        {
+            foreach(IServerPlayer eachPlayer in Sapi.World.AllOnlinePlayers)
+            {
+                if (eachPlayer.ConnectionState == EnumClientState.Playing)
+                    ((ICoreServerAPI)Api).Network.SendEntityPacket(eachPlayer, this.EntityId, (int)AncientToolsNetworkPackets.MobileStorageCloseInventory);
+            }
+        }
         private void PerformServerRotationSync(byte[] data)
         {
             TreeAttribute tree = TreeData(data);
@@ -251,12 +325,10 @@ namespace AncientTools.Utility
             WatchedAttributes.SetFloat("lookAtVectorY", LookAtVector.Y);
             WatchedAttributes.SetFloat("lookAtVectorZ", LookAtVector.Z);
 
-            ICoreServerAPI sapi = (ICoreServerAPI)Api;
-
-            foreach (IServerPlayer eachPlayer in sapi.Server.Players)
+            foreach (IServerPlayer eachPlayer in Sapi.World.AllOnlinePlayers)
             {
                 if (eachPlayer.ConnectionState == EnumClientState.Playing)
-                    sapi.Network.SendEntityPacket(eachPlayer, this.EntityId, (int)AncientToolsNetworkPackets.MobileStorageRotationSync, data);
+                    Sapi.Network.SendEntityPacket(eachPlayer, this.EntityId, (int)AncientToolsNetworkPackets.MobileStorageRotationSync, data);
             }
         }
         private void PerformClientRotationSync(byte[] data)
@@ -267,9 +339,21 @@ namespace AncientTools.Utility
             LookAtVector.Y = tree.GetFloat("lookAtVectorY");
             LookAtVector.Z = tree.GetFloat("lookAtVectorZ");
         }
+        private void PerformClientAttachEntity(byte[] data)
+        {
+            long id = TreeData(data).GetLong("attachedID");
+
+            if (id == -1)
+            {
+                AttachedEntity = null; 
+                return;
+            }
+
+            if (AttachedEntity == null)
+                AttachedEntity = Api.World.GetEntityById(id) as EntityAgent;
+        }
         private void OpenInventoryDialog(byte[] data)
         {
-            IClientWorldAccessor clientWorld = (IClientWorldAccessor)Api.World;
             AssetLocation openSoundLocation;
 
             if (InvDialog != null)
@@ -310,7 +394,7 @@ namespace AncientTools.Utility
             else
                 openSoundLocation = new AssetLocation(MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible.Attributes["mobileStorageProps"]["openSound"].AsString() + ".ogg");
             
-            (clientWorld).LoadSound(new SoundParams()
+            (Capi.World).LoadSound(new SoundParams()
             {
                 Location = openSoundLocation,
                 ShouldLoop = false,
@@ -320,46 +404,38 @@ namespace AncientTools.Utility
                 Range = 32
             }).Start();
 
-            /*
-            Block block = Api.World.BlockAccessor.GetBlock(Pos);
-            string os = block.Attributes?["openSound"]?.AsString();
-            string cs = block.Attributes?["closeSound"]?.AsString();
-            AssetLocation opensound = os == null ? null : AssetLocation.Create(os, block.Code.Domain);
-            AssetLocation closesound = cs == null ? null : AssetLocation.Create(cs, block.Code.Domain);
-            invDialog.OpenSound = opensound ?? this.OpenSound;
-            invDialog.CloseSound = closesound ?? this.CloseSound;
-            */
-
             InvDialog.TryOpen();
         }
         private void CloseClientDialog(IPlayer player)
         {
-            IClientWorldAccessor clientWorld = (IClientWorldAccessor)Api.World;
-            AssetLocation closeSoundLocation;
-
             var inv = InvDialog;
             InvDialog = null; // Weird handling because to prevent endless recursion
             if (inv?.IsOpened() == true) inv?.TryClose();
             inv?.Dispose();
 
-            if (MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible is BlockGenericTypedContainer)
+            if(!MobileStorageInventory.Empty)
             {
-                string type = MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Attributes?.GetString("type");
+                AssetLocation closeSoundLocation;
 
-                closeSoundLocation = new AssetLocation(MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible.Attributes["mobileStorageProps"][type]["closeSound"].AsString() + ".ogg");
+                if (MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible is BlockGenericTypedContainer)
+                {
+                    string type = MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Attributes?.GetString("type");
+
+                    closeSoundLocation = new AssetLocation(MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible.Attributes["mobileStorageProps"][type]["closeSound"].AsString() + ".ogg");
+                }
+                else
+                    closeSoundLocation = new AssetLocation(MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible.Attributes["mobileStorageProps"]["closeSound"].AsString() + ".ogg");
+
+                (Capi.World).LoadSound(new SoundParams()
+                {
+                    Location = closeSoundLocation,
+                    ShouldLoop = false,
+                    Position = Pos.XYZFloat,
+                    DisposeOnFinish = true,
+                    Volume = 1.0f,
+                    Range = 32
+                }).Start();
             }
-            else
-                closeSoundLocation = new AssetLocation(MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible.Attributes["mobileStorageProps"]["closeSound"].AsString() + ".ogg");
-
-            (clientWorld).LoadSound(new SoundParams()
-            {
-                Location = closeSoundLocation,
-                ShouldLoop = false,
-                Position = Pos.XYZFloat,
-                DisposeOnFinish = true,
-                Volume = 1.0f,
-                Range = 32
-            }).Start();
         }
     }
 }

@@ -48,9 +48,11 @@ Note: Since resin is so integral to Ancient Tools pitch production, a system has
 
 There will always be a need to transport things from place to place. Cultures from ancient Greece, Egypt, Assyria, and many others all envisioned various mobile transport and storage solutions to fit the needs of their people.
 
-Hand-drawn carts were among the very first forms of man-made transport. They were often little more than a set of planks or a box placed upon a frame with wheels attached. Cheap, and often accessible to the common folk.
+Hand-drawn <a href=\'handbooksearch://cart\'>carts</a> were among the very first forms of man-made transport. They were often little more than a set of planks or a box placed upon a frame with wheels attached. Cheap, and often accessible to the common folk.
 
-Similarly, hand-drawn carts are the very first type of mobile storage available in Ancient Tools! 
+Similarly, hand-drawn <a href=\'handbooksearch://cart\'>carts</a> are the very first type of mobile storage available in Ancient Tools! 
+
+More details about how to create each of these primitive vehicles and information about their usage can be found in the <a href=\"handbook://ancienttools-quickstart-feature-mobilestorage\">Mobile Storage</a> segment. 
 ",
 	"game:ancienttools-quickstart-guide-barkstripping": "Bark Stripping Guide",
 	"game:ancienttools-quickstart-title-barkstripping": "Crafting Mechanic: Bark Stripping",
@@ -134,13 +136,13 @@ Similarly, <a href=\'handbooksearch://wedge\'>wedges</a>, either crafted from st
 	",
 
 	"game:ancienttools-quickstart-feature-mobilestorage": "Mobile Storage Feature",
-	"game:ancienttools-quickstart-title-mobilestorage": "Feature: Mobile Storage",
+	"game:ancienttools-quickstart-title-mobilestorage": "Mobile Storage",
 	"game:ancienttools-quickstart-text-mobilestorage": "
 <font weight='bold' align='center'>Mobile Storage</font><br>
 
 The wheel is considered by most to be the most impactful invention of human history. It is possible that the device was conceived during the late Neolithic era but, only when metal tools were more abundantly available during the Bronze era, did the wheel have a significant worldwide impact.
 
-The wheel singlehandedly revolutionized the idea of transportation across vast distances. A whole new wave on inventions were constructed to deliver objects and people from one place to another. 
+The wheel singlehandedly revolutionized the idea of transportation across vast distances. A whole new wave of inventions were constructed to deliver objects and people from one place to another. 
 
 Ancient Tools looks to incorporate a wide variety of transportation options inspired by history.
 
@@ -148,11 +150,11 @@ Ancient Tools looks to incorporate a wide variety of transportation options insp
 
 <a href=\'handbooksearch://cart\'>Carts</a> are simple two-wheeled constructions primarily made of wooden <a href=\'handbooksearch://board\'>boards</a> and <a href=\'handbooksearch://beam\'>beams</a> that may be all a wandering trader needs in life. 
 
-To build a <a href=\'handbooksearch://cart\'>cart</a> of your own, all you need is a single <a href=\'handbook://block-woodenaxle-ud'>axle</a>, a couple of <a href=\'handbook://item-ancienttools:wheel-oak\'>wheels</a>, a handful of <a href=\'handbook://item-ancienttools:beam-oak\'>beams</a>, and a bunch of <a href=\'handbook://item-board-oak\'>boards</a> arranged neatly in the crafting grid!
+To build a <a href=\'handbooksearch://cart\'>cart</a> of your own, all you need is a single <a href=\'handbook://block-woodenaxle-ud'>axle</a>, a couple of <a href=\'handbook://item-ancienttools:wheel-oak\'>wheels</a>, a handful of <a href=\'handbook://item-ancienttools:beam-oak\'>beams</a>, and a bunch of <a href=\'handbook://item-plank-oak\'>boards</a> arranged neatly in the crafting grid!
 
 Place the resulting cart item on the ground...and now you have a handy little device that can follow you around wherever you go, hauling all your goodies. 
 
-To use the cart for its intended purpose, it will need to have an empty <a href=\'handbook://block-chest-normal-generic'>chest</a> inventory placed on it with <icon name='rightmousebutton'></icon>. With an inventory set on the cart, it can now be accessed with <icon name='rightmousebutton'></icon> for storage purposes.
+To use the cart for its intended purpose, it will need to have an empty <a href=\'handbooksearch://wooden chest\'>chest</a> inventory placed on it with <icon name='rightmousebutton'></icon>. With an inventory set on the cart, it can now be accessed with <icon name='rightmousebutton'></icon> for storage purposes.
 
 To move the cart from place to place, simply pick it up by crouching and interacting with it using <icon name='rightmousebutton'></icon>. Wherever you travel, your cart will closely follow! To put the cart down, simply repeat the same sequences of actions you used to pick up the cart.
 

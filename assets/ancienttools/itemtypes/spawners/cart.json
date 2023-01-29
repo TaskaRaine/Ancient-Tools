@@ -3,6 +3,9 @@
 	class: "ItemCart",
 	attributes: {
 		types: ["wood-aged", "wood-birch", "wood-oak", "wood-maple", "wood-pine", "wood-acacia", "wood-kapok", "wood-baldcypress", "wood-larch", "wood-redwood", "wood-ebony", "wood-walnut", "wood-purpleheart"],
+		handbook: {
+			groupBy: ["cart"],
+		}
 	},
 	creativeinventoryStacks: [
 	{

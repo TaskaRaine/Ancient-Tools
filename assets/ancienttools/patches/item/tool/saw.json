@@ -1,0 +1,16 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/behaviors/-",
+		"value": {
+			name: "MobileStorageDestruction",
+			properties: {
+				destructionRate: 5,
+				destructionInverval: 1,
+				durabilityLoss: 5
+			}
+		},
+		"file": "game:itemtypes/tool/saw",
+		"side": "Server",
+	}
+]

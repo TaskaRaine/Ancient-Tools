@@ -42,27 +42,27 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="VintagestoryAPI">
-      <HintPath>H:\VintageStory 1.17.9\VintagestoryAPI.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.10\VintagestoryAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>H:\VintageStory 1.17.9\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.10\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>H:\VintageStory 1.17.9\Mods\VSEssentials.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.10\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>H:\VintageStory 1.17.9\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.10\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>H:\VintageStory 1.17.9\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.10\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="0Harmony">
-      <HintPath>H:\VintageStory 1.17.9\Lib\0Harmony.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.10\Lib\0Harmony.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +193,8 @@
     <None Include="assets\ancienttools\patches\compatibility\moreanimals\goldenpheasant.json" />
     <None Include="assets\ancienttools\patches\compatibility\moreanimals\pheasant.json" />
     <None Include="assets\ancienttools\patches\entity\land\gazelle.json" />
+    <None Include="assets\ancienttools\patches\item\resources\plank.json" />
+    <None Include="assets\ancienttools\patches\item\tool\saw.json" />
     <None Include="assets\ancienttools\patches\recipes\leather.json" />
     <None Include="assets\ancienttools\patches\recipes\scrapedhide.json" />
     <None Include="assets\ancienttools\patches\recipes\soakedhide-borax.json" />
@@ -468,7 +470,7 @@
     <None Include="assets\ancienttools\shapes\block\splitlogs\splitlog_nsw.json" />
     <None Include="assets\ancienttools\shapes\block\stretchingframe\stretchingframe_plus.json" />
     <None Include="assets\ancienttools\itemtypes\resources\beam.json" />
-    <None Include="assets\ancienttools\shapes\entity\cart_lg.json" />
+    <None Include="assets\ancienttools\shapes\entity\cart_lg_woodwheel.json" />
     <None Include="assets\ancienttools\shapes\item\resource\pitchball.json" />
     <None Include="assets\ancienttools\shapes\item\resource\pitchstick.json" />
     <None Include="assets\game\patches\recipes\cooking\meatystew.json" />
@@ -598,10 +600,8 @@
     <None Include="resources\guide\mortarshapes_guide.md" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="assets\ancienttools\patches\item\tool\" />
     <Folder Include="assets\ancienttools\patches\lang\" />
     <Folder Include="assets\ancienttools\shapes\block\piles\" />
-    <Folder Include="assets\ancienttools\shapes\entity\cart_inventories\" />
     <Folder Include="assets\ancienttools\sounds\effect\" />
     <Folder Include="assets\ancienttools\textures\block\food\pie\" />
     <Folder Include="assets\ancienttools\textures\item\food\flour\" />
@@ -613,6 +613,8 @@
     <None Include="assets\ancienttools\blocktypes\mortar.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\collectiblebehavior\CollectibleBehaviorMobileStorageDestruction.cs" />
+    <Compile Include="src\collectiblebehavior\CollectibleBehaviorMobileStorageRepair.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorWedgeSmack.cs" />
     <Compile Include="src\entityrenderer\MobileStorageRenderer.cs" />
     <Compile Include="src\entity\aitask\FollowAttachedEntity.cs" />
