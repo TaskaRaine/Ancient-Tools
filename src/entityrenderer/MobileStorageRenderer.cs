@@ -14,6 +14,14 @@ namespace AncientTools.EntityRenderers
             public double[] Translation;
             public double[] Rotation;
             public double Scale;
+
+            public bool IsSet()
+            {
+                if (Translation == null || Rotation == null || Scale == 0)
+                    return false;
+
+                return true;
+            }
         }
         public TextureAtlasPosition this[string textureCode]
         {

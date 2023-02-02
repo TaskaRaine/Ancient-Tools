@@ -1,6 +1,6 @@
 { 
 　　// Japanese localization file for 'Ancient Tools'.
-  // Mod Version: v1.4.5
+  // Mod Version: v1.5.0
   // Translated By: Macoto Hino
   // Machine translation using PCOT and DeepL.
   
@@ -22,13 +22,8 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 
 石の釿の頭は、骨と一緒に加工することで、より頑丈な道具になります！
 
-集めた<a href=\'handbook://item-ancienttools:bark-oak\'>樹皮</a>は、様々な用途に使うことが出来ます。薪の代わりに焚き火の火種になります。また、樹皮を編んで、かわいい<a href=\'handbooksearch://樹皮バスケット\'>樹皮バスケット</a>を作ったり、物を入れたりすることも出来ます。
+樹皮や樹皮を剥いだ丸太の用途の詳細は、<a href=\"handbook://ancienttools-quickstart-guide-barkstripping\">樹皮剥がしガイド</a>をご覧下さい。
 
-<a href=\'handbook://item-ancienttools:bark-birch\'>シラカバの樹皮</a>や<a href=\'handbook://item-ancienttools:bark-pine\'>マツの樹皮</a>は、樹木の中でも特殊な性質を持つ資源であり、それを活用することが出来ます。 
-
-どちらの樹木も樹皮の内側は食べられるので、<a href=\'handbooksearch://粉\'>粉</a>にして焼くと<a href=\'handbooksearch://パン\'>パン</a>になります。これはスカンジナビアの先住民族サーミの文化です。 
-
-また、どちらの樹皮も様々な薬効があります。もし興味があれば、<a href=\"handbook://ancienttools-quickstart-guide-salve\">膏薬の調合ガイド</a>をご覧下さい。
 
 <font weight='bold'>熟成棚</font>
 <a href=\'handbook://item-salt\'>塩</a>を使った肉の熟成は、何世紀にも渡って行われてきた保存方法です。 その為には、肉を熟成させる前に、肉が腐らないように注意深く管理された環境が必要です。地下室がおすすめです！
@@ -37,11 +32,11 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 
 塩漬け肉も焚き火台で焼けば、手軽な食事になります。
 
-<font weight='bold'>ネイティブアメリカンのなめし革</font>
+<font weight='bold'>ネイティブアメリカンの鞣し革</font>
 
-アメリカ先住民の文化は、動物の皮をなめすのに、植民地時代のヨーロッパ人とは異なる技術を使って、彼らの象徴である革製品を作りました。
+アメリカ先住民の文化は、動物の皮を鞣すのに、植民地時代のヨーロッパ人とは異なる技術を使って、彼らの象徴である革製品を作りました。
 
-古代の道具では、この技法を簡略化して実装し、レザークラフトの別の手段を提供しています。試してみたいですか？<a href=\"handbook://ancienttools-quickstart-guide-tanning\">ネイティブアメリカンのなめし革ガイド</a>をご覧下さい。 
+古代の道具では、この技法を簡略化して実装し、レザークラフトの別の手段を提供しています。試してみたいですか？<a href=\"handbook://ancienttools-quickstart-guide-tanning\">ネイティブアメリカンの鞣し革ガイド</a>をご覧下さい。 
 
 <font weight='bold'>松脂</font>
 
@@ -54,6 +49,31 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 松脂の作り方については、<a href=\"handbook://ancienttools-quickstart-guide-pitch\">松脂ガイド</a>に詳しい説明があります。
 
 注意：Ancient Toolsの松脂生産には樹脂が不可欠なので、ナイフでマツやアカシアの木を削って滴る丸太を作るシステムが実装されました。このシステムはMODの設定ファイルで無効にすることが出来ます。
+
+<font weight='bold'>移動式収納</font>
+
+物をあちこちに運ぶという需要はいつの時代にもある。古代ギリシャ、エジプト、アッシリアなどの文化圏では、人々の要望に合わせ、様々な移動手段や収納手段を構想していました。
+
+手押し<a href=\'handbooksearch://荷車\'>車</a>は、人類最初の輸送手段である。板や箱を枠にはめ込み、車輪を付けただけのものであった。安価で、庶民にも手に入りやすい。
+
+同様に、手押し<a href=\'handbooksearch://荷車\'>車</a>も、古代の道具の中で最も早く登場した移動式収納の一種なのだ！
+
+それぞれの原始的な荷車の作り方や使い方の詳細は、「<a href=\"handbook://ancienttools-quickstart-feature-mobilestorage\">移動式収納</a>」の項目でご覧頂けます。
+",
+	"game:ancienttools-quickstart-guide-barkstripping": "樹皮剥がしガイド",
+	"game:ancienttools-quickstart-title-barkstripping": "クラフトメカニック: 樹皮剥がし",
+	"game:ancienttools-quickstart-text-barkstripping": "
+<font weight='bold' align='center'>樹皮剥がしガイド</font><br>
+
+<a href=\'handbooksearch://釿（ちょうな）\'>釿（ちょうな）</a>を手に入れたら、いよいよ剥がし作業です。
+
+集めた木の<a href=\'handbook://item-ancienttools:bark-oak\'>樹皮</a>は、様々な用途に使うことが出来ます。樹皮は、薪の代わりに優れた焚き付けになります。また、樹皮を編んで、かわいい<a href=\'handbooksearch://樹皮バスケット\'>バスケット</a>を作ったり、物を入れたりすることも出来ます。
+
+<a href=\'handbook://item-ancienttools:bark-birch\'>シラカバの樹皮</a>や<a href=\'handbook://item-ancienttools:bark-pine\'>マツの樹皮</a>は、樹木の中でも特殊な性質を持つ資源であり、それを活用することが出来ます。 
+
+どちらの樹木も樹皮の内側は食べられるので、<a href=\'handbooksearch://粉\'>粉</a>にして焼くと<a href=\'handbooksearch://パン\'>パン</a>になります。これはスカンジナビアの先住民族サーミの文化です。 
+
+また、どちらの樹皮も様々な薬効があります。もし興味があれば、<a href=\"handbook://ancienttools-quickstart-guide-salve\">膏薬の調合ガイド</a>をご覧下さい。
 ",
 	"game:ancienttools-quickstart-guide-salve": "膏薬（こうやく）ガイド",
 	"game:ancienttools-quickstart-title-salve": "クラフトメカニック：膏薬（こうやく）の調合",
@@ -69,10 +89,10 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 
 空の膏薬容器をクラフトグリッドに置くと、再び調理鍋に戻すことが出来ます。
 	",
-	"game:ancienttools-quickstart-guide-tanning": "ネイティブアメリカンのなめし革ガイド",
-	"game:ancienttools-quickstart-title-tanning": "クラフトメカニック: ネイティブアメリカンのなめし革",
+	"game:ancienttools-quickstart-guide-tanning": "ネイティブアメリカンの鞣し革ガイド",
+	"game:ancienttools-quickstart-title-tanning": "クラフトメカニック: ネイティブアメリカンの鞣し革",
 	"game:ancienttools-quickstart-text-tanning": "
-<font weight='bold' align='center'>ネイティブアメリカンのなめし革ガイド</font><br>
+<font weight='bold' align='center'>ネイティブアメリカンの鞣し革ガイド</font><br>
 
 早速、お近くの<a href=\'handbooksearch://未加工の皮\'>生皮</a>を手に取ってみて下さい。
 
@@ -107,6 +127,51 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 
 あとは、その混合物を手に取り、近くの焚き火台で加熱すると、<a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>完成したら、地面に鉢を置き、<a href=\'handbook://item-stick\'>棒</a>で松脂を取ることが出来ます。
 	",
+	"game:ancienttools-quickstart-guide-woodsplitting": "木の割り方ガイド",
+	"game:ancienttools-quickstart-title-woodsplitting": "クラフトメカニック: 木の割り方",
+	"game:ancienttools-quickstart-text-woodsplitting": "
+<font weight='bold' align='center'>木の割り方ガイド</font><br>
+
+木の丸太は、大き過ぎて使い物にならないことがあります。新石器時代から産業革命前まで、木を使いやすい大きさに加工する技術として、"割る "という行為が行われていました。
+
+その為、<a href=\'handbooksearch://木槌\'>木槌</a>で木目に<a href=\'handbooksearch://楔\'>楔</a>を打ち込み、小さくても頑丈な木製品を作る文化が多くありました。
+
+同様に、石や鍛造で作られた<a href=\'handbooksearch://楔\'>楔</a>は、直立した<a href=\'handbooksearch://樹皮を剥いだ丸太\'>樹皮を剥いだ丸太</a>に<icon name='rightmousebutton'></icon>で設置し、<icon name='leftmousebutton'></icon>で<a href=\'handbooksearch://木槌\'>木槌</a>で叩くことが出来ます。四つ割りにすると、新しい<a href=\'handbooksearch://角材\'>角材</a>を手に入れることが出来ます。
+
+<a href=\'handbooksearch://角材\'>角材</a>は、Ancient Toolsの<a href=\'handbooksearch://車輪\'>車輪</a>や<a href=\"handbook://ancienttools-quickstart-feature-mobilestorage\">移動式収納</a>に欠かせない構造部品です。
+	",
+
+	"game:ancienttools-quickstart-feature-mobilestorage": "移動式収納の特徴",
+	"game:ancienttools-quickstart-title-mobilestorage": "移動式収納",
+	"game:ancienttools-quickstart-text-mobilestorage": "
+<font weight='bold' align='center'>移動式収納</font><br>
+
+車輪は、人類の歴史上、最もインパクトのある発明と考えられています。新石器時代後期に考案された可能性があるが、青銅器時代に金属製の道具が豊富に出回ってから、車輪は世界的に大きな影響を与えるようになりました。
+
+車輪は、長距離輸送の概念を一挙に変えました。物や人をある場所から別の場所に運ぶ為に、全く新しい発明が生まれました。 
+
+Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れることを視野に入れています。
+
+<font weight='bold' align='center'>荷車</font><br>
+
+<a href=\'handbooksearch://荷車\'>荷車</a>は、主に木の<a href=\'handbooksearch://板\'>板</a>や<a href=\'handbooksearch://角材\'>角材</a>で作られた簡単な二輪車で、放浪の商人には必要不可欠です。 
+
+自作の<a href=\'handbooksearch://荷車\'>荷車</a>に必要なのは、1本の<a href=\'handbook://block-woodenaxle-ud'>軸</a>、2個の<a href=\'handbook://item-ancienttools:wheel-oak\'>車輪</a>、<a href=\'handbook://item-ancienttools:beam-oak\'>角材</a>、そしてクラフトグリッドに整然と並べられたたくさんの<a href=\'handbook://item-plank-oak\'>板</a>だけです！
+
+出来上がった荷車を地面に置くと......どこにでもついてきて、いろいろなものを運んでくれる便利な道具の出来上りです。 
+
+荷車を本来の目的で使用するには、右クリックで空の<a href=\'handbooksearch://木製のチェスト\'>チェスト</a>をセットする必要があります。荷車にインベントリがセットされると、<icon name='rightmousebutton'></icon>でアクセス出来るようになり、<icon name='rightmousebutton'></icon>で保管の目的で使用出来るようになります。
+
+荷車を移動させるには、しゃがんで荷車を取り、<icon name='rightmousebutton'></icon>で操作して下さい。どこに行っても、荷車はついてきます。荷車を降ろすには、拾った時と同じ動作を繰り返すだけです。
+
+荷車のチェストの中身が空っぽになると、取り外すことが出来ます。手ぶらでスプリント+<icon name='rightmousebutton'></icon>で、荷車から取り外せます。
+	",
+
+	"handbook-smelting-craftinfo": "<a href=\"handbook://craftinginfo-smelting\">鍛造</a>",
+	"handbook-barkstripping-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-barkstripping\">樹皮剥がし</a>",
+	"handbook-salve-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-salve\">軟膏の調合</a>",
+	"handbook-mixingpitch-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-pitch\">松脂の混合物</a>",
+	"handbook-woodsplitting-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-woodsplitting\">木の分割</a>",
 
 	"blockhelp-place-pestle": "すりこ木を配置します",
 	"blockhelp-place-resource": "粉砕可能なリソースを配置する",
@@ -142,7 +207,10 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"blockhelp-saucer-insert-object": "松脂を入れる/蝋燭",
 	"blockhelp-scrape-log": "削り取る",
 
-	"blockinfo-curingrack": "一般的に塩漬け肉を熟成させる為に使用される。フックは付属していません。",
+	"blockhelp-place-wedge": "楔を差し込む",
+	"blockhelp-smack-wedge": "楔を打ち込む",
+
+	"blockinfo-curingrack": "一般的に塩漬け肉を熟成させる為に使用されます。フックは付属していません。",
 	"blockinfo-curingrack-no-entity": "このブロックで問題が発生しました。 ブロックエンティティは存在しません。ブロックを壊して、もう一度置いて下さい。",
 	"blockinfo-curingrack-hook-missing": "フックがありません",
 	
@@ -169,23 +237,13 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"blockinfo-pitch-empty-grass": "{0}/{1} 干し草",
 	"blockinfo-pitch-remaining": "{0}つの松脂が残っています。",
 
-	"game:handbook-crafting-title-strippedlog": "作成者：",
-	"game:handbook-crafting-text-strippedlog": "丸太から釿で丸太を剥ぎ取ります。また、クラフトグリッドの丸太で釿を使用すると、剥がれた丸太が返却されます。",
-
-	"game:handbook-crafting-title-finishedsalve": "作成者：",
-	"game:handbook-crafting-text-finishedsalve": "<a href=\'handbook://block-ancienttools:salvepot-softwax\'>溶けたワックス</a>のポットと<a href=\'handbook://block-ancienttools:salvepot-barkoil\'>準備された樹皮油</a>のポットと混ぜ合わせ、複数のポーションを含む軟膏を作成します。<icon name='rightmousebutton'></icon>で、この軟膏から一部を取り出すことが出来ます。",
-
-	"game:handbook-crafting-title-salveportion": "作成者：",
-	"game:handbook-crafting-text-salveportion": "<a href=\'handbook://block-ancienttools:salvepot-softwax\'>溶けたワックス</a>のポットと<a href=\'handbook://block-ancienttools:salvepot-barkoil\'>準備された樹皮油</a>のポットと混ぜ合わせ、複数のポーションを含む軟膏を作成します。<icon name='rightmousebutton'></icon>で、この軟膏から一部を取り出すことが出来ます。",
-
-	"game:handbook-crafting-title-pitch": "作成者：",
-	"game:handbook-crafting-text-pitch": "<a href=\'handbook://block-ancienttools:pitchpot-empty\'>空の松脂容器</a>に<a href=\'handbook://item-ancienttools:powderedcharcoal\'>木炭粉</a>、<a href=\'handbook://item-resin\'>樹脂</a>、<a href=\'handbook://item-drygrass\'>干し草</a>を入れ、<a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>出来上がった混合物</a>を焚き火台で焼いて下さい。<a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>完成した松脂</a>を地面に置き、松脂を取り出しましょう。",
-
 	"block-mortar-peridotite": "かんらん岩すり鉢",
 	"block-mortar-andesite": "安山岩すり鉢",
 	"block-mortar-granite": "花崗岩すり鉢",
 	"block-mortar-basalt": "玄武岩すり鉢",
 	"block-mortar-chert": "チャート岩すり鉢",
+
+	"blockdesc-mortar-*": "すりこ木と一緒に使えば、あらゆるものを粉砕することが出来ます。",
 
 	"block-curingrack-birch-*": "シラカバの熟成棚",
 	"block-curingrack-oak-*": "オークの熟成棚",
@@ -201,19 +259,23 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"block-curingrack-purpleheart-*": "パープルハートの熟成棚",
 	"block-curingrack-aged-*": "古びた熟成棚",
 
-	"block-strippedlog-birch-*": "剥ぎ取られたシラカバの丸太",
-	"block-strippedlog-oak-*": "剥ぎ取られたオークの丸太",
-	"block-strippedlog-maple-*": "剥ぎ取られたカエデの丸太",
-	"block-strippedlog-pine-*": "剥ぎ取られたマツの丸太",
-	"block-strippedlog-acacia-*": "剥ぎ取られたアカシアの丸太",
-	"block-strippedlog-kapok-*": "剥ぎ取られたカポックの丸太",
-	"block-strippedlog-baldcypress-*": "剥ぎ取られたヌマスギの丸太",
-	"block-strippedlog-larch-*": "剥ぎ取られたカラマツの丸太",
-	"block-strippedlog-redwood-*": "剥ぎ取られたレッドウッドのマルタ",
-	"block-strippedlog-ebony-*": "剥ぎ取られたコクタンの丸太",
-	"block-strippedlog-walnut-*": "剥ぎ取られたクルミの木材",
-	"block-strippedlog-purpleheart-*": "剥ぎ取られたパープルハートの木材",
-	"block-strippedlog-aged-*": "剥ぎ取られた古びた丸太",
+	"blockdesc-curingrack-*": "一般的に塩漬けの肉を熟成させる為に使用されます。フックは付属していません。",
+
+	"block-strippedlog-birch-*": "樹皮を剥いだシラカバの丸太",
+	"block-strippedlog-oak-*": "樹皮を剥いだオークの丸太",
+	"block-strippedlog-maple-*": "樹皮を剥いだカエデの丸太",
+	"block-strippedlog-pine-*": "樹皮を剥いだマツの丸太",
+	"block-strippedlog-acacia-*": "樹皮を剥いだアカシアの丸太",
+	"block-strippedlog-kapok-*": "樹皮を剥いだカポックの丸太",
+	"block-strippedlog-baldcypress-*": "樹皮を剥いだヌマスギの丸太",
+	"block-strippedlog-larch-*": "樹皮を剥いだカラマツの丸太",
+	"block-strippedlog-redwood-*": "樹皮を剥いだレッドウッドのマルタ",
+	"block-strippedlog-ebony-*": "樹皮を剥いだコクタンの丸太",
+	"block-strippedlog-walnut-*": "樹皮を剥いだクルミの木材",
+	"block-strippedlog-purpleheart-*": "樹皮を剥いだパープルハートの木材",
+	"block-strippedlog-aged-*": "樹皮を剥いだ古びた丸太",
+
+	"blockdesc-strippedlog-*": "樹皮を剥いだ木の丸太",
 
 	"block-*-barkbasket-birch-*": "シラカバ樹皮バスケット",
 	"block-*-barkbasket-oak-*": "オーク樹皮バスケット",
@@ -228,6 +290,8 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"block-*-barkbasket-walnut-*": "クルミ樹皮バスケット",
 	"block-*-barkbasket-purpleheart-*": "パープルハート樹皮バスケット",
 	"block-*-barkbasket-aged-*": "古びた樹皮バスケット",
+
+	"blockdesc-barkbasket-*": "柔軟な木の樹皮で編まれた小さな籠で、ちょっとしたものを入れるのに使われています。",
 
 	"block-salvepot-empty": "空の膏薬容器",
 	"block-salvepot-birch": "シラカバ樹皮と脂肪の混合物",
@@ -251,6 +315,8 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"block-stretchingframe-purpleheart-*": "パープルハートのストレッチフレーム",
 	"block-stretchingframe-aged-*": "古びたストレッチフレーム",
 
+	"blockdesc-stretchingframe-*": "皮革を鞣す為に張る枠",
+
 	"block-hidewatersack-raw-huge": "巨大な生皮の水袋",
 	"block-hidewatersack-raw-large": "大きな生皮の水袋",
 	"block-hidewatersack-raw-medium": "中くらいの生皮の水袋",
@@ -260,14 +326,19 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"block-hidewatersack-soaked-medium": "中くらいの浸した皮の水袋",
 	"block-hidewatersack-soaked-small": "小さな浸した皮の水袋",
 
+	"blockdesc-hidewatersack-raw-*": "この袋は、近くの水源からの水で満たされています。まだ皮は浸かっていませんが...。",
+	"blockdesc-hidewatersack-soaked-*": "この袋は、近くの水源からの水で満たされています。皮は十分に浸かっています...。",
+
 	"block-pitchpot-empty": "空の松脂容器",
 	"block-pitchpot-unmixed": "未完成の松脂混合物",
 	"block-pitchpot-finishedpitchinventory": "完成した松脂",
 	"block-pitchpot-finishedpitch": "完成した松脂",
 
-	"block-pitchtorch-extinct-*": "松脂の塗られた松明(消火)",
+	"block-pitchtorch-extinct-*": "松脂の塗られた松明(未点火)",
 	"block-pitchtorch-lit-*": "松脂の塗られた松明",
-	"block-pitchtorch-melted-*": "松脂の塗られた松明(溶解)",
+	"block-pitchtorch-melted-*": "松脂の塗られた松明(燃え尽きた)",
+
+	"blockdesc-pitchtorch-*": "雨に強く、長持ちする松明",
 
 	"block-lampsaucer-copper-empty-extinct-*": "銅の燭台",
 	"block-lampsaucer-brass-empty-extinct-*": "真鍮の燭台",
@@ -282,18 +353,18 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"block-lampsaucer-meteoriciron-empty-extinct-*": "隕鉄の燭台",
 	"block-lampsaucer-steel-empty-extinct-*": "鋼の燭台",
 
-	"block-lampsaucer-copper-candle-extinct-*": "キャンドル付き銅の燭台(消火)",
-	"block-lampsaucer-brass-candle-extinct-*": "キャンドル付き真鍮の燭台(消火)",
-	"block-lampsaucer-bismuth-candle-extinct-*": "キャンドル付きビスマスの燭台(消火)",
-	"block-lampsaucer-tinbronze-candle-extinct-*": "キャンドル付きスズ青銅の燭台(消火)",
-	"block-lampsaucer-bismuthbronze-candle-extinct-*": "キャンドル付きビスマス青銅の燭台(消火)",
-	"block-lampsaucer-blackbronze-candle-extinct-*": "キャンドル付き黒青銅の燭台(消火)",
-	"block-lampsaucer-molybdochalkos-candle-extinct-*": "キャンドル付きモリブドカルコスの燭台(消火)",
-	"block-lampsaucer-gold-candle-extinct-*": "キャンドル付き金の燭台(消火)",
-	"block-lampsaucer-silver-candle-extinct-*": "キャンドル付き銀の燭台(消火)",
-	"block-lampsaucer-iron-candle-extinct-*": "キャンドル付き鉄の燭台(消火)",
-	"block-lampsaucer-meteoriciron-candle-extinct-*": "キャンドル付き隕鉄の燭台(消火)",
-	"block-lampsaucer-steel-candle-extinct-*": "キャンドル付き鋼の燭台(消火)",
+	"block-lampsaucer-copper-candle-extinct-*": "キャンドル付き銅の燭台(未点火)",
+	"block-lampsaucer-brass-candle-extinct-*": "キャンドル付き真鍮の燭台(未点火)",
+	"block-lampsaucer-bismuth-candle-extinct-*": "キャンドル付きビスマスの燭台(未点火)",
+	"block-lampsaucer-tinbronze-candle-extinct-*": "キャンドル付きスズ青銅の燭台(未点火)",
+	"block-lampsaucer-bismuthbronze-candle-extinct-*": "キャンドル付きビスマス青銅の燭台(未点火)",
+	"block-lampsaucer-blackbronze-candle-extinct-*": "キャンドル付き黒青銅の燭台(未点火)",
+	"block-lampsaucer-molybdochalkos-candle-extinct-*": "キャンドル付きモリブドカルコスの燭台(未点火)",
+	"block-lampsaucer-gold-candle-extinct-*": "キャンドル付き金の燭台(未点火)",
+	"block-lampsaucer-silver-candle-extinct-*": "キャンドル付き銀の燭台(未点火)",
+	"block-lampsaucer-iron-candle-extinct-*": "キャンドル付き鉄の燭台(未点火)",
+	"block-lampsaucer-meteoriciron-candle-extinct-*": "キャンドル付き隕鉄の燭台(未点火)",
+	"block-lampsaucer-steel-candle-extinct-*": "キャンドル付き鋼の燭台(未点火)",
 
 	"block-lampsaucer-copper-candle-lit-*": "キャンドル付き銅の燭台",
 	"block-lampsaucer-brass-candle-lit-*": "キャンドル付き真鍮の燭台",
@@ -308,18 +379,18 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"block-lampsaucer-meteoriciron-candle-lit-*": "キャンドル付き隕鉄の燭台",
 	"block-lampsaucer-steel-candle-lit-*": "キャンドル付き鋼の燭台",
 
-	"block-lampsaucer-copper-pitch-extinct-*": "松脂付き銅の燭台(消火)",
-	"block-lampsaucer-brass-pitch-extinct-*": "松脂付き真鍮の燭台(消火)",
-	"block-lampsaucer-bismuth-pitch-extinct-*": "松脂付きビスマスの燭台(消火)",
-	"block-lampsaucer-tinbronze-pitch-extinct-*": "松脂付きスズ青銅の燭台(消火)",
-	"block-lampsaucer-bismuthbronze-pitch-extinct-*": "松脂付きビスマス青銅の燭台(消火)",
-	"block-lampsaucer-blackbronze-pitch-extinct-*": "松脂付き黒青銅の燭台(消火)",
-	"block-lampsaucer-molybdochalkos-pitch-extinct-*": "松脂付きモリブドカルコスの燭台(消火)",
-	"block-lampsaucer-gold-pitch-extinct-*": "松脂付き金の燭台(消火)",
-	"block-lampsaucer-silver-pitch-extinct-*": "松脂付き銀の燭台(消火)",
-	"block-lampsaucer-iron-pitch-extinct-*": "松脂付き鉄の燭台(消火)",
-	"block-lampsaucer-meteoriciron-pitch-extinct-*": "松脂付き隕鉄の燭台(消火)",
-	"block-lampsaucer-steel-pitch-extinct-*": "松脂付き鋼の燭台(消火)",
+	"block-lampsaucer-copper-pitch-extinct-*": "松脂付き銅の燭台(未点火)",
+	"block-lampsaucer-brass-pitch-extinct-*": "松脂付き真鍮の燭台(未点火)",
+	"block-lampsaucer-bismuth-pitch-extinct-*": "松脂付きビスマスの燭台(未点火)",
+	"block-lampsaucer-tinbronze-pitch-extinct-*": "松脂付きスズ青銅の燭台(未点火)",
+	"block-lampsaucer-bismuthbronze-pitch-extinct-*": "松脂付きビスマス青銅の燭台(未点火)",
+	"block-lampsaucer-blackbronze-pitch-extinct-*": "松脂付き黒青銅の燭台(未点火)",
+	"block-lampsaucer-molybdochalkos-pitch-extinct-*": "松脂付きモリブドカルコスの燭台(未点火)",
+	"block-lampsaucer-gold-pitch-extinct-*": "松脂付き金の燭台(未点火)",
+	"block-lampsaucer-silver-pitch-extinct-*": "松脂付き銀の燭台(未点火)",
+	"block-lampsaucer-iron-pitch-extinct-*": "松脂付き鉄の燭台(未点火)",
+	"block-lampsaucer-meteoriciron-pitch-extinct-*": "松脂付き隕鉄の燭台(未点火)",
+	"block-lampsaucer-steel-pitch-extinct-*": "松脂付き鋼の燭台(未点火)",
 
 	"block-lampsaucer-copper-pitch-lit-*": "松脂付き銅の燭台",
 	"block-lampsaucer-brass-pitch-lit-*": "松脂付き真鍮の燭台",
@@ -334,6 +405,8 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"block-lampsaucer-meteoriciron-pitch-lit-*": "松脂付き隕鉄の燭台",
 	"block-lampsaucer-steel-pitch-lit-*": "松脂付き鋼の燭台",
 
+	"blockdesc-lampsaucer-*": "インテリアデザイナーから冒険家まで楽しめるエレガントな照明器具",
+
 	"block-directionalresin-resin-pine-*": "樹液が滴る樹脂付きのマツの原木",
 	"block-directionalresin-resinharvested-pine-*": "樹液が滴るマツの原木",
 	"block-directionalresin-resin-acacia-*": "樹液が滴る樹脂付きのアカシアの原木",
@@ -342,9 +415,8 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"itemhelp-adze-stripbark": "剥かれた樹皮",
 	"itemhelp-heal": "回復",
 
-	"iteminfo-hook": "肉様熟成棚に設置して、様々な熟成可能な物を吊るすことが出来ます。",
 	"iteminfo-salve-heal": "使用すると{1}秒間に{0}のHPを回復する。",
-	"iteminfo-brain": "皮のなめしに使用されます。 10Lの水を入れた樽に入れて脳溶液を作成します。",
+	"iteminfo-brain": "皮の鞣しに使用されます。 10Lの水を入れた樽に入れて脳溶液を作成します。",
 	"iteminfo-brain-food": "煮込み料理にも使えます。",
 
 	"item-adze-*-chert": "チャート石の釿",
@@ -364,6 +436,8 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"item-adze-*-meteoriciron": "隕鉄の釿",
 	"item-adze-*-steel": "鋼の釿",
 
+	"itemdesc-adze-*": "丸太から樹皮を剥がす為の道具",
+
 	"itemdesc-saltedmeat-cure-x-days": "棚に入れられた時: 熟成まで{0}日",
 
 	"blockdesc-hidewatersack-soak-x-hours-when-placed": "設置後: 完全に浸されるまで{0}時間",
@@ -375,7 +449,10 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"item-pestle-basalt": "玄武岩のすりこ木",
 	"item-pestle-chert": "チャート岩のすりこ木",
 
+	"itemdesc-pestle-*": "すり鉢と併用することで、あらゆるものをすり潰すことが出来ます。",
+
 	"item-curinghook-bone": "骨のフック",
+	"itemdesc-curinghook-*": "熟成棚に取り付けて、様々な熟成可能な物を吊るすことが出来ます。",
 
 	"item-saltedmeat-poultry-raw": "塩漬けの生の鶏肉",
 	"item-saltedmeat-bushmeat-raw": "塩漬けの生のブッシュミート",
@@ -401,7 +478,9 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"item-adzehead-meteoriciron": "隕鉄の釿頭",
 	"item-adzehead-steel": "鋼の釿頭",
 
-	"block-toolmoldancienttools-raw-adze": "生の釿頭の鋳型",
+	"itemcraftdesc-adzehead-*": "木の樹皮剥がし用",
+
+	"block-toolmoldancienttools-raw-adze": "未焼成の釿頭の鋳型",
 	"block-toolmoldancienttools-burned-adze": "釿頭の鋳型",
 
 	"item-bark-birch": "シラカバの樹皮",
@@ -417,6 +496,8 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"item-bark-walnut": "クルミの樹皮",
 	"item-bark-purpleheart": "パープルハートの樹皮",
 	"item-bark-aged": "古びた樹皮",
+
+	"itemdesc-bark-*": "釿で木から剥がした樹皮",
 
 	"game:item-flour-birch": "シラカバの粉",
 	"game:item-flour-pine": "マツの粉",
@@ -439,12 +520,18 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"game:item-hide-brained-large": "脳溶液に浸された皮(大)",
 	"game:item-hide-brained-medium": "脳溶液に浸された皮(中)",
 	"game:item-hide-brained-small": "脳溶液に浸された皮(小)",
+
+	"game:itemdesc-hide-brained-*": "脳溶液に浸された皮。燻せば使える革になる",
+
 	"game:item-hide-smoked-huge": "燻された皮(巨大)",
 	"game:item-hide-smoked-large": "燻された皮(大)",
 	"game:item-hide-smoked-medium": "燻された皮(中)",
 	"game:item-hide-smoked-small": "燻された皮(小)",
 
+	"game:itemdesc-hide-smoked-*": "燻した皮を裁断して革に仕上げる",
+
 	"item-brain": "動物の脳",
+	"itemdesc-brain": "でも、皮の鞣しに使ったり、シチューに使ったり…ね？",
 
 	"recipeingredient-item-brain": "脳",
 	"recipeingredient-item-brain-insturmentalcase": "脳",
@@ -456,7 +543,125 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 	"incontainer-item-brainingsolutionportion": "脳溶液",
 
 	"item-powderedcharcoal": "木炭粉",
+	"itemdesc-powderedcharcoal": "松脂を生み出す主成分",
+
 	"item-pitch-*": "松脂",
+	"itemdesc-pitch-*": "各種照明に使用される可燃性・耐水性物質",
+
+	"item-mallet-*-chert": "チャート石の槌",
+	"item-mallet-*-granite": "花崗岩の槌",
+	"item-mallet-*-andesite": "安山岩の槌",
+	"item-mallet-*-basalt": "玄武岩の槌",
+	"item-mallet-*-obsidian": "黒曜石の槌",
+	"item-mallet-*-peridotite": "かんらん岩の槌",
+	"item-mallet-*-flint": "火打石の槌",
+
+	"itemcraftdesc-mallet-*": "樹皮を剥いだ丸太を割る為の楔打ち用",
+	"itemdesc-mallet-*": "樹皮を剥いだ丸太を割る為の楔打ち用",
+
+	"item-mallethead-chert": "チャート石の槌の槌頭",
+	"item-mallethead-granite": "花崗岩の槌の槌頭",
+	"item-mallethead-andesite": "安山岩の槌の槌頭",
+	"item-mallethead-basalt": "玄武岩の槌の槌頭",
+	"item-mallethead-obsidian": "黒曜石の槌の槌頭",
+	"item-mallethead-peridotite": "かんらん岩の槌の槌頭",
+	"item-mallethead-flint": "火打石の槌の槌頭",
+
+	"item-wedge-chert": "チャート石の楔",
+	"item-wedge-granite": "花崗岩の楔",
+	"item-wedge-andesite": "安山岩の楔",
+	"item-wedge-basalt": "玄武岩の楔",
+	"item-wedge-obsidian": "黒曜石の楔",
+	"item-wedge-peridotite": "かんらん岩の楔",
+	"item-wedge-flint": "火打石の楔",
+	"item-wedge-copper": "銅の楔",
+	"item-wedge-tinbronze": "スズ青銅の楔",
+	"item-wedge-bismuthbronze": "ビスマス青銅の楔",
+	"item-wedge-blackbronze": "黒青銅の楔",
+	"item-wedge-gold": "金の楔",
+	"item-wedge-silver": "銀の楔",
+	"item-wedge-iron": "鉄の楔",
+	"item-wedge-meteoriciron": "隕鉄の楔",
+	"item-wedge-steel": "鋼の楔",
+
+	"block-toolmoldancienttools-raw-wedge": "未焼成の楔の鋳型",
+	"block-toolmoldancienttools-burned-wedge": "楔の鋳型",	
+
+	"itemcraftdesc-wedge-*": "樹皮を剥いだ丸太を木槌で割るのに使う",
+	"itemdesc-wedge-*": "樹皮を剥いだ丸太を木槌で割るのに使う",
+
+	"item-beam-aged": "古びた角材",
+	"item-beam-birch": "シラカバの角材",
+	"item-beam-oak": "オークの角材",
+	"item-beam-maple": "カエデの角材",
+	"item-beam-pine": "マツの角材",
+	"item-beam-acacia": "アカシアの角材",
+	"item-beam-kapok": "カポックの角材",
+	"item-beam-baldcypress": "ヌマスギの角材",
+	"item-beam-larch": "カラマツの角材",
+	"item-beam-redwood": "レッドウッドの角材",
+	"item-beam-ebony": "コクタンの角材",
+	"item-beam-walnut": "クルミの角材",
+	"item-beam-purpleheart": "パープルハートの角材",
+
+	"itemdesc-beam-*": "車輪や移動式収納の製作で使用される構造用角材",
+
+	"item-wood-aged-cart": "古びた荷車",
+	"item-wood-birch-cart": "シラカバの荷車",
+	"item-wood-oak-cart": "オークの荷車",
+	"item-wood-maple-cart": "カエデの荷車",
+	"item-wood-pine-cart": "マツの荷車",
+	"item-wood-acacia-cart": "アカシアの荷車",
+	"item-wood-kapok-cart": "カポックの荷車",
+	"item-wood-baldcypress-cart": "ヌマスギの荷車",
+	"item-wood-larch-cart": "カラマツの荷車",
+	"item-wood-redwood-cart": "レッドウッドの荷車",
+	"item-wood-ebony-cart": "コクタンの荷車",
+	"item-wood-walnut-cart": "クルミの荷車",
+	"item-wood-purpleheart-cart": "パープルハートの荷車",
+
+	"itemdesc-cart": "1つのインベントリーを運搬出来る移動式収納",
+
+	"item-wheel-aged": "古びた車輪",
+	"item-wheel-birch": "シラカバの車輪",
+	"item-wheel-oak": "オークの車輪",
+	"item-wheel-maple": "カエデの車輪",
+	"item-wheel-pine": "マツの車輪",
+	"item-wheel-acacia": "アカシアの車輪",
+	"item-wheel-kapok": "カポックの車輪",
+	"item-wheel-baldcypress": "ヌマスギの車輪",
+	"item-wheel-larch": "カラマツの車輪",
+	"item-wheel-redwood": "レッドウッドの車輪",
+	"item-wheel-ebony": "コクタンの車輪",
+	"item-wheel-walnut": "クルミの車輪",
+	"item-wheel-purpleheart": "パープルハートの車輪",
+
+	"itemdesc-wheel-*": "移動式収納の製作で使用される車輪",
+
+	"entity-wood-aged-cart": "古びた荷車",
+	"entity-wood-birch-cart": "シラカバの荷車",
+	"entity-wood-oak-cart": "オークの荷車",
+	"entity-wood-maple-cart": "カエデの荷車",
+	"entity-wood-pine-cart": "マツの荷車",
+	"entity-wood-acacia-cart": "アカシアの荷車",
+	"entity-wood-kapok-cart": "カポックの荷車",
+	"entity-wood-baldcypress-cart": "ヌマスギの荷車",
+	"entity-wood-larch-cart": "カラマツの荷車",
+	"entity-wood-redwood-cart": "レッドウッドの荷車",
+	"entity-wood-ebony-cart": "コクタンの荷車",
+	"entity-wood-walnut-cart": "クルミの荷車",
+	"entity-wood-purpleheart-cart": "パープルハートの荷車",
+	"entity-wood-walnut-cart": "クルミの荷車",
+
+	"entityinfo-cart-health": "耐久度: {0}/{1} hp",
+
+	"entityhelp-cart-place-inventory": "インベントリーを設置",
+	"entityhelp-cart-take-inventory": "インベントリーを取る",
+	"entityhelp-cart-pick-up": "荷車を拾う",
+	"entityhelp-cart-drop": "荷車を放す",
+	"entityhelp-cart-open-inventory": "インベントリーを開く",
+
+	"gui-title-cart-inventory": "荷車のインベントリー",
 
 	"pie-single-ancienttools:saltedmeat-redmeat-raw-raw": "塩漬け赤肉のパイ(生)",
 	"pie-single-ancienttools:saltedmeat-bushmeat-raw-raw": "塩漬けブッシュミートパイ(生)",

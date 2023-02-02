@@ -259,6 +259,7 @@ namespace AncientTools.BlockEntities
                 UpdateMeshes();
 
                 WedgeSlot(index).MarkDirty();
+                MarkDirty(true);
             }
         }
         public void InsertWedge(IPlayer byPlayer, int index, Vec3d hitPosition)
@@ -272,6 +273,7 @@ namespace AncientTools.BlockEntities
                 UpdateMeshes();
 
                 WedgeSlot(index).MarkDirty();
+                MarkDirty(true);
             }
         }
         public void SmackWedge(int index, IPlayer byPlayer)
@@ -368,15 +370,15 @@ namespace AncientTools.BlockEntities
 
                 if (totalCount == 4)
                 {
-                    Api.World.SpawnItemEntity(beamStack, Pos.ToVec3d());
-                    Api.World.SpawnItemEntity(beamStack, Pos.ToVec3d());
+                    Api.World.SpawnItemEntity(beamStack.Clone(), Pos.ToVec3d());
+                    Api.World.SpawnItemEntity(beamStack.Clone(), Pos.ToVec3d());
 
                     Api.World.BlockAccessor.BreakBlock(this.Pos, byPlayer, 0);
                     return;
                 }
                 else if (totalCount >= 2)
                 {
-                    Api.World.SpawnItemEntity(beamStack, Pos.ToVec3d());
+                    Api.World.SpawnItemEntity(beamStack.Clone(), Pos.ToVec3d());
 
                     for (int i = 0; i < 4; i++)
                     {

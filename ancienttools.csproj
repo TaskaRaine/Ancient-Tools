@@ -73,6 +73,7 @@
     <Content Include="assets\ancienttools\sounds\block\salvepour.ogg" />
     <Content Include="assets\ancienttools\sounds\block\saucer.ogg" />
     <Content Include="assets\ancienttools\sounds\block\stripwood.ogg" />
+    <Content Include="assets\ancienttools\sounds\item\sawingwood.ogg" />
     <Content Include="assets\ancienttools\textures\compatibility\acorns\block\mortar\acornleached.png" />
     <Content Include="assets\ancienttools\textures\compatibility\acorns\block\mortar\acornmeal.png" />
     <Content Include="assets\ancienttools\textures\block\liquid\brainingsolution.png" />

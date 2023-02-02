@@ -54,9 +54,15 @@ namespace AncientTools.Utility
                 LookAtVector.Z = WatchedAttributes.GetFloat("lookAtVectorZ", 0);
             }
 
-            UpdateStorageContentsFromTree();
+            MobileStorageInventory = new InventoryMobileStorage(this, StorageBlocksCount, this.Code.FirstCodePart() + "/" + EntityId.ToString(), null, Api);
 
             MobileStorageInventory.OnInventoryClosed += CloseClientDialog;
+        }
+        public override void OnEntityLoaded()
+        {
+            base.OnEntityLoaded();
+
+            UpdateStorageContentsFromTree();
         }
         public override string GetInfoText()
         {
@@ -114,7 +120,6 @@ namespace AncientTools.Utility
             {
                 InvDialog?.TryClose();
             }
-
             base.OnReceivedServerPacket(packetid, data);
         }
         public override void OnGameTick(float dt)
@@ -178,7 +183,7 @@ namespace AncientTools.Utility
                 data = ms.ToArray();
             }
 
-            foreach (IServerPlayer eachPlayer in Sapi.Server.Players)
+            foreach (IServerPlayer eachPlayer in Sapi.World.AllOnlinePlayers)
             {
                 if (eachPlayer.ConnectionState == EnumClientState.Playing)
                     Sapi.Network.SendEntityPacket(eachPlayer, this.EntityId, (int)AncientToolsNetworkPackets.MobileStorageSyncAttachedEntity, data);
@@ -240,9 +245,6 @@ namespace AncientTools.Utility
         }
         public void UpdateStorageContentsFromTree()
         {
-            if (MobileStorageInventory == null || MobileStorageInventory.Empty)
-                MobileStorageInventory = new InventoryMobileStorage(this, StorageBlocksCount, this.Code.FirstCodePart() + "/" + EntityId.ToString(), null, Api);
-
             if (WatchedAttributes.HasAttribute("mobilestorageinventory"))
             {
                 MobileStorageInventory.FromTreeAttributes(WatchedAttributes.GetTreeAttribute("mobilestorageinventory"));
@@ -283,6 +285,9 @@ namespace AncientTools.Utility
         }
         protected void PlayPlacementSound()
         {
+            if (MobileStorageInventory.GetMobileStorageSlot(0).Empty)
+                return;
+
             AssetLocation placementSoundLocation;
 
             //-- Type is also checked in in EntityCart before this method is called --//

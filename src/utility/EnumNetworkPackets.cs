@@ -6,6 +6,7 @@
         MobileStorageInventorySync = 1002,
         MobileStorageOpenInventory = 1003,
         MobileStorageCloseInventory = 1004,
-        MobileStorageSyncAttachedEntity = 1005
+        MobileStorageSyncAttachedEntity = 1005,
+        MobileStorageSyncInventoryVisuals = 1006
     }
 }

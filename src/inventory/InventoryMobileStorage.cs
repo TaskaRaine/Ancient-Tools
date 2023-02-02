@@ -166,14 +166,20 @@ namespace AncientTools.Inventory
         public override void OnItemSlotModified(ItemSlot slot)
         {
             base.OnItemSlotModified(slot);
-        }
-        public override bool TryFlipItemStack(IPlayer owningPlayer, string[] invIds, int[] slotIds, long[] lastChanged)
-        {
-            return base.TryFlipItemStack(owningPlayer, invIds, slotIds, lastChanged);
-        }
-        public override bool TryMoveItemStack(IPlayer player, string[] invIds, int[] slotIds, ref ItemStackMoveOperation op)
-        {
-            return base.TryMoveItemStack(player, invIds, slotIds, ref op);
+
+            //-- This seems to work but...it seems like a bad idea? If only the shift-click could be handled in ActivateSlot... --//
+            //-- Must ignore the slots that the inventory takes to work --//
+            if(Api.Side == EnumAppSide.Client)
+                for(int i = 1; i < MobileStorageInventory.Length; i++)
+                {
+                    if(MobileStorageInventory[i] == slot)
+                    {
+                        object packet = InvNetworkUtil.GetActivateSlotPacket(i, new ItemStackMoveOperation(Api.World, EnumMouseButton.Left, EnumModifierKey.SHIFT, EnumMergePriority.AutoMerge, slot.Itemstack.StackSize));
+
+                        ICoreClientAPI Capi = (ICoreClientAPI)Api;
+                        Capi.Network.SendEntityPacket(StorageEntity.EntityId, packet);
+                    }
+                }
         }
         public override object ActivateSlot(int slotId, ItemSlot sourceSlot, ref ItemStackMoveOperation op)
         {

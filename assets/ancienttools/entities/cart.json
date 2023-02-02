@@ -93,6 +93,7 @@
 			"wood-purpleheart-wheelwood": { base: "game:block/wood/debarked/purpleheart" },
 		},
 		behaviors: [
+			{ code: "HealthNoRecover", currenthealth: 100, maxhealth: 100 },
 			{ code: "interpolateposition" },
 			{ code: "controlledphysics", stepHeight: 1.1251 },
 		]

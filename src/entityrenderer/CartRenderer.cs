@@ -162,7 +162,7 @@ namespace AncientTools.EntityRenderers
             CurrentShape.Elements[0].RotationY = TaskaMath.ShortLerpDegrees(CurrentShape.Elements[0].RotationY, CartEntity.LookAtVector.Y * GameMath.RAD2DEG, 0.05);
             CartElement.RotationX = TaskaMath.ShortLerpDegrees(CartElement.RotationX, CartEntity.LookAtVector.X * GameMath.RAD2DEG, 0.05);
             
-            if(InventoryShapes[0] != null)
+            if(InventoryShapes[0] != null && StoragePlacementProperties.IsSet())
             {
                 CurrentShape.Elements[0].Children[2] = InventoryShapes[0].Elements[0];
                 CurrentShape.Elements[0].Children[2].From = StoragePlacementProperties.Translation;

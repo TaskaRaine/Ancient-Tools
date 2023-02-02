@@ -1,5 +1,7 @@
 ﻿using AncientTools.EntityBehaviors;
 using AncientTools.Utility;
+using System;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 
@@ -13,11 +15,36 @@ namespace AncientTools.CollectibleBehaviors
 
         private float PreviousTickedTime { get; set;} = 0;
 
+        private ILoadedSound sawSound;
+
+        private Random rand;
+
         private EntityBehaviorHealthNoRecover EntityHealth { get; set; }
 
         public CollectibleBehaviorMobileStorageDestruction(CollectibleObject collObj) : base(collObj)
         {
 
+        }
+        ~CollectibleBehaviorMobileStorageDestruction()
+        {
+            if (sawSound != null) sawSound.Dispose();
+        }
+        public override void OnLoaded(ICoreAPI api)
+        {
+            base.OnLoaded(api);
+
+            if(api.Side == EnumAppSide.Client)
+            {
+                sawSound = ((IClientWorldAccessor)api.World).LoadSound(new SoundParams()
+                {
+                    Location = new AssetLocation("ancienttools", "sounds/item/sawingwood.ogg"),
+                    ShouldLoop = false,
+                    DisposeOnFinish = false,
+                    Volume = 1.0f
+                });
+
+                rand = new Random();
+            }
         }
         public override void Initialize(JsonObject properties)
         {
@@ -29,6 +56,16 @@ namespace AncientTools.CollectibleBehaviors
 
             if(properties["durabilityLoss"].Exists)
                 DurabilityLoss = properties["durabilityLoss"].AsInt();
+        }
+        public override void OnUnloaded(ICoreAPI api)
+        {
+            base.OnUnloaded(api);
+
+            if (sawSound != null)
+            {
+                sawSound.Stop();
+                sawSound.Dispose();
+            }
         }
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling, ref EnumHandling handling)
         {
@@ -53,6 +90,17 @@ namespace AncientTools.CollectibleBehaviors
 
             if (entitySel.Entity is EntityMobileStorage && byEntity.Controls.Sneak)
             {
+                if(byEntity.Api.Side == EnumAppSide.Client)
+                {
+                    sawSound.SetPosition(entitySel.Position.ToVec3f());
+
+                    if (!sawSound.IsPlaying)
+                    {
+                        sawSound.SetPitchOffset(rand.Next(-2, 2) / 10f);
+                        sawSound.Start();
+                    }
+                }
+
                 if (secondsUsed - PreviousTickedTime > DestructionInterval)
                 {
                     PreviousTickedTime = secondsUsed;
@@ -62,6 +110,9 @@ namespace AncientTools.CollectibleBehaviors
                         EntityHealth.Health -= DestructionRate;
 
                         slot.Itemstack.Collectible.DamageItem(byEntity.World, byEntity, slot, DurabilityLoss);
+
+                        if (EntityHealth.Health <= 0)
+                            entitySel.Entity.Die();
                     }
                 }
 
@@ -75,6 +126,11 @@ namespace AncientTools.CollectibleBehaviors
         {
             EntityHealth = null;
             PreviousTickedTime = 0;
+
+            if(byEntity.Api.Side == EnumAppSide.Client)
+            {
+                sawSound.FadeOutAndStop(0.2f);
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using AncientTools.EntityRenderers;
+﻿using AncientTools.CollectibleBehaviors;
+using AncientTools.EntityRenderers;
 using AncientTools.Utility;
 using System;
 using System.Collections.Generic;
@@ -112,7 +113,7 @@ namespace AncientTools.Entities
             {
                 if(AttachedEntity == null)
                 {
-                    return placeInventoryInteraction.Append(liftCartInteraction);
+                    return placeInventoryInteraction.Append(liftCartInteraction).Append(base.GetInteractionHelp(world, es, player));
                 }
                 else
                 {
@@ -132,7 +133,6 @@ namespace AncientTools.Entities
                     {
                         return takeInventoryInteraction.Append(liftCartInteraction.Append(accessInventoryInteraction));
                     }
-
                     return liftCartInteraction.Append(accessInventoryInteraction);
                 }
                 else
@@ -141,7 +141,6 @@ namespace AncientTools.Entities
                     {
                         return takeInventoryInteraction.Append(dropCartInteraction.Append(accessInventoryInteraction));
                     }
-
                     return dropCartInteraction.Append(accessInventoryInteraction);
                 }
             }
@@ -184,6 +183,22 @@ namespace AncientTools.Entities
                     }
                 }
             }
+        }
+        public override void OnReceivedServerPacket(int packetid, byte[] data)
+        {
+            if(packetid == (int)AncientToolsNetworkPackets.MobileStorageSyncInventoryVisuals)
+            {
+                TreeAttribute tree = TreeData(data);
+
+                if(tree.GetString("type") != null)
+                    Renderer.AssignStoragePlacementProperties(CartInventorySlot.Itemstack?.Collectible?.Attributes["cartPlacable"][tree.GetString("type")]);
+                else
+                    Renderer.AssignStoragePlacementProperties(CartInventorySlot.Itemstack?.Collectible?.Attributes["cartPlacable"]);
+                
+                PlayPlacementSound();
+            }
+            else
+                base.OnReceivedServerPacket(packetid, data);
         }
         public override void OnInteract(EntityAgent byEntity, ItemSlot itemslot, Vec3d hitPosition, EnumInteractMode mode)
         {
@@ -269,10 +284,30 @@ namespace AncientTools.Entities
                         {
                             MobileStorageInventory.GenerateEmptyStorageInventory(CartInventorySlot.Itemstack.Collectible.Attributes["mobileStorageProps"][type]["quantitySlots"].AsInt());
 
+                            if (Api.Side == EnumAppSide.Server)
+                            {
+                                byte[] data;
+
+                                using (MemoryStream ms = new MemoryStream())
+                                {
+                                    BinaryWriter writer = new BinaryWriter(ms);
+                                    TreeAttribute tree = new TreeAttribute();
+                                    tree.SetString("type", type);
+                                    tree.ToBytes(writer);
+                                    data = ms.ToArray();
+                                }
+
+                                foreach (IServerPlayer eachPlayer in Sapi.World.AllOnlinePlayers)
+                                {
+                                    if (eachPlayer.ConnectionState == EnumClientState.Playing)
+                                        Sapi.Network.SendEntityPacket(eachPlayer, EntityId, (int)AncientToolsNetworkPackets.MobileStorageSyncInventoryVisuals, data);
+
+                                }
+                            }
                             if (Api.Side == EnumAppSide.Client)
                             {
-                                Renderer.AssignStoragePlacementProperties(CartInventorySlot.Itemstack?.Collectible?.Attributes["cartPlacable"][type]);
-                                PlayPlacementSound();
+                                //Renderer.AssignStoragePlacementProperties(CartInventorySlot.Itemstack?.Collectible?.Attributes["cartPlacable"][type]);
+                                //PlayPlacementSound();
                             }
                         }
                         else
@@ -281,8 +316,8 @@ namespace AncientTools.Entities
 
                             if (Api.Side == EnumAppSide.Client)
                             {
-                                Renderer.AssignStoragePlacementProperties(CartInventorySlot.Itemstack?.Collectible?.Attributes["cartPlacable"]);
-                                PlayPlacementSound();
+                                //Renderer.AssignStoragePlacementProperties(CartInventorySlot.Itemstack?.Collectible?.Attributes["cartPlacable"]);
+                                //PlayPlacementSound();
                             }
                         }
                     }
@@ -334,6 +369,10 @@ namespace AncientTools.Entities
             if (despawn.reason == EnumDespawnReason.Combusted || despawn.reason == EnumDespawnReason.Death)
             {
                 MobileStorageInventory.DropAll(this.Pos.XYZ);
+            }
+            else if(despawn.reason == EnumDespawnReason.Unload)
+            {
+                UpdateTreesFromInventoryContents();
             }
 
             base.OnEntityDespawn(despawn);

@@ -63,8 +63,8 @@ namespace AncientTools.Entities.Tasks
         }
         private void SetBehindVector(float distance)
         {
-            BehindVector = mobileStorageEntity.AttachedEntity.ServerPos.BehindCopy(distance).XYZ;
-            BehindVector.Y = mobileStorageEntity.AttachedEntity.ServerPos.Y;
+            BehindVector = mobileStorageEntity.AttachedEntity.Pos.BehindCopy(distance).XYZ;
+            BehindVector.Y = mobileStorageEntity.AttachedEntity.Pos.Y;
 
             mobileStorageEntity.SetEntityPosition(BehindVector);
         }

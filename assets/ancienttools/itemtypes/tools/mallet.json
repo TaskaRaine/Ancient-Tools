@@ -22,7 +22,8 @@
 		{ name: "WedgeSmack" },
 		{ name: "MobileStorageRepair", properties: { 
 			repairRate: 5,
-			repairInterval: 1
+			repairInterval: 1,
+			durabilityLoss: 1
 		}}
 	],
 	variantgroups: [
