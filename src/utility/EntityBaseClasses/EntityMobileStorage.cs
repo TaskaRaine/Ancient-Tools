@@ -99,6 +99,10 @@ namespace AncientTools.Utility
             {
                 PerformServerRotationSync(data);
             }
+            if(packetid == (int)AncientToolsNetworkPackets.MobileStorageCloseInventory)
+            {
+                CloseServerInventory(player);
+            }
 
             base.OnReceivedClientPacket(player, packetid, data);
         }
@@ -283,6 +287,20 @@ namespace AncientTools.Utility
                 player.InventoryManager.OpenInventory(MobileStorageInventory);
             }
         }
+        public void SendCloseInventoryPacket()
+        {
+            if (Api.World is IClientWorldAccessor)
+            {
+                ((ICoreClientAPI)Api).Network.SendEntityPacket(
+                    this.EntityId,
+                    (int)AncientToolsNetworkPackets.MobileStorageCloseInventory
+                );
+            }
+        }
+        protected void CloseServerInventory(IServerPlayer player)
+        {
+            player.InventoryManager.CloseInventory(MobileStorageInventory);
+        }
         protected void PlayPlacementSound()
         {
             if (MobileStorageInventory.GetMobileStorageSlot(0).Empty)
@@ -291,31 +309,38 @@ namespace AncientTools.Utility
             AssetLocation placementSoundLocation;
 
             //-- Type is also checked in in EntityCart before this method is called --//
-            if (MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible is BlockGenericTypedContainer)
+            if (MobileStorageInventory.GetMobileStorageSlot(0)?.Itemstack?.Collectible is BlockGenericTypedContainer)
             {
                 string type = MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Attributes?.GetString("type");
 
                 placementSoundLocation = new AssetLocation(MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible.Attributes["mobileStorageProps"][type]["placementSound"].AsString() + ".ogg");
             }
             else
-                placementSoundLocation = new AssetLocation(MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible.Attributes["mobileStorageProps"]["placementSound"].AsString() + ".ogg");
+                placementSoundLocation = new AssetLocation(MobileStorageInventory.GetMobileStorageSlot(0)?.Itemstack?.Collectible?.Attributes?["mobileStorageProps"]["placementSound"].AsString() + ".ogg");
 
-            (Capi.World).LoadSound(new SoundParams()
+            if (placementSoundLocation != null)
             {
-                Location = placementSoundLocation,
-                ShouldLoop = false,
-                Position = Pos.XYZFloat,
-                DisposeOnFinish = true,
-                Volume = 1.0f,
-                Range = 32
-            }).Start();
+                (Capi.World).LoadSound(new SoundParams()
+                {
+                    Location = placementSoundLocation,
+                    ShouldLoop = false,
+                    Position = Pos.XYZFloat,
+                    DisposeOnFinish = true,
+                    Volume = 1.0f,
+                    Range = 32
+                }).Start();
+            }
         }
         protected void ServerCloseClientDialogs()
         {
-            foreach(IServerPlayer eachPlayer in Sapi.World.AllOnlinePlayers)
+            foreach (IServerPlayer eachPlayer in Sapi.World.AllOnlinePlayers)
             {
                 if (eachPlayer.ConnectionState == EnumClientState.Playing)
+                {
+                    eachPlayer.InventoryManager.CloseInventory(MobileStorageInventory);
+
                     ((ICoreServerAPI)Api).Network.SendEntityPacket(eachPlayer, this.EntityId, (int)AncientToolsNetworkPackets.MobileStorageCloseInventory);
+                }
             }
         }
         private void PerformServerRotationSync(byte[] data)
@@ -359,6 +384,9 @@ namespace AncientTools.Utility
         }
         private void OpenInventoryDialog(byte[] data)
         {
+            if (Api.Side != EnumAppSide.Client)
+                return;
+
             AssetLocation openSoundLocation;
 
             if (InvDialog != null)
@@ -413,6 +441,9 @@ namespace AncientTools.Utility
         }
         private void CloseClientDialog(IPlayer player)
         {
+            if (Api.Side != EnumAppSide.Client)
+                return;
+
             var inv = InvDialog;
             InvDialog = null; // Weird handling because to prevent endless recursion
             if (inv?.IsOpened() == true) inv?.TryClose();
@@ -439,7 +470,7 @@ namespace AncientTools.Utility
                     DisposeOnFinish = true,
                     Volume = 1.0f,
                     Range = 32
-                }).Start();
+                })?.Start();
             }
         }
     }

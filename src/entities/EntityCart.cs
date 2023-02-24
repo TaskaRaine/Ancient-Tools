@@ -361,6 +361,9 @@ namespace AncientTools.Entities
         }
         public override void OnEntityDespawn(EntityDespawnReason despawn)
         {
+            if (Api.Side == EnumAppSide.Server)
+                ServerCloseClientDialogs();
+
             if (AttachedEntity != null)
             {
                 AttachedEntity.Stats.Set("walkspeed", "cartspeedmodifier", (float)-0.2, false);

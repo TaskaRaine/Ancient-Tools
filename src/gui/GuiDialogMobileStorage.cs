@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vintagestory.API.Client;
+using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.MathTools;
 using static Vintagestory.API.Client.GuiDialogBlockEntity;
@@ -175,6 +176,12 @@ namespace AncientTools.Gui
         protected void CloseIconPressed()
         {
             TryClose();
+        }
+        public override bool TryClose()
+        {
+            StorageEntity.SendCloseInventoryPacket();
+
+            return base.TryClose();
         }
         /// <summary>
         /// Called whenver the GUI is opened.
