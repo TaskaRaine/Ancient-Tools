@@ -213,15 +213,21 @@ namespace AncientTools.Entities
                         if (entityDistance <= 2.0)
                         {
                             AttachedEntity = byEntity;
-                            IsDropped = false;
 
-                            AttachedEntity.Stats.Set("walkspeed", "cartspeedmodifier", -0.2f, false);
+                            if (!AttachedEntity.Stats["walkspeed"].ValuesByKey.ContainsKey("cartspeedmodifier"))
+                            {
+                                IsDropped = false;
 
-                            if (Api.Side == EnumAppSide.Server)
-                                SyncAttachedEntity(byEntity.EntityId);
+                                AttachedEntity.Stats.Set("walkspeed", "cartspeedmodifier", -0.2f, false);
 
-                            if (Api.Side == EnumAppSide.Client)
-                                SetLookAtVector(EntityTransform.XYZFloat, AttachedEntity.SidedPos.XYZFloat, AttachedEntity.LocalEyePos.ToVec3f());
+                                if (Api.Side == EnumAppSide.Server)
+                                    SyncAttachedEntity(byEntity.EntityId);
+
+                                if (Api.Side == EnumAppSide.Client)
+                                    SetLookAtVector(EntityTransform.XYZFloat, AttachedEntity.SidedPos.XYZFloat, AttachedEntity.LocalEyePos.ToVec3f());
+                            }
+                            else
+                                AttachedEntity = null;
                         }
                     }
                     else if(byEntity.EntityId == AttachedEntity.EntityId)

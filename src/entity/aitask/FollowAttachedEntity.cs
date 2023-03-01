@@ -10,9 +10,9 @@ namespace AncientTools.Entities.Tasks
     {
         EntityMobileStorage mobileStorageEntity = null;
 
-        private float FollowDistanceWalk { get; set; } = 0.5f;
-        private float FollowDistanceSprint { get; set; } = 0.25f;
-        private float FollowDistanceSneak { get; set; } = 0.6f;
+        private float FollowDistanceWalk { get; set; } = 0.0f;
+        private float FollowDistanceSprint { get; set; } = -0.25f;
+        private float FollowDistanceSneak { get; set; } = 0.1f;
 
         private float ParkedDistance { get; set; } = 1.0f;
         private Vec3d BehindVector { get; set; }
@@ -35,7 +35,7 @@ namespace AncientTools.Entities.Tasks
         {
             base.StartExecute();
 
-            SetBehindVector(FollowDistanceWalk);
+            SetBehindVector(ParkedDistance);
         }
         private void OnGoalReached()
         {

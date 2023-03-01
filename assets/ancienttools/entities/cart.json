@@ -13,6 +13,7 @@
 	server: {
 		behaviors: [
 			{ code: "HealthNoRecover", currenthealth: 100, maxhealth: 100 },
+			{ code: "repulseagent" },
 			{ code: "controlledphysics", stepHeight: 1.1251 },
 			{ 
 				code: "taskai", 
@@ -94,6 +95,7 @@
 		},
 		behaviors: [
 			{ code: "HealthNoRecover", currenthealth: 100, maxhealth: 100 },
+			{ code: "repulseagent" },
 			{ code: "interpolateposition" },
 			{ code: "controlledphysics", stepHeight: 1.1251 },
 		]
