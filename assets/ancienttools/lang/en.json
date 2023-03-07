@@ -655,7 +655,7 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"entityhelp-cart-pick-up": "Pick Up Cart",
 	"entityhelp-cart-drop": "Drop Cart",
 	"entityhelp-cart-open-inventory": "Open Inventory",
-	"entityhelp-cart-deconstruct": "Deconstruct Cart",				//-- Needs Translation
+	"entityhelp-cart-deconstruct": "Deconstruct Cart",				
 	"entityhelp-cart-repair": "Repair Cart(with same-type planks)",
 
 	"gui-title-cart-inventory": "Cart Inventory",

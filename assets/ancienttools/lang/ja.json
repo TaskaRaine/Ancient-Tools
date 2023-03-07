@@ -660,6 +660,8 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"entityhelp-cart-pick-up": "荷車を拾う",
 	"entityhelp-cart-drop": "荷車を放す",
 	"entityhelp-cart-open-inventory": "インベントリーを開く",
+	"entityhelp-cart-deconstruct": "カートを解体する",
+	"entityhelp-cart-repair": "カートを修理する(同じ種類の板が必要)",
 
 	"gui-title-cart-inventory": "荷車のインベントリー",
 

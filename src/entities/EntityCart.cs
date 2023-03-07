@@ -35,6 +35,8 @@ namespace AncientTools.Entities
         {
             base.Initialize(properties, api, InChunkIndex3d);
 
+            CartInventorySlot.MaxSlotStackSize = 1;
+
             placeInventoryInteraction = ObjectCacheUtil.GetOrCreate<WorldInteraction[]>(Api, "cartPlaceInventoryInteraction", () =>
             {
                 List<ItemStack> cartStorageBlocks = new List<ItemStack>();
@@ -188,14 +190,28 @@ namespace AncientTools.Entities
         {
             if(packetid == (int)AncientToolsNetworkPackets.MobileStorageSyncInventoryVisuals)
             {
-                TreeAttribute tree = TreeData(data);
+                string type = string.Empty;
+                TreeAttribute tree = new TreeAttribute();
 
-                if(tree.GetString("type") != null)
-                    Renderer.AssignStoragePlacementProperties(CartInventorySlot.Itemstack?.Collectible?.Attributes["cartPlacable"][tree.GetString("type")]);
-                else
-                    Renderer.AssignStoragePlacementProperties(CartInventorySlot.Itemstack?.Collectible?.Attributes["cartPlacable"]);
+                using (MemoryStream ms = new MemoryStream(data))
+                {
+                    BinaryReader reader = new BinaryReader(ms);
+                    type = reader.ReadString();
+                    tree.FromBytes(reader);
+                }
+
+                MobileStorageInventory.FromTreeAttributes(tree);
+                MobileStorageInventory.ResolveBlocksOrItems();
+
+                if(!CartInventorySlot.Empty)
+                {
+                    if (type != String.Empty)
+                        Renderer.AssignStoragePlacementProperties(CartInventorySlot.Itemstack?.Collectible?.Attributes["cartPlacable"][type]);
+                    else
+                        Renderer.AssignStoragePlacementProperties(CartInventorySlot.Itemstack?.Collectible?.Attributes["cartPlacable"]);
                 
-                PlayPlacementSound();
+                    PlayPlacementSound();
+                }
             }
             else
                 base.OnReceivedServerPacket(packetid, data);
@@ -227,7 +243,10 @@ namespace AncientTools.Entities
                                     SetLookAtVector(EntityTransform.XYZFloat, AttachedEntity.SidedPos.XYZFloat, AttachedEntity.LocalEyePos.ToVec3f());
                             }
                             else
+                            {
+                                byEntity.Stats.Remove("walkspeed", "cartspeedmodifier");
                                 AttachedEntity = null;
+                            }
                         }
                     }
                     else if(byEntity.EntityId == AttachedEntity.EntityId)
@@ -257,8 +276,29 @@ namespace AncientTools.Entities
 
                             MobileStorageInventory.RemoveEmptyStorage(0);
 
-                            if(Api.Side == EnumAppSide.Server)
+                            if (Api.Side == EnumAppSide.Server)
+                            {
+                                byte[] data;
+
+                                using (MemoryStream ms = new MemoryStream())
+                                {
+                                    BinaryWriter writer = new BinaryWriter(ms);
+                                    writer.Write(string.Empty);
+                                    TreeAttribute tree = new TreeAttribute();
+                                    MobileStorageInventory.ToTreeAttributes(tree);
+                                    tree.ToBytes(writer);
+                                    data = ms.ToArray();
+                                }
+
+                                foreach (IServerPlayer eachPlayer in Sapi.World.AllOnlinePlayers)
+                                {
+                                    if (eachPlayer.ConnectionState == EnumClientState.Playing)
+                                        Sapi.Network.SendEntityPacket(eachPlayer, EntityId, (int)AncientToolsNetworkPackets.MobileStorageSyncInventoryVisuals, data);
+
+                                }
+
                                 ServerCloseClientDialogs();
+                            }
                         }
                     }
                 }
@@ -279,7 +319,11 @@ namespace AncientTools.Entities
                             if (!itemslot.Itemstack.Collectible.Attributes["mobileStorageProps"][type].Exists
                                 || !itemslot.Itemstack.Collectible.Attributes["cartPlacable"][type].Exists)
                                 return;
+
+                            MobileStorageInventory.GenerateEmptyStorageInventory(itemslot.Itemstack.Collectible.Attributes["mobileStorageProps"][type]["quantitySlots"].AsInt());
                         }
+                        else
+                            MobileStorageInventory.GenerateEmptyStorageInventory(itemslot.Itemstack.Collectible.Attributes["mobileStorageProps"]["quantitySlots"].AsInt());
 
                         CartInventorySlot.Itemstack = itemslot.TakeOut(1);
                         CartInventorySlot.MarkDirty();
@@ -288,8 +332,6 @@ namespace AncientTools.Entities
                         //-- Allows for both typed and non-typed containers to use the mobile storage system --//
                         if (type != string.Empty)
                         {
-                            MobileStorageInventory.GenerateEmptyStorageInventory(CartInventorySlot.Itemstack.Collectible.Attributes["mobileStorageProps"][type]["quantitySlots"].AsInt());
-
                             if (Api.Side == EnumAppSide.Server)
                             {
                                 byte[] data;
@@ -297,8 +339,9 @@ namespace AncientTools.Entities
                                 using (MemoryStream ms = new MemoryStream())
                                 {
                                     BinaryWriter writer = new BinaryWriter(ms);
+                                    writer.Write(type);
                                     TreeAttribute tree = new TreeAttribute();
-                                    tree.SetString("type", type);
+                                    MobileStorageInventory.ToTreeAttributes(tree);
                                     tree.ToBytes(writer);
                                     data = ms.ToArray();
                                 }
@@ -316,16 +359,6 @@ namespace AncientTools.Entities
                                 //PlayPlacementSound();
                             }
                         }
-                        else
-                        {
-                            MobileStorageInventory.GenerateEmptyStorageInventory(CartInventorySlot.Itemstack.Collectible.Attributes["mobileStorageProps"]["quantitySlots"].AsInt());
-
-                            if (Api.Side == EnumAppSide.Client)
-                            {
-                                //Renderer.AssignStoragePlacementProperties(CartInventorySlot.Itemstack?.Collectible?.Attributes["cartPlacable"]);
-                                //PlayPlacementSound();
-                            }
-                        }
                     }
                 }
                 else
@@ -334,6 +367,8 @@ namespace AncientTools.Entities
 
                     //AnimateOpen();
                 }
+
+                UpdateTreesFromInventoryContents();
             }
             else if(mode == EnumInteractMode.Attack)
             {

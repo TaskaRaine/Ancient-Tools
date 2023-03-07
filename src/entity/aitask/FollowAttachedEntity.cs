@@ -10,9 +10,7 @@ namespace AncientTools.Entities.Tasks
     {
         EntityMobileStorage mobileStorageEntity = null;
 
-        private float FollowDistanceWalk { get; set; } = 0.0f;
-        private float FollowDistanceSprint { get; set; } = -0.25f;
-        private float FollowDistanceSneak { get; set; } = 0.1f;
+        private float FollowDistance { get; set; } = 0.25f;
 
         private float ParkedDistance { get; set; } = 1.0f;
         private Vec3d BehindVector { get; set; }
@@ -51,19 +49,14 @@ namespace AncientTools.Entities.Tasks
             }
             if (mobileStorageEntity.AttachedEntity.Controls.TriesToMove)
             {
-                if (mobileStorageEntity.AttachedEntity.Controls.Sneak)
-                    SetBehindVector(FollowDistanceSneak);
-                else if (mobileStorageEntity.AttachedEntity.Controls.Sprint)
-                    SetBehindVector(FollowDistanceSprint);
-                else
-                    SetBehindVector(FollowDistanceWalk);
+                SetBehindVector(FollowDistance);
             }
 
             return base.ContinueExecute(dt);
         }
         private void SetBehindVector(float distance)
         {
-            BehindVector = mobileStorageEntity.AttachedEntity.Pos.BehindCopy(distance).XYZ;
+            BehindVector = mobileStorageEntity.AttachedEntity.Pos.BehindCopy(FollowDistance).XYZ;
             BehindVector.Y = mobileStorageEntity.AttachedEntity.Pos.Y;
 
             mobileStorageEntity.SetEntityPosition(BehindVector);

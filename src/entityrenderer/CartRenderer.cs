@@ -161,8 +161,25 @@ namespace AncientTools.EntityRenderers
         {
             CurrentShape.Elements[0].RotationY = TaskaMath.ShortLerpDegrees(CurrentShape.Elements[0].RotationY, CartEntity.LookAtVector.Y * GameMath.RAD2DEG, 0.05);
             CartElement.RotationX = TaskaMath.ShortLerpDegrees(CartElement.RotationX, CartEntity.LookAtVector.X * GameMath.RAD2DEG, 0.05);
-            
-            if(InventoryShapes[0] != null && StoragePlacementProperties.IsSet())
+
+            if (CartEntity.AttachedEntity != null)
+            {
+                //-- Cart model gets pushed back slightly when the player holding the cart is NOT the client rendering. This is to compensate for lag and such --//
+                if (CartEntity.AttachedEntity.EntityId != Capi.World.Player.Entity.EntityId)
+                {
+                    Vec3f adjustedFrom = new Vec3f(8, 0, 14);
+
+                    CurrentShape.Elements[0].From = adjustedFrom.ToDoubleArray();
+                }
+                else
+                {
+                    Vec3f adjustedFrom = new Vec3f(8, 0, 8);
+
+                    CurrentShape.Elements[0].From = adjustedFrom.ToDoubleArray();
+                }
+            }
+
+            if (InventoryShapes[0] != null && StoragePlacementProperties.IsSet())
             {
                 CurrentShape.Elements[0].Children[2] = InventoryShapes[0].Elements[0];
                 CurrentShape.Elements[0].Children[2].From = StoragePlacementProperties.Translation;
@@ -177,7 +194,7 @@ namespace AncientTools.EntityRenderers
             }
 
             if (CartEntity.AttachedEntity != null)
-                if (CartEntity.AttachedEntity.Controls.TriesToMove)
+                if (CartEntity.AttachedEntity.ServerControls.TriesToMove)
                     AxleElement.RotationX = TaskaMath.ShortLerpDegrees(AxleElement.RotationX, AxleElement.RotationX - 90.0f, 0.05);
 
             Capi.Tesselator.TesselateShape("der", CurrentShape, out MeshData wholeMesh, this);

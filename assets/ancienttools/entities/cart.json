@@ -5,7 +5,7 @@
 		types: ["wood-aged", "wood-birch", "wood-oak", "wood-maple", "wood-pine", "wood-acacia", "wood-kapok", "wood-baldcypress", "wood-larch", "wood-redwood", "wood-ebony", "wood-walnut", "wood-purpleheart"],
 	},
 	fallDamage: false,
-	SelectionBoxSize: { x: 1, y: 1 },
+	SelectionBoxSize: { x: 1.5, y: 1 },
 	CollisionBoxSize: { x: 1, y: 1 },
 	DeadSelectionBoxSize: { x: 1, y: 1 },
 	DeadCollisionBoxSize: { x: 1, y: 1 },
@@ -13,7 +13,6 @@
 	server: {
 		behaviors: [
 			{ code: "HealthNoRecover", currenthealth: 100, maxhealth: 100 },
-			{ code: "repulseagent" },
 			{ code: "controlledphysics", stepHeight: 1.1251 },
 			{ 
 				code: "taskai", 
@@ -95,7 +94,6 @@
 		},
 		behaviors: [
 			{ code: "HealthNoRecover", currenthealth: 100, maxhealth: 100 },
-			{ code: "repulseagent" },
 			{ code: "interpolateposition" },
 			{ code: "controlledphysics", stepHeight: 1.1251 },
 		]

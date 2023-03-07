@@ -161,7 +161,12 @@ namespace AncientTools.Utility
         }
         public void SetLookAtVector(Vec3f cartPos, Vec3f attachedEntityPos, Vec3f attachedEntityEyePos)
         {
-            Vec3f normal = ((attachedEntityPos + (attachedEntityEyePos / 4)) - cartPos).Normalize();
+            Vec3f normal = new Vec3f();
+
+            if(AttachedEntity.EntityId != Capi.World.Player.Entity.EntityId)
+                normal = ((attachedEntityPos + (attachedEntityEyePos / 16)) - (cartPos)).Normalize();
+            else
+                normal = ((attachedEntityPos + (attachedEntityEyePos / 4)) - (cartPos)).Normalize();
             //normal.Y = 0.325f;
 
             double pitch = Math.Asin(normal.Y);
