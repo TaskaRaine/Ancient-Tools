@@ -1,5 +1,6 @@
 ﻿using AncientTools.BlockEntityRenderer;
 using AncientTools.Blocks;
+using AncientTools.Utility;
 using System;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
@@ -9,11 +10,8 @@ using Vintagestory.GameContent;
 
 namespace AncientTools.BlockEntities
 {
-    class BEMortar : BlockEntityDisplay
+    class BEMortar : DisplayInventory
     {
-        public override InventoryBase Inventory => inventory;
-        public override string InventoryClassName => "mortarcontainer";
-
         private float mortarGrindTime;
         private int mortarOutputModifier;
 
@@ -21,8 +19,6 @@ namespace AncientTools.BlockEntities
         private bool isGrinding = false;
         private bool isRendered = false;
         private long grindTickListener = -1;
-
-        internal InventoryGeneric inventory;
 
         private ILoadedSound ambientSound, stoneSound;
 
@@ -34,16 +30,11 @@ namespace AncientTools.BlockEntities
 
         public ItemSlot ResourceSlot
         {
-            get { return inventory[0]; }
+            get { return Inventory[0]; }
         }
         public ItemSlot PestleSlot
         {
-            get { return inventory[1]; }
-        }
-
-        public BEMortar()
-        {
-            inventory = new InventoryGeneric(2, null, null);
+            get { return Inventory[1]; }
         }
         ~BEMortar()
         {
@@ -56,8 +47,8 @@ namespace AncientTools.BlockEntities
             mortarGrindTime = api.World.Config.GetFloat("MortarGrindTime", 4.0f);
             mortarOutputModifier = api.World.Config.GetInt("MortarOutputModifier", 1);
 
-            //-- Holds mesh data of items inserted into the mortar. The resource mesh is NOT used as the resource appearance is not actually represented by the inserted resrouce. --//
-            meshes = new MeshData[2];
+            InventorySize = 2;
+            InitializeInventory();
 
             base.Initialize(api);
 
@@ -89,7 +80,7 @@ namespace AncientTools.BlockEntities
 
                 if (!PestleSlot.Empty)
                 {
-                    pestleRenderer.UpdateMesh(meshes[1]);
+                    pestleRenderer.UpdateMesh(Meshes[1]);
                     pestleRenderer.SetPestleLookAtVector(lookAtPlayerVector.X, lookAtPlayerVector.Y, lookAtPlayerVector.Z);
                     pestleRenderer.ShouldRender = true;
                 }
@@ -155,8 +146,8 @@ namespace AncientTools.BlockEntities
                 //-- If the isRendered value retreived from the server is true, then display the pestle --//
                 if (isRendered)
                 {
-                    this.updateMesh(1);
-                    pestleRenderer.UpdateMesh(meshes[1]);
+                    //UpdateMeshes();
+                    pestleRenderer.UpdateMesh(Meshes[1]);
                     pestleRenderer.SetPestleLookAtVector(lookAtPlayerVector.X, lookAtPlayerVector.Y, lookAtPlayerVector.Z);
                     pestleRenderer.ShouldRender = true;
 
@@ -242,9 +233,9 @@ namespace AncientTools.BlockEntities
 
                                     if (Api.Side == EnumAppSide.Client)
                                     {
-                                        this.updateMesh(1);
+                                        //UpdateMeshes();
 
-                                        pestleRenderer.UpdateMesh(meshes[1]);
+                                        pestleRenderer.UpdateMesh(Meshes[1]);
                                         pestleRenderer.ShouldRender = true;
 
                                         stoneSound.Start();
@@ -319,11 +310,11 @@ namespace AncientTools.BlockEntities
         {
             if (Api.Side == EnumAppSide.Client)
             {
-                grindingParticles.Color = ResourceSlot.Itemstack.Collectible.GetRandomColor(capi, ResourceSlot.Itemstack);
+                grindingParticles.Color = ResourceSlot.Itemstack.Collectible.GetRandomColor(Capi, ResourceSlot.Itemstack);
 
                 //-- Particles are white when a transparent texture is used. Therefore, the mod attempts to aquire a colour from the grinded stack in hopes of getting a colour match --//
                 if(ColorUtil.ColorA(grindingParticles.Color) != 255)
-                    grindingParticles.Color = ResourceSlot.Itemstack.Collectible.GrindingProps.GroundStack.ResolvedItemstack.Collectible.GetRandomColor(capi, ResourceSlot.Itemstack.Collectible.GrindingProps.GroundStack.ResolvedItemstack);
+                    grindingParticles.Color = ResourceSlot.Itemstack.Collectible.GrindingProps.GroundStack.ResolvedItemstack.Collectible.GetRandomColor(Capi, ResourceSlot.Itemstack.Collectible.GrindingProps.GroundStack.ResolvedItemstack);
 
                 this.Api.World.SpawnParticles(grindingParticles);
             }
@@ -416,13 +407,13 @@ namespace AncientTools.BlockEntities
             //-- If no shape asset is found then a default mesh is used. --//
             if (Api.Assets.Exists(new AssetLocation(resourcePath + ".json")))
             {
-                this.AddMesh(block, mesher, resourcePath, tessThreadTesselator.GetTexSource(block));
+                this.AddMesh(block, mesher, resourcePath, tessThreadTesselator.GetTextureSource(block));
             }
             else
             {
                 resourcePath = "ancienttools:shapes/block/mortar/resourceshapes/resource_default";
 
-                this.AddMesh(block, mesher, resourcePath, tessThreadTesselator.GetTexSource(block));
+                this.AddMesh(block, mesher, resourcePath, tessThreadTesselator.GetTextureSource(block));
             }
         }
         private void AddMesh(BlockMortar block, ITerrainMeshPool mesher, string path, ITexPositionSource textureSource)
@@ -471,6 +462,11 @@ namespace AncientTools.BlockEntities
 
                 ParticleModel = EnumParticleModel.Quad
             };
+        }
+
+        public override void UpdateMeshes()
+        {
+            throw new NotImplementedException();
         }
     }
 }

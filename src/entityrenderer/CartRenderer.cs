@@ -231,7 +231,7 @@ namespace AncientTools.EntityRenderers
 
                 IStandardShaderProgram prog = rapi.PreparedStandardShader((int)entity.Pos.X, (int)(entity.Pos.Y + 0.2), (int)entity.Pos.Z);
                 Vec3d camPos = capi.World.Player.Entity.CameraPos;
-                prog.Tex2D = Capi.EntityTextureAtlas.AtlasTextureIds[0];
+                prog.Tex2D = Capi.EntityTextureAtlas.AtlasTextures[0].TextureId;
                 prog.ModelMatrix = ModelMat
                     .Identity()
                     .Translate(entity.Pos.X - camPos.X, entity.Pos.Y - camPos.Y, entity.Pos.Z - camPos.Z)

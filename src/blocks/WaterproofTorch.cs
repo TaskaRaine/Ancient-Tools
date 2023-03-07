@@ -31,7 +31,7 @@ namespace AncientTools.Blocks
                 slot.MarkDirty();
             }
         }
-        public override void OnTryIgniteBlockOver(EntityAgent byEntity, BlockPos pos, float secondsIgniting, ref EnumHandling handling)
+        public new void OnTryIgniteBlockOver(EntityAgent byEntity, BlockPos pos, float secondsIgniting, ref EnumHandling handling)
         {
             if (CodeWithVariant("state", "extinct").Equals(Code))
             {

@@ -400,7 +400,7 @@ namespace AncientTools.Entities
         {
             return base.ReceiveDamage(damageSource, damage);
         }
-        public override void OnEntityDespawn(EntityDespawnReason despawn)
+        public override void OnEntityDespawn(EntityDespawnData despawn)
         {
             if (Api.Side == EnumAppSide.Server)
                 ServerCloseClientDialogs();
@@ -410,11 +410,11 @@ namespace AncientTools.Entities
                 AttachedEntity.Stats.Set("walkspeed", "cartspeedmodifier", (float)-0.2, false);
             }
 
-            if (despawn.reason == EnumDespawnReason.Combusted || despawn.reason == EnumDespawnReason.Death)
+            if (despawn.Reason == EnumDespawnReason.Combusted || despawn.Reason == EnumDespawnReason.Death)
             {
                 MobileStorageInventory.DropAll(this.Pos.XYZ);
             }
-            else if(despawn.reason == EnumDespawnReason.Unload)
+            else if(despawn.Reason == EnumDespawnReason.Unload)
             {
                 UpdateTreesFromInventoryContents();
             }
