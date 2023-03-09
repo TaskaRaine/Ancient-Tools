@@ -21,8 +21,8 @@
 	behaviors: [
 		{ name: "WedgeSmack" },
 		{ name: "MobileStorageRepair", properties: { 
-			repairRate: 5,
-			repairInterval: 1,
+			repairAmount: 5,
+			repairInterval: 0.2,
 			durabilityLoss: 1
 		}}
 	],

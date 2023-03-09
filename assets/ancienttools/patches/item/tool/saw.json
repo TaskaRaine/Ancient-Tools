@@ -5,9 +5,9 @@
 		"value": {
 			name: "MobileStorageDestruction",
 			properties: {
-				destructionRate: 5,
-				destructionInverval: 1,
-				durabilityLoss: 5
+				destructionAmount: 5,
+				destructionInterval: 0.2,
+				durabilityLoss: 1
 			}
 		},
 		"file": "game:itemtypes/tool/saw",
