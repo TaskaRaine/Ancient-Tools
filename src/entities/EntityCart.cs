@@ -155,7 +155,7 @@ namespace AncientTools.Entities
             {
                 if (AttachedEntity != null)
                 {
-                    if (EntityTransform.DistanceTo(AttachedEntity.SidedPos) <= 4.0)
+                    if (EntityTransform.DistanceTo(AttachedEntity.SidedPos) <= 20.0)
                         SetLookAtVector(EntityTransform.XYZFloat, AttachedEntity.SidedPos.XYZFloat, AttachedEntity.LocalEyePos.ToVec3f());
                     else
                     {
@@ -228,10 +228,9 @@ namespace AncientTools.Entities
 
                         if (entityDistance <= 2.0)
                         {
-                            AttachedEntity = byEntity;
-
-                            if (!AttachedEntity.Stats["walkspeed"].ValuesByKey.ContainsKey("cartspeedmodifier"))
+                            if (!byEntity.Stats["walkspeed"].ValuesByKey.ContainsKey("cartspeedmodifier"))
                             {
+                                AttachedEntity = byEntity;
                                 IsDropped = false;
 
                                 AttachedEntity.Stats.Set("walkspeed", "cartspeedmodifier", -0.2f, false);
@@ -242,20 +241,11 @@ namespace AncientTools.Entities
                                 if (Api.Side == EnumAppSide.Client)
                                     SetLookAtVector(EntityTransform.XYZFloat, AttachedEntity.SidedPos.XYZFloat, AttachedEntity.LocalEyePos.ToVec3f());
                             }
-                            else
-                            {
-                                byEntity.Stats.Remove("walkspeed", "cartspeedmodifier");
-                                AttachedEntity = null;
-                            }
                         }
                     }
                     else if(byEntity.EntityId == AttachedEntity.EntityId)
                     {
-                        if (AttachedEntity != null)
-                        {
-                            AttachedEntity.Stats.Remove("walkspeed", "cartspeedmodifier");
-                        }
-
+                        AttachedEntity.Stats.Remove("walkspeed", "cartspeedmodifier");
                         AttachedEntity = null;
 
                         if (Api.Side == EnumAppSide.Server)
@@ -407,7 +397,7 @@ namespace AncientTools.Entities
 
             if (AttachedEntity != null)
             {
-                AttachedEntity.Stats.Set("walkspeed", "cartspeedmodifier", (float)-0.2, false);
+                AttachedEntity.Stats.Remove("walkspeed", "cartspeedmodifier");
             }
 
             if (despawn.reason == EnumDespawnReason.Combusted || despawn.reason == EnumDespawnReason.Death)

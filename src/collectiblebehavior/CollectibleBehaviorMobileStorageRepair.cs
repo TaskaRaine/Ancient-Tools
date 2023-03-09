@@ -7,7 +7,7 @@ namespace AncientTools.CollectibleBehaviors
 {
     class CollectibleBehaviorMobileStorageRepair: CollectibleBehavior
     {
-        private int RepairRate { get; set; } = 5;
+        private int RepairAmount { get; set; } = 5;
         private float RepairInterval { get; set; } = 1;
         private int DurabilityLoss { get; set; } = 1;
 
@@ -26,11 +26,14 @@ namespace AncientTools.CollectibleBehaviors
         {
             base.Initialize(properties);
 
-            if (properties["repairRate"].Exists)
-                RepairRate = properties["repairRate"].AsInt();
+            if (properties["repairAmount"].Exists)
+                RepairAmount = properties["repairAmount"].AsInt();
 
             if (properties["repairInterval"].Exists)
                 RepairInterval = properties["repairInterval"].AsFloat();
+
+            if (properties["durabilityLoss"].Exists)
+                DurabilityLoss = properties["durabilityLoss"].AsInt();
         }
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling, ref EnumHandling handling)
         {
@@ -73,7 +76,7 @@ namespace AncientTools.CollectibleBehaviors
 
                             if (leftHandObject.CodeWithVariant("wood", StorageType).Equals(leftHandObject.Code))
                             {
-                                EntityHealth.Health += RepairRate;
+                                EntityHealth.Health += RepairAmount;
 
                                 slot.Itemstack.Collectible.DamageItem(byEntity.World, byEntity, slot, DurabilityLoss);
                                 byEntity.LeftHandItemSlot.TakeOut(1);
