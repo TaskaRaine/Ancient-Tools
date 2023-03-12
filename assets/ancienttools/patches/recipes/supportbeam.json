@@ -1,0 +1,10 @@
+﻿[
+    {
+        "op": "add",
+        "path": "/0/enabled",
+        "value": false,
+        "file": "game:recipes/grid/beams",
+        "side": "Server",
+        "condition": { "when": "InWorldBeamCraftingEnabled", "isValue": "true" }
+    }
+]

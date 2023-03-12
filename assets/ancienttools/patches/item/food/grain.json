@@ -1,0 +1,38 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributesByType/*-flax/mortarProperties",
+		"value": {
+			shapePath: "resource_game_grain_rice",
+			texturePaths: [{ code: "rice", path: "ancienttools:block/mortar/mortar_{type}" }],
+			groundStack: { type: "item", code: "game:flour-{type}" },
+			resultQuantity: 1
+		},
+		"file": "game:itemtypes/food/grain",
+		"side": "Server",
+	},
+	{
+		"op": "add",
+		"path": "/attributesByType/*-rice/mortarProperties",
+		"value": {
+			shapePath: "resource_game_grain_rice",
+			texturePaths: [{ code: "rice", path: "ancienttools:block/mortar/mortar_{type}" }],
+			groundStack: { type: "item", code: "game:flour-{type}" },
+			resultQuantity: 1
+		},
+		"file": "game:itemtypes/food/grain",
+		"side": "Server",
+	},
+	{
+		"op": "add",
+		"path": "/attributesByType/*/mortarProperties",
+		"value": {
+			shapePath: "resource_game_grain_rice",
+			texturePaths: [{ code: "rice", path: "ancienttools:block/mortar/mortar_{type}" }],
+			groundStack: { type: "item", code: "game:flour-{type}" },
+			resultQuantity: 1
+		},
+		"file": "game:itemtypes/food/grain",
+		"side": "Server",
+	}
+]

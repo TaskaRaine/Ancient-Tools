@@ -1,0 +1,15 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes/mortarProperties",
+		"value": { 
+			shapePath: "resource_expandedfoods_peanut_kernels",
+			texturePaths: [{ code: "peanutkernels", path: "expandedfoods:item/food/peanut/cooked" }],
+			groundStack: { type: "item", code: "expandedfoods:peanutliquid-paste" },
+			resultQuantity: 5
+		},
+		"file": "expandedfoods:itemtypes/food/peanut",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server",
+	}
+]

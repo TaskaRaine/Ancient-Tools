@@ -160,24 +160,31 @@
     <None Include="assets\ancienttools\itemtypes\resources\wheel.json" />
     <None Include="assets\ancienttools\itemtypes\spawners\cart.json" />
     <None Include="assets\ancienttools\itemtypes\toolhead\adzehead.json" />
+    <None Include="assets\ancienttools\itemtypes\toolhead\mallethead.json" />
     <None Include="assets\ancienttools\itemtypes\tools\mallet.json" />
     <None Include="assets\ancienttools\itemtypes\tools\wedge.json" />
     <None Include="assets\ancienttools\lang\fr.json" />
     <None Include="assets\ancienttools\lang\ja.json" />
     <None Include="assets\ancienttools\lang\ru.json" />
     <None Include="assets\ancienttools\patches\block\chest.json" />
+    <None Include="assets\ancienttools\patches\block\debarkedlog.json" />
     <None Include="assets\ancienttools\patches\block\firepit.json" />
     <None Include="assets\ancienttools\patches\block\forge.json" />
     <None Include="assets\ancienttools\patches\block\pitkiln.json" />
     <None Include="assets\ancienttools\patches\block\pot.json" />
+    <None Include="assets\ancienttools\patches\block\seashell.json" />
+    <None Include="assets\ancienttools\patches\block\supportbeam.json" />
     <None Include="assets\ancienttools\patches\block\toolmold.json" />
     <None Include="assets\ancienttools\patches\compatibility\acorns\acornbread.json" />
     <None Include="assets\ancienttools\patches\compatibility\acorns\acorndough.json" />
     <None Include="assets\ancienttools\patches\compatibility\acorns\mortar.json" />
     <None Include="assets\ancienttools\patches\compatibility\betterthanheresy\pitchpot.json" />
     <None Include="assets\ancienttools\patches\compatibility\betterthanheresy\powderedcharcoal.json" />
+    <None Include="assets\ancienttools\patches\compatibility\bricklayers\cookedbones.json" />
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\crockcoloured.json" />
+    <None Include="assets\ancienttools\patches\compatibility\bricklayers\crushed.json" />
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\dough.json" />
+    <None Include="assets\ancienttools\patches\compatibility\bricklayers\frit.json" />
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\mortar.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\ancienttools disables\adze.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\ancienttools disables\bark.json" />
@@ -189,13 +196,23 @@
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\barkbasket.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\strippedlog.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\tannin.json" />
+    <None Include="assets\ancienttools\patches\compatibility\expandedfoods\bread.json" />
+    <None Include="assets\ancienttools\patches\compatibility\expandedfoods\peanut.json" />
+    <None Include="assets\ancienttools\patches\compatibility\expandedfoods\seaweed.json" />
+    <None Include="assets\ancienttools\patches\compatibility\expandedfoods\soyprep.json" />
     <None Include="assets\ancienttools\patches\compatibility\immersivecrafting\hide.json" />
     <None Include="assets\ancienttools\patches\compatibility\moreanimals\capercaillie.json" />
     <None Include="assets\ancienttools\patches\compatibility\moreanimals\goldenpheasant.json" />
     <None Include="assets\ancienttools\patches\compatibility\moreanimals\pheasant.json" />
     <None Include="assets\ancienttools\patches\entity\land\gazelle.json" />
+    <None Include="assets\ancienttools\patches\item\food\grain.json" />
+    <None Include="assets\ancienttools\patches\item\resources\bone.json" />
+    <None Include="assets\ancienttools\patches\item\resources\ore.json" />
     <None Include="assets\ancienttools\patches\item\resources\plank.json" />
+    <None Include="assets\ancienttools\patches\item\food\rawcassava.json" />
+    <None Include="assets\ancienttools\patches\item\resources\stone.json" />
     <None Include="assets\ancienttools\patches\item\tool\saw.json" />
+    <None Include="assets\ancienttools\patches\recipes\debarkedlog.json" />
     <None Include="assets\ancienttools\patches\recipes\leather.json" />
     <None Include="assets\ancienttools\patches\recipes\scrapedhide.json" />
     <None Include="assets\ancienttools\patches\recipes\soakedhide-borax.json" />
@@ -480,7 +497,7 @@
     <None Include="assets\ancienttools\recipes\grid\block\barkbasket.json" />
     <None Include="assets\ancienttools\recipes\grid\block\hidewatersack.json" />
     <None Include="assets\ancienttools\recipes\grid\block\stretchingframe.json" />
-    <None Include="assets\ancienttools\recipes\grid\block\strippedlog.json" />
+    <None Include="assets\ancienttools\recipes\grid\block\debarkedlog.json" />
     <None Include="assets\ancienttools\recipes\grid\item\leather.json" />
     <None Include="assets\ancienttools\recipes\smithing\adze.json" />
     <None Include="assets\ancienttools\shapes\block\barkbasket.json" />
@@ -601,6 +618,7 @@
     <None Include="resources\guide\mortarshapes_guide.md" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="assets\ancienttools\patches\item\toolhead\" />
     <Folder Include="assets\ancienttools\patches\lang\" />
     <Folder Include="assets\ancienttools\shapes\block\piles\" />
     <Folder Include="assets\ancienttools\sounds\effect\" />
@@ -614,6 +632,8 @@
     <None Include="assets\ancienttools\blocktypes\mortar.json" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assets\ancienttools\patches\recipes\supportbeam.json" />
+    <None Include="assets\ancienttools\patches\compatibility\expandedfoods\choppedvegetable.json" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorMobileStorageDestruction.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorMobileStorageRepair.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorWedgeSmack.cs" />

@@ -85,7 +85,7 @@ namespace AncientTools.BlockEntities
 
                 if(Capi.Assets.Exists(location))
                 {
-                    MeshData newSplitLogMesh = this.GenMesh(Capi, SplitBlockShapeLocation, tessThreadTesselator.GetTexSource(this.Block));
+                    MeshData newSplitLogMesh = this.GenMesh(Capi, SplitBlockShapeLocation, tessThreadTesselator.GetTextureSource(this.Block));
                 
                     if(newSplitLogMesh != null)
                         this.AddMesh(mesher, newSplitLogMesh);
@@ -306,7 +306,7 @@ namespace AncientTools.BlockEntities
 
             MeshData wholeMesh;
 
-            capi.Tesselator.TesselateShape("mortar", shape, out wholeMesh, capi.Tesselator.GetTexSource(this.Block));
+            capi.Tesselator.TesselateShape("mortar", shape, out wholeMesh, capi.Tesselator.GetTextureSource(this.Block));
 
             return wholeMesh;
         }
@@ -366,7 +366,7 @@ namespace AncientTools.BlockEntities
 
             if(Api.Side == EnumAppSide.Server)
             {
-                ItemStack beamStack = new ItemStack(Api.World.GetItem(new AssetLocation("ancienttools", "beam-" + Block.LastCodePart(1))));
+                ItemStack beamStack = new ItemStack(Api.World.GetBlock(new AssetLocation("game", "supportbeam-" + Block.LastCodePart(1))));
 
                 if (totalCount == 4)
                 {

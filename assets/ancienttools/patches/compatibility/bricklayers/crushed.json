@@ -1,0 +1,23 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes/mortarPropertiesByType",
+		"value": { 
+			"@crushed-(alum|quartz|bauxite|olivine|peridotite|ilmenite|cassiterite|chromite|lapislazuli|cinnabar)": {
+				shapePath: "resource_game_crushed_{material}",
+				texturePaths: [{ code: "{material}", path: "game:item/resource/crushed/{material}" }],
+				groundStack: { type: "item", code: "bricklayers:powdered-{material}" },
+				resultQuantity: 2
+			},
+			"*": {
+				shapePath: "resource_game_crushed_{material}",
+				texturePaths: [{ code: "{material}", path: "bricklayers:item/resource/crushed/{material}" }],
+				groundStack: { type: "item", code: "bricklayers:powdered-{material}" },
+				resultQuantity: 2
+			}
+		},
+		"file": "game:itemtypes/resource/crushed/crushed",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server",
+	}
+]

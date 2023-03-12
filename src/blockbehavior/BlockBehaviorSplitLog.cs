@@ -29,6 +29,9 @@ namespace AncientTools.BlockBehaviors
 
         public override void Initialize(JsonObject properties)
         {
+            if (block.CodeWithVariant("rotation", "ud") != block.Code)
+                return;
+
             base.Initialize(properties);
 
             OriginalSelectionBoxes = block.SelectionBoxes;
@@ -47,6 +50,9 @@ namespace AncientTools.BlockBehaviors
         }
         public override void OnLoaded(ICoreAPI api)
         {
+            if (block.CodeWithVariant("rotation", "ud") != block.Code)
+                return;
+
             base.OnLoaded(api);
 
             if(api is ICoreClientAPI clientAPI)

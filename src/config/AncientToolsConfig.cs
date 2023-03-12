@@ -17,6 +17,7 @@ namespace AncientTools.Config
         public float SkinningTime = 4.0f;
         public float WaterSackConversionHours = 24.0f;
         public float BrainedHideSealHours = 48.0f;
+        public bool InWorldBeamCraftingEnabled = true;
 
         public AncientToolsConfig()
         {
@@ -36,6 +37,7 @@ namespace AncientTools.Config
             SkinningTime = previousConfig.SkinningTime;
             WaterSackConversionHours = previousConfig.WaterSackConversionHours;
             BrainedHideSealHours = previousConfig.BrainedHideSealHours;
+            InWorldBeamCraftingEnabled = previousConfig.InWorldBeamCraftingEnabled;
         }
     }
 }

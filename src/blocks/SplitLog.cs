@@ -6,10 +6,11 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
+using Vintagestory.GameContent;
 
 namespace AncientTools.Blocks
 {
-    class BlockSplitLog: Block
+    class BlockSplitLog: BlockLog
     {
         WorldInteraction[] placeInteraction = null;
         WorldInteraction[] smackInteraction = null;
@@ -68,13 +69,13 @@ namespace AncientTools.Blocks
             if (world.BlockAccessor.GetBlockEntity(selection.Position) is BESplitLog splitLogEntity)
             {
                 if (splitLogEntity.IsInventoryEmpty())
-                    return placeInteraction;
+                    return placeInteraction.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                 else if (splitLogEntity.IsInventoryFull() && splitLogEntity.HasUnsmackedWedges())
-                    return smackInteraction;
+                    return smackInteraction.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                 else if (!splitLogEntity.IsInventoryFull() && splitLogEntity.HasUnsmackedWedges())
-                    return placeAndSmackInteraction;
+                    return placeAndSmackInteraction.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
                 else if (!splitLogEntity.IsInventoryFull())
-                    return placeInteraction;
+                    return placeInteraction.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
             }
 
             return base.GetPlacedBlockInteractionHelp(world, selection, forPlayer);
@@ -82,7 +83,7 @@ namespace AncientTools.Blocks
         public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos pos, IPlayer forPlayer)
         {
             //return base.GetPlacedBlockInfo(world, pos, forPlayer);
-            return Lang.GetMatching("ancienttools:blockdesc-strippedlog-*") + "<br>" + Lang.Get("game:Requires tool tier {0} ({1}) to break", new object[] { 1, "Stone" });
+            return "<br>" + Lang.Get("game:Requires tool tier {0} ({1}) to break", new object[] { 1, "Stone" });
         }
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {

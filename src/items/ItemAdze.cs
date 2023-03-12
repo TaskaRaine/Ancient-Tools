@@ -115,7 +115,7 @@ namespace AncientTools.Items
                 string logType = interactedBlock.LastCodePart(1);
                 string logRotation = interactedBlock.LastCodePart();
 
-                api.World.BlockAccessor.SetBlock(api.World.GetBlock(new AssetLocation("ancienttools", "strippedlog-" + logType + "-" + logRotation)).Id, blockSel.Position);
+                api.World.BlockAccessor.SetBlock(api.World.GetBlock(new AssetLocation("game", "debarkedlog-" + logType + "-" + logRotation)).Id, blockSel.Position);
                 api.World.BlockAccessor.MarkBlockDirty(blockSel.Position);
 
                 for (int i = 0; i < api.World.Config.GetInt("BarkPerLog"); i++)

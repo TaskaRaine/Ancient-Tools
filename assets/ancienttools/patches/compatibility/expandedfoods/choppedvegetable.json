@@ -1,0 +1,15 @@
+﻿[
+    {
+		"op": "add",
+		"path": "/attributesByType/*-cassavadried/mortarProperties",
+		"value": { 
+			shapePath: "resource_expandedfoods_choppedvegetable_cassavadried",
+			texturePaths: [{ code: "cassava", path: "game:item/food/vegetable/cassava-dried" }],
+			groundStack: { type: "item", code: "game:flour-cassava" },
+			resultQuantity: 1
+		},
+		"file": "expandedfoods:itemtypes/food/choppedvegetable",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server",
+	}
+]

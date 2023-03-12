@@ -1,0 +1,15 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes/mortarProperties",
+		"value": {
+			shapePath: "resource_bricklayers_frit_baked_black",
+			texturePaths: [{ code: "fritblack", path: "bricklayers:item/resource/frit/baked/{type}" }],
+			groundStack: { type: "item", code: "bricklayers:frit-ground-{type}" },
+			resultQuantity: 1
+		},
+		"file": "bricklayers:itemtypes/resource/frit",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server",
+	}
+]

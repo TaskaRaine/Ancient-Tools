@@ -41,7 +41,7 @@
 		"@mallet-bone-(chert|granite|andesite|basalt|obsidian|peridotite)": {
 			"material": { base: "game:block/stone/rock/{material}1" },
 			"string": { base: "game:item/tool/material/string" },
-			"handle": { base: "game:block/bone-yellow" }
+			"handle": { base: "game:block/creature/bone-yellow" }
 		},
 		"mallet-wood-flint": {
 			"material": { base: "game:block/stone/{material}" },
@@ -51,7 +51,7 @@
 		"mallet-bone-flint": {
 			"material": { base: "game:block/stone/{material}" },
 			"string": { base: "game:item/tool/material/string" },
-			"handle": { base: "game:block/bone-yellow" }
+			"handle": { base: "game:block/creature/bone-yellow" }
 		}
 	},
 	maxstacksize: 1,

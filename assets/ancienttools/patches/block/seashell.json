@@ -1,0 +1,16 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes/mortarPropertiesByType",
+		"value": {
+			"*": {
+				shapePath: "resource_game_seashell_{type}_{color}",
+				texturePaths: [{ code: "{color}", path: "game:block/creature/seashell/{color}" }],
+				groundStack: { type: "item", code: "game:lime" },
+				resultQuantity: 1
+			}
+		},
+		"file": "game:blocktypes/bone/seashell",
+		"side": "Server",
+	},
+]

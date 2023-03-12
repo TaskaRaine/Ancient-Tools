@@ -1,0 +1,15 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes",
+		"value": {
+			handbook: {
+				groupBy: ["supportbeam-*"],
+				createdBy: "ancienttools:handbook-woodsplitting-craftinfo"
+			}
+		},
+		"file": "game:blocktypes/wood/woodtyped/suppportbeam",
+		"side": "Server",
+		"condition": { "when": "InWorldBeamCraftingEnabled", "isValue": "true" }
+	},
+]

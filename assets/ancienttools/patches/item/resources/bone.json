@@ -1,0 +1,14 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes/mortarProperties",
+		"value": {
+			shapePath: "resource_game_bone",
+			texturePaths: [{ code: "bone", path: "game:block/bone" }],
+			groundStack: { type: "item", code: "game:bonemeal" },
+			resultQuantity: 1
+		},
+		"file": "game:itemtypes/resource/charcoal",
+		"side": "Server",
+	}
+]

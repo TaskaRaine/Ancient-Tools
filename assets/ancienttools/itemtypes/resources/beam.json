@@ -1,4 +1,5 @@
 ﻿{
+	enabled: false,
 	code: "beam",
 	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
 	attributes: {

@@ -1,4 +1,5 @@
-﻿using Vintagestory.API.Client;
+﻿using System.Collections.Generic;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
@@ -89,6 +90,25 @@ namespace AncientTools.Utility
             CurrentShape = capi.Assets.TryGet(shapePath + ".json").ToObject<Shape>();
 
             capi.Tesselator.TesselateShape("container", CurrentShape, out MeshData wholeMesh, this);
+            return wholeMesh;
+        }
+        public MeshData GenMesh(string filepathPrefix, JsonObject generationProperties)
+        {
+            CurrentShape = Capi.Assets.TryGet(filepathPrefix + generationProperties["shapePath"] + ".json").ToObject<Shape>();
+
+            //-- Resource shapes should to have a textures: {} field even if it's empty. It is less efficient to assign the dictionary each time it is fetched. --//
+            if (CurrentShape.Textures == null)
+                CurrentShape.Textures = new Dictionary<string, AssetLocation>();
+
+            JsonObject[] texturePaths = generationProperties["texturePaths"].AsArray();
+
+            foreach(JsonObject path in texturePaths)
+            {
+                CurrentShape.Textures.Add(path["code"].ToString(), new AssetLocation(path["path"].ToString()));
+            }
+
+            Capi.Tesselator.TesselateShape("container", CurrentShape, out MeshData wholeMesh, this);
+
             return wholeMesh;
         }
         public MeshData GenMesh(ItemStack stack)

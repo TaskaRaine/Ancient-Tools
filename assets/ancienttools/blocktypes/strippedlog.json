@@ -1,4 +1,5 @@
 ﻿{
+	enabled: false,
 	code: "strippedlog",
 	creativeinventory: { "general": ["*-ud"], "flora": ["*-ud"], "construction": ["*-ud"], "ancienttools": ["*-ud"] },
     attributes: {

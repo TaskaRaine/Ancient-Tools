@@ -5,8 +5,8 @@
 		height: 3,
 		ingredients: {
 			"P": {
-				type: "item",
-				code: "ancienttools:beam-*",
+				type: "block",
+				code: "game:supportbeam-*",
 				name: "wood",
 				quantity: 1
 			},

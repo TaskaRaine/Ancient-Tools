@@ -12,6 +12,8 @@ namespace AncientTools.BlockEntities
 {
     class BEMortar : DisplayInventory
     {
+        const string RESOURCE_PATH_PREFIX = "ancienttools:shapes/block/mortar/resourceshapes/";
+
         private float mortarGrindTime;
         private int mortarOutputModifier;
 
@@ -28,6 +30,8 @@ namespace AncientTools.BlockEntities
         private Vec3f lookAtPlayerVector = Vec3f.Zero;
         private Vec3f initialAnimationRotation = new Vec3f(0.0f, 0.15f, 0.0f);
 
+        private ItemStack groundItemstack;
+
         public ItemSlot ResourceSlot
         {
             get { return Inventory[0]; }
@@ -35,6 +39,21 @@ namespace AncientTools.BlockEntities
         public ItemSlot PestleSlot
         {
             get { return Inventory[1]; }
+        }
+        public MeshData ResourceMesh
+        {
+            get { return Meshes[0]; }
+            protected set { Meshes[0] = value; }
+        }
+        public MeshData PestleMesh
+        {
+            get { return Meshes[1]; }
+            protected set { Meshes[1] = value; }
+        }
+        public BEMortar()
+        {
+            InventorySize = 2;
+            InitializeInventory();
         }
         ~BEMortar()
         {
@@ -44,13 +63,12 @@ namespace AncientTools.BlockEntities
         }
         public override void Initialize(ICoreAPI api)
         {
+            base.Initialize(api);
+
             mortarGrindTime = api.World.Config.GetFloat("MortarGrindTime", 4.0f);
             mortarOutputModifier = api.World.Config.GetInt("MortarOutputModifier", 1);
 
-            InventorySize = 2;
-            InitializeInventory();
-
-            base.Initialize(api);
+            UpdateMeshes();
 
             if (api.Side == EnumAppSide.Client)
             {
@@ -128,7 +146,7 @@ namespace AncientTools.BlockEntities
 
             if (!ResourceSlot.Empty)
             {
-                PrepareMesh("ancienttools:shapes/block/mortar/resourceshapes/resource_", ResourceSlot, block, mesher, tessThreadTesselator);
+                this.AddMesh(mesher, ResourceMesh);
             }
 
             return false;
@@ -146,7 +164,7 @@ namespace AncientTools.BlockEntities
                 //-- If the isRendered value retreived from the server is true, then display the pestle --//
                 if (isRendered)
                 {
-                    //UpdateMeshes();
+                    UpdateMeshes();
                     pestleRenderer.UpdateMesh(Meshes[1]);
                     pestleRenderer.SetPestleLookAtVector(lookAtPlayerVector.X, lookAtPlayerVector.Y, lookAtPlayerVector.Z);
                     pestleRenderer.ShouldRender = true;
@@ -246,7 +264,9 @@ namespace AncientTools.BlockEntities
 
                         if (ResourceSlot.Empty && !activeSlot.Empty)
                         {
-                            if (activeSlot.Itemstack.Collectible.GrindingProps != null)
+                            JsonObject mortarProps = activeSlot.Itemstack.Collectible.Attributes["mortarProperties"];
+
+                            if (mortarProps.Exists && mortarProps["groundStack"].Exists)
                             {
                                 InsertObject(activeSlot, ResourceSlot, activeSlot.Itemstack.Collectible, 1);
                             }
@@ -254,10 +274,12 @@ namespace AncientTools.BlockEntities
                     }
                 }
             }
+
+            UpdateMeshes();
         }
         public bool OnSneakInteract(IPlayer byPlayer)
         {
-            if (!byPlayer.Entity.Controls.Sneak || PestleSlot.Empty || ResourceSlot.Empty || !byPlayer.InventoryManager.ActiveHotbarSlot.Empty || ResourceSlot.Itemstack.Collectible.GrindingProps == null)
+            if (!byPlayer.Entity.Controls.Sneak || PestleSlot.Empty || ResourceSlot.Empty || !byPlayer.InventoryManager.ActiveHotbarSlot.Empty || !ResourceSlot.Itemstack.Collectible.Attributes["mortarProperties"].Exists)
             {
                 return false;
             }
@@ -271,6 +293,9 @@ namespace AncientTools.BlockEntities
         {
             if (grindStartTime < 0)
             {
+                //-- Setting the ground itemstack here so that there are no exceptions when a mortar is loaded with item already in the mortar --//
+                SetGroundItemstack();
+
                 grindStartTime = Api.World.ElapsedMilliseconds;
                 isGrinding = true;
 
@@ -314,7 +339,7 @@ namespace AncientTools.BlockEntities
 
                 //-- Particles are white when a transparent texture is used. Therefore, the mod attempts to aquire a colour from the grinded stack in hopes of getting a colour match --//
                 if(ColorUtil.ColorA(grindingParticles.Color) != 255)
-                    grindingParticles.Color = ResourceSlot.Itemstack.Collectible.GrindingProps.GroundStack.ResolvedItemstack.Collectible.GetRandomColor(Capi, ResourceSlot.Itemstack.Collectible.GrindingProps.GroundStack.ResolvedItemstack);
+                    grindingParticles.Color = groundItemstack.Collectible.GetRandomColor(Capi, groundItemstack);
 
                 this.Api.World.SpawnParticles(grindingParticles);
             }
@@ -323,7 +348,7 @@ namespace AncientTools.BlockEntities
         {
             if (Api.Side == EnumAppSide.Server)
             {
-                if(ResourceSlot.Itemstack.Collectible.GrindingProps != null)
+                if(ResourceSlot.Itemstack.Collectible.Attributes["mortarProperties"]["groundStack"].Exists)
                     GiveGroundItem(byPlayer);
             }
 
@@ -332,16 +357,11 @@ namespace AncientTools.BlockEntities
         //-- Try to give the player the contents of the mortar resource stack whenever the grind is finished. Puts resource on the ground if there is no room. --//
         private void GiveGroundItem(IPlayer byPlayer)
         {
-            ItemStack groundItem = this.ResourceSlot.Itemstack.Collectible.GrindingProps.GroundStack.ResolvedItemstack.Clone();
+            groundItemstack.StackSize *= mortarOutputModifier;
 
-            if (groundItem.StackSize == 0)
-                groundItem.StackSize = 1;
-
-            groundItem.StackSize *= mortarOutputModifier;
-
-            if (!byPlayer.InventoryManager.TryGiveItemstack(groundItem, true))
+            if (!byPlayer.InventoryManager.TryGiveItemstack(groundItemstack.Clone(), true))
             {
-                Api.World.SpawnItemEntity(groundItem, Pos.ToVec3d());
+                Api.World.SpawnItemEntity(groundItemstack.Clone(), Pos.ToVec3d());
             }
 
             ResourceSlot.TakeOutWhole();
@@ -382,14 +402,14 @@ namespace AncientTools.BlockEntities
             lookAtPlayerVector.Y = (float)yaw;
             lookAtPlayerVector.Z = (float)pitch;
         }
-        private void PrepareMesh(string shapeFolderLocation, ItemSlot inventorySlot, BlockMortar block, ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator)
+        private string DetermineResourceMesh(ItemSlot inventorySlot)
         {
             string resourcePath;
 
             if(inventorySlot.Itemstack.Collectible.Attributes == null || !inventorySlot.Itemstack.Collectible.Attributes["mortarProperties"].Exists)
             {
                 string codePath = inventorySlot.Itemstack.Collectible.Code.Path;
-                resourcePath = shapeFolderLocation + inventorySlot.Itemstack.Collectible.Code.Domain + "_";
+                resourcePath = inventorySlot.Itemstack.Collectible.Code.Domain + "_";
 
                 foreach (char character in codePath)
                 {
@@ -401,20 +421,16 @@ namespace AncientTools.BlockEntities
             }
             else
             {
-                resourcePath = inventorySlot.Itemstack.Collectible.Attributes["mortarProperties"]["shape"]?.ToString();
+                resourcePath = inventorySlot.Itemstack.Collectible.Attributes["mortarProperties"]["shapePath"]?.ToString();
             }
 
             //-- If no shape asset is found then a default mesh is used. --//
-            if (Api.Assets.Exists(new AssetLocation(resourcePath + ".json")))
+            if (!Api.Assets.Exists(new AssetLocation(RESOURCE_PATH_PREFIX + resourcePath + ".json")))
             {
-                this.AddMesh(block, mesher, resourcePath, tessThreadTesselator.GetTextureSource(block));
+                resourcePath = "resource_default";
             }
-            else
-            {
-                resourcePath = "ancienttools:shapes/block/mortar/resourceshapes/resource_default";
 
-                this.AddMesh(block, mesher, resourcePath, tessThreadTesselator.GetTextureSource(block));
-            }
+            return resourcePath;
         }
         private void AddMesh(BlockMortar block, ITerrainMeshPool mesher, string path, ITexPositionSource textureSource)
         {
@@ -432,6 +448,19 @@ namespace AncientTools.BlockEntities
             byPlayer.InventoryManager.TryGiveItemstack(inventorySlot.TakeOutWhole());
 
             MarkDirty(true);
+        }
+        private void SetGroundItemstack()
+        {
+            JsonObject mortarProps = ResourceSlot.Itemstack.Collectible.Attributes["mortarProperties"];
+
+            if (mortarProps["groundStack"]["type"].AsString() == "item")
+            {
+                groundItemstack = new ItemStack(Api.World.GetItem(new AssetLocation(mortarProps["groundStack"]["code"].AsString())), mortarProps["resultQuantity"].AsInt());
+            }
+            else if (mortarProps["groundStack"]["type"].AsString() == "block")
+            {
+                groundItemstack = new ItemStack(Api.World.GetBlock(new AssetLocation(mortarProps["groundStack"]["code"].AsString())), mortarProps["resultQuantity"].AsInt());
+            }
         }
         private void InitializeGindingParticles()
         {
@@ -466,7 +495,19 @@ namespace AncientTools.BlockEntities
 
         public override void UpdateMeshes()
         {
-            throw new NotImplementedException();
+            if (Api == null || Api.Side != EnumAppSide.Client)
+                return;
+
+            if(!ResourceSlot.Empty)
+            {
+                ResourceMesh = GenMesh(RESOURCE_PATH_PREFIX, ResourceSlot.Itemstack.Collectible.Attributes["mortarProperties"]);
+            }
+
+            if(!PestleSlot.Empty)
+            {
+                PestleMesh = GenMesh(PestleSlot.Itemstack);
+            }
+
         }
     }
 }

@@ -1,0 +1,25 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes",
+		"value": { 
+			"mortarPropertiesByType": {
+				"*-top": {
+					shapePath: "resource_game_seaweed_{part}",
+					texturePaths: [{ code: "seaweed", path: "game:block/plant/seaweed/section1" }, { code: "seaweedtop", path: "game:block/plant/seaweed/top1" }],
+					groundStack: { type: "item", code: "expandedfoods:driedseaweed-mash" },
+					resultQuantity: 1
+				},
+				"*-section": {
+					shapePath: "resource_game_seaweed_{part}",
+					texturePaths: [{ code: "seaweed", path: "game:block/plant/seaweed/section1" }, { code: "seaweedtop", path: "game:block/plant/seaweed/top1" }],
+					groundStack: { type: "item", code: "expandedfoods:driedseaweed-mash" },
+					resultQuantity: 1
+				}
+			}
+		},
+		"file": "game:blocktypes/plant/seaweed.json",
+		"dependsOn": [{ "modid": "expandedfoods" }],
+		"side": "Server",
+	}
+]

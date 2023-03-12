@@ -19,7 +19,7 @@
 	drawtype: "json",
     shape: { base: "item/tool/curinghook" },
     textures: {
-        material: { base: "game:block/bone" }
+        material: { base: "game:block/creature/bone" }
     },
 	maxstacksize: 64,
 	guiTransform: {

@@ -27,7 +27,7 @@ namespace AncientTools.Blocks
                     {
                         pestleList.Add(new ItemStack(item));
                     }
-                    else if (item.GrindingProps != null)
+                    else if (item.Attributes != null && item.Attributes["mortarProperties"].Exists)
                     {
                         grindablesList.Add(new ItemStack(item));
                     }
@@ -76,7 +76,7 @@ namespace AncientTools.Blocks
 
             if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BEMortar mortarEntity)
             {
-                return mortarEntity.OnSneakInteract(byPlayer); ;
+                return mortarEntity.OnSneakInteract(byPlayer);
             }
             return false;
         }
@@ -108,7 +108,7 @@ namespace AncientTools.Blocks
 
             MeshData wholeMesh;
 
-            capi.Tesselator.TesselateShape("mortar", shape, out wholeMesh, capi.Tesselator.GetTexSource(this));
+            capi.Tesselator.TesselateShape("mortar", shape, out wholeMesh, capi.Tesselator.GetTextureSource(this));
 
             return wholeMesh;
         }
