@@ -7,6 +7,7 @@ namespace AncientTools.EntityBehaviors
         public override void Start(ICoreAPI api)
         {
             api.RegisterEntityBehaviorClass("HealthNoRecover", typeof(EntityBehaviorHealthNoRecover));
+            api.RegisterEntityBehaviorClass("MobileStorageDebuffRemoval", typeof(EntityBehaviorMobileStorageDebuffRemoval));
         }
     }
 }

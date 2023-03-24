@@ -30,6 +30,9 @@ namespace AncientTools.Items
 
             api.World.SpawnEntity(entity);
 
+            slot.TakeOut(1);
+            slot.MarkDirty();
+
             handling = EnumHandHandling.PreventDefault;
         }
         private BlockPos GetOffsetSpawnPos(BlockSelection interactedBlock)

@@ -161,6 +161,14 @@ To move the cart from place to place, simply pick it up by crouching and interac
 When empty, cart inventories can also be removed! Simply press sprint, then <icon name='rightmousebutton'></icon> with an empty hand to remove it from the cart.
 	",
 
+	"commanddesc-removemobilestoragedebuff": "Removes the mobile storage speed debuff from an affected player",	//
+	"commanddesc-removemobilestoragedebuff-syntax": "/removemobilestoragedebuff [playername]",					//
+	"commandmsg-removemobilestoragedebuff-success": "Mobile storage debuff removed successfully.",				//
+	"commandmsg-removemobilestoragedebuff-success-player": "Mobile storage debuff removed from {0} successfully!",	//
+	"commandmsg-removemobilestoragedebuff-failure": "There was no mobile storage debuff to remove!",			//
+	"commandmsg-removemobilestoragedebuff-failure-player": "{0} did not have a debuff to remove.",				//
+	"commandmsg-removemobilestoragedebuff-noplayer": "No player with the name {0} is online, or does not exist.",	//
+
 	"handbook-smelting-craftinfo": "<a href=\"handbook://craftinginfo-smelting\">Smelting</a>",
 	"handbook-barkstripping-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-barkstripping\">Bark Stripping</a>",
 	"handbook-salve-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-salve\">Salve Preparation</a>",

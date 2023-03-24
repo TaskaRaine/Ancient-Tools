@@ -1,6 +1,6 @@
 ﻿{
 	code: "wedge",
-	class: "ItemWedge",
+	class: "ATItemWedge",
 	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"], "ancienttools": ["*"] },
 	attributes: {
 		handbook: {
