@@ -19,4 +19,18 @@
 		"file": "game:entities/humanoid/player",
 		"side": "Server"
 	},
+	{
+		"op": "add",
+		"path": "/server/behaviors/-",
+		"value": { code: "MobileStorageDebuffRemoval" },
+		"file": "game:entities/humanoid/player",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/client/behaviors/-",
+		"value": { code: "MobileStorageDebuffRemoval" },
+		"file": "game:entities/humanoid/player",
+		"side": "Server"
+	}
 ]

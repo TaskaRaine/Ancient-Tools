@@ -15,7 +15,7 @@ namespace AncientTools.Items
             api.RegisterItemClass("ItemBark", typeof(ItemBark));
             api.RegisterItemClass("ItemSalvePortion", typeof(ItemSalvePortion));
             api.RegisterItemClass("ItemBrain", typeof(ItemBrain));
-            api.RegisterItemClass("ItemWedge", typeof(ItemWedge));
+            api.RegisterItemClass("ATItemWedge", typeof(ItemWedge));
             api.RegisterItemClass("ItemMallet", typeof(ItemMallet));
             api.RegisterItemClass("ItemCart", typeof(ItemCart));
         }

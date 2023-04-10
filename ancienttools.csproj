@@ -637,10 +637,12 @@
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorMobileStorageDestruction.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorMobileStorageRepair.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorWedgeSmack.cs" />
+    <Compile Include="src\commands\RegisterServerCommands.cs" />
     <Compile Include="src\entityrenderer\MobileStorageRenderer.cs" />
     <Compile Include="src\entity\aitask\FollowAttachedEntity.cs" />
     <Compile Include="src\entity\aitask\RegisterAITasks.cs" />
     <Compile Include="src\entity\behavior\EntityBehaviorHealthNoRecover.cs" />
+    <Compile Include="src\entity\behavior\EntityBehaviorMobileStorageDebuffRemoval.cs" />
     <Compile Include="src\entity\behavior\RegisterEntityBehaviors.cs" />
     <Compile Include="src\gui\GuiDialogMobileStorage.cs" />
     <Compile Include="src\inventory\InventoryMobileStorage.cs" />

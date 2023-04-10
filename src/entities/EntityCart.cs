@@ -176,8 +176,9 @@ namespace AncientTools.Entities
             {
                 if (AttachedEntity != null)
                 {
-                    if (EntityTransform.DistanceTo(AttachedEntity.SidedPos) >= 4.0)
+                    if (EntityTransform.DistanceTo(AttachedEntity.SidedPos) > 20.0)
                     {
+                        AttachedEntity.Stats.Remove("walkspeed", "cartspeedmodifier");
                         SyncAttachedEntity(-1);
 
                         AttachedEntity = null;
@@ -390,26 +391,11 @@ namespace AncientTools.Entities
         {
             return base.ReceiveDamage(damageSource, damage);
         }
-        public override void OnEntityDespawn(EntityDespawnData despawn)
+        public override void ToBytes(BinaryWriter writer, bool forClient)
         {
-            if (Api.Side == EnumAppSide.Server)
-                ServerCloseClientDialogs();
+            UpdateTreesFromInventoryContents();
 
-            if (AttachedEntity != null)
-            {
-                AttachedEntity.Stats.Remove("walkspeed", "cartspeedmodifier");
-            }
-
-            if (despawn.Reason == EnumDespawnReason.Combusted || despawn.Reason == EnumDespawnReason.Death)
-            {
-                MobileStorageInventory.DropAll(this.Pos.XYZ);
-            }
-            else if(despawn.Reason == EnumDespawnReason.Unload)
-            {
-                UpdateTreesFromInventoryContents();
-            }
-
-            base.OnEntityDespawn(despawn);
+            base.ToBytes(writer, forClient);
         }
         public override string GetName()
         {

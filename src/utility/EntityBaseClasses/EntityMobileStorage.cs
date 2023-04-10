@@ -86,6 +86,23 @@ namespace AncientTools.Utility
 
             return infotext.ToString();
         }
+        public override void OnEntityDespawn(EntityDespawnReason despawn)
+        {
+            if (despawn.reason == EnumDespawnReason.Combusted || despawn.reason == EnumDespawnReason.Death)
+            {
+                if (Api.Side == EnumAppSide.Server)
+                    ServerCloseClientDialogs();
+
+                if (AttachedEntity != null)
+                {
+                    AttachedEntity.Stats.Remove("walkspeed", "cartspeedmodifier");
+                }
+
+                MobileStorageInventory.DropAll(this.Pos.XYZ);
+
+                base.OnEntityDespawn(despawn);
+            }
+        }
         public override void OnReceivedClientPacket(IServerPlayer player, int packetid, byte[] data)
         {
             if (packetid < 1000)

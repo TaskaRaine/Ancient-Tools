@@ -38,6 +38,7 @@ namespace AncientTools.BlockEntities
 
         public bool SkipDefaultMesh { get; set; } = false;
         public string SplitBlockShapeLocation;
+        public MeshData NewSplitLogMesh;
 
         public ItemSlot WedgeSlot(int index)
         {
@@ -85,10 +86,10 @@ namespace AncientTools.BlockEntities
 
                 if(Capi.Assets.Exists(location))
                 {
-                    MeshData newSplitLogMesh = this.GenMesh(Capi, SplitBlockShapeLocation, tessThreadTesselator.GetTextureSource(this.Block));
+                    NewSplitLogMesh = this.GenMesh(Capi, SplitBlockShapeLocation, tessThreadTesselator.GetTexSource(this.Block));
                 
-                    if(newSplitLogMesh != null)
-                        this.AddMesh(mesher, newSplitLogMesh);
+                    if(NewSplitLogMesh != null)
+                        this.AddMesh(mesher, NewSplitLogMesh);
                 }
             }
 

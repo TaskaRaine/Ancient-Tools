@@ -105,9 +105,38 @@ namespace AncientTools.Blocks
         public override float OnGettingBroken(IPlayer player, BlockSelection blockSel, ItemSlot itemslot, float remainingResistance, float dt, int counter)
         {
             if (blockSel.SelectionBoxIndex == 0 || itemslot.Itemstack?.Collectible.GetType() != typeof(ItemMallet))
-                return base.OnBlockBreaking(player, blockSel, itemslot, remainingResistance, dt, counter);
+                return base.OnGettingBroken(player, blockSel, itemslot, remainingResistance, dt, counter);
 
             return remainingResistance;
+        }
+        public override void OnBlockBroken(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1)
+        {
+            if (world.BlockAccessor.GetBlockEntity(pos) is BESplitLog splitLogEntity)
+                if (splitLogEntity.SkipDefaultMesh)
+                {
+                    base.OnBlockBroken(world, pos, byPlayer, 0);
+
+                    return;
+                }
+            base.OnBlockBroken(world, pos, byPlayer);
+        }
+        public override void GetDecal(IWorldAccessor world, BlockPos pos, ITexPositionSource decalTexSource, ref MeshData decalModelData, ref MeshData blockModelData)
+        {
+            if (world.BlockAccessor.GetBlockEntity(pos) is BESplitLog splitLogEntity)
+                if (splitLogEntity.SkipDefaultMesh)
+                {
+                    ICoreClientAPI capi = api as ICoreClientAPI;
+
+                    Shape shape = capi.Assets.TryGet(splitLogEntity.SplitBlockShapeLocation + ".json")?.ToObject<Shape>();
+
+                    blockModelData = splitLogEntity.NewSplitLogMesh;
+
+                    MeshData md;
+                    capi.Tesselator.TesselateShape("typedcontainer-decal", shape, out md, decalTexSource);
+                    decalModelData = md;
+                }
+                else
+                    base.GetDecal(world, pos, decalTexSource, ref decalModelData, ref blockModelData);
         }
     }
 }

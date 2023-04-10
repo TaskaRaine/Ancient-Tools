@@ -11,6 +11,10 @@
 ### Releases
 
 #### Vintage Story 1.17.0+ 
+[Version 1.5.1](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.1/AncientTools_V1.5.1.zip)
+
+[Version 1.5.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.0/AncientTools_V1.5.0.zip)
+
 [Version 1.4.9](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.9/AncientTools_V1.4.9.zip)
 
 [Version 1.4.8](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.4.8/AncientTools_V1.4.8.zip)
@@ -67,6 +71,50 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.5.1
+Solved an incompatibility between Ancient Tools and Chisel Tools. Ancient Tools wedges were adopting the wedge functionality from the Chisel Tools mod.
+
+Fixed an issue that prevented stripped logs from breaking when in survival mode.
+
+Mitigated an issue where carts would suddenly 'fall off' a player if they were moving too quickly. This was most common when jumping off cliffs. This can still happen...like when a player dies, as is intended, but should be much less likely through regular gameplay.
+
+Carts shouldn't despawn unless they are destroyed or burned. I couldn't spend time thoroughly testing this for this release. If they do still randomly despawn, please let me know!
+
+Added a command that can be used by server owners/op'd users that can remove the mobile storage debuff for themselves or another player. '/removemobilestoragedebuff [playername]'
+
+Fixed an issue where the player would have the cart movement debuff even when the cart detached.
+
+Fixed an issue where the player would have the cart movement debuff if they logged off with a cart attached, then logged back in.
+
+Fixed an issue where, when the player placed a cart, the cart was not removed from their inventory.
+
+Players can also log off then log back in to clear any mobile storage debuffs in the case that a command can't be used or does not work.
+
+#### Version 1.5.0
+Carts have been introduced to Ancient Tools! They can attach to players and follow them around. Chests can be placed on carts to give them storage capabilities and can be used to transport items from place to place.
+
+Two new tools have been created, wedges and mallets. Wedges can be made from stone or metals, whilst mallets only have a stone variant.
+
+A new in-world crafting system for creating beams has been introduced. The aforementioned wedges can be placed atop upright standing stripped logs and smacked into the wood using a mallet to split the wood into beams. Beams are required to craft both wheels and carts.
+
+Wheels can now be crafted and are required to craft carts.
+
+A simplistic(unpolished) deconstruction mechanic has been introduced that will quickly deconstruct in-world carts. Simply break apart the cart with a saw.
+
+A simplistic(unpolished) repair mechanic has been introduced that can be used to repair carts. Simply hold boards that match the type of the cart in your off-hand and interact with the cart with a mallet to repair.
+
+Added additional information to all Ancient Tools collectibles that will help identify their purpose. Placed block info and hover tooltip.
+
+Added a Crafted By link to each crafted object handbook entry in Ancient Tools that directs players to the appropriate handbook carfting guide.
+
+Created a generic class that will handle like-functionality between different MobileStorage objects.
+
+Created a generic class that can be used to display different item types without creating excessive numbers of variants(think of it as a personalized clutter class)
+
+Updated the Japanese translation file(Thanks Macoto Hine, again!)
+
+Added a little easter egg to one of the newly introduced things~ 
+
 #### Version 1.4.9
 Integrated the pull request created by NerdScurvy that enables CarryOn compatibility. Thanks so much!
 
