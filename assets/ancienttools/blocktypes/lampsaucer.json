@@ -1,9 +1,6 @@
 ﻿{
 	code: "lampsaucer",
-	classByType: {
-		"*-empty-*": "BlockLampSaucer",
-		"*": "BlockWaterproofTorch"
-	},
+	class: "BlockLampSaucer",
 	behaviorsByType: {
 		"*-up": [ {name: "UnstableFalling", properties: { ignorePlaceTest: true, attachmentArea: { x1: 5, y1: 15, z1: 5, x2: 10, y2: 16, z2: 10 } } }, { name: "RightClickPickup"} ],
 		"*": [ { name: "RightClickPickup"} ]

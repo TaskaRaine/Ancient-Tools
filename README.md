@@ -10,6 +10,11 @@
 
 ### Releases
 
+#### Vintage Story 1.18.0+
+[Version 1.5.3](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.3/AncientTools_V1.5.3.zip)
+
+[Version 1.5.2](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.2/AncientTools_V1.5.2.zip)
+
 #### Vintage Story 1.17.0+ 
 [Version 1.5.1](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.1/AncientTools_V1.5.1.zip)
 
@@ -71,6 +76,36 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.5.3
+Fixed an issue with the Japanese language file not loading(courtesy of Macoto Hino)
+
+Added Japanese translations for Very Aged beams and Very Aged Rotten beams(courtesy of Macoto Hino)
+
+Fixed an issue where resin would not appear on directionalresin leaking logs if decor(moss) was hanging on the block that was carved.
+
+#### Version 1.5.2
+Ancient Tools should now be fully compatible with Vintage Story 1.18.
+
+The Ancient Tools mortar has been switched from a BlockEntityDisplay object to the Ancient Tools proprietary DisplayInventory object to be on-par with all other inventories in the mod that show their inventory.
+
+The mortar no longer uses GrindingProps to determine its grinding result. Instead, it's all controlled through an attribute attached to the collectible called 'mortarProperties'. Shapes, textures, quantities can all be adjusted here.
+
+Removed many duplicate shapes from the mortar resources folder that are no longer required due to the above changes.
+
+Added crafting recipes to switch between Ancient Tools beams and vanilla support beams. Both can be used interchangably in crafting recipes. This way, players can retain the GroundStorage capabilities of AT beams while still having the ability to build creatively with the vanilla beams.
+
+Fine-tuned the repair/deconstruct behaviors for carts and gave the processes some proper sounds.
+
+Ancient Tools now removes grid crafting recipes for vanilla beams and debarked logs. These can be enabled again by modifying two new config variables, 'InWorldBeamCraftingOnly' and 'AdzeStrippingOnly'.
+
+Ancient Tools stripped logs have been removed. Adze tools now strip logs into the vanilla debarked logs. Remaps have been made that should convert all existing stripped log blocks to debarked logs.
+
+Modified the Ancient Tools beam and beam ground storage stack to use vanilla debarked textures.
+
+Hide and salted meat transforms in the fire pit have been altered to accomodate the firepit model rework.  
+
+The command for removing mobile storage debuff was modified to work with the new Vintage Story command API.
+
 #### Version 1.5.1
 Solved an incompatibility between Ancient Tools and Chisel Tools. Ancient Tools wedges were adopting the wedge functionality from the Chisel Tools mod.
 

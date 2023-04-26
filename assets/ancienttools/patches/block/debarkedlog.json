@@ -1,11 +1,12 @@
 ﻿[
 	{
 		"op": "add",
-		"path": "/attributes/handbook/createdBy",
-		"value": "ancienttools:handbook-barkstripping-craftinfo",
+		"path": "/attributes/handbook/createdByByType",
+		"value": { 
+			"@debarkedlog-(aged|birch|oak|maple|pine|acacia|kapok|baldcypress|larch|redwood|ebony|walnut|purpleheart)-(ud)": "ancienttools:handbook-barkstripping-craftinfo"
+		},
 		"file": "game:blocktypes/wood/woodtyped/log-debarked",
 		"side": "Server",
-		"condition": { "when": "InWorldBeamCraftingEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
@@ -25,7 +26,6 @@
 		},
 		"file": "game:blocktypes/wood/woodtyped/log-debarked",
 		"side": "Server",
-		"condition": { "when": "InWorldBeamCraftingEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
@@ -36,14 +36,12 @@
 		},
 		"file": "game:blocktypes/wood/woodtyped/log-debarked",
 		"side": "Server",
-		"condition": { "when": "InWorldBeamCraftingEnabled", "isValue": "true" }
 	},
 	{
 		"op": "remove",
 		"path": "/class",
 		"file": "game:blocktypes/wood/woodtyped/log-debarked",
 		"side": "Server",
-		"condition": { "when": "InWorldBeamCraftingEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
@@ -53,7 +51,6 @@
 		},
 		"file": "game:blocktypes/wood/woodtyped/log-debarked",
 		"side": "Server",
-		"condition": { "when": "InWorldBeamCraftingEnabled", "isValue": "true" }
 	},
 	{
 		"op": "replace",
@@ -61,7 +58,6 @@
 		"value": "json",
 		"file": "game:blocktypes/wood/woodtyped/log-debarked",
 		"side": "Server",
-		"condition": { "when": "InWorldBeamCraftingEnabled", "isValue": "true" }
 	},
 	{
 		"op": "add",
@@ -71,6 +67,5 @@
 		},
 		"file": "game:blocktypes/wood/woodtyped/log-debarked",
 		"side": "Server",
-		"condition": { "when": "InWorldBeamCraftingEnabled", "isValue": "true" }
 	}
 ]

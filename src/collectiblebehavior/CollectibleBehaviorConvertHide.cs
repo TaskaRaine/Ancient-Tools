@@ -22,20 +22,25 @@ namespace AncientTools.CollectibleBehaviors
 
             if (interactedBlock.BlockMaterial == EnumBlockMaterial.Liquid)
             {
-                if (interactedBlock.Code.Domain == "game" && interactedBlock.FirstCodePart() == "water")
+                if (interactedBlock.Code.Domain == "game")
                 {
-                    ItemStack hideWaterSack = new ItemStack(byEntity.Api.World.GetBlock(new AssetLocation("ancienttools", "hidewatersack-raw-" + slot.Itemstack.Item.LastCodePart())));
+                    string interactedBlockPart = interactedBlock.FirstCodePart();
 
-                    slot.TakeOut(1);
-                    slot.MarkDirty();
+                    if (interactedBlockPart.Equals("water") || interactedBlockPart.Equals("saltwater") || interactedBlockPart.Equals("boilingwater"))
+                    {
+                        ItemStack hideWaterSack = new ItemStack(byEntity.Api.World.GetBlock(new AssetLocation("ancienttools", "hidewatersack-raw-" + slot.Itemstack.Item.LastCodePart())));
 
-                    if (!byEntity.TryGiveItemStack(hideWaterSack))
-                        byEntity.Api.World.SpawnItemEntity(hideWaterSack, byEntity.Pos.AsBlockPos.ToVec3d(), null);
+                        slot.TakeOut(1);
+                        slot.MarkDirty();
 
-                    byEntity.World.PlaySoundAt(new AssetLocation("game", "sounds/effect/water-fill2"), byEntity as Entity, player.Player, true, 12.0f, 0.75f);
+                        if (!byEntity.TryGiveItemStack(hideWaterSack))
+                            byEntity.Api.World.SpawnItemEntity(hideWaterSack, byEntity.Pos.AsBlockPos.ToVec3d(), null);
 
-                    handHandling = EnumHandHandling.PreventDefault;
-                    return;
+                        byEntity.World.PlaySoundAt(new AssetLocation("game", "sounds/effect/water-fill2"), byEntity as Entity, player.Player, true, 12.0f, 0.75f);
+
+                        handHandling = EnumHandHandling.PreventDefault;
+                        return;
+                    }
                 }
             }
 

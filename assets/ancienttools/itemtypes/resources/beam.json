@@ -1,5 +1,4 @@
 ﻿{
-	enabled: false,
 	code: "beam",
 	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
 	attributes: {
@@ -16,7 +15,7 @@
 			stackingModel: "ancienttools:block/piles/beams",
 			stackingTextures: {
 				side: "game:block/wood/debarked/{wood}",
-				end: "ancienttools:block/strippedlog/{wood}",
+				end: "game:block/wood/treetrunk/{wood}",
 			},
 			tessQuantityElements: 1,
 			stackingCapacity: 12,
@@ -27,7 +26,7 @@
 		}
 	}],
 	variantgroups: [
-        { code: "wood", loadFromProperties: "game:block/wood", states:["aged"] },
+        { code: "wood", loadFromProperties: "game:block/wood", states:["aged", "veryaged", "veryagedrotten"] },
     ],
 	shape: {
 		base: "item/resource/beam"
@@ -35,49 +34,11 @@
 	drawtype: "json",
 	textures: {
 		"side": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
-		"end": { base: "block/strippedlog/{wood}" },
+		"end": { base: "game:block/wood/treetrunk/{wood}" },
 	},
-	combustiblePropsByType: {
-		"*-birch": {
-			burnTemperature: 800,
-			burnDuration: 19.5,
-		},
-		"*-oak": {
-			burnTemperature: 800,
-			burnDuration: 24.5,
-		},
-		"*-ebony": {
-			burnTemperature: 800,
-			burnDuration: 27.5,
-		},
-		"*-pine": {
-			burnTemperature: 800,
-			burnDuration: 15,
-		},
-		"*-acacia": {
-			burnTemperature: 800,
-			burnDuration: 22.25,
-		},
-		"*-kapok": {
-			burnTemperature: 800,
-			burnDuration: 11.75,
-		},
-		"*-maple": {
-			burnTemperature: 800,
-			burnDuration: 19.75,
-		},
-		"*-redwood": {
-			burnTemperature: 800,
-			burnDuration: 18,
-		},
-		"*-aged": {
-			burnTemperature: 700,
-			burnDuration: 10,
-		},
-		"*": {
-			burnTemperature: 800,
-			burnDuration: 18,
-		}
+	combustibleProps: {
+		burnTemperature: 800,
+		burnDuration: 20,
 	},
 	maxStackSize: 16,
 	materialDensity: 700,

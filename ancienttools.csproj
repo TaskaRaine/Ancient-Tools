@@ -42,27 +42,27 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="VintagestoryAPI">
-      <HintPath>H:\VintageStory 1.18.0 Pre-1\VintagestoryAPI.dll</HintPath>
+      <HintPath>H:\VintageStory 1.18.1\VintagestoryAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>H:\VintageStory 1.18.0 Pre-1\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.18.1\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>H:\VintageStory 1.18.0 Pre-1\Mods\VSEssentials.dll</HintPath>
+      <HintPath>H:\VintageStory 1.18.1\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>H:\VintageStory 1.18.0 Pre-1\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.18.1\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>H:\VintageStory 1.18.0 Pre-1\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>H:\VintageStory 1.18.1\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="0Harmony">
-      <HintPath>H:\VintageStory 1.18.0 Pre-1\Lib\0Harmony.dll</HintPath>
+      <HintPath>H:\VintageStory 1.18.1\Lib\0Harmony.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -82,21 +82,6 @@
     <Content Include="assets\ancienttools\textures\block\pitch\pitch_torchunlit.png" />
     <Content Include="assets\ancienttools\textures\block\salve\barkoil.png" />
     <Content Include="assets\ancienttools\textures\block\salve\softwax.png" />
-    <Content Include="assets\ancienttools\textures\block\strippedlog\acacia.png" />
-    <Content Include="assets\ancienttools\textures\block\strippedlog\aged.png" />
-    <Content Include="assets\ancienttools\textures\block\strippedlog\baldcypress.png" />
-    <Content Include="assets\ancienttools\textures\block\strippedlog\birch.png" />
-    <Content Include="assets\ancienttools\textures\block\strippedlog\ebony.png" />
-    <Content Include="assets\ancienttools\textures\block\strippedlog\kapok.png" />
-    <Content Include="assets\ancienttools\textures\block\strippedlog\larch.png" />
-    <Content Include="assets\ancienttools\textures\block\strippedlog\maple.png" />
-    <Content Include="assets\ancienttools\textures\block\strippedlog\oak.png" />
-    <Content Include="assets\ancienttools\textures\block\strippedlog\purpleheart_outer.png" />
-    <Content Include="assets\ancienttools\textures\block\strippedlog\ebony_outer.png" />
-    <Content Include="assets\ancienttools\textures\block\strippedlog\pine.png" />
-    <Content Include="assets\ancienttools\textures\block\strippedlog\purpleheart.png" />
-    <Content Include="assets\ancienttools\textures\block\strippedlog\redwood.png" />
-    <Content Include="assets\ancienttools\textures\block\strippedlog\walnut.png" />
     <Content Include="assets\ancienttools\textures\block\mortar\mortar_grain.png" />
     <Content Include="assets\ancienttools\textures\item\medicine\salveportion.png" />
     <Content Include="assets\ancienttools\textures\item\resource\brain.png" />
@@ -134,7 +119,6 @@
     <Content Include="assets\game\textures\item\resource\hide\brained.png" />
     <Content Include="assets\game\textures\item\resource\hide\smoked.png" />
     <Content Include="modinfo.json" />
-    <Content Include="resources\guide\ancienttoolsfolderstructure.png" />
     <Content Include="resources\images\mortars.png" />
   </ItemGroup>
   <ItemGroup>
@@ -147,7 +131,6 @@
     <None Include="assets\ancienttools\blocktypes\pitchtorch.json" />
     <None Include="assets\ancienttools\blocktypes\salvepot.json" />
     <None Include="assets\ancienttools\blocktypes\stretchingframe.json" />
-    <None Include="assets\ancienttools\blocktypes\strippedlog.json" />
     <None Include="assets\ancienttools\blocktypes\toolmoldancienttools.json" />
     <None Include="assets\ancienttools\compatibility\buildingplus\recipes\grid\strippedsupport.json" />
     <None Include="assets\ancienttools\config\handbook\barkstrippingguide.json" />
@@ -177,15 +160,15 @@
     <None Include="assets\ancienttools\patches\block\toolmold.json" />
     <None Include="assets\ancienttools\patches\compatibility\acorns\acornbread.json" />
     <None Include="assets\ancienttools\patches\compatibility\acorns\acorndough.json" />
-    <None Include="assets\ancienttools\patches\compatibility\acorns\mortar.json" />
     <None Include="assets\ancienttools\patches\compatibility\betterthanheresy\pitchpot.json" />
     <None Include="assets\ancienttools\patches\compatibility\betterthanheresy\powderedcharcoal.json" />
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\cookedbones.json" />
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\crockcoloured.json" />
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\crushed.json" />
+    <None Include="assets\ancienttools\patches\compatibility\bricklayers\crushedluminous.json" />
+    <None Include="assets\ancienttools\patches\compatibility\bricklayers\crushedore.json" />
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\dough.json" />
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\frit.json" />
-    <None Include="assets\ancienttools\patches\compatibility\bricklayers\mortar.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\ancienttools disables\adze.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\ancienttools disables\bark.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\ancienttools disables\barkbasket.json" />
@@ -240,9 +223,7 @@
     <None Include="assets\ancienttools\itemtypes\tools\pestle.json" />
     <None Include="assets\ancienttools\itemtypes\resources\salveportion.json" />
     <None Include="assets\ancienttools\patches\block\salve.json" />
-    <None Include="assets\ancienttools\patches\compatibility\dragonflies\mortar.json" />
     <None Include="assets\ancienttools\patches\compatibility\expandedfoods\agedmeat.json" />
-    <None Include="assets\ancienttools\patches\compatibility\expandedfoods\mortar.json" />
     <None Include="assets\ancienttools\patches\compatibility\expandedfoods\sausage.json" />
     <None Include="assets\ancienttools\patches\compatibility\expandedfoods\smashedmeat.json" />
     <None Include="assets\ancienttools\patches\compatibility\lichen\deer.json" />
@@ -285,6 +266,7 @@
     <None Include="assets\ancienttools\recipes\grid\compatibility\vanillavariants\dough.json" />
     <None Include="assets\ancienttools\recipes\grid\compatibility\vanillavariants\hidewatersack.json" />
     <None Include="assets\ancienttools\recipes\grid\compatibility\betterthanheresy\pitchpot.json" />
+    <None Include="assets\ancienttools\recipes\grid\item\beam.json" />
     <None Include="assets\ancienttools\recipes\grid\item\wheel.json" />
     <None Include="assets\ancienttools\recipes\grid\spawners\cart.json" />
     <None Include="assets\ancienttools\recipes\grid\food\barkdough.json" />
@@ -310,21 +292,7 @@
     <None Include="assets\ancienttools\shapes\block\lampsaucer\pitch_wall_lit.json" />
     <None Include="assets\ancienttools\shapes\block\mold\adze.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_acorns_acorns_dry_leached.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_yellow.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_white.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_redbrown.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_red.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_purple.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_pink.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_orange.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_malachite.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_lapislazuli.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_greenblue.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_green.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_gold.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_blue.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_brown.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked_black.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_cookedbones.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_expandedfoods_choppedvegetable_cassavadried.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_expandedfoods_peanut_kernels.json" />
@@ -384,76 +352,21 @@
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_bread_sunflower_charred.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_bread_sunflower_partbaked.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_bread_sunflower_perfect.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_gardensnailshell.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_charcoal.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_titanium.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_tin.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_rhodochrosite.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_pentlandite.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_malachite.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_magnetite.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_limonite.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_hematite.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_granite.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_gold.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_galena.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_copper.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_coal.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_lead.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_chromite.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_cassiterite.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_ilmenite.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_bauxite.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_olivine.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_quartz.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_cinnabar.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_crushed_lapislazuli.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_acorns_acorn_meal.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_grain.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_insect_cricket.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_insect_grasshopper.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_dragonflies_pileofdrycochineal.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_clam_darkpurple.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_clam_cinnamon.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_clam_turquoise.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_clam_seafoam.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_clam_plain.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_clam_latte.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_conch_darkpurple.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_conch_cinnamon.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_conch_turquoise.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_conch_seafoam.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_conch_plain.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_conch_latte.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_scallop_latte.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_scallop_cinnamon.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_scallop_darkpurple.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_scallop_turquoise.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_scallop_seafoam.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_scallop_plain.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_seastar_cinnamon.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_seastar_turquoise.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_seastar_seafoam.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_seastar_latte.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_seastar_darkpurple.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_seastar_plain.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_sundial_darkpurple.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_sundial_cinnamon.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_sundial_turquoise.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_sundial_seafoam.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_sundial_latte.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_sundial_plain.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_turritella_latte.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_turritella_cinnamon.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_turritella_darkpurple.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_turritella_turquoise.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_turritella_seafoam.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_turritella_plain.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_volute_latte.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_volute_cinnamon.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_volute_darkpurple.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_volute_turquoise.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_volute_seafoam.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_volute_plain.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_clam.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_conch.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_scallop.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_seastar.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_sundial.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_turritella.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seashell_volute.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seaweed_top.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_seaweed_section.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_stone_greenmarble.json" />
@@ -567,12 +480,6 @@
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_bone.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_rawcassava_dried.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_default.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_grain_amaranth.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_grain_rice.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_grain_rye.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_grain_spelt.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_grain_flax.json" />
-    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_grain_sunflower.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_ore_borax.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_ore_sulfur.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_ore_sylvite.json" />

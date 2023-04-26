@@ -14,45 +14,52 @@ namespace AncientTools.Commands
         {
             base.StartServerSide(api);
 
-            api.RegisterCommand("removemobilestoragedebuff", Lang.Get("ancienttools:commanddesc-removemobilestoragedebuff"), Lang.Get("ancienttools:commanddesc-removemobilestoragedebuff-syntax"),
-            (IServerPlayer player, int groupId, CmdArgs args) => {
-                if(args.Length == 0)
+            api.ChatCommands.Create(Lang.Get("ancienttools:commandname-removemobilestoragedebuff"))
+                .RequiresPrivilege(Privilege.controlserver)
+                .WithDescription(Lang.Get("ancienttools:commanddesc-removemobilestoragedebuff"))
+                .WithExamples(new string[] {
+                    Lang.Get("ancienttools:commanddesc-removemobilestoragedebuff-syntax-personal"),
+                    Lang.Get("ancienttools:commanddesc-removemobilestoragedebuff-syntax-otherplayer")
+                })
+                .WithArgs(api.ChatCommands.Parsers.OptionalWord("player"))
+                .HandleWith(RemoveMobileStorageDebuff);
+        }
+        private TextCommandResult RemoveMobileStorageDebuff(TextCommandCallingArgs args)
+        {
+            if(args.ArgCount == 1)
+            {
+                if(args[0] == null)
                 {
-                    if(player.Entity.Stats["walkspeed"].ValuesByKey.ContainsKey("cartspeedmodifier"))
+                    if (args.Caller.Entity.Stats["walkspeed"].ValuesByKey.ContainsKey("cartspeedmodifier"))
                     {
-                        player.Entity.Stats.Remove("walkspeed", "cartspeedmodifier");
+                        args.Caller.Entity.Stats.Remove("walkspeed", "cartspeedmodifier");
 
-                        api.SendMessage(player, 0, Lang.Get("ancienttools:commandmsg-removemobilestoragedebuff-success"), EnumChatType.OwnMessage);
-
-                        return;
+                        return TextCommandResult.Success(Lang.Get("ancienttools:commandmsg-removemobilestoragedebuff-success"));
                     }
 
-                    api.SendMessage(player, 0, Lang.Get("ancienttools:commandmsg-removemobilestoragedebuff-failure"), EnumChatType.OwnMessage);
+                    return TextCommandResult.Error(Lang.Get("ancienttools:commandmsg-removemobilestoragedebuff-failure"));
                 }
                 else
                 {
-                    foreach(IPlayer playerOnline in api.World.AllOnlinePlayers)
+                    foreach (IPlayer playerOnline in args.Caller.Entity.World.AllOnlinePlayers)
                     {
-                        if(playerOnline.PlayerName == args[0])
+                        if (playerOnline.PlayerName == args[0].ToString())
                         {
-                            if(playerOnline.Entity.Stats["walkspeed"].ValuesByKey.ContainsKey("cartspeedmodifier"))
+                            if (playerOnline.Entity.Stats["walkspeed"].ValuesByKey.ContainsKey("cartspeedmodifier"))
                             {
                                 playerOnline.Entity.Stats.Remove("walkspeed", "cartspeedmodifier");
 
-                                api.SendMessage(player, 0, Lang.Get("ancienttools:commandmsg-removemobilestoragedebuff-success-player", playerOnline.PlayerName ), EnumChatType.OwnMessage);
+                                return TextCommandResult.Success(Lang.Get("ancienttools:commandmsg-removemobilestoragedebuff-success-player", playerOnline.PlayerName));
                             }
                             else
-                                api.SendMessage(player, 0, Lang.Get("ancienttools:commandmsg-removemobilestoragedebuff-failure-player", playerOnline.PlayerName), EnumChatType.OwnMessage);
-
-                            return;
+                                return TextCommandResult.Error(Lang.Get("ancienttools:commandmsg-removemobilestoragedebuff-failure-player", playerOnline.PlayerName));
                         }
                     }
-
-                    api.SendMessage(player, 0, Lang.Get("ancienttools:commandmsg-removemobilestoragedebuff-noplayer", args[0]), EnumChatType.OwnMessage);
+                    return TextCommandResult.Error(Lang.Get("ancienttools:commandmsg-removemobilestoragedebuff-noplayer", args[0]));
                 }
+            }
 
-            }, Privilege.controlserver);;
-
+            return TextCommandResult.Error("Argument length mismatch. You can only remove the debuff one player at a time!");
         }
     }
 }

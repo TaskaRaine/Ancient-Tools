@@ -21,7 +21,7 @@ namespace AncientTools.EntityBehaviors
 
             base.OnEntityDeath(damageSourceForDeath);
         }
-        public override void OnEntityDespawn(EntityDespawnReason despawn)
+        public override void OnEntityDespawn(EntityDespawnData despawn)
         {
             RemoveDebuff();
 

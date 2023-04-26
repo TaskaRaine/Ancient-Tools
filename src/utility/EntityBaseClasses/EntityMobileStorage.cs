@@ -86,9 +86,9 @@ namespace AncientTools.Utility
 
             return infotext.ToString();
         }
-        public override void OnEntityDespawn(EntityDespawnReason despawn)
+        public override void OnEntityDespawn(EntityDespawnData despawn)
         {
-            if (despawn.reason == EnumDespawnReason.Combusted || despawn.reason == EnumDespawnReason.Death)
+            if (despawn.Reason == EnumDespawnReason.Combusted || despawn.Reason == EnumDespawnReason.Death)
             {
                 if (Api.Side == EnumAppSide.Server)
                     ServerCloseClientDialogs();

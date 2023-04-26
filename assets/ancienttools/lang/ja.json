@@ -1,13 +1,13 @@
 { 
 　　// Japanese localization file for 'Ancient Tools'.
-  // Mod Version: v1.5.0
+  // Mod Version: v1.5.2
   // Translated By: Macoto Hino
   // Machine translation using PCOT and DeepL.
   
 	"game:tabname-ancienttools": "Ancient Tools(古代の道具)",
 
-	"game:ancienttools-quickstart-guide": "古代の道具",
-	"game:ancienttools-quickstart-title": "古代の道具ガイド",
+	"game:ancienttools-quickstart-guide": "Ancient Tools(古代の道具)",
+	"game:ancienttools-quickstart-title": "Ancient Tools(古代の道具)ガイド",
 	"game:ancienttools-quickstart-text": 
 "<font weight='bold' align='center'>古代の道具ガイド</font><br>
 <font weight='bold'>すり鉢とすりこ木</font>
@@ -60,10 +60,10 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 
 それぞれの原始的な荷車の作り方や使い方の詳細は、「<a href=\"handbook://ancienttools-quickstart-feature-mobilestorage\">移動式収納</a>」の項目でご覧頂けます。
 ",
-	"game:ancienttools-quickstart-guide-barkstripping": "樹皮剥がしガイド",
-	"game:ancienttools-quickstart-title-barkstripping": "クラフトメカニック: 樹皮剥がし",
-	"game:ancienttools-quickstart-text-barkstripping": "
-<font weight='bold' align='center'>樹皮剥がしガイド</font><br>
+"game:ancienttools-quickstart-guide-barkstripping": "樹皮剥がしガイド",
+"game:ancienttools-quickstart-title-barkstripping": "クラフトメカニック: 樹皮剥がし",
+"game:ancienttools-quickstart-text-barkstripping": 
+"<font weight='bold' align='center'>樹皮剥がしガイド</font><br>
 
 <a href=\'handbooksearch://釿（ちょうな）\'>釿（ちょうな）</a>を手に入れたら、いよいよ剥がし作業です。
 
@@ -75,10 +75,10 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 
 また、どちらの樹皮も様々な薬効があります。もし興味があれば、<a href=\"handbook://ancienttools-quickstart-guide-salve\">膏薬の調合ガイド</a>をご覧下さい。
 ",
-	"game:ancienttools-quickstart-guide-salve": "膏薬（こうやく）ガイド",
-	"game:ancienttools-quickstart-title-salve": "クラフトメカニック：膏薬（こうやく）の調合",
-	"game:ancienttools-quickstart-text-salve": "
-<font weight='bold' align='center'>古代の道具の膏薬の調合ガイド</font><br>
+"game:ancienttools-quickstart-guide-salve": "膏薬（こうやく）ガイド",
+"game:ancienttools-quickstart-title-salve": "クラフトメカニック：膏薬（こうやく）の調合",
+"game:ancienttools-quickstart-text-salve": 
+"<font weight='bold' align='center'>古代の道具の膏薬の調合ガイド</font><br>
 樹皮は歴史上、様々な用途使われてきました。<a href=\'handbooksearch://シラカバ\'>シラカバ</a>や<a href=\'handbooksearch://マツ\'>マツ</a>など、の多くの木には様々な有益な治癒効果があります。 シラカバは関節の痛みを和らげる為に、マツは炎症を軽減する為に最も一般的に使用されてます。
 
 この特性を活かす為に、各家庭では<a href=\'handbook://item-ancienttools:salveportion\'>膏薬</a>作り、肌に塗ることもあります。古代の道具で膏薬を作るには、まず、2つの調理鍋を<a href=\'handbook://block-ancienttools:salvepot-empty\'>空の膏薬容器</a>に変換する必要があります。これは、しゃがんで膏薬成分(<a href=\'handbook://item-ancienttools:bark-birch\'>シラカバ</a>/<a href=\'handbook://item-ancienttools:bark-pine\'>マツ</a>の樹皮, <a href=\'handbook://item-fat\'>脂の塊</a>、<a href=\'handbook://item-beeswax\'>蜜蝋</a>)を<icon name='rightmousebutton'></icon>を押すか、グリッドで薬用樹皮を使った<a href=\'handbook://block-claypot-burned\'>調理鍋</a>をクラフトすることで行えます。
@@ -88,10 +88,11 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 最後に、用意した容器をしゃがんで地面に置き、もう一方の容器を手に持って<icon name='rightmousebutton'></icon>で注ぎます。おめでとうございます！治療膏薬の出来上がりです！出来上がった膏薬は<icon name='rightmousebutton'></icon>で使用すると時間経過と共に回復する<a href=\'handbook://item-ancienttools:salveportion\'>ポーション</a>です。
 
 空の膏薬容器をクラフトグリッドに置くと、再び調理鍋に戻すことが出来ます。
-	",
-	"game:ancienttools-quickstart-guide-tanning": "ネイティブアメリカンの鞣し革ガイド",
-	"game:ancienttools-quickstart-title-tanning": "クラフトメカニック: ネイティブアメリカンの鞣し革",
-	"game:ancienttools-quickstart-text-tanning": "
+",
+"game:ancienttools-quickstart-guide-tanning": "ネイティブアメリカンの鞣し革ガイド",
+"game:ancienttools-quickstart-title-tanning": "クラフトメカニック: ネイティブアメリカンの鞣し革",
+"game:ancienttools-quickstart-text-tanning": 
+"
 <font weight='bold' align='center'>ネイティブアメリカンの鞣し革ガイド</font><br>
 
 早速、お近くの<a href=\'handbooksearch://未加工の皮\'>生皮</a>を手に取ってみて下さい。
@@ -111,11 +112,11 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 皮革に溶液を十分に<a href=\'handbook://item-hide-soaked-huge\'>染み込ませたら</a>、次は燻製にすることです。こうすることで、皮は水に強くなり、革の象徴である黄金色が生まれます。皮革を火に掛けて、<a href=\'handbook://item-hide-smoked-huge\'>燻された皮革</a>になるのを待ちます。
 
 さて、いよいよ最終段階です。燻製した皮をナイフで丁寧に<a href=\'handbook://item-leather-plain\'>短冊状</a>にカットしていきます。この作業は、クラフトグリッドで行います。
-	",
-	"game:ancienttools-quickstart-guide-pitch": "松脂ガイド",
-	"game:ancienttools-quickstart-title-pitch": "クラフトメカニック： 松脂の作り方",
-	"game:ancienttools-quickstart-text-pitch": "
-<font weight='bold' align='center'>松脂ガイド</font><br>
+",
+"game:ancienttools-quickstart-guide-pitch": "松脂ガイド",
+"game:ancienttools-quickstart-title-pitch": "クラフトメカニック： 松脂の作り方",
+"game:ancienttools-quickstart-text-pitch": 
+"<font weight='bold' align='center'>松脂ガイド</font><br>
 
 かつて<a href=\'handbook://item-ancienttools:pitch-ball\'>接着剤</a>は、その汎用性の高さから、非常に高価な資源として扱われていました。接着剤、封止剤、燃料など、様々な用途に使用することが出来ます。
 
@@ -126,25 +127,25 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 次に、<icon name='rightmousebutton'></icon>で容器に<a href=\'handbook://item-ancienttools:powderedcharcoal\'>木炭粉</a>2つ、<a href=\'handbook://item-resin\'>樹脂</a>4つ、<a href=\'handbook://item-drygrass\'>枯れ草</a>1つを入れて下さい。容器に適切に充填されると、<a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>未調製の松脂混合物</a>に変換されます。
 
 あとは、その混合物を手に取り、近くの焚き火台で加熱すると、<a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>完成したら、地面に鉢を置き、<a href=\'handbook://item-stick\'>棒</a>で松脂を取ることが出来ます。
-	",
-	"game:ancienttools-quickstart-guide-woodsplitting": "木の割り方ガイド",
-	"game:ancienttools-quickstart-title-woodsplitting": "クラフトメカニック: 木の割り方",
-	"game:ancienttools-quickstart-text-woodsplitting": "
+",
+"game:ancienttools-quickstart-guide-woodsplitting": "木の割り方ガイド",
+"game:ancienttools-quickstart-title-woodsplitting": "クラフトメカニック: 木の割り方",
+"game:ancienttools-quickstart-text-woodsplitting": "
 <font weight='bold' align='center'>木の割り方ガイド</font><br>
 
-木の丸太は、大き過ぎて使い物にならないことがあります。新石器時代から産業革命前まで、木を使いやすい大きさに加工する技術として、"割る "という行為が行われていました。
+木の丸太は、大き過ぎて使い物にならないことがあります。新石器時代から産業革命前まで、木を使いやすい大きさに加工する技術として、『割る』という行為が行われていました。
 
 その為、<a href=\'handbooksearch://木槌\'>木槌</a>で木目に<a href=\'handbooksearch://楔\'>楔</a>を打ち込み、小さくても頑丈な木製品を作る文化が多くありました。
 
 同様に、石や鍛造で作られた<a href=\'handbooksearch://楔\'>楔</a>は、直立した<a href=\'handbooksearch://樹皮を剥いだ丸太\'>樹皮を剥いだ丸太</a>に<icon name='rightmousebutton'></icon>で設置し、<icon name='leftmousebutton'></icon>で<a href=\'handbooksearch://木槌\'>木槌</a>で叩くことが出来ます。四つ割りにすると、新しい<a href=\'handbooksearch://角材\'>角材</a>を手に入れることが出来ます。
 
 <a href=\'handbooksearch://角材\'>角材</a>は、Ancient Toolsの<a href=\'handbooksearch://車輪\'>車輪</a>や<a href=\"handbook://ancienttools-quickstart-feature-mobilestorage\">移動式収納</a>に欠かせない構造部品です。
-	",
+",
 
 	"game:ancienttools-quickstart-feature-mobilestorage": "移動式収納の特徴",
 	"game:ancienttools-quickstart-title-mobilestorage": "移動式収納",
-	"game:ancienttools-quickstart-text-mobilestorage": "
-<font weight='bold' align='center'>移動式収納</font><br>
+	"game:ancienttools-quickstart-text-mobilestorage": 
+"<font weight='bold' align='center'>移動式収納</font><br>
 
 車輪は、人類の歴史上、最もインパクトのある発明と考えられています。新石器時代後期に考案された可能性があるが、青銅器時代に金属製の道具が豊富に出回ってから、車輪は世界的に大きな影響を与えるようになりました。
 
@@ -156,7 +157,7 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 
 <a href=\'handbooksearch://荷車\'>荷車</a>は、主に木の<a href=\'handbooksearch://板\'>板</a>や<a href=\'handbooksearch://角材\'>角材</a>で作られた簡単な二輪車で、放浪の商人には必要不可欠です。 
 
-自作の<a href=\'handbooksearch://荷車\'>荷車</a>に必要なのは、1本の<a href=\'handbook://block-woodenaxle-ud'>軸</a>、2個の<a href=\'handbook://item-ancienttools:wheel-oak\'>車輪</a>、<a href=\'handbook://block-game:supportbeam-oak\'>角材</a>、そしてクラフトグリッドに整然と並べられたたくさんの<a href=\'handbook://item-plank-oak\'>板</a>だけです！
+自作の<a href=\'handbooksearch://荷車\'>荷車</a>に必要なのは、1本の<a href=\'handbook://block-woodenaxle-ud'>軸</a>、2個の<a href=\'handbook://item-ancienttools:wheel-oak\'>車輪</a>、<a href=\'handbook://item-ancienttools:beam-oak\'>角材</a>、そしてクラフトグリッドに整然と並べられたたくさんの<a href=\'handbook://item-plank-oak\'>板</a>だけです！
 
 出来上がった荷車を地面に置くと......どこにでもついてきて、いろいろなものを運んでくれる便利な道具の出来上りです。 
 
@@ -165,7 +166,7 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 荷車を移動させるには、しゃがんで荷車を取り、<icon name='rightmousebutton'></icon>で操作して下さい。どこに行っても、荷車はついてきます。荷車を降ろすには、拾った時と同じ動作を繰り返すだけです。
 
 荷車のチェストの中身が空っぽになると、取り外すことが出来ます。手ぶらでスプリント+<icon name='rightmousebutton'></icon>で、荷車から取り外せます。
-	",
+",
 
 	"handbook-smelting-craftinfo": "<a href=\"handbook://craftinginfo-smelting\">鍛造</a>",
 	"handbook-barkstripping-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-barkstripping\">樹皮剥がし</a>",
@@ -419,22 +420,22 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"iteminfo-brain": "皮の鞣しに使用されます。 10Lの水を入れた樽に入れて脳溶液を作成します。",
 	"iteminfo-brain-food": "煮込み料理にも使えます。",
 
-	"item-adze-*-chert": "チャート石の釿",
-	"item-adze-*-granite": "花崗岩の釿",
-	"item-adze-*-andesite": "安山岩の釿",
-	"item-adze-*-basalt": "玄武岩の釿",
-	"item-adze-*-obsidian": "黒曜石の釿",
-	"item-adze-*-peridotite": "かんらん岩の釿",
-	"item-adze-*-flint": "火打石の釿",
-	"item-adze-*-copper": "銅の釿",
-	"item-adze-*-tinbronze": "スズ青銅の釿",
-	"item-adze-*-bismuthbronze": "ビスマス青銅の釿",
-	"item-adze-*-blackbronze": "黒青銅の釿",
-	"item-adze-*-gold": "金の釿",
-	"item-adze-*-silver": "銀の釿",
-	"item-adze-*-iron": "鉄の釿",
-	"item-adze-*-meteoriciron": "隕鉄の釿",
-	"item-adze-*-steel": "鋼の釿",
+	"item-adze-*-chert": "チャート石の釿（ちょうな）",
+	"item-adze-*-granite": "花崗岩の釿（ちょうな）",
+	"item-adze-*-andesite": "安山岩の釿（ちょうな）",
+	"item-adze-*-basalt": "玄武岩の釿（ちょうな）",
+	"item-adze-*-obsidian": "黒曜石の釿（ちょうな）",
+	"item-adze-*-peridotite": "かんらん岩の釿（ちょうな）",
+	"item-adze-*-flint": "火打石の釿（ちょうな）",
+	"item-adze-*-copper": "銅の釿（ちょうな）",
+	"item-adze-*-tinbronze": "スズ青銅の釿（ちょうな）",
+	"item-adze-*-bismuthbronze": "ビスマス青銅の釿（ちょうな）",
+	"item-adze-*-blackbronze": "黒青銅の釿（ちょうな）",
+	"item-adze-*-gold": "金の釿（ちょうな）",
+	"item-adze-*-silver": "銀の釿（ちょうな）",
+	"item-adze-*-iron": "鉄の釿（ちょうな）",
+	"item-adze-*-meteoriciron": "隕鉄の釿（ちょうな）",
+	"item-adze-*-steel": "鋼の釿（ちょうな）",
 
 	"itemdesc-adze-*": "丸太から樹皮を剥がす為の道具",
 
@@ -591,6 +592,8 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"itemdesc-wedge-*": "樹皮を剥いだ丸太を木槌で割るのに使う",
 
 	"item-beam-aged": "古びた角材",
+	"item-beam-veryaged": "超古びた角材",
+    "item-beam-veryagedrotten": "腐食した超古びた角材",
 	"item-beam-birch": "シラカバの角材",
 	"item-beam-oak": "オークの角材",
 	"item-beam-maple": "カエデの角材",
@@ -651,7 +654,6 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"entity-wood-ebony-cart": "コクタンの荷車",
 	"entity-wood-walnut-cart": "クルミの荷車",
 	"entity-wood-purpleheart-cart": "パープルハートの荷車",
-	"entity-wood-walnut-cart": "クルミの荷車",
 
 	"entityinfo-cart-health": "耐久度: {0}/{1} hp",
 
@@ -692,5 +694,5 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"game:item-bread-acornpine-perfect": "ドングリとマツのパン",
 
 	"game:item-bread-acornbirch-charred": "ドングリとシラカバのパン(黒焦げ)",
-	"game:item-bread-acornpine-charred": "ドングリとマツのパン(黒焦げ)",
+	"game:item-bread-acornpine-charred": "ドングリとマツのパン(黒焦げ)"
 }

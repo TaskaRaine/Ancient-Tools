@@ -160,14 +160,15 @@ To move the cart from place to place, simply pick it up by crouching and interac
 
 When empty, cart inventories can also be removed! Simply press sprint, then <icon name='rightmousebutton'></icon> with an empty hand to remove it from the cart.
 	",
-
-	"commanddesc-removemobilestoragedebuff": "Removes the mobile storage speed debuff from an affected player",	//
-	"commanddesc-removemobilestoragedebuff-syntax": "/removemobilestoragedebuff [playername]",					//
-	"commandmsg-removemobilestoragedebuff-success": "Mobile storage debuff removed successfully.",				//
-	"commandmsg-removemobilestoragedebuff-success-player": "Mobile storage debuff removed from {0} successfully!",	//
-	"commandmsg-removemobilestoragedebuff-failure": "There was no mobile storage debuff to remove!",			//
-	"commandmsg-removemobilestoragedebuff-failure-player": "{0} did not have a debuff to remove.",				//
-	"commandmsg-removemobilestoragedebuff-noplayer": "No player with the name {0} is online, or does not exist.",	//
+	"commandname-removemobilestoragedebuff": "removemobilestoragedebuff",									
+	"commanddesc-removemobilestoragedebuff": "Removes the mobile storage speed debuff from an affected player",	
+	"commanddesc-removemobilestoragedebuff-syntax-personal": "/removemobilestoragedebuff",
+	"commanddesc-removemobilestoragedebuff-syntax-otherplayer": "/removemobilestoragedebuff Taska",					
+	"commandmsg-removemobilestoragedebuff-success": "Mobile storage debuff removed from yourself successfully.",				
+	"commandmsg-removemobilestoragedebuff-success-player": "Mobile storage debuff removed from {0} successfully!",	
+	"commandmsg-removemobilestoragedebuff-failure": "There was no mobile storage debuff to remove on yourself!",			
+	"commandmsg-removemobilestoragedebuff-failure-player": "{0} did not have a debuff to remove.",				
+	"commandmsg-removemobilestoragedebuff-noplayer": "No player with the name {0} is online, or does not exist.",
 
 	"handbook-smelting-craftinfo": "<a href=\"handbook://craftinginfo-smelting\">Smelting</a>",
 	"handbook-barkstripping-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-barkstripping\">Bark Stripping</a>",
@@ -594,6 +595,8 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"itemdesc-wedge-*": "For splitting stripped logs with a mallet",
 
 	"item-beam-aged": "Aged Beam",
+	"item-beam-veryaged": "Very Aged Beam",					
+	"item-beam-veryagedrotten": "Very Aged Rotten Beam",	
 	"item-beam-birch": "Birch Beam",
 	"item-beam-oak": "Oak Beam",
 	"item-beam-maple": "Maple Beam",
@@ -664,7 +667,7 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"entityhelp-cart-drop": "Drop Cart",
 	"entityhelp-cart-open-inventory": "Open Inventory",
 	"entityhelp-cart-deconstruct": "Deconstruct Cart",				
-	"entityhelp-cart-repair": "Repair Cart(with same-type planks)",
+	"entityhelp-cart-repair": "Repair Cart(with same-type boards)",
 
 	"gui-title-cart-inventory": "Cart Inventory",
 

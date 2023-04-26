@@ -12,10 +12,10 @@
 			shelvable: true,
 			inFirePitProps: {
 				transform: {
-					scale: 0.85,
+					scale: 0.9,
 					origin: { x: 0.5, y: 0.0625, z: 0.5 },
-					translation: { x: -0.03125, y: 0.0625, z: 0.046875 },
-					rotation: { x: 0, y: 0, z: 90 }
+					translation: { x: 0.03125, y: 0.3125, z: 0 },
+					rotation: { x: 0, y: 53, z: 90 }
 				},
 				useFirepitModel: "Spit"
 			},
@@ -45,10 +45,10 @@
 			shelvable: true,
 			inFirePitProps: {
 				transform: {
-					scale: 0.85,
+					scale: 0.9,
 					origin: { x: 0.5, y: 0.0625, z: 0.5 },
-					translation: { x: -0.03125, y: 0.0625, z: 0.046875 },
-					rotation: { x: 0, y: 0, z: 90 }
+					translation: { x: 0.03125, y: 0.3125, z: 0 },
+					rotation: { x: 0, y: 53, z: 90 }
 				},
 				useFirepitModel: "Spit"
 			},
@@ -71,8 +71,8 @@
 				transform: {
 					scale: 0.85,
 					origin: { x: 0.5, y: 0.0625, z: 0.5 },
-					translation: { x: -0.03125, y: 0.125, z: 0 },
-					rotation: { x: 0, y: 0, z: 90 }
+					translation: { x: -0.0625, y: 0.1875, z: 0.0625 },
+					rotation: { x: 0, y: 53, z: 90 }
 				},
 				useFirepitModel: "Spit"
 			},
@@ -102,8 +102,8 @@
 				transform: {
 					scale: 0.85,
 					origin: { x: 0.5, y: 0.0625, z: 0.5 },
-					translation: { x: -0.03125, y: 0.125, z: 0 },
-					rotation: { x: 0, y: 0, z: 90 }
+					translation: { x: -0.0625, y: 0.21875, z: 0.0625 },
+					rotation: { x: 0, y: 53, z: 90 }
 				},
 				useFirepitModel: "Spit"
 			},
@@ -133,8 +133,8 @@
 				transform: {
 					scale: 0.85,
 					origin: { x: 0.5, y: 0.0625, z: 0.5 },
-					translation: { x: -0.03125, y: 0.125, z: 0 },
-					rotation: { x: 0, y: 0, z: 90 }
+					translation: { x: -0.0625, y: 0.1875, z: 0.0625 },
+					rotation: { x: 0, y: 53, z: 90 }
 				},
 				useFirepitModel: "Spit"
 			},

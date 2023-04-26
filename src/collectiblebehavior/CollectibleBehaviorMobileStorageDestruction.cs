@@ -21,6 +21,8 @@ namespace AncientTools.CollectibleBehaviors
 
         private EntityBehaviorHealthNoRecover EntityHealth { get; set; }
 
+        private DamageSource deconstructionDamageSource = new DamageSource() { Type = EnumDamageType.SlashingAttack };
+
         public CollectibleBehaviorMobileStorageDestruction(CollectibleObject collObj) : base(collObj)
         {
 
@@ -82,6 +84,8 @@ namespace AncientTools.CollectibleBehaviors
                 if(byEntity.Api.Side == EnumAppSide.Server)
                     EntityHealth = entitySel.Entity.GetBehavior<EntityBehaviorHealthNoRecover>();
 
+                deconstructionDamageSource.SourceEntity = byEntity;
+
                 handling = EnumHandling.PreventDefault;
                 handHandling = EnumHandHandling.PreventDefault;
             }
@@ -109,16 +113,19 @@ namespace AncientTools.CollectibleBehaviors
 
                 if (secondsUsed - PreviousTickedTime > DestructionInterval)
                 {
-                    PreviousTickedTime = secondsUsed;
-
                     if (byEntity.Api.Side == EnumAppSide.Server)
                     {
                         EntityHealth.Health -= DestructionAmount;
+
+                        entitySel.Entity.OnHurt(new DamageSource(), DestructionAmount);
+                        entitySel.Entity.PlayEntitySound("hurt");
 
                         slot.Itemstack.Collectible.DamageItem(byEntity.World, byEntity, slot, DurabilityLoss);
 
                         if (EntityHealth.Health <= 0)
                             entitySel.Entity.Die();
+
+                        PreviousTickedTime = secondsUsed;
                     }
                 }
 

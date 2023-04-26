@@ -92,9 +92,9 @@ namespace AncientTools.Utility
             capi.Tesselator.TesselateShape("container", CurrentShape, out MeshData wholeMesh, this);
             return wholeMesh;
         }
-        public MeshData GenMesh(string filepathPrefix, JsonObject generationProperties)
+        public MeshData GenMesh(JsonObject generationProperties)
         {
-            CurrentShape = Capi.Assets.TryGet(filepathPrefix + generationProperties["shapePath"] + ".json").ToObject<Shape>();
+            CurrentShape = Capi.Assets.TryGet(generationProperties["shapePath"] + ".json").ToObject<Shape>();
 
             //-- Resource shapes should to have a textures: {} field even if it's empty. It is less efficient to assign the dictionary each time it is fetched. --//
             if (CurrentShape.Textures == null)

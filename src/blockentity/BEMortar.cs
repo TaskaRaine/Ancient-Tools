@@ -12,7 +12,7 @@ namespace AncientTools.BlockEntities
 {
     class BEMortar : DisplayInventory
     {
-        const string RESOURCE_PATH_PREFIX = "ancienttools:shapes/block/mortar/resourceshapes/";
+        //const string RESOURCE_PATH_PREFIX = "ancienttools:shapes/block/mortar/resourceshapes/";
 
         private float mortarGrindTime;
         private int mortarOutputModifier;
@@ -425,7 +425,7 @@ namespace AncientTools.BlockEntities
             }
 
             //-- If no shape asset is found then a default mesh is used. --//
-            if (!Api.Assets.Exists(new AssetLocation(RESOURCE_PATH_PREFIX + resourcePath + ".json")))
+            if (!Api.Assets.Exists(new AssetLocation(resourcePath + ".json")))
             {
                 resourcePath = "resource_default";
             }
@@ -500,7 +500,7 @@ namespace AncientTools.BlockEntities
 
             if(!ResourceSlot.Empty)
             {
-                ResourceMesh = GenMesh(RESOURCE_PATH_PREFIX, ResourceSlot.Itemstack.Collectible.Attributes["mortarProperties"]);
+                ResourceMesh = GenMesh(ResourceSlot.Itemstack.Collectible.Attributes["mortarProperties"]);
             }
 
             if(!PestleSlot.Empty)

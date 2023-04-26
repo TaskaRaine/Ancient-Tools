@@ -41,7 +41,8 @@ namespace AncientTools.Utility
             api.World.Config.SetFloat("SkinningTime", config.SkinningTime);
             api.World.Config.SetFloat("WaterSackConversionHours", config.WaterSackConversionHours);
             api.World.Config.SetFloat("BrainedHideSealHours", config.BrainedHideSealHours);
-            api.World.Config.SetBool("InWorldBeamCraftingEnabled", config.InWorldBeamCraftingEnabled);
+            api.World.Config.SetBool("InWorldBeamCraftingOnly", config.InWorldBeamCraftingOnly);
+            api.World.Config.SetBool("AdzeStrippingOnly", config.AdzeStrippingOnly);
         }
         private AncientToolsConfig LoadConfig(ICoreAPI api)
         {

@@ -1,0 +1,40 @@
+﻿[
+	{
+		ingredientPattern: "B",
+		width: 1,
+		height: 1,
+		ingredients: {
+			"B": {
+				type: "item",
+				name: "wood",
+				code: "ancienttools:beam-*",
+				allowedVariants: ["aged", "birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart"],
+				quantity: 1
+			}
+		},
+		output: {
+			type: "block",
+			code: "game:supportbeam-{wood}",
+			quantity: 1
+		}
+	},
+	{
+		ingredientPattern: "B",
+		width: 1,
+		height: 1,
+		ingredients: {
+			"B": {
+				type: "block",
+				name: "wood",
+				code: "game:supportbeam-*",
+				allowedVariants: ["aged", "birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart"],
+				quantity: 1
+			}
+		},
+		output: {
+			type: "item",
+			code: "ancienttools:beam-{wood}",
+			quantity: 1
+		}
+	}
+]

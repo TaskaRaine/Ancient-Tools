@@ -54,7 +54,7 @@
 		"op": "add",
 		"path": "/attributes/stretchableByType",
 		"value": {
-			"@hide-(raw|soaked|scraped|prepared|oiled|pelt)-(small|medium|large|huge)": true
+			"@hide-(raw|soaked|scraped|prepared|oiled|pelt|smoked)-(small|medium|large|huge)": true
 		},
 		"file": "game:itemtypes/resource/hide",
 		"side": "Server"
@@ -75,8 +75,8 @@
 				transform: {
 					scale: 0.4,
 					origin: { x: 0.5, y: 0.5, z: 0.5 },
-					translation: { x: -0.05, y: -0.5, z: 0 },
-					rotation: { x: 90, y: 0, z: 0 }
+					translation: { x: -0.05, y: -0.325, z: 0.05 },
+					rotation: { x: 180, y: -52.5, z: 0 }
 				  },
 				  useFirepitModel: "Spit"
 			},
@@ -85,8 +85,8 @@
 				transform: {
 					scale: 0.35,
 					origin: { x: 0.5, y: 0.5, z: 0.5 },
-					translation: { x: -0.05, y: -0.475, z: 0 },
-					rotation: { x: 90, y: 0, z: 0 }
+					translation: { x: -0.05, y: -0.3, z: 0.05 },
+					rotation: { x: 180, y: -52.5, z: 0 }
 				  },
 				  useFirepitModel: "Spit"
 			},
@@ -95,8 +95,8 @@
 				transform: {
 					scale: 0.3,
 					origin: { x: 0.5, y: 0.5, z: 0.5 },
-					translation: { x: -0.05, y: -0.45, z: 0 },
-					rotation: { x: 90, y: 0, z: 0 }
+					translation: { x: -0.05, y: -0.275, z: 0.05 },
+					rotation: { x: 180, y: -52.5, z: 0 }
 				  },
 				  useFirepitModel: "Spit"
 			},
@@ -105,8 +105,8 @@
 				transform: {
 					scale: 0.25,
 					origin: { x: 0.5, y: 0.5, z: 0.5 },
-					translation: { x: -0.05, y: -0.425, z: 0 },
-					rotation: { x: 90, y: 0, z: 0 }
+					translation: { x: -0.05, y: -0.25, z: 0.05 },
+					rotation: { x: 180, y: -52.5, z: 0 }
 				  },
 				  useFirepitModel: "Spit"
 			}

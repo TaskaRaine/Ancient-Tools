@@ -12,7 +12,7 @@
 		"op": "add",
 		"path": "/attributes/mortarProperties",
 		"value": {
-			shapePath: "resource_game_charcoal",
+			shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_charcoal",
 			texturePaths: [{ code: "charcoal", path: "game:block/coal/charcoal" }],
 			groundStack: { type: "item", code: "ancienttools:powderedcharcoal" },
 			resultQuantity: 1

@@ -4,8 +4,8 @@
 		"path": "/attributes/mortarPropertiesByType",
 		"value": {
 			"*": {
-				shapePath: "resource_game_seashell_{type}_{color}",
-				texturePaths: [{ code: "{color}", path: "game:block/creature/seashell/{color}" }],
+				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_seashell_{type}",
+				texturePaths: [{ code: "{type}", path: "game:block/creature/seashell/{color}" }],
 				groundStack: { type: "item", code: "game:lime" },
 				resultQuantity: 1
 			}

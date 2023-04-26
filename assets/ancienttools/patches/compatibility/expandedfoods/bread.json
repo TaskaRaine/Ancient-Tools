@@ -3,7 +3,7 @@
 		"op": "add",
 		"path": "/attributesByType/*-partbaked/mortarProperties",
 		"value": { 
-			shapePath: "resource_game_bread_{type}_{state}",
+			shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_bread_{type}_{state}",
 			texturePaths: [{ code: "{type}partbaked", path: "game:item/food/grain/{type}bread2" }],
 			groundStack: { type: "item", code: "expandedfoods:breadcrumbs-{type}" },
 			resultQuantity: 4
@@ -16,7 +16,7 @@
 		"op": "add",
 		"path": "/attributesByType/*-perfect/mortarProperties",
 		"value": { 
-			shapePath: "resource_game_bread_{type}_{state}",
+			shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_bread_{type}_{state}",
 			texturePaths: [{ code: "{type}partbaked", path: "game:item/food/grain/{type}bread" }],
 			groundStack: { type: "item", code: "expandedfoods:breadcrumbs-{type}" },
 			resultQuantity: 4
@@ -29,7 +29,7 @@
 		"op": "add",
 		"path": "/attributesByType/*-charred/mortarProperties",
 		"value": { 
-			shapePath: "resource_game_bread_{type}_{state}",
+			shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_bread_{type}_{state}",
 			texturePaths: [{ code: "{type}partbaked", path: "game:item/food/grain/{type}bread1" }],
 			groundStack: { type: "item", code: "expandedfoods:breadcrumbs-{type}" },
 			resultQuantity: 4

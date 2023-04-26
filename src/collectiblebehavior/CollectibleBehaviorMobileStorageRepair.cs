@@ -17,6 +17,7 @@ namespace AncientTools.CollectibleBehaviors
 
         private string StorageType { get; set; }
 
+        private DamageSource repairDamageSource = new DamageSource() { Type = EnumDamageType.Heal };
 
         public CollectibleBehaviorMobileStorageRepair(CollectibleObject collObj) : base(collObj)
         {
@@ -54,6 +55,8 @@ namespace AncientTools.CollectibleBehaviors
                     if (byEntity.Api.Side == EnumAppSide.Server)
                         EntityHealth = entitySel.Entity.GetBehavior<EntityBehaviorHealthNoRecover>();
 
+                    repairDamageSource.SourceEntity = byEntity;
+
                     handling = EnumHandling.PreventDefault;
                     handHandling = EnumHandHandling.PreventDefault;
                 }
@@ -66,8 +69,6 @@ namespace AncientTools.CollectibleBehaviors
             {
                 if (secondsUsed - PreviousTickedTime > RepairInterval)
                 {
-                    PreviousTickedTime = secondsUsed;
-
                     if (byEntity.Api.Side == EnumAppSide.Server)
                     {
                         if (!byEntity.LeftHandItemSlot.Empty)
@@ -78,9 +79,14 @@ namespace AncientTools.CollectibleBehaviors
                             {
                                 EntityHealth.Health += RepairAmount;
 
+                                entitySel.Entity.OnHurt(repairDamageSource, -RepairAmount);
+                                entitySel.Entity.PlayEntitySound("hurt");
+
                                 slot.Itemstack.Collectible.DamageItem(byEntity.World, byEntity, slot, DurabilityLoss);
                                 byEntity.LeftHandItemSlot.TakeOut(1);
                                 byEntity.LeftHandItemSlot.MarkDirty();
+
+                                PreviousTickedTime = secondsUsed;
                             }
                             else
                                 return false;
@@ -101,6 +107,11 @@ namespace AncientTools.CollectibleBehaviors
             }
 
             return false;
+        }
+        public override void OnHeldInteractStop(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandling handling)
+        {
+            EntityHealth = null;
+            PreviousTickedTime = 0;
         }
     }
 }

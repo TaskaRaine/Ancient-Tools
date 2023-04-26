@@ -4,7 +4,7 @@
 		"path": "/attributes/mortarPropertiesByType",
 		"value": {
 			"*-dried": {
-				shapePath: "resource_game_rawcassava_dried",
+				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_rawcassava_dried",
 				texturePaths: [{ code: "cassava", path: "game:item/food/vegetable/cassava-dried" }],
 				groundStack: { type: "item", code: "game:flour-cassava" },
 				resultQuantity: 1

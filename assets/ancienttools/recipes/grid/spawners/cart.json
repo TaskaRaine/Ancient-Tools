@@ -1,5 +1,5 @@
 ﻿[
-	{
+{
 		ingredientPattern: "PPPBBBWAW",
 		width: 3,
 		height: 3,
@@ -9,14 +9,14 @@
 				name: "wood",
 				code: "game:plank-*",
 				allowedVariants: ["aged", "birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart"],
-				quantity: 1
+				quantity: 4
 			},
 			"B": { 
 				type: "block",
 				name: "wood",
 				code: "game:supportbeam-*",
 				allowedVariants: ["aged", "birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart"],
-				quantity: 1
+				quantity: 4
 			},
 			"W": {
 				type: "item",
@@ -37,5 +37,44 @@
 			attributes: { type: "wood-{wood}" },
 			quantity: 1
 		}
-	}
+	},
+	{
+		ingredientPattern: "PPPBBBWAW",
+		width: 3,
+		height: 3,
+		ingredients: {
+			"P": {
+				type: "item",
+				name: "wood",
+				code: "game:plank-*",
+				allowedVariants: ["aged", "birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart"],
+				quantity: 4
+			},
+			"B": { 
+				type: "item",
+				name: "wood",
+				code: "ancienttools:beam-*",
+				allowedVariants: ["aged", "birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart"],
+				quantity: 4
+			},
+			"W": {
+				type: "item",
+				name: "wood",
+				code: "ancienttools:wheel-*",
+				allowedVariants: ["aged", "birch", "oak", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "walnut", "purpleheart"],
+				quantity: 1
+			},
+			"A": {
+				type: "block",
+				code: "game:woodenaxle-ud",
+				quantity: 1
+			}
+		},
+		output: { 
+			type: "item", 
+			code: "ancienttools:cart",
+			attributes: { type: "wood-{wood}" },
+			quantity: 1
+		}
+	},
 ]

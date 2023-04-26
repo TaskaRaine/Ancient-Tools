@@ -4,19 +4,19 @@
 		"path": "/attributes/mortarPropertiesByType",
 		"value": {
 			"*-sylvite": {
-				shapePath: "resource_game_ore_{ore}",
+				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_ore_{ore}",
 				texturePaths: [{ code: "{ore}", path: "game:item/resource/ungraded/{ore}" }],
 				groundStack: { type: "item", code: "game:potash" },
 				resultQuantity: 2
 			},
 			"*-borax": {
-				shapePath: "resource_game_ore_{ore}",
+				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_ore_{ore}",
 				texturePaths: [{ code: "{ore}", path: "game:item/resource/ungraded/{ore}" }],
 				groundStack: { type: "item", code: "game:powderedborax" },
 				resultQuantity: 2
 			},
 			"*-sulfur": {
-				shapePath: "resource_game_ore_{ore}",
+				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_ore_{ore}",
 				texturePaths: [{ code: "{ore}", path: "game:item/resource/ungraded/{ore}" }],
 				groundStack: { type: "item", code: "game:powderedsulfer" },
 				resultQuantity: 2

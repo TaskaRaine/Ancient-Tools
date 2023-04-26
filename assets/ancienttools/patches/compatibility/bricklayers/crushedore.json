@@ -1,0 +1,15 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/attributes/mortarProperties",
+		"value": { 
+			shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_crushed",
+			texturePaths: [{ code: "crushed", path: "bricklayers:item/resource/crushed/{type}" }],
+			groundStack: { type: "item", code: "bricklayers:powdered-{type}" },
+			resultQuantity: 2
+		},
+		"file": "bricklayers:itemtypes/resource/crushed_ore",
+		"dependsOn": [{ "modid": "bricklayers" }],
+		"side": "Server",
+	}
+]

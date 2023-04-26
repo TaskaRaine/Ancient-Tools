@@ -9,11 +9,17 @@
 				langCode: "ancienttools:blockhelp-insert-{bark}bark"
 			},
 			mortarProperties: {
-				shapePath: "resource_ancienttools_bark_{bark}",
+				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_ancienttools_bark_{bark}",
 				texturePaths: [{ code: "{bark}", path: "game:block/wood/bark/{bark}" }],
 				groundStack: { type: "item", code: "game:flour-{bark}" },
 				resultQuantity: 1
 			},
+			handbook: {
+				groupBy: ["bark-*"],
+				createdBy: "ancienttools:handbook-barkstripping-craftinfo"
+			},
+		},
+		"*": {
 			handbook: {
 				groupBy: ["bark-*"],
 				createdBy: "ancienttools:handbook-barkstripping-craftinfo"

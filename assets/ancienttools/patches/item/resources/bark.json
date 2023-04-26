@@ -8,7 +8,21 @@
 	},
 	{
 		"op": "remove",
-		"path": "/behaviorsByType",
+		"path": "/attributesByType/@bark-(birch|pine)/mortarProperties",
+		"file": "itemtypes/resources/bark",
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "false" }
+	},
+	{
+		"op": "remove",
+		"path": "/behaviorsByType/@bark-(birch|pine)",
+		"file": "itemtypes/resources/bark",
+		"side": "Server",
+		"condition": { "when": "SalveEnabled", "isValue": "false" }
+	},
+	{
+		"op": "remove",
+		"path": "/attributesByType/@bark-(birch|pine)/salveProperties",
 		"file": "itemtypes/resources/bark",
 		"side": "Server",
 		"condition": { "when": "SalveEnabled", "isValue": "false" }

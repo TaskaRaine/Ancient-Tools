@@ -4,13 +4,13 @@
 		"path": "/attributes/mortarPropertiesByType",
 		"value": { 
 			"*-roasted": {
-				shapePath: "resource_expandedfoods_soyprep_{type}",
+				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_expandedfoods_soyprep_{type}",
 				texturePaths: [{ code: "soyroasted", path: "expandedfoods:item/food/soyprep/{type}" }],
 				groundStack: { type: "item", code: "expandedfoods:soyprep-powdered" },
 				resultQuantity: 1
 			},
 			"*-wetshell": {
-				shapePath: "resource_expandedfoods_soyprep_{type}",
+				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_expandedfoods_soyprep_{type}",
 				texturePaths: [{ code: "soywetshell", path: "expandedfoods:item/food/soyprep/{type}" }],
 				groundStack: { type: "item", code: "expandedfoods:soyprep-blended" },
 				resultQuantity: 1

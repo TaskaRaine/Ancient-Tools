@@ -104,7 +104,9 @@ namespace AncientTools.BlockBehaviors
 
                 Block resinBlock = world.GetBlock(new AssetLocation("ancienttools", "directionalresin-resinharvested-" + woodType + "-" + woodOrientation + "-" + GetFacingDirection(blockSel.Face)));
                 world.BlockAccessor.SetBlock(resinBlock.Id, blockSel.Position);
+                world.BlockAccessor.BreakDecor(blockSel.Position);
 
+                world.BlockAccessor.MarkChunkDecorsModified(blockSel.Position);
                 world.BlockAccessor.MarkBlockDirty(blockSel.Position);
                 world.BlockAccessor.MarkBlockEntityDirty(blockSel.Position);
             }
