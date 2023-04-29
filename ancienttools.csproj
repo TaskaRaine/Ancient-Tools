@@ -541,6 +541,7 @@
   <ItemGroup>
     <None Include="assets\ancienttools\patches\recipes\supportbeam.json" />
     <None Include="assets\ancienttools\patches\compatibility\expandedfoods\choppedvegetable.json" />
+    <Compile Include="src\blockbehavior\BlockBehaviorATHarvestable.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorMobileStorageDestruction.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorMobileStorageRepair.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorWedgeSmack.cs" />
