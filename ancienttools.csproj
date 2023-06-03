@@ -185,6 +185,7 @@
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\ancienttools disables\tannin.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\bark.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\barkbasket.json" />
+    <None Include="assets\ancienttools\patches\compatibility\dappledgroves\recipes\debarkedlog.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\tannin.json" />
     <None Include="assets\ancienttools\patches\compatibility\expandedfoods\bread.json" />
     <None Include="assets\ancienttools\patches\compatibility\expandedfoods\peanut.json" />
@@ -196,6 +197,7 @@
     <None Include="assets\ancienttools\patches\compatibility\moreanimals\pheasant.json" />
     <None Include="assets\ancienttools\patches\compatibility\multi-requirement\bricklayers+wildcrafttrees\dough-bricklayers.json" />
     <None Include="assets\ancienttools\patches\compatibility\multi-requirement\dappledgroves+wildcrafttrees\bark.json" />
+    <None Include="assets\ancienttools\patches\compatibility\multi-requirement\dappledgroves+wildcrafttrees\recipes\debarkedlog.json" />
     <None Include="assets\ancienttools\patches\compatibility\pantherinae\brains.json" />
     <None Include="assets\ancienttools\patches\compatibility\reignited\pitchtorch.json" />
     <None Include="assets\ancienttools\patches\compatibility\wildcrafttrees\bread.json" />
@@ -291,6 +293,7 @@
     <None Include="assets\ancienttools\recipes\grid\compatibility\vanillavariants\hidewatersack.json" />
     <None Include="assets\ancienttools\recipes\grid\compatibility\betterthanheresy\pitchpot.json" />
     <None Include="assets\ancienttools\recipes\grid\compatibility\wildcrafttrees\barkdough.json" />
+    <None Include="assets\ancienttools\recipes\grid\compatibility\wildcrafttrees\debarkedlog.json" />
     <None Include="assets\ancienttools\recipes\grid\item\beam.json" />
     <None Include="assets\ancienttools\recipes\grid\item\wheel.json" />
     <None Include="assets\ancienttools\recipes\grid\spawners\cart.json" />
