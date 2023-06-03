@@ -134,20 +134,26 @@ namespace AncientTools.Blocks
                     stretchingFrameEntity.TryGiveHide(byPlayer);
                     return true;
                 }
-                else if(byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.Attributes.IsTrue("stretchable"))
+
+                CollectibleObject hotbarCollectible = byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible;
+
+                if (byPlayer.InventoryManager.ActiveTool == EnumTool.Knife && byPlayer.Entity.Controls.Sneak)
                 {
-                    stretchingFrameEntity.TryPlaceHide(byPlayer.InventoryManager.ActiveHotbarSlot);
-                    return true;
-                }
-                else if(byPlayer.InventoryManager.ActiveTool == EnumTool.Knife && byPlayer.Entity.Controls.Sneak)
-                {
-                    if(!stretchingFrameEntity.HideSlot.Empty)
-                        if(stretchingFrameEntity.HideSlot.Itemstack.Item.FirstCodePart(1) == "soaked")
+                    if (!stretchingFrameEntity.HideSlot.Empty)
+                        if (stretchingFrameEntity.HideSlot.Itemstack.Item.FirstCodePart(1) == "soaked")
                         {
                             return stretchingFrameEntity.BeginPrepareHide(byPlayer);
                         }
                 }
+                else if (hotbarCollectible.Attributes != null)
+                {
+                    bool isStrechable = hotbarCollectible.Attributes["stretchable"].AsBool();
 
+                    if(isStrechable)
+                        stretchingFrameEntity.TryPlaceHide(byPlayer.InventoryManager.ActiveHotbarSlot);
+
+                    return isStrechable;
+                }
             }
             
             return false;

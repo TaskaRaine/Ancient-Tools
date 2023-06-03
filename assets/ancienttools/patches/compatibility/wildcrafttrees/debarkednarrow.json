@@ -1,0 +1,10 @@
+﻿[
+	{
+		"op": "addeach",
+		"path": "/variantgroups/0/states/-",
+		"value": ["willow", "alder", "brideinwhite"],
+		"file": "ancienttools:blocktypes/debarkednarrow",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server"
+	},
+]

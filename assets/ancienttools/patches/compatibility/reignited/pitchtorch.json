@@ -1,0 +1,10 @@
+﻿[
+	{
+		"op": "add",
+		"path": "/behaviorsByType/*-extinct-*",
+		"value": [{ name: "CanBeIgnited", properties: {auto: true}} ],
+		"file": "blocktypes/pitchtorch",
+		"dependsOn": [{ "modid": "canbeignited" }],
+		"side": "Server"
+	}
+]

@@ -54,8 +54,8 @@ Similarly, hand-drawn <a href=\'handbooksearch://cart\'>carts</a> are the very f
 
 More details about how to create each of these primitive vehicles and information about their usage can be found in the <a href=\"handbook://ancienttools-quickstart-feature-mobilestorage\">Mobile Storage</a> segment. 
 ",
-	"game:ancienttools-quickstart-guide-barkstripping": "Bark Stripping Guide",
-	"game:ancienttools-quickstart-title-barkstripping": "Crafting Mechanic: Bark Stripping",
+	"game:ancienttools-quickstart-guide-barkstripping": "Bark Stripping Guide",	
+	"game:ancienttools-quickstart-title-barkstripping": "Ancient Tools: Crafting Mechanic: Bark Stripping",
 	"game:ancienttools-quickstart-text-barkstripping": "
 <font weight='bold' align='center'>Bark Stripping Guide</font><br>
 
@@ -63,28 +63,28 @@ After you've aquired an <a href=\'handbooksearch://adze\'>adze</a>, it's time to
 
 The <a href=\'handbook://item-ancienttools:bark-oak\'>tree bark</a> that you collect can be used for a variety of different purposes. Bark can make for an excellent firestarter in place of firewood. Or, it can be woven to create cute little <a href=\'handbooksearch://bark basket\'>bark baskets</a> to place things in.
 
-<a href=\'handbook://item-ancienttools:bark-birch\'>Birch bark</a> and <a href=\'handbook://item-ancienttools:bark-pine\'>pine bark</a> are a special arboreal resource in that they possess some unique properties that we can take advantage of. 
+Many barks such as <a href=\'handbook://item-ancienttools:bark-birch\'>birch bark</a> and <a href=\'handbook://item-ancienttools:bark-pine\'>pine bark</a> are a special arboreal resource in that they possess some unique properties that we can take advantage of. 
 
-The inner layer of bark from either tree is edible can be ground down into a <a href=\'handbooksearch://flour\'>flour</a> that can then be baked into <a href=\'handbooksearch://bread\'>bread</a>. This was a Scandanavian tradition of the indigenous Sami culture. 
+The inner layer of bark from many trees is edible and can be ground down into a <a href=\'handbooksearch://flour\'>flour</a> that can then be baked into <a href=\'handbooksearch://bread\'>bread</a>. This was a Scandanavian tradition of the indigenous Sami culture. 
 
-Both varities of bark also have various medicinal properties. Have a look at the <a href=\"handbook://ancienttools-quickstart-guide-salve\">salve preparation guide</a> if you're interested in taking advantage of them!
+There are also many barks which have medical properties which were used to treat various ailments. Have a look at the <a href=\"handbook://ancienttools-quickstart-guide-salve\">salve preparation guide</a> if you're interested in taking advantage of them!
 ",
-	"game:ancienttools-quickstart-guide-salve": "Salve Guide",
-	"game:ancienttools-quickstart-title-salve": "Crafting Mechanic: Salve Creation",
+	"game:ancienttools-quickstart-guide-salve": "Salve Guide",	
+	"game:ancienttools-quickstart-title-salve": "Ancient Tools: Crafting Mechanic: Salve Creation",
 	"game:ancienttools-quickstart-text-salve": "
 <font weight='bold' align='center'>Ancient Tools Salve Creation Guide</font><br>
-Tree bark has had many various uses throughout history. Many trees, such as <a href=\'handbooksearch://birch\'>birch</a> and <a href=\'handbooksearch://pine\'>pine</a>, have various beneficial healing properties. Birch is most commonly used to ease joint pain, whilst pine is most commonly used to reduce inflammation.
+Tree bark has had many various uses throughout history. Many trees, such as <a href=\'handbooksearch://birch\'>birch</a>, <a href=\'handbooksearch://pine\'>pine</a>, <a href=\'handbooksearch://oak\'>oak</a>, and <a href=\'handbooksearch://acacia\'>acacia</a> have various beneficial healing properties. Birch is most commonly used to ease joint pain, whilst pine is most commonly used to reduce inflammation.
 
-<a href=\'handbook://item-ancienttools:salveportion\'>Salves</a> are sometimes created by homesteaders then applied to the skin to take advantage of these properties. To create a salve with Ancient Tools, first, you must convert two cooking pots into <a href=\'handbook://block-ancienttools:salvepot-empty\'>empty salve containers</a>. This can be done by crouching then pressing <icon name='rightmousebutton'></icon> with a salve ingredient(<a href=\'handbook://item-ancienttools:bark-birch\'>birch</a>/<a href=\'handbook://item-ancienttools:bark-birch\'>pine</a> bark, <a href=\'handbook://item-fat\'>fat</a>, or <a href=\'handbook://item-beeswax\'>beeswax</a>) or by crafting a <a href=\'handbook://block-ckaypot-burned\'>cooking pot</a> in the grid with a medicinal bark.
+<a href=\'handbook://item-ancienttools:salveportion\'>Salves</a> are sometimes created by homesteaders then applied to the skin to take advantage of these properties. To create a salve with Ancient Tools, first, you must convert two cooking pots into <a href=\'handbook://block-ancienttools:salvepot-empty\'>empty salve containers</a>. This can be done by crouching then pressing <icon name='rightmousebutton'></icon> with a salve ingredient(bark, <a href=\'handbook://item-fat\'>fat</a>, or <a href=\'handbook://item-beeswax\'>beeswax</a>) or by crafting a <a href=\'handbook://block-ckaypot-burned\'>cooking pot</a> in the grid with a medicinal bark.
 
-Place both <a href=\'handbook://block-ancienttools:salvepot-empty\'>empty containers</a> on the ground. Fill one with <a href=\'handbook://item-ancienttools:bark-birch\'>birch</a> OR <a href=\'handbook://item-ancienttools:bark-birch\'>pine</a> bark and <a href=\'handbook://item-fat\'>fat</a>, then the other with <a href=\'handbook://item-beeswax\'>beeswax</a>. Heat both in a firepit to convert them to prepared versions. 
+Place both <a href=\'handbook://block-ancienttools:salvepot-empty\'>empty containers</a> on the ground. Fill one with a single type of bark and <a href=\'handbook://item-fat\'>fat</a>, then the other with <a href=\'handbook://item-beeswax\'>beeswax</a>. Heat both in a firepit to convert them to prepared versions. 
 
 Finally, place one prepared container on the ground then crouch and hold <icon name='rightmousebutton'></icon> with the other container in hand to pour them together. Congratulations, you made a healing salve! <icon name='rightmousebutton'></icon> the finished salve to extract a <a href=\'handbook://item-ancienttools:salveportion\'>portion</a> that will heal over time when used.
 
 Empty salve containers can be placed in the crafting grid to convert them back into cooking pots.
 	",
 	"game:ancienttools-quickstart-guide-tanning": "Native American Tanning Guide",
-	"game:ancienttools-quickstart-title-tanning": "Crafting Mechanic: Native American Tanning",
+	"game:ancienttools-quickstart-title-tanning": "Ancient Tools: Crafting Mechanic: Native American Tanning",
 	"game:ancienttools-quickstart-text-tanning": "
 <font weight='bold' align='center'>Native American Tanning Guide</font><br>
 
@@ -107,7 +107,7 @@ When the hide has been thoroughly <a href=\'handbook://item-hide-soaked-huge\'>s
 Now, the final part! Take your smoked hide and, using a knife, carefully cut it into strips of <a href=\'handbook://item-leather\'>leather</a>. This is performed in the crafting grid.
 	",
 	"game:ancienttools-quickstart-guide-pitch": "Pitch Guide",
-	"game:ancienttools-quickstart-title-pitch": "Crafting Mechanic: Pitch Creation",
+	"game:ancienttools-quickstart-title-pitch": "Ancient Tools: Crafting Mechanic: Pitch Creation",
 	"game:ancienttools-quickstart-text-pitch": "
 <font weight='bold' align='center'>Pitch Guide</font><br>
 
@@ -122,7 +122,7 @@ Next, fill up the container using <icon name='rightmousebutton'></icon> with 2 p
 Now, simply pick up the mixture and heat it in the nearest firepit to create <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>prepared pitch</a>. When it's been finished, you can place the pot on the ground and take pieces of pitch by using a <a href=\'handbook://item-stick\'>stick</a>.
 	",
 	"game:ancienttools-quickstart-guide-woodsplitting": "Wood Splitting Guide",
-	"game:ancienttools-quickstart-title-woodsplitting": "Crafting Mechanic: Wood Splitting",
+	"game:ancienttools-quickstart-title-woodsplitting": "Ancient Tools: Crafting Mechanic: Wood Splitting",
 	"game:ancienttools-quickstart-text-woodsplitting": "
 <font weight='bold' align='center'>Wood Splitting Guide</font><br>
 
@@ -136,7 +136,7 @@ Similarly, <a href=\'handbooksearch://wedge\'>wedges</a>, either crafted from st
 	",
 
 	"game:ancienttools-quickstart-feature-mobilestorage": "Mobile Storage Feature",
-	"game:ancienttools-quickstart-title-mobilestorage": "Mobile Storage",
+	"game:ancienttools-quickstart-title-mobilestorage": "Ancient Tools: Mobile Storage",
 	"game:ancienttools-quickstart-text-mobilestorage": "
 <font weight='bold' align='center'>Mobile Storage</font><br>
 
@@ -170,11 +170,19 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"commandmsg-removemobilestoragedebuff-failure-player": "{0} did not have a debuff to remove.",				
 	"commandmsg-removemobilestoragedebuff-noplayer": "No player with the name {0} is online, or does not exist.",
 
+	"handbook-usedfor-handbookinfo": "Used for",
+
 	"handbook-smelting-craftinfo": "<a href=\"handbook://craftinginfo-smelting\">Smelting</a>",
 	"handbook-barkstripping-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-barkstripping\">Bark Stripping</a>",
 	"handbook-salve-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-salve\">Salve Preparation</a>",
 	"handbook-mixingpitch-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-pitch\">Mixing Pitch</a>",
 	"handbook-woodsplitting-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-woodsplitting\">Wood Splitting</a>",
+
+	"handbook-smelting-craftinfo-dot": "• <a href=\"handbook://craftinginfo-smelting\">Smelting</a>",
+	"handbook-barkstripping-craftinfo-dot": "• <a href=\"handbook://ancienttools-quickstart-guide-barkstripping\">Bark Stripping</a>",
+	"handbook-salve-craftinfo-dot": "• <a href=\"handbook://ancienttools-quickstart-guide-salve\">Salve Preparation</a>",
+	"handbook-mixingpitch-craftinfo-dot": "• <a href=\"handbook://ancienttools-quickstart-guide-pitch\">Mixing Pitch</a>",
+	"handbook-woodsplitting-craftinfo-dot": "• <a href=\"handbook://ancienttools-quickstart-guide-woodsplitting\">Wood Splitting</a>",
 
 	"blockhelp-place-pestle": "Place Pestle",
 	"blockhelp-place-resource": "Place Grindable Resource",
@@ -185,9 +193,12 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"blockhelp-take-curinghook": "Take Hook",			
 	"blockhelp-take-meat": "Take Object",				
 
+	"blockhelp-salve-remove-incompatiblematerial": "Remove Incompatible Material",
 	"blockhelp-insert-healingbark": "Insert Bark",
 	"blockhelp-insert-birchbark": "Insert Birch Bark",
 	"blockhelp-insert-pinebark": "Insert Pine Bark",
+	"blockhelp-insert-oakbark": "Insert Oak Bark",
+	"blockhelp-insert-acaciabark": "Insert Acacia Bark",
 	"blockhelp-insert-oil": "Insert Fat",
 	"blockhelp-insert-thickener": "Insert Beeswax",
 
@@ -221,7 +232,7 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"blockinfo-curingrack-perish-status": "Rots In: {0} Days",	
 	"blockinfo-curingrack-meat-perish": "Stored meat perish speed: {0}x",
 
-	"blockinfo-salve-empty-fillwithbark": "A salve container must be filled with birch/pine bark and fat OR beeswax.",
+	"blockinfo-salve-empty-fillwithbark": "A salve container must be filled with medicinal bark and fat OR beeswax.",
 	"blockinfo-salve-empty-crouch": "Crouch and insert an item to get started.",
 	"blockinfo-salve-empty-partial": "Contains: ",
 	"blockinfo-salve-empty-bark": "{0}/{1} bark",
@@ -277,6 +288,8 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"block-strippedlog-purpleheart-*": "Stripped Purpleheart Log",
 	"block-strippedlog-aged-*": "Stripped Aged Log",
 
+	"block-debarkednarrow-cypress-*": "Debarked greenspire cypress log",
+
 	"blockdesc-strippedlog-*": "A wooden log with its bark removed",
 
 	"block-*-barkbasket-birch-*": "Birch Bark Basket",
@@ -292,12 +305,15 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"block-*-barkbasket-walnut-*": "Walnut Bark Basket",
 	"block-*-barkbasket-purpleheart-*": "Purpleheart Bark Basket",
 	"block-*-barkbasket-aged-*": "Aged Bark Basket",
+	"block-*-barkbasket-cypress-*": "Greenspire Cypress Basket",	
 
 	"blockdesc-barkbasket-*": "A small basket woven from malleable tree bark used to hold just a few things",
 
 	"block-salvepot-empty": "Empty Salve Container",
 	"block-salvepot-birch": "Unprepared Salve Mixture(birch bark/fat)",
 	"block-salvepot-pine": "Unprepared Salve Mixture(pine bark/fat)",
+	"block-salvepot-oak": "Unprepared Salve Mixture(oak bark/fat)",
+	"block-salvepot-acacia": "Unprepared Salve Mixture(acacia bark/fat)",
 	"block-salvepot-barkoil": "Prepared Salve Mixture(barkoil)",
 	"block-salvepot-hardwax": "Hardened Salve Thickener(beeswax)",
 	"block-salvepot-softwax": "Melted Salve Thickener(beeswax)",
@@ -500,23 +516,29 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"item-bark-walnut": "Walnut Bark",
 	"item-bark-purpleheart": "Purpleheart Bark",
 	"item-bark-aged": "Aged Bark",
+	"item-bark-cypress": "Greenspire Cypress Bark",	
 
 	"itemdesc-bark-*": "Bark pulled from a tree by an adze",
 
 	"game:item-flour-birch": "Birch Flour",
 	"game:item-flour-pine": "Pine Flour",
+	"game:item-flour-maple": "Maple Flour",	
 
 	"game:item-dough-birch": "Birch Dough",
 	"game:item-dough-pine": "Pine Dough",
+	"game:item-dough-maple": "Maple Dough",	
 
 	"game:item-bread-birch-partbaked": "Birch Bread(part-baked)",
 	"game:item-bread-pine-partbaked": "Pine Bread(part-baked)",
+	"game:item-bread-maple-partbaked": "Maple Bread(part-baked)",	
 
 	"game:item-bread-birch-perfect": "Birch Bread",
 	"game:item-bread-pine-perfect": "Pine Bread",
+	"game:item-bread-maple-perfect": "Maple Bread",	
 
 	"game:item-bread-birch-charred": "Birch Bread(charred)",
 	"game:item-bread-pine-charred": "Pine Bread(charred)",
+	"game:item-bread-maple-charred": "Maple Bread(charred)",
 
 	"item-salveportion": "Bark Healing Salve Portion",
 
@@ -690,13 +712,196 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	//-- Acorns Compatibility --//
 	"game:item-dough-acornbirch": "Acorn-Birch Dough",
 	"game:item-dough-acornpine": "Acorn-Pine Dough",
+	"game:item-dough-acornmaple": "Acorn-Maple Dough",	
 
 	"game:item-bread-acornbirch-partbaked": "Acorn-Birch Bread(part-baked)",
 	"game:item-bread-acornpine-partbaked": "Acorn-Pine Bread(part-baked)",
+	"game:item-bread-acornmaple-partbaked": "Acorn-Maple Bread(part-baked)",
 
 	"game:item-bread-acornbirch-perfect": "Acorn-Birch Bread",
 	"game:item-bread-acornpine-perfect": "Acorn-Pine Bread",
+	"game:item-bread-acornmaple-perfect": "Acorn-Maple Bread",	
 
 	"game:item-bread-acornbirch-charred": "Acorn-Birch Bread(charred)",
 	"game:item-bread-acornpine-charred": "Acorn-Pine Bread(charred)",
+	"game:item-bread-acornmaple-charred": "Acorn-Maple Bread(charred)",	
+
+	//-- Dappled Groves Compatibility --//
+	"ancienttools:blockhelp-barkdriedout": "Remove dried bark",
+
+	//-- Wildcraft Trees Compatibility --//
+
+	"blockhelp-insert-sprucebark": "Insert Spruce Bark",
+	"blockhelp-insert-alderbark": "Insert Alder Bark",
+	"blockhelp-insert-beechbark": "Insert Beech Bark",
+	"blockhelp-insert-douglasfirbark": "Insert Douglas Fir Bark",
+	"blockhelp-insert-blackpoplarbark": "Insert Black Poplar Bark",
+	"blockhelp-insert-pyramidalpoplarbark": "Insert Pyramidal Poplar Bark",
+	"blockhelp-insert-cedarbark": "Insert Cedar Bark",
+	"blockhelp-insert-willowbark": "Insert Willow Bark",
+
+	"block-debarkednarrow-alder-*": "Debarked alder log",
+	"block-debarkednarrow-brideinwhite-*": "Debarked bride in white log",
+	"block-debarkednarrow-willow-*": "Debarked willow log",
+
+	"block-curingrack-douglasfir-*": "Douglas Fir Curing Rack",
+	"block-curingrack-willow-*": "Willow Curing Rack",
+	"block-curingrack-honeylocust-*": "Honey Locust Curing Rack",
+	"block-curingrack-bearnut-*": "Bearnut Curing Rack",
+	"block-curingrack-blackpoplar-*": "Black Poplar Curing Rack",
+	"block-curingrack-pyramidalpoplar-*": "Pyramidal Poplar Curing Rack",
+	"block-curingrack-catalpa-*": "Catalpa Curing Rack",
+	"block-curingrack-mahogany-*": "Mahogany Curing Rack",
+	"block-curingrack-sal-*": "Sal Curing Rack",
+	"block-curingrack-saxaul-*": "Saxaul Curing Rack",
+	"block-curingrack-spruce-*": "Spruce Curing Rack",
+	"block-curingrack-sycamore-*": "Sycamore Curing Rack",
+	"block-curingrack-elm-*": "Elm Curing Rack",
+	"block-curingrack-beech-*": "Beech Curing Rack",
+	"block-curingrack-eucalyptus-*": "Eucalyptus Curing Rack",
+	"block-curingrack-cedar-*": "Cedar Curing Rack",
+
+	"block-*-barkbasket-douglasfir-*": "Douglas Fir Bark Basket",
+	"block-*-barkbasket-willow-*": "Willow Bark Basket",
+	"block-*-barkbasket-honeylocust-*": "Honey Locust Bark Basket",
+	"block-*-barkbasket-bearnut-*": "Bearnut Bark Basket",
+	"block-*-barkbasket-blackpoplar-*": "Black Poplar Bark Basket",
+	"block-*-barkbasket-pyramidalpoplar-*": "Pyramidal Poplar Bark Basket",
+	"block-*-barkbasket-catalpa-*": "Catalpa Bark Basket",
+	"block-*-barkbasket-mahogany-*": "Mahogany Bark Basket",
+	"block-*-barkbasket-sal-*": "Sal Bark Basket",
+	"block-*-barkbasket-saxaul-*": "Saxaul Bark Basket",
+	"block-*-barkbasket-spruce-*": "Spruce Bark Basket",
+	"block-*-barkbasket-sycamore-*": "Sycamore Bark Basket",
+	"block-*-barkbasket-elm-*": "Elm Bark Basket",
+	"block-*-barkbasket-beech-*": "Beech Bark Basket",
+	"block-*-barkbasket-eucalyptus-*": "Eucalyptus Bark Basket",
+	"block-*-barkbasket-cedar-*": "Cedar Bark Basket",
+	"block-*-barkbasket-alder-*": "Alder Bark Basket",
+	"block-*-barkbasket-brideinwhite-*": "Bride in White Bark Basket",
+
+	"block-stretchingframe-douglasfir-*": "Douglas Fir Stretching Frame",
+	"block-stretchingframe-willow-*": "Willow Stretching Frame",
+	"block-stretchingframe-honeylocust-*": "Honey Locust Stretching Frame",
+	"block-stretchingframe-bearnut-*": "Bearnut Stretching Frame",
+	"block-stretchingframe-blackpoplar-*": "Black Poplar Stretching Frame",
+	"block-stretchingframe-pyramidalpoplar-*": "Pyramidal Poplar Stretching Frame",
+	"block-stretchingframe-catalpa-*": "Catalpa Stretching Frame",
+	"block-stretchingframe-mahogany-*": "Mahogany Stretching Frame",
+	"block-stretchingframe-sal-*": "Sal Stretching Frame",
+	"block-stretchingframe-saxaul-*": "Saxaul Stretching Frame",
+	"block-stretchingframe-spruce-*": "Spruce Stretching Frame",
+	"block-stretchingframe-sycamore-*": "Sycamore Stretching Frame",
+	"block-stretchingframe-elm-*": "Elm Stretching Frame",
+	"block-stretchingframe-beech-*": "Beech Stretching Frame",
+	"block-stretchingframe-eucalyptus-*": "Eucalyptus Stretching Frame",
+	"block-stretchingframe-cedar-*": "Cedar Stretching Frame",
+
+	"block-salvepot-spruce": "Unprepared Salve Mixture(spruce bark/fat)",
+	"block-salvepot-alder": "Unprepared Salve Mixture(alder bark/fat)",
+	"block-salvepot-birch": "Unprepared Salve Mixture(birch bark/fat)",
+	"block-salvepot-beech": "Unprepared Salve Mixture(beech bark/fat)",
+	"block-salvepot-douglasfir": "Unprepared Salve Mixture(douglas fir bark/fat)",
+	"block-salvepot-blackpoplar": "Unprepared Salve Mixture(black poplar bark/fat)",
+	"block-salvepot-pyramidalpoplar": "Unprepared Salve Mixture(pyramidal poplar bark/fat)",
+	"block-salvepot-willow": "Unprepared Salve Mixture(willow bark/fat)",
+	"block-salvepot-cedar": "Unprepared Salve Mixture(cedar bark/fat)",
+
+	"block-directionalresin-resin-douglasfir-*": "Leaking douglas fir log with resin",
+	"block-directionalresin-resinharvested-douglasfir-*": "Leaking douglas fir log",
+	"block-directionalresin-resin-spruce-*": "Leaking spruce log with resin",
+	"block-directionalresin-resinharvested-spruce-*": "Leaking spruce log",
+
+	"item-bark-douglasfir": "Douglas Fir Bark",
+	"item-bark-willow": "Willow Bark",
+	"item-bark-honeylocust": "Honey Locust Bark",
+	"item-bark-bearnut": "Bearnut Bark",
+	"item-bark-blackpoplar": "Black Poplar Bark",
+	"item-bark-pyramidalpoplar": "Pyramidal Poplar Bark",
+	"item-bark-catalpa": "Catalpa Bark",
+	"item-bark-mahogany": "Mahogany Bark",
+	"item-bark-sal": "Sal Bark",
+	"item-bark-saxaul": "Saxaul Bark",
+	"item-bark-spruce": "Spruce Bark",
+	"item-bark-sycamore": "Sycamore Bark",
+	"item-bark-elm": "Elm Bark",
+	"item-bark-beech": "Beech Bark",
+	"item-bark-eucalyptus": "Eucalyptus Bark",
+	"item-bark-cedar": "Cedar Bark",
+	"item-bark-alder": "Alder Bark",						
+	"item-bark-brideinwhite": "Bride in White Bark",		
+
+	"item-beam-douglasfir": "Douglas Fir Beam",
+	"item-beam-willow": "Willow Beam",
+	"item-beam-honeylocust": "Honey Locust Beam",
+	"item-beam-bearnut": "Bearnut Beam",
+	"item-beam-blackpoplar": "Black Poplar Beam",
+	"item-beam-pyramidalpoplar": "Pyramidal Poplar Beam",
+	"item-beam-catalpa": "Catalpa Beam",
+	"item-beam-mahogany": "Mahogany Beam",
+	"item-beam-sal": "Sal Beam",
+	"item-beam-saxaul": "Saxaul Beam",
+	"item-beam-spruce": "Spruce Beam",
+	"item-beam-sycamore": "Sycamore Beam",
+	"item-beam-elm": "Elm Beam",
+	"item-beam-beech": "Beech Beam",
+	"item-beam-eucalyptus": "Eucalyptus Beam",
+	"item-beam-cedar": "Cedar Beam",
+
+	"item-wood-douglasfir-cart": "Douglas Fir Cart",
+	"item-wood-willow-cart": "Willow Cart",
+	"item-wood-honeylocust-cart": "Honey Locust Cart",
+	"item-wood-bearnut-cart": "Bearnut Cart",
+	"item-wood-blackpoplar-cart": "Black Poplar Cart",
+	"item-wood-pyramidalpoplar-cart": "Pyramidal Poplar Cart",
+	"item-wood-catalpa-cart": "Catalpa Cart",
+	"item-wood-mahogany-cart": "Mahogany Cart",
+	"item-wood-sal-cart": "Sal Cart",
+	"item-wood-saxaul-cart": "Saxaul Cart",
+	"item-wood-spruce-cart": "Spruce Cart",
+	"item-wood-sycamore-cart": "Sycamore Cart",
+	"item-wood-elm-cart": "Elm Cart",
+	"item-wood-beech-cart": "Beech Cart",
+	"item-wood-eucalyptus-cart": "Eucalyptus Cart",
+	"item-wood-cedar-cart": "Cedar Cart",
+
+	"item-wheel-douglasfir": "Douglas Fir Wheel",
+	"item-wheel-willow": "Willow Wheel",
+	"item-wheel-honeylocust": "Honey Locust Wheel",
+	"item-wheel-bearnut": "Bearnut Wheel",
+	"item-wheel-blackpoplar": "Black Poplar Wheel",
+	"item-wheel-pyramidalpoplar": "Pyramidal Poplar Wheel",
+	"item-wheel-catalpa": "Catalpa Wheel",
+	"item-wheel-mahogany": "Mahogany Wheel",
+	"item-wheel-sal": "Sal Wheel",
+	"item-wheel-saxaul": "Saxaul Wheel",
+	"item-wheel-spruce": "Spruce Wheel",
+	"item-wheel-sycamore": "Sycamore Wheel",
+	"item-wheel-elm": "Elm Wheel",
+	"item-wheel-beech": "Beech Wheel",
+	"item-wheel-eucalyptus": "Eucalyptus Wheel",
+	"item-wheel-cedar": "Cedar Wheel",
+
+	"game:item-flour-spruce": "Spruce Flour",	
+	"game:item-dough-spruce": "Spruce Dough",
+	"game:item-bread-spruce-partbaked": "Spruce Bread(part-baked)",
+	"game:item-bread-spruce-perfect": "Spruce Bread",
+	"game:item-bread-spruce-charred": "Spruce Bread(charred)",
+
+	"entity-wood-douglasfir-cart": "Douglas Fir Cart",
+	"entity-wood-willow-cart": "Willow Cart",
+	"entity-wood-honeylocust-cart": "Honey Locust Cart",
+	"entity-wood-bearnut-cart": "Bearnut Cart",
+	"entity-wood-blackpoplar-cart": "Black Poplar Cart",
+	"entity-wood-pyramidalpoplar-cart": "Pyramidal Poplar Cart",
+	"entity-wood-catalpa-cart": "Catalpa Cart",
+	"entity-wood-mahogany-cart": "Mahogany Cart",
+	"entity-wood-sal-cart": "Sal Cart",
+	"entity-wood-saxaul-cart": "Saxaul Cart",
+	"entity-wood-spruce-cart": "Spruce Cart",
+	"entity-wood-sycamore-cart": "Sycamore Cart",
+	"entity-wood-elm-cart": "Elm Cart",
+	"entity-wood-beech-cart": "Beech Cart",
+	"entity-wood-eucalyptus-cart": "Eucalyptus Cart",
+	"entity-wood-cedar-cart": "Cedar Cart",
 }

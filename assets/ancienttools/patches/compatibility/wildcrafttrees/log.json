@@ -1,0 +1,11 @@
+﻿[
+	{
+        "op": "add",
+        "path": "/behaviorsByType/*-grown-*/-",
+        "value": { "name": "ConvertToResinLog", properties: { "variantType": "wood", "variantValues": ["pine", "acacia", "douglasfir", "spruce"] } },
+        "file": "game:blocktypes/wood/woodtyped/log",
+        "side": "Server",
+        "condition": { "when": "AllowCarvingForResin", "isValue": "true" },
+        "dependsOn": [{ "modid": "wildcrafttrees" }],
+    },
+]

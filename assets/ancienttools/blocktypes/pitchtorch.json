@@ -9,8 +9,8 @@
 		{ code: "orientation", states: ["up"], loadFromProperties: "abstract/horizontalorientation" }
 	],
 	creativeinventory: { "general": ["*-up"], "decorative": ["*-up"], "ancienttools": ["*-up"] },
-	behaviorsbyType: {
-		"*-lit-*": [{name: "CanIgnite"}]
+	behaviorsByType: {
+		"*-lit-*": [{name: "CanIgnite"}],
 	},
 	attributes: {
 		transientPropsbyType: {

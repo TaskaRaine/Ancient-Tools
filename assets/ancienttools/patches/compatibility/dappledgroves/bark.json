@@ -1,19 +1,14 @@
 ﻿[
 	{
 		"op": "add",
-		"path": "/attributesByType",
+		"path": "/attributes/salvePropertiesByType",
 		"value": {
-			"@bark-(birch|pine)-(dry|soaked)": {
-				salveProperties: {
-					isMedicinalBark: true,
-					langCode: "ancienttools:blockhelp-insert-{bark}bark"
-				},
-				mortarProperties: {
-					shape: "ancienttools:shapes/block/mortar/resourceshapes/resource_ancienttools_bark_{bark}"
-				},
-				handbook: {
-					groupBy: ["bark-*"]
-				},
+			"@bark-(birch|pine|oak|acacia)-(soaked)": {
+				isMedicinalBark: true,
+				langCode: "ancienttools:blockhelp-insert-{bark}bark"
+			},
+			"@bark-(birch|pine|oak|acacia)-(dry)": {
+				langCode: "ancienttools:blockhelp-barkdriedout"
 			}
 		},
 		"file": "indappledgroves:itemtypes/resources/bark",
@@ -22,13 +17,93 @@
 	},
 	{
 		"op": "add",
+		"path": "/attributes/handbookByType/@bark-(birch|pine|oak|acacia)-(soaked)",
+		"value": {
+			extraSections: 
+			[{
+				title: "ancienttools:handbook-usedfor-handbookinfo",
+				text: "ancienttools:handbook-salve-craftinfo-dot"
+			}]
+		},
+		"file": "indappledgroves:itemtypes/resources/bark",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/salvePropertiesByType/@bark-(spruce|alder|beech|douglasfir|blackpoplar|pyramidalpoplar|cedar|willow)-(soaked)",
+		"value": {
+			isMedicinalBark: true,
+			langCode: "ancienttools:blockhelp-insert-{bark}bark"
+		},
+		"file": "indappledgroves:itemtypes/resources/bark",
+		"dependsOn": [{"modid": "indappledgroves"}, {"modid": "wildcrafttrees"}],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/salvePropertiesByType/@bark-(spruce|alder|beech|douglasfir|blackpoplar|pyramidalpoplar|cedar|willow)-(dry)",
+		"value": {
+			langCode: "ancienttools:blockhelp-barkdriedout"
+		},
+		"file": "indappledgroves:itemtypes/resources/bark",
+		"dependsOn": [{"modid": "indappledgroves"}, {"modid": "wildcrafttrees"}],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/handbookByType/@bark-(spruce|alder|beech|douglasfir|blackpoplar|pyramidalpoplar|cedar|willow)-(soaked)",
+		"value": {
+			extraSections: 
+			[{
+				title: "ancienttools:handbook-usedfor-handbookinfo",
+				text: "ancienttools:handbook-salve-craftinfo-dot"
+			}]
+		},
+		"file": "indappledgroves:itemtypes/resources/bark",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/mortarPropertiesByType",
+		"value": {
+			"@bark-(birch|pine)-(dry)": {
+				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_ancienttools_bark_{bark}",
+				texturePaths: [{ code: "{bark}", path: "game:block/wood/bark/{bark}" }],
+				groundStack: { type: "item", code: "game:flour-{bark}" },
+				resultQuantity: 1
+			},
+			"@bark-(maple)-(dry)": {
+				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_ancienttools_bark_birch",
+				texturePaths: [{ code: "birch", path: "game:block/wood/bark/{bark}" }],
+				groundStack: { type: "item", code: "game:flour-{bark}" },
+				resultQuantity: 1
+			}
+		},
+		"file": "indappledgroves:itemtypes/resources/bark",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/attributes/mortarPropertiesByType/@bark-(spruce)-(dry)",
+		"value": {
+			shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_ancienttools_bark_pine",
+			texturePaths: [{ code: "pine", path: "game:block/wood/bark/{bark}" }],
+			groundStack: { type: "item", code: "game:flour-{bark}" },
+			resultQuantity: 1
+		},
+		"file": "indappledgroves:itemtypes/resources/bark",
+		"dependsOn": [{"modid": "indappledgroves"}, {"modid": "wildcrafttrees"}],
+		"side": "Server"
+	},
+	{
+		"op": "add",
 		"path": "/grindingPropsByType",
 		"value": {
-			"*-birch-dry": {
-				grindedStack: { type: "item", code: "game:flour-birch" }
-			},
-			"*-pine-dry": {
-				grindedStack: { type: "item", code: "game:flour-pine" }
+			"@bark-(birch|pine|maple)-dry": {
+				grindedStack: { type: "item", code: "game:flour-{bark}" }
 			}
 		},
 		"file": "indappledgroves:itemtypes/resources/bark",
@@ -42,5 +117,37 @@
 		"file": "indappledgroves:itemtypes/resources/bark",
 		"dependsOn": [{"modid": "indappledgroves"}],
 		"side": "Server"
-	}	
+	},
+	{
+        "op": "move",
+		"frompath": "/attributes/handbookByType/*-soaked",
+		"path": "/temp",
+		"file": "indappledgroves:itemtypes/resources/bark",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+    },
+	{
+        "op": "move",
+		"frompath": "/temp",
+		"path": "/attributes/handbookByType/*-soaked",
+		"file": "indappledgroves:itemtypes/resources/bark",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+    },
+	{
+        "op": "move",
+		"frompath": "/attributes/handbookByType/*-dry",
+		"path": "/temp",
+		"file": "indappledgroves:itemtypes/resources/bark",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+    },
+	{
+        "op": "move",
+		"frompath": "/temp",
+		"path": "/attributes/handbookByType/*-dry",
+		"file": "indappledgroves:itemtypes/resources/bark",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+    },
 ]

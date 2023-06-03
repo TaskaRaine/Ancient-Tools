@@ -1,0 +1,12 @@
+﻿[
+	{
+        "op": "add",
+        "path": "/attributes/woodStrippable",
+        "value": {
+            "resultingLog": "ancienttools:debarkednarrow-{wood}-{rotation}",
+            "barkMultiplier": 0.5
+        },
+        "file": "game:blocktypes/wood/woodtyped/log-narrow",
+		"side": "Server"
+    },
+]

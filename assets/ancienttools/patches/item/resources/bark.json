@@ -15,7 +15,14 @@
 	},
 	{
 		"op": "remove",
-		"path": "/behaviorsByType/@bark-(birch|pine)",
+		"path": "/attributesByType/@bark-(maple)/mortarProperties",
+		"file": "itemtypes/resources/bark",
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "false" }
+	},
+	{
+		"op": "remove",
+		"path": "/behaviorsByType/@bark-(birch|pine|oak|acacia)",
 		"file": "itemtypes/resources/bark",
 		"side": "Server",
 		"condition": { "when": "SalveEnabled", "isValue": "false" }
@@ -23,6 +30,13 @@
 	{
 		"op": "remove",
 		"path": "/attributesByType/@bark-(birch|pine)/salveProperties",
+		"file": "itemtypes/resources/bark",
+		"side": "Server",
+		"condition": { "when": "SalveEnabled", "isValue": "false" }
+	},
+	{
+		"op": "remove",
+		"path": "/attributesByType/@bark-(oak|acacia)/salveProperties",
 		"file": "itemtypes/resources/bark",
 		"side": "Server",
 		"condition": { "when": "SalveEnabled", "isValue": "false" }

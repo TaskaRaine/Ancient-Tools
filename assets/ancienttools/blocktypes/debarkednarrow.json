@@ -1,0 +1,51 @@
+﻿{
+	code: "debarkednarrow",
+	behaviors: [
+		{name: "Pillar"}
+	],
+	variantgroups: [
+		{ code: "wood", states: ["cypress"] },
+		{ code: "rotation", states: ["ud", "ns", "we"] },
+	],
+	creativeinventory: { "ancienttools": ["*-ud"], "general": ["*-ud"], "construction": ["*-ud"] },
+	shape: { base: "game:block/wood/log/narrow8" },
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	blockmaterial: "Wood",
+	requiredMiningTier: 1,
+	textures: {
+		"all": { base: "ancienttools:block/wood/debarked/{wood}"}
+	},
+	replaceable: 500,
+	resistance: 4,
+	sounds: {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood",
+		"hit": "game:block/planks",
+		"break": "game:block/planks",
+		byTool: {
+			"Axe": { hit: "game:block/chop", break: "game:block/planks" }
+		}
+	},
+	drops: [
+		{ type: "item", code: "game:firewood", quantity: { avg: 2 }  }
+	],
+	combustibleProps: {
+		burnTemperature: 800,
+		burnDuration: 48,
+	},
+	collisionbox: { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2: 0.75 },
+	selectionbox: { x1: 0.21, y1: 0, z1: 0.21, x2: 0.79, y2: 1, z2: 0.79 },
+	maxStackSize: 16,
+	materialDensity: 700,
+	heldTpIdleAnimation: "holdbothhandslarge", heldTpUseAnimation: "twohandplaceblock",
+	tpHandTransform: {
+		translation: { x: -1.23, y: -0.91, z: -0.8 },
+		rotation: { x: -2, y: 25, z: -78 },
+		scale: 0.4
+	}
+}

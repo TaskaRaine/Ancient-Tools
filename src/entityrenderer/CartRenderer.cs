@@ -58,6 +58,8 @@ namespace AncientTools.EntityRenderers
         }
         */
         private const float DROPPED_HEIGHT = -0.2f;
+        private const float STOP_UPDATING_RANGE = 0.01f;
+        private const float CART_LERP_FACTOR = 0.075f;
 
         public EntityCart CartEntity { get; set; }
         public ShapeElement CartElement { 
@@ -93,6 +95,10 @@ namespace AncientTools.EntityRenderers
 
         public Matrixf ModelMat = new Matrixf();
 
+        public bool UpdatedInventory { get; set; } = false;
+
+        private int PreviousVerticesCount, PreviousIndicesCount;
+
         //public Vec3f LookAtVector { get; set; } = new Vec3f(DROPPED_HEIGHT, 0.0f, 0.0f);
 
         //public Size2i AtlasSize => Capi.EntityTextureAtlas.Size;
@@ -109,7 +115,7 @@ namespace AncientTools.EntityRenderers
             //-- Required to prevent a crash on game load when an inventory is already placed on a cart --//
             if (!CartEntity.MobileStorageInventory[0].Empty)
             {
-                if (CartEntity.MobileStorageInventory[0].Itemstack.Collectible is BlockGenericTypedContainer)
+                if (CartEntity.MobileStorageInventory[0].Itemstack.Collectible is BlockGenericTypedContainer && CartEntity.MobileStorageInventory[0].Itemstack.Attributes?.GetString("type") != null)
                 {
                     string type = CartEntity.MobileStorageInventory[0].Itemstack.Attributes.GetString("type");
 
@@ -123,15 +129,14 @@ namespace AncientTools.EntityRenderers
         {
             CurrentShape = Capi.Assets.TryGet("ancienttools:shapes/entity/cart_lg_woodwheel.json").ToObject<Shape>();
         }
-        public override void BeforeRender(float dt)
-        {
-            TesselateShape();
-        }
         public virtual void TesselateShape()
         {
-            if(!CartEntity.MobileStorageInventory[0].Empty)
+            if (!ShouldUpdateMesh(STOP_UPDATING_RANGE, Math.Abs(CurrentShape.Elements[0].RotationY - CartEntity.LookAtVector.Y * GameMath.RAD2DEG), Math.Abs(CartElement.RotationX - CartEntity.LookAtVector.X * GameMath.RAD2DEG)))
+                return;
+
+            if (!CartEntity.MobileStorageInventory[0].Empty)
             {
-                if (CartEntity.MobileStorageInventory[0].Itemstack.Collectible is BlockGenericTypedContainer)
+                if (CartEntity.MobileStorageInventory[0].Itemstack.Collectible is BlockGenericTypedContainer && CartEntity.MobileStorageInventory[0].Itemstack.Attributes?.GetString("type") != null)
                 {
                     string type = CartEntity.MobileStorageInventory[0].Itemstack.Attributes.GetString("type");
 
@@ -145,7 +150,7 @@ namespace AncientTools.EntityRenderers
                     }
                 }
                 else
-                    InventoryShapes[0] = Capi.Assets.Get<Shape>(new AssetLocation(CartEntity.MobileStorageInventory[0].Itemstack.Block.Shape.Base.Domain, "shapes/" + CartEntity.MobileStorageInventory[0].Itemstack.Block.Shape.Base.Path + ".json")) as Shape;
+                    InventoryShapes[0] = InventoryShapes[0] = Capi.Assets.Get<Shape>(new AssetLocation(CartEntity.MobileStorageInventory[0].Itemstack.Collectible.Attributes["mobileStorageProps"]["shape"].AsString() + ".json"));
             }
             else if(CurrentShape.Elements[0].Children[2].Children != null)
             {
@@ -155,12 +160,13 @@ namespace AncientTools.EntityRenderers
 
             MeshData = GenMesh();
 
-            UpdateMesh(MeshData);
+            if(MeshData != null)
+                UpdateMesh(MeshData);
         }
         public MeshData GenMesh()
         {
-            CurrentShape.Elements[0].RotationY = TaskaMath.ShortLerpDegrees(CurrentShape.Elements[0].RotationY, CartEntity.LookAtVector.Y * GameMath.RAD2DEG, 0.05);
-            CartElement.RotationX = TaskaMath.ShortLerpDegrees(CartElement.RotationX, CartEntity.LookAtVector.X * GameMath.RAD2DEG, 0.05);
+            CurrentShape.Elements[0].RotationY = TaskaMath.ShortLerpDegrees(CurrentShape.Elements[0].RotationY, CartEntity.LookAtVector.Y * GameMath.RAD2DEG, CART_LERP_FACTOR);
+            CartElement.RotationX = TaskaMath.ShortLerpDegrees(CartElement.RotationX, CartEntity.LookAtVector.X * GameMath.RAD2DEG, CART_LERP_FACTOR);
 
             if (CartEntity.AttachedEntity != null)
             {
@@ -209,12 +215,21 @@ namespace AncientTools.EntityRenderers
                     MeshRef = Capi.Render.UploadMesh(mesh);
                 else
                 {
-                    //-- I should be able to use api.Render.UpdateMesh instead of uploading a brand new mesh object but this seems to cause a crash in VS 1.17 --//
-                    Capi.Render.DeleteMesh(MeshRef);
-                    MeshRef = null;
+                    if(!UpdatedInventory || mesh.VerticesCount == PreviousVerticesCount || mesh.IndicesCount == PreviousIndicesCount )
+                        Capi.Render.UpdateMesh(MeshRef, mesh);
+                    else
+                    {
+                        Capi.Render.DeleteMesh(MeshRef);
+                        MeshRef = null;
 
-                    MeshRef = Capi.Render.UploadMesh(mesh);
+                        MeshRef = Capi.Render.UploadMesh(mesh);
+
+                        UpdatedInventory = false;
+                    }
                 }
+
+                PreviousVerticesCount = mesh.VerticesCount;
+                PreviousIndicesCount = mesh.IndicesCount;
             }
         }
         public override void DoRender3DOpaque(float dt, bool isShadowPass)
@@ -251,6 +266,13 @@ namespace AncientTools.EntityRenderers
         public override void Dispose()
         {
             MeshRef?.Dispose();
+        }
+        private bool ShouldUpdateMesh(float rangeLimit, double yDifference, double xDifference)
+        {
+            if (UpdatedInventory == true || yDifference > rangeLimit || xDifference > rangeLimit)
+                return true;
+
+            return false;
         }
     }
 }

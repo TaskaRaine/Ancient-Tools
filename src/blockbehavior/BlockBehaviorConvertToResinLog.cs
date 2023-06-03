@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
 
@@ -10,7 +11,7 @@ namespace AncientTools.BlockBehaviors
     class BlockBehaviorConvertToResinLog : BlockBehavior
     {
         public WorldInteraction[] scrapeLogInteractions = null;
-        private string[] variantTypes = { "wood" };
+        private string variantType = "wood";
         private string[] variantValues = { "pine", "acacia" };
 
         private bool beginScrape = false;
@@ -19,73 +20,86 @@ namespace AncientTools.BlockBehaviors
         {
 
         }
+        public override void Initialize(JsonObject properties)
+        {
+            base.Initialize(properties);
 
+            if(properties["variantType"].Exists)
+                variantType = properties["variantType"].AsString();
+
+            if (properties["variantValues"].Exists)
+                variantValues = properties["variantValues"].AsArray<string>();
+        }
         public override void OnLoaded(ICoreAPI api)
         {
             base.OnLoaded(api);
 
-            if (block.CodeWithVariants(variantTypes, variantValues).Equals(block.Code))
-            {
-                List<ItemStack> knives = new List<ItemStack>();
-
-                foreach(Item item in api.World.Items)
+            foreach (string variant in variantValues)
+                if (block.CodeWithVariant(variantType, variant).Equals(block.Code))
                 {
-                    if (item == null)
-                        continue;
+                    List<ItemStack> knives = new List<ItemStack>();
 
-                    if (item.Tool == EnumTool.Knife)
-                        knives.Add(new ItemStack(item));
-                }
-
-                WorldInteraction scrapeInteraction = new WorldInteraction()
-                {
-                    ActionLangCode = "ancienttools:blockhelp-scrape-log",
-                    MouseButton = EnumMouseButton.Right,
-                    HotKeyCode = "sneak",
-                    Itemstacks = knives.ToArray()
-                };
-
-                scrapeLogInteractions = ObjectCacheUtil.GetOrCreate(api, "scrapeInteractions", () =>
-                {
-                    return new WorldInteraction[]
+                    foreach(Item item in api.World.Items)
                     {
-                        scrapeInteraction
+                        if (item == null)
+                            continue;
+
+                        if (item.Tool == EnumTool.Knife)
+                            knives.Add(new ItemStack(item));
+                    }
+
+                    WorldInteraction scrapeInteraction = new WorldInteraction()
+                    {
+                        ActionLangCode = "ancienttools:blockhelp-scrape-log",
+                        MouseButton = EnumMouseButton.Right,
+                        HotKeyCode = "sneak",
+                        Itemstacks = knives.ToArray()
                     };
-                });
-            }
+
+                    scrapeLogInteractions = ObjectCacheUtil.GetOrCreate(api, "scrapeInteractions", () =>
+                    {
+                        return new WorldInteraction[]
+                        {
+                            scrapeInteraction
+                        };
+                    });
+                }
         }
         public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer, ref EnumHandling handling)
         {
-            if (block.CodeWithVariants(variantTypes, variantValues).Equals(block.Code))
-            {
-                if (!FindResin(world, selection.Position))
-                    return scrapeLogInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer, ref handling));
-            }
+            foreach (string variant in variantValues)
+                if (block.CodeWithVariant(variantType, variant).Equals(block.Code))
+                {
+                    if (!FindResin(world, selection.Position))
+                        return scrapeLogInteractions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer, ref handling));
+                }
 
             return base.GetPlacedBlockInteractionHelp(world, selection, forPlayer, ref handling);
         }
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
         {
-            if (block.CodeWithVariants(variantTypes, variantValues).Equals(block.Code))
-            {
-                if (blockSel == null || byPlayer.InventoryManager.ActiveTool != EnumTool.Knife)
-                    return false;
-
-                if (byPlayer.Entity.Controls.Sneak || byPlayer.Entity.Controls.Sprint)
+            foreach(string variant in variantValues)
+                if (block.CodeWithVariant(variantType, variant).Equals(block.Code))
                 {
-                    if (blockSel.Face != BlockFacing.UP || blockSel.Face != BlockFacing.DOWN)
-                    {
-                        if (!FindResin(world, blockSel.Position))
-                        {
-                            world.PlaySoundAt(new AssetLocation("ancienttools", "sounds/block/knifecarve"), byPlayer.Entity.Pos.X, byPlayer.Entity.Pos.Y, byPlayer.Entity.Pos.Z, byPlayer, false);
-                            handling = EnumHandling.PreventSubsequent;
+                    if (blockSel == null || byPlayer.InventoryManager.ActiveTool != EnumTool.Knife)
+                        return false;
 
-                            beginScrape = true;
-                            return true;
+                    if (byPlayer.Entity.Controls.Sneak || byPlayer.Entity.Controls.Sprint)
+                    {
+                        if (blockSel.Face != BlockFacing.UP || blockSel.Face != BlockFacing.DOWN)
+                        {
+                            if (!FindResin(world, blockSel.Position))
+                            {
+                                world.PlaySoundAt(new AssetLocation("ancienttools", "sounds/block/knifecarve"), byPlayer.Entity.Pos.X, byPlayer.Entity.Pos.Y, byPlayer.Entity.Pos.Z, byPlayer, false);
+                                handling = EnumHandling.PreventSubsequent;
+
+                                beginScrape = true;
+                                return true;
+                            }
                         }
                     }
                 }
-            }
+
             beginScrape = false;
 
             return false;

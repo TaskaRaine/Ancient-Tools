@@ -10,7 +10,13 @@
 			origin: { x: 0.5, y: 0, z: 0.5 },
 			scale: 0.65
 		},
-		isPitchCharcoal: true
+		isPitchCharcoal: true,
+		handbook: {
+			extraSections: [{
+				title: "ancienttools:handbook-usedfor-handbookinfo",
+				text: "ancienttools:handbook-mixingpitch-craftinfo-dot"
+			}],
+		}
 	},
 	behaviors: [{ 
 		name: "ConvertBlockUsingIngredient",

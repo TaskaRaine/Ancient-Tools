@@ -10,7 +10,7 @@
 			"F": { 
 				type: "item", 
 				code: "game:flour-*", 
-				allowedVariants: ["pine", "birch"],
+				allowedVariants: ["pine", "birch", "maple"],
 				name: "type",
 				quantity: 4
 			}

@@ -12,6 +12,19 @@
 	},
 	{
 		"op": "add",
+		"path": "/attributes/handbook",
+		"value": {
+			extraSections: [{
+				title: "ancienttools:handbook-usedfor-handbookinfo",
+				text: "ancienttools:handbook-salve-craftinfo-dot"
+			}],
+		},
+		"file": "game:itemtypes/resource/beeswax",
+		"side": "Server",
+		"condition": { "when": "SalveEnabled", "isValue": "true" }
+	},
+	{
+		"op": "add",
 		"path": "/behaviors",
 		"value": [
 			{ 

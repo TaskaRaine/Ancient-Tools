@@ -42,27 +42,27 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="VintagestoryAPI">
-      <HintPath>H:\VintageStory 1.18.1\VintagestoryAPI.dll</HintPath>
+      <HintPath>H:\VintageStory 1.18.5\VintagestoryAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>H:\VintageStory 1.18.1\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.18.5\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>H:\VintageStory 1.18.1\Mods\VSEssentials.dll</HintPath>
+      <HintPath>H:\VintageStory 1.18.5\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>H:\VintageStory 1.18.1\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.18.5\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>H:\VintageStory 1.18.1\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>H:\VintageStory 1.18.5\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="0Harmony">
-      <HintPath>H:\VintageStory 1.18.1\Lib\0Harmony.dll</HintPath>
+      <HintPath>H:\VintageStory 1.18.5\Lib\0Harmony.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +74,10 @@
     <Content Include="assets\ancienttools\sounds\block\saucer.ogg" />
     <Content Include="assets\ancienttools\sounds\block\stripwood.ogg" />
     <Content Include="assets\ancienttools\sounds\item\sawingwood.ogg" />
+    <Content Include="assets\ancienttools\textures\block\wood\debarked\alder.png" />
+    <Content Include="assets\ancienttools\textures\block\wood\debarked\brideinwhite.png" />
+    <Content Include="assets\ancienttools\textures\block\wood\debarked\coconut.png" />
+    <Content Include="assets\ancienttools\textures\block\wood\debarked\willow.png" />
     <Content Include="assets\ancienttools\textures\compatibility\acorns\block\mortar\acornleached.png" />
     <Content Include="assets\ancienttools\textures\compatibility\acorns\block\mortar\acornmeal.png" />
     <Content Include="assets\ancienttools\textures\block\liquid\brainingsolution.png" />
@@ -131,6 +135,7 @@
     <None Include="assets\ancienttools\blocktypes\pitchtorch.json" />
     <None Include="assets\ancienttools\blocktypes\salvepot.json" />
     <None Include="assets\ancienttools\blocktypes\stretchingframe.json" />
+    <None Include="assets\ancienttools\blocktypes\debarkednarrow.json" />
     <None Include="assets\ancienttools\blocktypes\toolmoldancienttools.json" />
     <None Include="assets\ancienttools\compatibility\buildingplus\recipes\grid\strippedsupport.json" />
     <None Include="assets\ancienttools\config\handbook\barkstrippingguide.json" />
@@ -153,6 +158,7 @@
     <None Include="assets\ancienttools\patches\block\debarkedlog.json" />
     <None Include="assets\ancienttools\patches\block\firepit.json" />
     <None Include="assets\ancienttools\patches\block\forge.json" />
+    <None Include="assets\ancienttools\patches\block\lognarrow.json" />
     <None Include="assets\ancienttools\patches\block\pitkiln.json" />
     <None Include="assets\ancienttools\patches\block\pot.json" />
     <None Include="assets\ancienttools\patches\block\seashell.json" />
@@ -169,7 +175,9 @@
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\crushedore.json" />
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\dough.json" />
     <None Include="assets\ancienttools\patches\compatibility\bricklayers\frit.json" />
+    <None Include="assets\ancienttools\patches\compatibility\capreolinae\brains.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\ancienttools disables\adze.json" />
+    <None Include="assets\ancienttools\patches\compatibility\dappledgroves\ancienttools disables\adzeheadmold.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\ancienttools disables\bark.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\ancienttools disables\barkbasket.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\ancienttools disables\salvepot.json" />
@@ -177,7 +185,6 @@
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\ancienttools disables\tannin.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\bark.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\barkbasket.json" />
-    <None Include="assets\ancienttools\patches\compatibility\dappledgroves\strippedlog.json" />
     <None Include="assets\ancienttools\patches\compatibility\dappledgroves\tannin.json" />
     <None Include="assets\ancienttools\patches\compatibility\expandedfoods\bread.json" />
     <None Include="assets\ancienttools\patches\compatibility\expandedfoods\peanut.json" />
@@ -187,6 +194,23 @@
     <None Include="assets\ancienttools\patches\compatibility\moreanimals\capercaillie.json" />
     <None Include="assets\ancienttools\patches\compatibility\moreanimals\goldenpheasant.json" />
     <None Include="assets\ancienttools\patches\compatibility\moreanimals\pheasant.json" />
+    <None Include="assets\ancienttools\patches\compatibility\multi-requirement\bricklayers+wildcrafttrees\dough-bricklayers.json" />
+    <None Include="assets\ancienttools\patches\compatibility\multi-requirement\dappledgroves+wildcrafttrees\bark.json" />
+    <None Include="assets\ancienttools\patches\compatibility\pantherinae\brains.json" />
+    <None Include="assets\ancienttools\patches\compatibility\reignited\pitchtorch.json" />
+    <None Include="assets\ancienttools\patches\compatibility\wildcrafttrees\bread.json" />
+    <None Include="assets\ancienttools\patches\compatibility\wildcrafttrees\bark.json" />
+    <None Include="assets\ancienttools\patches\compatibility\wildcrafttrees\barkbasket.json" />
+    <None Include="assets\ancienttools\patches\compatibility\wildcrafttrees\beams.json" />
+    <None Include="assets\ancienttools\patches\compatibility\wildcrafttrees\cartcraft.json" />
+    <None Include="assets\ancienttools\patches\compatibility\wildcrafttrees\debarkednarrow.json" />
+    <None Include="assets\ancienttools\patches\compatibility\wildcrafttrees\dough.json" />
+    <None Include="assets\ancienttools\patches\compatibility\wildcrafttrees\flour.json" />
+    <None Include="assets\ancienttools\patches\compatibility\wildcrafttrees\itemcart.json" />
+    <None Include="assets\ancienttools\patches\compatibility\wildcrafttrees\directionalresin.json" />
+    <None Include="assets\ancienttools\patches\compatibility\wildcrafttrees\log.json" />
+    <None Include="assets\ancienttools\patches\compatibility\wildcrafttrees\salvepot.json" />
+    <None Include="assets\ancienttools\patches\compatibility\wildcrafttrees\wheelcraft.json" />
     <None Include="assets\ancienttools\patches\entity\land\gazelle.json" />
     <None Include="assets\ancienttools\patches\item\food\grain.json" />
     <None Include="assets\ancienttools\patches\item\resources\bone.json" />
@@ -266,6 +290,7 @@
     <None Include="assets\ancienttools\recipes\grid\compatibility\vanillavariants\dough.json" />
     <None Include="assets\ancienttools\recipes\grid\compatibility\vanillavariants\hidewatersack.json" />
     <None Include="assets\ancienttools\recipes\grid\compatibility\betterthanheresy\pitchpot.json" />
+    <None Include="assets\ancienttools\recipes\grid\compatibility\wildcrafttrees\barkdough.json" />
     <None Include="assets\ancienttools\recipes\grid\item\beam.json" />
     <None Include="assets\ancienttools\recipes\grid\item\wheel.json" />
     <None Include="assets\ancienttools\recipes\grid\spawners\cart.json" />
@@ -292,6 +317,7 @@
     <None Include="assets\ancienttools\shapes\block\lampsaucer\pitch_wall_lit.json" />
     <None Include="assets\ancienttools\shapes\block\mold\adze.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_acorns_acorns_dry_leached.json" />
+    <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_ancienttools_bark_maple.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_frit_baked.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_bricklayers_cookedbones.json" />
     <None Include="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_expandedfoods_choppedvegetable_cassavadried.json" />
@@ -511,10 +537,18 @@
     <None Include="assets\ancienttools\shapes\item\tool\adze-metal.json" />
     <None Include="assets\ancienttools\shapes\item\tool\adze-stone.json" />
     <None Include="assets\game\shapes\item\food\bread\acornamaranthbread-dough.json" />
+    <None Include="assets\game\shapes\item\food\bread\acornmaplebread.json" />
+    <None Include="assets\game\shapes\item\food\bread\acornmaplebread-dough.json" />
     <None Include="assets\game\shapes\item\food\bread\acornbirchbread-dough.json" />
     <None Include="assets\game\shapes\item\food\bread\acornbirchbread.json" />
     <None Include="assets\game\shapes\item\food\bread\acornpinebread-dough.json" />
     <None Include="assets\game\shapes\item\food\bread\acornpinebread.json" />
+    <None Include="assets\game\shapes\item\food\bread\maplebread.json" />
+    <None Include="assets\game\shapes\item\food\bread\maplebread-dough.json" />
+    <None Include="assets\game\shapes\item\food\bread\maplebread-sliced.json" />
+    <None Include="assets\game\shapes\item\food\bread\sprucebread.json" />
+    <None Include="assets\game\shapes\item\food\bread\sprucebread-dough.json" />
+    <None Include="assets\game\shapes\item\food\bread\sprucebread-sliced.json" />
     <None Include="assets\game\shapes\item\food\bread\birchbread.json" />
     <None Include="assets\game\shapes\item\food\bread\pinebread.json" />
     <None Include="assets\game\shapes\item\food\bread\pinebread-dough.json" />
@@ -530,10 +564,12 @@
     <Folder Include="assets\ancienttools\shapes\block\piles\" />
     <Folder Include="assets\ancienttools\sounds\effect\" />
     <Folder Include="assets\ancienttools\textures\block\food\pie\" />
+    <Folder Include="assets\ancienttools\textures\block\wood\bark\" />
     <Folder Include="assets\ancienttools\textures\item\food\flour\" />
     <Folder Include="assets\game\itemtypes\toolhead\" />
     <Folder Include="assets\game\recipes\" />
     <Folder Include="assets\game\shapes\block\clay\mold\" />
+    <Folder Include="assets\game\textures\block\wood\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\ancienttools\blocktypes\mortar.json" />
@@ -541,7 +577,6 @@
   <ItemGroup>
     <None Include="assets\ancienttools\patches\recipes\supportbeam.json" />
     <None Include="assets\ancienttools\patches\compatibility\expandedfoods\choppedvegetable.json" />
-    <Compile Include="src\blockbehavior\BlockBehaviorATHarvestable.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorMobileStorageDestruction.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorMobileStorageRepair.cs" />
     <Compile Include="src\collectiblebehavior\CollectibleBehaviorWedgeSmack.cs" />

@@ -1,0 +1,99 @@
+﻿[
+	//-- A patch exists in patches/item/food/bread.json to allow acorn breads to be placed within the creativeinventory array for Ancient Tools--//
+	{
+		"op": "add",
+		"path": "/variantgroups/0/states/-",
+		"value": "spruce",
+		"file": "game:itemtypes/food/bread",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-spruce-partbaked",
+		"value": {
+			saturation: 40, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-spruce-perfect",
+		"value": {
+			saturation: 100, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-spruce-charred",
+		"value": {
+			saturation: 60, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "move",
+		"frompath": "/nutritionPropsByType/*-partbaked",
+		"path": "/temp",
+		"file": "game:itemtypes/food/bread",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
+		"path": "/nutritionPropsByType/*-partbaked",
+		"file": "game:itemtypes/food/bread",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "move",
+		"frompath": "/nutritionPropsByType/*-perfect",
+		"path": "/temp",
+		"file": "game:itemtypes/food/bread",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
+		"path": "/nutritionPropsByType/*-perfect",
+		"file": "game:itemtypes/food/bread",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "move",
+		"frompath": "/nutritionPropsByType/*-charred",
+		"path": "/temp",
+		"file": "game:itemtypes/food/bread",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "move",
+		"frompath": "/temp",
+		"path": "/nutritionPropsByType/*-charred",
+		"file": "game:itemtypes/food/bread",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+]

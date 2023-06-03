@@ -109,15 +109,32 @@ namespace AncientTools.Blocks
             if (barkSlot.Empty)
                 return GetBarkInteractions();
 
-            ItemStack[] displayItemstack = new ItemStack[] { barkSlot.Itemstack.Clone() };
-            displayItemstack[0].StackSize = barkSlot.MaxSlotStackSize - displayItemstack[0].StackSize;
-
-            return new WorldInteraction
+            if (barkSlot.Itemstack?.Collectible?.Attributes["salveProperties"]?["isMedicinalBark"].AsBool() == true)
             {
-                ActionLangCode = barkSlot.Itemstack?.Collectible?.Attributes["salveProperties"]?["langCode"]?.ToString(),
-                MouseButton = EnumMouseButton.Right,
-                Itemstacks = displayItemstack
-            };
+                ItemStack[] displayItemstack = new ItemStack[] { barkSlot.Itemstack.Clone() };
+                displayItemstack[0].StackSize = barkSlot.MaxSlotStackSize - displayItemstack[0].StackSize;
+
+                return new WorldInteraction
+                {
+                    ActionLangCode = barkSlot.Itemstack?.Collectible?.Attributes["salveProperties"]?["langCode"]?.ToString(),
+                    MouseButton = EnumMouseButton.Right,
+                    Itemstacks = displayItemstack
+                };
+            }
+            else
+            {
+                string langCode = "ancienttools:blockhelp-salve-remove-incompatiblematerial";
+
+                if (barkSlot.Itemstack?.Collectible?.Attributes["salveProperties"]?["langCode"].Exists == true)
+                    langCode = barkSlot.Itemstack?.Collectible?.Attributes["salveProperties"]?["langCode"]?.ToString();
+
+                return new WorldInteraction
+                {
+                    ActionLangCode = langCode,
+                    MouseButton = EnumMouseButton.Right,
+                    RequireFreeHand = true
+                };
+            }
         }
         private WorldInteraction GetOilInteractions()
         {

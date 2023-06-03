@@ -1,28 +1,28 @@
-{ 
-　　// Japanese localization file for 'Ancient Tools'.
-  // Mod Version: v1.5.2
-  // Translated By: Macoto Hino
-  // Machine translation using PCOT and DeepL.
+{
+    "comment_description": "Japanese localization file for 'Ancient Tools'.",
+    "comment_version": "Mod Version: v1.5.5",
+    "comment_author": "Translated By: Macoto Hino",
+    "comment_technical_details": "Machine translation using PCOT and DeepL.",
   
 	"game:tabname-ancienttools": "Ancient Tools(古代の道具)",
 
 	"game:ancienttools-quickstart-guide": "Ancient Tools(古代の道具)",
-	"game:ancienttools-quickstart-title": "Ancient Tools(古代の道具)ガイド",
+	"game:ancienttools-quickstart-title": "Ancient Tools:ガイド",
 	"game:ancienttools-quickstart-text": 
-"<font weight='bold' align='center'>古代の道具ガイド</font><br>
+"<font weight='bold' align='center'>Ancient Tools(古代の道具):ガイド</font><br>
 <font weight='bold'>すり鉢とすりこ木</font>
 定番の<a href=\'handbook://block-ancienttools:mortar-granite\'>すり鉢</a>と<a href=\'handbook://item-ancienttools:pestle-basalt\'>すりこ木</a>。この2つの道具は、旧石器時代から何らかの形で使われており、スパイスや麦などの物質を挽くのに使われてきました。
 
 Vintage Storyでこれらのアイテムを使用するには、まずそれぞれを作成する必要があります。 すり鉢を地面に置き、<icon name='rightmousebutton'></icon>ですりこ木を差し込み、<icon name='rightmousebutton'></icon>で粉砕可能なアイテムを投入し、しゃがんで<icon name='rightmousebutton'></icon>を押し続けると、粉砕が始まります。
 
 <font weight='bold'>釿（ちょうな）</font>
-新石器時代に登場したこの<a href=\'handbooksearch://釿\'>釿</a>は、古代の大工が木材を様々なオブジェや建築物に成形する為によく使われた道具です。 現在の古代の道具modでは、釿は<a href=\'handbook://item-ancienttools:bark-oak\'>樹皮</a>を木から剥ぐ為に使用されています。  
+新石器時代に登場したこの<a href=\'handbooksearch://釿（ちょうな）\'>釿（ちょうな）</a>は、古代の大工が木材を様々なオブジェや建築物に成形する為によく使われた道具です。 現在の古代の道具modでは、釿（ちょうな）は<a href=\'handbook://item-ancienttools:bark-oak\'>樹皮</a>を木から剥ぐ為に使用されています。  
 
-釿を作るには、まず<a href=\'handbooksearch://釿頭\'>釿の頭</a>を石の<a href=\"handbook://craftinginfo-knapping\">ナッピング</a>、<a href=\"handbook://craftinginfo-smelting\">製錬</a>、<a href=\"handbook://craftinginfo-smithing\">鍛治</a>のいずれかの方法で作らなければなりません。出来上がった釿の頭を棒で削れば、樹皮を集めるための便利な道具になります。！釿を手に近い木に近付き、しゃがんで<icon name='rightmousebutton'></icon>を押すと、剥ぎ取ります。
+釿（ちょうな）を作るには、まず<a href=\'handbooksearch://釿（ちょうな）の頭\'>釿（ちょうな）の頭</a>を石の<a href=\"handbook://craftinginfo-knapping\">ナッピング</a>、<a href=\"handbook://craftinginfo-smelting\">製錬</a>、<a href=\"handbook://craftinginfo-smithing\">鍛治</a>のいずれかの方法で作らなければなりません。出来上がった釿（ちょうな）の頭を棒で削れば、樹皮を集める為の便利な道具になります。！釿（ちょうな）を手に近い木に近付き、しゃがんで<icon name='rightmousebutton'></icon>を押すと、剥ぎ取ります。
 
-石の釿の頭は、骨と一緒に加工することで、より頑丈な道具になります！
+石の釿（ちょうな）の頭は、骨と一緒に加工することで、より頑丈な道具になります！
 
-樹皮や樹皮を剥いだ丸太の用途の詳細は、<a href=\"handbook://ancienttools-quickstart-guide-barkstripping\">樹皮剥がしガイド</a>をご覧下さい。
+樹皮や樹皮を剥いだ原木の用途の詳細は、<a href=\"handbook://ancienttools-quickstart-guide-barkstripping\">樹皮剥がしガイド</a>をご覧下さい。
 
 
 <font weight='bold'>熟成棚</font>
@@ -48,7 +48,7 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 
 松脂の作り方については、<a href=\"handbook://ancienttools-quickstart-guide-pitch\">松脂ガイド</a>に詳しい説明があります。
 
-注意：Ancient Toolsの松脂生産には樹脂が不可欠なので、ナイフでマツやアカシアの木を削って滴る丸太を作るシステムが実装されました。このシステムはMODの設定ファイルで無効にすることが出来ます。
+注意：Ancient Toolsの松脂生産には樹脂が不可欠なので、ナイフでマツやアカシアの木を削って滴る原木を作るシステムが実装されました。このシステムはMODの設定ファイルで無効にすることが出来ます。
 
 <font weight='bold'>移動式収納</font>
 
@@ -61,9 +61,10 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 それぞれの原始的な荷車の作り方や使い方の詳細は、「<a href=\"handbook://ancienttools-quickstart-feature-mobilestorage\">移動式収納</a>」の項目でご覧頂けます。
 ",
 "game:ancienttools-quickstart-guide-barkstripping": "樹皮剥がしガイド",
-"game:ancienttools-quickstart-title-barkstripping": "クラフトメカニック: 樹皮剥がし",
+"game:ancienttools-quickstart-title-barkstripping": "Ancient Tools: 樹皮剥がし",
 "game:ancienttools-quickstart-text-barkstripping": 
-"<font weight='bold' align='center'>樹皮剥がしガイド</font><br>
+"
+<font weight='bold' align='center'>樹皮剥がしガイド</font><br>
 
 <a href=\'handbooksearch://釿（ちょうな）\'>釿（ちょうな）</a>を手に入れたら、いよいよ剥がし作業です。
 
@@ -71,26 +72,27 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 
 <a href=\'handbook://item-ancienttools:bark-birch\'>シラカバの樹皮</a>や<a href=\'handbook://item-ancienttools:bark-pine\'>マツの樹皮</a>は、樹木の中でも特殊な性質を持つ資源であり、それを活用することが出来ます。 
 
-どちらの樹木も樹皮の内側は食べられるので、<a href=\'handbooksearch://粉\'>粉</a>にして焼くと<a href=\'handbooksearch://パン\'>パン</a>になります。これはスカンジナビアの先住民族サーミの文化です。 
+多くの樹木の樹皮の内層は食用になり、<a href=\'handbooksearch://粉\'>粉</a>にして焼くと<a href=\'handbooksearch://パン\'>パン</a>になります。これは、スカンジナビア地方の先住民族サーミの伝統的な文化です。
 
-また、どちらの樹皮も様々な薬効があります。もし興味があれば、<a href=\"handbook://ancienttools-quickstart-guide-salve\">膏薬の調合ガイド</a>をご覧下さい。
+また、様々な病気の治療に使われた医療効果のある樹皮も沢山あります。それらを活用したい方は、<a href=\"handbook://ancienttools-quickstart-guide-salve\">膏薬の調合ガイド</a>をご覧下さい。
 ",
 "game:ancienttools-quickstart-guide-salve": "膏薬（こうやく）ガイド",
-"game:ancienttools-quickstart-title-salve": "クラフトメカニック：膏薬（こうやく）の調合",
+"game:ancienttools-quickstart-title-salve": "Ancient Tools：膏薬（こうやく）の調合",
 "game:ancienttools-quickstart-text-salve": 
-"<font weight='bold' align='center'>古代の道具の膏薬の調合ガイド</font><br>
-樹皮は歴史上、様々な用途使われてきました。<a href=\'handbooksearch://シラカバ\'>シラカバ</a>や<a href=\'handbooksearch://マツ\'>マツ</a>など、の多くの木には様々な有益な治癒効果があります。 シラカバは関節の痛みを和らげる為に、マツは炎症を軽減する為に最も一般的に使用されてます。
+"
+<font weight='bold' align='center'>Ancient Tools(古代の道具)の膏薬の調合ガイド</font><br>
+樹皮は歴史上、様々な用途に使われてきました。<a href=\'handbooksearch://シラカバ\'>シラカバ</a>、<a href=\'handbooksearch://マツ\'>マツ</a>、<a href=\'handbooksearch://オーク\'>オーク</a>、<a href=\'handbooksearch://アカシア\'>アカシア</a>など、の多くの木には様々な有益な治癒効果があります。 シラカバは関節の痛みを和らげる為に、マツは炎症を軽減する為に最も一般的に使用されてます。
 
-この特性を活かす為に、各家庭では<a href=\'handbook://item-ancienttools:salveportion\'>膏薬</a>作り、肌に塗ることもあります。古代の道具で膏薬を作るには、まず、2つの調理鍋を<a href=\'handbook://block-ancienttools:salvepot-empty\'>空の膏薬容器</a>に変換する必要があります。これは、しゃがんで膏薬成分(<a href=\'handbook://item-ancienttools:bark-birch\'>シラカバ</a>/<a href=\'handbook://item-ancienttools:bark-pine\'>マツ</a>の樹皮, <a href=\'handbook://item-fat\'>脂の塊</a>、<a href=\'handbook://item-beeswax\'>蜜蝋</a>)を<icon name='rightmousebutton'></icon>を押すか、グリッドで薬用樹皮を使った<a href=\'handbook://block-claypot-burned\'>調理鍋</a>をクラフトすることで行えます。
+この特性を活かす為に、各家庭では<a href=\'handbook://item-ancienttools:salveportion\'>膏薬</a>を作り、肌に塗ることもあります。Ancient Tools(古代の道具)で膏薬を作るには、まず、2つの調理鍋を<a href=\'handbook://block-ancienttools:salvepot-empty\'>空の膏薬容器</a>に変換する必要があります。これは、しゃがんで膏薬成分(の樹皮, <a href=\'handbook://item-fat\'>脂の塊</a>、<a href=\'handbook://item-beeswax\'>蜜蝋</a>)を<icon name='rightmousebutton'></icon>するか、クラフトグリッドで薬用樹皮を使った<a href=\'handbook://block-claypot-burned\'>調理鍋</a>をクラフトすることで行えます。
 
-両方の<a href=\'handbook://block-ancienttools:空の膏薬容器\'>空の膏薬容器</a>を地面に置きます。 一方に<a href=\'handbook://item-ancienttools:bark-birch\'>シラカバ</a>や<a href=\'handbook://item-ancienttools:bark-pine\'>マツ</a>の樹皮と<a href=\'handbook://item-fat\'>脂の塊</a>を、もう一方に<a href=\'handbook://item-beeswax\'>蜜蝋</a>を入れます。 両方とも焚き火で加熱して、調合したものに変えます。
+両方の<a href=\'handbook://block-ancienttools:空の膏薬容器\'>空の膏薬容器</a>を地面に置きます。一方に樹皮と<a href=\'handbook://item-fat\'>脂の塊</a>を、もう一方に<a href=\'handbook://item-beeswax\'>蜜蝋</a>を入れます。両方とも焚き火で加熱して、調合したものに変えます。
 
 最後に、用意した容器をしゃがんで地面に置き、もう一方の容器を手に持って<icon name='rightmousebutton'></icon>で注ぎます。おめでとうございます！治療膏薬の出来上がりです！出来上がった膏薬は<icon name='rightmousebutton'></icon>で使用すると時間経過と共に回復する<a href=\'handbook://item-ancienttools:salveportion\'>ポーション</a>です。
 
 空の膏薬容器をクラフトグリッドに置くと、再び調理鍋に戻すことが出来ます。
 ",
 "game:ancienttools-quickstart-guide-tanning": "ネイティブアメリカンの鞣し革ガイド",
-"game:ancienttools-quickstart-title-tanning": "クラフトメカニック: ネイティブアメリカンの鞣し革",
+"game:ancienttools-quickstart-title-tanning": "Ancient Tools: ネイティブアメリカンの鞣し革",
 "game:ancienttools-quickstart-text-tanning": 
 "
 <font weight='bold' align='center'>ネイティブアメリカンの鞣し革ガイド</font><br>
@@ -114,7 +116,7 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 さて、いよいよ最終段階です。燻製した皮をナイフで丁寧に<a href=\'handbook://item-leather-plain\'>短冊状</a>にカットしていきます。この作業は、クラフトグリッドで行います。
 ",
 "game:ancienttools-quickstart-guide-pitch": "松脂ガイド",
-"game:ancienttools-quickstart-title-pitch": "クラフトメカニック： 松脂の作り方",
+"game:ancienttools-quickstart-title-pitch": "Ancient Tools： 松脂の作り方",
 "game:ancienttools-quickstart-text-pitch": 
 "<font weight='bold' align='center'>松脂ガイド</font><br>
 
@@ -129,21 +131,21 @@ Vintage Storyでこれらのアイテムを使用するには、まずそれぞ�
 あとは、その混合物を手に取り、近くの焚き火台で加熱すると、<a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>完成したら、地面に鉢を置き、<a href=\'handbook://item-stick\'>棒</a>で松脂を取ることが出来ます。
 ",
 "game:ancienttools-quickstart-guide-woodsplitting": "木の割り方ガイド",
-"game:ancienttools-quickstart-title-woodsplitting": "クラフトメカニック: 木の割り方",
+"game:ancienttools-quickstart-title-woodsplitting": "Ancient Tools: 木の割り方",
 "game:ancienttools-quickstart-text-woodsplitting": "
 <font weight='bold' align='center'>木の割り方ガイド</font><br>
 
-木の丸太は、大き過ぎて使い物にならないことがあります。新石器時代から産業革命前まで、木を使いやすい大きさに加工する技術として、『割る』という行為が行われていました。
+木の原木は、大き過ぎて使い物にならないことがあります。新石器時代から産業革命前まで、木を使いやすい大きさに加工する技術として、『割る』という行為が行われていました。
 
-その為、<a href=\'handbooksearch://木槌\'>木槌</a>で木目に<a href=\'handbooksearch://楔\'>楔</a>を打ち込み、小さくても頑丈な木製品を作る文化が多くありました。
+その為、<a href=\'handbooksearch://木槌\'>木槌</a>で木目に<a href=\'handbooksearch://楔（くさび）\'>楔（くさび）</a>を打ち込み、小さくても頑丈な木製品を作る文化が多くありました。
 
-同様に、石や鍛造で作られた<a href=\'handbooksearch://楔\'>楔</a>は、直立した<a href=\'handbooksearch://樹皮を剥いだ丸太\'>樹皮を剥いだ丸太</a>に<icon name='rightmousebutton'></icon>で設置し、<icon name='leftmousebutton'></icon>で<a href=\'handbooksearch://木槌\'>木槌</a>で叩くことが出来ます。四つ割りにすると、新しい<a href=\'handbooksearch://角材\'>角材</a>を手に入れることが出来ます。
+同様に、石や鍛造で作られた<a href=\'handbooksearch://楔（くさび）\'>楔（くさび）</a>は、直立した<a href=\'handbooksearch://樹皮を剥いだ原木\'>樹皮を剥いだ原木</a>に<icon name='rightmousebutton'></icon>で設置し、<icon name='leftmousebutton'></icon>で<a href=\'handbooksearch://木槌\'>木槌</a>で叩くことが出来ます。四つ割りにすると、新しい<a href=\'handbooksearch://角材\'>角材</a>を手に入れることが出来ます。
 
 <a href=\'handbooksearch://角材\'>角材</a>は、Ancient Toolsの<a href=\'handbooksearch://車輪\'>車輪</a>や<a href=\"handbook://ancienttools-quickstart-feature-mobilestorage\">移動式収納</a>に欠かせない構造部品です。
 ",
 
 	"game:ancienttools-quickstart-feature-mobilestorage": "移動式収納の特徴",
-	"game:ancienttools-quickstart-title-mobilestorage": "移動式収納",
+	"game:ancienttools-quickstart-title-mobilestorage": "Ancient Tools: 移動式収納",
 	"game:ancienttools-quickstart-text-mobilestorage": 
 "<font weight='bold' align='center'>移動式収納</font><br>
 
@@ -168,11 +170,19 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 荷車のチェストの中身が空っぽになると、取り外すことが出来ます。手ぶらでスプリント+<icon name='rightmousebutton'></icon>で、荷車から取り外せます。
 ",
 
+	"handbook-usedfor-handbookinfo": "以下に使用",
+
 	"handbook-smelting-craftinfo": "<a href=\"handbook://craftinginfo-smelting\">鍛造</a>",
 	"handbook-barkstripping-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-barkstripping\">樹皮剥がし</a>",
 	"handbook-salve-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-salve\">軟膏の調合</a>",
 	"handbook-mixingpitch-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-pitch\">松脂の混合物</a>",
 	"handbook-woodsplitting-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-woodsplitting\">木の分割</a>",
+
+	"handbook-smelting-craftinfo": "• <a href=\"handbook://craftinginfo-smelting\">鍛造</a>",
+	"handbook-barkstripping-craftinfo": "• <a href=\"handbook://ancienttools-quickstart-guide-barkstripping\">樹皮剥がし</a>",
+	"handbook-salve-craftinfo": "• <a href=\"handbook://ancienttools-quickstart-guide-salve\">軟膏の調合</a>",
+	"handbook-mixingpitch-craftinfo": "• <a href=\"handbook://ancienttools-quickstart-guide-pitch\">松脂の混合物</a>",
+	"handbook-woodsplitting-craftinfo": "• <a href=\"handbook://ancienttools-quickstart-guide-woodsplitting\">木の分割</a>",
 
 	"blockhelp-place-pestle": "すりこ木を配置します",
 	"blockhelp-place-resource": "粉砕可能なリソースを配置する",
@@ -186,6 +196,8 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"blockhelp-insert-healingbark": "樹皮を入れる",
 	"blockhelp-insert-birchbark": "シラカバの樹皮を入れる",
 	"blockhelp-insert-pinebark": "マツの樹皮を入れる",
+	"blockhelp-insert-oakbark": "オークの樹皮を入れる",
+	"blockhelp-insert-acaciabark": "アカシアの樹皮を入れる",
 	"blockhelp-insert-oil": "脂肪を入れる",
 	"blockhelp-insert-thickener": "蜜蝋を入れる",
 
@@ -208,8 +220,8 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"blockhelp-saucer-insert-object": "松脂を入れる/蝋燭",
 	"blockhelp-scrape-log": "削り取る",
 
-	"blockhelp-place-wedge": "楔を差し込む",
-	"blockhelp-smack-wedge": "楔を打ち込む",
+	"blockhelp-place-wedge": "楔（くさび）を差し込む",
+	"blockhelp-smack-wedge": "楔（くさび）を打ち込む",
 
 	"blockinfo-curingrack": "一般的に塩漬け肉を熟成させる為に使用されます。フックは付属していません。",
 	"blockinfo-curingrack-no-entity": "このブロックで問題が発生しました。 ブロックエンティティは存在しません。ブロックを壊して、もう一度置いて下さい。",
@@ -220,14 +232,14 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"blockinfo-curingrack-perish-status": "腐敗まで: {0} 日",
 	"blockinfo-curingrack-meat-perish": "貯蔵肉の腐敗速度: {0}x",
 
-	"blockinfo-salve-empty-fillwithbark": "膏薬の容器には、シラカバ/マツの樹皮と脂肪または蜜蝋を入れる必要があります。",
+	"blockinfo-salve-empty-fillwithbark": "膏薬の容器には、薬用樹皮と脂肪または蜜蝋を入れる必要があります。",
 	"blockinfo-salve-empty-crouch": "しゃがんでアイテムを入れると開始します。",
 	"blockinfo-salve-empty-partial": "含有: ",
 	"blockinfo-salve-empty-bark": "{0}/{1} 樹皮",
 	"blockinfo-salve-empty-wax": "{0}/{1} 蜜蝋",
 	"blockinfo-salve-empty-fat": "{0}/{1} 脂肪",
 	"blockinfo-salve-mixwithoil": "治療膏薬を作るには、樹皮油と混ぜる必要があります。",
-	"blockinfo-salve-mixwithwax": "治療膏薬を作るには、液体ワックスと混ぜる必要があります。",
+	"blockinfo-salve-mixwithwax": "治療膏薬を作るには、液体の蜜蝋と混ぜる必要があります。",
 	"blockinfo-salve-filled-remaining": "残りの膏薬ポーション。",
 
 	"blockinfo-pitch-empty": "木炭粉、樹脂、干し草を充填し、松脂の混合物を作ります。",
@@ -238,11 +250,11 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"blockinfo-pitch-empty-grass": "{0}/{1} 干し草",
 	"blockinfo-pitch-remaining": "{0}つの松脂が残っています。",
 
-	"block-mortar-peridotite": "かんらん岩すり鉢",
-	"block-mortar-andesite": "安山岩すり鉢",
-	"block-mortar-granite": "花崗岩すり鉢",
-	"block-mortar-basalt": "玄武岩すり鉢",
-	"block-mortar-chert": "チャート岩すり鉢",
+	"block-mortar-peridotite": "かんらん岩のすり鉢",
+	"block-mortar-andesite": "安山岩のすり鉢",
+	"block-mortar-granite": "花崗岩のすり鉢",
+	"block-mortar-basalt": "玄武岩のすり鉢",
+	"block-mortar-chert": "チャート岩のすり鉢",
 
 	"blockdesc-mortar-*": "すりこ木と一緒に使えば、あらゆるものを粉砕することが出来ます。",
 
@@ -262,44 +274,47 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 
 	"blockdesc-curingrack-*": "一般的に塩漬けの肉を熟成させる為に使用されます。フックは付属していません。",
 
-	"block-strippedlog-birch-*": "樹皮を剥いだシラカバの丸太",
-	"block-strippedlog-oak-*": "樹皮を剥いだオークの丸太",
-	"block-strippedlog-maple-*": "樹皮を剥いだカエデの丸太",
-	"block-strippedlog-pine-*": "樹皮を剥いだマツの丸太",
-	"block-strippedlog-acacia-*": "樹皮を剥いだアカシアの丸太",
-	"block-strippedlog-kapok-*": "樹皮を剥いだカポックの丸太",
-	"block-strippedlog-baldcypress-*": "樹皮を剥いだヌマスギの丸太",
-	"block-strippedlog-larch-*": "樹皮を剥いだカラマツの丸太",
-	"block-strippedlog-redwood-*": "樹皮を剥いだレッドウッドのマルタ",
-	"block-strippedlog-ebony-*": "樹皮を剥いだコクタンの丸太",
-	"block-strippedlog-walnut-*": "樹皮を剥いだクルミの木材",
-	"block-strippedlog-purpleheart-*": "樹皮を剥いだパープルハートの木材",
-	"block-strippedlog-aged-*": "樹皮を剥いだ古びた丸太",
+	"block-strippedlog-birch-*": "樹皮を剥いだシラカバの原木",
+	"block-strippedlog-oak-*": "樹皮を剥いだオークの原木",
+	"block-strippedlog-maple-*": "樹皮を剥いだカエデの原木",
+	"block-strippedlog-pine-*": "樹皮を剥いだマツの原木",
+	"block-strippedlog-acacia-*": "樹皮を剥いだアカシアの原木",
+	"block-strippedlog-kapok-*": "樹皮を剥いだカポックの原木",
+	"block-strippedlog-baldcypress-*": "樹皮を剥いだヌマスギの原木",
+	"block-strippedlog-larch-*": "樹皮を剥いだカラマツの原木",
+	"block-strippedlog-redwood-*": "樹皮を剥いだレッドウッドの原木",
+	"block-strippedlog-ebony-*": "樹皮を剥いだコクタンの原木",
+	"block-strippedlog-walnut-*": "樹皮を剥いだクルミの原木",
+	"block-strippedlog-purpleheart-*": "樹皮を剥いだパープルハートの原木",
+	"block-strippedlog-aged-*": "樹皮を剥いだ古びた原木",
 
-	"blockdesc-strippedlog-*": "樹皮を剥いだ木の丸太",
+	"block-debarkednarrow-cypress-*": "樹皮を剥いだイトスギの原木",
 
-	"block-*-barkbasket-birch-*": "シラカバ樹皮バスケット",
-	"block-*-barkbasket-oak-*": "オーク樹皮バスケット",
-	"block-*-barkbasket-maple-*": "カエデ樹皮バスケット",
-	"block-*-barkbasket-pine-*": "マツ樹皮バスケット",
-	"block-*-barkbasket-acacia-*": "アカシア樹皮バスケット",
-	"block-*-barkbasket-kapok-*": "カポック樹皮バスケット",
-	"block-*-barkbasket-baldcypress-*": "ヌマスギ樹皮バスケット",
-	"block-*-barkbasket-larch-*": "カラマツ樹皮バスケット",
-	"block-*-barkbasket-redwood-*": "レッドウッド樹皮バスケット",
-	"block-*-barkbasket-ebony-*": "コクタン樹皮バスケット",
-	"block-*-barkbasket-walnut-*": "クルミ樹皮バスケット",
-	"block-*-barkbasket-purpleheart-*": "パープルハート樹皮バスケット",
+	"blockdesc-strippedlog-*": "樹皮を剥いだ木の原木",
+
+	"block-*-barkbasket-birch-*": "シラカバの樹皮バスケット",
+	"block-*-barkbasket-oak-*": "オークの樹皮バスケット",
+	"block-*-barkbasket-maple-*": "カエデの樹皮バスケット",
+	"block-*-barkbasket-pine-*": "マツの樹皮バスケット",
+	"block-*-barkbasket-acacia-*": "アカシアの樹皮バスケット",
+	"block-*-barkbasket-kapok-*": "カポックの樹皮バスケット",
+	"block-*-barkbasket-baldcypress-*": "ヌマスギの樹皮バスケット",
+	"block-*-barkbasket-larch-*": "カラマツの樹皮バスケット",
+	"block-*-barkbasket-redwood-*": "レッドウッドの樹皮バスケット",
+	"block-*-barkbasket-ebony-*": "コクタンの樹皮バスケット",
+	"block-*-barkbasket-walnut-*": "クルミの樹皮バスケット",
+	"block-*-barkbasket-purpleheart-*": "パープルハートの樹皮バスケット",
 	"block-*-barkbasket-aged-*": "古びた樹皮バスケット",
+	"block-*-barkbasket-cypress-*": "イトスギの樹皮バスケット",
 
 	"blockdesc-barkbasket-*": "柔軟な木の樹皮で編まれた小さな籠で、ちょっとしたものを入れるのに使われています。",
 
 	"block-salvepot-empty": "空の膏薬容器",
-	"block-salvepot-birch": "シラカバ樹皮と脂肪の混合物",
-	"block-salvepot-pine": "マツ樹皮と脂肪の混合物",
-	"block-salvepot-barkoil": "樹皮油の混合物",
-	"block-salvepot-hardwax": "蜜蝋の固形増粘剤",
-	"block-salvepot-softwax": "蜜蝋の液体増粘剤",
+	"block-salvepot-birch": "未加工の膏薬の混合物(シラカバの樹皮/脂肪)",
+	"block-salvepot-pine": "未加工の膏薬の混合物(マツ樹皮の樹皮/脂肪)",
+	"block-salvepot-barkoil": "加工済の膏薬の混合物(樹皮油)",
+	"block-salvepot-hardwax": "固形増粘剤(蜜蝋)",
+	"block-salvepot-softwax": "液体増粘剤(蜜蝋)",
 	"block-salvepot-finishedsalve": "樹皮治癒膏薬",
 
 	"block-stretchingframe-birch-*": "シラカバのストレッチフレーム",
@@ -437,7 +452,7 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"item-adze-*-meteoriciron": "隕鉄の釿（ちょうな）",
 	"item-adze-*-steel": "鋼の釿（ちょうな）",
 
-	"itemdesc-adze-*": "丸太から樹皮を剥がす為の道具",
+	"itemdesc-adze-*": "原木から樹皮を剥がす為の道具",
 
 	"itemdesc-saltedmeat-cure-x-days": "棚に入れられた時: 熟成まで{0}日",
 
@@ -462,27 +477,27 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"item-saltedmeat-bushmeat-cooked": "調理された塩漬けブッシュミート",
 	"item-saltedmeat-redmeat-cooked": "調理した塩漬けレッドミート",
 
-	"item-adzehead-chert": "チャート石の釿頭",
-	"item-adzehead-granite": "花崗岩の釿頭",
-	"item-adzehead-andesite": "安山岩の釿頭",
-	"item-adzehead-basalt": "玄武岩の釿頭",
-	"item-adzehead-obsidian": "黒曜石の釿頭",
-	"item-adzehead-peridotite": "かんらん岩の釿頭",
-	"item-adzehead-flint": "火打石の釿頭",
-	"item-adzehead-copper": "銅の釿頭",
-	"item-adzehead-tinbronze": "スズ青銅の釿頭",
-	"item-adzehead-bismuthbronze": "ビスマス青銅釿の頭",
-	"item-adzehead-blackbronze": "黒青銅の釿頭",
-	"item-adzehead-gold": "金の釿頭",
-	"item-adzehead-silver": "銀の釿頭",
-	"item-adzehead-iron": "鉄の釿頭",
-	"item-adzehead-meteoriciron": "隕鉄の釿頭",
-	"item-adzehead-steel": "鋼の釿頭",
+	"item-adzehead-chert": "チャート石の釿（ちょうな）頭",
+	"item-adzehead-granite": "花崗岩の釿（ちょうな）頭",
+	"item-adzehead-andesite": "安山岩の釿（ちょうな）頭",
+	"item-adzehead-basalt": "玄武岩の釿（ちょうな）頭",
+	"item-adzehead-obsidian": "黒曜石の釿（ちょうな）頭",
+	"item-adzehead-peridotite": "かんらん岩の釿（ちょうな）頭",
+	"item-adzehead-flint": "火打石の釿（ちょうな）頭",
+	"item-adzehead-copper": "銅の釿（ちょうな）頭",
+	"item-adzehead-tinbronze": "スズ青銅の釿（ちょうな）頭",
+	"item-adzehead-bismuthbronze": "ビスマス青銅釿（ちょうな）の頭",
+	"item-adzehead-blackbronze": "黒青銅の釿（ちょうな）頭",
+	"item-adzehead-gold": "金の釿（ちょうな）頭",
+	"item-adzehead-silver": "銀の釿（ちょうな）頭",
+	"item-adzehead-iron": "鉄の釿（ちょうな）頭",
+	"item-adzehead-meteoriciron": "隕鉄の釿（ちょうな）頭",
+	"item-adzehead-steel": "鋼の釿（ちょうな）頭",
 
 	"itemcraftdesc-adzehead-*": "木の樹皮剥がし用",
 
-	"block-toolmoldancienttools-raw-adze": "未焼成の釿頭の鋳型",
-	"block-toolmoldancienttools-burned-adze": "釿頭の鋳型",
+	"block-toolmoldancienttools-raw-adze": "未焼成の釿（ちょうな）頭の鋳型",
+	"block-toolmoldancienttools-burned-adze": "釿（ちょうな）頭の鋳型",
 
 	"item-bark-birch": "シラカバの樹皮",
 	"item-bark-oak": "オークの樹皮",
@@ -497,23 +512,29 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"item-bark-walnut": "クルミの樹皮",
 	"item-bark-purpleheart": "パープルハートの樹皮",
 	"item-bark-aged": "古びた樹皮",
+	"item-bark-cypress": "イトスギの樹皮",
 
-	"itemdesc-bark-*": "釿で木から剥がした樹皮",
+	"itemdesc-bark-*": "釿（ちょうな）で木から剥がした樹皮",
 
 	"game:item-flour-birch": "シラカバの粉",
 	"game:item-flour-pine": "マツの粉",
+	"game:item-flour-maple": "カエデの粉",
 
 	"game:item-dough-birch": "シラカバの生地",
 	"game:item-dough-pine": "マツの生地",
+	"game:item-dough-maple": "カエデの生地",
 
 	"game:item-bread-birch-partbaked": "シラカバのパン（生焼け）",
 	"game:item-bread-pine-partbaked": "マツのパン（生焼け）",
+	"game:item-bread-maple-partbaked": "カエデのパン(生焼け)",
 
 	"game:item-bread-birch-perfect": "シラカバのパン",
 	"game:item-bread-pine-perfect": "マツのパン",
+	"game:item-bread-maple-perfect": "カエデのパン",
 
-	"game:item-bread-birch-charred": "シラカバのパン（焦げた）",
-	"game:item-bread-pine-charred": "マツのパン（焦げた）",
+	"game:item-bread-birch-charred": "シラカバのパン（黒焦げ）",
+	"game:item-bread-pine-charred": "マツのパン（黒焦げ）",
+	"game:item-bread-maple-charred": "カエデのパン(黒焦げ)",
 
 	"item-salveportion": "樹皮治癒膏薬ポーション",
 
@@ -557,8 +578,8 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"item-mallet-*-peridotite": "かんらん岩の槌",
 	"item-mallet-*-flint": "火打石の槌",
 
-	"itemcraftdesc-mallet-*": "樹皮を剥いだ丸太を割る為の楔打ち用",
-	"itemdesc-mallet-*": "樹皮を剥いだ丸太を割る為の楔打ち用",
+	"itemcraftdesc-mallet-*": "樹皮を剥いだ原木を割る為の楔（くさび）打ち用",
+	"itemdesc-mallet-*": "樹皮を剥いだ原木を割る為の楔（くさび）打ち用",
 
 	"item-mallethead-chert": "チャート石の槌の槌頭",
 	"item-mallethead-granite": "花崗岩の槌の槌頭",
@@ -568,32 +589,32 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"item-mallethead-peridotite": "かんらん岩の槌の槌頭",
 	"item-mallethead-flint": "火打石の槌の槌頭",
 
-	"item-wedge-chert": "チャート石の楔",
-	"item-wedge-granite": "花崗岩の楔",
-	"item-wedge-andesite": "安山岩の楔",
-	"item-wedge-basalt": "玄武岩の楔",
-	"item-wedge-obsidian": "黒曜石の楔",
-	"item-wedge-peridotite": "かんらん岩の楔",
-	"item-wedge-flint": "火打石の楔",
-	"item-wedge-copper": "銅の楔",
-	"item-wedge-tinbronze": "スズ青銅の楔",
-	"item-wedge-bismuthbronze": "ビスマス青銅の楔",
-	"item-wedge-blackbronze": "黒青銅の楔",
-	"item-wedge-gold": "金の楔",
-	"item-wedge-silver": "銀の楔",
-	"item-wedge-iron": "鉄の楔",
-	"item-wedge-meteoriciron": "隕鉄の楔",
-	"item-wedge-steel": "鋼の楔",
+	"item-wedge-chert": "チャート石の楔（くさび）",
+	"item-wedge-granite": "花崗岩の楔（くさび）",
+	"item-wedge-andesite": "安山岩の楔（くさび）",
+	"item-wedge-basalt": "玄武岩の楔（くさび）",
+	"item-wedge-obsidian": "黒曜石の楔（くさび）",
+	"item-wedge-peridotite": "かんらん岩の楔（くさび）",
+	"item-wedge-flint": "火打石の楔（くさび）",
+	"item-wedge-copper": "銅の楔（くさび）",
+	"item-wedge-tinbronze": "スズ青銅の楔（くさび）",
+	"item-wedge-bismuthbronze": "ビスマス青銅の楔（くさび）",
+	"item-wedge-blackbronze": "黒青銅の楔（くさび）",
+	"item-wedge-gold": "金の楔（くさび）",
+	"item-wedge-silver": "銀の楔（くさび）",
+	"item-wedge-iron": "鉄の楔（くさび）",
+	"item-wedge-meteoriciron": "隕鉄の楔（くさび）",
+	"item-wedge-steel": "鋼の楔（くさび）",
 
-	"block-toolmoldancienttools-raw-wedge": "未焼成の楔の鋳型",
-	"block-toolmoldancienttools-burned-wedge": "楔の鋳型",	
+	"block-toolmoldancienttools-raw-wedge": "未焼成の楔（くさび）の鋳型",
+	"block-toolmoldancienttools-burned-wedge": "楔（くさび）の鋳型",	
 
-	"itemcraftdesc-wedge-*": "樹皮を剥いだ丸太を木槌で割るのに使う",
-	"itemdesc-wedge-*": "樹皮を剥いだ丸太を木槌で割るのに使う",
+	"itemcraftdesc-wedge-*": "樹皮を剥いだ原木を木槌で割るのに使う",
+	"itemdesc-wedge-*": "樹皮を剥いだ原木を木槌で割るのに使う",
 
 	"item-beam-aged": "古びた角材",
-	"item-beam-veryaged": "超古びた角材",
-    "item-beam-veryagedrotten": "腐食した超古びた角材",
+	"item-beam-veryaged": "とても古びた角材",                    
+	"item-beam-veryagedrotten": "腐食したとても古びた角材",
 	"item-beam-birch": "シラカバの角材",
 	"item-beam-oak": "オークの角材",
 	"item-beam-maple": "カエデの角材",
@@ -686,13 +707,193 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	//-- Acorns Compatibility --//
 	"game:item-dough-acornbirch": "ドングリとシラカバの生地",
 	"game:item-dough-acornpine": "ドングリとマツの生地",
+	"game:item-dough-acornmaple": "ドングリとカエデの生地",
 
 	"game:item-bread-acornbirch-partbaked": "ドングリとシラカバのパン(生焼け)",
 	"game:item-bread-acornpine-partbaked": "ドングリとマツのパン(生焼け)",
+	"game:item-bread-acornmaple-partbaked": "ドングリとカエデのパン(生焼け)",
 
 	"game:item-bread-acornbirch-perfect": "ドングリとシラカバのパン",
 	"game:item-bread-acornpine-perfect": "ドングリとマツのパン",
+	"game:item-bread-acornmaple-perfect": "ドングリとカエデのパン",
 
 	"game:item-bread-acornbirch-charred": "ドングリとシラカバのパン(黒焦げ)",
-	"game:item-bread-acornpine-charred": "ドングリとマツのパン(黒焦げ)"
+	"game:item-bread-acornpine-charred": "ドングリとマツのパン(黒焦げ)",
+	"game:item-bread-acornmaple-charred": "ドングリとカエデのパン(黒焦げ)",
+
+	//-- Wildcraft Trees Compatibility --//
+
+	"blockhelp-insert-sprucebark": "トウヒの樹皮を入れる",
+	"blockhelp-insert-alderbark": "ハンノキの樹皮を入れる",
+	"blockhelp-insert-beechbark": "ブナの樹皮を入れる",
+	"blockhelp-insert-douglasfirbark": "ベイマツの樹皮を入れる",
+	"blockhelp-insert-blackpoplarbark": "クロヤマナラシの樹皮を入れる",
+	"blockhelp-insert-pyramidalpoplarbark": "ヤマナラシの樹皮を入れる",
+	"blockhelp-insert-cedarbark": "ヒマラヤスギの樹皮を入れる",
+	"blockhelp-insert-willowbark": "ヤナギの樹皮を入れる",
+
+	"block-debarkednarrow-alder-*": "樹皮を剥いだハンノキの原木",
+	"block-debarkednarrow-brideinwhite-*": "樹皮を剥いだハクイノハナヨメの原木",
+	"block-debarkednarrow-willow-*": "樹皮を剥いだヤナギの原木",
+
+	"block-curingrack-douglasfir-*": "ベイマツの熟成棚",
+	"block-curingrack-willow-*": "ヤナギの熟成棚",
+	"block-curingrack-honeylocust-*": "サイカチの熟成棚",
+	"block-curingrack-bearnut-*": "ベアナッツの熟成棚",
+	"block-curingrack-blackpoplar-*": "クロヤマナラシの熟成棚",
+	"block-curingrack-pyramidalpoplar-*": "ヤマナラシの熟成棚",
+	"block-curingrack-catalpa-*": "キササゲの熟成棚",
+	"block-curingrack-mahogany-*": "マホガニーの熟成棚",
+	"block-curingrack-sal-*": "サラソウジュの熟成棚",
+	"block-curingrack-saxaul-*": "サクソルの熟成棚",
+	"block-curingrack-spruce-*": "トウヒの熟成棚",
+	"block-curingrack-sycamore-*": "カジカエデの熟成棚",
+	"block-curingrack-elm-*": "ニレの熟成棚",
+	"block-curingrack-beech-*": "ブナの熟成棚",
+	"block-curingrack-eucalyptus-*": "ユーカリの熟成棚",
+	"block-curingrack-cedar-*": "ヒマラヤスギの熟成棚",
+
+	"block-*-barkbasket-douglasfir-*": "ベイマツの樹皮バスケット",
+	"block-*-barkbasket-willow-*": "ヤナギの樹皮バスケット",
+	"block-*-barkbasket-honeylocust-*": "サイカチの樹皮バスケット",
+	"block-*-barkbasket-bearnut-*": "ベアナッツの樹皮バスケット",
+	"block-*-barkbasket-blackpoplar-*": "クロヤマナラシの樹皮バスケット",
+	"block-*-barkbasket-pyramidalpoplar-*": "ヤマナラシの樹皮バスケット",
+	"block-*-barkbasket-catalpa-*": "キササゲの樹皮バスケット",
+	"block-*-barkbasket-mahogany-*": "マホガニーの樹皮バスケット",
+	"block-*-barkbasket-sal-*": "サラソウジュの樹皮バスケット",
+	"block-*-barkbasket-saxaul-*": "サクソルの樹皮バスケット",
+	"block-*-barkbasket-spruce-*": "トウヒの樹皮バスケット",
+	"block-*-barkbasket-sycamore-*": "カジカエデの樹皮バスケット",
+	"block-*-barkbasket-elm-*": "ニレの樹皮バスケット",
+	"block-*-barkbasket-beech-*": "ブナの樹皮バスケット",
+	"block-*-barkbasket-eucalyptus-*": "ユーカリの樹皮バスケット",
+	"block-*-barkbasket-cedar-*": "ヒマラヤスギの樹皮バスケット",
+	"block-*-barkbasket-alder-*": "ハンノキの樹皮バスケット",
+	"block-*-barkbasket-brideinwhite-*": "ハクイノハナヨメの樹皮バスケット",
+
+	"block-stretchingframe-douglasfir-*": "ベイマツのストレッチフレーム",
+	"block-stretchingframe-willow-*": "ヤナギのストレッチフレーム",
+	"block-stretchingframe-honeylocust-*": "サイカチのストレッチフレーム",
+	"block-stretchingframe-bearnut-*": "ベアナッツのストレッチフレーム",
+	"block-stretchingframe-blackpoplar-*": "クロヤマナラシのストレッチフレーム",
+	"block-stretchingframe-pyramidalpoplar-*": "ヤマナラシのストレッチフレーム",
+	"block-stretchingframe-catalpa-*": "キササゲのストレッチフレーム",
+	"block-stretchingframe-mahogany-*": "マホガニーのストレッチフレーム",
+	"block-stretchingframe-sal-*": "サラソウジュのストレッチフレーム",
+	"block-stretchingframe-saxaul-*": "サクソルのストレッチフレーム",
+	"block-stretchingframe-spruce-*": "トウヒのストレッチフレーム",
+	"block-stretchingframe-sycamore-*": "カジカエデのストレッチフレーム",
+	"block-stretchingframe-elm-*": "ニレのストレッチフレーム",
+	"block-stretchingframe-beech-*": "ブナのストレッチフレーム",
+	"block-stretchingframe-eucalyptus-*": "ユーカリのストレッチフレーム",
+	"block-stretchingframe-cedar-*": "ヒマラヤスギのストレッチフレーム",
+
+	"block-salvepot-spruce": "未加工の膏薬の混合物(トウヒの樹皮/脂肪)",
+	"block-salvepot-alder": "未加工の膏薬の混合物(ハンノキの樹皮/脂肪)",
+	"block-salvepot-birch": "未加工の膏薬の混合物(シラカバの樹皮/脂肪)",
+	"block-salvepot-beech": "未加工の膏薬の混合物(ブナの樹皮/脂肪)",
+	"block-salvepot-douglasfir": "未加工の膏薬の混合物(ベイマツの樹皮/脂肪)",
+	"block-salvepot-blackpoplar": "未加工の膏薬の混合物(クロヤマナラシの樹皮/脂肪)",
+	"block-salvepot-pyramidalpoplar": "未加工の膏薬の混合物(ヤマナラシの樹皮/脂肪)",
+	"block-salvepot-willow": "未加工の膏薬の混合物(ヤナギの樹皮/脂肪)",
+	"block-salvepot-cedar": "未加工の膏薬の混合物(ヒマラヤスギの樹皮/脂肪)",
+
+	"block-directionalresin-resin-douglasfir-*": "樹液が滴る樹脂付きのベイマツの原木",
+	"block-directionalresin-resinharvested-douglasfir-*": "樹液が滴るベイマツの原木",
+	"block-directionalresin-resin-spruce-*": "樹液が滴る樹脂付きのトウヒの原木",
+	"block-directionalresin-resinharvested-spruce-*": "樹液が滴るトウヒの原木",
+
+	"item-bark-douglasfir": "ベイマツの樹皮",
+	"item-bark-willow": "ヤナギの樹皮",
+	"item-bark-honeylocust": "サイカチの樹皮",
+	"item-bark-bearnut": "ベアナッツの樹皮",
+	"item-bark-blackpoplar": "クロヤマナラシの樹皮",
+	"item-bark-pyramidalpoplar": "ヤマナラシの樹皮",
+	"item-bark-catalpa": "キササゲの樹皮",
+	"item-bark-mahogany": "マホガニーの樹皮",
+	"item-bark-sal": "サラソウジュの樹皮",
+	"item-bark-saxaul": "サクソルの樹皮",
+	"item-bark-spruce": "トウヒの樹皮",
+	"item-bark-sycamore": "カジカエデの樹皮",
+	"item-bark-elm": "ニレの樹皮",
+	"item-bark-beech": "ブナの樹皮",
+	"item-bark-eucalyptus": "ユーカリの樹皮",
+	"item-bark-cedar": "ヒマラヤスギの樹皮",
+	"item-bark-alder": "ハンノキの樹皮",						
+	"item-bark-brideinwhite": "ハクイノハナヨメの樹皮",		
+
+	"item-beam-douglasfir": "ベイマツの角材",
+	"item-beam-willow": "ヤナギの角材",
+	"item-beam-honeylocust": "サイカチの角材",
+	"item-beam-bearnut": "ベアナッツの角材",
+	"item-beam-blackpoplar": "クロヤマナラシの角材",
+	"item-beam-pyramidalpoplar": "ヤマナラシの角材",
+	"item-beam-catalpa": "キササゲの角材",
+	"item-beam-mahogany": "マホガニーの角材",
+	"item-beam-sal": "サラソウジュの角材",
+	"item-beam-saxaul": "サクソルの角材",
+	"item-beam-spruce": "トウヒの角材",
+	"item-beam-sycamore": "カジカエデの角材",
+	"item-beam-elm": "ニレの角材",
+	"item-beam-beech": "ブナの角材",
+	"item-beam-eucalyptus": "ユーカリの角材",
+	"item-beam-cedar": "ヒマラヤスギの角材",
+
+	"item-wood-douglasfir-cart": "ベイマツの荷車",
+	"item-wood-willow-cart": "ヤナギの荷車",
+	"item-wood-honeylocust-cart": "サイカチの荷車",
+	"item-wood-bearnut-cart": "ベアナッツの荷車",
+	"item-wood-blackpoplar-cart": "クロヤマナラシの荷車",
+	"item-wood-pyramidalpoplar-cart": "ヤマナラシの荷車",
+	"item-wood-catalpa-cart": "キササゲの荷車",
+	"item-wood-mahogany-cart": "マホガニーの荷車",
+	"item-wood-sal-cart": "サラソウジュの荷車",
+	"item-wood-saxaul-cart": "サクソルの荷車",
+	"item-wood-spruce-cart": "トウヒの荷車",
+	"item-wood-sycamore-cart": "カジカエデの荷車",
+	"item-wood-elm-cart": "ニレの荷車",
+	"item-wood-beech-cart": "ブナの荷車",
+	"item-wood-eucalyptus-cart": "ユーカリの荷車",
+	"item-wood-cedar-cart": "ヒマラヤスギの荷車",
+
+	"item-wheel-douglasfir": "ベイマツの車輪",
+	"item-wheel-willow": "ヤナギの車輪",
+	"item-wheel-honeylocust": "サイカチの車輪",
+	"item-wheel-bearnut": "ベアナッツの車輪",
+	"item-wheel-blackpoplar": "クロヤマナラシの車輪",
+	"item-wheel-pyramidalpoplar": "ヤマナラシの車輪",
+	"item-wheel-catalpa": "キササゲの車輪",
+	"item-wheel-mahogany": "マホガニーの車輪",
+	"item-wheel-sal": "サラソウジュの車輪",
+	"item-wheel-saxaul": "サクソルの車輪",
+	"item-wheel-spruce": "トウヒの車輪",
+	"item-wheel-sycamore": "カジカエデの車輪",
+	"item-wheel-elm": "ニレの車輪",
+	"item-wheel-beech": "ブナの車輪",
+	"item-wheel-eucalyptus": "ユーカリの車輪",
+	"item-wheel-cedar": "ヒマラヤスギの車輪",
+
+	"game:item-flour-spruce": "トウヒの粉",	
+	"game:item-dough-spruce": "トウヒの生地",
+	"game:item-bread-spruce-partbaked": "トウヒのパン（生焼け）",
+	"game:item-bread-spruce-perfect": "トウヒのパン",
+	"game:item-bread-spruce-charred": "トウヒのパン（黒焦げ）",
+
+	"entity-wood-douglasfir-cart": "ベイマツの荷車",
+	"entity-wood-willow-cart": "ヤナギの荷車",
+	"entity-wood-honeylocust-cart": "サイカチの荷車",
+	"entity-wood-bearnut-cart": "ベアナッツの荷車",
+	"entity-wood-blackpoplar-cart": "クロヤマナラシの荷車",
+	"entity-wood-pyramidalpoplar-cart": "ヤマナラシの荷車",
+	"entity-wood-catalpa-cart": "キササゲの荷車",
+	"entity-wood-mahogany-cart": "マホガニーの荷車",
+	"entity-wood-sal-cart": "サラソウジュの荷車",
+	"entity-wood-saxaul-cart": "サクソルの荷車",
+	"entity-wood-spruce-cart": "トウヒの荷車",
+	"entity-wood-sycamore-cart": "カジカエデの荷車",
+	"entity-wood-elm-cart": "ニレの荷車",
+	"entity-wood-beech-cart": "ブナの荷車",
+	"entity-wood-eucalyptus-cart": "ユーカリの荷車",
+	"entity-wood-cedar-cart": "ヒマラヤスギの荷車",
 }

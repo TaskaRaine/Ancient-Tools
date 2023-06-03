@@ -20,6 +20,15 @@
 	},
 	{
 		"op": "add",
+		"path": "/variantgroups/0/states/-",
+		"value": "acornmaple",
+		"file": "game:itemtypes/food/bread",
+		"dependsOn": [{ "modid": "acorns" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "add",
 		"path": "/nutritionPropsByType/*-acornbirch-partbaked",
 		"value": {
 			saturation: 70, foodcategory: "Grain"
@@ -76,6 +85,39 @@
 	{
 		"op": "add",
 		"path": "/nutritionPropsByType/*-acornpine-charred",
+		"value": {
+			saturation: 90, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"dependsOn": [{ "modid": "acorns" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-acornmaple-partbaked",
+		"value": {
+			saturation: 70, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"dependsOn": [{ "modid": "acorns" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-acornmaple-perfect",
+		"value": {
+			saturation: 130, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"dependsOn": [{ "modid": "acorns" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-acornmaple-charred",
 		"value": {
 			saturation: 90, foodcategory: "Grain"
 		},

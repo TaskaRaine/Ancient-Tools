@@ -27,46 +27,46 @@ namespace AncientTools.EntityRenderers
         {
             get
             {
-                CompositeTexture compositeTex;
-                AssetLocation texturePath = null;
+                string material = CurrentType.Split('-')[0];
+                string type = CurrentType.Split('-')[1];
 
-                if (!entity.Properties.Client.Textures.TryGetValue(CurrentType + "-" + textureCode, out compositeTex))
+                if (entity.Properties.Client.Textures.TryGetValue(textureCode, out CompositeTexture compositeTex))
                 {
-                    entity.Properties.Client.Textures.TryGetValue(textureCode, out compositeTex);
-                }
-
-                if(compositeTex != null)
-                {
-                    texturePath = compositeTex.Base;
+                    if (compositeTex.Base.Path.Contains("{type}") || compositeTex.Base.Path.Contains("{material}"))
+                    {
+                        compositeTex = new CompositeTexture(new AssetLocation(compositeTex.Base.Domain, compositeTex.Base.Path.Replace("{type}", type).Replace("{material}", material)));
+                    }
                 }
                 else
                 {
-                    bool texFound = false;
-
                     for(int i = 0; i < InventoryShapes.Length; i++)
                     {
                         if (InventoryShapes[i].Textures.ContainsKey(textureCode))
                         {
-                            texturePath = InventoryShapes[i].Textures[textureCode];
-
-                            texFound = true;
+                            compositeTex = new CompositeTexture(InventoryShapes[i].Textures[textureCode]);
+                        }
+                        else if(this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Block.Textures.ContainsKey(textureCode))
+                        {
+                            compositeTex = new CompositeTexture(this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Block.Textures[textureCode].Base);
                         }
                     }
-                    
-                    if(texFound == false)
-                        texturePath = MobileStorageEntity.Properties.Client.FirstTexture.Base;
+
+                    if(compositeTex == null)
+                        if (!entity.Properties.Client.Textures.TryGetValue(CurrentType + "-" + textureCode, out compositeTex))
+                            compositeTex = entity.Properties.Client.FirstTexture;
                 }
+
                 TextureAtlasPosition texpos = null;
 
-                if(texturePath != null)
-                    texpos = capi.EntityTextureAtlas[texturePath];
+                if (compositeTex.Base != null)
+                    texpos = Capi.EntityTextureAtlas[compositeTex.Base];
 
                 if (texpos == null)
                 {
-                    IAsset texAsset = Capi.Assets.TryGet(texturePath.Clone().WithPathPrefixOnce("textures/").WithPathAppendixOnce(".png"));
+                    IAsset texAsset = Capi.Assets.TryGet(compositeTex.Base.Clone().WithPathPrefixOnce("textures/").WithPathAppendixOnce(".png"));
                     if (texAsset != null)
                     {
-                        Capi.EntityTextureAtlas.GetOrInsertTexture(texturePath, out _, out texpos);
+                        Capi.EntityTextureAtlas.GetOrInsertTexture(compositeTex.Base, out _, out texpos);
                     }
                 }
 

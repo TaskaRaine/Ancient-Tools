@@ -8,6 +8,11 @@ French Translation: Cendar
 Japanese Translation: Macoto Hino
 Russian Translation: MrMeg
 
+Contributors: 
+
+CarryOn implementation: NerdScurvy
+Capreolinae patch: weathersong
+
 Sounds:
 
 mortar grind: https://freesound.org/people/apolloaiello/sounds/536704/

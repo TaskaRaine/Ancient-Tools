@@ -8,6 +8,18 @@
 	},
 	{
 		"op": "add",
+		"path": "/attributes/handbook",
+		"value": {
+			extraSections: [{
+				title: "ancienttools:handbook-usedfor-handbookinfo",
+				text: "ancienttools:handbook-mixingpitch-craftinfo-dot"
+			}],
+		},
+		"file": "game:itemtypes/resource/drygrass",
+		"side": "Server",
+	},
+	{
+		"op": "add",
 		"path": "/behaviors",
 		"value": [
 			{ 

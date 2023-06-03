@@ -1,0 +1,62 @@
+﻿[
+	{
+		"op": "addeach",
+		"path": "/0/ingredients/P/allowedVariants/-",
+		"value": ["douglasfir", "willow", "honeylocust", "bearnut", "blackpoplar", 
+			"pyramidalpoplar", "catalpa", "mahogany", "sal", "saxaul", "spruce", "sycamore",
+			"elm", "beech", "eucalyptus", "cedar"],
+		"file": "ancienttools:recipes/grid/spawners/cart",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server"
+	},
+	{
+		"op": "addeach",
+		"path": "/0/ingredients/B/allowedVariants/-",
+		"value": ["douglasfir", "willow", "honeylocust", "bearnut", "blackpoplar", 
+			"pyramidalpoplar", "catalpa", "mahogany", "sal", "saxaul", "spruce", "sycamore",
+			"elm", "beech", "eucalyptus", "cedar"],
+		"file": "ancienttools:recipes/grid/spawners/cart",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server"
+	},
+	{
+		"op": "addeach",
+		"path": "/0/ingredients/W/allowedVariants/-",
+		"value": ["douglasfir", "willow", "honeylocust", "bearnut", "blackpoplar", 
+			"pyramidalpoplar", "catalpa", "mahogany", "sal", "saxaul", "spruce", "sycamore",
+			"elm", "beech", "eucalyptus", "cedar"],
+		"file": "ancienttools:recipes/grid/spawners/cart",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server"
+	},
+	{
+		"op": "addeach",
+		"path": "/1/ingredients/P/allowedVariants/-",
+		"value": ["douglasfir", "willow", "honeylocust", "bearnut", "blackpoplar", 
+			"pyramidalpoplar", "catalpa", "mahogany", "sal", "saxaul", "spruce", "sycamore",
+			"elm", "beech", "eucalyptus", "cedar"],
+		"file": "ancienttools:recipes/grid/spawners/cart",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server"
+	},
+	{
+		"op": "addeach",
+		"path": "/1/ingredients/B/allowedVariants/-",
+		"value": ["douglasfir", "willow", "honeylocust", "bearnut", "blackpoplar", 
+			"pyramidalpoplar", "catalpa", "mahogany", "sal", "saxaul", "spruce", "sycamore",
+			"elm", "beech", "eucalyptus", "cedar"],
+		"file": "ancienttools:recipes/grid/spawners/cart",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server"
+	},
+	{
+		"op": "addeach",
+		"path": "/1/ingredients/W/allowedVariants/-",
+		"value": ["douglasfir", "willow", "honeylocust", "bearnut", "blackpoplar", 
+			"pyramidalpoplar", "catalpa", "mahogany", "sal", "saxaul", "spruce", "sycamore",
+			"elm", "beech", "eucalyptus", "cedar"],
+		"file": "ancienttools:recipes/grid/spawners/cart",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
+		"side": "Server"
+	},
+]

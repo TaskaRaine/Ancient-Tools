@@ -20,7 +20,27 @@
 	},
 	{
 		"op": "add",
+		"path": "/variantgroups/0/states/-",
+		"value": "acornmaple",
+		"file": "game:itemtypes/food/dough",
+		"dependsOn": [{ "modid": "acorns" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "add",
 		"path": "/attributes/nutritionPropsWhenInMealByType/*-acornbirch",
+		"value": {
+			satiety: 130, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/dough",
+		"dependsOn": [{ "modid": "acorns" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/attributes/nutritionPropsWhenInMealByType/*-acornmaple",
 		"value": {
 			satiety: 130, foodcategory: "Grain"
 		},

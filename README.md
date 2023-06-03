@@ -76,6 +76,47 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.5.5
+
+##### Ancient Tools 
+Optimized ItemAttributeVariant items(cart hand-held objects) and cart entities. They are now only assigned textures that they will actually use.
+
+Massive optimization for carts. Carts now go 'dormant' when they don't need to visually update, resulting in far fewer calls to the GPU. Carts also update their mesh when possible instead of generating new meshes each render frame. Massive FPS improvement!
+
+Carts and their inventories now respect claims. No more grand theft auto!
+
+Carts cannot be deconstructed by players that do not have use/build permissions while in a claim.
+
+Fixed an issue that prevented Acacia wood from being carvable for a resin source.
+
+Added compatibility for the Reignited mod. Extinct pitch torches can be held against other fire sources to light the torch.
+
+Added compatibility for Fauna of the Stone Age mods. Thanks Weathersong for your Capreolinae patches!
+
+Narrow trees can now be stripped, too! Show off by crafting bark baskets using rare Greenspire Cypress bark.
+
+Oak and Acacia bark can now be used to create healing salves, too!
+
+Fixed a crash that occurred whenever a player tried to interact with the stretching frame with a collectible that does not have attributes.
+
+##### In Dappled Groves Compatibility
+Note: Some new Ancient Tools additions may be unavailable with Dappled Groves installed. For example, narrow log stripping
+
+Disabled the Ancient Tools adze molds. Adze heads are only craftable via smithing in Dappled Groves.
+
+Adjusted the mortarProperties object in the bark compatibility patch to work with the new Ancient Tools mortar system.
+
+Only soaked bark can be used for healing salve crafting.
+
+Removed all strippedlog patches. They're not need now that both mods use the vanilla debarked logs!
+
+##### Wildcraft Trees Compatibility
+Bark, Bark Baskets, Stretching Frames, Curing Racks, Beams, Wheels, and Carts can all now be crafted using the pretty wood variants from Wildcraft Trees!
+
+Willow, Alder and Bride In White narrow trees have narrow log variants that can be stripped for their bark.
+
+Douglas Fir and Spruce can be scored using a knife to create a leaking log for a consistent source of resin.
+
 #### Version 1.5.3
 Fixed an issue with the Japanese language file not loading(courtesy of Macoto Hino)
 

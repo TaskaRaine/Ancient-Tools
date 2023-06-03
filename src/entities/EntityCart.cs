@@ -109,6 +109,13 @@ namespace AncientTools.Entities
                 };
             });
         }
+        public override string GetInfoText()
+        {
+            if (CartInventorySlot.Empty)
+                return base.GetInfoText();
+
+            return CartInventorySlot.Itemstack.GetName() + "\n" + base.GetInfoText();
+        }
         public override WorldInteraction[] GetInteractionHelp(IClientWorldAccessor world, EntitySelection es, IClientPlayer player)
         {
             if(CartInventorySlot.Empty)
@@ -213,6 +220,8 @@ namespace AncientTools.Entities
                 
                     PlayPlacementSound();
                 }
+
+                Renderer.UpdatedInventory = true;
             }
             else
                 base.OnReceivedServerPacket(packetid, data);
@@ -221,30 +230,33 @@ namespace AncientTools.Entities
         {
             if (mode == EnumInteractMode.Interact)
             {
-                if(byEntity.ServerControls.ShiftKey)
+                if (byEntity.ServerControls.ShiftKey)
                 {
-                    if(AttachedEntity == null)
+                    if (AttachedEntity == null)
                     {
                         double entityDistance = EntityTransform.DistanceTo(byEntity.SidedPos);
 
-                        if (entityDistance <= 2.0)
+                        if (CanAccessInClaim(byEntity as EntityPlayer, EnumBlockAccessFlags.Use))
                         {
-                            if (!byEntity.Stats["walkspeed"].ValuesByKey.ContainsKey("cartspeedmodifier"))
+                            if (entityDistance <= 2.0)
                             {
-                                AttachedEntity = byEntity;
-                                IsDropped = false;
+                                if (!byEntity.Stats["walkspeed"].ValuesByKey.ContainsKey("cartspeedmodifier"))
+                                {
+                                    AttachedEntity = byEntity;
+                                    IsDropped = false;
 
-                                AttachedEntity.Stats.Set("walkspeed", "cartspeedmodifier", -0.2f, false);
+                                    AttachedEntity.Stats.Set("walkspeed", "cartspeedmodifier", -0.2f, false);
 
-                                if (Api.Side == EnumAppSide.Server)
-                                    SyncAttachedEntity(byEntity.EntityId);
+                                    if (Api.Side == EnumAppSide.Server)
+                                        SyncAttachedEntity(byEntity.EntityId);
 
-                                if (Api.Side == EnumAppSide.Client)
-                                    SetLookAtVector(EntityTransform.XYZFloat, AttachedEntity.SidedPos.XYZFloat, AttachedEntity.LocalEyePos.ToVec3f());
+                                    if (Api.Side == EnumAppSide.Client)
+                                        SetLookAtVector(EntityTransform.XYZFloat, AttachedEntity.SidedPos.XYZFloat, AttachedEntity.LocalEyePos.ToVec3f());
+                                }
                             }
                         }
                     }
-                    else if(byEntity.EntityId == AttachedEntity.EntityId)
+                    else if (byEntity.EntityId == AttachedEntity.EntityId)
                     {
                         AttachedEntity.Stats.Remove("walkspeed", "cartspeedmodifier");
                         AttachedEntity = null;
@@ -252,138 +264,148 @@ namespace AncientTools.Entities
                         if (Api.Side == EnumAppSide.Server)
                             SyncAttachedEntity(-1);
 
-                        if(Api.Side == EnumAppSide.Client)
+                        if (Api.Side == EnumAppSide.Client)
                             DropCart();
                     }
                 }
-                else if(itemslot.Empty && !CartInventorySlot.Empty && byEntity.ServerControls.CtrlKey)
+                else if (itemslot.Empty && !CartInventorySlot.Empty && byEntity.ServerControls.CtrlKey)
                 {
                     if (CartInventorySlot.Itemstack?.Collectible?.Attributes?.KeyExists("cartPlacable") == true)
                     {
-                        if (!MobileStorageInventory.InventoryContainsItems(0))
+                        if (CanAccessInClaim(byEntity as EntityPlayer, EnumBlockAccessFlags.Use))
                         {
-                            byEntity.TryGiveItemStack(CartInventorySlot.TakeOutWhole());
-                            CartInventorySlot.MarkDirty();
-
-                            MobileStorageInventory.RemoveEmptyStorage(0);
-
-                            if (Api.Side == EnumAppSide.Server)
+                            if (!MobileStorageInventory.InventoryContainsItems(0))
                             {
-                                byte[] data;
+                                byEntity.TryGiveItemStack(CartInventorySlot.TakeOutWhole());
+                                CartInventorySlot.MarkDirty();
 
-                                using (MemoryStream ms = new MemoryStream())
+                                MobileStorageInventory.RemoveEmptyStorage(0);
+
+                                if (Api.Side == EnumAppSide.Server)
                                 {
-                                    BinaryWriter writer = new BinaryWriter(ms);
-                                    writer.Write(string.Empty);
-                                    TreeAttribute tree = new TreeAttribute();
-                                    MobileStorageInventory.ToTreeAttributes(tree);
-                                    tree.ToBytes(writer);
-                                    data = ms.ToArray();
-                                }
+                                    byte[] data;
 
-                                foreach (IServerPlayer eachPlayer in Sapi.World.AllOnlinePlayers)
+                                    using (MemoryStream ms = new MemoryStream())
+                                    {
+                                        BinaryWriter writer = new BinaryWriter(ms);
+                                        writer.Write(string.Empty);
+                                        TreeAttribute tree = new TreeAttribute();
+                                        MobileStorageInventory.ToTreeAttributes(tree);
+                                        tree.ToBytes(writer);
+                                        data = ms.ToArray();
+                                    }
+
+                                    foreach (IServerPlayer eachPlayer in Sapi.World.AllOnlinePlayers)
+                                    {
+                                        if (eachPlayer.ConnectionState == EnumClientState.Playing)
+                                            Sapi.Network.SendEntityPacket(eachPlayer, EntityId, (int)AncientToolsNetworkPackets.MobileStorageSyncInventoryVisuals, data);
+
+                                    }
+
+                                    ServerCloseClientDialogs();
+                                }
+                                else
                                 {
-                                    if (eachPlayer.ConnectionState == EnumClientState.Playing)
-                                        Sapi.Network.SendEntityPacket(eachPlayer, EntityId, (int)AncientToolsNetworkPackets.MobileStorageSyncInventoryVisuals, data);
-
+                                    Renderer.UpdatedInventory = true;
                                 }
-
-                                ServerCloseClientDialogs();
                             }
                         }
                     }
                 }
-                else if(CartInventorySlot.Empty)
+                else if (CartInventorySlot.Empty)
                 {
-                    bool collectibleCartPlacable = false;
-                    string type = string.Empty;
-
-                    if (itemslot.Itemstack?.Collectible?.Attributes?.KeyExists("cartPlacable") == true)
-                        collectibleCartPlacable = true;
-
-                    if(collectibleCartPlacable)
+                    if (CanAccessInClaim(byEntity as EntityPlayer, EnumBlockAccessFlags.Use))
                     {
-                        if(itemslot.Itemstack.Collectible is BlockGenericTypedContainer)
+                        bool collectibleCartPlacable = false;
+                        string type = string.Empty;
+
+                        if (itemslot.Itemstack?.Collectible?.Attributes?.KeyExists("cartPlacable") == true)
+                            collectibleCartPlacable = true;
+
+                        if (collectibleCartPlacable)
                         {
-                            type = itemslot.Itemstack.Attributes?.GetString("type");
-
-                            if (!itemslot.Itemstack.Collectible.Attributes["mobileStorageProps"][type].Exists
-                                || !itemslot.Itemstack.Collectible.Attributes["cartPlacable"][type].Exists)
-                                return;
-
-                            MobileStorageInventory.GenerateEmptyStorageInventory(itemslot.Itemstack.Collectible.Attributes["mobileStorageProps"][type]["quantitySlots"].AsInt());
-                        }
-                        else
-                            MobileStorageInventory.GenerateEmptyStorageInventory(itemslot.Itemstack.Collectible.Attributes["mobileStorageProps"]["quantitySlots"].AsInt());
-
-                        CartInventorySlot.Itemstack = itemslot.TakeOut(1);
-                        CartInventorySlot.MarkDirty();
-                        itemslot.MarkDirty();
-
-                        //-- Allows for both typed and non-typed containers to use the mobile storage system --//
-                        if (type != string.Empty)
-                        {
-                            if (Api.Side == EnumAppSide.Server)
+                            if (itemslot.Itemstack.Collectible is BlockGenericTypedContainer && itemslot.Itemstack.Attributes?.GetString("type") != null)
                             {
-                                byte[] data;
+                                type = itemslot.Itemstack.Attributes?.GetString("type");
 
-                                using (MemoryStream ms = new MemoryStream())
-                                {
-                                    BinaryWriter writer = new BinaryWriter(ms);
-                                    writer.Write(type);
-                                    TreeAttribute tree = new TreeAttribute();
-                                    MobileStorageInventory.ToTreeAttributes(tree);
-                                    tree.ToBytes(writer);
-                                    data = ms.ToArray();
-                                }
+                                if (!itemslot.Itemstack.Collectible.Attributes["mobileStorageProps"][type].Exists
+                                    || !itemslot.Itemstack.Collectible.Attributes["cartPlacable"][type].Exists)
+                                    return;
 
-                                foreach (IServerPlayer eachPlayer in Sapi.World.AllOnlinePlayers)
-                                {
-                                    if (eachPlayer.ConnectionState == EnumClientState.Playing)
-                                        Sapi.Network.SendEntityPacket(eachPlayer, EntityId, (int)AncientToolsNetworkPackets.MobileStorageSyncInventoryVisuals, data);
-
-                                }
+                                MobileStorageInventory.GenerateEmptyStorageInventory(itemslot.Itemstack.Collectible.Attributes["mobileStorageProps"][type]["quantitySlots"].AsInt());
                             }
-                            if (Api.Side == EnumAppSide.Client)
-                            {
-                                //Renderer.AssignStoragePlacementProperties(CartInventorySlot.Itemstack?.Collectible?.Attributes["cartPlacable"][type]);
-                                //PlayPlacementSound();
-                            }
+                            else
+                                MobileStorageInventory.GenerateEmptyStorageInventory(itemslot.Itemstack.Collectible.Attributes["mobileStorageProps"]["quantitySlots"].AsInt());
+
+                            CartInventorySlot.Itemstack = itemslot.TakeOut(1);
+                            CartInventorySlot.MarkDirty();
+                            itemslot.MarkDirty();
+
+                                if (Api.Side == EnumAppSide.Server)
+                                {
+                                    byte[] data;
+
+                                    using (MemoryStream ms = new MemoryStream())
+                                    {
+                                        BinaryWriter writer = new BinaryWriter(ms);
+                                        writer.Write(type);
+                                        TreeAttribute tree = new TreeAttribute();
+                                        MobileStorageInventory.ToTreeAttributes(tree);
+                                        tree.ToBytes(writer);
+                                        data = ms.ToArray();
+                                    }
+
+                                    foreach (IServerPlayer eachPlayer in Sapi.World.AllOnlinePlayers)
+                                    {
+                                        if (eachPlayer.ConnectionState == EnumClientState.Playing)
+                                            Sapi.Network.SendEntityPacket(eachPlayer, EntityId, (int)AncientToolsNetworkPackets.MobileStorageSyncInventoryVisuals, data);
+
+                                    }
+                                }
+                                if (Api.Side == EnumAppSide.Client)
+                                {
+                                    //Renderer.AssignStoragePlacementProperties(CartInventorySlot.Itemstack?.Collectible?.Attributes["cartPlacable"][type]);
+                                    //PlayPlacementSound();
+                                }
                         }
                     }
                 }
                 else
                 {
-                    SendOpenInventoryPacket((EntityPlayer)byEntity, 0);
+                    if (CanAccessInClaim(byEntity as EntityPlayer, EnumBlockAccessFlags.Use))
+                        SendOpenInventoryPacket((EntityPlayer)byEntity, 0);
 
                     //AnimateOpen();
                 }
 
                 UpdateTreesFromInventoryContents();
             }
-            else if(mode == EnumInteractMode.Attack)
+            else if (mode == EnumInteractMode.Attack)
             {
-                float damage = itemslot.Itemstack == null ? 0.5f : itemslot.Itemstack.Collectible.GetAttackPower(itemslot.Itemstack);
-                int damagetier = itemslot.Itemstack == null ? 0 : itemslot.Itemstack.Collectible.ToolTier;
-
-                damage *= byEntity.Stats.GetBlended("meleeWeaponsDamage");
-
-                if(!IsActivityRunning("invulnerable"))
-                    itemslot?.Itemstack?.Collectible.OnAttackingWith(byEntity.World, byEntity, this, itemslot);
-
-                DamageSource dmgSource = new DamageSource()
+                if (CanAccessInClaim(byEntity as EntityPlayer, EnumBlockAccessFlags.BuildOrBreak))
                 {
-                    Source = (byEntity as EntityPlayer).Player == null ? EnumDamageSource.Entity : EnumDamageSource.Player,
-                    SourceEntity = byEntity,
-                    Type = EnumDamageType.BluntAttack,
-                    HitPosition = hitPosition,
-                    DamageTier = damagetier,
-                    KnockbackStrength = 0
-                };
+                    float damage = itemslot.Itemstack == null ? 0.5f : itemslot.Itemstack.Collectible.GetAttackPower(itemslot.Itemstack);
+                    int damagetier = itemslot.Itemstack == null ? 0 : itemslot.Itemstack.Collectible.ToolTier;
 
-                if (ReceiveDamage(dmgSource, damage))
-                {
-                    byEntity.DidAttack(dmgSource, this);
+                    damage *= byEntity.Stats.GetBlended("meleeWeaponsDamage");
+
+                    if(!IsActivityRunning("invulnerable"))
+                        itemslot?.Itemstack?.Collectible.OnAttackingWith(byEntity.World, byEntity, this, itemslot);
+
+                    DamageSource dmgSource = new DamageSource()
+                    {
+                        Source = (byEntity as EntityPlayer).Player == null ? EnumDamageSource.Entity : EnumDamageSource.Player,
+                        SourceEntity = byEntity,
+                        Type = EnumDamageType.BluntAttack,
+                        HitPosition = hitPosition,
+                        DamageTier = damagetier,
+                        KnockbackStrength = 0
+                    };
+
+                    if (ReceiveDamage(dmgSource, damage))
+                    {
+                        byEntity.DidAttack(dmgSource, this);
+                    }
                 }
             }
         }
@@ -410,6 +432,21 @@ namespace AncientTools.Entities
         private void AnimateOpen()
         {
             AnimManager.StartAnimation("lidopen");
+        }
+        private bool CanAccessInClaim(EntityPlayer player, EnumBlockAccessFlags accessType)
+        {
+            LandClaim[] claims =  Api.World.Claims.Get(EntityTransform.AsBlockPos);
+
+            if (claims == null || claims.Length == 0)
+                return true;
+
+            foreach(LandClaim claim in claims)
+            {
+                if (claim.AllowUseEveryone || claim.TestPlayerAccess(player.Player, accessType) != EnumPlayerAccessResult.Denied)
+                    return true;
+            }
+
+            return false;
         }
     }
 }

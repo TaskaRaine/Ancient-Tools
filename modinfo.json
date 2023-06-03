@@ -4,9 +4,9 @@
   "name": "Ancient Tools",
   "authors": ["Taska Raine"],
   "translators": [ "Cendar", "Macoto Hino", "MrMeg" ],
-  "contributors": ["NerdScurvy"],
+  "contributors": ["NerdScurvy", "weathersong"],
   "description": "A collection of useful tools from ancient times.",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "dependency": {
     "game": "1.18.0"
   }

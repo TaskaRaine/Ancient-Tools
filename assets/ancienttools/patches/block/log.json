@@ -3,6 +3,8 @@
         "op": "add",
         "path": "/attributes/woodStrippable",
         "value": {
+            "resultingLog": "game:debarkedlog-{wood}-{rotation}", 
+            "barkMultiplier": 1
         },
         "file": "game:blocktypes/wood/woodtyped/log",
 		"side": "Server"
@@ -10,10 +12,11 @@
     {
         "op": "add",
         "path": "/behaviorsByType/*-grown-*/-",
-        "value": { "name": "ConvertToResinLog" },
+        "value": { "name": "ConvertToResinLog", properties: { type: "wood", variants: ["pine", "acacia"] } },
         "file": "game:blocktypes/wood/woodtyped/log",
         "side": "Server",
-        "condition": { "when": "AllowCarvingForResin", "isValue": "true" }
+        "condition": { "when": "AllowCarvingForResin", "isValue": "true" },
+        "dependsOn": [{ "modid": "wildcrafttrees", "invert": true }],
     },
     {
         "op": "add",

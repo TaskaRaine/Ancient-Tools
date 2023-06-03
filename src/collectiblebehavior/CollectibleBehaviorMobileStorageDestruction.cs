@@ -4,6 +4,7 @@ using System;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
+using Vintagestory.API.MathTools;
 
 namespace AncientTools.CollectibleBehaviors
 {
@@ -76,8 +77,10 @@ namespace AncientTools.CollectibleBehaviors
         {
             base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, firstEvent, ref handHandling, ref handling);
 
-            if(entitySel == null)
-                return;
+            if(entitySel == null || 
+                CanAccessInClaim(byEntity as EntityPlayer, blockSel.Position, EnumBlockAccessFlags.BuildOrBreak) == false ||
+                CanAccessInClaim(byEntity as EntityPlayer, blockSel.Position, EnumBlockAccessFlags.Use) == false)
+                    return;
 
             if(entitySel.Entity is EntityMobileStorage && byEntity.Controls.Sneak)
             {
@@ -146,6 +149,21 @@ namespace AncientTools.CollectibleBehaviors
                 sawSound.FadeOutAndStop(0.2f);
             }
             */
+        }
+        private bool CanAccessInClaim(EntityPlayer player, BlockPos pos, EnumBlockAccessFlags accessType)
+        {
+            LandClaim[] claims = player.Api.World.Claims.Get(pos);
+
+            if (claims == null || claims.Length == 0)
+                return true;
+
+            foreach (LandClaim claim in claims)
+            {
+                if (claim.AllowUseEveryone || claim.TestPlayerAccess(player.Player, accessType) != EnumPlayerAccessResult.Denied)
+                    return true;
+            }
+
+            return false;
         }
     }
 }

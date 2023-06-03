@@ -331,7 +331,7 @@ namespace AncientTools.Utility
             AssetLocation placementSoundLocation;
 
             //-- Type is also checked in in EntityCart before this method is called --//
-            if (MobileStorageInventory.GetMobileStorageSlot(0)?.Itemstack?.Collectible is BlockGenericTypedContainer)
+            if (MobileStorageInventory.GetMobileStorageSlot(0)?.Itemstack?.Collectible is BlockGenericTypedContainer && MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Attributes["type"] != null)
             {
                 string type = MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Attributes?.GetString("type");
 
@@ -440,7 +440,7 @@ namespace AncientTools.Utility
 
             InvDialog = new GuiDialogMobileStorage(dialogTitle, this, MobileStorageInventory, cols, Api as ICoreClientAPI);
 
-            if (MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible is BlockGenericTypedContainer)
+            if (MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible is BlockGenericTypedContainer && MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Attributes["type"] != null)
             {
                 string type = MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Attributes?.GetString("type");
 
@@ -475,7 +475,7 @@ namespace AncientTools.Utility
             {
                 AssetLocation closeSoundLocation;
 
-                if (MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible is BlockGenericTypedContainer)
+                if (MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Collectible is BlockGenericTypedContainer && MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Attributes["type"] != null)
                 {
                     string type = MobileStorageInventory.GetMobileStorageSlot(0).Itemstack.Attributes?.GetString("type");
 

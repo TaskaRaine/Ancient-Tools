@@ -1,16 +1,8 @@
 ﻿[
     {
-		"op": "add",
+		"op": "addeach",
 		"path": "/variantgroups/0/states/-",
-		"value": "birch",
-		"file": "game:itemtypes/food/bread",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
-		"op": "add",
-		"path": "/variantgroups/0/states/-",
-		"value": "pine",
+		"value": ["birch", "pine", "maple"],
 		"file": "game:itemtypes/food/bread",
 		"side": "Server",
 		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
@@ -76,6 +68,36 @@
 		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-maple-partbaked",
+		"value": {
+			saturation: 40, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-maple-perfect",
+		"value": {
+			saturation: 100, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/nutritionPropsByType/*-maple-charred",
+		"value": {
+			saturation: 60, foodcategory: "Grain"
+		},
+		"file": "game:itemtypes/food/bread",
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
 		"op": "move",
 		"frompath": "/nutritionPropsByType/*-partbaked",
 		"path": "/temp",
@@ -126,7 +148,7 @@
 	{
 		"op": "add",
 		"path": "/creativeinventory/ancienttools",
-		"value": ["*-birch-*", "*-pine-*"],
+		"value": ["*-birch-*", "*-pine-*", "*-maple-*"],
 		"file": "game:itemtypes/food/bread",
 		"side": "Server",
 		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
@@ -134,8 +156,18 @@
 	{
 		"op": "addeach",
 		"path": "/creativeinventory/ancienttools/-",
-		"value": ["*-acornbirch-*", "*-acornpine-*"],
+		"value": ["*-acornbirch-*", "*-acornpine-*", "*-acornmaple-*"],
 		"file": "game:itemtypes/food/bread",
+		"dependsOn": [{ "modid": "acorns" }],
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
+		"op": "addeach",
+		"path": "/creativeinventory/ancienttools/-",
+		"value": ["*-spruce-*"],
+		"file": "game:itemtypes/food/bread",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
 		"side": "Server",
 		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	}

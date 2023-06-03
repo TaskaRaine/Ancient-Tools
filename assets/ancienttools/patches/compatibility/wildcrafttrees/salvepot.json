@@ -1,0 +1,106 @@
+﻿[
+	{
+        "op": "addeach",
+        "path": "/variantgroups/0/states/-",
+        "value": ["spruce", "alder", "beech", "douglasfir", "blackpoplar", "pyramidalpoplar", "cedar", "willow"],
+        "file": "ancienttools:blocktypes/salvepot",
+        "side": "Server",
+        "dependsOn": [{ "modid": "wildcrafttrees" }],
+        "condition": { "when": "SalveEnabled", "isValue": "true" },
+    },
+    {
+        "op": "addeach",
+        "path": "/creativeinventory/general/-",
+        "value": ["salvepot-spruce", "salvepot-alder", "salvepot-beech", "salvepot-douglasfir", "salvepot-blackpoplar", "salvepot-pyramidalpoplar", "salvepot-cedar", "salvepot-willow"],
+        "file": "ancienttools:blocktypes/salvepot",
+        "side": "Server",
+        "dependsOn": [{ "modid": "wildcrafttrees" }],
+        "condition": { "when": "SalveEnabled", "isValue": "true" },
+    },
+    {
+        "op": "addeach",
+        "path": "/creativeinventory/decorative/-",
+        "value": ["salvepot-spruce", "salvepot-alder", "salvepot-beech", "salvepot-douglasfir", "salvepot-blackpoplar", "salvepot-pyramidalpoplar", "salvepot-cedar", "salvepot-willow"],
+        "file": "ancienttools:blocktypes/salvepot",
+        "side": "Server",
+        "dependsOn": [{ "modid": "wildcrafttrees" }],
+        "condition": { "when": "SalveEnabled", "isValue": "true" },
+    },
+    {
+        "op": "addeach",
+        "path": "/creativeinventory/mechanics/-",
+        "value": ["salvepot-spruce", "salvepot-alder", "salvepot-beech", "salvepot-douglasfir", "salvepot-blackpoplar", "salvepot-pyramidalpoplar", "salvepot-cedar", "salvepot-willow"],
+        "file": "ancienttools:blocktypes/salvepot",
+        "side": "Server",
+        "dependsOn": [{ "modid": "wildcrafttrees" }],
+        "condition": { "when": "SalveEnabled", "isValue": "true" },
+    },
+    {
+        "op": "addeach",
+        "path": "/creativeinventory/ancienttools/-",
+        "value": ["salvepot-spruce", "salvepot-alder", "salvepot-beech", "salvepot-douglasfir", "salvepot-blackpoplar", "salvepot-pyramidalpoplar", "salvepot-cedar", "salvepot-willow"],
+        "file": "ancienttools:blocktypes/salvepot",
+        "side": "Server",
+        "dependsOn": [{ "modid": "wildcrafttrees" }],
+        "condition": { "when": "SalveEnabled", "isValue": "true" },
+    },
+    {
+        "op": "add",
+        "path": "/attributesByType/@salvepot-(spruce|alder|beech|douglasfir|blackpoplar|pyramidalpoplar|cedar|willow)",
+        "value": {
+            inFirePitProps: {
+				transform: { 
+					translation: { x: 0, y: 0.125, z: 0 } 
+				},
+				useFirepitModel: "Wide"
+			},
+			handbook: {
+				createdBy: "ancienttools:handbook-salve-craftinfo"
+			}
+        },
+        "file": "ancienttools:blocktypes/salvepot",
+        "side": "Server",
+        "dependsOn": [{ "modid": "wildcrafttrees" }],
+        "condition": { "when": "SalveEnabled", "isValue": "true" },
+    },
+    {
+        "op": "add",
+        "path": "/shapeByType/@salvepot-(spruce|alder|beech|douglasfir|blackpoplar|pyramidalpoplar|cedar|willow)",
+        "value": {
+            base: "block/salve/fullbarksalve" 
+        },
+        "file": "ancienttools:blocktypes/salvepot",
+        "side": "Server",
+        "dependsOn": [{ "modid": "wildcrafttrees" }],
+        "condition": { "when": "SalveEnabled", "isValue": "true" },
+    },
+    {
+        "op": "add",
+        "path": "/texturesByType/@salvepot-(spruce|alder|beech|douglasfir|blackpoplar|pyramidalpoplar|cedar|willow)",
+        "value": {
+            ceramic: { base: "game:block/clay/pot-side" },
+			bark: { base:  "game:block/wood/bark/{type}"},
+			animalfat: { base: "game:item/resource/fat" }
+        },
+        "file": "ancienttools:blocktypes/salvepot",
+        "side": "Server",
+        "dependsOn": [{ "modid": "wildcrafttrees" }],
+        "condition": { "when": "SalveEnabled", "isValue": "true" },
+    },
+    {
+        "op": "add",
+        "path": "/combustiblePropsByType/@salvepot-(spruce|alder|beech|douglasfir|blackpoplar|pyramidalpoplar|cedar|willow)",
+        "value": {
+            meltingPoint: 200,
+			meltingDuration: 60,
+			smeltedRatio: 1,
+			smeltingType: "cook",
+			smeltedStack: { type: "block", code: "salvepot-barkoil" },
+			requiresContainer: false
+        },
+        "file": "ancienttools:blocktypes/salvepot",
+        "side": "Server",
+        "dependsOn": [{ "modid": "wildcrafttrees" }],
+        "condition": { "when": "SalveEnabled", "isValue": "true" },
+    },
+]

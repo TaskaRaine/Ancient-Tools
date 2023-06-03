@@ -1,0 +1,17 @@
+﻿[
+	{
+		"op": "remove",
+		"path": "/variantgroups/1/states/0",
+		"file": "ancienttools:blocktypes/toolmoldancienttools",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/enabled",
+		"value": false,
+		"file": "ancienttools:recipes/clayforming/adzemold",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+	},
+]

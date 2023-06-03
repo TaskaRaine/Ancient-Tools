@@ -1,0 +1,132 @@
+[
+    //-- File written by Weathersong, thanks! --//
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/drops/-",
+    "value": {
+      "type": "item",
+      "code": "ancienttools:brain",
+      "quantity": {
+        "avg": 0.35,
+        "var": 0
+      }
+    },
+    "file": "capreolinae:entities/land/alceini-male",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/drops/-",
+    "value": {
+      "type": "item",
+      "code": "ancienttools:brain",
+      "quantity": {
+        "avg": 0.35,
+        "var": 0
+      }
+    },
+    "file": "capreolinae:entities/land/alceini-female",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/drops/-",
+    "value": {
+      "type": "item",
+      "code": "ancienttools:brain",
+      "quantity": {
+        "avg": 0.25,
+        "var": 0
+      }
+    },
+    "file": "capreolinae:entities/land/alceini-baby",
+    "side": "Server"
+  },
+
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/drops/-",
+    "value": {
+      "type": "item",
+      "code": "ancienttools:brain",
+      "quantity": {
+        "avg": 0.35,
+        "var": 0
+      }
+    },
+    "file": "capreolinae:entities/land/capreolini-male",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/drops/-",
+    "value": {
+      "type": "item",
+      "code": "ancienttools:brain",
+      "quantity": {
+        "avg": 0.35,
+        "var": 0
+      }
+    },
+    "file": "capreolinae:entities/land/capreolini-female",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/drops/-",
+    "value": {
+      "type": "item",
+      "code": "ancienttools:brain",
+      "quantity": {
+        "avg": 0.25,
+        "var": 0
+      }
+    },
+    "file": "capreolinae:entities/land/capreolini-baby",
+    "side": "Server"
+  },
+
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/drops/-",
+    "value": {
+      "type": "item",
+      "code": "ancienttools:brain",
+      "quantity": {
+        "avg": 0.35,
+        "var": 0
+      }
+    },
+    "file": "capreolinae:entities/land/odocoileini-male",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/drops/-",
+    "value": {
+      "type": "item",
+      "code": "ancienttools:brain",
+      "quantity": {
+        "avg": 0.35,
+        "var": 0
+      }
+    },
+    "file": "capreolinae:entities/land/odocoileini-female",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/drops/-",
+    "value": {
+      "type": "item",
+      "code": "ancienttools:brain",
+      "quantity": {
+        "avg": 0.25,
+        "var": 0
+      }
+    },
+    "file": "capreolinae:entities/land/odocoileini-baby",
+    "side": "Server"
+  }
+
+]

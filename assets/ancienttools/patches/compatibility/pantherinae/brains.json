@@ -1,0 +1,170 @@
+﻿[
+	{
+    "op": "add",
+    "path": "/server/behaviors/6/drops/-",
+    "value": {
+      "type": "item",
+      "code": "ancienttools:brain",
+      "quantity": {
+        "avg": 0.35,
+        "var": 0
+      }
+    },
+    "file": "pantherinae:entities/land/pantherinae-neofelis-male",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/drops/-",
+    "value": {
+      "type": "item",
+      "code": "ancienttools:brain",
+      "quantity": {
+        "avg": 0.35,
+        "var": 0
+      }
+    },
+    "file": "pantherinae:entities/land/pantherinae-neofelis-female",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/drops/-",
+    "value": {
+      "type": "item",
+      "code": "ancienttools:brain",
+      "quantity": {
+        "avg": 0.25,
+        "var": 0
+      }
+    },
+    "file": "capreolinae:entities/land/pantherinae-neofelis-cub",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/4/quantitySlots",
+    "value": 8,
+    "file": "pantherinae:entities/land/pantherinae-neofelis-male",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/5/quantitySlots",
+    "value": 8,
+    "file": "pantherinae:entities/land/pantherinae-neofelis-female",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/4/quantitySlots",
+    "value": 8,
+    "file": "pantherinae:entities/land/pantherinae-neofelis-cub",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/quantitySlots",
+    "value": 8,
+    "file": "pantherinae:entities/land/pantherinae-neofelis-male",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/quantitySlots",
+    "value": 8,
+    "file": "pantherinae:entities/land/pantherinae-neofelis-female",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/quantitySlots",
+    "value": 8,
+    "file": "pantherinae:entities/land/pantherinae-neofelis-cub",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/drops/-",
+    "value": {
+      "type": "item",
+      "code": "ancienttools:brain",
+      "quantity": {
+        "avg": 0.35,
+        "var": 0
+      }
+    },
+    "file": "pantherinae:entities/land/pantherinae-panthera-male",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/drops/-",
+    "value": {
+      "type": "item",
+      "code": "ancienttools:brain",
+      "quantity": {
+        "avg": 0.35,
+        "var": 0
+      }
+    },
+    "file": "pantherinae:entities/land/pantherinae-panthera-female",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/drops/-",
+    "value": {
+      "type": "item",
+      "code": "ancienttools:brain",
+      "quantity": {
+        "avg": 0.25,
+        "var": 0
+      }
+    },
+    "file": "capreolinae:entities/land/pantherinae-panthera-cub",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/4/quantitySlots",
+    "value": 8,
+    "file": "pantherinae:entities/land/pantherinae-panthera-male",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/5/quantitySlots",
+    "value": 8,
+    "file": "pantherinae:entities/land/pantherinae-panthera-female",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/client/behaviors/4/quantitySlots",
+    "value": 8,
+    "file": "pantherinae:entities/land/pantherinae-panthera-cub",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/quantitySlots",
+    "value": 8,
+    "file": "pantherinae:entities/land/pantherinae-panthera-male",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/quantitySlots",
+    "value": 8,
+    "file": "pantherinae:entities/land/pantherinae-panthera-female",
+    "side": "Server"
+  },
+  {
+    "op": "add",
+    "path": "/server/behaviors/6/quantitySlots",
+    "value": 8,
+    "file": "pantherinae:entities/land/pantherinae-panthera-cub",
+    "side": "Server"
+  },
+]

@@ -112,14 +112,13 @@ namespace AncientTools.Items
             {
                 Block interactedBlock = api.World.BlockAccessor.GetBlock(blockSel.Position, BlockLayersAccess.SolidBlocks);
 
-                string logType = interactedBlock.LastCodePart(1);
-                string logRotation = interactedBlock.LastCodePart();
+                AssetLocation resultingLog = new AssetLocation(interactedBlock.Attributes["woodStrippable"]["resultingLog"].AsString());
 
-                api.World.BlockAccessor.SetBlock(api.World.GetBlock(new AssetLocation("game", "debarkedlog-" + logType + "-" + logRotation)).Id, blockSel.Position);
+                api.World.BlockAccessor.SetBlock(api.World.GetBlock(resultingLog).Id, blockSel.Position);
                 api.World.BlockAccessor.MarkBlockDirty(blockSel.Position);
 
-                for (int i = 0; i < api.World.Config.GetInt("BarkPerLog"); i++)
-                    api.World.SpawnItemEntity(new ItemStack(api.World.GetItem(new AssetLocation("ancienttools", "bark-" + logType)), 1), blockSel.Position.ToVec3d() +
+                for (int i = 0; i < api.World.Config.GetInt("BarkPerLog") * interactedBlock.Attributes["woodStrippable"]["barkMultiplier"].AsFloat(); i++)
+                    api.World.SpawnItemEntity(new ItemStack(api.World.GetItem(new AssetLocation("ancienttools", "bark-" + resultingLog.SecondCodePart())), 1), blockSel.Position.ToVec3d() +
                         new Vec3d(0.5, 0.5, 0.5));
                     
                 if(byEntity is EntityPlayer player)

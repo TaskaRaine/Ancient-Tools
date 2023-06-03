@@ -133,7 +133,7 @@ namespace AncientTools.Inventory
             {
                 if(!MobileStorageInventory[i].Empty)
                 {
-                    if (MobileStorageInventory[i].Itemstack.Collectible is BlockGenericTypedContainer)
+                    if (MobileStorageInventory[i].Itemstack.Collectible is BlockGenericTypedContainer && MobileStorageInventory[i].Itemstack.Attributes.GetString("type") != null)
                     {
                         string type = MobileStorageInventory[i].Itemstack.Attributes.GetString("type");
 

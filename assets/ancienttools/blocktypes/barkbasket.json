@@ -30,12 +30,24 @@
 			basket: "block/barkbasket"
 		},
 		variantByGroup: "variant",
-		variantByGroupInventory: "variant"
+		variantByGroupInventory: "variant",
+		cartPlacable: {
+			translation: [0.0, 7.0, 2.0],
+			rotation: [0.0, 180.0, 0.0],
+			scale: 1.0
+		},
+		mobileStorageProps: {
+			shape: "ancienttools:shapes/block/barkbasket",
+			openSound: "game:sounds/block/basketopen",
+			closeSound: "game:sounds/block/basketclose",
+			placementSound: "game:sounds/block/planks", 
+			quantitySlots: 8
+		}
 	},
 	behaviors: [{name: "Lockable" }, {name: "Container"}],
 	entityBehaviors: [{ name: "Animatable" }],
 	variantgroups: [
-		{ code: "variant", loadFromProperties: "game:block/wood", states:["aged"]},
+		{ code: "variant", loadFromProperties: "game:block/wood", states:["aged", "cypress"]},
 		{ code:"side", loadFromProperties: "game:abstract/horizontalorientation" }
 	],
 	creativeinventory: {  },
@@ -68,6 +80,12 @@
 			"inside": { base: "block/strippedlog/purpleheart_outer", rotation: 90 },
 			"basket-bark": { base: "game:block/wood/bark/{variant}"},
 			"basket-inside": { base: "block/strippedlog/purpleheart_outer", rotation: 90 },
+		},
+		"*-cypress-*": {
+			"bark": { base: "ancienttools:block/wood/bark/{variant}"},
+			"inside": { base: "ancienttools:block/wood/debarked/{variant}_fullblock", rotation: 90 },
+			"basket-bark": { base: "ancienttools:block/wood/bark/{variant}"},
+			"basket-inside": { base: "ancienttools:block/wood/debarked/{variant}_fullblock", rotation: 90 },
 		},
 		"*": {
 			"bark": { base: "game:block/wood/bark/{variant}"},

@@ -13,10 +13,21 @@ namespace AncientTools.Utility
         {
             get
             {
-                CompositeTexture compositeTex = null;
-                if (!Textures.TryGetValue(CurrentType + "-" + textureCode, out compositeTex))
-                    if (!Textures.TryGetValue(textureCode, out compositeTex))
+                string material = CurrentType.Split('-')[0];
+                string type = CurrentType.Split('-')[1];
+
+                if (Textures.TryGetValue(textureCode, out CompositeTexture compositeTex))
+                {
+                    if(compositeTex.Base.Path.Contains("{type}") || compositeTex.Base.Path.Contains("{material}"))
+                    {
+                        compositeTex = new CompositeTexture(new AssetLocation(compositeTex.Base.Domain, compositeTex.Base.Path.Replace("{type}", type).Replace("{material}", material)));
+                    }
+                }
+                else
+                {
+                    if (!Textures.TryGetValue(CurrentType + "-" + textureCode, out compositeTex))
                         compositeTex = FirstTexture;
+                }
 
                 TextureAtlasPosition texpos = null;
 

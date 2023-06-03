@@ -1,0 +1,13 @@
+﻿[
+	{
+		"op": "addeach",
+		"path": "/0/ingredients/F/allowedVariants/-",
+		"value": [
+			"spruce"
+		],
+		"file": "recipes/grid/compatibility/bricklayers/dough",
+		"dependsOn": [{ "modid": "bricklayers" }, { "modid": "wildcrafttrees" }],
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" },
+		"side": "Server"
+	}
+]
