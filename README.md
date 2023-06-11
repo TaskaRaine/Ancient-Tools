@@ -11,7 +11,9 @@
 ### Releases
 
 #### Vintage Story 1.18.0+
-[Version 1.5.3](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.3/AncientTools_V1.5.3.zip)
+[Version 1.5.6](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.6/AncientTools_V1.5.6.zip)
+
+[Version 1.5.5](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.5/AncientTools_V1.5.5.zip)
 
 [Version 1.5.2](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.2/AncientTools_V1.5.2.zip)
 
@@ -76,6 +78,17 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Versuib 1.5.6
+Cart owners(the player who placed the cart originally) now always have permission to access their cart, and to deconstruct it. NOTE: A new cart needs to be placed for this to take effect!
+
+Carts now remember the previous player hauler. When placed, even when in other player claims, it can be picked up and/or have its inventory accessed by that player.
+
+Fixed a crash that occurred when deconstructing carts.
+
+Fixed an issue where some Wildcraft Trees recipes were enabled even when Wildcraft Trees was not installed.
+
+Fixed an issue where In Dappled Groves dried spruce bark(from Wildcraft Trees) was not given a grindingProps attribute, preventing it from being ground in a quern.
+
 #### Version 1.5.5
 
 ##### Ancient Tools 

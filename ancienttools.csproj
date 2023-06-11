@@ -663,6 +663,12 @@
     <Compile Include="src\blocks\Mortar.cs" />
     <Compile Include="src\blocks\RegisterBlocks.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\mods-dll\catlib\catlib.csproj">
+      <Project>{7f99dcb7-862d-44c4-ac99-54496a757c09}</Project>
+      <Name>catlib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

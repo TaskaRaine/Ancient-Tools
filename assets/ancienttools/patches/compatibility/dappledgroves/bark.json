@@ -112,6 +112,18 @@
 	},
 	{
 		"op": "add",
+		"path": "/grindingPropsByType",
+		"value": {
+			"@bark-(spruce)-dry": {
+				grindedStack: { type: "item", code: "game:flour-{bark}" }
+			}
+		},
+		"file": "indappledgroves:itemtypes/resources/bark",
+		"dependsOn": [{"modid": "indappledgroves"}, {"modid": "wildcrafttrees"}],
+		"side": "Server"
+	},
+	{
+		"op": "add",
 		"path": "/creativeinventory/ancienttools",
 		"value": ["*"],
 		"file": "indappledgroves:itemtypes/resources/bark",

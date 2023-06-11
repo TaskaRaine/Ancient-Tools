@@ -31,6 +31,9 @@ namespace AncientTools.Entities
         private WorldInteraction[] dropCartInteraction = null;
         private WorldInteraction[] accessInventoryInteraction = null;
 
+        public string CreatorID { get { return WatchedAttributes.GetString("creatoruid"); } }
+        public string PreviousHaulerID { get { return WatchedAttributes.GetString("previoushauleruid"); } }
+
         public override void Initialize(EntityProperties properties, ICoreAPI api, long InChunkIndex3d)
         {
             base.Initialize(properties, api, InChunkIndex3d);
@@ -242,6 +245,11 @@ namespace AncientTools.Entities
                             {
                                 if (!byEntity.Stats["walkspeed"].ValuesByKey.ContainsKey("cartspeedmodifier"))
                                 {
+                                    if(byEntity is EntityPlayer player)
+                                    {
+                                        WatchedAttributes.SetString("previoushauleruid", player.PlayerUID);
+                                    }
+
                                     AttachedEntity = byEntity;
                                     IsDropped = false;
 
@@ -435,6 +443,9 @@ namespace AncientTools.Entities
         }
         private bool CanAccessInClaim(EntityPlayer player, EnumBlockAccessFlags accessType)
         {
+            if (player.PlayerUID == CreatorID || player.PlayerUID == PreviousHaulerID && accessType == EnumBlockAccessFlags.Use)
+                return true;
+
             LandClaim[] claims =  Api.World.Claims.Get(EntityTransform.AsBlockPos);
 
             if (claims == null || claims.Length == 0)

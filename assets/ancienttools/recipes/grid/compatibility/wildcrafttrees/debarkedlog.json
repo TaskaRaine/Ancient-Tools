@@ -1,5 +1,6 @@
 ﻿[
 	{
+		enabled: false,
 		ingredientPattern: "LA",
 		width: 2,
 		height: 1,
@@ -24,6 +25,7 @@
 		}
 	},
 	{
+		enabled: false,
 		ingredientPattern: "LA",
 		width: 2,
 		height: 1,
@@ -48,6 +50,7 @@
 		}
 	},
 	{
+		enabled: false,
 		ingredientPattern: "LA",
 		width: 2,
 		height: 1,
@@ -72,6 +75,7 @@
 		}
 	},
 	{
+		enabled: false,
 		ingredientPattern: "LA",
 		width: 2,
 		height: 1,
@@ -96,6 +100,7 @@
 		}
 	},
 	{
+		enabled: false,
 		ingredientPattern: "LA",
 		width: 2,
 		height: 1,
@@ -120,6 +125,7 @@
 		}
 	},
 	{
+		enabled: false,
 		ingredientPattern: "LA",
 		width: 2,
 		height: 1,
@@ -144,6 +150,7 @@
 		}
 	},
 	{
+		enabled: false,
 		ingredientPattern: "LA",
 		width: 2,
 		height: 1,
@@ -168,6 +175,7 @@
 		}
 	},
 	{
+		enabled: false,
 		ingredientPattern: "LA",
 		width: 2,
 		height: 1,
@@ -192,6 +200,7 @@
 		}
 	},
 	{
+		enabled: false,
 		ingredientPattern: "LA",
 		width: 2,
 		height: 1,
@@ -216,6 +225,7 @@
 		}
 	},
 	{
+		enabled: false,
 		ingredientPattern: "LA",
 		width: 2,
 		height: 1,
@@ -240,6 +250,7 @@
 		}
 	},
 	{
+		enabled: false,
 		ingredientPattern: "LA",
 		width: 2,
 		height: 1,
@@ -264,6 +275,7 @@
 		}
 	},
 	{
+		enabled: false,
 		ingredientPattern: "LA",
 		width: 2,
 		height: 1,
@@ -288,6 +300,7 @@
 		}
 	},
 	{
+		enabled: false,
 		ingredientPattern: "LA",
 		width: 2,
 		height: 1,
@@ -312,6 +325,7 @@
 		}
 	},
 	{
+		enabled: false,
 		ingredientPattern: "LA",
 		width: 2,
 		height: 1,
@@ -336,6 +350,7 @@
 		}
 	},
 	{
+		enabled: false,
 		ingredientPattern: "LA",
 		width: 2,
 		height: 1,
@@ -360,6 +375,7 @@
 		}
 	},
 	{
+		enabled: false,
 		ingredientPattern: "LA",
 		width: 2,
 		height: 1,

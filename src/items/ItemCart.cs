@@ -18,10 +18,12 @@ namespace AncientTools.Items
 
             EntityProperties entityType = api.World.GetEntityType(new AssetLocation("ancienttools", "cart"));
             Entity entity = api.World.ClassRegistry.CreateEntity(entityType);
+            EntityPlayer player = byEntity as EntityPlayer;
 
             CurrentType = slot.Itemstack.Attributes.GetString("type", "unknown");
 
             entity.WatchedAttributes.SetString("type", CurrentType);
+            entity.WatchedAttributes.SetString("creatoruid", player.PlayerUID);
             entity.WatchedAttributes.MarkAllDirty();
 
             entity.ServerPos.SetPos(spawnPos);

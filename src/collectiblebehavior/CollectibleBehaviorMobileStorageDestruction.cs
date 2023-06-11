@@ -78,8 +78,8 @@ namespace AncientTools.CollectibleBehaviors
             base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, firstEvent, ref handHandling, ref handling);
 
             if(entitySel == null || 
-                CanAccessInClaim(byEntity as EntityPlayer, blockSel.Position, EnumBlockAccessFlags.BuildOrBreak) == false ||
-                CanAccessInClaim(byEntity as EntityPlayer, blockSel.Position, EnumBlockAccessFlags.Use) == false)
+                CanAccessInClaim(byEntity as EntityPlayer, entitySel.Position.AsBlockPos, EnumBlockAccessFlags.BuildOrBreak) == false ||
+                CanAccessInClaim(byEntity as EntityPlayer, entitySel.Position.AsBlockPos, EnumBlockAccessFlags.Use) == false)
                     return;
 
             if(entitySel.Entity is EntityMobileStorage && byEntity.Controls.Sneak)
