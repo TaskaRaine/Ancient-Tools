@@ -102,11 +102,9 @@
 	},
 	{
 		"op": "add",
-		"path": "/grindingPropsByType",
+		"path": "/grindingPropsByType/*-spruce",
 		"value": {
-			"*-spruce": {
-				grindedStack: { type: "item", code: "game:flour-spruce" }
-			}
+			grindedStack: { type: "item", code: "game:flour-spruce" }
 		},
 		"file": "ancienttools:itemtypes/resources/bark",
 		"dependsOn": [{ "modid": "wildcrafttrees" }],

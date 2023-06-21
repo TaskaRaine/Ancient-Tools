@@ -11,6 +11,8 @@
 ### Releases
 
 #### Vintage Story 1.18.0+
+[Version 1.5.7](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.7/AncientTools_V1.5.7.zip)
+
 [Version 1.5.6](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.6/AncientTools_V1.5.6.zip)
 
 [Version 1.5.5](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.5/AncientTools_V1.5.5.zip)
@@ -78,7 +80,14 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
-#### Versuib 1.5.6
+#### Version 1.5.7
+Fixed some missing textures on Purpleheart and Ebony bark baskets.
+
+Fixed a mistake that resulted in spruce bark grinding properties overwriting the properties for all other types of wood.
+
+Fixed an issue where behaviors were not being applied to salve pots when CarryOn/Carry Capacity was installed
+
+#### Version 1.5.6
 Cart owners(the player who placed the cart originally) now always have permission to access their cart, and to deconstruct it. NOTE: A new cart needs to be placed for this to take effect!
 
 Carts now remember the previous player hauler. When placed, even when in other player claims, it can be picked up and/or have its inventory accessed by that player.

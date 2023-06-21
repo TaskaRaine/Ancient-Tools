@@ -11,7 +11,7 @@
 		"*-finishedsalve": "BEFinishedSalve"
 	},
 	attributesByType: {
-		"@salvepot-(birch|pine|maple|oak|acacia|hardwax|softwax|barkoil)": {
+		"@salvepot-(birch|pine|maple|oak|acacia|softwax|hardwax|barkoil)": {
 			inFirePitProps: {
 				transform: { 
 					translation: { x: 0, y: 0.125, z: 0 } 

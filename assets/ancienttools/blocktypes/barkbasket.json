@@ -69,18 +69,6 @@
 		"*-south": { base: "block/barkbasket", rotateY: 180 },
 	},
 	texturesByType: {
-		"*-ebony-*": {
-			"bark": { base: "game:block/wood/bark/{variant}"},
-			"inside": { base: "block/strippedlog/ebony_outer", rotation: 90 },
-			"basket-bark": { base: "game:block/wood/bark/{variant}"},
-			"basket-inside": { base: "block/strippedlog/ebony_outer", rotation: 90 },
-		},
-		"*-purpleheart-*": {
-			"bark": { base: "game:block/wood/bark/{variant}"},
-			"inside": { base: "block/strippedlog/purpleheart_outer", rotation: 90 },
-			"basket-bark": { base: "game:block/wood/bark/{variant}"},
-			"basket-inside": { base: "block/strippedlog/purpleheart_outer", rotation: 90 },
-		},
 		"*-cypress-*": {
 			"bark": { base: "ancienttools:block/wood/bark/{variant}"},
 			"inside": { base: "ancienttools:block/wood/debarked/{variant}_fullblock", rotation: 90 },

@@ -1,7 +1,7 @@
 ﻿[
 	{
 		"op": "add",
-		"path": "/behaviorsByType/@salvepot-(birch|pine|softwax|hardwax|barkoil)/-",
+		"path": "/behaviorsByType/@salvepot-(birch|pine|maple|oak|acacia|softwax|hardwax|barkoil)/-",
 		"value": {
 			name: "Carryable", properties: {
 
