@@ -370,6 +370,9 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"block-lampsaucer-iron-empty-extinct-*": "Iron Chamberstick",
 	"block-lampsaucer-meteoriciron-empty-extinct-*": "Meteoric Iron Chamberstick",
 	"block-lampsaucer-steel-empty-extinct-*": "Steel Chamberstick",
+	"block-lampsaucer-electrum-empty-extinct-*": "Electrum Chamberstick",
+	"block-lampsaucer-nickel-empty-extinct-*": "Nickel Chamberstick",
+	"block-lampsaucer-cupronickel-extinct-*": "Cupronickel Chamberstick",
 
 	"block-lampsaucer-copper-candle-extinct-*": "Unlit Copper Chamberstick with Candle",
 	"block-lampsaucer-brass-candle-extinct-*": "Unlit Brass Chamberstick with Candle",
@@ -383,6 +386,9 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"block-lampsaucer-iron-candle-extinct-*": "Unlit Iron Chamberstick with Candle",
 	"block-lampsaucer-meteoriciron-candle-extinct-*": "Unlit Meteoric Iron Chamberstick with Candle",
 	"block-lampsaucer-steel-candle-extinct-*": "Unlit Steel Chamberstick with Candle",
+	"block-lampsaucer-electrum-candle-extinct-*": "Unlit Electrum Chamberstick with Candle",
+	"block-lampsaucer-nickel-candle-extinct-*": "Unlit Nickel Chamberstick with Candle",
+	"block-lampsaucer-cupronickel-candle-extinct-*": "Unlot Cupronickel Chamberstick with Candle",
 
 	"block-lampsaucer-copper-candle-lit-*": "Lit Copper Chamberstick with Candle",
 	"block-lampsaucer-brass-candle-lit-*": "Lit Brass Chamberstick with Candle",
@@ -396,6 +402,9 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"block-lampsaucer-iron-candle-lit-*": "Lit Iron Chamberstick with Candle",
 	"block-lampsaucer-meteoriciron-candle-lit-*": "Lit Meteoric Iron Chamberstick with Candle",
 	"block-lampsaucer-steel-candle-lit-*": "Lit Steel Chamberstick with Candle",
+	"block-lampsaucer-electrum-candle-lit-*": "Lit Electrum Chamberstick with Candle",
+	"block-lampsaucer-nickel-candle-lit-*": "Lit Nickel Chamberstick with Candle",
+	"block-lampsaucer-cupronickel-candle-lit-*": "Lit Cupronickel Chamberstick with Candle",
 
 	"block-lampsaucer-copper-pitch-extinct-*": "Unlit Copper Chamberstick with Pitch",
 	"block-lampsaucer-brass-pitch-extinct-*": "Unlit Brass Chamberstick with Pitch",
@@ -409,6 +418,9 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"block-lampsaucer-iron-pitch-extinct-*": "Unlit Iron Chamberstick with Pitch",
 	"block-lampsaucer-meteoriciron-pitch-extinct-*": "Unlit Meteoric Iron Chamberstick with Pitch",
 	"block-lampsaucer-steel-pitch-extinct-*": "Unlit Steel Chamberstick with Pitch",
+	"block-lampsaucer-electrum-pitch-extinct-*": "Unlit Electrum Chamberstick with Pitch",
+	"block-lampsaucer-nickel-pitch-extinct-*": "Unlit Nickel Chamberstick with Pitch",
+	"block-lampsaucer-cupronickel-pitch-extinct-*": "Unlit Cupronickel Chamberstick with Pitch",
 
 	"block-lampsaucer-copper-pitch-lit-*": "Lit Copper Chamberstick with Pitch",
 	"block-lampsaucer-brass-pitch-lit-*": "Lit Brass Chamberstick with Pitch",
@@ -422,6 +434,9 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"block-lampsaucer-iron-pitch-lit-*": "Lit Iron Chamberstick with Pitch",
 	"block-lampsaucer-meteoriciron-pitch-lit-*": "Lit Meteoric Iron Chamberstick with Pitch",
 	"block-lampsaucer-steel-pitch-lit-*": "Lit Steel Chamberstick with Pitch",
+	"block-lampsaucer-electrum-pitch-lit-*": "Lit Electrum Chamberstick with Pitch",
+	"block-lampsaucer-nickel-pitch-lit-*": "Lit Nickel Chamberstich with Pitch",
+	"block-lampsaucer-cupronickel-lit-*": "Lit Cupronickel Chamberstick with Pitch",
 
 	"blockdesc-lampsaucer-*": "An elegant lighting solution for both interior designers and adventurers alike",
 
@@ -581,6 +596,15 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"item-mallet-*-obsidian": "Obsidian Mallet",
 	"item-mallet-*-peridotite": "Peridotite Mallet",
 	"item-mallet-*-flint": "Flint Mallet",
+	"item-mallet-*-copper": "Copper Mallet",
+	"item-mallet-*-tinbronze": "Tin Bronze Mallet",
+	"item-mallet-*-bismuthbronze": "Bismuth Bronze Mallet",
+	"item-mallet-*-blackbronze": "Black Bronze Mallet",
+	"item-mallet-*-silver": "Silver Mallet",
+	"item-mallet-*-gold": "Gold Mallet",
+	"item-mallet-*-iron": "Iron Mallet",
+	"item-mallet-*-meteoriciron": "Meteoric Iron Mallet",
+	"item-mallet-*-steel": "Steel Mallet",
 
 	"itemcraftdesc-mallet-*": "For smacking wedges to split stripped logs",
 	"itemdesc-mallet-*": "For smacking wedges to split stripped logs",
@@ -592,6 +616,18 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"item-mallethead-obsidian": "Obsidian Mallet Head",
 	"item-mallethead-peridotite": "Peridotite Mallet Head",
 	"item-mallethead-flint": "Flint Mallet Head",
+	"item-mallethead-copper": "Copper Mallet Head",
+	"item-mallethead-tinbronze": "Tin Bronze Mallet Head",
+	"item-mallethead-bismuthbronze": "Bismuth Bronze Mallet Head",
+	"item-mallethead-blackbronze": "Black Bronze Mallet Head",
+	"item-mallethead-silver": "Silver Mallet Head",
+	"item-mallethead-gold": "Gold Mallet Head",
+	"item-mallethead-iron": "Iron Mallet Head",
+	"item-mallethead-meteoriciron": "Meteoric Iron Mallet Head",
+	"item-mallethead-steel": "Steel Mallet Head",
+
+	"block-toolmoldancienttools-raw-mallet": "Raw Mallet Mold",
+	"block-toolmoldancienttools-burned-mallet": "Mallet Mold",
 
 	"item-wedge-chert": "Chert Wedge",
 	"item-wedge-granite": "Granite Wedge",
@@ -679,7 +715,6 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"entity-wood-ebony-cart": "Ebony Cart",
 	"entity-wood-walnut-cart": "Walnut Cart",
 	"entity-wood-purpleheart-cart": "Purpleheart Cart",
-	"entity-wood-walnut-cart": "Walnut Cart",
 
 	"entityinfo-cart-health": "Health: {0}/{1} hp",
 
@@ -799,7 +834,6 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 
 	"block-salvepot-spruce": "Unprepared Salve Mixture(spruce bark/fat)",
 	"block-salvepot-alder": "Unprepared Salve Mixture(alder bark/fat)",
-	"block-salvepot-birch": "Unprepared Salve Mixture(birch bark/fat)",
 	"block-salvepot-beech": "Unprepared Salve Mixture(beech bark/fat)",
 	"block-salvepot-douglasfir": "Unprepared Salve Mixture(douglas fir bark/fat)",
 	"block-salvepot-blackpoplar": "Unprepared Salve Mixture(black poplar bark/fat)",

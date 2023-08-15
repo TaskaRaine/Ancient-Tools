@@ -1,97 +1,203 @@
 ﻿{
-	code: "mallet",
-	class: "ItemMallet",
-	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"], "ancienttools": ["*"] },
-	attributes: {
-		handbook: {
-			groupBy: ["mallet-*"]
+	"code": "mallet",
+	"class": "ItemMallet",
+	"creativeinventory": {
+		"general": [ "*" ],
+		"items": [ "*" ],
+		"tools": [ "*" ],
+		"ancienttools": [ "*" ]
+	},
+	"attributes": {
+		"handbook": {
+			"groupBy": [ "mallet-*" ]
 		},
 		groundStorageTransform: {
-			translation: { x: 0.05, y: 0.05, z: 0 },
+			translation: { x: 0.05, y: 0.1, z: -0 },
 			rotation: { x: 13, y: 88, z: -87 },
-			scale: 0.88
+			scale: 0.8
 		},
-		rackable: true,
-		toolrackTransform: {
-			rotation: { y: 1, z: -1 },
-			translation: { x: -0.3, y: 0.6 },
-			scale: 1.25,
-		},
-	},
-	behaviors: [
-		{ name: "WedgeSmack" },
-		{ name: "MobileStorageRepair", properties: { 
-			repairAmount: 5,
-			repairInterval: 0.2,
-			durabilityLoss: 1
-		}}
-	],
-	variantgroups: [
-		{ code: "handle", states: ["wood", "bone"] },
-        { code: "material", states: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint" ] },
-    ],
-	drawtype: "json",
-    shape: { base: "item/tool/mallet-stone" },
-	texturesByType: {
-		"@mallet-wood-(chert|granite|andesite|basalt|obsidian|peridotite)": {
-			"material": { base: "game:block/stone/rock/{material}1" },
-			"string": { base: "game:item/tool/material/string" },
-			"handle": { base: "game:item/tool/material/handle" }
-		},
-		"@mallet-bone-(chert|granite|andesite|basalt|obsidian|peridotite)": {
-			"material": { base: "game:block/stone/rock/{material}1" },
-			"string": { base: "game:item/tool/material/string" },
-			"handle": { base: "game:block/creature/bone-yellow" }
-		},
-		"mallet-wood-flint": {
-			"material": { base: "game:block/stone/{material}" },
-			"string": { base: "game:item/tool/material/string" },
-			"handle": { base: "game:item/tool/material/handle" }
-		},
-		"mallet-bone-flint": {
-			"material": { base: "game:block/stone/{material}" },
-			"string": { base: "game:item/tool/material/string" },
-			"handle": { base: "game:block/creature/bone-yellow" }
+		"rackable": true,
+		"toolrackTransform": {
+			"rotation": {
+				"y": 1,
+				"z": -1
+			},
+			"translation": {
+				"x": -0.3,
+				"y": 0.6
+			},
+			"scale": 1.25
 		}
 	},
-	maxstacksize: 1,
-	attackRange: 2,
-	heldTpHitAnimation: "smithing",
-	damagedby: ["blockbreaking", "attacking"],
-	durabilitybytype: {
+	"behaviors": [
+		{ "name": "WedgeSmack" },
+		{
+			"name": "MobileStorageRepair",
+			"properties": {
+				"repairAmount": 5,
+				"repairInterval": 0.2,
+				"durabilityLoss": 1
+			}
+		},
+		{
+			name: "GroundStorable",
+			properties: {
+				layout: 'WallHalves',
+				wallOffY: 1,
+				sprintKey: true,
+				selectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.35, z2: 1 },
+				collisionBox: { x1: 0, y1: 0, z1: 0, x2: 0, y2: 0, z2: 0 },
+			}
+		}
+	],
+	"variantgroups": [
+		{
+			"code": "handle",
+			"states": [ "wood", "bone" ]
+		},
+		{
+			"code": "material",
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron", "meteoriciron", "steel" ]
+		}
+	],
+	"skipVariants": [
+		"mallet-bone-copper",
+		"mallet-bone-tinbronze",
+		"mallet-bone-bismuthbronze",
+		"mallet-bone-blackbronze",
+		"mallet-bone-gold",
+		"mallet-bone-silver",
+		"mallet-bone-iron",
+		"mallet-bone-meteoriciron",
+		"mallet-bone-steel"
+	],
+	"drawtype": "json",
+	"shapeByType": {
+		"@mallet-(wood|bone)-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": { "base": "item/tool/mallet-stone" },
+		"@mallet-wood-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": { "base": "item/tool/mallet-metal" }
+	},
+	"texturesByType": {
+		"@mallet-wood-(chert|granite|andesite|basalt|obsidian|peridotite)": {
+			"material": { "base": "game:block/stone/rock/{material}1" },
+			"string": { "base": "game:item/tool/material/string" },
+			"handle": { "base": "game:item/tool/material/handle" }
+		},
+		"@mallet-bone-(chert|granite|andesite|basalt|obsidian|peridotite)": {
+			"material": { "base": "game:block/stone/rock/{material}1" },
+			"string": { "base": "game:item/tool/material/string" },
+			"handle": { "base": "game:block/creature/bone-yellow" }
+		},
+		"mallet-wood-flint": {
+			"material": { "base": "game:block/stone/{material}" },
+			"string": { "base": "game:item/tool/material/string" },
+			"handle": { "base": "game:item/tool/material/handle" }
+		},
+		"mallet-bone-flint": {
+			"material": { "base": "game:block/stone/{material}" },
+			"string": { "base": "game:item/tool/material/string" },
+			"handle": { "base": "game:block/creature/bone-yellow" }
+		},
+		"*": {
+			"metal": { "base": "game:block/metal/ingot/{material}" },
+			"handle": { "base": "game:item/tool/material/handle" }
+		}
+	},
+	"maxstacksize": 1,
+	"attackRange": 2,
+	"heldTpHitAnimation": "smithing",
+	"damagedby": [ "blockbreaking", "attacking" ],
+	"durabilitybytype": {
 		"@mallet-wood-(chert|granite|andesite|basalt|peridotite)": 50,
 		"@mallet-bone-(chert|granite|andesite|basalt|peridotite)": 60,
 		"*-wood-flint": 60,
 		"*-bone-flint": 70,
 		"*-wood-obsidian": 90,
 		"*-bone-obsidian": 100,
+		"@mallet-wood-(silver|gold)": 125,
+		"*-copper": 250,
+		"*-tinbronze": 400,
+		"*-bismuthbronze": 500,
+		"*-blackbronze": 600,
+		"*-iron": 900,
+		"*-meteoriciron": 1200,
+		"*-steel": 1800
 	},
-	attackpowerbytype: {
+	"attackpowerbytype": {
 		"@mallet-(wood|bone)-(chert|granite|andesite|basalt|peridotite)": 0.75,
 		"*-flint": 1.25,
 		"*-obsidian": 1.5,
+		"*-copper": 2,
+		"@mallet-wood-(bismuthbronze|silver|gold)": 2.5,
+		"*-tinbronze": 2.75,
+		"@mallet-wood-(blackbronze|iron)": 3,
+		"*-medeoriciron": 3.5,
+		"*-steel": 4
 	},
-	guiTransform: {
-		translation: { x: 2.5, y: 3.5, z: -5 },
-		rotation: { x: -89, y: 41, z: 33 },
-		origin: { x: 0.5, y: 0, z: 0.5 },
-		scale: 1.5
+	"guiTransform": {
+		"translation": {
+			"x": 2.5,
+			"y": 3.5,
+			"z": -5
+		},
+		"rotation": {
+			"x": -89,
+			"y": 41,
+			"z": 33
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 1.5
 	},
-	fpHandTransform: {
-		translation: { x: -0.24, y: 0, z: 0.1 },
-		rotation: { x: 15, y: 15, z: 90 },
-		scale: 2.45
+	"fpHandTransform": {
+		"translation": {
+			"x": -0.24,
+			"y": 0,
+			"z": 0.1
+		},
+		"rotation": {
+			"x": 15,
+			"y": 15,
+			"z": 90
+		},
+		"scale": 2.45
 	},
-	groundTransform: {
-		translation: { x: 0, y: 0, z: 0 },
-		rotation: { x: 0, y: 0, z: 0 },
-		origin: { x: 0.5, y: 0, z: 0.5 },
-		scale: 3.4
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 3.4
 	},
-	tpHandTransform: {
-		translation: { x: -0.9, y: 0.01, z: -0.65 },
-		rotation: { x: 90, y: 0, z: 0 },
-		origin: { x: 0.5, y: 0, z: 0.5 },
-		scale: 0.8
+	"tpHandTransform": {
+		"translation": {
+			"x": -0.9,
+			"y": 0.01,
+			"z": -0.65
+		},
+		"rotation": {
+			"x": 90,
+			"y": 0,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 0.8
 	}
 }

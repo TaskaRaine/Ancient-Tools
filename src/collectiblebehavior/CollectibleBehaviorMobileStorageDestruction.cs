@@ -95,6 +95,8 @@ namespace AncientTools.CollectibleBehaviors
         }
         public override bool OnHeldInteractStep(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandling handling)
         {
+            handling = EnumHandling.PreventSubsequent;
+
             if (entitySel == null || slot.Empty)
                 return false;
 
@@ -132,7 +134,6 @@ namespace AncientTools.CollectibleBehaviors
                     }
                 }
 
-                handling = EnumHandling.Handled;
                 return true;
             }
 

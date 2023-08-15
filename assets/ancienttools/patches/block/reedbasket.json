@@ -1,0 +1,30 @@
+[
+    {
+		"op": "add",
+		"path": "/attributes/cartPlacable",
+		"value": {
+			"reed":  {
+				translation: [0.0, 7.0, 2.0],
+				rotation: [0.0, 180.0, 0.0],
+				scale: 1.0
+			}
+		},
+		"file": "game:blocktypes/stationarybasket",
+		"side": "Server"
+    },
+	{
+		"op": "add",
+		"path": "/attributes/mobileStorageProps",
+		"value": {
+			"reed": {
+				shape: "ancienttools:shapes/block/reedbasket",
+				openSound: "game:sounds/block/basketopen",
+				closeSound: "game:sounds/block/basketclose",
+				placementSound: "game:sounds/block/planks", 
+				quantitySlots: 8
+			}
+		},
+		"file": "game:blocktypes/stationarybasket",
+		"side": "Server"
+	}
+]

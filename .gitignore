@@ -1,0 +1,13 @@
+
+Mono.Cecil.dll
+0Harmony.dll
+MonoMod.Backports.dll
+MonoMod.Core.dll
+MonoMod.Iced.dll
+MonoMod.ILHelpers.dll
+MonoMod.Utils.dll
+obj/ancienttools.csproj.nuget.dgspec.json
+obj/ancienttools.csproj.nuget.g.props
+obj/ancienttools.csproj.nuget.g.targets
+obj/project.assets.json
+obj/project.nuget.cache

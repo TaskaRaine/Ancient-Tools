@@ -1,44 +1,191 @@
 ﻿[
 	{
-		ingredientPattern: "HS",
-		width: 1,
-		height: 2,
-		ingredients: {
-			"H": { 
-				type: "item", 
-				name: "head",
-				code: "mallethead-*" 
+		"ingredientPattern": "HS",
+		"width": 1,
+		"height": 2,
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"name": "head",
+				"code": "mallethead-*"
 			},
-			"S": { 
-				type: "item", 
-				code: "game:stick" 
+			"S": {
+				"type": "item",
+				"code": "game:stick"
 			}
 		},
-		output: { 
-			type: "item", 
-			code: "mallet-wood-{head}",
-			quantity: 1
+		"output": {
+			"type": "item",
+			"code": "mallet-wood-{head}",
+			"quantity": 1
 		}
 	},
 	{
-		ingredientPattern: "HB",
-		width: 1,
-		height: 2,
-		ingredients: {
-			"H": { 
-				type: "item", 
-				name: "head",
-				code: "mallethead-*" 
+		"ingredientPattern": "HB",
+		"width": 1,
+		"height": 2,
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"name": "head",
+				"code": "ancienttools:mallethead-chert"
 			},
-			"B": { 
-				type: "item", 
-				code: "game:bone" 
+			"B": {
+				"type": "item",
+				"code": "game:bone"
 			}
 		},
-		output: { 
-			type: "item", 
-			code: "mallet-bone-{head}",
-			quantity: 1
+		"output": {
+			"type": "item",
+			"code": "ancienttools:mallet-bone-chert",
+			"quantity": 1
 		}
 	},
+	{
+		"ingredientPattern": "HB",
+		"width": 1,
+		"height": 2,
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"name": "head",
+				"code": "ancienttools:mallethead-granite"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:bone"
+			}
+		},
+		"output": {
+			"type": "item",
+			"code": "ancienttools:mallet-bone-granite",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "HB",
+		"width": 1,
+		"height": 2,
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"name": "head",
+				"code": "ancienttools:mallethead-andesite"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:bone"
+			}
+		},
+		"output": {
+			"type": "item",
+			"code": "ancienttools:mallet-bone-andesite",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "HB",
+		"width": 1,
+		"height": 2,
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"name": "head",
+				"code": "ancienttools:mallethead-basalt"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:bone"
+			}
+		},
+		"output": {
+			"type": "item",
+			"code": "ancienttools:mallet-bone-basalt",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "HB",
+		"width": 1,
+		"height": 2,
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"name": "head",
+				"code": "ancienttools:mallethead-chert"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:bone"
+			}
+		},
+		"output": {
+			"type": "item",
+			"code": "ancienttools:mallet-bone-chert",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "HB",
+		"width": 1,
+		"height": 2,
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"name": "head",
+				"code": "ancienttools:mallethead-obsidian"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:bone"
+			}
+		},
+		"output": {
+			"type": "item",
+			"code": "ancienttools:mallet-bone-obsidian",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "HB",
+		"width": 1,
+		"height": 2,
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"name": "head",
+				"code": "ancienttools:mallethead-peridotite"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:bone"
+			}
+		},
+		"output": {
+			"type": "item",
+			"code": "ancienttools:mallet-bone-peridotite",
+			"quantity": 1
+		}
+	},
+	{
+		"ingredientPattern": "HB",
+		"width": 1,
+		"height": 2,
+		"ingredients": {
+			"H": {
+				"type": "item",
+				"name": "head",
+				"code": "ancienttools:mallethead-flint"
+			},
+			"B": {
+				"type": "item",
+				"code": "game:bone"
+			}
+		},
+		"output": {
+			"type": "item",
+			"code": "ancienttools:mallet-bone-flint",
+			"quantity": 1
+		}
+	}
 ]

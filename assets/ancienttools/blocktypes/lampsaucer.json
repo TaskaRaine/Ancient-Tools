@@ -19,7 +19,7 @@
 		}
 	},
     variantgroups: [
-        { code: "metal", states: ["copper", "brass", "bismuth", "tinbronze", "bismuthbronze", "blackbronze", "molybdochalkos", "gold", "silver", "iron", "meteoriciron", "steel"] },
+        { code: "metal", states: ["copper", "brass", "bismuth", "tinbronze", "bismuthbronze", "blackbronze", "molybdochalkos", "gold", "silver", "iron", "meteoriciron", "steel", "electrum", "nickel", "cupronickel"] },
 		{ code: "type", states: ["empty", "candle", "pitch"] },
 		{ code: "state", states: ["extinct", "lit"] },
 		{ code: "orientation", states: ["up"], loadFromProperties: "abstract/horizontalorientation" }
@@ -46,27 +46,48 @@
 		}
 	},
 	texturesByType: {
-		"*-empty-extinct-*": { 
-			"metal": { base: "game:block/metal/lantern/{metal}" }, 
+		"@*-(electrum|nickel|cupronickel)-empty-extinct-(up|north|south|east|west)": {
+			"metal": { "base": "game:block/metal/ingot/{metal}" }
 		},
-		"*-candle-extinct-*": { 
-			"metal": { base: "game:block/metal/lantern/{metal}" },
-			"candle": { base: "game:block/candle-unlit" }
+		"*-empty-extinct-*": {
+			"metal": { "base": "game:block/metal/lantern/{metal}" }
 		},
-		"*-candle-lit-*": { 
-			"metal": { base: "game:block/metal/lantern/{metal}" },
-			"candle": { base: "game:block/candle" }
+		"@*-(electrum|nickel|cupronickel)-candle-extinct-(up|north|south|east|west)": {
+			"metal": { "base": "game:block/metal/ingot/{metal}" },
+			"candle": { "base": "game:block/candle-unlit" }
 		},
-		"*-pitch-extinct-*": { 
-			"metal": { base: "game:block/metal/lantern/{metal}" }, 
-			"pitch": { base: "block/pitch/pitch" },
-			"wick": { base: "game:block/cloth/linen/black" }
+		"*-candle-extinct-*": {
+			"metal": { "base": "game:block/metal/lantern/{metal}" },
+			"candle": { "base": "game:block/candle-unlit" }
 		},
-		"*-pitch-lit-*": { 
-			"metal": { base: "game:block/metal/lantern/{metal}" }, 
-			"pitch": { base: "block/pitch/pitch_torchlit"  },
-			"wick": { base: "block/pitch/pitch_torchlit"  }
+		"@*-(electrum|nickel|cupronickel)-candle-lit-(up|north|south|east|west)": {
+			"metal": { "base": "game:block/metal/ingot/{metal}" },
+			"candle": { "base": "game:block/candle" }
 		},
+		"*-candle-lit-*": {
+			"metal": { "base": "game:block/metal/lantern/{metal}" },
+			"candle": { "base": "game:block/candle" }
+		},
+		"@*-(electrum|nickel|cupronickel)-pitch-extinct-(up|north|south|east|west)": {
+			"metal": { "base": "game:block/metal/ingot/{metal}" },
+			"pitch": { "base": "block/pitch/pitch" },
+			"wick": { "base": "game:block/cloth/linen/black" }
+		},
+		"*-pitch-extinct-*": {
+			"metal": { "base": "game:block/metal/lantern/{metal}" },
+			"pitch": { "base": "block/pitch/pitch" },
+			"wick": { "base": "game:block/cloth/linen/black" }
+		},
+		"@*-(electrum|nickel|cupronickel)-pitch-lit-(up|north|south|east|west)": {
+			"metal": { "base": "game:block/metal/ingot/{metal}" },
+			"pitch": { "base": "block/pitch/pitch_torchlit" },
+			"wick": { "base": "block/pitch/pitch_torchlit" }
+		},
+		"*-pitch-lit-*": {
+			"metal": { "base": "game:block/metal/lantern/{metal}" },
+			"pitch": { "base": "block/pitch/pitch_torchlit" },
+			"wick": { "base": "block/pitch/pitch_torchlit" }
+		}
 	},
 	sidesolid: { all: false },
     sideopaque: { all: false },

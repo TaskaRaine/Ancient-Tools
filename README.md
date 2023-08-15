@@ -10,6 +10,9 @@
 
 ### Releases
 
+#### Vintage Story 1.18.8+
+[Version 1.5.8](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.8/AncientTools_V1.5.8.zip)
+
 #### Vintage Story 1.18.0+
 [Version 1.5.7](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.7/AncientTools_V1.5.7.zip)
 
@@ -80,6 +83,25 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.5.8 
+Ancient Tools is now built upon the .Net7 framework and will be the only framework supported going forward.
+
+Metal mallets have been added! They can be crafted by smithing or smelting. Improvement requested by Alatyr, thank you!
+
+Mallets can now be placed in ground storage.
+
+Reed baskets and all vessel variants(except raw) can now be placed on carts for transport. gndrneutralnoun requested additional storage for carts, so now they're here ^_^. If there's more that I missed, please request. Crates will hopefully be a thing soon, too.
+
+Salt crystals from Expanded Foods can be ground in the mortar. This compatibility was requested by PervertChimp, thanks!
+
+Added electrum, nickel and cupronickel chamberstick variants. These variants were requested by Ruyeex, thanks!
+
+Fixed an issue where spruce flour would appear in-game when Wildcraft Trees was not installed.
+
+Hopefully fixed a crash that occurred when XSkills was installed. Repair/Deconstruct collectible behaviors for carts use 'handling = PreventSubsequent' now in hopes that default code will not be called. Issue reported by RogueRaiden on GitHub, thank you!
+
+Updated the Japanese translation for Ancient Tools! Thanks, Macoto Hino!
+
 #### Version 1.5.7
 Fixed some missing textures on Purpleheart and Ebony bark baskets.
 

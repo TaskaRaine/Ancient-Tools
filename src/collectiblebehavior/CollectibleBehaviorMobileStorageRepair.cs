@@ -39,7 +39,7 @@ namespace AncientTools.CollectibleBehaviors
         }
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling, ref EnumHandling handling)
         {
-            base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, firstEvent, ref handHandling, ref handling);
+            //base.OnHeldInteractStart(slot, byEntity, blockSel, entitySel, firstEvent, ref handHandling, ref handling);
 
             if (entitySel == null || byEntity.LeftHandItemSlot?.Empty == true)
                 return;
@@ -66,7 +66,9 @@ namespace AncientTools.CollectibleBehaviors
 
         public override bool OnHeldInteractStep(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandling handling)
         {
-            if (entitySel == null && LeftHandObject.CodeWithVariant("wood", StorageType).Equals(LeftHandObject.Code))
+            handling = EnumHandling.PreventSubsequent;
+
+            if (entitySel == null || LeftHandObject == null || LeftHandObject.CodeWithVariant("wood", StorageType).Equals(LeftHandObject.Code))
                 return false;
 
             if (entitySel.Entity is EntityMobileStorage && byEntity.Controls.Sneak)
@@ -106,7 +108,6 @@ namespace AncientTools.CollectibleBehaviors
                     }
                 }
 
-                handling = EnumHandling.Handled;
                 return true;
             }
 

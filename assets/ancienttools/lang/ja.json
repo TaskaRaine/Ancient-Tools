@@ -368,6 +368,10 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"block-lampsaucer-iron-empty-extinct-*": "鉄の燭台",
 	"block-lampsaucer-meteoriciron-empty-extinct-*": "隕鉄の燭台",
 	"block-lampsaucer-steel-empty-extinct-*": "鋼の燭台",
+	"block-lampsaucer-electrum-empty-extinct-*": "エレクトラムの燭台",
+	"block-lampsaucer-nickel-empty-extinct-*": "ニッケルの燭台",
+	"block-lampsaucer-cupronickel-extinct-*": "白銅の燭台",
+	
 
 	"block-lampsaucer-copper-candle-extinct-*": "キャンドル付き銅の燭台(未点火)",
 	"block-lampsaucer-brass-candle-extinct-*": "キャンドル付き真鍮の燭台(未点火)",
@@ -381,6 +385,9 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"block-lampsaucer-iron-candle-extinct-*": "キャンドル付き鉄の燭台(未点火)",
 	"block-lampsaucer-meteoriciron-candle-extinct-*": "キャンドル付き隕鉄の燭台(未点火)",
 	"block-lampsaucer-steel-candle-extinct-*": "キャンドル付き鋼の燭台(未点火)",
+	"block-lampsaucer-electrum-candle-extinct-*": "キャンドル付きエレクトラムの燭台(未点火)",
+	"block-lampsaucer-nickel-candle-extinct-*": "キャンドル付きニッケルの燭台(未点火)",
+	"block-lampsaucer-cupronickel-candle-extinct-*": "キャンドル付き白銅の燭台(未点火)",
 
 	"block-lampsaucer-copper-candle-lit-*": "キャンドル付き銅の燭台",
 	"block-lampsaucer-brass-candle-lit-*": "キャンドル付き真鍮の燭台",
@@ -394,6 +401,9 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"block-lampsaucer-iron-candle-lit-*": "キャンドル付き鉄の燭台",
 	"block-lampsaucer-meteoriciron-candle-lit-*": "キャンドル付き隕鉄の燭台",
 	"block-lampsaucer-steel-candle-lit-*": "キャンドル付き鋼の燭台",
+	"block-lampsaucer-electrum-candle-lit-*": "キャンドル付きエレクトラムの燭台",
+	"block-lampsaucer-nickel-candle-lit-*": "キャンドル付きニッケルの燭台",
+	"block-lampsaucer-cupronickel-candle-lit-*": "キャンドル付き白銅の燭台",
 
 	"block-lampsaucer-copper-pitch-extinct-*": "松脂付き銅の燭台(未点火)",
 	"block-lampsaucer-brass-pitch-extinct-*": "松脂付き真鍮の燭台(未点火)",
@@ -407,6 +417,9 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"block-lampsaucer-iron-pitch-extinct-*": "松脂付き鉄の燭台(未点火)",
 	"block-lampsaucer-meteoriciron-pitch-extinct-*": "松脂付き隕鉄の燭台(未点火)",
 	"block-lampsaucer-steel-pitch-extinct-*": "松脂付き鋼の燭台(未点火)",
+	"block-lampsaucer-electrum-pitch-extinct-*": "松脂付きエレクトラムの燭台(未点火)",
+	"block-lampsaucer-nickel-pitch-extinct-*": "松脂付きニッケルの燭台(未点火)",
+	"block-lampsaucer-cupronickel-pitch-extinct-*": "松脂付き白銅の燭台(未点火)",
 
 	"block-lampsaucer-copper-pitch-lit-*": "松脂付き銅の燭台",
 	"block-lampsaucer-brass-pitch-lit-*": "松脂付き真鍮の燭台",
@@ -420,6 +433,9 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"block-lampsaucer-iron-pitch-lit-*": "松脂付き鉄の燭台",
 	"block-lampsaucer-meteoriciron-pitch-lit-*": "松脂付き隕鉄の燭台",
 	"block-lampsaucer-steel-pitch-lit-*": "松脂付き鋼の燭台",
+	"block-lampsaucer-electrum-pitch-lit-*": "松脂付きエレクトラムの燭台",
+	"block-lampsaucer-nickel-pitch-lit-*": "松脂付きニッケルの燭台",
+	"block-lampsaucer-cupronickel-lit-*": "松脂付き白銅の燭台",
 
 	"blockdesc-lampsaucer-*": "インテリアデザイナーから冒険家まで楽しめるエレガントな照明器具",
 
@@ -577,6 +593,15 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"item-mallet-*-obsidian": "黒曜石の槌",
 	"item-mallet-*-peridotite": "かんらん岩の槌",
 	"item-mallet-*-flint": "火打石の槌",
+	"item-mallet-*-copper": "銅の槌",
+	"item-mallet-*-tinbronze": "スズ青銅の槌",
+	"item-mallet-*-bismuthbronze": "ビスマス青銅の槌",
+	"item-mallet-*-blackbronze": "黒青銅の槌",
+	"item-mallet-*-silver": "銀の槌",
+	"item-mallet-*-gold": "金の槌",
+	"item-mallet-*-iron": "鉄の槌",
+	"item-mallet-*-meteoriciron": "隕鉄の槌",
+	"item-mallet-*-steel": "鋼の槌",
 
 	"itemcraftdesc-mallet-*": "樹皮を剥いだ原木を割る為の楔（くさび）打ち用",
 	"itemdesc-mallet-*": "樹皮を剥いだ原木を割る為の楔（くさび）打ち用",
@@ -588,6 +613,18 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"item-mallethead-obsidian": "黒曜石の槌の槌頭",
 	"item-mallethead-peridotite": "かんらん岩の槌の槌頭",
 	"item-mallethead-flint": "火打石の槌の槌頭",
+	"item-mallethead-copper": "銅の槌の槌頭",
+	"item-mallethead-tinbronze": "スズ青銅の槌の槌頭",
+	"item-mallethead-bismuthbronze": "ビスマス青銅の槌の槌頭",
+	"item-mallethead-blackbronze": "黒青銅の槌の槌頭",
+	"item-mallethead-silver": "銀の槌の槌頭",
+	"item-mallethead-gold": "金の槌の槌頭",
+	"item-mallethead-iron": "鉄の槌の槌頭",
+	"item-mallethead-meteoriciron": "隕鉄の槌の槌頭",
+	"item-mallethead-steel": "鋼の槌の槌頭",
+
+	"block-toolmoldancienttools-raw-mallet": "未焼成の槌の鋳型",
+	"block-toolmoldancienttools-burned-mallet": "槌の鋳型",
 
 	"item-wedge-chert": "チャート石の楔（くさび）",
 	"item-wedge-granite": "花崗岩の楔（くさび）",

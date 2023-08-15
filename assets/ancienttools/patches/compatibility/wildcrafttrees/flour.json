@@ -4,6 +4,7 @@
 		"path": "/variantgroups/0/states/-",
 		"value": "spruce",
 		"file": "game:itemtypes/food/flour",
+		"dependsOn": [{ "modid": "wildcrafttrees" }],
 		"side": "Server",
 		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},

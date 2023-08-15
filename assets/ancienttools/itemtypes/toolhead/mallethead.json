@@ -5,29 +5,31 @@
 		handbook: {
 			groupBy: ["mallethead-*"]
 		},
-		groundStorageTransformByType: {
-			"@mallethead-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": {
+		groundStorageTransform: {
 				"translation": { "z": 0.025 }
-			}
 		}
 	},
 	behaviors: [
 		{ "name": "GroundStorable", "properties": { "layout": "Quadrants" } }
 	],
 	variantgroups: [
-        { code: "material", states: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint" ] },
+		{
+			"code": "material",
+			"states": [ "chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron", "meteoriciron", "steel" ]
+		},
     ],
 	drawtype: "json",
-    shapeByType: { 
-		"@mallethead-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": { base: "ancienttools:item/toolhead/mallet-stone" },
-	},
+    shape:  { base: "ancienttools:item/toolhead/mallet-stone" },
 	texturesByType: {
 		"@mallethead-(chert|granite|andesite|basalt|obsidian|peridotite)": { 
 			"material": { base: "game:block/stone/rock/{material}1" },
 		},
-		"mallethead-flint": { 
+		"mallethead-flint": {
 			"material": { base: "game:block/stone/{material}" },
 		},
+		"*": {
+			"material": { "base": "game:block/metal/ingot/{material}" }
+		}
 	},
 	maxstacksize: 4,
 	guiTransform: {

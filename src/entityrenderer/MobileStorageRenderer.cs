@@ -49,6 +49,10 @@ namespace AncientTools.EntityRenderers
                         {
                             compositeTex = new CompositeTexture(this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Block.Textures[textureCode].Base);
                         }
+                        else if (this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Block.Textures.ContainsKey(this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Attributes?.GetString("type") + "-" + textureCode))
+                        {
+                            compositeTex = new CompositeTexture(this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Block.Textures[this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Attributes?.GetString("type") + "-" + textureCode].Base);
+                        }
                     }
 
                     if(compositeTex == null)

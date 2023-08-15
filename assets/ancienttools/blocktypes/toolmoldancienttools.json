@@ -14,23 +14,40 @@
 	},
 	variantgroups: [
 		{ code:"materialtype", states: ["raw", "burned"] },
-		{ code:"tooltype", states: ["adze", "wedge"] }
+		{ code:"tooltype", states: ["adze", "wedge", "mallet"] }
 	],
 	attributesByType: {
 		"*-burned-adze": {
 			"requiredUnits": 100,
 			"fillHeight": 1,
 			"moldrackable": true,
-			"onmoldrackTransform": { rotation: { z: 90 } },
-			"drop": { type: "item", code: "{tooltype}head-{metal}" }
+			"onmoldrackTransform": { "rotation": { "z": 90 } },
+			"drop": {
+				"type": "item",
+				"code": "{tooltype}head-{metal}"
+			}
 		},
 		"*-burned-wedge": {
 			"requiredUnits": 100,
 			"fillHeight": 1,
 			"moldrackable": true,
-			"onmoldrackTransform": { rotation: { z: 90 } },
-			"drop": { type: "item", code: "{tooltype}-{metal}", quantity: 4 }
+			"onmoldrackTransform": { "rotation": { "z": 90 } },
+			"drop": {
+				"type": "item",
+				"code": "{tooltype}-{metal}",
+				"quantity": 4
+			}
 		},
+		"*-burned-mallet": {
+			"requiredUnits": 100,
+			"fillHeight": 1,
+			"moldrackable": true,
+			"onmoldrackTransform": { "rotation": { "z": 90 } },
+			"drop": {
+				"type": "item",
+				"code": "{tooltype}head-{metal}",
+			}
+		}
 	},
 	entityClassByType: {
 		"*-burned-*": "ToolMold",
@@ -56,8 +73,11 @@
 		"*-burned-*": {  floor: { base: "game:block/clay/ceramic-dark" }, other: { base: "game:block/clay/ceramic" } }
 	},
 	shapeByType: {
-		"*-adze": { base: "block/clay/mold/{tooltype}", rotateY: 90 },
-		"*-wedge": { base: "block/clay/mold/{tooltype}" }
+		"*-wedge": { "base": "block/clay/mold/{tooltype}" },
+		"*": {
+			"base": "block/clay/mold/{tooltype}",
+			"rotateY": 90
+		}
 	},
 	sounds: {
 		walk: "walk/stone",
