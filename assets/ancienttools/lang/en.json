@@ -8,12 +8,12 @@
 <font weight='bold'>Mortar and Pestle</font>
 The classic <a href=\'handbook://block-ancienttools:mortar-granite\'>mortar</a> and <a href=\'handbook://item-ancienttools:pestle-basalt\'>pestle</a>. These two tools have been in use in some form since the Paleolithic era for grinding substances such as spices and oats.
 
-To use these items in Vintage Story you must first craft each. Place the mortar on the ground then insert the pestle with <icon name='rightmousebutton'></icon>. Insert any grindable item with <icon name='rightmousebutton'></icon> then crouch and hold <icon name='rightmousebutton'></icon> to begin grinding away!
+To use these items in Vintage Story you must first craft each. Place the mortar on the ground then insert the pestle with <icon name='rightmousebutton'></icon>. Insert any grindable item with <icon name='rightmousebutton'></icon> then <hk>shift</hk> and hold <icon name='rightmousebutton'></icon> to begin grinding away!
 
 <font weight='bold'>Adze</font>
 This <a href=\'handbook://item-ancienttools:adze-copper\'>adze</a>, introduced in the Neolithic era, was a tool commonly used by ancient carpenters to shape wood into various objects or architecture. In its current implementation in the Ancient Tools mod, the adze is used to strip <a href=\'handbook://item-ancienttools:bark-oak\'>bark</a> from trees.  
 
-To create an adze, an <a href=\'handbooksearch://adze head\'>adze head</a> must first be created either through stone <a href=\"handbook://craftinginfo-knapping\">knapping</a>, <a href=\"handbook://craftinginfo-smelting\">smelting</a> or <a href=\"handbook://craftinginfo-smithing\">smithing</a>. Craft the resulting adze head with a stick and you'll now have yourself a handy tool for collecting bark! Approach the nearest tree with adze in hand then crouch and hold <icon name='rightmousebutton'></icon> to begin stripping away.
+To create an adze, an <a href=\'handbooksearch://adze head\'>adze head</a> must first be created either through stone <a href=\"handbook://craftinginfo-knapping\">knapping</a>, <a href=\"handbook://craftinginfo-smelting\">smelting</a> or <a href=\"handbook://craftinginfo-smithing\">smithing</a>. Craft the resulting adze head with a stick and you'll now have yourself a handy tool for collecting bark! Approach the nearest tree with adze in hand then <hk>shift</hk> and hold <icon name='rightmousebutton'></icon> to begin stripping away.
 
 Stone adze heads can also be crafted with bone for an extra sturdy tool!
 
@@ -75,11 +75,11 @@ There are also many barks which have medical properties which were used to treat
 <font weight='bold' align='center'>Ancient Tools Salve Creation Guide</font><br>
 Tree bark has had many various uses throughout history. Many trees, such as <a href=\'handbooksearch://birch\'>birch</a>, <a href=\'handbooksearch://pine\'>pine</a>, <a href=\'handbooksearch://oak\'>oak</a>, and <a href=\'handbooksearch://acacia\'>acacia</a> have various beneficial healing properties. Birch is most commonly used to ease joint pain, whilst pine is most commonly used to reduce inflammation.
 
-<a href=\'handbook://item-ancienttools:salveportion\'>Salves</a> are sometimes created by homesteaders then applied to the skin to take advantage of these properties. To create a salve with Ancient Tools, first, you must convert two cooking pots into <a href=\'handbook://block-ancienttools:salvepot-empty\'>empty salve containers</a>. This can be done by crouching then pressing <icon name='rightmousebutton'></icon> with a salve ingredient(bark, <a href=\'handbook://item-fat\'>fat</a>, or <a href=\'handbook://item-beeswax\'>beeswax</a>) or by crafting a <a href=\'handbook://block-ckaypot-burned\'>cooking pot</a> in the grid with a medicinal bark.
+<a href=\'handbook://item-ancienttools:salveportion\'>Salves</a> are sometimes created by homesteaders then applied to the skin to take advantage of these properties. To create a salve with Ancient Tools, first, you must convert two cooking pots into <a href=\'handbook://block-ancienttools:salvepot-empty\'>empty salve containers</a>. This can be done by holding <hk>shift</hk> then pressing <icon name='rightmousebutton'></icon> with a salve ingredient(bark, <a href=\'handbook://item-fat\'>fat</a>, or <a href=\'handbook://item-beeswax\'>beeswax</a>) or by crafting a <a href=\'handbook://block-ckaypot-burned\'>cooking pot</a> in the grid with a medicinal bark.
 
 Place both <a href=\'handbook://block-ancienttools:salvepot-empty\'>empty containers</a> on the ground. Fill one with a single type of bark and <a href=\'handbook://item-fat\'>fat</a>, then the other with <a href=\'handbook://item-beeswax\'>beeswax</a>. Heat both in a firepit to convert them to prepared versions. 
 
-Finally, place one prepared container on the ground then crouch and hold <icon name='rightmousebutton'></icon> with the other container in hand to pour them together. Congratulations, you made a healing salve! <icon name='rightmousebutton'></icon> the finished salve to extract a <a href=\'handbook://item-ancienttools:salveportion\'>portion</a> that will heal over time when used.
+Finally, place one prepared container on the ground then <hk>shift</hk> and hold <icon name='rightmousebutton'></icon> with the other container in hand to pour them together. Congratulations, you made a healing salve! <icon name='rightmousebutton'></icon> the finished salve to extract a <a href=\'handbook://item-ancienttools:salveportion\'>portion</a> that will heal over time when used.
 
 Empty salve containers can be placed in the crafting grid to convert them back into cooking pots.
 	",
@@ -96,7 +96,7 @@ Place the sack on the ground someplace and wait. When it is ready, it will becom
 
 While waiting it could be useful to craft up a <a href=\'handbooksearch://stretching frame\'>stretching frame</a> in preparation! Simply take the hide when it's ready and stretch it on the frame.
 
-Using a trusty <a href=\'handbooksearch://knife\'>knife</a>, crouch and begin scraping away hair, fat and other undesirable materials from the hide using <icon name='rightmousebutton'></icon>. 
+Using a trusty <a href=\'handbooksearch://knife\'>knife</a>, press <hk>shift</hk> and begin scraping away hair, fat and other undesirable materials from the hide using <icon name='rightmousebutton'></icon>. 
 
 The next step might sound disgusting, but it's essential to create a soft, pliable leather. We need to create a 'braining solution' to soak our hide in. Any <a href=\'handbook://item-ancienttools:animalbrain\'>animal brain</a> will do. Take the brain and combine it with 10L of water in a barrel to create the solution. 
 
@@ -156,9 +156,9 @@ Place the resulting cart item on the ground...and now you have a handy little de
 
 To use the cart for its intended purpose, it will need to have an empty <a href=\'handbooksearch://wooden chest\'>chest</a> inventory placed on it with <icon name='rightmousebutton'></icon>. With an inventory set on the cart, it can now be accessed with <icon name='rightmousebutton'></icon> for storage purposes.
 
-To move the cart from place to place, simply pick it up by crouching and interacting with it using <icon name='rightmousebutton'></icon>. Wherever you travel, your cart will closely follow! To put the cart down, simply repeat the same sequences of actions you used to pick up the cart.
+To move the cart from place to place, simply pick it up by pressing <hk>shift</hk> and interacting with it using <icon name='rightmousebutton'></icon>. Wherever you travel, your cart will closely follow! To put the cart down, simply repeat the same sequences of actions you used to pick up the cart.
 
-When empty, cart inventories can also be removed! Simply press sprint, then <icon name='rightmousebutton'></icon> with an empty hand to remove it from the cart.
+When empty, cart inventories can also be removed! Simply press <hk>ctrl</hk>, then <icon name='rightmousebutton'></icon> with an empty hand to remove it from the cart.
 	",
 	"commandname-removemobilestoragedebuff": "removemobilestoragedebuff",									
 	"commanddesc-removemobilestoragedebuff": "Removes the mobile storage speed debuff from an affected player",	
@@ -233,7 +233,7 @@ When empty, cart inventories can also be removed! Simply press sprint, then <ico
 	"blockinfo-curingrack-meat-perish": "Stored meat perish speed: {0}x",
 
 	"blockinfo-salve-empty-fillwithbark": "A salve container must be filled with medicinal bark and fat OR beeswax.",
-	"blockinfo-salve-empty-crouch": "Crouch and insert an item to get started.",
+	"blockinfo-salve-empty-crouch": "<hk>shift</hk> and insert an item to get started.",
 	"blockinfo-salve-empty-partial": "Contains: ",
 	"blockinfo-salve-empty-bark": "{0}/{1} bark",
 	"blockinfo-salve-empty-wax": "{0}/{1} beeswax",

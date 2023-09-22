@@ -3,11 +3,11 @@
   "modid": "ancienttools",
   "name": "Ancient Tools",
   "authors": ["Taska Raine"],
-  "translators": [ "Cendar", "Macoto Hino", "MrMeg" ],
+  "translators": [ "Cendar", "Macoto Hino", "Vulpeep", "DonBitcoin", "MrMeg" ],
   "contributors": ["NerdScurvy", "weathersong"],
   "description": "A collection of useful tools from ancient times.",
-  "version": "1.5.8",
-  "dependency": {
+  "version": "1.5.9",
+  "dependencies": {
     "game": "1.18.8-rc.1",
   }
 }
