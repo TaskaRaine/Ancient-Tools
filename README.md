@@ -11,6 +11,10 @@
 ### Releases
 
 #### Vintage Story 1.18.8+
+[Version 1.5.10](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.10/AncientTools_V1.5.10.zip)
+
+[Version 1.5.9](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.9/AncientTools_V1.5.9.zip)
+
 [Version 1.5.8](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.8/AncientTools_V1.5.8.zip)
 
 #### Vintage Story 1.18.0+
@@ -83,6 +87,22 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.5.10
+Wedges can now be smithed on an anvil. This should allow them to be made from end-game materials. Thanks for the report, Alatyr!
+
+Revisited the Primitive Survival patch for hides to address a compatibility issue that has cropped up again with recent versions of PS. Reported by many folks on the ModDB, namely, Poompers, Massive_Legend, XeneWarf, and gndrneutralnoun
+
+Added a dependsOn property to capreoline brain patches. They were attempting to patch even when the caprepline mod was not installed.
+
+Dynamic texture paths have been moved from cart item/entity texture properties and placed into attributes to prevent a false warning of textures not found in the client log. Adjusted some code logic to accomodate this. Thanks Diometus for the report!
+
+#### Version 1.5.9
+Updated the Russian translation of the mod. Thank you SO MUCH to Vulpeep and DonBitcoin who contributed extensive efforts to make this translation wonderfully polished.
+
+Updated the English lang file slightly to replace player action words with icon prompts where applicable.
+
+The mod now uses VS 1.18.8 rc-1 as a dependancy properly now. The mod was built with .Net7 and requires .Net7 versions of Vintage Story. If you're using 1.18.8 or later, you're good.
+
 #### Version 1.5.8 
 Ancient Tools is now built upon the .Net7 framework and will be the only framework supported going forward.
 

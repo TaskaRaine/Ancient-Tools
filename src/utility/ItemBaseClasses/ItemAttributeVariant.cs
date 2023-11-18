@@ -18,22 +18,24 @@ namespace AncientTools.Utility
 
                 if (Textures.TryGetValue(textureCode, out CompositeTexture compositeTex))
                 {
-                    if(compositeTex.Base.Path.Contains("{type}") || compositeTex.Base.Path.Contains("{material}"))
+                    if (Attributes["dynamicTextures"][textureCode].Exists)
                     {
-                        compositeTex = new CompositeTexture(new AssetLocation(compositeTex.Base.Domain, compositeTex.Base.Path.Replace("{type}", type).Replace("{material}", material)));
+                        compositeTex = new CompositeTexture(new AssetLocation(Attributes["dynamicTextures"][textureCode].AsString().Replace("{type}", type).Replace("{material}", material)));
                     }
-                }
-                else
-                {
-                    if (!Textures.TryGetValue(CurrentType + "-" + textureCode, out compositeTex))
-                        compositeTex = FirstTexture;
+                    else
+                    {
+                        if (!Textures.TryGetValue(CurrentType + "-" + textureCode, out compositeTex))
+                            compositeTex = FirstTexture;
+                    }
                 }
 
                 TextureAtlasPosition texpos = null;
 
-                if (compositeTex.Base != null)
-                    texpos = Capi.ItemTextureAtlas[compositeTex.Base];
-
+                if(compositeTex != null)
+                {
+                    if (compositeTex.Base != null)
+                        texpos = Capi.ItemTextureAtlas[compositeTex.Base];
+                }
                 if (texpos == null)
                 {
                     IAsset texAsset = Capi.Assets.TryGet(compositeTex.Base.Clone().WithPathPrefixOnce("textures/").WithPathAppendixOnce(".png"));

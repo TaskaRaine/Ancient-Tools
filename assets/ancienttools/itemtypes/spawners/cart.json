@@ -3,6 +3,12 @@
 	class: "ItemCart",
 	attributes: {
 		types: ["wood-aged", "wood-birch", "wood-oak", "wood-maple", "wood-pine", "wood-acacia", "wood-kapok", "wood-baldcypress", "wood-larch", "wood-redwood", "wood-ebony", "wood-walnut", "wood-purpleheart"],
+		"dynamicTextures": {
+			"beam": "game:block/wood/debarked/{type}",
+			"boards": "game:block/wood/planks/{type}1",
+			"beam2": "game:block/wood/treetrunk/{type}",
+			"wheelwood": "game:block/wood/debarked/{type}"
+		},
 		handbook: {
 			groupBy: ["cart"],
 		}
@@ -28,14 +34,14 @@
 	}],
 	shape: { base: "entity/cart_lg_woodwheel" },
 	textures: {
-		"beam": { base: "game:block/wood/debarked/{type}" },
-		"boards": { base: "game:block/wood/planks/{type}1" },
+		"beam": { base: "game:block/wood/debarked/aged" },
+		"boards": { base: "game:block/wood/planks/aged1" },
+		"beam2": { base: "game:block/wood/treetrunk/aged" },
+		"wheelwood": { base: "game:block/wood/debarked/aged" },
 		"dowel": { base:"game:block/wood/table/normal/top" },
-		"beam2": { base: "game:block/wood/treetrunk/{type}" },
 		"knob": { base: "game:block/linen" },
 		"axle": { base: "game:block/wood/planks/generic" },
 		"wheelaccent": { base: "game:block/stone/rock/basalt3" },
-		"wheelwood": { base: "game:block/wood/debarked/{type}" },
 	},
 	heldTpIdleAnimation: "holdbothhandslarge", 
 	heldTpUseAnimation: "twohandplaceblock",

@@ -6,7 +6,7 @@
 		handbook: {
 			groupBy: ["wedge-*"],
 			createdByByType: {
-				"@wedge-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": "ancienttools:handbook-smelting-craftinfo"
+				"@wedge-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver)": "ancienttools:handbook-smelting-craftinfo"
 			}
 		},
 	},

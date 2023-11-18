@@ -1,0 +1,16 @@
+﻿{
+	ingredient: { type: "item", code: "game:ingot-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "meteoriciron", "steel"] },
+	pattern: [
+		[
+			"_#__###_",
+			"_##__##_",
+			"_###__#_",
+			"________",
+			"_###__#_",
+			"_##__##_",
+			"_#__###_"
+		]
+	],
+	name: "Wedges",
+	output: { type: "item", code: "ancienttools:wedge-{metal}", stacksize: 4  }
+}

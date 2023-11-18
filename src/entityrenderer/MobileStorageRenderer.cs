@@ -32,9 +32,9 @@ namespace AncientTools.EntityRenderers
 
                 if (entity.Properties.Client.Textures.TryGetValue(textureCode, out CompositeTexture compositeTex))
                 {
-                    if (compositeTex.Base.Path.Contains("{type}") || compositeTex.Base.Path.Contains("{material}"))
+                    if (entity.Properties.Attributes["dynamicTextures"][textureCode].Exists)
                     {
-                        compositeTex = new CompositeTexture(new AssetLocation(compositeTex.Base.Domain, compositeTex.Base.Path.Replace("{type}", type).Replace("{material}", material)));
+                        compositeTex = new CompositeTexture(new AssetLocation(entity.Properties.Attributes["dynamicTextures"][textureCode].AsString().Replace("{type}", type).Replace("{material}", material)));
                     }
                 }
                 else
