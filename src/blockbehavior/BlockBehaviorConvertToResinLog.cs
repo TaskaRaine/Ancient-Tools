@@ -148,7 +148,7 @@ namespace AncientTools.BlockBehaviors
 
                 Vec4i pos = queue.Dequeue();
 
-                block = world.BlockAccessor.GetBlock(pos.X, pos.Y, pos.Z, BlockLayersAccess.SolidBlocks);
+                block = world.BlockAccessor.GetBlock(new BlockPos(pos.X, pos.Y, pos.Z, 0), BlockLayersAccess.SolidBlocks);
                 string treeFellingGroupCode = block.Attributes?["treeFellingGroupCode"].AsString();
 
                 if (block.FirstCodePart() == "log" || block.FirstCodePart() == "directionalresin")
@@ -160,7 +160,7 @@ namespace AncientTools.BlockBehaviors
                 for (int i = 0; i < Vec3i.DirectAndIndirectNeighbours.Length; i++)
                 {
                     Vec3i facing = Vec3i.DirectAndIndirectNeighbours[i];
-                    BlockPos neibPos = new BlockPos(pos.X + facing.X, pos.Y + facing.Y, pos.Z + facing.Z);
+                    BlockPos neibPos = new BlockPos(pos.X + facing.X, pos.Y + facing.Y, pos.Z + facing.Z, 0);
 
                     if (checkedPositions.Contains(neibPos)) continue;
 

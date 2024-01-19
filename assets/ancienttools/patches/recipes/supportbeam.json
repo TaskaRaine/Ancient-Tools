@@ -5,6 +5,7 @@
         "value": false,
         "file": "game:recipes/grid/beams",
         "side": "Server",
-        "condition": { "when": "InWorldBeamCraftingOnly", "isValue": "true" }
+        "condition": { "when": "InWorldBeamCraftingOnly", "isValue": "true" },
+        "dependsOn": [{"modid": "indappledgroves", "invert":  true}],
     }
 ]

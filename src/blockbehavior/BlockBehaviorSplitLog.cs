@@ -70,7 +70,7 @@ namespace AncientTools.BlockBehaviors
             {
                 block.SelectionBoxes = OriginalSelectionBoxes.Append(WedgeSelectionBoxes);
             }
-            else if(activeHotbarSlot?.Itemstack?.Collectible is ItemMallet)
+            else if(activeHotbarSlot?.Itemstack?.Collectible is ItemMallet || activeHotbarSlot?.Itemstack.Collectible is ItemHammer)
             {
                 block.SelectionBoxes = OriginalSelectionBoxes.Append(MalletHitboxes);
             }

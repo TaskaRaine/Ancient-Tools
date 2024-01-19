@@ -97,13 +97,13 @@
 	},
 	grindingPropsByType: {
 		"*-birch": {
-			grindedStack: { type: "item", code: "game:flour-birch" }
+			groundStack: { type: "item", code: "game:flour-birch" }
 		},
 		"*-pine": {
-			grindedStack: { type: "item", code: "game:flour-pine" }
+			groundStack: { type: "item", code: "game:flour-pine" }
 		},
 		"*-maple": {
-			grindedStack: { type: "item", code: "game:flour-maple" }
+			groundStack: { type: "item", code: "game:flour-maple" }
 		}
 	},
 	guiTransform: {

@@ -3,28 +3,7 @@
 		"op": "add",
 		"path": "/server/behaviors/6/quantitySlots",
 		"value": 8,
-		"file": "game:entities/land/fox-arctic-female",
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/server/behaviors/6/quantitySlots",
-		"value": 8,
-		"file": "game:entities/land/fox-arctic-male",
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/server/behaviors/6/quantitySlots",
-		"value": 8,
-		"file": "game:entities/land/fox-female",
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/server/behaviors/6/quantitySlots",
-		"value": 8,
-		"file": "game:entities/land/fox-male",
+		"file": "game:entities/land/fox",
 		"side": "Server"
 	},
 	{
@@ -33,70 +12,19 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantity: { avg: 0.25, var: 0 } 
+			quantityByType: {
+				"*-pup-*": { avg: 0.0, var: 0 },
+				"*": { avg: 0.25, var: 0 }
+			}
 		},
-		"file": "game:entities/land/fox-arctic-female",
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/server/behaviors/6/drops/-",
-		"value": {
-			type: "item",
-			code: "ancienttools:brain",
-			quantity: { avg: 0.25, var: 0 } 
-		},
-		"file": "game:entities/land/fox-arctic-male",
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/server/behaviors/6/drops/-",
-		"value": {
-			type: "item",
-			code: "ancienttools:brain",
-			quantity: { avg: 0.25, var: 0 } 
-		},
-		"file": "game:entities/land/fox-female",
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/server/behaviors/6/drops/-",
-		"value": {
-			type: "item",
-			code: "ancienttools:brain",
-			quantity: { avg: 0.25, var: 0 } 
-		},
-		"file": "game:entities/land/fox-male",
+		"file": "game:entities/land/fox",
 		"side": "Server"
 	},
 	{
 		"op": "add",
 		"path": "/client/behaviors/4/quantitySlots",
 		"value": 8,
-		"file": "game:entities/land/fox-arctic-female",
+		"file": "game:entities/land/fox",
 		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/client/behaviors/4/quantitySlots",
-		"value": 8,
-		"file": "game:entities/land/fox-arctic-male",
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/client/behaviors/4/quantitySlots",
-		"value": 8,
-		"file": "game:entities/land/fox-female",
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/client/behaviors/4/quantitySlots",
-		"value": 8,
-		"file": "game:entities/land/fox-male",
-		"side": "Server"
-	},
+	}
 ]

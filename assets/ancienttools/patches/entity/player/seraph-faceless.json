@@ -146,5 +146,52 @@
 			]
 		},
 		"file": "game:shapes/entity/humanoid/seraph-faceless"
+	},
+	{
+		"op": "add",
+		"path": "/animations/-",
+		"value": {
+			"name": "DumpSalve",
+			"code": "dumpsalve",
+			"quantityframes": 25,
+			"onActivityStopped": "Rewind",
+			"onAnimationEnd": "Hold",
+			"keyframes": [
+				{
+					"frame": 0,
+					"elements": {
+						"UpperArmL": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"UpperArmR": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 6,
+					"elements": {
+						"UpperArmL": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": -44.0 },
+						"LowerArmL": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"UpperArmR": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": -44.0 }
+					}
+				},
+				{
+					"frame": 14,
+					"elements": {
+						"UpperArmL": { "rotationX": 0.0, "rotationY": -8.0, "rotationZ": -66.0 },
+						"LowerArmL": { "rotationX": 3.0, "rotationY": 0.0, "rotationZ": -14.0 },
+						"UpperArmR": { "rotationX": 0.0, "rotationY": 8.0, "rotationZ": -66.0 },
+						"ItemAnchor": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 24,
+					"elements": {
+						"UpperArmR": { "rotationX": 0.0, "rotationY": 8.0, "rotationZ": -66.0 },
+						"ItemAnchor": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 100.0 },
+						"UpperArmL": { "rotationX": 0.0, "rotationY": -8.0, "rotationZ": -66.0 },
+						"LowerArmL": { "rotationX": 3.0, "rotationY": 0.0, "rotationZ": -14.0 }
+					}
+				}
+			]
+		},
+		"file": "game:shapes/entity/humanoid/seraph-faceless"
 	}
 ]

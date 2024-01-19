@@ -68,7 +68,7 @@ namespace AncientTools.CollectibleBehaviors
         {
             handling = EnumHandling.PreventSubsequent;
 
-            if (entitySel == null || LeftHandObject == null || LeftHandObject.CodeWithVariant("wood", StorageType).Equals(LeftHandObject.Code))
+            if (entitySel == null || LeftHandObject == null || !LeftHandObject.CodeWithVariant("wood", StorageType).Equals(LeftHandObject.Code))
                 return false;
 
             if (entitySel.Entity is EntityMobileStorage && byEntity.Controls.Sneak)

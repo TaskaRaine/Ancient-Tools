@@ -3,7 +3,7 @@
 		"op": "add",
 		"path": "/grindingProps",
 		"value": {
-			grindedStack: { type: "item", code: "ancienttools:powderedcharcoal" }
+			groundStack: { type: "item", code: "ancienttools:powderedcharcoal" }
 		},
 		"file": "game:itemtypes/resource/charcoal",
 		"side": "Server",

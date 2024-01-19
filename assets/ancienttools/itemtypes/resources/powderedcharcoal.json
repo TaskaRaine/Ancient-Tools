@@ -26,7 +26,7 @@
 		}
 	}],
 	drawtype: "json",
-    shape: { base: "game:item/resource/crushed/crushed" },
+    shape: { base: "game:item/resource/crushed/normal" },
 	textures: { 
 		quartz: { base: "item/resource/crushed/powderedcharcoal" } 
 	},

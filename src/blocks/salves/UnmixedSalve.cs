@@ -115,6 +115,8 @@ namespace AncientTools.Blocks
                 api.World.BlockAccessor.GetBlock(blockSel.Position, BlockLayersAccess.SolidBlocks) is BlockUnmixedSalve interactedBlock && 
                 interactedBlock.LastCodePart() != this.LastCodePart())
             {
+                byEntity.StartAnimation("dumpsalve");
+
                 if(api.Side == EnumAppSide.Client)
                     api.World.PlaySoundAt(new AssetLocation("ancienttools", "sounds/block/salvepour"), byEntity, byEntity as IPlayer, true, 32f, 0.5f);
                 
@@ -162,6 +164,8 @@ namespace AncientTools.Blocks
         }
         public override void OnHeldInteractStop(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
+            byEntity.StopAnimation("dumpsalve");
+
             if(secondsUsed >= salveMixTime)
             if (api.World.BlockAccessor.GetBlock(blockSel.Position, BlockLayersAccess.SolidBlocks) is BlockUnmixedSalve interactedBlock)
             {

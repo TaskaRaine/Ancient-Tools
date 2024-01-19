@@ -144,10 +144,16 @@ namespace AncientTools.Utility
         }
         public void AddMesh(ITerrainMeshPool mesher, MeshData mesh)
         {
+            if (mesh == null)
+                return;
+
             mesher.AddMeshData(mesh);
         }
         public void AddMesh(ITerrainMeshPool mesher, MeshData mesh, Vec3f rotation)
         {
+            if (mesh == null)
+                return;
+
             mesher.AddMeshData(mesh.Clone()
                 .Rotate(new Vec3f(0.5f, 0.5f, 0.5f), rotation.X, rotation.Y, rotation.Z));
         }

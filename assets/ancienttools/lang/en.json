@@ -372,7 +372,7 @@ When empty, cart inventories can also be removed! Simply press <hk>ctrl</hk>, th
 	"block-lampsaucer-steel-empty-extinct-*": "Steel Chamberstick",
 	"block-lampsaucer-electrum-empty-extinct-*": "Electrum Chamberstick",
 	"block-lampsaucer-nickel-empty-extinct-*": "Nickel Chamberstick",
-	"block-lampsaucer-cupronickel-extinct-*": "Cupronickel Chamberstick",
+	"block-lampsaucer-cupronickel-empty-extinct-*": "Cupronickel Chamberstick",
 
 	"block-lampsaucer-copper-candle-extinct-*": "Unlit Copper Chamberstick with Candle",
 	"block-lampsaucer-brass-candle-extinct-*": "Unlit Brass Chamberstick with Candle",
@@ -388,7 +388,7 @@ When empty, cart inventories can also be removed! Simply press <hk>ctrl</hk>, th
 	"block-lampsaucer-steel-candle-extinct-*": "Unlit Steel Chamberstick with Candle",
 	"block-lampsaucer-electrum-candle-extinct-*": "Unlit Electrum Chamberstick with Candle",
 	"block-lampsaucer-nickel-candle-extinct-*": "Unlit Nickel Chamberstick with Candle",
-	"block-lampsaucer-cupronickel-candle-extinct-*": "Unlot Cupronickel Chamberstick with Candle",
+	"block-lampsaucer-cupronickel-candle-extinct-*": "Unlit Cupronickel Chamberstick with Candle",
 
 	"block-lampsaucer-copper-candle-lit-*": "Lit Copper Chamberstick with Candle",
 	"block-lampsaucer-brass-candle-lit-*": "Lit Brass Chamberstick with Candle",
@@ -436,7 +436,7 @@ When empty, cart inventories can also be removed! Simply press <hk>ctrl</hk>, th
 	"block-lampsaucer-steel-pitch-lit-*": "Lit Steel Chamberstick with Pitch",
 	"block-lampsaucer-electrum-pitch-lit-*": "Lit Electrum Chamberstick with Pitch",
 	"block-lampsaucer-nickel-pitch-lit-*": "Lit Nickel Chamberstich with Pitch",
-	"block-lampsaucer-cupronickel-lit-*": "Lit Cupronickel Chamberstick with Pitch",
+	"block-lampsaucer-cupronickel-pitch-lit-*": "Lit Cupronickel Chamberstick with Pitch",
 
 	"blockdesc-lampsaucer-*": "An elegant lighting solution for both interior designers and adventurers alike",
 

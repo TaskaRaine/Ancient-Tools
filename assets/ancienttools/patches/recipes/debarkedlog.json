@@ -5,6 +5,7 @@
         "value": false,
         "file": "game:recipes/grid/debarkedlog",
         "side": "Server",
-        "condition": { "when": "AdzeStrippingOnly", "isValue": "true" }
+        "condition": { "when": "AdzeStrippingOnly", "isValue": "true" },
+        "dependsOn": [{"modid": "indappledgroves", "invert": true}],
 	}
 ]

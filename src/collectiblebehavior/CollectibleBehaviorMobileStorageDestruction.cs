@@ -95,27 +95,11 @@ namespace AncientTools.CollectibleBehaviors
         }
         public override bool OnHeldInteractStep(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandling handling)
         {
-            handling = EnumHandling.PreventSubsequent;
-
             if (entitySel == null || slot.Empty)
-                return false;
+                return base.OnHeldInteractStep(secondsUsed, slot, byEntity, blockSel, entitySel, ref handling);
 
             if (entitySel.Entity is EntityMobileStorage && byEntity.Controls.Sneak)
             {
-                if(byEntity.Api.Side == EnumAppSide.Client)
-                {
-                    /*
-                   sawSound.SetPosition(entitySel.Position.ToVec3f());
-
-
-                   if (!sawSound.IsPlaying)
-                   {
-                       sawSound.SetPitchOffset(rand.Next(-2, 2) / 10f);
-                       sawSound.Start();
-                   }
-                   */
-                }
-
                 if (secondsUsed - PreviousTickedTime > DestructionInterval)
                 {
                     if (byEntity.Api.Side == EnumAppSide.Server)
@@ -134,22 +118,16 @@ namespace AncientTools.CollectibleBehaviors
                     }
                 }
 
+                handling = EnumHandling.PreventSubsequent;
                 return true;
             }
 
-            return false;
+            return base.OnHeldInteractStep(secondsUsed, slot, byEntity, blockSel, entitySel, ref handling);
         }
         public override void OnHeldInteractStop(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandling handling)
         {
             EntityHealth = null;
             PreviousTickedTime = 0;
-
-            /*
-            if(byEntity.Api.Side == EnumAppSide.Client)
-            {
-                sawSound.FadeOutAndStop(0.2f);
-            }
-            */
         }
         private bool CanAccessInClaim(EntityPlayer player, BlockPos pos, EnumBlockAccessFlags accessType)
         {

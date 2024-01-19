@@ -159,12 +159,13 @@ namespace AncientTools.BlockEntities
             isGrinding = tree.GetBool("isGrinding", false);
             isRendered = tree.GetBool("isRendered", false);
 
-            if(pestleRenderer != null)
+            UpdateMeshes();
+
+            if (pestleRenderer != null)
             {
                 //-- If the isRendered value retreived from the server is true, then display the pestle --//
                 if (isRendered)
                 {
-                    UpdateMeshes();
                     pestleRenderer.UpdateMesh(Meshes[1]);
                     pestleRenderer.SetPestleLookAtVector(lookAtPlayerVector.X, lookAtPlayerVector.Y, lookAtPlayerVector.Z);
                     pestleRenderer.ShouldRender = true;
@@ -178,7 +179,10 @@ namespace AncientTools.BlockEntities
                             ambientSound.Start();
 
                         if (grindTickListener == -1)
+                        {
+                            SetGroundItemstack();
                             grindTickListener = this.Api.Event.RegisterGameTickListener(Grind, 16);
+                        }
                     }
                     else
                     {
@@ -335,10 +339,13 @@ namespace AncientTools.BlockEntities
         {
             if (Api.Side == EnumAppSide.Client)
             {
-                grindingParticles.Color = ResourceSlot.Itemstack.Collectible.GetRandomColor(Capi, ResourceSlot.Itemstack);
+                if (ResourceSlot.Empty)
+                    return;
 
+                grindingParticles.Color = ResourceSlot.Itemstack.Collectible.GetRandomColor(Capi, ResourceSlot.Itemstack);
+                
                 //-- Particles are white when a transparent texture is used. Therefore, the mod attempts to aquire a colour from the grinded stack in hopes of getting a colour match --//
-                if(ColorUtil.ColorA(grindingParticles.Color) != 255)
+                if (ColorUtil.ColorA(grindingParticles.Color) != 255)
                     grindingParticles.Color = groundItemstack.Collectible.GetRandomColor(Capi, groundItemstack);
 
                 this.Api.World.SpawnParticles(grindingParticles);

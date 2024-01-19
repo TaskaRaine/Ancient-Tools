@@ -18,7 +18,7 @@
 			"*-sulfur": {
 				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_ore_{ore}",
 				texturePaths: [{ code: "{ore}", path: "game:item/resource/ungraded/{ore}" }],
-				groundStack: { type: "item", code: "game:powderedsulfer" },
+				groundStack: { type: "item", code: "game:powderedsulfur" },
 				resultQuantity: 2
 			}
 		},

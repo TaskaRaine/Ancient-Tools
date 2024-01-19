@@ -1,9 +1,9 @@
 ﻿[
-	{
+    {
 		"op": "add",
 		"path": "/server/behaviors/6/quantitySlots",
 		"value": 8,
-		"file": "game:entities/land/gazelle",
+		"file": "game:entities/land/hooved/deer",
 		"side": "Server"
 	},
 	{
@@ -13,19 +13,19 @@
 			type: "item",
 			code: "ancienttools:brain",
 			quantityByType: {
-				"*-calf": { avg: 0.0, var: 0 },
+				"*-baby": { avg: 0.0, var: 0 },
 				"*-male": { avg: 0.25, var: 0 },
 				"*-female": { avg: 0.25, var: 0 },
 			}
 		},
-		"file": "game:entities/land/gazelle",
+		"file": "game:entities/land/hooved/deer",
 		"side": "Server"
 	},
 	{
 		"op": "add",
 		"path": "/client/behaviors/4/quantitySlots",
 		"value": 8,
-		"file": "game:entities/land/gazelle",
+		"file": "game:entities/land/hooved/deer",
 		"side": "Server"
 	},
 ]

@@ -75,10 +75,10 @@ namespace AncientTools.Utility
             string cacheKey = "itemAttributeMeshRefs" + Code.Domain + FirstCodePart();
             Dictionary<string, MeshRef> meshrefs = ObjectCacheUtil.GetOrCreate(capi, cacheKey, () => new Dictionary<string, MeshRef>());
 
-            if (!meshrefs.TryGetValue(CurrentType, out renderinfo.ModelRef))
+            if (!meshrefs.TryGetValue(CurrentType, out renderinfo.ModelRef.meshrefs[0]))
             {
                 MeshData mesh = GenMesh();
-                meshrefs[CurrentType] = renderinfo.ModelRef = capi.Render.UploadMesh(mesh);
+                meshrefs[CurrentType] = renderinfo.ModelRef.meshrefs[0] = capi.Render.UploadMesh(mesh);
             }
 
             base.OnBeforeRender(capi, itemstack, target, ref renderinfo);

@@ -41,7 +41,7 @@ namespace AncientTools.Items
         {
             if(interactedBlock.Face == BlockFacing.UP)
             {
-                return new BlockPos(interactedBlock.Position.X, interactedBlock.Position.UpCopy(1).Y, interactedBlock.Position.Z);
+                return new BlockPos(interactedBlock.Position.X, interactedBlock.Position.UpCopy(1).Y, interactedBlock.Position.Z, 0);
             }
 
             return null;

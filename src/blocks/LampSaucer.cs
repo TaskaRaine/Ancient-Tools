@@ -145,7 +145,10 @@ namespace AncientTools.Blocks
         {
             return EnumIgniteState.NotIgnitable;
         }
-
+        public EnumIgniteState OnTryIgniteStack(EntityAgent byEntity, BlockPos pos, ItemSlot slot, float secondsIgniting)
+        {
+            return EnumIgniteState.NotIgnitable;
+        }
         public void OnTryIgniteBlockOver(EntityAgent byEntity, BlockPos pos, float secondsIgniting, ref EnumHandling handling)
         {
             if (CodeWithVariant("state", "extinct").Equals(Code))

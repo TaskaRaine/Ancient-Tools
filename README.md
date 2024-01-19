@@ -9,8 +9,12 @@
  Hello and welcome to the GitHub repository for Ancient Tools. This project is a mod for the survival adventure game Vintage Story which adds an assortment of immersive, interactive tools to the game.
 
 ### Releases
+#### Vintage Story 1.19.0+
+[Version 1.5.12](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.12/AncientTools_V1.5.12.zip)
 
 #### Vintage Story 1.18.8+
+[Version 1.5.11](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.11/AncientTools_V1.5.11.zip)
+
 [Version 1.5.10](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.10/AncientTools_V1.5.10.zip)
 
 [Version 1.5.9](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.9/AncientTools_V1.5.9.zip)
@@ -87,6 +91,29 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.5.12
+Updated Ancient Tools for Vintage Story 1.19.0+ compatibility.
+NOTE: Many tweaks still need to be made so that certain things match up more nicely with the new vanilla first person mode
+
+Fixed several minor mistakes in lang files.
+
+Recipe disables for vanilla support beam and debarked logs will no longer run when InDappledGroves is installed to avoid throwing a debug log warning.
+
+Fixed an issue that prevented carts from being repaired.
+
+Fixed an issue that interfered with other mods attempting to use interactions with the saw.
+
+Removed brain drops from gazelle calves
+
+#### Version 1.5.11
+Fixed a spelling mistake within the sulfur patch which caused clients to crash when grinding sulfur with a mortar and pestle. Thanks to Iphour for the report!
+
+Potentially fixed a crash that would occurr intermittently whenever the mortar tried to grab a texture from the item a grindable would grind into. groundItemstack was not being properly set on the clientside. Again, thank you Iphour for the report!
+
+Apparently grindable meshes in the mortar were not being properly synced between clients. Thing should now look proper to everyone.
+
+Added a dependsOn property to pantherinae brain patches. They were attempting to patch even when the pantherinae mod was not installed.
+
 #### Version 1.5.10
 Wedges can now be smithed on an anvil. This should allow them to be made from end-game materials. Thanks for the report, Alatyr!
 

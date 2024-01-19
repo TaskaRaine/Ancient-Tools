@@ -370,7 +370,7 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"block-lampsaucer-steel-empty-extinct-*": "鋼の燭台",
 	"block-lampsaucer-electrum-empty-extinct-*": "エレクトラムの燭台",
 	"block-lampsaucer-nickel-empty-extinct-*": "ニッケルの燭台",
-	"block-lampsaucer-cupronickel-extinct-*": "白銅の燭台",
+	"block-lampsaucer-cupronickel-empty-extinct-*": "白銅の燭台",
 	
 
 	"block-lampsaucer-copper-candle-extinct-*": "キャンドル付き銅の燭台(未点火)",
@@ -435,7 +435,7 @@ Ancient Toolsは、歴史に触発された様々な輸送手段を取り入れ�
 	"block-lampsaucer-steel-pitch-lit-*": "松脂付き鋼の燭台",
 	"block-lampsaucer-electrum-pitch-lit-*": "松脂付きエレクトラムの燭台",
 	"block-lampsaucer-nickel-pitch-lit-*": "松脂付きニッケルの燭台",
-	"block-lampsaucer-cupronickel-lit-*": "松脂付き白銅の燭台",
+	"block-lampsaucer-cupronickel-pitch-lit-*": "松脂付き白銅の燭台",
 
 	"blockdesc-lampsaucer-*": "インテリアデザイナーから冒険家まで楽しめるエレガントな照明器具",
 

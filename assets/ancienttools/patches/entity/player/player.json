@@ -21,6 +21,30 @@
 	},
 	{
 		"op": "add",
+		"path": "/client/animations/-",
+		"value": {
+			code: "dumpsalve",
+			animation: "DumpSalve",
+			animationSpeed: 1.0,
+			blendMode: "Add",
+			elementWeight: {
+				"UpperArmR": 20,
+				"UpperArmL": 20,
+				"LowerArmL": 100,
+				"ItemAnchor": 100
+			},
+			elementBlendMode: {
+				"UpperArmR": "AddAverage",
+				"UpperArmL": "AddAverage",
+				"LowerArmL": "AddAverage",
+				"ItemAnchor": "AddAverage"
+			}
+		},
+		"file": "game:entities/humanoid/player",
+		"side": "Server"
+	},
+	{
+		"op": "add",
 		"path": "/server/behaviors/-",
 		"value": { code: "MobileStorageDebuffRemoval" },
 		"file": "game:entities/humanoid/player",
