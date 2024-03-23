@@ -112,6 +112,26 @@ namespace AncientTools.Entities
                 };
             });
         }
+        public override void OnEntityLoaded()
+        {
+            base.OnEntityLoaded();
+
+            //-- Pulled from the renderer OnEntityLoaded function. The inventory was empty when loading, therefore causing the inventories to not appear --//
+            if (Api.Side == EnumAppSide.Client)
+            {
+                if (!MobileStorageInventory[0].Empty)
+                {
+                    if (MobileStorageInventory[0].Itemstack.Collectible is BlockGenericTypedContainer && MobileStorageInventory[0].Itemstack.Attributes?.GetString("type") != null)
+                    {
+                        string type = MobileStorageInventory[0].Itemstack.Attributes.GetString("type");
+
+                        Renderer.AssignStoragePlacementProperties(MobileStorageInventory[0]?.Itemstack?.Collectible?.Attributes["cartPlacable"][type]);
+                    }
+                    else
+                        Renderer.AssignStoragePlacementProperties(MobileStorageInventory[0]?.Itemstack?.Collectible?.Attributes["cartPlacable"]);
+                }
+            }
+        }
         public override string GetInfoText()
         {
             if (CartInventorySlot.Empty)

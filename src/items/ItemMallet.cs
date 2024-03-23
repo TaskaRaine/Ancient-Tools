@@ -7,6 +7,10 @@ namespace AncientTools.Items
 {
     class ItemMallet: Item
     {
+
+        //-- Empty class now. Everything is now handled via behavior. I'm just keeping the class for compatibility sake. --//
+
+        /*
         public override void OnHeldAttackStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handling)
         {
             IPlayer byPlayer = (byEntity as EntityPlayer)?.Player;
@@ -43,5 +47,6 @@ namespace AncientTools.Items
                 DamageItem(api.World, byEntity, slot, 1);
             }
         }
+        */
     }
 }

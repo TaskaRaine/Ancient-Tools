@@ -111,7 +111,7 @@ namespace AncientTools.EntityRenderers
         public override void OnEntityLoaded()
         {
             InitializeShape();
-
+            /*
             //-- Required to prevent a crash on game load when an inventory is already placed on a cart --//
             if (!CartEntity.MobileStorageInventory[0].Empty)
             {
@@ -124,6 +124,7 @@ namespace AncientTools.EntityRenderers
                 else
                     AssignStoragePlacementProperties(CartEntity.MobileStorageInventory[0]?.Itemstack?.Collectible?.Attributes["cartPlacable"]);
             }
+            */
         }
         public void InitializeShape()
         {

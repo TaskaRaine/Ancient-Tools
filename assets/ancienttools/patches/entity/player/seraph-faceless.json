@@ -193,5 +193,37 @@
 			]
 		},
 		"file": "game:shapes/entity/humanoid/seraph-faceless"
+	},
+	{
+		"op": "add",
+		"path": "/animations/-",
+		"value": {
+			"name": "MeltPitchRepair",
+			"code": "meltpitchrepair",
+			"quantityframes": 17,
+			"onActivityStopped": "Rewind",
+			"onAnimationEnd": "Hold",
+			"keyframes": [
+				{
+					"frame": 0,
+					"elements": {
+						"UpperArmL": { "rotationX": -28.0, "rotationY": 6.0, "rotationZ": -19.0 },
+						"LowerArmL": { "rotationX": 11.0, "rotationY": -28.0, "rotationZ": -83.0 },
+						"UpperArmR": { "rotationX": 5.0, "rotationY": -4.0, "rotationZ": -22.5 },
+						"LowerArmR": { "rotationX": -2.0, "rotationY": -3.0, "rotationZ": -67.5 }
+					}
+				},
+				{
+					"frame": 16,
+					"elements": {
+						"UpperArmR": { "rotationX": 75.0, "rotationY": -6.0, "rotationZ": -45.0 },
+						"LowerArmR": { "rotationX": 0, "rotationY": 0, "rotationZ": -55 },
+						"UpperArmL": { "rotationX": -33.0, "rotationY": 19.0, "rotationZ": -58.0 },
+						"LowerArmL": { "rotationX": 3.0, "rotationY": -33.0, "rotationZ": -58.0 }
+					}
+				}
+			]
+		},
+		"file": "game:shapes/entity/humanoid/seraph-faceless"
 	}
 ]

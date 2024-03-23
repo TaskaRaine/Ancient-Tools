@@ -20,6 +20,9 @@
 				inGameHours: "96"
 			}
 		},
+		"canMeltPitchForRepairByType": {
+			"*-lit-*": true
+		},
 		handbook: {
 			groupBy: ["pitchtorch-*"]
 		},
@@ -136,13 +139,20 @@
 		rotation: { x: 17, y: 38, z: -33 },
 		scale: 1.5
 	},
+
 	guiTransform: {
 		rotation: { x: -47, y: 30, z: 15 },
 		origin: { x: 0.5, y: 0.46, z: 0.5 },
 		scale: 2.02
 	},
 	tpHandTransform: {
-		translation: { x: -0.73, y: 0.05, z: -0.85 },
+		translation: { x: -0.73, y: 0.05, z: -0.9 },
+		rotation: { x: 0, y: 179, z: 86 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.55
+	},
+	tpOffHandTransform: {
+		translation: { x: -0.73, y: 0.05, z: -0.95 },
 		rotation: { x: 0, y: 179, z: 86 },
 		origin: { x: 0.5, y: 0, z: 0.5 },
 		scale: 0.55

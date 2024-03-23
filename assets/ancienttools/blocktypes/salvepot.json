@@ -1,17 +1,17 @@
 ﻿{
 	code: "salvepot",
 	classByType: {
-		"*-empty": "BlockSalveContainer",
+		"@salvepot-(empty|residuecovered)": "BlockSalveContainer",
 		"*-softwax": "BlockUnmixedSalve",
 		"*-barkoil": "BlockUnmixedSalve",
 		"*-finishedsalve": "BlockSalve"
 	},
 	entityclassByType: {
-		"*-empty": "BESalveContainer",
+		"@salvepot-(empty|residuecovered)": "BESalveContainer",
 		"*-finishedsalve": "BEFinishedSalve"
 	},
 	attributesByType: {
-		"@salvepot-(birch|pine|maple|oak|acacia|softwax|hardwax|barkoil)": {
+		"@salvepot-(birch|birchresiduecovered|pine|pineresiduecovered|maple|mapleresiduecovered|oak|oakresiduecovered|acacia|acaciaresiduecovered|hardwax|hardwaxresiduecovered|softwax|barkoil)": {
 			inFirePitProps: {
 				transform: { 
 					translation: { x: 0, y: 0.125, z: 0 } 
@@ -29,24 +29,24 @@
 		}
 	},
 	behaviorsByType: {
-		"@salvepot-(birch|pine|maple|oak|acacia|softwax|hardwax|barkoil)": [
+		"@salvepot-(birch|birchresiduecovered|pine|pineresiduecovered|maple|mapleresiduecovered|oak|oakresiduecovered|acacia|acaciaresiduecovered|hardwax|hardwaxresiduecovered|softwax|barkoil)": [
 			{ name: "UnstableFalling" }, { name: "RightClickPickup" }
 		],
-		"@salvepot-(empty|finishedsalve)": [
+		"@salvepot-(empty|residuecovered|finishedsalve)": [
 			{ name: "UnstableFalling" }
 		]
 	},
 	variantgroups: [
-		{ code:"type", states: ["empty", "birch", "pine", "maple", "oak", "acacia", "hardwax", "softwax", "barkoil", "finishedsalve"] },
+		{ code:"type", states: ["empty", "residuecovered", "birch", "birchresiduecovered", "pine", "pineresiduecovered", "maple", "mapleresiduecovered", "oak", "oakresiduecovered",  "acacia", "acaciaresiduecovered", "hardwax", "hardwaxresiduecovered", "softwax", "barkoil", "finishedsalve"] },
 	],
 	creativeinventory: { "general": ["salvepot-empty", "salvepot-birch", "salvepot-pine", "salvepot-oak", "salvepot-acacia", "salvepot-hardwax", "salvepot-softwax", "salvepot-barkoil"], 
 	"decorative": ["salvepot-empty", "salvepot-birch", "salvepot-pine", "salvepot-oak", "salvepot-acacia", "salvepot-hardwax", "salvepot-softwax", "salvepot-barkoil"], 
 	"mechanics": ["salvepot-empty", "salvepot-birch", "salvepot-pine", "salvepot-oak", "salvepot-acacia", "salvepot-hardwax", "salvepot-softwax", "salvepot-barkoil"], 
 	"ancienttools": ["salvepot-empty", "salvepot-birch", "salvepot-pine", "salvepot-oak", "salvepot-acacia", "salvepot-hardwax", "salvepot-softwax", "salvepot-barkoil"] },
 	shapeByType: {
-		"@salvepot-(empty|finishedsalve)": { base: "game:block/clay/pot-opened-empty" },
-		"@salvepot-(birch|pine|maple|oak|acacia)": { base: "block/salve/fullbarksalve" },
-		"*-hardwax": { base: "block/salve/fullhardwaxsalve" },
+		"@salvepot-(empty|residuecovered|finishedsalve)": { base: "game:block/clay/pot-opened-empty" },
+		"@salvepot-(birch|birchresiduecovered|pine|pineresiduecovered|maple|mapleresiduecovered|oak|oakresiduecovered|acacia|acaciaresiduecovered)": { base: "block/salve/fullbarksalve" },
+		"@salvepot-(hardwax|hardwaxresiduecovered)": { base: "block/salve/fullhardwaxsalve" },
 		"*-softwax": { base: "block/salve/softwaxsalve" },
 		"*-barkoil": { base: "block/salve/barkoilsalve" }
 	},
@@ -54,25 +54,57 @@
 		"*-empty": {
 			ceramic: { base: "game:block/clay/pot-side" }
 		},
+		"*-residuecovered": {
+			"ceramic": { "base": "game:block/clay/ceramic-dirty" }
+		},
 		"@salvepot-(birch|pine|maple|oak|acacia)": {
 			ceramic: { base: "game:block/clay/pot-side" },
 			bark: { base:  "game:block/wood/bark/{type}"},
+			animalfat: { base: "game:item/resource/fat" }
+		},
+		"*-birchresiduecovered": {
+			ceramic: { base: "game:block/clay/ceramic-dirty" },
+			bark: { base:  "game:block/wood/bark/birch"},
+			animalfat: { base: "game:item/resource/fat" }
+		},
+		"*-pineresiduecovered": {
+			ceramic: { base: "game:block/clay/ceramic-dirty" },
+			bark: { base:  "game:block/wood/bark/pine"},
+			animalfat: { base: "game:item/resource/fat" }
+		},
+		"*-mapleresiduecovered": {
+			ceramic: { base: "game:block/clay/ceramic-dirty" },
+			bark: { base:  "game:block/wood/bark/maple"},
+			animalfat: { base: "game:item/resource/fat" }
+		},
+		"*-oakresiduecovered": {
+			ceramic: { base: "game:block/clay/ceramic-dirty" },
+			bark: { base:  "game:block/wood/bark/oak"},
+			animalfat: { base: "game:item/resource/fat" }
+		},
+		"*-acaciaresiduecovered": {
+			ceramic: { base: "game:block/clay/ceramic-dirty" },
+			bark: { base:  "game:block/wood/bark/acacia"},
 			animalfat: { base: "game:item/resource/fat" }
 		},
 		"*-hardwax": {
 			ceramic: { base: "game:block/clay/pot-side" },
 			wax: { base: "game:item/resource/beeswax" },
 		},
+		"*-hardwaxresiduecovered": {
+			ceramic: { base: "game:block/clay/ceramic-dirty" },
+			wax: { base: "game:item/resource/beeswax" },
+		},
 		"*-softwax": {
-			ceramic: { base: "game:block/clay/pot-side" },
+			ceramic: { base: "game:block/clay/ceramic-dirty" },
 			wax: { base: "block/salve/softwax" }
 		},
 		"*-barkoil": {
-			ceramic: { base: "game:block/clay/pot-side" },
+			ceramic: { base: "game:block/clay/ceramic-dirty" },
 			barkoil: { base: "block/salve/barkoil" }
 		},
 		"*-finishedsalve": {
-			ceramic: { base: "game:block/clay/pot-side" },
+			ceramic: { base: "game:block/clay/ceramic-dirty" },
 			finishedsalve: { base: "item/medicine/salveportion" }
 		}
 	},
@@ -80,7 +112,7 @@
 	heldTpUseAnimation: "twohandplaceblock",
 	blockmaterial: "Ceramic",
 	combustiblePropsByType: {
-		"@salvepot-(birch|pine|maple|oak|acacia)": {
+		"@salvepot-(birch|birchresiduecovered|pine|pineresiduecovered|maple|mapleresiduecovered|oak|oakresiduecovered|acacia|acaciaresiduecovered)": {
 			meltingPoint: 200,
 			meltingDuration: 60,
 			smeltedRatio: 1,
@@ -88,7 +120,7 @@
 			smeltedStack: { type: "block", code: "salvepot-barkoil" },
 			requiresContainer: false
 		},
-		"salvepot-hardwax": {
+		"@salvepot-(hardwax|hardwaxresiduecovered)": {
 			meltingPoint: 200,
 			meltingDuration: 30,
 			smeltedRatio: 1,

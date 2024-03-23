@@ -9,6 +9,10 @@
  Hello and welcome to the GitHub repository for Ancient Tools. This project is a mod for the survival adventure game Vintage Story which adds an assortment of immersive, interactive tools to the game.
 
 ### Releases
+
+#### Vintage Story 1.19.4+
+[Version 1.5.13](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.13/AncientTools_V1.5.13.zip)
+
 #### Vintage Story 1.19.0+
 [Version 1.5.12](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.12/AncientTools_V1.5.12.zip)
 
@@ -91,6 +95,29 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.5.13
+Pitch sticks can now be used in place of glue to repair clutter! With torch held in off-hand, sneak and interact the pitch against a clutter box to fix it up
+
+Hammers can now be used in place of mallets for smacking wedges. Might as well use the more versatile tool!
+
+Stretching frames have had their hide models updated to better suit the vanilla model changes.
+
+Brained/Smoked hides have had their models/textures changed to match vanilla standards.
+
+Fixed an issue where cart inventories would be invisible upon world load.
+
+Fixed an issue where collectibles with no attributes, when used on the mortar, would cause a crash.
+
+Fixed an issue where the SplitLog class would not pass along the dropQuantityModifier that was modified by behaviors of other mods.
+
+Oak and acacia bark can now be used in the crafting grid to create empty salve pots.
+
+Pitch/salve pots now become residue covered when used in their respective crafting processes. 
+
+Ancient Tools powdered charcoal no longer shows in the creative grid and is no longer craftable. It has been replaced by the vanilla version of the same name.
+
+Disabled the vanilla crafting method for glue. Instead, Ancient Tools uses its own pitch in a more convenient and more common method for repairing clutter!
+
 #### Version 1.5.12
 Updated Ancient Tools for Vintage Story 1.19.0+ compatibility.
 NOTE: Many tweaks still need to be made so that certain things match up more nicely with the new vanilla first person mode

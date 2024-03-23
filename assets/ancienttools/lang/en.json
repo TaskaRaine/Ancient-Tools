@@ -34,11 +34,13 @@ Ancient Tools implements a simplified version of this technique to give you anot
 
 <font weight='bold'>Pitch</font>
 
-<a href=\'handbook://item-ancienttools:pitch-ball\'>Pitch</a> is a sticky black substance produced by combining then melting finely <a href=\'handbook://item-ancienttools:powderedcharcoal\'>powdered charcoal</a>, tree <a href=\'handbook://item-resin\'>resin</a>, and various fibrous materials such as <a href=\'handbook://item-drygrass\'>dry grass</a> or dried animal feces. 
+<a href=\'handbook://item-ancienttools:pitch-ball\'>Pitch</a> is a sticky black substance produced by combining then melting finely <a href=\'handbook://item-powder-charcoal-raw\'>powdered charcoal</a>, tree <a href=\'handbook://item-resin\'>resin</a>, and various fibrous materials such as <a href=\'handbook://item-drygrass\'>dry grass</a> or dried animal feces. 
 
 This material is exceptionally waterproof and sticky. Historically, it has been used to caulk the seams of wooden sailing vessels or to seal containers, such as food <a href=\'handbook://block-crock-burned-east\'>crocks</a>. Ancient Tools takes advantage of its waterproof property by allowing you to use firepits, pit kilns, and forges exposed to the elements whenever pitch is used as the fuel. 
 
 Additionally, pitch can be used to create long-lasting, brightly burning <a href=\'handbook://block-ancienttools:pitchtorch-extinct-up\'>torches</a> that won't be extinguished by rain. It can also be used to create <a href=\'handbooksearch://Chamberstick with Pitch\'>chambersticks</a> as a permenant lighting solution similar to oil lamps.    
+
+<a href=\'handbook://item-ancienttools:pitch-stick\'>Stick pitch</a> is also a convenient alternative to <a href=\'handbook://item-glueportion-pitch-hot\'>glue</a> for repairing various clutter discovered throughout the world. Simply hold a lit <a href=\'handbooksearch://torch\'>torch</a> in your offhand, <hk>shift</hk> to sneak, and interact with <icon name='rightmousebutton'></icon> to fix it!
 
 A detailed explanation of how to produce pitch can be found in the <a href=\"handbook://ancienttools-quickstart-guide-pitch\">Pitch Guide</a>.
 
@@ -115,9 +117,9 @@ Now, the final part! Take your smoked hide and, using a knife, carefully cut it 
 
 There was no 'one way' to create pitch. Many different resources were combined for similar results. However, with Ancient Tools, you will need some <a href=\'handbook://item-charcoal\'>charcoal</a>, <a href=\'handbook://item-resin\'>resin</a>, and <a href=\'handbook://item-drygrass\'>dry grass</a> on hand for this process.
 
-To get started, you must grind two pieces of charcoal into <a href=\'handbook://item-ancienttools:powderedcharcoal\'>powdered charcoal</a> using a <a href=\'handbooksearch://mortar\'>mortar</a> and <a href=\'handbooksearch://pestle\'>pestle</a>, or any other means of grinding items. Take one piece of powdered charcoal and interact with a cooking pot using <icon name='rightmousebutton'></icon> to transform the pot into an <a href=\'handbook://block-ancienttools:pitchpot-empty\'>empty pitch container</a>.
+To get started, you must grind two pieces of charcoal into <a href=\'handbook://item-powder-charcoal-raw\'>powdered charcoal</a> using a <a href=\'handbooksearch://mortar\'>mortar</a> and <a href=\'handbooksearch://pestle\'>pestle</a>, or any other means of grinding items. Take one piece of powdered charcoal and interact with a cooking pot using <icon name='rightmousebutton'></icon> to transform the pot into an <a href=\'handbook://block-ancienttools:pitchpot-empty\'>empty pitch container</a>.
 
-Next, fill up the container using <icon name='rightmousebutton'></icon> with 2 parts <a href=\'handbook://item-ancienttools:powderedcharcoal\'>powdered charcoal</a>, 4 parts <a href=\'handbook://item-resin\'>resin</a>, and 1 part <a href=\'handbook://item-drygrass\'>dry grass</a>. When the container is properly filled, it will convert into an <a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>unprepared pitch mixture</a>.
+Next, fill up the container using <icon name='rightmousebutton'></icon> with 2 parts <a href=\'handbook://item-powder-charcoal-raw\'>powdered charcoal</a>, 4 parts <a href=\'handbook://item-resin\'>resin</a>, and 1 part <a href=\'handbook://item-drygrass\'>dry grass</a>. When the container is properly filled, it will convert into an <a href=\'handbook://block-ancienttools:pitchpot-unmixed\'>unprepared pitch mixture</a>.
 
 Now, simply pick up the mixture and heat it in the nearest firepit to create <a href=\'handbook://block-ancienttools:pitchpot-finishedpitchinventory\'>prepared pitch</a>. When it's been finished, you can place the pot on the ground and take pieces of pitch by using a <a href=\'handbook://item-stick\'>stick</a>.
 	",
@@ -310,12 +312,18 @@ When empty, cart inventories can also be removed! Simply press <hk>ctrl</hk>, th
 	"blockdesc-barkbasket-*": "A small basket woven from malleable tree bark used to hold just a few things",
 
 	"block-salvepot-empty": "Empty Salve Container",
+	"block-salvepot-residuecovered": "Empty Salve Container",
 	"block-salvepot-birch": "Unprepared Salve Mixture(birch bark/fat)",
+	"block-salvepot-birchresiduecovered": "Unprepared Salve Mixture(birch bark/fat)",
 	"block-salvepot-pine": "Unprepared Salve Mixture(pine bark/fat)",
+	"block-salvepot-pineresiduecovered": "Unprepared Salve Mixture(pine bark/fat)",
 	"block-salvepot-oak": "Unprepared Salve Mixture(oak bark/fat)",
+	"block-salvepot-oakresiduecovered": "Unprepared Salve Mixture(oak bark/fat)",
 	"block-salvepot-acacia": "Unprepared Salve Mixture(acacia bark/fat)",
+	"block-salvepot-acaciaresiduecovered": "Unprepared Salve Mixture(acacia bark/fat)",
 	"block-salvepot-barkoil": "Prepared Salve Mixture(barkoil)",
 	"block-salvepot-hardwax": "Hardened Salve Thickener(beeswax)",
+	"block-salvepot-hardwaxresiduecovered)": "Hardened Salve Thickener(beeswax)",
 	"block-salvepot-softwax": "Melted Salve Thickener(beeswax)",
 	"block-salvepot-finishedsalve": "Bark Healing Salve",
 
@@ -348,7 +356,9 @@ When empty, cart inventories can also be removed! Simply press <hk>ctrl</hk>, th
 	"blockdesc-hidewatersack-soaked-*": "This sack is filled with water from a nearby water source. The hide is thoroughly soaked...",
 
 	"block-pitchpot-empty": "Empty Pitch Container",
+	"block-pitchpot-residuecovered": "Empty Pitch Container",
 	"block-pitchpot-unmixed": "Unprepared Pitch Mixture",
+	"block-pitchpot-unmixedresiduecovered": "Unprepared Pitch Mixture",
 	"block-pitchpot-finishedpitchinventory": "Prepared Pitch",
 	"block-pitchpot-finishedpitch": "Prepared Pitch",
 
@@ -447,6 +457,7 @@ When empty, cart inventories can also be removed! Simply press <hk>ctrl</hk>, th
 
 	"itemhelp-adze-stripbark": "Strip Bark",
 	"itemhelp-heal": "Heal",
+	"itemhelp-pitchrepair": "Repair clutter. Requires a torch in offhand.",
 
 	"iteminfo-salve-heal": "Heals {0} health over {1} seconds when used.",
 	"iteminfo-brain": "Used for hide tanning. Place in a barrel with 10L of water to create braining solution.",
@@ -938,4 +949,7 @@ When empty, cart inventories can also be removed! Simply press <hk>ctrl</hk>, th
 	"entity-wood-beech-cart": "Beech Cart",
 	"entity-wood-eucalyptus-cart": "Eucalyptus Cart",
 	"entity-wood-cedar-cart": "Cedar Cart",
+
+	//-- Vanilla Replacement Text --//
+	"game:item-handbooktext-powder-charcoal-raw": "Powdered charcoal can be used to make a <a href=\"handbook://item-glueportion-pitch-hot\">primitive glue</a>. Place resin and powdered charcoal in a cooking pot over a fire - 2 of each item, fill every slot in the pot - and heat it up to make a sticky substance. \r\n\nAncient Tools note: Recipe only exists when re-enabled in the Ancient Tools config."
 }

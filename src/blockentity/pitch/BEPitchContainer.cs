@@ -185,7 +185,11 @@ namespace AncientTools.BlockEntities
                         {
                             if(ResinSlot.Itemstack.StackSize == 4)
                             {
-                                Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "pitchpot-unmixed")).Id, Pos);
+                                if(Block.Code.EndVariant() == "residuecovered")
+                                    Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "pitchpot-unmixedresiduecovered")).Id, Pos);
+                                else
+                                    Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "pitchpot-unmixed")).Id, Pos);
+
                                 Api.World.BlockAccessor.RemoveBlockEntity(Pos);
                                 Api.World.BlockAccessor.MarkBlockDirty(Pos);
                             }

@@ -1,0 +1,29 @@
+﻿[
+    {
+		"op": "add",
+		"path": "/attributes/isPitchCharcoalByType",
+		"value": {
+			"*-charcoal-raw": true
+		},
+		"file": "game:itemtypes/resource/crushed/powder",
+		"side": "Server",
+	},
+	{
+		"op": "add",
+		"path": "/attributes/handbook",
+		"value": {
+			extraSections: [{
+				title: "ancienttools:handbook-usedfor-handbookinfo",
+				text: "ancienttools:handbook-mixingpitch-craftinfo-dot"
+			}],
+		},
+		"file": "game:itemtypes/resource/crushed/powder",
+		"side": "Server",
+	},
+	{
+		"op": "remove",
+		"path": "/item-handbooktext-powder-charcoal-raw",
+		"file": "game:lang/en.json",
+		"side": "Server"
+	}
+]

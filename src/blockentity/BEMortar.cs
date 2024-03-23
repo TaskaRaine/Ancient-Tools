@@ -268,11 +268,14 @@ namespace AncientTools.BlockEntities
 
                         if (ResourceSlot.Empty && !activeSlot.Empty)
                         {
-                            JsonObject mortarProps = activeSlot.Itemstack.Collectible.Attributes["mortarProperties"];
-
-                            if (mortarProps.Exists && mortarProps["groundStack"].Exists)
+                            if (activeSlot.Itemstack.Collectible.Attributes != null)
                             {
-                                InsertObject(activeSlot, ResourceSlot, activeSlot.Itemstack.Collectible, 1);
+                                JsonObject mortarProps = activeSlot.Itemstack.Collectible.Attributes["mortarProperties"];
+
+                                if (mortarProps.Exists && mortarProps["groundStack"].Exists)
+                                {
+                                    InsertObject(activeSlot, ResourceSlot, activeSlot.Itemstack.Collectible, 1);
+                                }
                             }
                         }
                     }

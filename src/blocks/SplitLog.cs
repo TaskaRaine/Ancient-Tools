@@ -118,7 +118,7 @@ namespace AncientTools.Blocks
 
                     return;
                 }
-            base.OnBlockBroken(world, pos, byPlayer);
+            base.OnBlockBroken(world, pos, byPlayer, dropQuantityMultiplier);
         }
         public override void GetDecal(IWorldAccessor world, BlockPos pos, ITexPositionSource decalTexSource, ref MeshData decalModelData, ref MeshData blockModelData)
         {

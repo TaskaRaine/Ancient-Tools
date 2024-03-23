@@ -173,7 +173,7 @@ namespace AncientTools.Blocks
                     return;
 
                 slot.TakeOut(1);
-                byEntity.TryGiveItemStack(new ItemStack(api.World.GetBlock(new AssetLocation("ancienttools", "salvepot-empty"))));
+                byEntity.TryGiveItemStack(new ItemStack(api.World.GetBlock(new AssetLocation("ancienttools", "salvepot-residuecovered"))));
                 api.World.BlockAccessor.SetBlock(api.World.GetBlock(new AssetLocation("ancienttools", "salvepot-finishedsalve")).Id, blockSel.Position);
                 api.World.BlockAccessor.MarkBlockDirty(blockSel.Position);
 

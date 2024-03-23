@@ -1,0 +1,12 @@
+﻿[
+    {
+		"enabled": true,
+		"op": "add",
+		"path": "/behaviors/-",
+		"value": {
+			name: "WedgeSmack"
+		},
+		"file": "game:itemtypes/tool/hammer",
+		"side": "Server",
+	}
+]

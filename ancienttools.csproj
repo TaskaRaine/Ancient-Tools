@@ -47,6 +47,17 @@
     <Content Include="assets\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Remove="assets\ancienttools\patches\block\torch.json" />
+    <None Remove="assets\ancienttools\patches\item\resources\glue.json" />
+    <None Remove="assets\ancienttools\patches\item\resources\powderedcharcoal.json" />
+    <None Remove="assets\ancienttools\patches\item\tool\hammer.json" />
+    <None Remove="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\meshhide\brainedhide_meshhide.json" />
+    <None Remove="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\meshhide\oiledhide_meshhide.json" />
+    <None Remove="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\meshhide\pelthide_meshhide.json" />
+    <None Remove="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\meshhide\preparedhide_meshhide.json" />
+    <None Remove="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\meshhide\rawhide_meshhide.json" />
+    <None Remove="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\meshhide\scrapedhide_meshhide.json" />
+    <None Remove="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\meshhide\smokedhide_meshhide.json" />
     <Content Include="modinfo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

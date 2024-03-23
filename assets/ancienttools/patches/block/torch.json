@@ -1,0 +1,11 @@
+﻿[
+    {
+		"op": "add",
+		"path": "/attributes/canMeltPitchForRepairByType",
+		"value": {
+			"*-lit-*": true
+		},
+		"file": "game:blocktypes/metal/torch",
+		"side": "Server"
+    },
+]

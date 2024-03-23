@@ -1,20 +1,11 @@
 ﻿[
 	{
 		"op": "add",
-		"path": "/grindingProps",
-		"value": {
-			groundStack: { type: "item", code: "ancienttools:powderedcharcoal" }
-		},
-		"file": "game:itemtypes/resource/charcoal",
-		"side": "Server",
-	},
-	{
-		"op": "add",
 		"path": "/attributes/mortarProperties",
 		"value": {
 			shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_charcoal",
 			texturePaths: [{ code: "charcoal", path: "game:block/coal/charcoal" }],
-			groundStack: { type: "item", code: "ancienttools:powderedcharcoal" },
+			groundStack: { type: "item", code: "game:powder-charcoal-raw" },
 			resultQuantity: 1
 		},
 		"file": "game:itemtypes/resource/charcoal",

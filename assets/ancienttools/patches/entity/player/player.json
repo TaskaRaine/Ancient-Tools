@@ -45,6 +45,29 @@
 	},
 	{
 		"op": "add",
+		"path": "/client/animations/-",
+		"value": {
+			code: "meltpitchrepair",
+			animation: "MeltPitchRepair",
+			animationSpeed: 1.0,
+			elementWeight: {
+				"UpperArmR": 300,
+				"UpperArmL": 300,
+				"LowerArmL": 300,
+				"LowerArmR": 300,
+			},
+			elementBlendMode: {
+				"UpperArmR": "AddAverage",
+				"UpperArmL": "AddAverage",
+				"LowerArmL": "AddAverage",
+				"LowerArmR": "AddAverage",
+			}
+		},
+		"file": "game:entities/humanoid/player",
+		"side": "Server"
+	},
+	{
+		"op": "add",
 		"path": "/server/behaviors/-",
 		"value": { code: "MobileStorageDebuffRemoval" },
 		"file": "game:entities/humanoid/player",

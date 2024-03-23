@@ -13,6 +13,7 @@ namespace AncientTools.Config
         public bool BarkBreadEnabled = true;
         public bool SalveEnabled = true;
         public bool DisableVanillaHideCrafting = false;
+        public bool DisableVanillaGlue = true;
         public bool AllowCarvingForResin = true;
         public float SkinningTime = 4.0f;
         public float WaterSackConversionHours = 24.0f;
@@ -34,6 +35,7 @@ namespace AncientTools.Config
             BarkBreadEnabled = previousConfig.BarkBreadEnabled;
             SalveEnabled = previousConfig.SalveEnabled;
             DisableVanillaHideCrafting = previousConfig.DisableVanillaHideCrafting;
+            DisableVanillaGlue = previousConfig.DisableVanillaGlue;
             AllowCarvingForResin = previousConfig.AllowCarvingForResin;
             SkinningTime = previousConfig.SkinningTime;
             WaterSackConversionHours = previousConfig.WaterSackConversionHours;

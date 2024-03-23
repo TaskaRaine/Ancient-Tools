@@ -1,6 +1,5 @@
 ﻿{
 	code: "powderedcharcoal",
-	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
 	attributes: {
 		dissolveInWater: true,
 		displaycaseable: true, 
@@ -18,13 +17,22 @@
 			}],
 		}
 	},
-	behaviors: [{ 
-		name: "ConvertBlockUsingIngredient",
-		properties: {
-			convertFromBlockCode: "game:claypot-burned",
-			convertToBlockCode: "ancienttools:pitchpot-empty"
-		}
-	}],
+	behaviors: [
+		{ 
+			name: "ConvertBlockUsingIngredient",
+			properties: {
+				convertFromBlockCode: "game:claypot-burned",
+				convertToBlockCode: "ancienttools:pitchpot-empty"
+			}
+		},
+		{ 
+			name: "ConvertBlockUsingIngredient",
+			properties: {
+				convertFromBlockCode: "game:dirtyclaypot-empty",
+				convertToBlockCode: "ancienttools:pitchpot-residuecovered"
+			}
+		},
+	],
 	drawtype: "json",
     shape: { base: "game:item/resource/crushed/normal" },
 	textures: { 

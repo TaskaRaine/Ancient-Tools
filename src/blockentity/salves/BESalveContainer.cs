@@ -179,7 +179,11 @@ namespace AncientTools.BlockEntities
                     {
                         if (LiquidSlot.Itemstack.StackSize == 4)
                         {
-                            Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-" + ResourceSlot.Itemstack.Collectible.Variant["bark"])).Id, Pos);
+                            if (Block.Code.EndVariant() == "residuecovered")
+                                Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-" + ResourceSlot.Itemstack.Collectible.Variant["bark"] + "residuecovered")).Id, Pos);
+                            else
+                                Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-" + ResourceSlot.Itemstack.Collectible.Variant["bark"])).Id, Pos);
+                            
                             Api.World.BlockAccessor.RemoveBlockEntity(Pos);
                             Api.World.BlockAccessor.MarkBlockDirty(Pos);
                         }
@@ -190,7 +194,11 @@ namespace AncientTools.BlockEntities
                     if (LiquidSlot.Itemstack.Item.Attributes["salveProperties"]["isSalveThickener"].Exists)
                         if (LiquidSlot.Itemstack.StackSize == 4)
                         {
-                            Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-hardwax")).Id, Pos);
+                            if (Block.Code.EndVariant() == "residuecovered")
+                                Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-hardwaxresiduecovered")).Id, Pos);
+                            else
+                                Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-hardwax")).Id, Pos);
+                            
                             Api.World.BlockAccessor.RemoveBlockEntity(Pos);
                             Api.World.BlockAccessor.MarkBlockDirty(Pos);
                         }

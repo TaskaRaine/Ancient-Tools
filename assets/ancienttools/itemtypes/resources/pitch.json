@@ -6,11 +6,24 @@
 			groupBy: ["pitch-*"],
 			createdBy: "ancienttools:handbook-mixingpitch-craftinfo"
 		},
-		waterproofFuel: true
+		waterproofFuel: true,
+		"repairPercentageByType": {
+			"*-stick": 0.25
+		}
 	},
 	variantgroups:[
 		{ code: "type", states: [ "ball", "stick" ] }
 	],
+	behaviorsByType: {
+		"*-stick": [
+			{
+				"name": "AttemptRepairClutter",
+				"properties": {
+					"repairTime": 5
+				}
+			}
+		]
+	},
 	drawtype: "json",
 	shapeByType: {
 		"*-ball": { base: "item/resource/pitchball" },

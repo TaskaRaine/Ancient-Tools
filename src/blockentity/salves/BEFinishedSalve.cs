@@ -79,7 +79,7 @@ namespace AncientTools.BlockEntities
 
             if(inventorySlot.Empty)
             {
-                this.Api.World.BlockAccessor.SetBlock(this.Api.World.GetBlock(new AssetLocation("ancienttools", "salvepot-empty")).Id, this.Pos);
+                this.Api.World.BlockAccessor.SetBlock(this.Api.World.GetBlock(new AssetLocation("ancienttools", "salvepot-residuecovered")).Id, this.Pos);
                 this.Api.World.BlockAccessor.MarkBlockDirty(this.Pos);
             }
 

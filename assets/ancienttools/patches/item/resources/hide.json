@@ -54,7 +54,7 @@
 		"op": "add",
 		"path": "/attributes/stretchableByType",
 		"value": {
-			"@hide-(raw|soaked|scraped|prepared|oiled|pelt|smoked)-(small|medium|large|huge)": true
+			"@hide-(raw|soaked|scraped|prepared|oiled|pelt|brained|smoked)-(small|medium|large|huge)": true
 		},
 		"file": "game:itemtypes/resource/hide",
 		"side": "Server"
@@ -73,20 +73,20 @@
 			"@hide-(brained|smoked)-huge":
 			{
 				transform: {
-					scale: 0.4,
-					origin: { x: 0.5, y: 0.5, z: 0.5 },
-					translation: { x: -0.05, y: -0.325, z: 0.05 },
-					rotation: { x: 180, y: -52.5, z: 0 }
+					scale: 0.3,
+					origin: { x: 0.5, y: 0.0, z: 0.5 },
+					translation: { x: -0.0, y: 0.04, z: 0.0 },
+					rotation: { x: 90, y: 0, z: -52.5 }
 				  },
 				  useFirepitModel: "Spit"
 			},
 			"@hide-(brained|smoked)-large": 
 			{
 				transform: {
-					scale: 0.35,
-					origin: { x: 0.5, y: 0.5, z: 0.5 },
-					translation: { x: -0.05, y: -0.3, z: 0.05 },
-					rotation: { x: 180, y: -52.5, z: 0 }
+					scale: 0.3,
+					origin: { x: 0.5, y: 0.0, z: 0.5 },
+					translation: { x: -0.0, y: 0.06, z: 0.0 },
+					rotation: { x: 90, y: 0, z: -52.5 }
 				  },
 				  useFirepitModel: "Spit"
 			},
@@ -94,22 +94,58 @@
 			{
 				transform: {
 					scale: 0.3,
-					origin: { x: 0.5, y: 0.5, z: 0.5 },
-					translation: { x: -0.05, y: -0.275, z: 0.05 },
-					rotation: { x: 180, y: -52.5, z: 0 }
+					origin: { x: 0.5, y: 0.0, z: 0.5 },
+					translation: { x: -0.0, y: 0.12, z: 0.0 },
+					rotation: { x: 90, y: 0, z: -52.5 }
 				  },
 				  useFirepitModel: "Spit"
 			},
 			"@hide-(brained|smoked)-small": 
 			{
 				transform: {
-					scale: 0.25,
-					origin: { x: 0.5, y: 0.5, z: 0.5 },
-					translation: { x: -0.05, y: -0.25, z: 0.05 },
-					rotation: { x: 180, y: -52.5, z: 0 }
+					scale: 0.5,
+					origin: { x: 0.5, y: 0.0, z: 0.5 },
+					translation: { x: -0.0, y: 0.15, z: 0.0 },
+					rotation: { x: 90, y: 0, z: -52.5 }
 				  },
 				  useFirepitModel: "Spit"
 			}
+		},
+		"file": "game:itemtypes/resource/hide",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/shapeByType/hide-brained-*",
+		"value": {
+			"base": "game:item/resource/hide/{size}1"
+		},
+		"file": "game:itemtypes/resource/hide",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/shapeByType/hide-smoked-*",
+		"value": {
+			"base": "game:item/resource/hide/{size}1"
+		},
+		"file": "game:itemtypes/resource/hide",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/texturesByType/@hide-(brained)-(small|medium|large|huge)",
+		"value": {
+			"furside": { "base": "ancienttools:item/resource/hide/brainedhide" }, "fleshside": { "base": "item/resource/hide/flesh" }
+		},
+		"file": "game:itemtypes/resource/hide",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/texturesByType/@hide-(smoked)-(small|medium|large|huge)",
+		"value": {
+			 "furside": { "base": "ancienttools:item/resource/hide/smokedhide" }, "fleshside": { "base": "item/resource/hide/flesh" }
 		},
 		"file": "game:itemtypes/resource/hide",
 		"side": "Server"
