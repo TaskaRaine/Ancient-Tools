@@ -11,6 +11,8 @@
 ### Releases
 
 #### Vintage Story 1.19.4+
+[Version 1.5.14](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.14/AncientTools_V1.5.14.zip)
+
 [Version 1.5.13](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.13/AncientTools_V1.5.13.zip)
 
 #### Vintage Story 1.19.0+
@@ -95,6 +97,12 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.5.15
+Reverted the decision to disable vanilla glue cooking recipes by default. Toolworks has special use of it. If you have already installed one of the 1.19.4+ versions of Ancient Tools you will need to revert this change yourself by setting `DisableVanillaGlue` to false in your config file.
+
+#### Version 1.5.14
+Fixed a null reference crash caused by a harmony patch to the Authorative Animation class in vanilla.
+
 #### Version 1.5.13
 Pitch sticks can now be used in place of glue to repair clutter! With torch held in off-hand, sneak and interact the pitch against a clutter box to fix it up
 

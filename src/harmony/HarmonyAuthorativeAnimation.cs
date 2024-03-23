@@ -11,6 +11,8 @@ namespace AncientTools
     {
         static void Postfix(BlockSelection blockSel, ref EnumHandling handling)
         {
+            if (blockSel == null) return;
+
             if (blockSel.Block is BlockSplitLog)
             {
                 handling = EnumHandling.PreventDefault;

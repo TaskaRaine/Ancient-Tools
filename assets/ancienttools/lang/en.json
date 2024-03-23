@@ -949,7 +949,4 @@ When empty, cart inventories can also be removed! Simply press <hk>ctrl</hk>, th
 	"entity-wood-beech-cart": "Beech Cart",
 	"entity-wood-eucalyptus-cart": "Eucalyptus Cart",
 	"entity-wood-cedar-cart": "Cedar Cart",
-
-	//-- Vanilla Replacement Text --//
-	"game:item-handbooktext-powder-charcoal-raw": "Powdered charcoal can be used to make a <a href=\"handbook://item-glueportion-pitch-hot\">primitive glue</a>. Place resin and powdered charcoal in a cooking pot over a fire - 2 of each item, fill every slot in the pot - and heat it up to make a sticky substance. \r\n\nAncient Tools note: Recipe only exists when re-enabled in the Ancient Tools config."
 }
