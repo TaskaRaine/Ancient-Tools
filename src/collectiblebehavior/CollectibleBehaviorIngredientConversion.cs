@@ -16,6 +16,9 @@ namespace AncientTools.CollectibleBehaviors
 
         public override void Initialize(JsonObject properties)
         {
+            if (properties == null || !properties["convertFromBlockCode"].Exists || !properties["convertToBlockCode"].Exists)
+                return;
+
             base.Initialize(properties);
 
             string[] fromCode = properties["convertFromBlockCode"].AsString().Split(':');
@@ -27,6 +30,9 @@ namespace AncientTools.CollectibleBehaviors
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling, ref EnumHandling handling)
         {
             if (blockSel == null)
+                return;
+
+            if (convertFromBlockCode == null || convertToBlockCode == null || !convertFromBlockCode.Valid || !convertToBlockCode.Valid)
                 return;
 
             ICoreAPI api = byEntity.Api;

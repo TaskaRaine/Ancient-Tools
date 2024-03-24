@@ -10,20 +10,46 @@
 	},
 	{
 		"op": "add",
-		"path": "/attributes/handbook",
+		"path": "/attributes/handbookByType",
 		"value": {
-			extraSections: [{
-				title: "ancienttools:handbook-usedfor-handbookinfo",
-				text: "ancienttools:handbook-mixingpitch-craftinfo-dot"
-			}],
+			"*-charcoal-raw": {
+				extraSections: [{
+					title: "ancienttools:handbook-usedfor-handbookinfo",
+					text: "ancienttools:handbook-mixingpitch-craftinfo-dot"
+				}],
+			}
 		},
 		"file": "game:itemtypes/resource/crushed/powder",
 		"side": "Server",
 	},
 	{
-		"op": "remove",
-		"path": "/item-handbooktext-powder-charcoal-raw",
-		"file": "game:lang/en.json",
+		"op": "add",
+		"path": "/behaviors/-",
+		"value": {
+			name: "ConvertBlockUsingIngredient",
+			propertiesByType: {
+				"*-charcoal-raw": {
+					convertFromBlockCode: "game:claypot-burned",
+					convertToBlockCode: "ancienttools:pitchpot-empty"
+				}
+			}
+		},
+		"file": "game:itemtypes/resource/crushed/powder",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/behaviors/-",
+		"value": {
+			name: "ConvertBlockUsingIngredient",
+			propertiesByType: {
+				"*-charcoal-raw": {
+					convertFromBlockCode: "game:dirtyclaypot-empty",
+					convertToBlockCode: "ancienttools:pitchpot-residuecovered"
+				}
+			}
+		},
+		"file": "game:itemtypes/resource/crushed/powder",
 		"side": "Server"
 	}
 ]

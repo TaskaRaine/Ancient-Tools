@@ -6,7 +6,7 @@
   "translators": [ "Cendar", "Macoto Hino", "Vulpeep", "DonBitcoin", "MrMeg" ],
   "contributors": ["NerdScurvy", "weathersong"],
   "description": "A collection of useful tools from ancient times.",
-  "version": "1.5.15",
+  "version": "1.5.16",
   "dependencies": {
     "game": "1.19.4",
   }
