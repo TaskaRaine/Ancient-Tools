@@ -5,7 +5,7 @@
 		"value": {
 			"*-lit-*": true
 		},
-		"file": "game:blocktypes/metal/torch",
+		"file": "game:blocktypes/wood/torch",
 		"side": "Server"
     },
 ]

@@ -1,7 +1,7 @@
 ﻿[
 	{
 		"op": "add",
-		"path": "/behaviorsByType/*-unmixed/-",
+		"path": "/behaviorsByType/@pitchpot-(unmixed|unmixedresiduecovered)/-",
 		"value": {
 			name: "Carryable", properties: {
 

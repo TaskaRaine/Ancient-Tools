@@ -28,7 +28,7 @@ namespace AncientTools.Blocks
                 if (item is ItemWedge)
                     wedgeList.Add(new ItemStack(item));
 
-                if (item is ItemMallet)
+                if (item is ItemMallet || item is ItemHammer)
                     malletList.Add(new ItemStack(item));
             }
             placeInteraction = ObjectCacheUtil.GetOrCreate(api, "splitLogSmackInteraction", () =>
@@ -104,10 +104,12 @@ namespace AncientTools.Blocks
         }
         public override float OnGettingBroken(IPlayer player, BlockSelection blockSel, ItemSlot itemslot, float remainingResistance, float dt, int counter)
         {
-            if (blockSel.SelectionBoxIndex == 0 || itemslot.Itemstack?.Collectible.GetType() != typeof(ItemMallet))
+            if (blockSel.SelectionBoxIndex == 0)
                 return base.OnGettingBroken(player, blockSel, itemslot, remainingResistance, dt, counter);
 
-            return remainingResistance;
+            if(itemslot.Itemstack?.Collectible?.GetType() == typeof(ItemMallet) || itemslot.Itemstack.Collectible?.GetType() == typeof(ItemHammer))
+                return remainingResistance;
+            return base.OnGettingBroken(player, blockSel, itemslot, remainingResistance, dt, counter);
         }
         public override void OnBlockBroken(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1)
         {

@@ -9,12 +9,13 @@ namespace AncientTools
     [HarmonyPatch(typeof(CollectibleBehaviorAnimationAuthoritative), "OnHeldAttackStart", MethodType.Normal)]
     public class HarmonyAnimationAuthorativeAttackStart
     {
-        static void Postfix(BlockSelection blockSel, ref EnumHandling handling)
+        static void Postfix(EntityAgent byEntity, BlockSelection blockSel, ref EnumHandHandling handHandling, ref EnumHandling handling)
         {
-            if (blockSel == null) return;
+            if (blockSel == null || byEntity == null) return;
 
-            if (blockSel.Block is BlockSplitLog)
+            if (byEntity.World.BlockAccessor.GetBlock(blockSel.Position) is BlockSplitLog)
             {
+                handHandling = EnumHandHandling.PreventDefaultAction;
                 handling = EnumHandling.PreventDefault;
             }
         }
