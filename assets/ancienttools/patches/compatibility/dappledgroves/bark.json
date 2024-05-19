@@ -103,7 +103,7 @@
 		"path": "/grindingPropsByType",
 		"value": {
 			"@bark-(birch|pine|maple)-dry": {
-				grindedStack: { type: "item", code: "game:flour-{bark}" }
+				groundStack: { type: "item", code: "game:flour-{bark}" }
 			}
 		},
 		"file": "indappledgroves:itemtypes/resources/bark",
@@ -114,7 +114,7 @@
 		"op": "add",
 		"path": "/grindingPropsByType/@bark-(spruce)-dry",
 		"value": {
-			grindedStack: { type: "item", code: "game:flour-{bark}" }
+			groundStack: { type: "item", code: "game:flour-{bark}" }
 		},
 		"file": "indappledgroves:itemtypes/resources/bark",
 		"dependsOn": [{"modid": "indappledgroves"}, {"modid": "wildcrafttrees"}],
