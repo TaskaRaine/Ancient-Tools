@@ -1,5 +1,4 @@
-﻿[
-	{
+﻿	{
 	ingredient: { type: "item", code: "game:clay-*", name: "type", allowedVariants: ["blue", "fire"] },
 	pattern: [[
 		"##############",
@@ -36,4 +35,3 @@
 	name: "Wedges Mold",
 	output: { type: "block", code: "toolmoldancienttools-raw-wedge"  }
 }
-]
