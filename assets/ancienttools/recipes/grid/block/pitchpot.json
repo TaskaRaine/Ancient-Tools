@@ -40,8 +40,8 @@
 			"B": {
 				type: "item",
 				name: "powderedcharcoal",
-				code: "game:powder-charcoal-raw",
-				returnedStack: { type: "item", code: "game:powder-charcoal-raw" }
+				code: "game:powder-charcoal",
+				returnedStack: { type: "item", code: "game:powder-charcoal" }
 			},
 			"P": { 
 				type: "block",
@@ -63,8 +63,8 @@
 			"B": {
 				type: "item",
 				name: "powderedcharcoal",
-				code: "game:powder-charcoal-raw",
-				returnedStack: { type: "item", code: "game:powder-charcoal-raw" }
+				code: "game:powder-charcoal",
+				returnedStack: { type: "item", code: "game:powder-charcoal" }
 			},
 			"P": { 
 				type: "block",

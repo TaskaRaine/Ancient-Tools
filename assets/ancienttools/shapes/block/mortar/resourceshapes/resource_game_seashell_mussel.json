@@ -1,0 +1,212 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "Shellroot8",
+			"from": [ 8.37, 2.3875, 7.7 ],
+			"to": [ 11.37, 2.6875, 9.5 ],
+			"rotationOrigin": [ 9.0, 2.2, 7.7 ],
+			"rotationX": 161.834,
+			"rotationY": -90.0,
+			"rotationZ": -35.707,
+			"faces": {
+				"north": { "texture": "#mussel", "uv": [ 0.0, 0.0, 3.0, 0.5 ] },
+				"east": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] },
+				"south": { "texture": "#mussel", "uv": [ 0.0, 0.0, 3.0, 0.5 ] },
+				"west": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] },
+				"up": { "texture": "#mussel", "uv": [ 0.0, 0.0, 3.0, 1.5 ] },
+				"down": { "texture": "#mussel", "uv": [ 0.0, 0.0, 3.0, 1.5 ] }
+			},
+			"children": [
+				{
+					"name": "Shellr45",
+					"from": [ 0.4, 0.3, 0.5 ],
+					"to": [ 2.4, 0.6, 1.7 ],
+					"rotationOrigin": [ 0.4, 0.3, 0.5 ],
+					"faces": {
+						"north": { "texture": "#mussel", "uv": [ 0.0, 0.0, 2.0, 0.5 ] },
+						"east": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] },
+						"south": { "texture": "#mussel", "uv": [ 0.0, 0.0, 2.0, 0.5 ] },
+						"west": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] },
+						"up": { "texture": "#mussel", "uv": [ 0.0, 0.0, 2.0, 1.0 ] }
+					}
+				},
+				{
+					"name": "Shellr46",
+					"from": [ 0.9, 0.6, 0.9 ],
+					"to": [ 1.9, 0.8, 1.6 ],
+					"rotationOrigin": [ 0.9, 0.6, 0.9 ],
+					"faces": {
+						"north": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] },
+						"east": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+						"south": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] },
+						"west": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+						"up": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] }
+					}
+				},
+				{
+					"name": "Shellr47",
+					"from": [ 3.0, 0.0, 0.4 ],
+					"to": [ 3.4, 0.2, 1.6 ],
+					"rotationOrigin": [ 3.0, 0.0, 0.4 ],
+					"faces": {
+						"north": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+						"east": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] },
+						"south": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+						"west": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] },
+						"up": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 1.0 ] },
+						"down": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 1.0 ] }
+					}
+				},
+				{
+					"name": "Shellr48",
+					"from": [ -0.3, 0.0, 0.4 ],
+					"to": [ 0.0, 0.2, 1.6 ],
+					"rotationOrigin": [ -0.3, 0.0, 0.4 ],
+					"faces": {
+						"north": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+						"east": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] },
+						"south": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+						"west": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] },
+						"up": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 1.0 ] },
+						"down": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 1.0 ] }
+					}
+				},
+				{
+					"name": "Shellr49",
+					"from": [ 0.0, -0.3, 0.0 ],
+					"to": [ 3.0, 0.0, 1.8 ],
+					"rotationOrigin": [ 0.0, -0.3, 0.0 ],
+					"faces": {
+						"north": { "texture": "#mussel", "uv": [ 0.0, 0.0, 3.0, 0.5 ] },
+						"east": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] },
+						"south": { "texture": "#mussel", "uv": [ 0.0, 0.0, 3.0, 0.5 ] },
+						"west": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] },
+						"up": { "texture": "#mussel", "uv": [ 0.0, 0.0, 3.0, 1.5 ] },
+						"down": { "texture": "#mussel", "uv": [ 0.0, 0.0, 3.0, 1.5 ] }
+					},
+					"children": [
+						{
+							"name": "Shellr50",
+							"from": [ 0.4, -0.3, 0.5 ],
+							"to": [ 2.4, 0.0, 1.7 ],
+							"rotationOrigin": [ 0.4, -0.3, 0.5 ],
+							"faces": {
+								"north": { "texture": "#mussel", "uv": [ 0.0, 0.0, 2.0, 0.5 ] },
+								"east": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] },
+								"south": { "texture": "#mussel", "uv": [ 0.0, 0.0, 2.0, 0.5 ] },
+								"west": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] },
+								"down": { "texture": "#mussel", "uv": [ 0.0, 0.0, 2.0, 1.0 ] }
+							}
+						},
+						{
+							"name": "Shellr51",
+							"from": [ 0.9, -0.5, 0.9 ],
+							"to": [ 1.9, -0.3, 1.6 ],
+							"rotationOrigin": [ 0.9, -0.5, 0.9 ],
+							"faces": {
+								"north": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] },
+								"east": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"south": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] },
+								"west": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"down": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] }
+							}
+						},
+						{
+							"name": "Shellr52",
+							"from": [ 3.0, 0.1, 0.4 ],
+							"to": [ 3.4, 0.3, 1.6 ],
+							"rotationOrigin": [ 3.0, 0.1, 0.4 ],
+							"faces": {
+								"north": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"east": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] },
+								"south": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"west": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] },
+								"up": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 1.0 ] },
+								"down": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 1.0 ] }
+							}
+						},
+						{
+							"name": "Shellr53",
+							"from": [ -0.3, 0.1, 0.4 ],
+							"to": [ 0.0, 0.3, 1.6 ],
+							"rotationOrigin": [ -0.3, 0.1, 0.4 ],
+							"faces": {
+								"north": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"east": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] },
+								"south": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"west": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.0, 0.5 ] },
+								"up": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 1.0 ] },
+								"down": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 1.0 ] }
+							}
+						},
+						{
+							"name": "Shellr54",
+							"from": [ 0.5, 0.1, 1.8 ],
+							"to": [ 2.3, 0.3, 2.0 ],
+							"rotationOrigin": [ 0.5, 0.1, 1.8 ],
+							"faces": {
+								"north": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] },
+								"east": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"south": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] },
+								"west": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"up": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] },
+								"down": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] }
+							}
+						},
+						{
+							"name": "Shellr55",
+							"from": [ 0.5, 0.1, -0.2 ],
+							"to": [ 2.3, 0.3, 0.0 ],
+							"rotationOrigin": [ 0.5, 0.1, -0.2 ],
+							"faces": {
+								"north": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] },
+								"east": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"south": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] },
+								"west": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"up": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] },
+								"down": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] }
+							}
+						}
+					]
+				},
+				{
+					"name": "Shellr56",
+					"from": [ 0.5, 0.0, 1.8 ],
+					"to": [ 2.3, 0.2, 2.0 ],
+					"rotationOrigin": [ 0.5, 0.0, 1.8 ],
+					"faces": {
+						"north": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] },
+						"east": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+						"south": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] },
+						"west": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+						"up": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] },
+						"down": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] }
+					}
+				},
+				{
+					"name": "Shellr57",
+					"from": [ 0.5, 0.0, -0.2 ],
+					"to": [ 2.3, 0.2, 0.0 ],
+					"rotationOrigin": [ 0.5, 0.0, -0.2 ],
+					"faces": {
+						"north": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] },
+						"east": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+						"south": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] },
+						"west": { "texture": "#mussel", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+						"up": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] },
+						"down": { "texture": "#mussel", "uv": [ 0.0, 0.0, 1.5, 0.5 ] }
+					}
+				}
+			]
+		}
+	]}

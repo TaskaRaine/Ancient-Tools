@@ -3,7 +3,7 @@
 		"op": "add",
 		"path": "/attributes/isPitchCharcoalByType",
 		"value": {
-			"*-charcoal-raw": true
+			"*-charcoal": true
 		},
 		"file": "game:itemtypes/resource/crushed/powder",
 		"side": "Server",
@@ -12,7 +12,7 @@
 		"op": "add",
 		"path": "/attributes/handbookByType",
 		"value": {
-			"*-charcoal-raw": {
+			"*-charcoal": {
 				extraSections: [{
 					title: "ancienttools:handbook-usedfor-handbookinfo",
 					text: "ancienttools:handbook-mixingpitch-craftinfo-dot"
@@ -28,7 +28,7 @@
 		"value": {
 			name: "ConvertBlockUsingIngredient",
 			propertiesByType: {
-				"*-charcoal-raw": {
+				"*-charcoal": {
 					convertFromBlockCode: "game:claypot-burned",
 					convertToBlockCode: "ancienttools:pitchpot-empty"
 				}
@@ -43,7 +43,7 @@
 		"value": {
 			name: "ConvertBlockUsingIngredient",
 			propertiesByType: {
-				"*-charcoal-raw": {
+				"*-charcoal": {
 					convertFromBlockCode: "game:dirtyclaypot-empty",
 					convertToBlockCode: "ancienttools:pitchpot-residuecovered"
 				}

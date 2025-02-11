@@ -1,3 +1,9 @@
 ﻿[
-
+    {
+		"op": "add",
+		"path": "/attributes/handbook/createdBy",
+		"value": "ancienttools:handbook-woodsplitting-craftinfo",
+		"file": "game:blocktypes/wood/woodtyped/suppportbeam",
+		"side": "Server",
+	},
 ]

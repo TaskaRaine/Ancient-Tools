@@ -5,32 +5,6 @@ using Vintagestory.GameContent;
 
 namespace AncientTools
 {
-    [HarmonyPatch(typeof(BlockEntityFirepit), "shouldExtinguishFromRainFall", MethodType.Normal)]
-    public class TestForFireproof
-    {
-        static bool Postfix(bool __result, BlockEntityFirepit __instance)
-        {
-            try
-            {
-                if(__instance.Api.Side == EnumAppSide.Server)
-                {
-                    BlockEntityBehaviorFireproofFuel fireproofFuelBehavior = __instance.GetBehavior<BlockEntityBehaviorFireproofFuel>();
-
-                    if (fireproofFuelBehavior == null)
-                        return __result;
-
-                    if (fireproofFuelBehavior.GetFedFireproofFuel() == true)
-                        return false;
-                }
-                return __result;
-            }
-            catch
-            {
-                return __result;
-            }
-        }
-    }
-
     [HarmonyPatch(typeof(BlockEntityFirepit), "igniteFuel", MethodType.Normal)]
     public class SetFireproof
     {

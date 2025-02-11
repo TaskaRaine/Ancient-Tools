@@ -1,0 +1,20 @@
+﻿[
+    {
+		ingredientPattern: "PEBNLRGDG",
+		ingredients: {
+			"P": { type: "item", code: "game:schematic-customtranslocator" },
+			"B": { type: "item", code: "ancienttools:beam-*", quantity: 4 },
+			"G": { type: "item", code: "game:gear-temporal", quantity: 1 },
+			"D": { type: "item", code: "game:tobtlocatorpart", quantity: 1 },
+			"E": { type: "item", code: "game:metalplate-electrum", quantity: 2  },
+			"N": { type: "item", code: "game:metalnailsandstrips-*", name: "metal", allowedVariants: ["iron", "meteoriciron", "steel", "cupronickel"], quantity: 8 },
+			"L": { type: "item", code: "game:metalplate-lead", quantity: 6  },
+			"R": { type: "item", code: "game:rod-cupronickel", quantity: 3 }
+
+		},
+		width: 3,
+		height: 3,
+		name: "glider",
+		output: { type: "block", code: "game:tobtlocator-north"  }
+	}
+]

@@ -5,7 +5,7 @@
 		"value": {
 			shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_charcoal",
 			texturePaths: [{ code: "charcoal", path: "game:block/coal/charcoal" }],
-			groundStack: { type: "item", code: "game:powder-charcoal-raw" },
+			groundStack: { type: "item", code: "game:powder-charcoal" },
 			resultQuantity: 1
 		},
 		"file": "game:itemtypes/resource/charcoal",

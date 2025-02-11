@@ -1,0 +1,16 @@
+﻿[
+    {
+		"op": "add",
+		"path": "/attributes/mortarPropertiesByType",
+		"value": {
+			"*-iron": {
+				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_crushed_{material}",
+				texturePaths: [{ code: "crushed{material}", path: "game:item/resource/crushed/hematite" }],
+				groundStack: { type: "item", code: "game:powder-iron-oxide" },
+				resultQuantity: 1
+			}
+		},
+		"file": "game:itemtypes/resource/crushed/crushed",
+		"side": "Server",
+	},
+]

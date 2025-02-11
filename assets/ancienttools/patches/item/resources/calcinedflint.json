@@ -1,0 +1,16 @@
+﻿[
+    {
+		"op": "add",
+		"path": "/attributes/mortarPropertiesByType",
+		"value": {
+			"*-flint": {
+				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_calcined_flint",
+				texturePaths: [{ code: "calcinedflint", path: "game:item/resource/crushed/lime" }],
+				groundStack: { type: "item", code: "game:powder-flint" },
+				resultQuantity: 1
+			}
+		},
+		"file": "game:itemtypes/resource/calcined",
+		"side": "Server",
+	},
+]

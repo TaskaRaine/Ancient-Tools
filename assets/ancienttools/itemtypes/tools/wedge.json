@@ -9,6 +9,10 @@
 				"@wedge-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver)": "ancienttools:handbook-smelting-craftinfo"
 			}
 		},
+		"materialByType": {
+			"@wedge-(chert|granite|andesite|basalt|obsidian|peridotite|flint)":  "Stone",
+			"@wedge-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)":  "Metal"
+		}
 	},
 	variantgroups: [
         { code: "material", states: ["chert", "granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron", "meteoriciron", "steel" ] },

@@ -40,7 +40,7 @@ namespace AncientTools.Blocks
         public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos pos, IPlayer forPlayer)
         {
             if (world.BlockAccessor.GetBlockEntity(pos) is BEHideWaterSack waterSackEntity)
-                if(this.FirstCodePart(1) == "raw")
+                if(this.FirstCodePart(1) == "raw" || this.FirstCodePart(1) == "salted")
                     return base.GetPlacedBlockInfo(world, pos, forPlayer) + "\n" + waterSackEntity.GetTimeRemainingInfo();
 
             return base.GetPlacedBlockInfo(world, pos, forPlayer);
@@ -82,7 +82,7 @@ namespace AncientTools.Blocks
             }
             else if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BEHideWaterSack waterSackEntity)
             {
-                ItemStack rawHide = new ItemStack(world.GetBlock(new AssetLocation("ancienttools", "hidewatersack-raw-" + this.LastCodePart())));
+                ItemStack rawHide = new ItemStack(world.GetBlock(new AssetLocation("ancienttools", "hidewatersack-" + this.FirstCodePart(1) + "-" + this.LastCodePart())));
                 rawHide.Attributes.SetDouble("timeremaining", waterSackEntity.GetTimeRemaining());
 
                 if (!byPlayer.Entity.TryGiveItemStack(rawHide))

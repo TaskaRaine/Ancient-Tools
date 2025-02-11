@@ -130,7 +130,7 @@ Now, simply pick up the mixture and heat it in the nearest firepit to create <a 
 
 Sometimes, wooden logs are just too large to be useful. Wood splitting, otherwise known as cleaving, was a common technique for shaping wood into more usable dimensions during the Neolithic era right up until the Pre-Industrial era.
 
-To accomplish this task, many cultures drove <a href=\'handbooksearch://wedge\'>wedges</a> into the grain of the wood using a <a href=\'handbooksearch://wedge\'>mallet</a> to create smaller, yet sturdy wooden products.
+To accomplish this task, many cultures drove <a href=\'handbooksearch://wedge\'>wedges</a> into the grain of the wood using a <a href=\'handbooksearch://mallet\'>mallet</a> or <a href=\'handbooksearch://hammer\'>hammer</a> to create smaller, yet sturdy wooden products.
 
 Similarly, <a href=\'handbooksearch://wedge\'>wedges</a>, either crafted from stone or forged, can be placed into any upright-standing <a href=\'handbooksearch://debarked\'>stripped log</a> using <icon name='rightmousebutton'></icon> then smacked with a <a href=\'handbooksearch://wedge\'>mallet</a> with <icon name='leftmousebutton'></icon>. As each quarter is split away, a fancy new <a href=\'handbooksearch://beam\'>beam</a> will be yours for the taking!
 
@@ -162,6 +162,9 @@ To move the cart from place to place, simply pick it up by pressing <hk>shift</h
 
 When empty, cart inventories can also be removed! Simply press <hk>ctrl</hk>, then <icon name='rightmousebutton'></icon> with an empty hand to remove it from the cart.
 	",
+
+	"debug-displayinventory-texturenotfound": "An Ancient Tools Display Inventory texture could not be found in the texture atlas. Either the file path is incorrect, or the player needs to increase the size of their texture atlas.",
+	
 	"commandname-removemobilestoragedebuff": "removemobilestoragedebuff",									
 	"commanddesc-removemobilestoragedebuff": "Removes the mobile storage speed debuff from an affected player",	
 	"commanddesc-removemobilestoragedebuff-syntax-personal": "/removemobilestoragedebuff",
@@ -347,12 +350,17 @@ When empty, cart inventories can also be removed! Simply press <hk>ctrl</hk>, th
 	"block-hidewatersack-raw-large": "Large Raw Hide Water Sack",
 	"block-hidewatersack-raw-medium": "Medium Raw Hide Water Sack",
 	"block-hidewatersack-raw-small": "Small Raw Hide Water Sack",
+	"block-hidewatersack-salted-huge": "Huge Salted Hide Water Sack",
+	"block-hidewatersack-salted-large": "Large Salted Hide Water Sack",
+	"block-hidewatersack-salted-medium": "Medium Salted Hide Water Sack",
+	"block-hidewatersack-salted-small": "Small Salted Hide Water Sack",
 	"block-hidewatersack-soaked-huge": "Huge Soaked Hide Water Sack",
 	"block-hidewatersack-soaked-large": "Large Soaked Hide Water Sack",
 	"block-hidewatersack-soaked-medium": "Medium Soaked Hide Water Sack",
 	"block-hidewatersack-soaked-small": "Small Soaked Hide Water Sack",
 
 	"blockdesc-hidewatersack-raw-*": "This sack is filled with water from a nearby water source. The hide is not yet soaked through...",
+	"blockdesc-hidewatersack-salted-*": "This sack is filled with water from a nearby water source. The hide is not yet soaked through...",
 	"blockdesc-hidewatersack-soaked-*": "This sack is filled with water from a nearby water source. The hide is thoroughly soaked...",
 
 	"block-pitchpot-empty": "Empty Pitch Container",

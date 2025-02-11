@@ -1,0 +1,27 @@
+﻿[
+    {
+		"op": "add",
+		"path": "/server/behaviors/6/quantitySlots",
+		"value": 8,
+		"file": "game:entities/land/hooved/elk-tamed",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/server/behaviors/6/drops/-",
+		"value": {
+			type: "item",
+			code: "ancienttools:brain",
+			quantity: { avg: 0.25, var: 0 }
+		},
+		"file": "game:entities/land/hooved/elk-tamed",
+		"side": "Server"
+	},
+	{
+		"op": "add",
+		"path": "/client/behaviors/4/quantitySlots",
+		"value": 8,
+		"file": "game:entities/land/hooved/elk-tamed",
+		"side": "Server"
+	},
+]

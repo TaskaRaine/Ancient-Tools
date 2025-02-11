@@ -1,0 +1,20 @@
+﻿[
+    {
+        "op": "addmerge",
+        "path": "/variantgroups/-",
+        "value": {
+            "code": "wood",
+            "loadFromProperties": "wildcrafttree:block/wood"
+        },
+        "file": "ancienttools:blocktypes/stretchingframe.json",
+        "dependsOn": [
+            {
+                "modid": "ancienttools"
+            },
+            {
+                "modid": "wildcrafttree"
+            }
+        ],
+        "side": "Server"
+    }
+]

@@ -1,0 +1,72 @@
+﻿[
+    {
+        "op": "addmerge",
+        "path": "/variantgroups/-",
+        "value": {
+            "code": "wood",
+            "loadFromProperties": "wildcrafttree:block/wood"
+        },
+        "file": "ancienttools:itemtypes/resources/beam.json",
+        "dependsOn": [
+            {
+                "modid": "ancienttools"
+            },
+            {
+                "modid": "wildcrafttree"
+            }
+        ],
+        "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/texturesByType/@*-(douglasfir|willow|honeylocust|bearnut|poplar|catalpa|mahogany|sal|saxaul|spruce|sycamore|elm|beech|eucalyptus|cedar|tuja|redcedar|yew|kauri|ginkgo|dalbergia|umnini|banyan|guajacum|ghostgum|ohia|satinash|bluemahoe|jacaranda|empresstree|chlorociboria|petrified)",
+        "value": {
+            "side": {
+                "base": "game:block/wood/debarked/{wood}",
+                "rotation": 90
+            },
+            "end": {
+                "base": "wildcrafttree:block/wood/treetrunk/{wood}"
+            }
+        },
+        "file": "ancienttools:itemtypes/resources/beam.json",
+        "dependsOn": [
+            {
+                "modid": "ancienttools"
+            },
+            {
+                "modid": "wildcrafttree"
+            }
+        ],
+        "side": "Server"
+    },
+    {
+        "op": "move",
+        "frompath": "/texturesByType/*",
+        "path": "/temp",
+        "file": "ancienttools:itemtypes/resources/beam.json",
+        "dependsOn": [
+            {
+                "modid": "ancienttools"
+            },
+            {
+                "modid": "wildcrafttree"
+            }
+        ],
+        "side": "Server"
+    },
+    {
+        "op": "move",
+        "frompath": "/temp",
+        "path": "/texturesByType/*",
+        "file": "ancienttools:itemtypes/resources/beam.json",
+        "dependsOn": [
+            {
+                "modid": "ancienttools"
+            },
+            {
+                "modid": "wildcrafttree"
+            }
+        ]
+    }
+]

@@ -1,4 +1,5 @@
 ﻿using AncientTools.Blocks;
+using AncientTools.CollectibleBehaviors;
 using HarmonyLib;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
@@ -11,9 +12,9 @@ namespace AncientTools
     {
         static void Postfix(EntityAgent byEntity, BlockSelection blockSel, ref EnumHandHandling handHandling, ref EnumHandling handling)
         {
-            if (blockSel == null || byEntity == null) return;
+            if (blockSel == null || byEntity == null || byEntity.ActiveHandItemSlot.Empty) return;
 
-            if (byEntity.World.BlockAccessor.GetBlock(blockSel.Position) is BlockSplitLog)
+            if (byEntity.World.BlockAccessor.GetBlock(blockSel.Position) is BlockSplitLog && byEntity.ActiveHandItemSlot.Itemstack.Collectible.HasBehavior<CollectibleBehaviorWedgeSmack>())
             {
                 handHandling = EnumHandHandling.PreventDefaultAction;
                 handling = EnumHandling.PreventDefault;

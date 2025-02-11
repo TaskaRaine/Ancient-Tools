@@ -3,7 +3,7 @@
 		"op": "add",
 		"path": "/attributes/cartPlacableByType",
 		"value": {
-			"@*-(ashforest|chthonic|copper|earthen|rain|burned|cowrie|rime|oxblood|loam|undergrowth|beehive|harvest|honeydew|rutile|seasalt|springflowers|volcanic)": {
+			"@*-(ashforest|chthonic|copper|earthen|rain|burned|cowrie|rime|oxblood|loam|undergrowth|beehive|harvest|honeydew|rutile|seasalt|springflowers|volcanic|cloisonne|cornflower|talik|caveaurora|collonade|rattlesnake|waves|wintersea)": {
 				"normal":  {
 					translation: [-8.0, 7.0, -5.0],
 					rotation: [0.0, 0.0, 0.0],
@@ -18,7 +18,7 @@
 		"op": "add",
 		"path": "/attributes/mobileStoragePropsByType",
 		"value": {
-			"@*-(ashforest|chthonic|copper|earthen|rain|burned|cowrie|rime|oxblood|loam|undergrowth|beehive|harvest|honeydew|rutile|seasalt|springflowers|volcanic)": {
+			"@*-(ashforest|chthonic|copper|earthen|rain|burned|cowrie|rime|oxblood|loam|undergrowth|beehive|harvest|honeydew|rutile|seasalt|springflowers|volcanic|cloisonne|cornflower|talik|caveaurora|collonade|rattlesnake|waves|wintersea)": {
 				"normal":  {
 					shape: "ancienttools:shapes/block/storagevessel",
 					openSound: "game:sounds/block/vesselopen",

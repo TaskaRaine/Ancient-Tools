@@ -107,8 +107,9 @@ namespace AncientTools.Blocks
             if (blockSel.SelectionBoxIndex == 0)
                 return base.OnGettingBroken(player, blockSel, itemslot, remainingResistance, dt, counter);
 
-            if(itemslot.Itemstack?.Collectible?.GetType() == typeof(ItemMallet) || itemslot.Itemstack.Collectible?.GetType() == typeof(ItemHammer))
+            if(itemslot.Itemstack?.Collectible?.GetType() == typeof(ItemMallet) || itemslot.Itemstack?.Collectible?.GetType() == typeof(ItemHammer))
                 return remainingResistance;
+
             return base.OnGettingBroken(player, blockSel, itemslot, remainingResistance, dt, counter);
         }
         public override void OnBlockBroken(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1)

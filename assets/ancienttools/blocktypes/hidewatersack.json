@@ -2,31 +2,23 @@
 	code: "hidewatersack",
 	class: "BlockHideWaterSack",
 	entityClassByType: {
-		"*-raw-*": "BEHideWaterSack"
+		"@hidewatersack-(raw|salted)-*": "BEHideWaterSack"
 	},
 	behaviorsByType: {
-		"*-raw-*": [
+		"@hidewatersack-(raw|salted|soaked)-*": [
 			{ name: "UnstableFalling" },
-		],
-		"*-soaked-*": [
-			{ name: "UnstableFalling" }, 
 		]
 	},
 	creativeinventory: { "general": ["*"], "ancienttools": ["*"] },
 	attributesByType: {
-		"*-raw-*": {
+		"@hidewatersack-(raw|salted|soaked)-*": {
 			handbook: {
-				groupBy: ["hidewatersack-raw-*"]
-			},
-		},
-		"*-soaked-*": {
-			handbook: {
-				groupBy: ["hidewatersack-soaked-*"]
+				groupBy: ["hidewatersack-{hide}-*"]
 			},
 		}
 	},
 	variantgroups: [
-		{ code: "hide", states: ["raw", "soaked"] },
+		{ code: "hide", states: ["raw", "salted", "soaked"] },
 		{ code: "size", states: ["huge", "large", "medium", "small"] }
 	],
 	drawtype: "json",
@@ -47,6 +39,10 @@
 	texturesbytype: {
 		"*-raw-*": {
 			hide: { base: "game:item/resource/hide/raw" },
+			string: { base: "game:item/tool/material/string" }
+		},
+		"*-salted-*": {
+			hide: { base: "game:item/resource/hide/salted" },
 			string: { base: "game:item/tool/material/string" }
 		},
 		"*-soaked-*": { 

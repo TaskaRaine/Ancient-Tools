@@ -9,7 +9,7 @@
 				scale: 1.0
 			}
 		},
-		"file": "game:blocktypes/stationarybasket",
+		"file": "game:blocktypes/reed/reedchest",
 		"side": "Server"
     },
 	{
@@ -24,7 +24,7 @@
 				quantitySlots: 8
 			}
 		},
-		"file": "game:blocktypes/stationarybasket",
+		"file": "game:blocktypes/reed/reedchest",
 		"side": "Server"
 	}
 ]

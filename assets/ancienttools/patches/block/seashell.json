@@ -5,12 +5,12 @@
 		"value": {
 			"*": {
 				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_seashell_{type}",
-				texturePaths: [{ code: "{type}", path: "game:block/creature/seashell/{color}" }],
+				texturePaths: [{ code: "{type}", path: "game:block/creature/aquatic/seashell/{color}" }],
 				groundStack: { type: "item", code: "game:lime" },
 				resultQuantity: 1
 			}
 		},
-		"file": "game:blocktypes/bone/seashell",
+		"file": "game:blocktypes/aquatic/seashell",
 		"side": "Server",
 	},
 ]

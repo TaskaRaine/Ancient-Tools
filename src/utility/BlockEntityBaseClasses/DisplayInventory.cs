@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.Config;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
@@ -19,45 +22,59 @@ namespace AncientTools.Utility
             get
             {
                 AssetLocation texturePath = null;
-
-                if (CurrentShape != null)
-                {
-                    if (CurrentShape.Textures == null || !CurrentShape.Textures.ContainsKey(textureCode))
-                    {
-                        if (CurrentObject.ItemClass == EnumItemClass.Item)
-                        {
-                            Item currentItem = CurrentObject as Item;
-
-                            if (currentItem.Textures.ContainsKey(textureCode))
-                                texturePath = currentItem.Textures[textureCode].Base;
-                            else
-                                texturePath = currentItem.FirstTexture.Base;
-                        }
-                        else
-                        {
-                            Block currentBlock = CurrentObject as Block;
-                            texturePath = currentBlock.Textures["all"].Base;
-                        }
-                    }
-                    else
-                        CurrentShape.Textures.TryGetValue(textureCode, out texturePath);
-                }
-
                 TextureAtlasPosition texpos = null;
 
-                if(texturePath != null)    
-                   texpos = Capi.BlockTextureAtlas[texturePath];
-
-                if (texpos == null)
+                try
                 {
-                    IAsset texAsset = Capi.Assets.TryGet(texturePath.Clone().WithPathPrefixOnce("textures/").WithPathAppendixOnce(".png"));
-                    if (texAsset != null)
+                    if (CurrentShape != null)
                     {
-                        Capi.BlockTextureAtlas.GetOrInsertTexture(texturePath, out _, out texpos);
-                    }
-                }
+                        if (CurrentShape.Textures == null || !CurrentShape.Textures.ContainsKey(textureCode))
+                        {
+                            if (CurrentObject.ItemClass == EnumItemClass.Item)
+                            {
+                                Item currentItem = CurrentObject as Item;
 
-                return texpos;
+                                if (currentItem.Textures.ContainsKey(textureCode))
+                                    texturePath = currentItem.Textures[textureCode].Base;
+                                else
+                                    texturePath = currentItem.FirstTexture.Base;
+                            }
+                            else
+                            {
+                                Block currentBlock = CurrentObject as Block;
+                                texturePath = currentBlock.Textures["all"].Base;
+                            }
+                        }
+                        else
+                            CurrentShape.Textures.TryGetValue(textureCode, out texturePath);
+                    }
+
+                    if (texturePath != null)
+                        texpos = Capi.BlockTextureAtlas[texturePath];
+
+                    if (texpos == null)
+                    {
+                        IAsset texAsset = Capi.Assets.TryGet(texturePath.Clone().WithPathPrefixOnce("textures/").WithPathAppendixOnce(".png"));
+                        if (texAsset != null)
+                        {
+                            Capi.BlockTextureAtlas.GetOrInsertTexture(texturePath, out _, out texpos);
+                        }
+
+                        //-- No texture file was found for the grindable shape, probably due to an incorrect file path in the object. The mortarProperties attribute, or otherwise --//
+                        //-- Throwing an exception here so that the catch can be triggered, unknown texture can be displayed, and a crash won't happen further along in code --//
+                        throw new FileNotFoundException();
+                    }
+
+                    return texpos;
+                }
+                catch
+                {
+                    UnknownTextureDetected = true;
+
+                    texturePath = new AssetLocation("game", "unknown");
+                    texpos = Capi.BlockTextureAtlas[texturePath];
+                    return texpos;
+                }
             }
         }
 
@@ -69,6 +86,7 @@ namespace AncientTools.Utility
 
         public int InventorySize { get; set; } = 1;
 
+        private bool UnknownTextureDetected { get; set; } = false;
         public DisplayInventory()
         {
 
@@ -81,8 +99,12 @@ namespace AncientTools.Utility
         {
             base.Initialize(api);
 
-            Capi = api as ICoreClientAPI;
             Meshes = new MeshData[InventorySize];
+
+            if(api.Side == EnumAppSide.Client)
+            {
+                Capi = api as ICoreClientAPI;
+            }
         }
         public abstract void UpdateMeshes();
         public MeshData GenMesh(ICoreClientAPI capi, string shapePath)
@@ -90,6 +112,15 @@ namespace AncientTools.Utility
             CurrentShape = capi.Assets.TryGet(shapePath + ".json").ToObject<Shape>();
 
             capi.Tesselator.TesselateShape("container", CurrentShape, out MeshData wholeMesh, this);
+
+            //-- A critical texture exception was caught and all textures on the inventory shape were changed to Vintage Story's 'unknown' texture to demonstrate the issue --//
+            if (UnknownTextureDetected)
+            {
+                UnknownTextureDetected = false;
+
+                Capi.Logger.Debug(Lang.Get("ancienttools:debug-displayinventory-texturenotfound"));
+            }
+
             return wholeMesh;
         }
         public MeshData GenMesh(JsonObject generationProperties)
@@ -108,6 +139,14 @@ namespace AncientTools.Utility
             }
 
             Capi.Tesselator.TesselateShape("container", CurrentShape, out MeshData wholeMesh, this);
+
+            //-- A critical texture exception was caught and all textures on the inventory shape were changed to Vintage Story's 'unknown' texture to demonstrate the issue --//
+            if (UnknownTextureDetected)
+            {
+                UnknownTextureDetected = false;
+
+                Capi.Logger.Debug(Lang.Get("ancienttools:debug-displayinventory-texturenotfound"));
+            }
 
             return wholeMesh;
         }
@@ -138,6 +177,14 @@ namespace AncientTools.Utility
                     }
                     capi.Tesselator.TesselateItem(stack.Item, out mesh, this);
                 }
+            }
+
+            //-- A critical texture exception was caught and all textures on the inventory shape were changed to Vintage Story's 'unknown' texture to demonstrate the issue --//
+            if (UnknownTextureDetected)
+            {
+                Capi.Logger.Debug(Lang.Get("ancienttools:debug-displayinventory-texturenotfound"));
+
+                UnknownTextureDetected = false;
             }
 
             return mesh;

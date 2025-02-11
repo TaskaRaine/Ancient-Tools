@@ -121,14 +121,15 @@ namespace AncientTools.BlockEntities
 
             if (!HideSlot.Empty)
             {
-                string hideType = HideSlot.Itemstack.Item.FirstCodePart(1);
+                //string hideType = HideSlot.Itemstack.Item.FirstCodePart(1);
                 //string hideSize = HideSlot.Itemstack.Item.LastCodePart();
 
                 //string resourcePath = "ancienttools:shapes/block/stretchingframe/resourceshapes/" + hideType + "hide_" + hideSize;
-                string resourcePath = "ancienttools:shapes/block/stretchingframe/resourceshapes/meshhide/" + hideType + "hide_meshhide";
+                //string resourcePath = "ancienttools:shapes/block/stretchingframe/resourceshapes/meshhide/" + hideType + "hide_meshhide";
+                
 
                 CurrentObject = HideSlot.Itemstack.Item;
-                HideMesh = GenMesh(Api as ICoreClientAPI, resourcePath);
+                HideMesh = GenMesh(Api as ICoreClientAPI, HideSlot.Itemstack.Collectible.Attributes["stretchableShape"].ToString());
             }
         }
         /// <summary>

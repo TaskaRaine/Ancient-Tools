@@ -3,8 +3,7 @@
 	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
 	attributes: {
 		handbook: {
-			groupBy: ["beam-*"],
-			createdBy: "ancienttools:handbook-woodsplitting-craftinfo"
+			groupBy: ["beam-*"]
 		}
 	},
 	behaviors: [{ 

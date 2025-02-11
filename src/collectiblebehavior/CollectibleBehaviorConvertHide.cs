@@ -28,7 +28,7 @@ namespace AncientTools.CollectibleBehaviors
 
                     if (interactedBlockPart.Equals("water") || interactedBlockPart.Equals("saltwater") || interactedBlockPart.Equals("boilingwater"))
                     {
-                        ItemStack hideWaterSack = new ItemStack(byEntity.Api.World.GetBlock(new AssetLocation("ancienttools", "hidewatersack-raw-" + slot.Itemstack.Item.LastCodePart())));
+                        ItemStack hideWaterSack = new ItemStack(byEntity.Api.World.GetBlock(new AssetLocation("ancienttools", "hidewatersack-" + slot.Itemstack.Item.FirstCodePart(1) + "-" + slot.Itemstack.Item.LastCodePart())));
 
                         slot.TakeOut(1);
                         slot.MarkDirty();

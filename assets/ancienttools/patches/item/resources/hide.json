@@ -5,6 +5,9 @@
 		"value": {
 			"*-raw-*": [
 				{ "name": "ConvertHide" }
+			],
+			"*-salted-*": [
+				{ "name": "ConvertHide" }
 			]
 		},
 		"file": "game:itemtypes/resource/hide",
@@ -13,6 +16,25 @@
 	{
 		"op": "add",
 		"path": "/behaviorsByType/*-raw-*/-",
+		"value": {
+			"name": "IC_UseOnLiquidContainer",
+			"properties": {
+			"outputStack": { "type": "block", "code": "ancienttools:hidewatersack-soaked-{size}", "quantity": 1 },
+			"liquidStack": { "type": "item", "code": "waterportion" },
+			"actionLangCode": "game:heldhelp-fill",
+			"sound": "sounds/effect/water-fill",
+			"consumeLiters": 10,
+			"ingredientQuantity": 1,
+			"spawnParticles": true
+			}
+		},
+		"file": "game:itemtypes/resource/hide",
+		"side": "Server",
+		"dependsOn": [{"modid": "immersivecrafting"}]
+	},
+	{
+		"op": "add",
+		"path": "/behaviorsByType/*-salted-*/-",
 		"value": {
 			"name": "IC_UseOnLiquidContainer",
 			"properties": {
@@ -52,9 +74,9 @@
 	},
 	{
 		"op": "add",
-		"path": "/attributes/stretchableByType",
+		"path": "/attributes/stretchableShapeByType",
 		"value": {
-			"@hide-(raw|soaked|scraped|prepared|oiled|pelt|brained|smoked)-(small|medium|large|huge)": true
+			"@hide-(raw|salted|soaked|scraped|prepared|oiled|pelt|brained|smoked)-(small|medium|large|huge)": "ancienttools:shapes/block/stretchingframe/resourceshapes/meshhide/{type}hide_meshhide"
 		},
 		"file": "game:itemtypes/resource/hide",
 		"side": "Server"

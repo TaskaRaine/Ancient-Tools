@@ -1,0 +1,94 @@
+﻿[
+    {
+        "op": "addmerge",
+        "path": "/variantgroups/-",
+        "value": {
+            "code": "bark",
+            "states": [
+                "brideinwhite",
+                "wiliwili",
+                "alder",
+                "redwillow",
+                "sourwood"
+            ],
+            "loadFromProperties": "wildcrafttree:block/wood"
+        },
+        "file": "ancienttools:itemtypes/resources/bark.json",
+        "dependsOn": [
+            {
+                "modid": "ancienttools"
+            },
+            {
+                "modid": "wildcrafttree"
+            }
+        ],
+        "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/texturesByType/@*-(douglasfir|willow|honeylocust|bearnut|poplar|catalpa|mahogany|sal|saxaul|spruce|sycamore|elm|beech|eucalyptus|cedar|tuja|redcedar|yew|kauri|ginkgo|dalbergia|umnini|banyan|guajacum|ghostgum|ohia|satinash|bluemahoe|jacaranda|empresstree|chlorociboria|petrified)",
+        "value": {
+            "bark": {
+                "base": "wildcrafttree:block/wood/bark/{bark}"
+            }
+        },
+        "file": "ancienttools:itemtypes/resources/bark.json",
+        "dependsOn": [
+            {
+                "modid": "ancienttools"
+            },
+            {
+                "modid": "wildcrafttree"
+            }
+        ],
+        "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/texturesByType/@*-(brideinwhite|wiliwili|alder|redwillow|sourwood)",
+        "value": {
+            "bark": {
+                "base": "ancienttools:block/wood/bark/{bark}"
+            }
+        },
+        "dependsOn": [
+            {
+                "modid": "ancienttools"
+            },
+            {
+                "modid": "wildcrafttree"
+            }
+        ],
+        "side": "Server"
+    },
+    {
+        "op": "move",
+        "frompath": "/texturesByType/*",
+        "path": "/temp",
+        "file": "ancienttools:itemtypes/resources/bark.json",
+        "dependsOn": [
+            {
+                "modid": "ancienttools"
+            },
+            {
+                "modid": "wildcrafttree"
+            }
+        ],
+        "side": "Server"
+    },
+    {
+        "op": "move",
+        "frompath": "/temp",
+        "path": "/texturesByType/*",
+        "file": "ancienttools:itemtypes/resources/bark.json",
+        "dependsOn": [
+            {
+                "modid": "ancienttools"
+            },
+            {
+                "modid": "wildcrafttree"
+            }
+        ],
+        "side": "Server"
+    }
+]

@@ -147,12 +147,12 @@ namespace AncientTools.Blocks
                 }
                 else if (hotbarCollectible.Attributes != null)
                 {
-                    bool isStrechable = hotbarCollectible.Attributes["stretchable"].AsBool();
-
-                    if(isStrechable)
+                    if (hotbarCollectible.Attributes["stretchableShape"].Exists && hotbarCollectible.Code != new AssetLocation("game", "rot"))
+                    {
                         stretchingFrameEntity.TryPlaceHide(byPlayer.InventoryManager.ActiveHotbarSlot);
 
-                    return isStrechable;
+                        return true;
+                    }
                 }
             }
             

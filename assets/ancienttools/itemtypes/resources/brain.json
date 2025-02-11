@@ -3,7 +3,7 @@
 	class: "ItemBrain",
 	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
 	attributes: {
-		nutritionPropsWhenInMeal: { satiety: 560, foodcategory: "Protein" },
+		nutritionPropsWhenInMeal: { satiety: 300, foodcategory: "Protein" },
 	},
 	drawtype: "json",
     shape: { base: "item/resource/brain" },

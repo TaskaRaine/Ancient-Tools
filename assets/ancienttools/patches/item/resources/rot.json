@@ -13,5 +13,12 @@
 		},
 		"file": "game:itemtypes/resource/rot",
 		"side": "Server"
-	}
+	},
+	{
+		"op": "add",
+		"path": "/attributes/stretchableShape",
+		"value": "ancienttools:shapes/block/stretchingframe/resourceshapes/meshhide/rottenhide_meshhide",
+		"file": "game:itemtypes/resource/rot",
+		"side": "Server"
+	},
 ]

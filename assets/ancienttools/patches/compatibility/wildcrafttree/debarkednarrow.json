@@ -1,0 +1,94 @@
+﻿[
+    {
+        "op": "addeach",
+        "path": "/variantgroups/0/states/-",
+        "value": [
+            "brideinwhite",
+            "wiliwili",
+            "alder",
+            "redwillow",
+            "sourwood",
+            "thinlarch",
+            "thinwillow",
+            "thinbearnut",
+            "thinbirch",
+            "thinmahoe"
+        ],
+        "file": "ancienttools:blocktypes/debarkednarrow.json",
+        "dependsOn": [
+            {
+                "modid": "ancienttools"
+            },
+            {
+                "modid": "wildcrafttree"
+            }
+        ],
+        "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/texturesByType/@*-(brideinwhite|wiliwili|alder|redwillow|sourwood|thinbearnut|thinbirch|thinlarch|thinmahoe|thinwillow)-(ud|ns|we)",
+        "value": {
+            "all": {
+                "base": "ancienttools:block/wood/debarked/{wood}"
+            }
+        },
+        "dependsOn": [
+            {
+                "modid": "ancienttools"
+            },
+            {
+                "modid": "wildcrafttree"
+            }
+        ],
+        "side": "Server"
+    },
+    {
+        "op": "move",
+        "frompath": "/texturesByType/*",
+        "path": "/temp",
+        "file": "ancienttools:blocktypes/debarkednarrow.json",
+        "dependsOn": [
+            {
+                "modid": "ancienttools"
+            },
+            {
+                "modid": "wildcrafttree"
+            }
+        ],
+        "side": "Server"
+    },
+    {
+        "op": "move",
+        "frompath": "/temp",
+        "path": "/texturesByType/*",
+        "file": "ancienttools:blocktypes/debarkednarrow.json",
+        "dependsOn": [
+            {
+                "modid": "ancienttools"
+            },
+            {
+                "modid": "wildcrafttree"
+            }
+        ],
+        "side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/attributes/woodStrippable",
+        "value": {
+            "resultingLog": "ancienttools:debarkednarrow-{wood}-{rotation}",
+            "barkMultiplier": 0.5
+        },
+        "file": "wildcrafttree:blocktypes/wood/woodtyped/thintrunk",
+        "dependsOn": [
+            {
+                "modid": "ancienttools"
+            },
+            {
+                "modid": "wildcrafttree"
+            }
+        ],
+        "side": "Server"
+    }
+]

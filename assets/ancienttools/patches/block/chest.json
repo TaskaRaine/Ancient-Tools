@@ -8,12 +8,27 @@
 				"rotation": [0.0, 180.0, 0.0],
 				"scale": 1.0
 			},
+			"normal-aged": {
+				"translation": [-8.0, 7.0, -4.0],
+				"rotation": [0.0, 180.0, 0.0],
+				"scale": 1.0
+			},
 			"golden": {
 				"translation": [-5.0, 8.0, 0.0],
 				"rotation": [0.0, 180.0, 0.0],
 				"scale": 1.0
 			},
+			"golden-aged": {
+				"translation": [-5.0, 8.0, 0.0],
+				"rotation": [0.0, 180.0, 0.0],
+				"scale": 1.0
+			},
 			"owl": {
+				"translation": [-5.0, 8.0, 0.0],
+				"rotation": [0.0, 180.0, 0.0],
+				"scale": 1.0
+			},
+			"owl-aged": {
 				"translation": [-5.0, 8.0, 0.0],
 				"rotation": [0.0, 180.0, 0.0],
 				"scale": 1.0
@@ -33,15 +48,36 @@
 				"placementSound": "game:sounds/block/planks", 
 				"quantitySlots": 16
 			},
+			"normal-aged": { 
+				"shape": "game:shapes/block/wood/chest/normal",
+				"openSound": "game:sounds/block/largechestopen",
+				"closeSound": "game:sounds/block/largechestclose",
+				"placementSound": "game:sounds/block/planks", 
+				"quantitySlots": 16
+			},
 			"golden": { 
-				"shape": "game:shapes/block/wood/chest/treasure-golden-closed",
+				"shape": "game:shapes/block/wood/chest/golden",
+				"openSound": "game:sounds/block/largechestopen",
+				"closeSound": "game:sounds/block/largechestclose",
+				"placementSound": "game:sounds/block/planks", 
+				"quantitySlots": 4
+			},
+			"golden-aged": { 
+				"shape": "game:shapes/block/wood/chest/golden",
 				"openSound": "game:sounds/block/largechestopen",
 				"closeSound": "game:sounds/block/largechestclose",
 				"placementSound": "game:sounds/block/planks", 
 				"quantitySlots": 4
 			},
 			"owl": { 
-				"shape": "game:shapes/block/wood/chest/treasure-owl-closed",
+				"shape": "game:shapes/block/wood/chest/owl",
+				"openSound": "game:sounds/block/largechestopen",
+				"closeSound": "game:sounds/block/largechestclose",
+				"placementSound": "game:sounds/block/planks", 
+				"quantitySlots": 4
+			},
+			"owl-aged": { 
+				"shape": "game:shapes/block/wood/chest/owl",
 				"openSound": "game:sounds/block/largechestopen",
 				"closeSound": "game:sounds/block/largechestclose",
 				"placementSound": "game:sounds/block/planks", 

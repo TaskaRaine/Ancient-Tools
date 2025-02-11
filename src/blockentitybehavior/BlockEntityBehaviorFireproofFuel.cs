@@ -1,9 +1,10 @@
 ﻿using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
+using Vintagestory.GameContent;
 
 namespace AncientTools.BlockEntityBehaviors
 {
-    class BlockEntityBehaviorFireproofFuel : BlockEntityBehavior
+    class BlockEntityBehaviorFireproofFuel : BEBehaviorTemperatureSensitive
     {
         private bool fedFireproofFuel = false;
 

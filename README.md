@@ -11,6 +11,8 @@
 ### Releases
 
 #### Vintage Story 1.19.5+
+[Version 1.5.18](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.18/AncientTools_V1.5.18.zip)
+
 [Version 1.5.17](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.17/AncientTools_V1.5.17.zip)
 
 #### Vintage Story 1.19.4+
@@ -104,6 +106,20 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.5.19 
+Removed storage flags for salted meat and brains- it was preventing them from being placed in cooking pots for making meals.
+
+#### Version 1.5.18
+Salted meats and brains now have storage flags, letting them be stored in agricultural-only containers. 
+
+Reduced brain meal satiation to 300
+
+Adjusted the file path for reed baskets in their cart property patches. The path was changed in VS 1.19.0. This should prevent crashes from carts that had baskets placed in VS 1.18.
+
+Fixed a crash that occurred when attacking debarked logs with empty hands.
+
+Fixed an issue that made it so that debarked logs could not be broken with an axe(or other means)
+
 #### Version 1.5.17
 Fixed an issue where the hammer wedge smacking wasn't being called on the server.
 

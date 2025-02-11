@@ -40,6 +40,8 @@ namespace AncientTools.BlockEntities
         public string SplitBlockShapeLocation;
         public MeshData NewSplitLogMesh;
 
+        private ILoadedSound stoneSmackSound, metalSmackSound;
+
         public ItemSlot WedgeSlot(int index)
         {
             return GenericDisplayInventory[index];
@@ -60,6 +62,11 @@ namespace AncientTools.BlockEntities
             InventorySize = WedgeCount;
             InitializeInventory();
         }
+        ~BESplitLog()
+        {
+            if (stoneSmackSound != null) stoneSmackSound.Dispose();
+            if (metalSmackSound != null) metalSmackSound.Dispose();
+        }
         public override void InitializeInventory()
         {
             base.InitializeInventory();
@@ -75,8 +82,35 @@ namespace AncientTools.BlockEntities
         {
             base.Initialize(api);
 
+            InitializeSounds();
             SetInventoryMaxSlotSize(1);
             UpdateMeshes();
+
+        }
+        public override void OnBlockRemoved()
+        {
+            base.OnBlockRemoved();
+
+            if(stoneSmackSound != null)
+            {
+                stoneSmackSound.Stop();
+                stoneSmackSound.Dispose();
+            }
+            if (metalSmackSound != null)
+            {
+                metalSmackSound.Stop();
+                metalSmackSound.Dispose();
+            }
+        }
+        public override void OnBlockUnloaded()
+        {
+            base.OnBlockUnloaded();
+
+            if (metalSmackSound != null)
+            {
+                metalSmackSound.Stop();
+                metalSmackSound.Dispose();
+            }
         }
         public override bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator)
         {
@@ -287,6 +321,19 @@ namespace AncientTools.BlockEntities
                 WedgeProps[index].WedgePosition.Y = WedgeProps[index].WedgePosition.Y - 0.2;
                 WedgeProps[index].WedgeState = EnumWedgeState.Smacked;
 
+                if (Api.Side == EnumAppSide.Client)
+                {
+                    if(WedgeSlot(index).Itemstack.Collectible.Attributes["material"].AsString().ToLower() == "stone")
+                    {
+                        stoneSmackSound.Start();
+                    }
+                    else
+                    {
+                        metalSmackSound.Start();
+                    }
+
+                }
+
                 WedgeSlot(index)?.Itemstack?.Collectible?.DamageItem(Api.World, byPlayer.Entity, WedgeSlot(index), 1);
 
                 ProcessPlayerInteraction(byPlayer);
@@ -310,6 +357,28 @@ namespace AncientTools.BlockEntities
             capi.Tesselator.TesselateShape("mortar", shape, out wholeMesh, capi.Tesselator.GetTextureSource(this.Block));
 
             return wholeMesh;
+        }
+        private void InitializeSounds()
+        {
+            if (Api.Side == EnumAppSide.Server)
+                return;
+
+            stoneSmackSound = ((IClientWorldAccessor)Api.World).LoadSound(new SoundParams()
+            {
+                Location = new AssetLocation("game", "sounds/block/loosestone4.ogg"),
+                ShouldLoop = false,
+                Position = Pos.ToVec3f().Add(0.5f, 0.25f, 0.5f),
+                DisposeOnFinish = false,
+                Volume = 1.0f
+            });
+            metalSmackSound = ((IClientWorldAccessor)Api.World).LoadSound(new SoundParams()
+            {
+                Location = new AssetLocation("game", "sounds/block/ingot.ogg"),
+                ShouldLoop = false,
+                Position = Pos.ToVec3f().Add(0.5f, 0.25f, 0.5f),
+                DisposeOnFinish = false,
+                Volume = 1.0f
+            });
         }
         private void ProcessPlayerInteraction(IPlayer byPlayer)
         {
@@ -367,7 +436,7 @@ namespace AncientTools.BlockEntities
 
             if(Api.Side == EnumAppSide.Server)
             {
-                ItemStack beamStack = new ItemStack(Api.World.GetItem(new AssetLocation("ancienttools", "beam-" + Block.LastCodePart(1))));
+                ItemStack beamStack = new ItemStack(Api.World.GetBlock(new AssetLocation("game", "supportbeam-" + Block.LastCodePart(1))));
 
                 if (totalCount == 4)
                 {

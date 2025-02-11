@@ -18,7 +18,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "game:leather-plain",
+			code: "game:leather-normal-plain",
 			quantity: 1
 		}
 	},
@@ -41,7 +41,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "game:leather-plain",
+			code: "game:leather-normal-plain",
 			quantity: 2
 		}
 	},
@@ -64,7 +64,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "game:leather-plain",
+			code: "game:leather-normal-plain",
 			quantity: 3
 		}
 	},
@@ -87,7 +87,99 @@
 		},
 		output: { 
 			type: "item", 
-			code: "game:leather-plain",
+			code: "game:leather-normal-plain",
+			quantity: 5
+		}
+	},
+	{
+		ingredientPattern: "KH",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"K": { 
+				type: "item",
+				code: "game:shears-*",
+				isTool: true,
+			},
+			"H": {
+				type: "item",
+				code: "game:hide-smoked-small"
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "game:leather-normal-plain",
+			quantity: 1
+		}
+	},
+	{
+		ingredientPattern: "KH",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"K": { 
+				type: "item",
+				code: "game:shears-*",
+				isTool: true,
+			},
+			"H": {
+				type: "item",
+				code: "game:hide-smoked-medium"
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "game:leather-normal-plain",
+			quantity: 2
+		}
+	},
+	{
+		ingredientPattern: "KH",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"K": { 
+				type: "item",
+				code: "game:shears-*",
+				isTool: true,
+			},
+			"H": {
+				type: "item",
+				code: "game:hide-smoked-large"
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "game:leather-normal-plain",
+			quantity: 3
+		}
+	},
+	{
+		ingredientPattern: "KH",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"K": { 
+				type: "item",
+				code: "game:shears-*",
+				isTool: true,
+			},
+			"H": {
+				type: "item",
+				code: "game:hide-smoked-huge"
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "game:leather-normal-plain",
 			quantity: 5
 		}
 	}

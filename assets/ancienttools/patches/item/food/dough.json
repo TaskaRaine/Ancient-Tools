@@ -80,6 +80,14 @@
 		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
+		"op": "replace",
+		"path": "/2/enabled",
+		"value": "true",
+		"file": "recipes/grid/food/barkdough",
+		"side": "Server",
+		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
+	},
+	{
 		"op": "move",
 		"frompath": "/attributes/nutritionPropsWhenInMealByType/*",
 		"path": "/temp",

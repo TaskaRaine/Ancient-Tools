@@ -1,0 +1,81 @@
+﻿[
+	{
+		"file": "game:entities/land/bear.json",
+		"op": "addmerge",
+		"path": "/server/behaviors/6/dropsByType",
+		"value": {		
+			"*-black": [
+				{
+					"type": "item",
+					"code": "ancienttools:brain",
+					"quantity": { "avg": 0.45, "var": 0 }
+				}
+			]
+		},
+		"dependsOn": [{ "modid": "hideandfabric" }],
+	},
+	{
+		"file": "game:entities/land/bear.json",
+		"op": "addmerge",
+		"path": "/server/behaviors/6/dropsByType",
+		"value": {		
+			"*-brown": [
+				{
+					"type": "item",
+					"code": "ancienttools:brain",
+					"quantity": { "avg": 0.45, "var": 0 }
+				}
+			]
+		},
+		"dependsOn": [{ "modid": "hideandfabric" }],
+		"side": "Server"
+	},
+	{
+		"file": "game:entities/land/bear.json",
+		"op": "addmerge",
+		"path": "/server/behaviors/6/dropsByType",
+		"value": {		
+			"*-sun": [
+				{
+					"type": "item",
+					"code": "ancienttools:brain",
+					"quantity": { "avg": 0.45, "var": 0 }
+				}
+			]
+		},
+		"dependsOn": [{ "modid": "hideandfabric" }],
+		"side": "Server"
+	},
+	{
+		"file": "game:entities/land/bear.json",
+		"op": "addmerge",
+		"path": "/server/behaviors/6/dropsByType",
+		"value": {		
+			"*-panda": [
+				{
+					"type": "item",
+					"code": "ancienttools:brain",
+					"quantity": { "avg": 0.45, "var": 0 }
+				}
+			]
+		},
+		"dependsOn": [{ "modid": "hideandfabric" }],				
+		"side": "Server"
+	},
+	{
+		"file": "game:entities/land/bear.json",
+		"op": "addmerge",
+		"path": "/server/behaviors/6/dropsByType",
+		"value": {		
+			"*-polar": [
+				{
+					"type": "item",
+					"code": "ancienttools:brain",
+					"quantity": { "avg": 0.45, "var": 0 }
+				}
+			]
+		},
+		"dependsOn": [{ "modid": "hideandfabric" }],
+		"side": "Server"
+	}
+]

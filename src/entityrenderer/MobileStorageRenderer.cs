@@ -41,17 +41,17 @@ namespace AncientTools.EntityRenderers
                 {
                     for(int i = 0; i < InventoryShapes.Length; i++)
                     {
-                        if (InventoryShapes[i].Textures.ContainsKey(textureCode))
+                        if (this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Block.Textures.ContainsKey(this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Attributes?.GetString("type") + "-" + textureCode))
                         {
-                            compositeTex = new CompositeTexture(InventoryShapes[i].Textures[textureCode]);
+                            compositeTex = new CompositeTexture(this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Block.Textures[this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Attributes?.GetString("type") + "-" + textureCode].Base);
                         }
-                        else if(this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Block.Textures.ContainsKey(textureCode))
+                        else if (this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Block.Textures.ContainsKey(textureCode))
                         {
                             compositeTex = new CompositeTexture(this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Block.Textures[textureCode].Base);
                         }
-                        else if (this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Block.Textures.ContainsKey(this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Attributes?.GetString("type") + "-" + textureCode))
+                        else if (InventoryShapes[i].Textures.ContainsKey(textureCode))
                         {
-                            compositeTex = new CompositeTexture(this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Block.Textures[this.MobileStorageEntity.MobileStorageInventory[0].Itemstack.Attributes?.GetString("type") + "-" + textureCode].Base);
+                            compositeTex = new CompositeTexture(InventoryShapes[i].Textures[textureCode]);
                         }
                     }
 
