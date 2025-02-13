@@ -66,6 +66,7 @@
     <None Remove="assets\ancienttools\patches\item\resources\glue.json" />
     <None Remove="assets\ancienttools\patches\item\resources\powderedcharcoal.json" />
     <None Remove="assets\ancienttools\patches\item\tool\hammer.json" />
+    <None Remove="assets\ancienttools\patches\recipes\brainingsolution.json" />
     <None Remove="assets\ancienttools\recipes\grid\block\tobiaslocator.json" />
     <None Remove="assets\ancienttools\recipes\grid\compatibility\wildcrafttree\beam.json" />
     <None Remove="assets\ancienttools\recipes\grid\compatibility\wildcrafttree\cart.json" />

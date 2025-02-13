@@ -178,7 +178,7 @@
 		"value": {
 			"*-brained-*": {
 			meltingPoint: 200,
-			meltingDuration: 120,
+			meltingDuration: 1200,
 			smeltedRatio: 1,
 			smeltingType: "cook",
 			smeltedStack: { type: "item", code: "game:hide-smoked-{size}" },
@@ -187,5 +187,13 @@
 		},
 		"file": "game:itemtypes/resource/hide",
 		"side": "Server"
-	}
+	},
+	{
+		"op": "replace",
+		"path": "/combustiblePropsByType/*-brained-*/meltingDuration",
+		"value": 1200,
+		"file": "game:itemtypes/resource/hide",
+		"side": "Server",
+		"condition": { "when": "BrainedHideSmokingSeconds", "useValue": true }
+	},
 ]

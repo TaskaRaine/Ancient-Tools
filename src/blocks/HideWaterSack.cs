@@ -49,12 +49,12 @@ namespace AncientTools.Blocks
         {
             base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
 
-            if (this.FirstCodePart(1) == "raw")
+            if (this.FirstCodePart(1) == "raw"|| this.FirstCodePart(1) == "salted")
             {
                 if (inSlot.Itemstack.Attributes.HasAttribute("timeremaining"))
                     dsc.Append("\n" + Lang.Get("ancienttools:blockdesc-hidewatersack-soak-x-hours-when-placed", (int)(inSlot.Itemstack.Attributes.GetDouble("timeremaining") + 0.5)));
                 else
-                    dsc.Append("\n" + Lang.Get("ancienttools:blockdesc-hidewatersack-soak-x-hours-when-placed", api.World.Config.GetFloat("WaterSackConversionHours", 24.0f)));
+                    dsc.Append("\n" + Lang.Get("ancienttools:blockdesc-hidewatersack-soak-x-hours-when-placed", api.World.Config.GetFloat("WaterSackConversionHours", 48.0f)));
                 }
             }
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
@@ -107,7 +107,7 @@ namespace AncientTools.Blocks
 
             if (world.BlockAccessor.GetBlockEntity(blockPos) is BEHideWaterSack waterSackEntity)
             {
-                waterSackEntity.SetTimeRemaining(byItemStack.Attributes.GetDouble("timeremaining", api.World.Config.GetDouble("WaterSackConversionHours", 24.0)));
+                waterSackEntity.SetTimeRemaining(byItemStack.Attributes.GetDouble("timeremaining", api.World.Config.GetDouble("WaterSackConversionHours", 48.0)));
             }
         }
     }

@@ -16,8 +16,10 @@ namespace AncientTools.Config
         public bool DisableVanillaGlue = false;
         public bool AllowCarvingForResin = true;
         public float SkinningTime = 4.0f;
-        public float WaterSackConversionHours = 24.0f;
-        public float BrainedHideSealHours = 48.0f;
+        public float WaterSackConversionHours = 48.0f;
+        public int BrainsPerBrainingSolutionCraft = 1;
+        public float BrainedHideSealHours = 96.0f;
+        public float BrainedHideSmokingSeconds = 1200.0f;
         public bool InWorldBeamCraftingOnly = true;
         public bool AdzeStrippingOnly = true;
 
@@ -39,7 +41,9 @@ namespace AncientTools.Config
             AllowCarvingForResin = previousConfig.AllowCarvingForResin;
             SkinningTime = previousConfig.SkinningTime;
             WaterSackConversionHours = previousConfig.WaterSackConversionHours;
+            BrainsPerBrainingSolutionCraft = previousConfig.BrainsPerBrainingSolutionCraft;
             BrainedHideSealHours = previousConfig.BrainedHideSealHours;
+            BrainedHideSmokingSeconds = previousConfig.BrainedHideSmokingSeconds;
             InWorldBeamCraftingOnly = previousConfig.InWorldBeamCraftingOnly;
             AdzeStrippingOnly = previousConfig.AdzeStrippingOnly;
         }

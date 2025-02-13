@@ -1,0 +1,10 @@
+﻿[
+    {
+		"op": "replace",
+		"path": "/ingredients/1/quantity",
+		"value": 1,
+		"file": "ancienttools:recipes/barrel/brainingsolution",
+		"side": "Server",
+		"condition": { "when": "BrainsPerBrainingSolutionCraft", "useValue": true }
+	},
+]

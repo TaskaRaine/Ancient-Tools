@@ -9,6 +9,10 @@
  Hello and welcome to the GitHub repository for Ancient Tools. This project is a mod for the survival adventure game Vintage Story which adds an assortment of immersive, interactive tools to the game.
 
 ### Releases
+#### Vintage Story 1.20.0+
+[Version 1.5.20](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.20/AncientTools_V1.5.20.zip)
+
+[Version 1.5.19](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.19/AncientTools_V1.5.19.zip)
 
 #### Vintage Story 1.19.5+
 [Version 1.5.18](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.18/AncientTools_V1.5.18.zip)
@@ -106,7 +110,71 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+
+#### Version 1.5.20
+Hide sacks were broken with the release of 1.5.19. This version fixes the silliness that I had done to cause that.
+
+The whole brain tanning process has been extended to better match the vanilla method. In game, soaking hides will take 48 hours, braining hides will take 92 hours, and smoking hides takes an additional 10 hours in a firepit.
+
+Added two new config options to allow players to adjust the timing of the brain tanning process. `BrainsPerBrainingSolutionCraft` allows you to choose how many brains are needed for a 10mL batch of solution, and `BrainedHideSmokingSeconds` allows you to determine how many real-world seconds it takes to smoke the hides. The default 1200 is 20 minutes.
+
+Fixed a compatibility issue that prevented the hide sacks from being picked up with CarryOn.
+
 #### Version 1.5.19 
+
+Wood Splitting
+Similar to vanilla support beams, Ancient Tools beams can be used to create the rickety translocator
+
+Sound effects have been added for when the player smacks wedges into debarked logs. One sound for stone wedges, another for metal wedges.
+
+When splitting logs, vanilla beams will now be the default drop. They have far more use in the game. Ancient Tools beams can still be made for use as ground storage.
+
+
+Mortar and Pestle
+The codes for powdered charcoal, borax, sylvite, sulfur had been changed in VS 1.20.0. The patches relating to the mortar have been adjusted for this. 
+
+The seashell files had been moved in VS 1.20.0. The patch relating to the mortar has been adjusted for this.
+
+Crushed iron and calcined flint are new grindables in Vintage Story 1.20.0. Patches have been made for these for the mortar.
+
+
+Pitch
+A nasty Harmony startup crash has been resolved related to a function no longer existing that Ancient Tools was modifying. Ancient Tools now accesses 'BEBehaviorTemperatureSensitive' to run the firepit fireproof fuel check to allow firepits to remain lit during rainfall if pitch is used as the fuel source.
+
+As a result of the powdered charcoal code change, same as above, the recipe for pitch pots needed tweaking.
+
+
+Brain Tanning
+Plain leather has had its code changed, therefore the smoked leather recipe needed tweaking.
+
+Shears can now be used to cut smoked leather into plain leather. Why not?
+
+Vintage Story 1.20.0 now lets hides rot. The stretching frame needed to be adjusted slightly to allow for this behaviour. When a hide rots on the frame, the rot will pop off and drop on the floor.
+
+Salted hides, a new item in VS 1.20.0, can now be placed on the stretching frames. Water sacks were also given a salted version.
+
+New animals were added to the base game. Brains SHOULD drop for all the ones that should be expected to(the adults, maybe larger baby animals) without my need to change patches. A patch for brain drops have been added to the tamed elk, however.
+
+A compatibility patch for Hide and Fabric has been added to allow all bears to drop brains. Hide and Fabric has not yet been updated to 1.20.0
+
+
+Bark Bread
+Jugs can now be used to craft bark dough
+
+
+Carts
+All of the new storage vessels have been given patches that enable them to be placed on the cart.
+
+Aged variants of the normal, golden, and owl chest were added to the game and now these have patches to be used on the cart as well. Also fixed a crash related to this, hopefully doesn't cause any futher issues.
+
+The reed basket has had its file moved. The patch for it has been updated to address this.
+
+
+Misc
+Ancient Tools blocks that use the Display Inventory class as a basis should now be more robust and resilient to texture atlas/texture not found crashing. Mortar, Stretching Frame, Curing Rack, basically anything that shows what it contains, except the carts. These blocks should now show the '?' block texture instead of crashing out when something goes wrong. 
+
+The OLD module for Wildcraft has had its content removed. The NEW Wildcraft stuff should now have compatibility, unless much has changed semi-recently. Thanks for Tarot for doing this, a while back!
+
 Removed storage flags for salted meat and brains- it was preventing them from being placed in cooking pots for making meals.
 
 #### Version 1.5.18

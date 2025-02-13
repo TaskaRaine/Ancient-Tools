@@ -2,16 +2,16 @@
 	code: "hidewatersack",
 	class: "BlockHideWaterSack",
 	entityClassByType: {
-		"@hidewatersack-(raw|salted)-*": "BEHideWaterSack"
+		"@hidewatersack-(raw|salted)-(small|medium|large|huge)": "BEHideWaterSack"
 	},
 	behaviorsByType: {
-		"@hidewatersack-(raw|salted|soaked)-*": [
+		"*": [
 			{ name: "UnstableFalling" },
 		]
 	},
 	creativeinventory: { "general": ["*"], "ancienttools": ["*"] },
 	attributesByType: {
-		"@hidewatersack-(raw|salted|soaked)-*": {
+		"*": {
 			handbook: {
 				groupBy: ["hidewatersack-{hide}-*"]
 			},
