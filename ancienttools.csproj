@@ -47,58 +47,11 @@
     <Content Include="assets\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Remove="assets\ancienttools\patches\block\torch.json" />
-    <None Remove="assets\ancienttools\patches\compatibility\hideandfabric\bear.json" />
-    <None Remove="assets\ancienttools\patches\compatibility\wildcrafttree\bark.json" />
-    <None Remove="assets\ancienttools\patches\compatibility\wildcrafttree\barkbasket.json" />
-    <None Remove="assets\ancienttools\patches\compatibility\wildcrafttree\beam.json" />
-    <None Remove="assets\ancienttools\patches\compatibility\wildcrafttree\curingrack.json" />
-    <None Remove="assets\ancienttools\patches\compatibility\wildcrafttree\debarkedlog.json" />
-    <None Remove="assets\ancienttools\patches\compatibility\wildcrafttree\debarkednarrow.json" />
-    <None Remove="assets\ancienttools\patches\compatibility\wildcrafttree\directionalresin.json" />
-    <None Remove="assets\ancienttools\patches\compatibility\wildcrafttree\log.json" />
-    <None Remove="assets\ancienttools\patches\compatibility\wildcrafttree\stationarybasket.json" />
-    <None Remove="assets\ancienttools\patches\compatibility\wildcrafttree\stretchingframe.json" />
-    <None Remove="assets\ancienttools\patches\compatibility\wildcrafttree\wheel.json" />
-    <None Remove="assets\ancienttools\patches\entity\land\tamedelk.json" />
-    <None Remove="assets\ancienttools\patches\item\resources\calcinedflint.json" />
-    <None Remove="assets\ancienttools\patches\item\resources\crushediron.json" />
-    <None Remove="assets\ancienttools\patches\item\resources\glue.json" />
-    <None Remove="assets\ancienttools\patches\item\resources\powderedcharcoal.json" />
-    <None Remove="assets\ancienttools\patches\item\tool\hammer.json" />
-    <None Remove="assets\ancienttools\patches\recipes\brainingsolution.json" />
-    <None Remove="assets\ancienttools\recipes\grid\block\tobiaslocator.json" />
-    <None Remove="assets\ancienttools\recipes\grid\compatibility\wildcrafttree\beam.json" />
-    <None Remove="assets\ancienttools\recipes\grid\compatibility\wildcrafttree\cart.json" />
-    <None Remove="assets\ancienttools\recipes\grid\compatibility\wildcrafttree\curingrack.json" />
-    <None Remove="assets\ancienttools\recipes\grid\compatibility\wildcrafttree\stretchingframe.json" />
-    <None Remove="assets\ancienttools\recipes\grid\compatibility\wildcrafttree\wheel.json" />
-    <None Remove="assets\ancienttools\shapes\block\mortar\resourceshapes\resource_game_calcined_flint.json" />
-    <None Remove="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\meshhide\brainedhide_meshhide.json" />
-    <None Remove="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\meshhide\oiledhide_meshhide.json" />
-    <None Remove="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\meshhide\pelthide_meshhide.json" />
-    <None Remove="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\meshhide\preparedhide_meshhide.json" />
-    <None Remove="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\meshhide\rawhide_meshhide.json" />
-    <None Remove="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\meshhide\saltedhide_meshhide.json" />
-    <None Remove="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\meshhide\scrapedhide_meshhide.json" />
-    <None Remove="assets\ancienttools\shapes\block\stretchingframe\resourceshapes\meshhide\smokedhide_meshhide.json" />
     <Content Include="modinfo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="modicon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="assets\ancienttools\patches\compatibility\floralzonescaperegion\" />
-    <Folder Include="assets\ancienttools\patches\compatibility\floralzonescaribbeanregion\" />
-    <Folder Include="assets\ancienttools\patches\compatibility\floralzonescentralaustralianregion\" />
-    <Folder Include="assets\ancienttools\patches\compatibility\floralzoneseastasiaticregion\" />
-    <Folder Include="assets\ancienttools\patches\compatibility\saltandsands\" />
-    <Folder Include="assets\ancienttools\recipes\grid\compatibility\floralzoneseastasiaticregion\" />
-    <Folder Include="assets\ancienttools\recipes\grid\compatibility\floralzonescentralaustralianregion\" />
-    <Folder Include="assets\ancienttools\recipes\grid\compatibility\floralzonescaribbeanregion\" />
-    <Folder Include="assets\ancienttools\recipes\grid\compatibility\floralzonescaperegion\" />
-    <Folder Include="assets\ancienttools\textures\block\wood\" />
   </ItemGroup>
 </Project>

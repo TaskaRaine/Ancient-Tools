@@ -71,4 +71,4 @@ In the onCuringRackProps object, add another object called 'conversionProps'.
 	Converted Itemstack Type: Is the converted thing a block or an item?
 	`convertedItemstackType: "item"`
 
-5. Have a look at the Ancient Tools files for examples. Specifically, the salted meat for the use of conversionProps or the Wildcraft patch to clippings for the manual translations. There are likely issues with some things here, too... I've only tested for things that I have needed thusfar.
+5. Have a look at the Ancient Tools files for examples.

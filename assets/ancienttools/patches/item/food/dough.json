@@ -55,15 +55,6 @@
 		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
 	{
-		"op": "addeach",
-		"path": "/creativeinventory/ancienttools/-",
-		"value": ["*-spruce"],
-		"file": "game:itemtypes/food/dough",
-		"dependsOn": [{ "modid": "wildcrafttrees" }],
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
 		"op": "replace",
 		"path": "/0/enabled",
 		"value": "true",

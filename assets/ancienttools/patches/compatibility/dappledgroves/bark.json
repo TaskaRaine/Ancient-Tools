@@ -31,27 +31,6 @@
 	},
 	{
 		"op": "add",
-		"path": "/attributes/salvePropertiesByType/@bark-(spruce|alder|beech|douglasfir|blackpoplar|pyramidalpoplar|cedar|willow)-(soaked)",
-		"value": {
-			isMedicinalBark: true,
-			langCode: "ancienttools:blockhelp-insert-{bark}bark"
-		},
-		"file": "indappledgroves:itemtypes/resources/bark",
-		"dependsOn": [{"modid": "indappledgroves"}, {"modid": "wildcrafttrees"}],
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/attributes/salvePropertiesByType/@bark-(spruce|alder|beech|douglasfir|blackpoplar|pyramidalpoplar|cedar|willow)-(dry)",
-		"value": {
-			langCode: "ancienttools:blockhelp-barkdriedout"
-		},
-		"file": "indappledgroves:itemtypes/resources/bark",
-		"dependsOn": [{"modid": "indappledgroves"}, {"modid": "wildcrafttrees"}],
-		"side": "Server"
-	},
-	{
-		"op": "add",
 		"path": "/attributes/handbookByType/@bark-(spruce|alder|beech|douglasfir|blackpoplar|pyramidalpoplar|cedar|willow)-(soaked)",
 		"value": {
 			extraSections: 
@@ -87,19 +66,6 @@
 	},
 	{
 		"op": "add",
-		"path": "/attributes/mortarPropertiesByType/@bark-(spruce)-(dry)",
-		"value": {
-			shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_ancienttools_bark_pine",
-			texturePaths: [{ code: "pine", path: "game:block/wood/bark/{bark}" }],
-			groundStack: { type: "item", code: "game:flour-{bark}" },
-			resultQuantity: 1
-		},
-		"file": "indappledgroves:itemtypes/resources/bark",
-		"dependsOn": [{"modid": "indappledgroves"}, {"modid": "wildcrafttrees"}],
-		"side": "Server"
-	},
-	{
-		"op": "add",
 		"path": "/grindingPropsByType",
 		"value": {
 			"@bark-(birch|pine|maple)-dry": {
@@ -108,16 +74,6 @@
 		},
 		"file": "indappledgroves:itemtypes/resources/bark",
 		"dependsOn": [{"modid": "indappledgroves"}],
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/grindingPropsByType/@bark-(spruce)-dry",
-		"value": {
-			grindedStack: { type: "item", code: "game:flour-{bark}" }
-		},
-		"file": "indappledgroves:itemtypes/resources/bark",
-		"dependsOn": [{"modid": "indappledgroves"}, {"modid": "wildcrafttrees"}],
 		"side": "Server"
 	},
 	{

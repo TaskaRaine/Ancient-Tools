@@ -12,15 +12,6 @@
     {
         "op": "add",
         "path": "/behaviorsByType/*-grown-*/-",
-        "value": { "name": "ConvertToResinLog", properties: { type: "wood", variants: ["pine", "acacia"] } },
-        "file": "game:blocktypes/wood/woodtyped/log",
-        "side": "Server",
-        "condition": { "when": "AllowCarvingForResin", "isValue": "true" },
-        "dependsOn": [{ "modid": "wildcrafttrees", "invert": true }],
-    },
-    {
-        "op": "add",
-        "path": "/behaviorsByType/*-grown-*/-",
         "value": { "name": "SplitLog", 
             properties: { 
 			wedgebox1: { x1: 0.0, y1: 1.0, z1: 0.0, x2: 1.0, y2: 1.1, z2: 1.0 },
