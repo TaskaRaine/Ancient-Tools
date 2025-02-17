@@ -1,21 +1,63 @@
 ﻿[
 	{
-		"op": "add",
-		"path": "/server/behaviors/6/quantitySlots",
+		"op": "addmerge",
+		"path": "/behaviorConfigs",
+		"value": {},
+		"file": "game:entities/land/raccoon-male",
+		"side": "Server"
+	},
+	{
+		"op": "addmerge",
+		"path": "/behaviorConfigs",
+		"value": {},
+		"file": "game:entities/land/raccoon-female",
+		"side": "Server"
+	},
+	{
+		"op": "addmerge",
+		"path": "/behaviorConfigs/harvestable",
+		"value": {},
+		"file": "game:entities/land/raccoon-male",
+		"side": "Server"
+	},
+	{
+		"op": "addmerge",
+		"path": "/behaviorConfigs/harvestable",
+		"value": {},
+		"file": "game:entities/land/raccoon-female",
+		"side": "Server"
+	},
+	{
+		"op": "addmerge",
+		"path": "/behaviorConfigs/harvestable/drops",
+		"value": [],
+		"file": "game:entities/land/raccoon-male",
+		"side": "Server"
+	},
+	{
+		"op": "addmerge",
+		"path": "/behaviorConfigs/harvestable/drops",
+		"value": [],
+		"file": "game:entities/land/raccoon-female",
+		"side": "Server"
+	},
+	{
+		"op": "addmerge",
+		"path": "/behaviorConfigs/harvestable/quantitySlots",
 		"value": 8,
 		"file": "game:entities/land/raccoon-male",
 		"side": "Server"
 	},
 	{
-		"op": "add",
-		"path": "/server/behaviors/6/quantitySlots",
+		"op": "addmerge",
+		"path": "/behaviorConfigs/harvestable/quantitySlots",
 		"value": 8,
 		"file": "game:entities/land/raccoon-female",
 		"side": "Server"
 	},
 	{
 		"op": "add",
-		"path": "/server/behaviors/6/drops/-",
+		"path": "/behaviorConfigs/harvestable/drops/-",
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
@@ -26,7 +68,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/server/behaviors/6/drops/-",
+		"path": "/behaviorConfigs/harvestable/drops/-",
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
@@ -34,19 +76,5 @@
 		},
 		"file": "game:entities/land/raccoon-female",
 		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/client/behaviors/4/quantitySlots",
-		"value": 8,
-		"file": "game:entities/land/raccoon-male",
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/client/behaviors/4/quantitySlots",
-		"value": 8,
-		"file": "game:entities/land/raccoon-female",
-		"side": "Server"
-	},
+	}
 ]

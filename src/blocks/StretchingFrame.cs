@@ -142,6 +142,7 @@ namespace AncientTools.Blocks
                     if (!stretchingFrameEntity.HideSlot.Empty)
                         if (stretchingFrameEntity.HideSlot.Itemstack.Item.FirstCodePart(1) == "soaked")
                         {
+                            byPlayer.Entity.StartAnimation("knifecut");
                             return stretchingFrameEntity.BeginPrepareHide(byPlayer);
                         }
                 }
@@ -183,6 +184,8 @@ namespace AncientTools.Blocks
 
             if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BEStretchingFrame stretchingFrameEntity)
             {
+                byPlayer.Entity.StopAnimation("knifecut");
+
                 stretchingFrameEntity.Reset();
             }
         }
@@ -193,6 +196,8 @@ namespace AncientTools.Blocks
 
             if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BEStretchingFrame stretchingFrameEntity)
             {
+                byPlayer.Entity.StopAnimation("knifecut");
+
                 stretchingFrameEntity.Reset();
             }
 

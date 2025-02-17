@@ -202,16 +202,12 @@ namespace AncientTools.BlockEntities
             if (skinningStartTime == -1)
                 return false;
 
-            if (Api.Side == EnumAppSide.Client)
-                AnimateSkinning(player, (Api.World.ElapsedMilliseconds - skinningStartTime) * 0.001f);
-            else
+            if (Api.World.ElapsedMilliseconds > skinningStartTime + skinningTime * 1000)
             {
-                if (Api.World.ElapsedMilliseconds > skinningStartTime + skinningTime * 1000)
-                {
+                if(Api.Side == EnumAppSide.Server)
                     FinishPreparing(player);
 
-                    return false;
-                }
+                return false;
             }
 
             return true;
@@ -261,26 +257,6 @@ namespace AncientTools.BlockEntities
                     return new Vec3f(0.0f, GameMath.PI + GameMath.PIHALF, 0.0f);
                 default: return new Vec3f(0.0f, 0.0f, 0.0f);
 
-            }
-        }
-        private void AnimateSkinning(IPlayer player, float secondsUsed)
-        {
-            if (Api.World.Side == EnumAppSide.Client)
-            {
-                ModelTransform tf = new ModelTransform();
-                tf.EnsureDefaultValues();
-
-                tf.Translation.Set(0, 0, -Math.Min(0.6f, secondsUsed * 2));
-                tf.Rotation.Y = Math.Min(20, secondsUsed * 90 * 2f);
-
-
-                if (secondsUsed > 0.4f)
-                {
-                    tf.Translation.X += (float)Math.Cos(secondsUsed * 15) / 10;
-                    tf.Translation.Z += (float)Math.Sin(secondsUsed * 5) / 30;
-                }
-
-                player.Entity.Controls.UsingHeldItemTransformBefore = tf;
             }
         }
     }

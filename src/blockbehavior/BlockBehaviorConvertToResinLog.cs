@@ -5,6 +5,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
+using Vintagestory.GameContent;
 
 namespace AncientTools.BlockBehaviors
 {
@@ -90,6 +91,10 @@ namespace AncientTools.BlockBehaviors
                         {
                             if (!FindResin(world, blockSel.Position))
                             {
+
+                                if (world.Api.Side == EnumAppSide.Client)
+                                    byPlayer.Entity.StartAnimation("knifecut");
+
                                 world.PlaySoundAt(new AssetLocation("ancienttools", "sounds/block/knifecarve"), byPlayer.Entity.Pos.X, byPlayer.Entity.Pos.Y, byPlayer.Entity.Pos.Z, byPlayer, false);
                                 handling = EnumHandling.PreventSubsequent;
 
@@ -107,10 +112,32 @@ namespace AncientTools.BlockBehaviors
         public override bool OnBlockInteractStep(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
         {
             if (blockSel == null || byPlayer.InventoryManager.ActiveTool != EnumTool.Knife || beginScrape == false)
+            {
                 return false;
+            }
 
-            AnimateKnife(byPlayer, secondsUsed);
+            //-- Without this early stop, the animation doesn't get stopped in time before the block is changed. Hopefully this is fine for servers. --//
+            if (secondsUsed >= 0.9)
+            {
+                byPlayer.Entity.StopAnimation("knifecut");
+                byPlayer.Entity.AnimManager.StopAnimation("knifecut");
+            }
 
+            if (secondsUsed > 1)
+            { 
+                //-- These further checks attempt to make sure that the animation is off before the event is handled. --//
+                if(!byPlayer.Entity.SelfFpAnimManager.ActiveAnimationsByAnimCode.ContainsKey("knifecut-fp") && !byPlayer.Entity.SelfFpAnimManager.ActiveAnimationsByAnimCode.ContainsKey("knifecut"))
+                {
+                    handling = EnumHandling.Handled;
+                    return false;
+                }
+            }
+
+            handling = EnumHandling.PreventSubsequent;
+            return true;
+        }
+        public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
+        {
             if(secondsUsed > 1)
             {
                 string woodType = block.FirstCodePart(2);
@@ -123,10 +150,23 @@ namespace AncientTools.BlockBehaviors
                 world.BlockAccessor.MarkChunkDecorsModified(blockSel.Position);
                 world.BlockAccessor.MarkBlockDirty(blockSel.Position);
                 world.BlockAccessor.MarkBlockEntityDirty(blockSel.Position);
+
+                if (world.Api.Side == EnumAppSide.Client)
+                    byPlayer.Entity.StopAnimation("knifecut");
             }
 
-            handling = EnumHandling.PreventSubsequent;
-            return true;
+            handling = EnumHandling.Handled;
+
+            base.OnBlockInteractStop(secondsUsed, world, byPlayer, blockSel, ref handling);
+        }
+        public override bool OnBlockInteractCancel(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
+        {
+            byPlayer.Entity.StopAnimation("knifecut");
+            beginScrape = false;
+
+            handling = EnumHandling.Handled;
+
+            return base.OnBlockInteractCancel(secondsUsed, world, byPlayer, blockSel, ref handling);
         }
         //-- Most code borrowed from vanilla axe felling logic --//
         private bool FindResin(IWorldAccessor world, BlockPos startPos)
@@ -201,23 +241,6 @@ namespace AncientTools.BlockBehaviors
             }
 
             return "north";
-        }
-        private void AnimateKnife(IPlayer player, float secondsUsed)
-        {
-            ModelTransform tf = new ModelTransform();
-            tf.EnsureDefaultValues();
-
-            tf.Translation.Set(0, 0, -Math.Min(0.6f, secondsUsed * 2));
-            tf.Rotation.Y = Math.Min(20, secondsUsed * 90 * 2f);
-
-
-            if (secondsUsed > 0.4f)
-            {
-                tf.Translation.X += (float)Math.Cos(secondsUsed * 15) / 10;
-                tf.Translation.Z += (float)Math.Sin(secondsUsed * 5) / 30;
-            }
-
-            player.Entity.Controls.UsingHeldItemTransformBefore = tf;
         }
     }
 }

@@ -10,6 +10,10 @@
 
 ### Releases
 #### Vintage Story 1.20.0+
+[Version 1.5.22](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.22/AncientTools_V1.5.22.zip)
+
+[Version 1.5.21](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.21/AncientTools_V1.5.21.zip)
+
 [Version 1.5.20](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.20/AncientTools_V1.5.20.zip)
 
 [Version 1.5.19](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.19/AncientTools_V1.5.19.zip)
@@ -110,6 +114,16 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+
+#### Version 1.5.22
+Brain drops should now work again. All patches made to vanilla creature drops now do it through behaviorConfigs, which are new in VS 1.20(I think?). This no longer requires an index to be accessed, which should result in a lower chance of future problems.
+
+Somehow it seems that the patch to score acacia and pine trees got lost. This functionality has now been restored.
+
+Both the stretching frame scraping and pine/acacia tree scoring have been given animations for better immersion.
+
+#### Version 1.5.21
+Removed Wildcraft Trees compatibility. It seemed to be causing major issues for people.
 
 #### Version 1.5.20
 Hide sacks were broken with the release of 1.5.19. This version fixes the silliness that I had done to cause that.

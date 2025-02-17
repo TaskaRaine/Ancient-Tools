@@ -137,18 +137,8 @@ namespace AncientTools.Blocks
 
             if (byEntity.World is IClientWorldAccessor)
             {
-                float speed = 1.5f;
                 IPlayer byPlayer = null;
                 if (byEntity is EntityPlayer) byPlayer = byEntity.World.PlayerByUid(((EntityPlayer)byEntity).PlayerUID);
-
-                ModelTransform tf = new ModelTransform();
-                tf.EnsureDefaultValues();
-
-                tf.Origin.Set(0.5f, 0.2f, 0.5f);
-                tf.Translation.Set(0, 0, -Math.Min(0.25f, speed * secondsUsed / 4));
-                tf.Scale = 1f + Math.Min(0.25f, speed * secondsUsed / 4);
-                tf.Rotation.X = Math.Max(-110, -secondsUsed * 90 * speed);
-                byEntity.Controls.UsingHeldItemTransformBefore = tf;
 
                 Vec3d pos = blockSel.Position.ToVec3d();
                 pos.X += 0.5;
