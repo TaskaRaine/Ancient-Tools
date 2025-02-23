@@ -114,6 +114,11 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.5.24
+Provided an attribute on the SplitLog that allows other mods that add wood variants to supply drops for the wedge smacking process. This does nothing different on its own. Floral Zones mods will be getting updates to patch this in and solve existing crashes.
+
+#### Version 1.5.23
+Fixed an issue with the split logs that caused game sounds to disappear. Thanks to Agzil and Oscar for the detailed context of the issue, it helped immensely.
 
 #### Version 1.5.22
 Brain drops should now work again. All patches made to vanilla creature drops now do it through behaviorConfigs, which are new in VS 1.20(I think?). This no longer requires an index to be accessed, which should result in a lower chance of future problems.

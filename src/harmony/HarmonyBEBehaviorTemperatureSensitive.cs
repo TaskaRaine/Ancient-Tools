@@ -28,11 +28,9 @@ namespace AncientTools
                     }
 
                     BlockEntityBehaviorFireproofFuel fireproofFuelBehavior = __instance.Blockentity.GetBehavior<BlockEntityBehaviorFireproofFuel>();
-                    if(fireproofFuelBehavior != null)
-                    {
-                        if (fireproofFuelBehavior.GetFedFireproofFuel() == false)
-                            return true;
-                    }
+
+                    if (fireproofFuelBehavior == null || fireproofFuelBehavior.GetFedFireproofFuel() == false)
+                        return true;
 
                     bool rainCheck =
                         __instance.Api.Side == EnumAppSide.Server

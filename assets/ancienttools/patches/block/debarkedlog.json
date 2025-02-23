@@ -67,5 +67,14 @@
 		},
 		"file": "game:blocktypes/wood/woodtyped/log-debarked",
 		"side": "Server",
-	}
+	},
+	{
+		"op": "addmerge",
+		"path": "/attributes/splitLogDropCodeByType",
+		"value": { 
+			"@debarkedlog-(aged|birch|oak|maple|pine|acacia|kapok|baldcypress|larch|redwood|ebony|walnut|purpleheart)-(ud)": "game:supportbeam-{wood}"
+		},
+		"file": "game:blocktypes/wood/woodtyped/log-debarked",
+		"side": "Server",
+	},
 ]
