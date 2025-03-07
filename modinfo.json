@@ -8,6 +8,6 @@
   "description": "A collection of useful tools from ancient times.",
   "version": "1.5.24",
   "dependencies": {
-    "game": "1.20.0",
+    "game": "1.20.0"
   }
 }
