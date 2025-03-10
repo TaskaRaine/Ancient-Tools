@@ -1,0 +1,47 @@
+﻿{
+    "code": "shaduf",
+    "classByType": {
+        "*-bottom-*": "ATShadufBase"
+    },
+    creativeinventory: { "general": ["*-bottom-south"], "ancienttools": ["*-bottom-south"] },
+    "behaviors": [
+        { "name": "HorizontalOrientable", "properties": { "dropBlockFace": "south" }}
+    ],
+    variantgroups: [
+        { "code": "wood", loadFromProperties: "game:block/wood", states:["aged"] },
+        { "code": "part", states:["bottom", "middle", "top", "arm"] },
+        { "code": "side", loadFromProperties: "game:abstract/horizontalorientation" }
+    ],
+    "drawtype": "json",
+    "shapeByType": {
+        "*-north": {
+            "base": "block/shaduf/shaduf-{part}", "rotateY": 0
+        },
+        "*-east": {
+            "base": "block/shaduf/shaduf-{part}", "rotateY": 270
+        },
+        "*-south": {
+            "base": "block/shaduf/shaduf-{part}", "rotateY": 180
+        },
+        "*-west": {
+            "base": "block/shaduf/shaduf-{part}", "rotateY": 90
+        }
+    },
+    "texturesByType": {
+        "*": {
+            "top": { base: "game:block/wood/debarked/oak" },
+            "beams": { base: "game:block/wood/debarked/{wood}" },
+            "string": { base: "game:item/tool/material/string" },
+            "blackbronze2": { "base": "game:block/metal/sheet/blackbronze2"},
+            "sides": { "base": "game:block/wood/bucket/sides"},
+            "charred": { "base": "game:block/wood/charred"},
+            "aged": {"base": "game:block/wood/debarked/aged"},
+            "granite1": {"base": "game:block/stone/rock/granite1"}
+        }
+    },
+    sidesolid: { all: false },
+    sideopaque: { all: false },
+    lightAbsorption: 0,
+    blockmaterial: "Wood",
+    "maxStackSize": 1,
+}

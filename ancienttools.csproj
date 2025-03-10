@@ -47,6 +47,14 @@
     <Content Include="assets\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Remove="assets\ancienttools\blocktypes\pitcherpump.json" />
+    <None Remove="assets\ancienttools\blocktypes\shaduf.json" />
+    <None Remove="assets\ancienttools\shapes\block\pitcherpump\groundwaterpump.json" />
+    <None Remove="assets\ancienttools\shapes\block\shaduf\shaduf-arm.json" />
+    <None Remove="assets\ancienttools\shapes\block\shaduf\shaduf-bottom.json" />
+    <None Remove="assets\ancienttools\shapes\block\shaduf\shaduf-middle.json" />
+    <None Remove="assets\ancienttools\shapes\block\shaduf\shaduf-top.json" />
+    <None Remove="assets\ancienttools\shapes\block\shaduf\shaduf.json" />
     <Content Include="modinfo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

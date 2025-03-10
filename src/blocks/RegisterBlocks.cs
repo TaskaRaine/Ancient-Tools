@@ -21,6 +21,7 @@ namespace AncientTools.Blocks
             api.RegisterBlockClass("BlockPitchTorch", typeof(BlockPitchTorch));
             api.RegisterBlockClass("BlockLampSaucer", typeof(BlockLampSaucer));
             api.RegisterBlockClass("BlockSplitLog", typeof(BlockSplitLog));
+            api.RegisterBlockClass("ATShadufBase", typeof(BlockShadufBase));
 
             base.Start(api);
         }

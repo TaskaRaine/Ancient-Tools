@@ -1,0 +1,71 @@
+﻿{
+    "code": "pitcherpump",
+    creativeinventory: { "general": ["*-south"], "ancienttools": ["*-south"] },
+    attributes: {
+		handbook: {
+			groupBy: ["pitcherpump-*"]
+		},
+    },
+    "behaviors": [
+        { "name": "HorizontalOrientable", "properties": { "dropBlockFace": "south" }},
+        { "name": "WrenchOrientable", properties: { baseCode: "pitcherpump-{metal}"  } }
+    ],
+    variantgroups: [
+        { "code": "metal", "states": ["brass", "iron", "meteoriciron", "steel"] },
+        { "code": "side", loadFromProperties: "abstract/horizontalorientation" }
+    ],
+    "drawtype": "json",
+    "shapeByType": {
+        "*-north": {
+            "base": "block/pitcherpump/groundwaterpump", "rotateY": 0
+        },
+        "*-east": {
+            "base": "block/pitcherpump/groundwaterpump", "rotateY": 270
+        },
+        "*-south": {
+            "base": "block/pitcherpump/groundwaterpump", "rotateY": 180
+        },
+        "*-west": {
+            "base": "block/pitcherpump/groundwaterpump", "rotateY": 90
+        }
+    },
+    "texturesByType": {
+        "@pitcherpump-(iron|steel)-(north|east|south|west)": {
+            "metalbolts": { "base": "game:block/metal/sheet-plain/blackbronze5" },
+            "roughmetal": { "base": "game:block/metal/sheet-plain/{metal}4" },
+            "cleanmetal": { "base": "game:block/metal/sheet-plain/{metal}5" },
+            "spoutshadow": { "base": "game:block/metal/sheet-plain/lead5" }
+        },
+        "@pitcherpump-(brass)-(north|east|south|west)": {
+            "metalbolts": { "base": "game:block/metal/sheet-plain/blackbronze5" },
+            "roughmetal": { "base": "game:block/metal/ingot/{metal}" },
+            "cleanmetal": { "base": "game:block/metal/ingot/{metal}" },
+            "spoutshadow": { "base": "game:block/metal/sheet-plain/lead5" }
+        },
+        "@pitcherpump-(meteoriciron)-(north|east|south|west)": {
+            "metalbolts": { "base": "game:block/metal/sheet-plain/blackbronze5" },
+            "roughmetal": { "base": "game:block/metal/sheet/{metal}4" },
+            "cleanmetal": { "base": "game:block/metal/sheet/{metal}5" },
+            "spoutshadow": { "base": "game:block/metal/sheet-plain/lead5" }
+        }
+    },
+    sidesolid: { all: false },
+    sideopaque: { all: false },
+    lightAbsorption: 0,
+    blockmaterial: "Metal",
+    "maxStackSize": 1,
+    collisionSelectionBoxesByType: {
+        "@pitcherpump-(brass|iron|meteoriciron|steel)-(north|south)": [
+            { x1: 0.125, y1: 0, z1: 0, x2: 0.875, y2: 1, z2: 1 }
+        ],
+        "@pitcherpump-(brass|iron|meteoriciron|steel)-(east|west)": [
+            { x1: 0, y1: 0, z1: 0.125, x2: 1, y2: 1, z2: 0.875 }
+        ]
+    },
+    sounds: {
+		"place": "game:block/chute",
+		"break": "game:block/chute",
+		"hit": "game:block/chute",
+		"walk": "game:walk/stone"
+	},
+}
