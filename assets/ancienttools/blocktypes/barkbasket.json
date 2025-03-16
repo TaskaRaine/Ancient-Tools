@@ -11,9 +11,6 @@
 		openSound: "game:sounds/block/basketopen",
 		closeSound: "game:sounds/block/basketclose",
 		types: ["basket"],
-		drop: {
-			basket: true,
-		},
 		quantitySlots: {
 			basket: 8
 		},
@@ -50,17 +47,6 @@
 		{ code: "variant", loadFromProperties: "game:block/wood", states:["aged", "cypress"]},
 		{ code:"side", loadFromProperties: "game:abstract/horizontalorientation" }
 	],
-	creativeinventory: {  },
-	creativeinventoryStacksByType: {
-		"*-east": [
-			{
-				tabs: [ "general", "decorative", "ancienttools" ],
-				stacks: [
-					{ type: "block", code: "barkbasket-{variant}-east" }
-				]
-			}
-		]
-	},
 	shapeInventory: { base: "block/barkbasket", rotateY: 270 },
 	shapeByType: {
 		"*-north": { base: "block/barkbasket", rotateY: 0 },
@@ -86,6 +72,19 @@
 		burnTemperature: 800,
 		burnDuration: 60,
 	},
+	"drops": [
+		{
+			"type": "block",
+			"code": "ancienttools:barkbaskettyped-east",
+			"quantity": {
+				"avg": 1,
+				"var": 0
+			},
+			"attributes": {
+				"type": "{variant}"
+			}
+		}
+	],
 	heldTpIdleAnimation: "holdbothhands",
 	heldTpUseAnimation: "twohandplaceblock",
 	blockmaterial: "Wood",

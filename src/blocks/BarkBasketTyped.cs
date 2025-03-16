@@ -1,18 +1,19 @@
-﻿using System;
+﻿using AncientTools.BlockEntities;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
-using Vintagestory.API.Config;
-using Vintagestory.API.Datastructures;
+using Vintagestory.API.Common.Entities;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
 namespace AncientTools.Blocks
 {
-    class BlockBarkBasket: BlockGenericTypedContainer
+    class BlockBarkBasketTyped: BlockGenericTypedContainer, IAttachableToEntity, IWearableShapeSupplier
     {
         //-- Copied from Block. The BlockContainer version was causing 'unknown texture' particles --//
         public override int GetRandomColor(ICoreClientAPI capi, BlockPos pos, BlockFacing facing, int rndIndex)
@@ -68,60 +69,60 @@ namespace AncientTools.Blocks
         }
         public override BlockDropItemStack[] GetDropsForHandbook(ItemStack handbookStack, IPlayer forPlayer)
         {
-            handbookStack.Attributes.SetString("type", "basket");
+            string type = GetTypeFromStackAttributes(handbookStack);
+
+            handbookStack.Attributes.SetString("type", type);
 
             return base.GetDropsForHandbook(handbookStack, forPlayer);
         }
-        public override void OnBlockBroken(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1)
+        Shape IWearableShapeSupplier.GetShape(ItemStack stack, Entity forEntity, string texturePrefixCode)
         {
-            bool flag = false;
-            BlockBehavior[] blockBehaviors = BlockBehaviors;
-            foreach (BlockBehavior obj in blockBehaviors)
-            {
-                EnumHandling handling = EnumHandling.PassThrough;
-                obj.OnBlockBroken(world, pos, byPlayer, ref handling);
-                if (handling == EnumHandling.PreventDefault)
-                {
-                    flag = true;
-                }
+            string type = GetTypeFromStackAttributes(stack);
 
-                if (handling == EnumHandling.PreventSubsequent)
-                {
-                    return;
-                }
+            string shapename = Attributes["shape"][type].AsString();
+            Shape shape = GetShape(forEntity.World.Api, shapename);
+            shape.SubclassForStepParenting(texturePrefixCode);
+            return shape;
+        }
+        new public int GetProvideSlots(ItemStack stack)
+        {
+            string type  = GetTypeFromStackAttributes(stack);
+
+            if (type != null)
+            {
+                return (stack.ItemAttributes?["quantitySlots"]?[type]?.AsInt()).GetValueOrDefault();
             }
 
-            if (flag)
+            return 0;
+        }
+
+        new public string GetCategoryCode(ItemStack stack)
+        {
+            string type = GetTypeFromStackAttributes(stack);
+            return Attributes["attachableCategoryCode"][type].AsString("chest");
+        }
+
+        new public void CollectTextures(ItemStack stack, Shape shape, string texturePrefixCode, Dictionary<string, CompositeTexture> intoDict)
+        {
+            string type = GetTypeFromStackAttributes(stack);
+
+            foreach (string key in shape.Textures.Keys)
             {
-                return;
+                intoDict[texturePrefixCode + key] = Textures[type + "-" + key];
             }
+        }
+        new public string GetTexturePrefixCode(ItemStack stack)
+        {
+            string type = GetTypeFromStackAttributes(stack);
 
-            if (world.Side == EnumAppSide.Server && (byPlayer == null || byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative))
-            {
-                ItemStack[] array = new ItemStack[1] { OnPickBlock(world, pos) };
-                JsonObject jsonObject = Attributes["drop"];
-                if (jsonObject != null && (jsonObject[GetType(world.BlockAccessor, pos)]?.AsBool()).GetValueOrDefault() && array != null)
-                {
-                    for (int j = 0; j < array.Length; j++)
-                    {
-                        world.SpawnItemEntity(array[j], pos);
-                    }
-                }
-                else if(Drops != null && Drops.Length > 0)
-                {
-                    foreach (BlockDropItemStack drop in Drops)
-                        world.SpawnItemEntity(drop.ResolvedItemstack, pos);
-                }    
-
-                world.PlaySoundAt(Sounds.GetBreakSound(byPlayer), pos, -0.5, byPlayer);
-            }
-
-            if (EntityClass != null)
-            {
-                world.BlockAccessor.GetBlockEntity(pos)?.OnBlockBroken();
-            }
-
-            world.BlockAccessor.SetBlock(0, pos);
+            return Code.ToShortString() + "-" + type + "-";
+        }
+        private string GetTypeFromStackAttributes(ItemStack stack)
+        {
+            if (stack.Attributes["type"] != null)
+                return stack.Attributes["type"].ToString();
+            else
+                return "aged";
         }
     }
 }

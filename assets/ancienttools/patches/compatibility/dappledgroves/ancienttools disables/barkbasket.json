@@ -7,7 +7,14 @@
 		"dependsOn": [{"modid": "indappledgroves"}],
 		"side": "Server"
 	},
-
+	{
+		"op": "add",
+		"path": "/enabled",
+		"value": false,
+		"file": "ancienttools:blocktypes/barkbaskettyped",
+		"dependsOn": [{"modid": "indappledgroves"}],
+		"side": "Server"
+	},
 	{
 		"op": "add",
 		"path": "/enabled",

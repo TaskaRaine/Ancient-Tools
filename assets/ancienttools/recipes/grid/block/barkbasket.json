@@ -12,7 +12,8 @@
 	},
 	output: { 
 		type: "block", 
-		code: "barkbasket-{bark}-east",
-		quantity: 1
+		code: "barkbaskettyped-east",
+		quantity: 1,
+		"attributes": { "type": "{bark}" }
 	}
 }

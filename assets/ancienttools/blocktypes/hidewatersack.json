@@ -13,8 +13,9 @@
 	attributesByType: {
 		"*": {
 			handbook: {
-				groupBy: ["hidewatersack-{hide}-*"]
-			},
+				groupBy: ["hidewatersack-{hide}-*"],
+				"createdBy": "ancienttools:handbook-nativetanning-craftinfo"
+			}
 		}
 	},
 	variantgroups: [
