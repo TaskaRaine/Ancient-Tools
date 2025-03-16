@@ -114,6 +114,20 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.5.25
+Bark Baskets can now be placed on rafts and boats. 
+IMPORTANT NOTE: Break or place your bark baskets in the crafting grid to update them! NOT doing this will result in any basket being placed on a boat to cause a crash loop! To fix the crashing, either disable this mod OR set `enabled:false,` in the barkbasket.json file found within `assets/ancienttools/blocktypes/`, then reload the world. The broken basket will be flushed from the boat inventory automatically and you will be fine to reload with the mod installed. If you don't care about using them for boats, feel free to continue using them as is.
+
+Fixed an issue that gave regular torches the ability to stay lit in the rain, just like pitch torches.
+
+Fixed a patch that caused Resin and Raw Hides to lose the ability to be ground stored.
+
+Added a config variable to allow players to disable the vanilla hide scraping recipe while still allowing players to use the vanilla tanning method.
+
+Added a 'Created By' info button to hides involved in Native American Tanning and the hide sacks to point players towards the Native American tanning method added by Ancient Tools. 
+
+Removed compatibility for Bricklayers. Many things Ancient Tools relied on have been shifted between Bricklayers and Expanded Matter that this compatibility relied on, causing numerous crashes. I'd rather remove it now and focus on a companion mod for compatibility in the future.
+
 #### Version 1.5.24
 Provided an attribute on the SplitLog that allows other mods that add wood variants to supply drops for the wedge smacking process. This does nothing different on its own. Floral Zones mods will be getting updates to patch this in and solve existing crashes.
 

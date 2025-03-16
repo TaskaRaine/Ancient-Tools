@@ -8,4 +8,12 @@
 		"side": "Server",
 		"condition": { "when": "DisableVanillaHideCrafting", "isValue": "true" }
 	},
+	{
+		"op": "add",
+		"path": "/enabled",
+		"value": "false",
+		"file": "game:recipes/grid/scrapedhide",
+		"side": "Server",
+		"condition": { "when": "DisableVanillaHideCraftingRecipeOnly", "isValue": "true" }
+	},
 ]

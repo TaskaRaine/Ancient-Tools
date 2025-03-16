@@ -55,11 +55,16 @@
     <None Remove="assets\ancienttools\shapes\block\shaduf\shaduf-middle.json" />
     <None Remove="assets\ancienttools\shapes\block\shaduf\shaduf-top.json" />
     <None Remove="assets\ancienttools\shapes\block\shaduf\shaduf.json" />
+    <None Remove="assets\ancienttools\recipes\grid\block\barkbaskettyped.json" />
     <Content Include="modinfo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="modicon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\ancienttools\patches\compatibility\bricklayers\" />
+    <Folder Include="assets\ancienttools\recipes\grid\compatibility\bricklayers\" />
   </ItemGroup>
 </Project>

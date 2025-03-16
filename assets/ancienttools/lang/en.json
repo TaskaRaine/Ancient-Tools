@@ -182,12 +182,14 @@ When empty, cart inventories can also be removed! Simply press <hk>ctrl</hk>, th
 	"handbook-salve-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-salve\">Salve Preparation</a>",
 	"handbook-mixingpitch-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-pitch\">Mixing Pitch</a>",
 	"handbook-woodsplitting-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-woodsplitting\">Wood Splitting</a>",
+	"handbook-nativetanning-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-tanning\">Native American Tanning</a>",
 
 	"handbook-smelting-craftinfo-dot": "• <a href=\"handbook://craftinginfo-smelting\">Smelting</a>",
 	"handbook-barkstripping-craftinfo-dot": "• <a href=\"handbook://ancienttools-quickstart-guide-barkstripping\">Bark Stripping</a>",
 	"handbook-salve-craftinfo-dot": "• <a href=\"handbook://ancienttools-quickstart-guide-salve\">Salve Preparation</a>",
 	"handbook-mixingpitch-craftinfo-dot": "• <a href=\"handbook://ancienttools-quickstart-guide-pitch\">Mixing Pitch</a>",
 	"handbook-woodsplitting-craftinfo-dot": "• <a href=\"handbook://ancienttools-quickstart-guide-woodsplitting\">Wood Splitting</a>",
+	"handbook-nativetanning-craftinfo-dot": "• <a href=\"handbook://ancienttools-quickstart-guide-tanning\">Native American Tanning</a>",
 
 	"blockhelp-place-pestle": "Place Pestle",
 	"blockhelp-place-resource": "Place Grindable Resource",
@@ -312,7 +314,24 @@ When empty, cart inventories can also be removed! Simply press <hk>ctrl</hk>, th
 	"block-*-barkbasket-aged-*": "Aged Bark Basket",
 	"block-*-barkbasket-cypress-*": "Greenspire Cypress Basket",	
 
-	"blockdesc-barkbasket-*": "A small basket woven from malleable tree bark used to hold just a few things",
+	"blockdesc-barkbasket-*": "Old basket version that does not work with rafts and boats. Break block or place in crafting grid to update.",
+
+	"block-birch-barkbaskettyped-*": "Birch Bark Basket",
+	"block-oak-barkbaskettyped-*": "Oak Bark Basket",
+	"block-maple-barkbaskettyped-*": "Maple Bark Basket",
+	"block-pine-barkbaskettyped-*": "Pine Bark Basket",
+	"block-acacia-barkbaskettyped-*": "Acacia Bark Basket",
+	"block-kapok-barkbaskettyped-*": "Kapok Bark Basket",
+	"block-baldcypress-barkbaskettyped-*": "Bald Cypress Bark Basket",
+	"block-larch-barkbaskettyped-*": "Larch Bark Basket",
+	"block-redwood-barkbaskettyped-*": "Redwood Bark Basket",
+	"block-ebony-barkbaskettyped-*": "Ebony Bark Basket",
+	"block-walnut-barkbaskettyped-*": "Walnut Bark Basket",
+	"block-purpleheart-barkbaskettyped-*": "Purpleheart Bark Basket",
+	"block-aged-barkbaskettyped-*": "Aged Bark Basket",
+	"block-cypress-barkbaskettyped-*": "Greenspire Cypress Bark Basket",	
+
+	"blockdesc-barkbaskettyped-*": "A small basket woven from malleable tree bark used to hold just a few things",
 
 	"block-salvepot-empty": "Empty Salve Container",
 	"block-salvepot-residuecovered": "Empty Salve Container",

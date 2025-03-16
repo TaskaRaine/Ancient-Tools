@@ -8,6 +8,8 @@
 	"textureSizes": {
 	},
 	"textures": {
+		"inside": "game:block/reed/basket/normal-lid",
+		"bark": "game:block/reed/basket/normal-northsouth"
 	},
 	"elements": [
 		{

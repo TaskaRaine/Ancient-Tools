@@ -31,20 +31,6 @@
 	},
 	{
 		"op": "add",
-		"path": "/attributes/handbookByType/@bark-(spruce|alder|beech|douglasfir|blackpoplar|pyramidalpoplar|cedar|willow)-(soaked)",
-		"value": {
-			extraSections: 
-			[{
-				title: "ancienttools:handbook-usedfor-handbookinfo",
-				text: "ancienttools:handbook-salve-craftinfo-dot"
-			}]
-		},
-		"file": "indappledgroves:itemtypes/resources/bark",
-		"dependsOn": [{"modid": "indappledgroves"}],
-		"side": "Server"
-	},
-	{
-		"op": "add",
 		"path": "/attributes/mortarPropertiesByType",
 		"value": {
 			"@bark-(birch|pine)-(dry)": {
