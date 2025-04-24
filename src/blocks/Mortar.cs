@@ -49,7 +49,7 @@ namespace AncientTools.Blocks
                         {
                             ActionLangCode = "ancienttools:blockhelp-grind-mortar",
                             RequireFreeHand = true,
-                            HotKeyCode = "sneak",
+                            HotKeyCode = "shift",
                             MouseButton = EnumMouseButton.Right
                         }
                     };
@@ -76,7 +76,7 @@ namespace AncientTools.Blocks
 
             if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BEMortar mortarEntity)
             {
-                return mortarEntity.OnSneakInteract(byPlayer);
+                return mortarEntity.OnShiftInteract(byPlayer);
             }
             return false;
         }

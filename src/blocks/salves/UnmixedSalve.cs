@@ -31,7 +31,7 @@ namespace AncientTools.Blocks
                         new WorldInteraction()
                         {
                             ActionLangCode = "ancienttools:blockhelp-pour-wax",
-                            HotKeyCode = "sneak",
+                            HotKeyCode = "shift",
                             MouseButton = EnumMouseButton.Right,
                             Itemstacks = waxStack
                         },
@@ -46,7 +46,7 @@ namespace AncientTools.Blocks
                         new WorldInteraction()
                         {
                             ActionLangCode = "ancienttools:blockhelp-pour-barkoil",
-                            HotKeyCode = "sneak",
+                            HotKeyCode = "shift",
                             MouseButton = EnumMouseButton.Right,
                             Itemstacks = barkoilStack
                         },
@@ -111,7 +111,7 @@ namespace AncientTools.Blocks
             if (blockSel == null)
                 return;
 
-            if(byEntity.Controls.Sneak && 
+            if(byEntity.Controls.ShiftKey && 
                 api.World.BlockAccessor.GetBlock(blockSel.Position, BlockLayersAccess.SolidBlocks) is BlockUnmixedSalve interactedBlock && 
                 interactedBlock.LastCodePart() != this.LastCodePart())
             {

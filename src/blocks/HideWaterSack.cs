@@ -59,7 +59,7 @@ namespace AncientTools.Blocks
             }
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
-            if (byPlayer.Entity.Controls.Sneak)
+            if (byPlayer.Entity.Controls.ShiftKey)
                 return false;
 
             if(this.FirstCodePart(1) == "soaked")

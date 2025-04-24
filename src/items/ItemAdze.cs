@@ -26,7 +26,7 @@ namespace AncientTools.Items
                     new WorldInteraction()
                         {
                             ActionLangCode = "ancienttools:itemhelp-adze-stripbark",
-                            HotKeyCode = "sneak",
+                            HotKeyCode = "shift",
                             MouseButton = EnumMouseButton.Right
                         },
                 };
@@ -49,7 +49,7 @@ namespace AncientTools.Items
             if (blockSel == null)
                 return;
 
-            if (byEntity.Controls.Sneak || byEntity.Controls.Sprint)
+            if (byEntity.Controls.ShiftKey || byEntity.Controls.CtrlKey)
             {
 
                 Block interactedBlock = api.World.BlockAccessor.GetBlock(blockSel.Position, BlockLayersAccess.SolidBlocks);

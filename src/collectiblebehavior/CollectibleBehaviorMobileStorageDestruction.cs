@@ -82,7 +82,7 @@ namespace AncientTools.CollectibleBehaviors
                 CanAccessInClaim(byEntity as EntityPlayer, entitySel.Position.AsBlockPos, EnumBlockAccessFlags.Use) == false)
                     return;
 
-            if(entitySel.Entity is EntityMobileStorage && byEntity.Controls.Sneak)
+            if(entitySel.Entity is EntityMobileStorage && byEntity.Controls.ShiftKey)
             {
                 if(byEntity.Api.Side == EnumAppSide.Server)
                     EntityHealth = entitySel.Entity.GetBehavior<EntityBehaviorHealthNoRecover>();
@@ -98,7 +98,7 @@ namespace AncientTools.CollectibleBehaviors
             if (entitySel == null || slot.Empty)
                 return base.OnHeldInteractStep(secondsUsed, slot, byEntity, blockSel, entitySel, ref handling);
 
-            if (entitySel.Entity is EntityMobileStorage && byEntity.Controls.Sneak)
+            if (entitySel.Entity is EntityMobileStorage && byEntity.Controls.ShiftKey)
             {
                 if (secondsUsed - PreviousTickedTime > DestructionInterval)
                 {

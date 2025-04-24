@@ -57,7 +57,7 @@ namespace AncientTools.Blocks
                     {
                         ActionLangCode = "ancienttools:blockhelp-skin-hide",
                         MouseButton = EnumMouseButton.Right,
-                        HotKeyCode = "sneak",
+                        HotKeyCode = "shift",
                         Itemstacks = knives.ToArray()
                     },
                     new WorldInteraction()
@@ -137,7 +137,7 @@ namespace AncientTools.Blocks
 
                 CollectibleObject hotbarCollectible = byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible;
 
-                if (byPlayer.InventoryManager.ActiveTool == EnumTool.Knife && byPlayer.Entity.Controls.Sneak)
+                if (byPlayer.InventoryManager.ActiveTool == EnumTool.Knife && byPlayer.Entity.Controls.ShiftKey)
                 {
                     if (!stretchingFrameEntity.HideSlot.Empty)
                         if (stretchingFrameEntity.HideSlot.Itemstack.Item.FirstCodePart(1) == "soaked")
@@ -166,7 +166,7 @@ namespace AncientTools.Blocks
 
             if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BEStretchingFrame stretchingFrameEntity)
             {
-                if (byPlayer.InventoryManager.ActiveTool == EnumTool.Knife && byPlayer.Entity.Controls.Sneak)
+                if (byPlayer.InventoryManager.ActiveTool == EnumTool.Knife && byPlayer.Entity.Controls.ShiftKey)
                 {
                     if (stretchingFrameEntity.HideSlot.Itemstack.Item.FirstCodePart(1) == "soaked")
                     {

@@ -44,7 +44,7 @@ namespace AncientTools.CollectibleBehaviors
             if (entitySel == null || byEntity.LeftHandItemSlot?.Empty == true)
                 return;
 
-            if (entitySel.Entity is EntityMobileStorage && byEntity.Controls.Sneak)
+            if (entitySel.Entity is EntityMobileStorage && byEntity.Controls.ShiftKey)
             {
                 LeftHandObject = byEntity.LeftHandItemSlot.Itemstack.Collectible;
 
@@ -71,7 +71,7 @@ namespace AncientTools.CollectibleBehaviors
             if (entitySel == null || LeftHandObject == null || !LeftHandObject.CodeWithVariant("wood", StorageType).Equals(LeftHandObject.Code))
                 return false;
 
-            if (entitySel.Entity is EntityMobileStorage && byEntity.Controls.Sneak)
+            if (entitySel.Entity is EntityMobileStorage && byEntity.Controls.ShiftKey)
             {
                 if (secondsUsed - PreviousTickedTime > RepairInterval)
                 {
