@@ -215,7 +215,7 @@ namespace AncientTools.BlockEntities
         }
         public void OnInteract(IPlayer byPlayer)
         {
-            if (!byPlayer.Entity.Controls.Sneak)
+            if (!byPlayer.Entity.Controls.ShiftKey)
             {
                 ItemSlot activeSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
 
@@ -284,9 +284,9 @@ namespace AncientTools.BlockEntities
 
             UpdateMeshes();
         }
-        public bool OnSneakInteract(IPlayer byPlayer)
+        public bool OnShiftInteract(IPlayer byPlayer)
         {
-            if (!byPlayer.Entity.Controls.Sneak || PestleSlot.Empty || ResourceSlot.Empty || !byPlayer.InventoryManager.ActiveHotbarSlot.Empty || !ResourceSlot.Itemstack.Collectible.Attributes["mortarProperties"].Exists)
+            if (!byPlayer.Entity.Controls.ShiftKey || PestleSlot.Empty || ResourceSlot.Empty || !byPlayer.InventoryManager.ActiveHotbarSlot.Empty || !ResourceSlot.Itemstack.Collectible.Attributes["mortarProperties"].Exists)
             {
                 return false;
             }

@@ -66,7 +66,7 @@ namespace AncientTools
 
                 ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
 
-                if(byPlayer.Entity.Controls.Sneak)
+                if(byPlayer.Entity.Controls.ShiftKey)
                 {
                     if (fireproofFuelBehavior != null && slot.Itemstack != null)
                     {

@@ -51,7 +51,7 @@ namespace AncientTools.Blocks
             {
                 if(!salveEntity.SalveSlot.Empty)
                 {
-                    if(!byPlayer.Entity.Controls.Sneak)
+                    if(!byPlayer.Entity.Controls.ShiftKey)
                     {
                         salveEntity.GiveObject(byPlayer, salveEntity.SalveSlot);
                         return true;

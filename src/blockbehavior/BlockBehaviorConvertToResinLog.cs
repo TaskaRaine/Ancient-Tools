@@ -53,7 +53,7 @@ namespace AncientTools.BlockBehaviors
                     {
                         ActionLangCode = "ancienttools:blockhelp-scrape-log",
                         MouseButton = EnumMouseButton.Right,
-                        HotKeyCode = "sneak",
+                        HotKeyCode = "shift",
                         Itemstacks = knives.ToArray()
                     };
 
@@ -85,7 +85,7 @@ namespace AncientTools.BlockBehaviors
                     if (blockSel == null || byPlayer.InventoryManager.ActiveTool != EnumTool.Knife)
                         return false;
 
-                    if (byPlayer.Entity.Controls.Sneak || byPlayer.Entity.Controls.Sprint)
+                    if (byPlayer.Entity.Controls.ShiftKey || byPlayer.Entity.Controls.CtrlKey)
                     {
                         if (blockSel.Face != BlockFacing.UP || blockSel.Face != BlockFacing.DOWN)
                         {
