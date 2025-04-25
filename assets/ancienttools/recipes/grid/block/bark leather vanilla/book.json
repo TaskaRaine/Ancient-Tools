@@ -1,0 +1,134 @@
+﻿[
+    {
+		ingredientPattern: "L	P	M",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-*", "allowedVariants": ["acacia", "redwood"], quantity: 1 },
+			"M": { type: "item", code: "ancienttools:leather-normal-*", "allowedVariants": ["acacia", "redwood"], quantity: 1 },
+			"P": { type: "item", code: "game:paper-parchment", quantity: 8 }
+		},
+		width: 1,
+		height: 3,
+		name: "book",
+		output: { type: "item", code: "game:book-normal-cherryred"  }
+	},
+	{
+		ingredientPattern: "L	P	M",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-aged", quantity: 1 },
+			"M": { type: "item", code: "ancienttools:leather-normal-birch", quantity: 1 },
+			"P": { type: "item", code: "game:paper-parchment", quantity: 8 }
+		},
+		width: 1,
+		height: 3,
+		name: "book",
+		output: { type: "item", code: "game:book-normal-darkbeige"  }
+	},
+	{
+		ingredientPattern: "L	P	M",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-ebony", quantity: 1 },
+			"M": { type: "item", code: "ancienttools:leather-normal-ebony", quantity: 1 },
+			"P": { type: "item", code: "game:paper-parchment", quantity: 8 }
+		},
+		width: 1,
+		height: 3,
+		name: "book",
+		output: { type: "item", code: "game:book-normal-darkgray"  }
+	},
+	{
+		ingredientPattern: "L	P	M",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-kapok", quantity: 1 },
+			"M": { type: "item", code: "ancienttools:leather-normal-ebony", quantity: 1 },
+			"P": { type: "item", code: "game:paper-parchment", quantity: 8 }
+		},
+		width: 1,
+		height: 3,
+		name: "book",
+		output: { type: "item", code: "game:book-normal-darkolive"  }
+	},
+	{
+		ingredientPattern: "L	P	M",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-*", "allowedVariants": ["baldcypress", "larch"], quantity: 1 },
+			"M": { type: "item", code: "ancienttools:leather-normal-aged", quantity: 1 },
+			"P": { type: "item", code: "game:paper-parchment", quantity: 8 }
+		},
+		width: 1,
+		height: 3,
+		name: "book",
+		output: { type: "item", code: "game:book-normal-gray"  }
+	},
+	{
+		ingredientPattern: "L	P	M",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-kapok", quantity: 1 },
+			"M": { type: "item", code: "ancienttools:leather-normal-kapok", quantity: 1 },
+			"P": { type: "item", code: "game:paper-parchment", quantity: 8 }
+		},
+		width: 1,
+		height: 3,
+		name: "book",
+		output: { type: "item", code: "game:book-normal-olive"  }
+	},
+	{
+		ingredientPattern: "L	P	M",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-*", "allowedVariants": ["pine", "cypress"], quantity: 1 },
+			"M": { type: "item", code: "ancienttools:leather-normal-*", "allowedVariants": ["pine", "cypress"], quantity: 1 },
+			"P": { type: "item", code: "game:paper-parchment", quantity: 8 }
+		},
+		width: 1,
+		height: 3,
+		name: "book",
+		output: { type: "item", code: "game:book-normal-orange"  }
+	},
+	{
+		ingredientPattern: "L	P	M",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-*", "allowedVariants": ["pine", "cypress"], quantity: 1 },
+			"M": { type: "item", code: "ancienttools:leather-normal-birch", quantity: 1 },
+			"P": { type: "item", code: "game:paper-parchment", quantity: 8 }
+		},
+		width: 1,
+		height: 3,
+		name: "book",
+		output: { type: "item", code: "game:book-normal-orangebrown"  }
+	},
+	{
+		ingredientPattern: "L	P	M",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-purpleheart", quantity: 1 },
+			"M": { type: "item", code: "ancienttools:leather-normal-purpleheart", quantity: 1 },
+			"P": { type: "item", code: "game:paper-parchment", quantity: 8 }
+		},
+		width: 1,
+		height: 3,
+		name: "book",
+		output: { type: "item", code: "game:book-normal-purple"  }
+	},
+	{
+		ingredientPattern: "L	P	M",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-*", "allowedVariants": ["pine", "cypress"], quantity: 1 },
+			"M": { type: "item", code: "ancienttools:leather-normal-purpleheart", quantity: 1 },
+			"P": { type: "item", code: "game:paper-parchment", quantity: 8 }
+		},
+		width: 1,
+		height: 3,
+		name: "book",
+		output: { type: "item", code: "game:book-normal-purpleorange"  }
+	},
+	{
+		ingredientPattern: "L	P	M",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-walnut", quantity: 1 },
+			"M": { type: "item", code: "ancienttools:leather-normal-maple", quantity: 1 },
+			"P": { type: "item", code: "game:paper-parchment", quantity: 8 }
+		},
+		width: 1,
+		height: 3,
+		name: "book",
+		output: { type: "item", code: "game:book-normal-teal"  }
+	}
+]

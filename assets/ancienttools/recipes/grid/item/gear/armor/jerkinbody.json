@@ -1,0 +1,145 @@
+﻿[
+    {
+		ingredientPattern: "Q_Q,LLL,LLL",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-acacia", quantity: 2 },
+			"Q": { type: "item", code: "ancienttools:leather-normal-acacia", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-body-acacia"  }
+	},
+	{
+		ingredientPattern: "Q_Q,LLL,LLL",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-aged", quantity: 2 },
+			"Q": { type: "item", code: "ancienttools:leather-normal-aged", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-body-aged"  }
+	},
+	{
+		ingredientPattern: "Q_Q,LLL,LLL",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-baldcypress", quantity: 2 },
+			"Q": { type: "item", code: "ancienttools:leather-normal-baldcypress", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-body-baldcypress"  }
+	},
+	{
+		ingredientPattern: "Q_Q,LLL,LLL",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-birch", quantity: 2 },
+			"Q": { type: "item", code: "ancienttools:leather-normal-birch", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-body-birch"  }
+	},
+	{
+		ingredientPattern: "Q_Q,LLL,LLL",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-cypress", quantity: 2 },
+			"Q": { type: "item", code: "ancienttools:leather-normal-cypress", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-body-cypress"  }
+	},
+	{
+		ingredientPattern: "Q_Q,LLL,LLL",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-ebony", quantity: 2 },
+			"Q": { type: "item", code: "ancienttools:leather-normal-ebony", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-body-ebony"  }
+	},
+	{
+		ingredientPattern: "Q_Q,LLL,LLL",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-kapok", quantity: 2 },
+			"Q": { type: "item", code: "ancienttools:leather-normal-kapok", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-body-kapok"  }
+	},
+	{
+		ingredientPattern: "Q_Q,LLL,LLL",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-larch", quantity: 2 },
+			"Q": { type: "item", code: "ancienttools:leather-normal-larch", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-body-larch"  }
+	},
+	{
+		ingredientPattern: "Q_Q,LLL,LLL",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-maple", quantity: 2 },
+			"Q": { type: "item", code: "ancienttools:leather-normal-maple", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-body-maple"  }
+	},
+	{
+		ingredientPattern: "Q_Q,LLL,LLL",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-pine", quantity: 2 },
+			"Q": { type: "item", code: "ancienttools:leather-normal-pine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-body-pine"  }
+	},
+	{
+		ingredientPattern: "Q_Q,LLL,LLL",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-purpleheart", quantity: 2 },
+			"Q": { type: "item", code: "ancienttools:leather-normal-purpleheart", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-body-purpleheart"  }
+	},
+	{
+		ingredientPattern: "Q_Q,LLL,LLL",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-redwood", quantity: 2 },
+			"Q": { type: "item", code: "ancienttools:leather-normal-redwood", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-body-redwood"  }
+	},
+	{
+		ingredientPattern: "Q_Q,LLL,LLL",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-walnut", quantity: 2 },
+			"Q": { type: "item", code: "ancienttools:leather-normal-walnut", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-body-walnut"  }
+	},
+]

@@ -19,6 +19,11 @@ namespace AncientTools
                 handHandling = EnumHandHandling.PreventDefaultAction;
                 handling = EnumHandling.PreventDefault;
             }
+            else if (byEntity.World.BlockAccessor.GetBlock(blockSel.Position) is BlockGroundStorage && byEntity.ActiveHandItemSlot.Itemstack.Collectible.HasBehavior<CollectibleBehaviorChopBarkStack>())
+            {
+                handHandling = EnumHandHandling.PreventDefaultAction;
+                handling = EnumHandling.PreventDefault;
+            }
         }
     }
 }

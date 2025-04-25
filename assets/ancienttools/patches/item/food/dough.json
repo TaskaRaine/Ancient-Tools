@@ -1,60 +1,5 @@
 ﻿[
 	{
-		"op": "addeach",
-		"path": "/variantgroups/0/states/-",
-		"value": ["birch", "pine", "maple"],
-		"file": "game:itemtypes/food/dough",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
-		"op": "add",
-		"path": "/attributes/nutritionPropsWhenInMealByType/*-birch",
-		"value": {
-			satiety: 100, foodcategory: "Grain"
-		},
-		"file": "game:itemtypes/food/dough",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
-		"op": "add",
-		"path": "/attributes/nutritionPropsWhenInMealByType/*-pine",
-		"value": {
-			satiety: 100, foodcategory: "Grain"
-		},
-		"file": "game:itemtypes/food/dough",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
-		"op": "add",
-		"path": "/attributes/nutritionPropsWhenInMealByType/*-maple",
-		"value": {
-			satiety: 100, foodcategory: "Grain"
-		},
-		"file": "game:itemtypes/food/dough",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
-		"op": "add",
-		"path": "/creativeinventory/ancienttools",
-		"value": ["*-birch", "*-pine", "*-maple"],
-		"file": "game:itemtypes/food/dough",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
-		"op": "addeach",
-		"path": "/creativeinventory/ancienttools/-",
-		"value": ["*-acornbirch", "*-acornpine", "*-acornmaple"],
-		"file": "game:itemtypes/food/dough",
-		"dependsOn": [{ "modid": "acorns" }],
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
 		"op": "replace",
 		"path": "/0/enabled",
 		"value": "true",
@@ -78,20 +23,4 @@
 		"side": "Server",
 		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
 	},
-	{
-		"op": "move",
-		"frompath": "/attributes/nutritionPropsWhenInMealByType/*",
-		"path": "/temp",
-		"file": "game:itemtypes/food/dough",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
-		"op": "move",
-		"frompath": "/temp",
-		"path": "/attributes/nutritionPropsWhenInMealByType/*",
-		"file": "game:itemtypes/food/dough",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	}
 ]

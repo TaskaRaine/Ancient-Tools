@@ -23,6 +23,8 @@ namespace AncientTools.Config
         public float BrainedHideSmokingSeconds = 1200.0f;
         public bool InWorldBeamCraftingOnly = true;
         public bool AdzeStrippingOnly = true;
+        public int CandleChamberstickLightLevel = 14;
+        public int PitchChamberstickLightLevel = 16;
 
         public AncientToolsConfig()
         {
@@ -48,6 +50,8 @@ namespace AncientTools.Config
             BrainedHideSmokingSeconds = previousConfig.BrainedHideSmokingSeconds;
             InWorldBeamCraftingOnly = previousConfig.InWorldBeamCraftingOnly;
             AdzeStrippingOnly = previousConfig.AdzeStrippingOnly;
+            CandleChamberstickLightLevel = previousConfig.CandleChamberstickLightLevel;
+            PitchChamberstickLightLevel = previousConfig.PitchChamberstickLightLevel;
         }
     }
 }

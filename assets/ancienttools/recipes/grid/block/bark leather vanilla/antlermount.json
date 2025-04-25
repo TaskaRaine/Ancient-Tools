@@ -1,0 +1,32 @@
+﻿[
+	{
+		ingredientPattern: "P_P,_L_,P_P",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-*", name: "color", quantity: 1 },
+			"P": { type: "item", code: "game:plank-*", name: "wood", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "block", code: "game:antlermount", quantity: 1, attributes: { "type": "square", "material": "{wood}" } }
+	},
+	{
+		ingredientPattern: "_P_,PLP,_P_",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-*", name: "color", quantity: 1 },
+			"P": { type: "item", code: "game:plank-*", name: "wood", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "block", code: "game:antlermount", quantity: 1, attributes: { "type": "diamond", "material": "{wood}" }  }
+	},
+	{
+		ingredientPattern: "P_P,PLP",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-*", name: "color", quantity: 1 },
+			"P": { type: "item", code: "game:plank-*", name: "wood", quantity: 1 }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "block", code: "game:antlermount", quantity: 1, attributes: { "type": "shield", "material": "{wood}" }  }
+	}
+]

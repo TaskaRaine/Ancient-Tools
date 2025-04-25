@@ -14,6 +14,7 @@ namespace AncientTools.CollectibleBehaviors
             api.RegisterCollectibleBehaviorClass("MobileStorageDestruction", typeof(CollectibleBehaviorMobileStorageDestruction));
             api.RegisterCollectibleBehaviorClass("MobileStorageRepair", typeof(CollectibleBehaviorMobileStorageRepair));
             api.RegisterCollectibleBehaviorClass("AttemptRepairClutter", typeof(CollectibleBehaviorAttemptRepairClutter));
+            api.RegisterCollectibleBehaviorClass("ATChopBarkStack", typeof(CollectibleBehaviorChopBarkStack));
         }
     }
 }

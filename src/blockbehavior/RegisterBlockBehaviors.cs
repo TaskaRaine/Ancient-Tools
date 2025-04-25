@@ -8,6 +8,8 @@ namespace AncientTools.BlockBehaviors
         {
             api.RegisterBlockBehaviorClass("ConvertToResinLog", typeof(BlockBehaviorConvertToResinLog));
             api.RegisterBlockBehaviorClass("SplitLog", typeof(BlockBehaviorSplitLog));
+            api.RegisterBlockBehaviorClass("AdzeStrip", typeof(BlockBehaviorAdzeStrip));
+            api.RegisterBlockBehaviorClass("CarveLogBarrel", typeof(BlockBehaviorCarveLogBarrel));
         }
     }
 }

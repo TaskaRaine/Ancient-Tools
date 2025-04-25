@@ -1,6 +1,5 @@
 ﻿{
 	code: "adze",
-	class: "ItemAdze",
 	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"], "ancienttools": ["*"] },
 	behaviors: [{
 		name: "GroundStorable",
@@ -33,6 +32,13 @@
 			"@adze-wood-(tinbronze|bismuthbronze|blackbronze)": 0.8,
 			"@adze-wood-(iron|meteoriciron)": 0.6,
 			"@adze-wood-(steel)": 0.5,
+		},
+		carvingTimeModifierByType: {
+			"@adze-(wood|bone)-(chert|granite|andesite|basalt|obsidian|peridotite|flint)": 2.4,
+			"@adze-wood-(copper|silver|gold)": 2.0,
+			"@adze-wood-(tinbronze|bismuthbronze|blackbronze)": 1.6,
+			"@adze-wood-(iron|meteoriciron)": 1.2,
+			"@adze-wood-(steel)": 1.0,
 		}
 	},
 	variantgroups: [

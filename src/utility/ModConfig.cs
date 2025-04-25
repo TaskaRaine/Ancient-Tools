@@ -47,6 +47,8 @@ namespace AncientTools.Utility
             api.World.Config.SetFloat("BrainedHideSmokingSeconds", config.BrainedHideSmokingSeconds);
             api.World.Config.SetBool("InWorldBeamCraftingOnly", config.InWorldBeamCraftingOnly);
             api.World.Config.SetBool("AdzeStrippingOnly", config.AdzeStrippingOnly);
+            api.World.Config.SetInt("CandleChamberstickLightLevel", config.CandleChamberstickLightLevel);
+            api.World.Config.SetInt("PitchChamberstickLightLevel", config.PitchChamberstickLightLevel);
         }
         private AncientToolsConfig LoadConfig(ICoreAPI api)
         {

@@ -1,0 +1,184 @@
+﻿[
+    {
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkleatherarmor-head-acacia" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-acacia" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkleatherarmor-head-acacia"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkleatherarmor-head-aged" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-aged" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkleatherarmor-head-aged"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkleatherarmor-head-baldcypress" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-baldcypress" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkleatherarmor-head-baldcypress"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkleatherarmor-head-birch" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-birch" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkleatherarmor-head-birch"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkleatherarmor-head-cypress" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-cypress" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkleatherarmor-head-cypress"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkleatherarmor-head-ebony" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-ebony" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkleatherarmor-head-ebony"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkleatherarmor-head-kapok" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-kapok" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkleatherarmor-head-kapok"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkleatherarmor-head-larch" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-larch" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkleatherarmor-head-larch"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkleatherarmor-head-maple" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-maple" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkleatherarmor-head-maple"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkleatherarmor-head-pine" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-pine" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkleatherarmor-head-pine"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkleatherarmor-head-purpleheart" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-purpleheart" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkleatherarmor-head-purpleheart"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkleatherarmor-head-redwood" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-redwood" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkleatherarmor-head-redwood"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkleatherarmor-head-walnut" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-walnut" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkleatherarmor-head-walnut"  }
+	},
+]

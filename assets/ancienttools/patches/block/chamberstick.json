@@ -1,0 +1,18 @@
+﻿[
+    {
+        "op": "replace",
+        "path": "/lighthsvByType/*-candle-lit-*/2",
+        "file": "ancienttools:blocktypes/lampsaucer",
+        "value": 14,
+		"side": "Server",
+        "condition": { "when": "CandleChamberstickLightLevel", "useValue": true }
+    },
+    {
+        "op": "replace",
+        "path": "/lighthsvByType/*-pitch-lit-*/2",
+        "file": "ancienttools:blocktypes/lampsaucer",
+        "value":  16,
+		"side": "Server",
+        "condition": { "when": "PitchChamberstickLightLevel", "useValue": true }
+    },
+]

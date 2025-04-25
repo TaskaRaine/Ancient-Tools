@@ -1,0 +1,29 @@
+﻿{
+    "code": "barkash",
+    creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
+    "attributes": {
+		fertilizerProps: { n: 0, p: 0, k: 30 },
+		dissolveInWater: true,
+    },
+    drawtype: "json",
+    shape: { base: "item/resource/barkash" },
+    textures: {
+		ash: { base: "ancienttools:item/resource/barkash" }
+	},
+	maxstacksize: 64,
+    guiTransform: {
+		rotation: { x: 143, y: 28, z: 0 },
+		origin: { x: 0.6, y: 0.3, z: 0.3 },
+		scale: 1.54
+	},
+    tpHandTransform: {
+		translation: { x: -2.3, y: -1.4, z: -1.5 },
+		rotation: { x: 0, y: 0, z: -90 }
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0.15, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.5, z: 0.5299 },
+		scale: 1.5
+	}
+}

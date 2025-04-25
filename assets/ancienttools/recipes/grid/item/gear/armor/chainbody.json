@@ -1,0 +1,15 @@
+﻿[
+    {
+		ingredientPattern: "TJT,CCC,TTT",
+		recipeGroup: 1,
+		ingredients: {
+			"J": { type: "item", code: "ancienttools:barkjerkinarmor-body-*", quantity: 1 },
+			"T": { type: "item", code: "game:metalchain-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel", "gold", "silver"], quantity: 1 },
+			"C": { type: "item", code: "game:metalchain-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel", "gold", "silver"], quantity: 2 }
+		},
+		width: 3,
+		height: 3,
+		name: "chain body armor",
+		output: { type: "item", code: "game:armor-body-chain-{metal}"  }
+	},
+]

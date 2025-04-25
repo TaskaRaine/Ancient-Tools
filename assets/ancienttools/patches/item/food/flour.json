@@ -1,18 +1,3 @@
 ﻿[
-	{
-		"op": "addeach",
-		"path": "/variantgroups/0/states/-",
-		"value": ["birch", "pine", "maple"],
-		"file": "game:itemtypes/food/flour",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	},
-	{
-		"op": "add",
-		"path": "/creativeinventory/ancienttools",
-		"value": ["*-birch", "*-pine", "*-maple"],
-		"file": "game:itemtypes/food/flour",
-		"side": "Server",
-		"condition": { "when": "BarkBreadEnabled", "isValue": "true" }
-	}
+
 ]

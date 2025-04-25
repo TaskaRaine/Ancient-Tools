@@ -1,0 +1,184 @@
+﻿[
+    {
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkjerkinarmor-legs-acacia" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-acacia" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-legs-acacia"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkjerkinarmor-legs-aged" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-aged" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-legs-aged"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkjerkinarmor-legs-baldcypress" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-baldcypress" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-legs-baldcypress"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkjerkinarmor-legs-birch" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-birch" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-legs-birch"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkjerkinarmor-legs-cypress" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-cypress" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-legs-cypress"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkjerkinarmor-legs-ebony" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-ebony" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-legs-ebony"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkjerkinarmor-legs-kapok" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-kapok" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-legs-kapok"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkjerkinarmor-legs-larch" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-larch" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-legs-larch"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkjerkinarmor-legs-maple" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-maple" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-legs-maple"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkjerkinarmor-legs-pine" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-pine" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-legs-pine"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkjerkinarmor-legs-purpleheart" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-purpleheart" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-legs-purpleheart"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkjerkinarmor-legs-redwood" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-redwood" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-legs-redwood"  }
+	},
+	{
+		ingredientPattern: "L,Q",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:barkjerkinarmor-legs-walnut" },
+			"Q": { type: "item", code: "ancienttools:leather-normal-walnut" }
+		},
+		width: 1,
+		height: 2,
+		shapeless: true,
+		recipeGroup: 2,
+		copyAttributesFrom: 'L',
+		averageDurability: false,
+		output: { type: "item", code: "ancienttools:barkjerkinarmor-legs-walnut"  }
+	},
+]

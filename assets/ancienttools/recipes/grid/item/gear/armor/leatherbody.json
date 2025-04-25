@@ -1,0 +1,170 @@
+﻿[
+    {
+		ingredientPattern: "LTL,MMM,MMM",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-acacia", quantity: 2 },
+			"M": { type: "item", code: "ancienttools:leather-normal-acacia", quantity: 3 },
+			"T": { type: "item", code: "game:flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "barkleatherarmor-body-acacia"  }
+	},
+	{
+		ingredientPattern: "LTL,MMM,MMM",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-aged", quantity: 2 },
+			"M": { type: "item", code: "ancienttools:leather-normal-aged", quantity: 3 },
+			"T": { type: "item", code: "game:flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "barkleatherarmor-body-aged"  }
+	},
+	{
+		ingredientPattern: "LTL,MMM,MMM",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-baldcypress", quantity: 2 },
+			"M": { type: "item", code: "ancienttools:leather-normal-baldcypress", quantity: 3 },
+			"T": { type: "item", code: "game:flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "barkleatherarmor-body-baldcypress"  }
+	},
+	{
+		ingredientPattern: "LTL,MMM,MMM",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-birch", quantity: 2 },
+			"M": { type: "item", code: "ancienttools:leather-normal-birch", quantity: 3 },
+			"T": { type: "item", code: "game:flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "barkleatherarmor-body-birch"  }
+	},
+	{
+		ingredientPattern: "LTL,MMM,MMM",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-cypress", quantity: 2 },
+			"M": { type: "item", code: "ancienttools:leather-normal-cypress", quantity: 3 },
+			"T": { type: "item", code: "game:flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "barkleatherarmor-body-cypress"  }
+	},
+	{
+		ingredientPattern: "LTL,MMM,MMM",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-ebony", quantity: 2 },
+			"M": { type: "item", code: "ancienttools:leather-normal-ebony", quantity: 3 },
+			"T": { type: "item", code: "game:flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "barkleatherarmor-body-ebony"  }
+	},
+	{
+		ingredientPattern: "LTL,MMM,MMM",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-ebony", quantity: 2 },
+			"M": { type: "item", code: "ancienttools:leather-normal-ebony", quantity: 3 },
+			"T": { type: "item", code: "game:flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "barkleatherarmor-body-ebony"  }
+	},
+	{
+		ingredientPattern: "LTL,MMM,MMM",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-kapok", quantity: 2 },
+			"M": { type: "item", code: "ancienttools:leather-normal-kapok", quantity: 3 },
+			"T": { type: "item", code: "game:flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "barkleatherarmor-body-kapok"  }
+	},
+	{
+		ingredientPattern: "LTL,MMM,MMM",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-larch", quantity: 2 },
+			"M": { type: "item", code: "ancienttools:leather-normal-larch", quantity: 3 },
+			"T": { type: "item", code: "game:flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "barkleatherarmor-body-larch"  }
+	},
+	{
+		ingredientPattern: "LTL,MMM,MMM",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-maple", quantity: 2 },
+			"M": { type: "item", code: "ancienttools:leather-normal-maple", quantity: 3 },
+			"T": { type: "item", code: "game:flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "barkleatherarmor-body-maple"  }
+	},
+	{
+		ingredientPattern: "LTL,MMM,MMM",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-pine", quantity: 2 },
+			"M": { type: "item", code: "ancienttools:leather-normal-pine", quantity: 3 },
+			"T": { type: "item", code: "game:flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "barkleatherarmor-body-pine"  }
+	},
+	{
+		ingredientPattern: "LTL,MMM,MMM",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-purpleheart", quantity: 2 },
+			"M": { type: "item", code: "ancienttools:leather-normal-purpleheart", quantity: 3 },
+			"T": { type: "item", code: "game:flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "barkleatherarmor-body-purpleheart"  }
+	},
+	{
+		ingredientPattern: "LTL,MMM,MMM",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-redwood", quantity: 2 },
+			"M": { type: "item", code: "ancienttools:leather-normal-redwood", quantity: 3 },
+			"T": { type: "item", code: "game:flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "barkleatherarmor-body-redwood"  }
+	},
+	{
+		ingredientPattern: "LTL,MMM,MMM",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-walnut", quantity: 2 },
+			"M": { type: "item", code: "ancienttools:leather-normal-walnut", quantity: 3 },
+			"T": { type: "item", code: "game:flaxtwine", quantity: 1 }
+		},
+		width: 3,
+		height: 3,
+		recipeGroup: 1,
+		output: { type: "item", code: "barkleatherarmor-body-walnut"  }
+	},
+]

@@ -1,0 +1,71 @@
+﻿{
+	code: "barkdough",
+	class: "ItemDough",
+	maxstacksize: 32,
+	attributes: {
+		displaycaseable: true,
+		shelvable: true,
+		bakingProperties: {
+			temp: 160,
+			levelFrom: 0.0,
+			levelTo: 0.25,
+			startScaleY: 0.9,
+			endScaleY: 0.95,
+			resultCode: "ancienttools:barkbread-{type}-partbaked",
+		},
+		inPieProperties: { texture: "ancienttools:block/food/pie/{type}{bakeLevel}", partType: 'Crust'  },
+		nutritionPropsWhenInMealByType: {
+			"*": { satiety: 100, foodcategory: "Grain" }
+		}
+	},
+	variantgroups: [
+		{ code: "type", states: ["birch", "pine", "maple"] },
+	],
+	shape: { base: "ancienttools:item/food/bread/{type}bread-dough" },
+	textures: {
+		"birchbread": {base: "ancienttools:item/food/grain/birchbread" },
+		"pinebread": {base: "ancienttools:item/food/grain/pinebread" },
+		"maplebread": {base: "ancienttools:item/food/grain/maplebread" },
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
+	materialDensity: 200,
+	combustibleProps: {
+   	     meltingPoint: 200,
+	     meltingDuration: 20,
+	     smeltedRatio: 1,
+	     smeltingType: "bake",
+	     smeltedStack: { type: "item", code: "ancienttools:barkbread-{type}-charred" },
+	     requiresContainer: false
+	},
+	guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -30, y: 26, z: 180 },
+		origin: { x: 0.52, y: 0.07, z: 0.5 },
+		scale: 4.9
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 1 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 4
+	},
+	fpHandTransform: {
+		translation: { x: 0, y: 0.22, z: 0.2 },
+		rotation: { x: 97, y: 1, z: -17 },
+		origin: { x: 0.5, y: 0.1, z: 0.5 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.69, y: -0.16, z: -0.53 },
+		rotation: { x: 88, y: -85, z: 2 },
+		origin: { x: 0.5, y: 0.13, z: 0.5 },
+		scale: 0.8
+	},
+	transitionableProps: [{
+		type: "Perish",
+		freshHours: { avg: 48 },
+		transitionHours: { avg: 24 },
+		transitionedStack: { type: "item", code: "game:rot" },
+		transitionRatio: 1
+	}]
+}

@@ -47,8 +47,41 @@
     <Content Include="assets\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Remove="assets\ancienttools\blocktypes\logbarrel.json" />
     <None Remove="assets\ancienttools\blocktypes\pitcherpump.json" />
     <None Remove="assets\ancienttools\blocktypes\shaduf.json" />
+    <None Remove="assets\ancienttools\itemtypes\food\barkbread.json" />
+    <None Remove="assets\ancienttools\itemtypes\food\barkdough.json" />
+    <None Remove="assets\ancienttools\itemtypes\food\barkflour.json" />
+    <None Remove="assets\ancienttools\itemtypes\gear\armor\jerkin\barkjerkinarmor.json" />
+    <None Remove="assets\ancienttools\itemtypes\gear\armor\leather\barkleatherarmor.json" />
+    <None Remove="assets\ancienttools\itemtypes\gear\backpack.json" />
+    <None Remove="assets\ancienttools\itemtypes\liquids\barkliquor.json" />
+    <None Remove="assets\ancienttools\itemtypes\resources\barkash.json" />
+    <None Remove="assets\ancienttools\itemtypes\resources\barkchunk.json" />
+    <None Remove="assets\ancienttools\itemtypes\resources\hide.json" />
+    <None Remove="assets\ancienttools\itemtypes\resources\leather.json" />
+    <None Remove="assets\ancienttools\patches\block\chamberstick.json" />
+    <None Remove="assets\ancienttools\recipes\barrel\barkash-tannin.json" />
+    <None Remove="assets\ancienttools\recipes\barrel\barkhides.json" />
+    <None Remove="assets\ancienttools\recipes\barrel\barkleather.json" />
+    <None Remove="assets\ancienttools\recipes\grid\block\bark leather vanilla\antlermount.json" />
+    <None Remove="assets\ancienttools\recipes\grid\block\bark leather vanilla\book.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\gear\armorrepair\jerkinbody.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\gear\armorrepair\jerkinlegs.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\gear\armorrepair\leatherbody.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\gear\armorrepair\leatherhelm.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\gear\armorrepair\leatherlegs.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\gear\armor\brigandinebody.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\gear\armor\brigandinelegs.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\gear\armor\chainbody.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\gear\armor\chainlegs.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\gear\armor\jerkinbody.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\gear\armor\jerkinlegs.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\gear\armor\leatherbody.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\gear\armor\leatherhelm.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\gear\armor\leatherlegs.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\gear\backpack.json" />
     <None Remove="assets\ancienttools\shapes\block\pitcherpump\groundwaterpump.json" />
     <None Remove="assets\ancienttools\shapes\block\shaduf\shaduf-arm.json" />
     <None Remove="assets\ancienttools\shapes\block\shaduf\shaduf-bottom.json" />
@@ -56,6 +89,25 @@
     <None Remove="assets\ancienttools\shapes\block\shaduf\shaduf-top.json" />
     <None Remove="assets\ancienttools\shapes\block\shaduf\shaduf.json" />
     <None Remove="assets\ancienttools\recipes\grid\block\barkbaskettyped.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\acornamaranthbread-dough.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\acornbirchbread-dough.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\acornbirchbread.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\acornmaplebread-dough.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\acornmaplebread.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\acornpinebread-dough.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\acornpinebread.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\birchbread-dough.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\birchbread-sliced.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\birchbread.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\maplebread-dough.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\maplebread-sliced.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\maplebread.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\pinebread-dough.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\pinebread-sliced.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\pinebread.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\sprucebread-dough.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\sprucebread-sliced.json" />
+    <None Remove="assets\ancienttools\shapes\item\food\bread\sprucebread.json" />
     <Content Include="modinfo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -66,5 +118,13 @@
   <ItemGroup>
     <Folder Include="assets\ancienttools\patches\compatibility\bricklayers\" />
     <Folder Include="assets\ancienttools\recipes\grid\compatibility\bricklayers\" />
+    <Folder Include="assets\ancienttools\textures\item\food\pie\" />
+    <Folder Include="assets\ancienttools\textures\item\gear\armor\leather\" />
+    <Folder Include="assets\ancienttools\textures\item\gear\armor\jerkin\" />
+    <Folder Include="assets\ancienttools\textures\item\gear\backpack\" />
+    <Folder Include="assets\ancienttools\textures\item\resource\leather\" />
+    <Folder Include="assets\game\shapes\item\food\" />
+    <Folder Include="assets\game\textures\block\food\" />
+    <Folder Include="assets\game\textures\item\food\" />
   </ItemGroup>
 </Project>

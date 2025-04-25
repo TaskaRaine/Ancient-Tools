@@ -1,0 +1,175 @@
+﻿{
+	code: "hide",
+	variantgroups: [
+		{ code: "type", states: [ "brained", "smoked", "aged", "cypress", "birch", "maple", "pine", "acacia", "kapok", "baldcypress", "larch", "redwood", "ebony", "purpleheart", "walnut", "oak" ] },
+		{ code: "size", states: [ "small", "medium", "large", "huge"  ] }
+	],
+	behaviors: [
+		{ name: "GroundStorable", properties: { layout: 'SingleCenter', collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 } } }
+	],
+	attributes: {
+		handbook: {
+			groupBy: ["hide-{type}-*"],
+			"createdByByType": {
+				"@hide-(brained|smoked)-(small|medium|large|huge)": "ancienttools:handbook-nativetanning-craftinfo"
+			}
+		},
+		"stretchableShapeByType": {
+			"@hide-(brained|smoked)-(small|medium|large|huge)": "ancienttools:shapes/block/stretchingframe/resourceshapes/meshhide/{type}hide_meshhide"
+		},
+		"inFirePitPropsByType": {
+			"@hide-(brained|smoked)-huge":
+			{
+				transform: {
+					scale: 0.3,
+					origin: { x: 0.5, y: 0.0, z: 0.5 },
+					translation: { x: -0.0, y: 0.04, z: 0.0 },
+					rotation: { x: 90, y: 0, z: -52.5 }
+				  },
+				  useFirepitModel: "Spit"
+			},
+			"@hide-(brained|smoked)-large": 
+			{
+				transform: {
+					scale: 0.3,
+					origin: { x: 0.5, y: 0.0, z: 0.5 },
+					translation: { x: -0.0, y: 0.06, z: 0.0 },
+					rotation: { x: 90, y: 0, z: -52.5 }
+				  },
+				  useFirepitModel: "Spit"
+			},
+			"@hide-(brained|smoked)-medium": 
+			{
+				transform: {
+					scale: 0.3,
+					origin: { x: 0.5, y: 0.0, z: 0.5 },
+					translation: { x: -0.0, y: 0.12, z: 0.0 },
+					rotation: { x: 90, y: 0, z: -52.5 }
+				  },
+				  useFirepitModel: "Spit"
+			},
+			"@hide-(brained|smoked)-small": 
+			{
+				transform: {
+					scale: 0.5,
+					origin: { x: 0.5, y: 0.0, z: 0.5 },
+					translation: { x: -0.0, y: 0.15, z: 0.0 },
+					rotation: { x: 90, y: 0, z: -52.5 }
+				  },
+				  useFirepitModel: "Spit"
+			}
+		}
+	},
+	"shapeByType": {
+		"@hide-(brained|smoked|oak|aged|cypress|birch|maple|pine|acacia|kapok|baldcypress|larch|redwood|ebony|walnut|purpleheart)-(small|medium|large|huge)": {
+			"base": "game:item/resource/hide/{size}1"
+		}
+	},
+	"texturesByType": {
+		"@hide-(brained|smoked|oak|aged|cypress|birch|maple|pine|acacia|kapok|baldcypress|larch|redwood|ebony|walnut|purpleheart)-(small|medium|large|huge)": {
+			"furside": { "base": "ancienttools:item/resource/hide/{type}hide" }, "fleshside": { "base": "game:item/resource/hide/flesh" }
+		}
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },	
+	materialDensity: 620,
+	maxstacksizeByType: {
+		"*-small": 64,
+		"*-medium": 32,
+		"*-large": 16,
+		"*-huge": 8
+	},
+	"combustiblePropsByType": {
+		"*-brained-*": {
+			meltingPoint: 200,
+			meltingDuration: 1200,
+			smeltedRatio: 1,
+			smeltingType: "cook",
+			smeltedStack: { type: "item", code: "ancienttools:hide-smoked-{size}" },
+			requiresContainer: false
+		},
+	},
+	tpHandTransformbyType: {
+		"*-small": {
+			translation: { x: -1.15, y: -0.1, z: -0.95 },
+			rotation: { x: 0, y: 90, z: -74 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 0.5
+		},
+		"*-medium": {
+			translation: { x: -1.26, y: -0.2, z: -1.24 },
+			rotation: { x: 0, y: 90, z: -77 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 0.4
+		},
+		"*-large": {
+			translation: { x: -1.12, y: -0.2, z: -1.22 },
+			rotation: { x: 0, y: 90, z: -83 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 0.4
+		},
+		"*-huge": {
+			translation: { x: -1.56, y: -0.6, z: -1.4 },
+			rotation: { x: 0, y: 90, z: -82 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 0.35
+		}
+	},
+	guiTransformByType: {
+		"*-small": {
+			rotation: { x: 90, y: 0.0, z: 0.0 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 1.5
+		},
+		"*-medium": {
+			rotation: { x: 90, y: 0.0, z: 0.0 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 0.8
+		},
+		"*-large": {
+			rotation: { x: 90, y: 0.0, z: 0.0 },
+			origin: { x: 0.5, y: 0.5, z: 0.5 },
+			scale: 0.8
+		},
+		"*-huge": {
+			rotation: { x: 105, y: 0.0, z: 0.0 },
+			origin: { x: 0.5, y: 0.5, z: 0.3 },
+			scale: 0.7
+		}
+	},
+	groundTransformByType: {
+		"*-small": {
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			rotation: { x: 0, y: 0, z: 0 },
+			scale: 5
+		},
+		"*-medium": {
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			rotation: { x: 0, y: 0, z: 0 },
+			scale: 4
+		},
+		"*-large": {
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			rotation: { x: 0, y: 0, z: 0 },
+			scale: 4
+		},
+		"*-huge": {
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			rotation: { x: 0, y: 0, z: 0 },
+			scale: 4
+		}
+	},
+	fpHandTransformByType: {
+		"*-small": {
+			scale: 0.75
+		},
+		"*-medium": {
+			scale: 0.85
+		},
+		"*-large": {
+			scale: 1
+		},
+		"*-huge": {
+			scale: 1.15
+		}
+	}
+}

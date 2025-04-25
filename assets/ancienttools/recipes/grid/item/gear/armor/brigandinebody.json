@@ -1,0 +1,158 @@
+﻿[
+    {
+      ingredientPattern: "PLP,PJP,PPP",
+      recipeGroup: 1,
+      ingredients: {
+          "J": { type: "item", code: "ancienttools:barkjerkinarmor-body-acacia", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-acacia", stacksize: 9 } } },
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "L": { "type": "item", "code": "game:leather-normal-plain" }
+      },
+      width: 3,
+      height: 3,
+      output: { type: "item", code: "game:armor-body-brigandine-{metal}"  }
+	},
+    {
+      ingredientPattern: "PLP,PJP,PPP",
+      recipeGroup: 1,
+      ingredients: {
+          "J": { type: "item", code: "ancienttools:barkjerkinarmor-body-aged", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-aged", stacksize: 9 } } },
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "L": { "type": "item", "code": "game:leather-normal-plain" }
+      },
+      width: 3,
+      height: 3,
+      output: { type: "item", code: "game:armor-body-brigandine-{metal}"  }
+	},
+    {
+      ingredientPattern: "PLP,PJP,PPP",
+      recipeGroup: 1,
+      ingredients: {
+          "J": { type: "item", code: "ancienttools:barkjerkinarmor-body-baldcypress", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-baldcypress", stacksize: 9 } } },
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "L": { "type": "item", "code": "game:leather-normal-plain" }
+      },
+      width: 3,
+      height: 3,
+      output: { type: "item", code: "game:armor-body-brigandine-{metal}"  }
+	},
+    {
+      ingredientPattern: "PLP,PJP,PPP",
+      recipeGroup: 1,
+      ingredients: {
+          "J": { type: "item", code: "ancienttools:barkjerkinarmor-body-birch", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-birch", stacksize: 9 } } },
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "L": { "type": "item", "code": "game:leather-normal-plain" }
+      },
+      width: 3,
+      height: 3,
+      output: { type: "item", code: "game:armor-body-brigandine-{metal}"  }
+	},
+    {
+      ingredientPattern: "PLP,PJP,PPP",
+      recipeGroup: 1,
+      ingredients: {
+          "J": { type: "item", code: "ancienttools:barkjerkinarmor-body-cypress", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-cypress", stacksize: 9 } } },
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "L": { "type": "item", "code": "game:leather-normal-plain" }
+      },
+      width: 3,
+      height: 3,
+      output: { type: "item", code: "game:armor-body-brigandine-{metal}"  }
+	},
+    {
+      ingredientPattern: "PLP,PJP,PPP",
+      recipeGroup: 1,
+      ingredients: {
+          "J": { type: "item", code: "ancienttools:barkjerkinarmor-body-ebony", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-ebony", stacksize: 9 } } },
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "L": { "type": "item", "code": "game:leather-normal-plain" }
+      },
+      width: 3,
+      height: 3,
+      output: { type: "item", code: "game:armor-body-brigandine-{metal}"  }
+	},
+    {
+      ingredientPattern: "PLP,PJP,PPP",
+      recipeGroup: 1,
+      ingredients: {
+          "J": { type: "item", code: "ancienttools:barkjerkinarmor-body-kapok", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-kapok", stacksize: 9 } } },
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "L": { "type": "item", "code": "game:leather-normal-plain" }
+      },
+      width: 3,
+      height: 3,
+      output: { type: "item", code: "game:armor-body-brigandine-{metal}"  }
+	},
+    {
+      ingredientPattern: "PLP,PJP,PPP",
+      recipeGroup: 1,
+      ingredients: {
+          "J": { type: "item", code: "ancienttools:barkjerkinarmor-body-larch", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-larch", stacksize: 9 } } },
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "L": { "type": "item", "code": "game:leather-normal-plain" }
+      },
+      width: 3,
+      height: 3,
+      output: { type: "item", code: "game:armor-body-brigandine-{metal}"  }
+	},
+    {
+      ingredientPattern: "PLP,PJP,PPP",
+      recipeGroup: 1,
+      ingredients: {
+          "J": { type: "item", code: "ancienttools:barkjerkinarmor-body-maple", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-maple", stacksize: 9 } } },
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "L": { "type": "item", "code": "game:leather-normal-plain" }
+      },
+      width: 3,
+      height: 3,
+      output: { type: "item", code: "game:armor-body-brigandine-{metal}"  }
+	},
+    {
+      ingredientPattern: "PLP,PJP,PPP",
+      recipeGroup: 1,
+      ingredients: {
+          "J": { type: "item", code: "ancienttools:barkjerkinarmor-body-pine", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-pine", stacksize: 9 } } },
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "L": { "type": "item", "code": "game:leather-normal-plain" }
+      },
+      width: 3,
+      height: 3,
+      output: { type: "item", code: "game:armor-body-brigandine-{metal}"  }
+	},
+    {
+      ingredientPattern: "PLP,PJP,PPP",
+      recipeGroup: 1,
+      ingredients: {
+          "J": { type: "item", code: "ancienttools:barkjerkinarmor-body-purpleheart", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-purpleheart", stacksize: 9 } } },
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "L": { "type": "item", "code": "game:leather-normal-plain" }
+      },
+      width: 3,
+      height: 3,
+      output: { type: "item", code: "game:armor-body-brigandine-{metal}"  }
+	},
+    {
+      ingredientPattern: "PLP,PJP,PPP",
+      recipeGroup: 1,
+      ingredients: {
+          "J": { type: "item", code: "ancienttools:barkjerkinarmor-body-redwood", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-redwood", stacksize: 9 } } },
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "L": { "type": "item", "code": "game:leather-normal-plain" }
+      },
+      width: 3,
+      height: 3,
+      output: { type: "item", code: "game:armor-body-brigandine-{metal}"  }
+	},
+    {
+      ingredientPattern: "PLP,PJP,PPP",
+      recipeGroup: 1,
+      ingredients: {
+          "J": { type: "item", code: "ancienttools:barkjerkinarmor-body-walnut", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-walnut", stacksize: 9 } } },
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "L": { "type": "item", "code": "game:leather-normal-plain" }
+      },
+      width: 3,
+      height: 3,
+      output: { type: "item", code: "game:armor-body-brigandine-{metal}"  }
+	},
+]

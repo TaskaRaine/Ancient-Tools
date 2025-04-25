@@ -11,7 +11,7 @@
 			mortarProperties: {
 				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_ancienttools_bark_{bark}",
 				texturePaths: [{ code: "{bark}", path: "game:block/wood/bark/{bark}" }],
-				groundStack: { type: "item", code: "game:flour-{bark}" },
+				groundStack: { type: "item", code: "ancienttools:barkflour-{bark}" },
 				resultQuantity: 1
 			},
 			handbook: {
@@ -41,7 +41,7 @@
 			mortarProperties: {
 				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_ancienttools_bark_birch",
 				texturePaths: [{ code: "{bark}", path: "game:block/wood/bark/{bark}" }],
-				groundStack: { type: "item", code: "game:flour-{bark}" },
+				groundStack: { type: "item", code: "ancienttools:barkflour-{bark}" },
 				resultQuantity: 1
 			},
 			handbook: {
@@ -65,10 +65,49 @@
 					convertToBlockCode: "ancienttools:salvepot-empty"
 				}
 			},
-			{ "name": "GroundStorable", "properties": { "layout": "Quadrants" } }
+			{
+				name: "GroundStorable",
+				properties: {
+					layout: "Stacking",
+					placeRemoveSound: "game:sounds/block/planks",
+					stackingModel: "ancienttools:block/piles/bark",
+					stackingTextures: {
+						bark: "game:block/wood/bark/{bark}",
+					},
+					tessQuantityElements: 18,
+					stackingCapacity: 64,
+					collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0625, z2: 1 },
+					cbScaleYByLayer: 0.25,
+					transferQuantity: 1,
+					bulkTransferQuantity: 4,
+					"upSolid": false
+				}
+			}
 		],
 		"*": [
-			{ "name": "GroundStorable", "properties": { "layout": "Quadrants" } }
+			{
+				name: "GroundStorable",
+				properties: {
+					layout: "Stacking",
+					placeRemoveSound: "game:sounds/block/planks",
+					stackingModel: "ancienttools:block/piles/bark",
+					stackingTexturesByType: {
+						"@bark-(cypress)": {
+							bark: "ancienttools:block/wood/bark/{bark}",
+						},
+						"*": {
+							bark: "game:block/wood/bark/{bark}",
+						}
+					},
+					tessQuantityElements: 18,
+					stackingCapacity: 64,
+					collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0625, z2: 1 },
+					cbScaleYByLayer: 0.25,
+					transferQuantity: 1,
+					bulkTransferQuantity: 4,
+					"upSolid": false
+				}
+			}
 		]
 	},
 	variantgroups: [
@@ -89,21 +128,33 @@
 		"@bark-(birch|aged)": {
 			burnTemperature: 800,
 			burnDuration: 4,
+			meltingPoint: 650,
+			meltingDuration: 45,
+			smeltedRatio: 64,
+			smeltingType: "fire",
+			smeltedStack: { type: "item", code: "ancienttools:barkash", "stacksize": 16 },
+			requiresContainer: false
 		},
 		"*": {
 			burnTemperature: 800,
 			burnDuration: 8,
+			meltingPoint: 650,
+			meltingDuration: 45,
+			smeltedRatio: 64,
+			smeltingType: "fire",
+			smeltedStack: { type: "item", code: "ancienttools:barkash", "stacksize": 16 },
+			requiresContainer: false
 		}
 	},
 	grindingPropsByType: {
 		"*-birch": {
-			groundStack: { type: "item", code: "game:flour-birch" }
+			groundStack: { type: "item", code: "ancienttools:barkflour-birch" }
 		},
 		"*-pine": {
-			groundStack: { type: "item", code: "game:flour-pine" }
+			groundStack: { type: "item", code: "ancienttools:barkflour-pine" }
 		},
 		"*-maple": {
-			groundStack: { type: "item", code: "game:flour-maple" }
+			groundStack: { type: "item", code: "ancienttools:barkflour-maple" }
 		}
 	},
 	guiTransform: {

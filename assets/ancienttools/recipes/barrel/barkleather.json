@@ -1,0 +1,542 @@
+﻿[
+	{
+		code: "barkleather_acacia",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-acacia-small", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-acacia", litres: 2, consumeLitres: 2 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-acacia", stackSize: 1 }
+	},
+	{
+		code: "barkleather_acacia",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-acacia-medium", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-acacia", litres: 4, consumeLitres: 4 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-acacia", stackSize: 2 }
+	},
+	{
+		code: "barkleather_acacia",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-acacia-large", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-acacia", litres: 6, consumeLitres: 6 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-acacia", stackSize: 3 }
+	},
+	{
+		code: "barkleather_acacia",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-acacia-huge", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-acacia", litres: 10, consumeLitres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-acacia", stackSize: 5 }
+	},
+    {
+		code: "barkleather_aged",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-aged-small", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-aged", litres: 2, consumeLitres: 2 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-aged", stackSize: 1 }
+	},
+	{
+		code: "barkleather_aged",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-aged-medium", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-aged", litres: 4, consumeLitres: 4 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-aged", stackSize: 2 }
+	},
+	{
+		code: "barkleather_aged",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-aged-large", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-aged", litres: 6, consumeLitres: 6 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-aged", stackSize: 3 }
+	},
+	{
+		code: "barkleather_aged",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-aged-huge", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-aged", litres: 10, consumeLitres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-aged", stackSize: 5 }
+	},
+	{
+		code: "barkleather_baldcypress",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-baldcypress-small", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-baldcypress", litres: 2, consumeLitres: 2 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-baldcypress", stackSize: 1 }
+	},
+	{
+		code: "barkleather_baldcypress",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-baldcypress-medium", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-baldcypress", litres: 4, consumeLitres: 4 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-baldcypress", stackSize: 2 }
+	},
+	{
+		code: "barkleather_baldcypress",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-baldcypress-large", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-baldcypress", litres: 6, consumeLitres: 6 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-baldcypress", stackSize: 3 }
+	},
+	{
+		code: "barkleather_baldcypress",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-baldcypress-huge", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-baldcypress", litres: 10, consumeLitres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-baldcypress", stackSize: 5 }
+	},
+	{
+		code: "barkleather_birch",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-birch-small", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-birch", litres: 2, consumeLitres: 2 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-birch", stackSize: 1 }
+	},
+	{
+		code: "barkleather_birch",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-birch-medium", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-birch", litres: 4, consumeLitres: 4 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-birch", stackSize: 2 }
+	},
+	{
+		code: "barkleather_birch",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-birch-large", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-birch", litres: 6, consumeLitres: 6 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-birch", stackSize: 3 }
+	},
+	{
+		code: "barkleather_birch",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-birch-huge", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-birch", litres: 10, consumeLitres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-birch", stackSize: 5 }
+	},
+	{
+		code: "barkleather_cypress",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-cypress-small", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-cypress", litres: 2, consumeLitres: 2 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-cypress", stackSize: 1 }
+	},
+	{
+		code: "barkleather_cypress",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-cypress-medium", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-cypress", litres: 4, consumeLitres: 4 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-cypress", stackSize: 2 }
+	},
+	{
+		code: "barkleather_cypress",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-cypress-large", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-cypress", litres: 6, consumeLitres: 6 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-cypress", stackSize: 3 }
+	},
+	{
+		code: "barkleather_cypress",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-cypress-huge", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-cypress", litres: 10, consumeLitres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-cypress", stackSize: 5 }
+	},
+	{
+		code: "barkleather_ebony",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-ebony-small", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-ebony", litres: 2, consumeLitres: 2 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-ebony", stackSize: 1 }
+	},
+	{
+		code: "barkleather_ebony",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-ebony-medium", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-ebony", litres: 4, consumeLitres: 4 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-ebony", stackSize: 2 }
+	},
+	{
+		code: "barkleather_ebony",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-ebony-large", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-ebony", litres: 6, consumeLitres: 6 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-ebony", stackSize: 3 }
+	},
+	{
+		code: "barkleather_ebony",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-ebony-huge", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-ebony", litres: 10, consumeLitres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-ebony", stackSize: 5 }
+	},
+	{
+		code: "barkleather_kapok",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-kapok-small", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-kapok", litres: 2, consumeLitres: 2 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-kapok", stackSize: 1 }
+	},
+	{
+		code: "barkleather_kapok",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-kapok-medium", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-kapok", litres: 4, consumeLitres: 4 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-kapok", stackSize: 2 }
+	},
+	{
+		code: "barkleather_kapok",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-kapok-large", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-kapok", litres: 6, consumeLitres: 6 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-kapok", stackSize: 3 }
+	},
+	{
+		code: "barkleather_kapok",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-kapok-huge", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-kapok", litres: 10, consumeLitres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-kapok", stackSize: 5 }
+	},
+	{
+		code: "barkleather_larch",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-larch-small", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-larch", litres: 2, consumeLitres: 2 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-larch", stackSize: 1 }
+	},
+	{
+		code: "barkleather_larch",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-larch-medium", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-larch", litres: 4, consumeLitres: 4 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-larch", stackSize: 2 }
+	},
+	{
+		code: "barkleather_larch",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-larch-large", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-larch", litres: 6, consumeLitres: 6 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-larch", stackSize: 3 }
+	},
+	{
+		code: "barkleather_larch",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-larch-huge", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-larch", litres: 10, consumeLitres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-larch", stackSize: 5 }
+	},
+	{
+		code: "barkleather_maple",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-maple-small", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-maple", litres: 2, consumeLitres: 2 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-maple", stackSize: 1 }
+	},
+	{
+		code: "barkleather_maple",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-maple-medium", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-maple", litres: 4, consumeLitres: 4 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-maple", stackSize: 2 }
+	},
+	{
+		code: "barkleather_maple",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-maple-large", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-maple", litres: 6, consumeLitres: 6 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-maple", stackSize: 3 }
+	},
+	{
+		code: "barkleather_maple",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-maple-huge", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-maple", litres: 10, consumeLitres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-maple", stackSize: 5 }
+	},
+	{
+		code: "barkleather_pine",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-pine-small", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-pine", litres: 2, consumeLitres: 2 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-pine", stackSize: 1 }
+	},
+	{
+		code: "barkleather_pine",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-pine-medium", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-pine", litres: 4, consumeLitres: 4 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-pine", stackSize: 2 }
+	},
+	{
+		code: "barkleather_pine",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-pine-large", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-pine", litres: 6, consumeLitres: 6 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-pine", stackSize: 3 }
+	},
+	{
+		code: "barkleather_pine",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-pine-huge", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-pine", litres: 10, consumeLitres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-pine", stackSize: 5 }
+	},
+	{
+		code: "barkleather_purpleheart",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-purpleheart-small", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-purpleheart", litres: 2, consumeLitres: 2 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-purpleheart", stackSize: 1 }
+	},
+	{
+		code: "barkleather_purpleheart",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-purpleheart-medium", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-purpleheart", litres: 4, consumeLitres: 4 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-purpleheart", stackSize: 2 }
+	},
+	{
+		code: "barkleather_purpleheart",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-purpleheart-large", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-purpleheart", litres: 6, consumeLitres: 6 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-purpleheart", stackSize: 3 }
+	},
+	{
+		code: "barkleather_purpleheart",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-purpleheart-huge", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-purpleheart", litres: 10, consumeLitres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-purpleheart", stackSize: 5 }
+	},
+	{
+		code: "barkleather_redwood",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-redwood-small", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-redwood", litres: 2, consumeLitres: 2 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-redwood", stackSize: 1 }
+	},
+	{
+		code: "barkleather_redwood",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-redwood-medium", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-redwood", litres: 4, consumeLitres: 4 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-redwood", stackSize: 2 }
+	},
+	{
+		code: "barkleather_redwood",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-redwood-large", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-redwood", litres: 6, consumeLitres: 6 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-redwood", stackSize: 3 }
+	},
+	{
+		code: "barkleather_redwood",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-redwood-huge", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-redwood", litres: 10, consumeLitres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-redwood", stackSize: 5 }
+	},
+	{
+		code: "barkleather_walnut",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-walnut-small", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-walnut", litres: 2, consumeLitres: 2 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-walnut", stackSize: 1 }
+	},
+	{
+		code: "barkleather_walnut",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-walnut-medium", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-walnut", litres: 4, consumeLitres: 4 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-walnut", stackSize: 2 }
+	},
+	{
+		code: "barkleather_walnut",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-walnut-large", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-walnut", litres: 6, consumeLitres: 6 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-walnut", stackSize: 3 }
+	},
+	{
+		code: "barkleather_walnut",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-walnut-huge", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-walnut", litres: 10, consumeLitres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:leather-normal-walnut", stackSize: 5 }
+	},
+	{
+		code: "barkleather_oak",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-oak-small", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-oak", litres: 2, consumeLitres: 2 },
+		],
+		output: { type: "item", code: "game:leather-normal-plain", stackSize: 1 }
+	},
+	{
+		code: "barkleather_oak",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-oak-medium", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-oak", litres: 4, consumeLitres: 4 },
+		],
+		output: { type: "item", code: "game:leather-normal-plain", stackSize: 2 }
+	},
+	{
+		code: "barkleather_oak",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-oak-large", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-oak", litres: 6, consumeLitres: 6 },
+		],
+		output: { type: "item", code: "game:leather-normal-plain", stackSize: 3 }
+	},
+	{
+		code: "barkleather_oak",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-oak-huge", quantity: 1 },
+			{ type: "item", code: "ancienttools:barkliquorportion-strong-oak", litres: 10, consumeLitres: 10 },
+		],
+		output: { type: "item", code: "game:leather-normal-plain", stackSize: 5 }
+	},
+	{
+		code: "barkleather_oak_tannin",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-oak-small", quantity: 1 },
+			{ type: "item", code: "game:strongtanninportion", litres: 2, consumeLitres: 2 },
+		],
+		output: { type: "item", code: "game:leather-normal-plain", stackSize: 1 }
+	},
+	{
+		code: "barkleather_oak_tannin",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-oak-medium", quantity: 1 },
+			{ type: "item", code: "game:strongtanninportion", litres: 4, consumeLitres: 4 },
+		],
+		output: { type: "item", code: "game:leather-normal-plain", stackSize: 2 }
+	},
+	{
+		code: "barkleather_oak_tannin",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-oak-large", quantity: 1 },
+			{ type: "item", code: "game:strongtanninportion", litres: 6, consumeLitres: 6 },
+		],
+		output: { type: "item", code: "game:leather-normal-plain", stackSize: 3 }
+	},
+	{
+		code: "barkleather_oak_tannin",
+		sealHours: 108,
+		ingredients: [
+			{ type: "item", code: "ancienttools:hide-oak-huge", quantity: 1 },
+			{ type: "item", code: "game:strongtanninportion", litres: 10, consumeLitres: 10 },
+		],
+		output: { type: "item", code: "game:leather-normal-plain", stackSize: 5 }
+	},
+]

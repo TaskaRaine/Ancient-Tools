@@ -11,11 +11,43 @@
     },
     {
         "op": "add",
+        "path": "/attributes/primitiveBarrelPropsByType",
+        "value": {
+            "*-placed-*": {
+                "nextStage": "ancienttools:logbarrel-{wood}-1"
+            }
+        },
+        "file": "game:blocktypes/wood/woodtyped/log",
+		"side": "Server"
+    },
+    {
+        "op": "add",
         "path": "/behaviorsByType/*-grown-*/-",
         "value": { "name": "ConvertToResinLog", properties: { "variantType": "wood", "variantValues": ["pine", "acacia"] } },
         "file": "game:blocktypes/wood/woodtyped/log",
         "side": "Server",
         "condition": { "when": "AllowCarvingForResin", "isValue": "true" }
+    },
+    {
+        "op": "add",
+        "path": "/behaviorsByType/*-grown-*/-",
+        "value": { "name": "AdzeStrip" },
+        "file": "game:blocktypes/wood/woodtyped/log",
+        "side": "Server",
+    },
+    {
+        "op": "add",
+        "path": "/behaviorsByType/*/-",
+        "value": { "name": "AdzeStrip" },
+        "file": "game:blocktypes/wood/woodtyped/log",
+        "side": "Server",
+    },
+    {
+        "op": "add",
+        "path": "/behaviorsByType/*/-",
+        "value": { "name": "CarveLogBarrel" },
+        "file": "game:blocktypes/wood/woodtyped/log",
+        "side": "Server",
     },
     {
         "op": "move",

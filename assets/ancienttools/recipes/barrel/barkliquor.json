@@ -1,0 +1,288 @@
+﻿[
+	{
+		code: "barkliquor_high_weak",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-oak",  quantity: 16 },
+			{ type: "item", code: "game:waterportion",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-weak-oak", litres: 10 }
+	},
+	{
+		code: "barkliquor_high_weak",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-pine",  quantity: 16 },
+			{ type: "item", code: "game:waterportion",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-weak-pine", litres: 10 }
+	},
+	{
+		code: "barkliquor_high_weak",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-walnut",  quantity: 16 },
+			{ type: "item", code: "game:waterportion",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-weak-walnut", litres: 10 }
+	},
+	{
+		code: "barkliquor_high_weak",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-acacia",  quantity: 16 },
+			{ type: "item", code: "game:waterportion",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-weak-acacia", litres: 10 }
+	},
+	{
+		code: "barkliquor_high_weak",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-redwood",  quantity: 16 },
+			{ type: "item", code: "game:waterportion",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-weak-redwood", litres: 10 }
+	},
+	{
+		code: "barkliquor_high_weak",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-ebony",  quantity: 16 },
+			{ type: "item", code: "game:waterportion",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-weak-ebony", litres: 10 }
+	},
+	{
+		code: "barkliquor_high_strong",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-oak",  quantity: 16 },
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-oak",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-strong-oak", litres: 10 }
+	},
+	{
+		code: "barkliquor_high_strong_tannin",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-oak",  quantity: 16 },
+			{ type: "item", code: "game:weaktanninportion",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-strong-oak", litres: 10 }
+	},
+	{
+		code: "barkliquor_high_strong",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-pine",  quantity: 16 },
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-pine",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-strong-pine", litres: 10 }
+	},
+	{
+		code: "barkliquor_high_strong",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-walnut",  quantity: 16 },
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-walnut",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-strong-walnut", litres: 10 }
+	},
+	{
+		code: "barkliquor_high_strong",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-acacia",  quantity: 16 },
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-acacia",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-strong-acacia", litres: 10 }
+	},
+	{
+		code: "barkliquor_high_strong",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-redwood",  quantity: 16 },
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-redwood",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-strong-redwood", litres: 10 }
+	},
+	{
+		code: "barkliquor_high_strong",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-ebony",  quantity: 16 },
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-ebony",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-strong-ebony", litres: 10 }
+	},
+	{
+		"code": "barkliquor_low_moderate",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-maple",  quantity: 24 },
+			{ type: "item", code: "game:waterportion",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-weak-maple", litres: 10 }
+	},
+	{
+		"code": "barkliquor_low_moderate",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-birch",  quantity: 24 },
+			{ type: "item", code: "game:waterportion",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-weak-birch", litres: 10 }
+	},
+	{
+		"code": "barkliquor_low_moderate",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-kapok",  quantity: 24 },
+			{ type: "item", code: "game:waterportion",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-weak-kapok", litres: 10 }
+	},
+	{
+		"code": "barkliquor_high_moderate",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-maple",  quantity: 24 },
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-maple",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-strong-maple", litres: 10 }
+
+	},
+	{
+		"code": "barkliquor_high_moderate",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-birch",  quantity: 24 },
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-birch",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-strong-birch", litres: 10 }
+
+	},
+	{
+		"code": "barkliquor_high_moderate",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-kapok",  quantity: 24 },
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-kapok",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-strong-kapok", litres: 10 }
+
+	},
+	{
+		code: "barkliquor_low_weak",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-larch",  quantity: 32 },
+			{ type: "item", code: "game:waterportion",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-weak-larch", litres: 10 }
+	},
+	{
+		code: "barkliquor_low_weak",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-baldcypress",  quantity: 32 },
+			{ type: "item", code: "game:waterportion",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-weak-baldcypress", litres: 10 }
+	},
+	{
+		code: "barkliquor_low_weak",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-cypress",  quantity: 32 },
+			{ type: "item", code: "game:waterportion",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-weak-cypress", litres: 10 }
+	},
+	{
+		code: "barkliquor_low_weak",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-purpleheart",  quantity: 32 },
+			{ type: "item", code: "game:waterportion",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-weak-purpleheart", litres: 10 }
+	},
+	{
+		code: "barkliquor_low_weak",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-aged",  quantity: 32 },
+			{ type: "item", code: "game:waterportion",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-weak-aged", litres: 10 }
+	},
+	{
+		code: "barkliquor_low_strong",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-larch",  quantity: 32 },
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-larch",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-strong-larch", litres: 10 }
+	},
+	{
+		code: "barkliquor_low_strong",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-baldcypress",  quantity: 32 },
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-baldcypress",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-strong-baldcypress", litres: 10 }
+	},
+	{
+		code: "barkliquor_low_strong",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-cypress",  quantity: 32 },
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-cypress",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-strong-cypress", litres: 10 }
+	},
+	{
+		code: "barkliquor_low_strong",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-purpleheart",  quantity: 32 },
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-purpleheart",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-strong-purpleheart", litres: 10 }
+	},
+	{
+		code: "barkliquor_low_strong",
+		"name": "bark",
+		sealHours: 24,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkchunk-aged",  quantity: 32 },
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-aged",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkliquorportion-strong-aged", litres: 10 }
+	},
+]

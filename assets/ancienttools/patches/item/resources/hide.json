@@ -55,30 +55,9 @@
 	},
 	{
 		"op": "add",
-		"path": "/variantgroups/0/states/-",
-		"value": "brained",
-		"file": "game:itemtypes/resource/hide",
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/variantgroups/0/states/-",
-		"value": "smoked",
-		"file": "game:itemtypes/resource/hide",
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/creativeinventory/ancienttools",
-		"value": ["*-brained-*", "*-smoked-*"],
-		"file": "game:itemtypes/resource/hide",
-		"side": "Server"
-	},
-	{
-		"op": "add",
 		"path": "/attributes/stretchableShapeByType",
 		"value": {
-			"@hide-(raw|salted|soaked|scraped|prepared|oiled|pelt|brained|smoked)-(small|medium|large|huge)": "ancienttools:shapes/block/stretchingframe/resourceshapes/meshhide/{type}hide_meshhide"
+			"@hide-(raw|salted|soaked|scraped|prepared|oiled|pelt)-(small|medium|large|huge)": "ancienttools:shapes/block/stretchingframe/resourceshapes/meshhide/{type}hide_meshhide"
 		},
 		"file": "game:itemtypes/resource/hide",
 		"side": "Server"
@@ -91,110 +70,10 @@
 		"side": "Server"
 	},
 	{
-		"op": "add",
-		"path": "/attributes/inFirePitPropsByType",
-		"value": { 
-			"@hide-(brained|smoked)-huge":
-			{
-				transform: {
-					scale: 0.3,
-					origin: { x: 0.5, y: 0.0, z: 0.5 },
-					translation: { x: -0.0, y: 0.04, z: 0.0 },
-					rotation: { x: 90, y: 0, z: -52.5 }
-				  },
-				  useFirepitModel: "Spit"
-			},
-			"@hide-(brained|smoked)-large": 
-			{
-				transform: {
-					scale: 0.3,
-					origin: { x: 0.5, y: 0.0, z: 0.5 },
-					translation: { x: -0.0, y: 0.06, z: 0.0 },
-					rotation: { x: 90, y: 0, z: -52.5 }
-				  },
-				  useFirepitModel: "Spit"
-			},
-			"@hide-(brained|smoked)-medium": 
-			{
-				transform: {
-					scale: 0.3,
-					origin: { x: 0.5, y: 0.0, z: 0.5 },
-					translation: { x: -0.0, y: 0.12, z: 0.0 },
-					rotation: { x: 90, y: 0, z: -52.5 }
-				  },
-				  useFirepitModel: "Spit"
-			},
-			"@hide-(brained|smoked)-small": 
-			{
-				transform: {
-					scale: 0.5,
-					origin: { x: 0.5, y: 0.0, z: 0.5 },
-					translation: { x: -0.0, y: 0.15, z: 0.0 },
-					rotation: { x: 90, y: 0, z: -52.5 }
-				  },
-				  useFirepitModel: "Spit"
-			}
-		},
-		"file": "game:itemtypes/resource/hide",
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/shapeByType/hide-brained-*",
-		"value": {
-			"base": "game:item/resource/hide/{size}1"
-		},
-		"file": "game:itemtypes/resource/hide",
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/shapeByType/hide-smoked-*",
-		"value": {
-			"base": "game:item/resource/hide/{size}1"
-		},
-		"file": "game:itemtypes/resource/hide",
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/texturesByType/@hide-(brained)-(small|medium|large|huge)",
-		"value": {
-			"furside": { "base": "ancienttools:item/resource/hide/brainedhide" }, "fleshside": { "base": "item/resource/hide/flesh" }
-		},
-		"file": "game:itemtypes/resource/hide",
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/texturesByType/@hide-(smoked)-(small|medium|large|huge)",
-		"value": {
-			 "furside": { "base": "ancienttools:item/resource/hide/smokedhide" }, "fleshside": { "base": "item/resource/hide/flesh" }
-		},
-		"file": "game:itemtypes/resource/hide",
-		"side": "Server"
-	},
-	{
-		"op": "addmerge",
-		"path": "/combustiblePropsByType",
-		"value": {
-			"*-brained-*": {
-			meltingPoint: 200,
-			meltingDuration: 1200,
-			smeltedRatio: 1,
-			smeltingType: "cook",
-			smeltedStack: { type: "item", code: "game:hide-smoked-{size}" },
-			requiresContainer: false
-			},
-		},
-		"file": "game:itemtypes/resource/hide",
-		"side": "Server"
-	},
-	{
 		"op": "replace",
 		"path": "/combustiblePropsByType/*-brained-*/meltingDuration",
 		"value": 1200,
-		"file": "game:itemtypes/resource/hide",
+		"file": "ancienttools:itemtypes/resources/hide",
 		"side": "Server",
 		"condition": { "when": "BrainedHideSmokingSeconds", "useValue": true }
 	},
@@ -202,7 +81,7 @@
 		"op": "addmerge",
 		"path": "/attributes/handbook/createdByByType",
 		"value": {
-			"@hide-(soaked|scraped|brained|smoked)-(small|medium|large|huge)": "ancienttools:handbook-nativetanning-craftinfo"
+			"@hide-(soaked|scraped)-(small|medium|large|huge)": "ancienttools:handbook-nativetanning-craftinfo"
 		},
 		"file": "game:itemtypes/resource/hide",
 		"side": "Server",

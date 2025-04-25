@@ -1,0 +1,74 @@
+﻿[
+    {
+		code: "barkhide",
+		sealHours: 20,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-*", litres: 10, consumeLitres: 10, "name": "wood" },
+			{ type: "item", code: "game:hide-scraped-huge", quantity: 1 }
+		],
+		output: { type: "item", code: "ancienttools:hide-{wood}-huge", stackSize: 1 }
+	},
+	{
+		code: "barkhide",
+		sealHours: 20,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-*", litres: 6, consumeLitres: 6, "name": "wood" },
+			{ type: "item", code: "game:hide-scraped-large", quantity: 1 }
+		],
+		output: { type: "item", code: "ancienttools:hide-{wood}-large", stackSize: 1 }
+	},
+	{
+		code: "barkhide",
+		sealHours: 20,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-*", litres: 4, consumeLitres: 4, "name": "wood" },
+			{ type: "item", code: "game:hide-scraped-medium", quantity: 1 }
+		],
+		output: { type: "item", code: "ancienttools:hide-{wood}-medium", stackSize: 1 }
+	},
+	{
+		code: "barkhide",
+		sealHours: 20,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-*", litres: 2, consumeLitres: 2, "name": "wood" },
+			{ type: "item", code: "game:hide-scraped-small", quantity: 1 }
+		],
+		output: { type: "item", code: "ancienttools:hide-{wood}-small", stackSize: 1 }
+	},
+	{
+		code: "barkhide",
+		sealHours: 20,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-*", litres: 10, consumeLitres: 10, "name": "wood" },
+			{ type: "item", code: "game:hide-salted-huge", quantity: 1 }
+		],
+		output: { type: "item", code: "ancienttools:hide-{wood}-huge", stackSize: 1 }
+	},
+	{
+		code: "barkhide",
+		sealHours: 20,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-*", litres: 6, consumeLitres: 6, "name": "wood" },
+			{ type: "item", code: "game:hide-salted-large", quantity: 1 }
+		],
+		output: { type: "item", code: "ancienttools:hide-{wood}-large", stackSize: 1 }
+	},
+	{
+		code: "barkhide",
+		sealHours: 20,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-*", litres: 4, consumeLitres: 4, "name": "wood" },
+			{ type: "item", code: "game:hide-salted-medium", quantity: 1 }
+		],
+		output: { type: "item", code: "ancienttools:hide-{wood}-medium", stackSize: 1 }
+	},
+	{
+		code: "barkhide",
+		sealHours: 20,
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkliquorportion-weak-*", litres: 2, consumeLitres: 2, "name": "wood" },
+			{ type: "item", code: "game:hide-salted-small", quantity: 1 }
+		],
+		output: { type: "item", code: "ancienttools:hide-{wood}-small", stackSize: 1 }
+	},
+]

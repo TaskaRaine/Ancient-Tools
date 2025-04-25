@@ -12,7 +12,7 @@
 			},
 			"H": {
 				type: "item",
-				code: "game:hide-smoked-small"
+				code: "ancienttools:hide-smoked-small"
 			}
 
 		},
@@ -35,7 +35,7 @@
 			},
 			"H": {
 				type: "item",
-				code: "game:hide-smoked-medium"
+				code: "ancienttools:hide-smoked-medium"
 			}
 
 		},
@@ -58,7 +58,7 @@
 			},
 			"H": {
 				type: "item",
-				code: "game:hide-smoked-large"
+				code: "ancienttools:hide-smoked-large"
 			}
 
 		},
@@ -81,7 +81,7 @@
 			},
 			"H": {
 				type: "item",
-				code: "game:hide-smoked-huge"
+				code: "ancienttools:hide-smoked-huge"
 			}
 
 		},
@@ -104,7 +104,7 @@
 			},
 			"H": {
 				type: "item",
-				code: "game:hide-smoked-small"
+				code: "ancienttools:hide-smoked-small"
 			}
 
 		},
@@ -127,7 +127,7 @@
 			},
 			"H": {
 				type: "item",
-				code: "game:hide-smoked-medium"
+				code: "ancienttools:hide-smoked-medium"
 			}
 
 		},
@@ -150,7 +150,7 @@
 			},
 			"H": {
 				type: "item",
-				code: "game:hide-smoked-large"
+				code: "ancienttools:hide-smoked-large"
 			}
 
 		},
@@ -173,7 +173,7 @@
 			},
 			"H": {
 				type: "item",
-				code: "game:hide-smoked-huge"
+				code: "ancienttools:hide-smoked-huge"
 			}
 
 		},

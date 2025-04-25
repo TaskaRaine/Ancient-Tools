@@ -44,5 +44,35 @@
 			"/bir remapq game:debarkedlog-purpleheart-ns ancienttools:strippedlog-purpleheart-ns force",
 			"/bir remapq game:debarkedlog-purpleheart-we ancienttools:strippedlog-purpleheart-we force",
 		]
+	},
+	{
+		"file": "game:config/remaps.json",
+		"op": "add",
+		"path": "/ancienttools:1.6.0",
+		"value": [
+			"/iir remapq ancienttools:hide-brained-small game:hide-brained-small force",
+			"/iir remapq ancienttools:hide-brained-medium game:hide-brained-medium force",
+			"/iir remapq ancienttools:hide-brained-large game:hide-brained-large force",
+			"/iir remapq ancienttools:hide-brained-huge game:hide-brained-huge force",
+			"/iir remapq ancienttools:hide-smoked-small game:hide-smoked-small force",
+			"/iir remapq ancienttools:hide-smoked-medium game:hide-smoked-medium force",
+			"/iir remapq ancienttools:hide-smoked-large game:hide-smoked-large force",
+			"/iir remapq ancienttools:hide-smoked-huge game:hide-smoked-huge force",
+			"/iir remapq ancienttools:barkflour-birch game:flour-birch force",
+			"/iir remapq ancienttools:barkflour-pine game:flour-pine force",
+			"/iir remapq ancienttools:barkflour-maple game:flour-maple force",
+			"/iir remapq ancienttools:barkdough-birch game:dough-birch force",
+			"/iir remapq ancienttools:barkdough-pine game:dough-pine force",
+			"/iir remapq ancienttools:barkdough-maple game:dough-maple force",
+			"/iir remapq ancienttools:barkbread-birch-partbaked game:bread-birch-partbaked force",
+			"/iir remapq ancienttools:barkbread-birch-perfect game:bread-birch-perfect force",
+			"/iir remapq ancienttools:barkbread-birch-charred game:bread-birch-charred force",
+			"/iir remapq ancienttools:barkbread-pine-partbaked game:bread-pine-partbaked force",
+			"/iir remapq ancienttools:barkbread-pine-perfect game:bread-pine-perfect force",
+			"/iir remapq ancienttools:barkbread-pine-charred game:bread-pine-charred force",
+			"/iir remapq ancienttools:barkbread-maple-partbaked game:bread-maple-partbaked force",
+			"/iir remapq ancienttools:barkbread-maple-perfect game:bread-maple-perfect force",
+			"/iir remapq ancienttools:barkbread-maple-charred game:bread-maple-charred force",
+		]
 	}
 ]

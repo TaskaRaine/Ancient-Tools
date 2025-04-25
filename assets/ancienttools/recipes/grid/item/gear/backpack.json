@@ -1,0 +1,11 @@
+﻿[
+    {
+		ingredientPattern: "L_	LL	L_",
+		ingredients: {
+			"L": { type: "item", code: "ancienttools:leather-normal-*", quantity: 2, "name": "color" }
+		},
+		width: 2,
+		height: 3,
+		output: { type: "item", code: "ancienttools:backpack-{color}"  }
+	}
+]

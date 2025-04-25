@@ -1,0 +1,120 @@
+﻿{
+	code: "barkjerkinarmor",
+	class: "ItemWearable",
+	heldTpIdleAnimation: "holdunderarm",
+	variantgroups: [
+		{ code: "bodypart",  states: ["body", "legs"] },
+		{ "code": "type", "states": ["acacia", "aged", "baldcypress", "birch", "cypress", "ebony", "kapok", "larch", "maple", "pine", "purpleheart", "redwood", "walnut"]}
+	],
+	shapeByType: {
+		"*": { base: "game:entity/humanoid/seraph/armor/jerkin/{bodypart}" }
+	},
+	texturesByType: {
+		"*": {
+			"seraph": { base: "game:block/transparent" },
+			"leather": { 
+				baseByType: {
+					"*": "ancienttools:item/gear/armor/jerkin/{type}"
+				}
+			}
+		}
+	},
+	storageFlags: 128,
+	"__comment": "'keepElements names must also be added to game/entities/humanoid/player file, under the 'disableElements' attribute.",
+	attributes: {
+		handbook: {
+			groupBy: ["barkjerkinarmor-{bodypart}-*"]
+		},
+		visibleDamageEffect: true,
+		clothesCategoryByType: {
+			"barkjerkinarmor-body-*": "armorbody",
+			"barkjerkinarmor-legs-*": "armorlegs",
+		},
+		attachableToEntity: {
+			texturePrefixCode: "barkjerkinarmor-{bodypart}-{type}",
+			categoryCodeByType: {
+				"barkjerkinarmor-body-*": "armorbody",
+				"barkjerkinarmor-legs-*": "armorlegs",
+			},
+			disableElementsByType: {
+				"barkjerkinarmor-body-*": ["Waist", "hideupperarm", "hidelowerarm"],
+				"barkjerkinarmor-legs-*": ["hideshoeL", "hideshoeR", "shoefluffL", "shoefluffR"]
+			},
+		},
+		defaultProtLoss: {
+			perTierRelativeProtectionLoss: [0.03, 0.15],
+			perTierFlatDamageReductionLoss: [0.1, 0.2],
+		},
+		footStepSoundByType: {
+			"*": "wearable/leather*"
+		},
+		protectionModifiersByType: {
+			"*": {
+				relativeProtection: 0.4,
+				flatDamageReduction: 0.25,
+				protectionTier: 1
+			},
+		},
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "clothing": ["*"], "ancienttools": ["*"] },
+	renderAlphaTest: 0.25,
+	durabilityByType: {
+		"*": 250,
+	},
+	fpHandTransformByType: {
+		"barkjerkinarmor-body-*": {
+			translation: { x: 0.4, y: -1.2, z: -0.5 },
+			rotation: { x: 163, y: -111, z: -180 },
+			origin: { x: 0.5, y: 1.6, z: 0.5 },
+			scale: 2.15
+		},
+		"barkjerkinarmor-legs-*": {
+			translation: { x: 0.4, y: -1.2, z: -0.5 },
+			rotation: { x: 163, y: -111, z: -180 },
+			origin: { x: 0.5, y: 1.6, z: 0.5 },
+			scale: 2.15
+		},
+	},
+	tpHandTransformByType: {
+		"barkjerkinarmor-body-*": {
+			translation: { x: -1, y: -1.9, z: -0.5 },
+			rotation: { x: 97, y: -168, z: 94 },
+			origin: { x: 0.5, y: 1.5, z: 0.5 },
+			scale: 0.67
+		},
+		"barkjerkinarmor-legs-*": {
+			translation: { x: -0.7, y: -0.6, z: -0.4 },
+			rotation: { x: 95, y: -20, z: -91 },
+			origin: { x: 0.5, y: 0.7, z: 0.5 },
+			scale: 0.74
+		}
+	},
+	guiTransformByType: {
+		"barkjerkinarmor-body-*": {
+			translation: { x: 3, y: 0, z: 0 },
+			rotation: { x: -26, y: -46, z: -180 },
+			origin: { x: 0.5, y: 1.11, z: 0.5 },
+			scale: 1.37
+		},
+		"barkjerkinarmor-legs-*": {
+			translation: { x: 1, y: 0, z: 0 },
+			rotation: { x: -26, y: -46, z: -180 },
+			origin: { x: 0.5, y: 0.6, z: 0.5 },
+			scale: 1.25
+		},
+	},
+	groundTransformByType: {
+		"barkjerkinarmor-body-*": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 0, y: 0, z: 90 },
+			origin: { x: 0.34, y: 1.12, z: 0.5 },
+			scale: 3.1
+		},
+		"barkjerkinarmor-legs-*": {
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 0, y: 0, z: 90 },
+			origin: { x: 0.34, y: 1.12, z: 0.5 },
+			scale: 3.1
+		}
+	}
+}

@@ -1,0 +1,108 @@
+﻿{
+    "code": "logbarrel",
+    creativeinventory: { "general": ["*"], "ancienttools": ["*"] },
+    attributes: {
+		handbook: {
+			groupBy: ["logbarrel-{wood}"]
+		},
+		"primitiveBarrelPropsByType": {
+			"*-1": {
+				"nextStage": "ancienttools:logbarrel-{wood}-2"
+			},
+			"*-2": {
+				"nextStage": "ancienttools:logbarrel-{wood}-3"
+			},
+			"*-3": {
+				"nextStage": "ancienttools:logbarrel-{wood}-4"
+			},
+		},
+	},
+	variantgroups: [
+        { code: "wood", loadFromProperties: "game:block/wood", states:["aged"] },
+		{ code: "stage", states: ["1", "2", "3", "4", "sealed"] }
+    ],
+	"allowedVariants": ["logbarrel-aged-*", "logbarrel-birch-*", "logbarrel-oak-*", "logbarrel-maple-*", "logbarrel-pine-*", "logbarrel-acacia-*", "logbarrel-baldcypress-*", "logbarrel-larch-*", "logbarrel-redwood-*", "logbarrel-ebony-*", "logbarrel-walnut-*", "logbarrel-purpleheart-*"],
+	"behaviors": [{ "name": "CarveLogBarrel" }],
+	drawtype: "json",
+	shapeByType: { 
+		"*-1": { 
+			base: "block/logbarrel/logbarrel1" 
+		},
+		"*-2": {
+			base: "block/logbarrel/logbarrel2" 
+		},
+		"*-3": {
+			base: "block/logbarrel/logbarrel3" 
+		},
+		"*": {
+			base: "block/logbarrel/logbarrel4" 
+		}
+	},
+	textures: { 
+		"log": { base: "game:block/wood/bark/{wood}" },
+		"oak": { "base": "game:block/wood/debarked/{wood}" },
+		"logupper": { "base": "game:block/wood/treetrunk/{wood}" },
+	},
+	blockmaterial: "Wood",
+	replaceable: 500,
+	resistance: 4.5,
+	sounds: {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood",
+		"hit": "game:block/planks",
+		"break": "game:block/planks",
+		byTool: {
+			"Axe": { hit: "game:block/chop", break: "game:block/planks" }
+		}
+	},
+	combustiblePropsByType: {
+		"*-birch-*": {
+			burnTemperature: 800,
+			burnDuration: 78,
+		},
+		"*-oak-*": {
+			burnTemperature: 800,
+			burnDuration: 98,
+		},
+		"*-ebony-*": {
+			burnTemperature: 800,
+			burnDuration: 110,
+		},
+		"*-pine-*": {
+			burnTemperature: 800,
+			burnDuration: 60,
+		},
+		"*-acacia-*": {
+			burnTemperature: 800,
+			burnDuration: 89,
+		},
+		"*-kapok-*": {
+			burnTemperature: 800,
+			burnDuration: 47,
+		},
+		"*-maple-*": {
+			burnTemperature: 800,
+			burnDuration: 79,
+		},
+		"*-redwood-*": {
+			burnTemperature: 800,
+			burnDuration: 72,
+		},
+		"*-aged-*": {
+			burnTemperature: 700,
+			burnDuration: 40,
+		},
+		"*": {
+			burnTemperature: 800,
+			burnDuration: 72,
+		}
+	},
+	maxStackSize: 1,
+	materialDensity: 700,
+	heldTpIdleAnimation: "holdbothhandslarge", heldRightReadyAnimation: "heldblockready", heldTpUseAnimation: "twohandplaceblock",
+	tpHandTransform: {
+		translation: { x: -1.23, y: -0.91, z: -0.8 },
+		rotation: { x: -2, y: 25, z: -78 },
+		scale: 0.4
+	}
+}

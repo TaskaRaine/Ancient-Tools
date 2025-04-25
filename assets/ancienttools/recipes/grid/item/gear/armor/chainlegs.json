@@ -1,0 +1,15 @@
+﻿[
+    {
+		ingredientPattern: "TCT,TJT",
+		recipeGroup: 1,
+		ingredients: {
+			"J": { type: "item", code: "barkjerkinarmor-legs-*", quantity: 1 },
+			"T": { type: "item", code: "game:metalchain-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel", "gold", "silver"], quantity: 1 },
+			"C": { type: "item", code: "game:metalchain-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel", "gold", "silver"], quantity: 2 }
+		},
+		width: 3,
+		height: 2,
+		name: "chain leg armor",
+		output: { type: "item", code: "game:armor-legs-chain-{metal}"  }
+	}
+]
