@@ -1,0 +1,42 @@
+﻿{
+	code: "buckskin",
+	shape: { base: "item/resource/buckskin" },
+	behaviors: [
+		{ name: "GroundStorable", properties: { layout: 'SingleCenter', collisionBox: { x1: 0.2, y1: 0, z1: 0.2, x2: 0.8, y2: 0.1, z2: 0.8 } } }
+	],
+	attributes: {
+		displaycaseable: true, 
+		shelvable: true,
+		onDisplayTransform: {
+			translation: { x: 0.05, y: 0, z: 0 },
+			rotation: { x: 0, y: -90, z: 0 },
+			origin: { x: 0.5, y: 0, z: 0.5 },
+			scale: 0.65
+		},
+		handbook: {
+			groupBy: ["*"]
+		},
+	},
+	textures: {
+		"buckskin":  { base: "ancienttools:item/resource/buckskin"  }
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
+	maxstacksize: 64,
+	materialDensity: 500,
+	guiTransform: {
+		rotation: { x: 122, y: 125, z: 9 },
+		origin: { x: 0.5, y: 0.05, z: 0.5 },
+		scale: 3.69
+	},
+	tpHandTransform: {
+		translation: { x: -1, y: -0.9, z: -1.35 },
+		rotation: { x: 92, y: -180, z: 180 },
+		scale: 0.59
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0.25, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.32, z: 0.5299 },
+		scale: 4
+	}
+}

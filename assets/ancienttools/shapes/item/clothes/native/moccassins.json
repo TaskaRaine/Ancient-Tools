@@ -1,0 +1,212 @@
+{
+	"editor": {
+		"allAngles": true,
+		"entityTextureMode": true
+	},
+	"textureWidth": 32,
+	"textureHeight": 32,
+	"textureSizes": {
+		"moccassins": [32,32]
+	},
+	"textures": {
+		"moccassins": "C:/Projects/VintageStory/Mods/ancienttools/assets/ancienttools/textures/item/clothes/native/moccassins"
+	},
+	"elements": [
+		{
+			"name": "shoe R",
+			"stepParentName": "LowerFootR",
+			"from": [ -0.1, -0.1, -0.1 ],
+			"to": [ 4.1, 2.4, 3.1 ],
+			"unwrapMode": 1,
+			"autoUnwrap": false,
+			"uv": [ 0.0, 6.5 ],
+			"rotationOrigin": [ -0.1, -0.1, -0.1 ],
+			"faces": {
+				"north": { "texture": "#moccassins", "uv": [ 10.0, 26.0, 18.0, 31.0 ], "autoUv": false, "windMode": [-1,-1,-1,-1] },
+				"east": { "texture": "#moccassins", "uv": [ 1.0, 16.0, 7.0, 21.0 ], "autoUv": false, "windMode": [-1,-1,-1,-1] },
+				"south": { "texture": "#moccassins", "uv": [ 19.0, 26.0, 27.0, 31.0 ], "autoUv": false },
+				"west": { "texture": "#moccassins", "uv": [ 8.0, 16.0, 14.0, 21.0 ], "autoUv": false, "windMode": [-1,-1,-1,-1] },
+				"up": { "texture": "#moccassins", "uv": [ 15.0, 10.0, 21.0, 18.0 ], "rotation": 90, "autoUv": false },
+				"down": { "texture": "#moccassins", "uv": [ 15.0, 1.0, 21.0, 9.0 ], "rotation": 90, "autoUv": false, "windMode": [-1,-1,-1,-1] }
+			},
+			"children": [
+				{
+					"name": "hideshoeR",
+					"from": [ 0.0, 2.5, 0.0 ],
+					"to": [ 1.0, 3.5, 1.0 ],
+					"uv": [ 0.0, 0.0 ],
+					"rotationOrigin": [ 0.0, 2.5, 0.0 ],
+					"faces": {
+					},
+					"children": [
+						{
+							"name": "N fold 1",
+							"from": [ 0.0, 0.0, 0.0 ],
+							"to": [ 4.2, 1.0, 0.2 ],
+							"autoUnwrap": false,
+							"uv": [ 3.5, 18.0 ],
+							"rotationOrigin": [ 0.0, 0.0, 0.1 ],
+							"rotationX": -152.0,
+							"faces": {
+								"north": { "texture": "#moccassins", "uv": [ 23.0, 8.0, 31.0, 10.0 ], "autoUv": false },
+								"east": { "texture": "#moccassins", "uv": [ 30.0, 26.0, 31.0, 28.0 ], "autoUv": false },
+								"south": { "texture": "#moccassins", "uv": [ 23.0, 6.0, 31.0, 8.0 ], "autoUv": false },
+								"west": { "texture": "#moccassins", "uv": [ 28.0, 26.0, 29.0, 28.0 ], "autoUv": false },
+								"up": { "texture": "#moccassins", "uv": [ 23.0, 6.0, 31.0, 8.0 ], "rotation": 180, "autoUv": false },
+								"down": { "texture": "#moccassins", "uv": [ 23.0, 5.0, 31.0, 6.0 ], "autoUv": false }
+							}
+						},
+						{
+							"name": "S fold 1",
+							"from": [ 0.0, 0.0, 3.0 ],
+							"to": [ 4.2, 1.0, 3.2 ],
+							"autoUnwrap": false,
+							"uv": [ 2.5, 21.0 ],
+							"rotationOrigin": [ 0.0, 0.0, 3.1 ],
+							"rotationX": 152.0,
+							"faces": {
+								"north": { "texture": "#moccassins", "uv": [ 23.0, 11.0, 31.0, 13.0 ], "autoUv": false },
+								"east": { "texture": "#moccassins", "uv": [ 30.0, 26.0, 31.0, 28.0 ], "autoUv": false },
+								"south": { "texture": "#moccassins", "uv": [ 23.0, 13.0, 31.0, 15.0 ], "autoUv": false },
+								"west": { "texture": "#moccassins", "uv": [ 28.0, 26.0, 29.0, 28.0 ], "autoUv": false },
+								"up": { "texture": "#moccassins", "uv": [ 23.0, 10.0, 31.0, 11.0 ], "autoUv": false },
+								"down": { "texture": "#moccassins", "uv": [ 23.0, 10.0, 31.0, 11.0 ], "autoUv": false }
+							}
+						},
+						{
+							"name": "back fold 1",
+							"from": [ 4.0, 0.0, 0.0 ],
+							"to": [ 4.2, 1.0, 3.2 ],
+							"autoUnwrap": false,
+							"uv": [ 3.5, 22.5 ],
+							"rotationOrigin": [ 4.1, 0.0, 0.0 ],
+							"rotationZ": -152.0,
+							"faces": {
+								"north": { "texture": "#moccassins", "uv": [ 28.0, 26.0, 29.0, 28.0 ], "autoUv": false },
+								"east": { "texture": "#moccassins", "uv": [ 25.0, 18.0, 31.0, 20.0 ], "autoUv": false },
+								"south": { "texture": "#moccassins", "uv": [ 28.0, 26.0, 29.0, 28.0 ], "autoUv": false },
+								"west": { "texture": "#moccassins", "uv": [ 25.0, 16.0, 31.0, 18.0 ], "autoUv": false },
+								"up": { "texture": "#moccassins", "uv": [ 25.0, 15.0, 31.0, 16.0 ], "rotation": 270, "autoUv": false },
+								"down": { "texture": "#moccassins", "uv": [ 25.0, 15.0, 31.0, 16.0 ], "rotation": 90, "autoUv": false }
+							}
+						},
+						{
+							"name": "front fold 1",
+							"from": [ 0.0, 0.0, 0.0 ],
+							"to": [ 0.2, 1.0, 3.2 ],
+							"autoUnwrap": false,
+							"uv": [ 10.5, 22.5 ],
+							"rotationOrigin": [ 0.1, 0.0, 0.0 ],
+							"rotationZ": 152.0,
+							"faces": {
+								"north": { "texture": "#moccassins", "uv": [ 28.0, 29.0, 29.0, 31.0 ], "autoUv": false },
+								"east": { "texture": "#moccassins", "uv": [ 25.0, 21.0, 31.0, 23.0 ], "autoUv": false },
+								"south": { "texture": "#moccassins", "uv": [ 30.0, 29.0, 31.0, 31.0 ], "autoUv": false },
+								"west": { "texture": "#moccassins", "uv": [ 25.0, 23.0, 31.0, 25.0 ], "autoUv": false },
+								"up": { "texture": "#moccassins", "uv": [ 25.0, 20.0, 31.0, 21.0 ], "rotation": 90, "autoUv": false },
+								"down": { "texture": "#moccassins", "uv": [ 25.0, 20.0, 31.0, 21.0 ], "rotation": 90, "autoUv": false }
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "shoe L",
+			"stepParentName": "LowerFootL",
+			"from": [ -0.1, -0.1, -0.1 ],
+			"to": [ 4.1, 2.4, 3.1 ],
+			"autoUnwrap": false,
+			"uv": [ 3.0, 3.5 ],
+			"rotationOrigin": [ -0.1, -0.1, -0.1 ],
+			"faces": {
+				"north": { "texture": "#moccassins", "uv": [ 15.0, 19.0, 23.0, 24.0 ], "autoUv": false },
+				"east": { "texture": "#moccassins", "uv": [ 1.0, 10.0, 7.0, 15.0 ], "autoUv": false },
+				"south": { "texture": "#moccassins", "uv": [ 1.0, 26.0, 9.0, 31.0 ], "autoUv": false },
+				"west": { "texture": "#moccassins", "uv": [ 8.0, 10.0, 14.0, 15.0 ], "autoUv": false, "windMode": [-1,-1,-1,-1] },
+				"up": { "texture": "#moccassins", "uv": [ 1.0, 1.0, 7.0, 9.0 ], "rotation": 90, "autoUv": false },
+				"down": { "texture": "#moccassins", "uv": [ 8.0, 1.0, 14.0, 9.0 ], "rotation": 90, "autoUv": false, "windMode": [-1,-1,-1,-1] }
+			},
+			"children": [
+				{
+					"name": "hideshoeL",
+					"from": [ 0.0, 2.5, 0.0 ],
+					"to": [ 1.0, 3.5, 1.0 ],
+					"uv": [ 0.0, 0.0 ],
+					"rotationOrigin": [ 0.0, 2.5, 0.0 ],
+					"faces": {
+					},
+					"children": [
+						{
+							"name": "N fold 2",
+							"from": [ 0.0, 0.0, 0.0 ],
+							"to": [ 4.2, 1.0, 0.2 ],
+							"autoUnwrap": false,
+							"uv": [ 6.0, 22.5 ],
+							"rotationOrigin": [ 0.0, 0.0, 0.1 ],
+							"rotationX": -152.0,
+							"faces": {
+								"north": { "texture": "#moccassins", "uv": [ 23.0, 8.0, 31.0, 10.0 ], "autoUv": false },
+								"east": { "texture": "#moccassins", "uv": [ 28.0, 29.0, 29.0, 31.0 ], "autoUv": false },
+								"south": { "texture": "#moccassins", "uv": [ 23.0, 6.0, 31.0, 8.0 ], "autoUv": false },
+								"west": { "texture": "#moccassins", "uv": [ 30.0, 29.0, 31.0, 31.0 ], "autoUv": false },
+								"up": { "texture": "#moccassins", "uv": [ 23.0, 5.0, 31.0, 6.0 ], "rotation": 180, "autoUv": false },
+								"down": { "texture": "#moccassins", "uv": [ 23.0, 5.0, 31.0, 6.0 ], "autoUv": false }
+							}
+						},
+						{
+							"name": "S fold 2",
+							"from": [ 0.0, 0.0, 3.0 ],
+							"to": [ 4.2, 1.0, 3.2 ],
+							"autoUnwrap": false,
+							"uv": [ 5.5, 25.5 ],
+							"rotationOrigin": [ 0.0, 0.0, 3.1 ],
+							"rotationX": 152.0,
+							"faces": {
+								"north": { "texture": "#moccassins", "uv": [ 23.0, 11.0, 31.0, 13.0 ], "autoUv": false },
+								"east": { "texture": "#moccassins", "uv": [ 30.0, 29.0, 31.0, 31.0 ], "autoUv": false },
+								"south": { "texture": "#moccassins", "uv": [ 23.0, 13.0, 31.0, 15.0 ], "autoUv": false },
+								"west": { "texture": "#moccassins", "uv": [ 28.0, 29.0, 29.0, 31.0 ], "autoUv": false },
+								"up": { "texture": "#moccassins", "uv": [ 23.0, 10.0, 31.0, 11.0 ], "autoUv": false },
+								"down": { "texture": "#moccassins", "uv": [ 23.0, 10.0, 31.0, 11.0 ], "autoUv": false }
+							}
+						},
+						{
+							"name": "back fold 2",
+							"from": [ 4.0, 0.0, 0.0 ],
+							"to": [ 4.2, 1.0, 3.2 ],
+							"autoUnwrap": false,
+							"uv": [ 7.0, 20.5 ],
+							"rotationOrigin": [ 4.1, 0.0, 0.0 ],
+							"rotationZ": -152.0,
+							"faces": {
+								"north": { "texture": "#moccassins", "uv": [ 28.0, 29.0, 29.0, 31.0 ], "autoUv": false },
+								"east": { "texture": "#moccassins", "uv": [ 25.0, 18.0, 31.0, 20.0 ], "autoUv": false },
+								"south": { "texture": "#moccassins", "uv": [ 30.0, 29.0, 31.0, 31.0 ], "autoUv": false },
+								"west": { "texture": "#moccassins", "uv": [ 25.0, 16.0, 31.0, 18.0 ], "autoUv": false, "windMode": [-1,-1,-1,-1] },
+								"up": { "texture": "#moccassins", "uv": [ 25.0, 15.0, 31.0, 16.0 ], "rotation": 270, "autoUv": false },
+								"down": { "texture": "#moccassins", "uv": [ 25.0, 15.0, 31.0, 16.0 ], "rotation": 90, "autoUv": false }
+							}
+						},
+						{
+							"name": "front fold 2",
+							"from": [ 0.0, 0.0, 0.0 ],
+							"to": [ 0.2, 1.0, 3.2 ],
+							"autoUnwrap": false,
+							"uv": [ 2.5, 27.5 ],
+							"rotationOrigin": [ 0.1, 0.0, 0.0 ],
+							"rotationZ": 152.0,
+							"faces": {
+								"north": { "texture": "#moccassins", "uv": [ 30.0, 26.0, 31.0, 28.0 ], "autoUv": false },
+								"east": { "texture": "#moccassins", "uv": [ 25.0, 21.0, 31.0, 23.0 ], "autoUv": false, "windMode": [-1,-1,-1,-1] },
+								"south": { "texture": "#moccassins", "uv": [ 30.0, 26.0, 31.0, 28.0 ], "autoUv": false },
+								"west": { "texture": "#moccassins", "uv": [ 25.0, 23.0, 31.0, 25.0 ], "autoUv": false },
+								"up": { "texture": "#moccassins", "uv": [ 25.0, 20.0, 31.0, 21.0 ], "rotation": 90, "autoUv": false },
+								"down": { "texture": "#moccassins", "uv": [ 25.0, 20.0, 31.0, 21.0 ], "rotation": 90, "autoUv": false }
+							}
+						}
+					]
+				}
+			]
+		}
+	]}

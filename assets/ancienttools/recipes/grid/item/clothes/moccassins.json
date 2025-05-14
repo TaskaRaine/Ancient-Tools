@@ -1,0 +1,24 @@
+﻿[
+    {
+		ingredientPattern: "T TB B",
+		width: 3,
+		height: 2,
+		ingredients: {
+			"B": { 
+				type: "item",
+				code: "ancienttools:buckskin",
+				"quantity": 2
+			},
+			"T": {
+				type: "item",
+				code: "game:flaxtwine"
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "ancienttools:moccassins",
+			quantity: 1
+		}
+	}
+]

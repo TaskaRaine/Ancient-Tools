@@ -1,0 +1,23 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "food",
+			"from": [ 1.25, 6.0, 1.75 ],
+			"to": [ 14.75, 7.0, 14.25 ],
+			"renderPass": 4,
+			"rotationOrigin": [ -0.8, 5.0, -0.3 ],
+			"faces": {
+				"up": { "texture": "#raw-onion", "uv": [ 1.5, 0.0, 15.0, 12.5 ] }
+			}
+		}
+	]}

@@ -172,6 +172,31 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "lid",
+					"from": [ -7.0, 14.0, -7.0 ],
+					"to": [ 7.0, 15.0, 7.0 ],
+					"rotationOrigin": [ -7.0, 14.0, -7.0 ],
+					"faces": {
+						"up": { "texture": "#logupper", "uv": [ 1.0, 1.0, 15.0, 15.0 ] }
+					},
+					"children": [
+						{
+							"name": "Cube2",
+							"from": [ 6.0, 1.0, 6.0 ],
+							"to": [ 8.0, 2.0, 8.0 ],
+							"rotationOrigin": [ 6.0, 1.0, 6.0 ],
+							"faces": {
+								"north": { "texture": "#log", "uv": [ 6.5, 9.5, 8.5, 10.5 ] },
+								"east": { "texture": "#log", "uv": [ 7.5, 4.5, 9.5, 5.5 ] },
+								"south": { "texture": "#log", "uv": [ 2.5, 7.5, 4.5, 8.5 ] },
+								"west": { "texture": "#log", "uv": [ 10.5, 3.5, 12.5, 4.5 ] },
+								"up": { "texture": "#log", "uv": [ 7.0, 7.0, 9.0, 9.0 ] },
+								"down": { "texture": "#log", "uv": [ 3.0, 6.0, 5.0, 8.0 ] }
+							}
+						}
+					]
 				}
 			]
 		}

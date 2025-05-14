@@ -1,0 +1,33 @@
+﻿{
+    code: "breechcloth",
+	class: "ItemWearable",
+	"attributes": {
+		clothescategory: "lowerbody",
+		wearableAttachment: true,
+		"warmth": 1
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "clothing": ["*"], "ancienttools": ["*"] },
+	renderAlphaTest: 0.25,
+	shape: { base: "ancienttools:item/clothes/native/breechcloth_underwear" },
+	storageFlags: 128,
+	textures: {
+		"seraph": { base: "game:block/transparent" },
+		"breechcloth": { "base": "ancienttools:item/clothes/native/breechcloth"}
+	},
+	guiTransform: {
+		rotation: { x: -7, y: 66, z: 180 },
+		origin: { x: -0.6, y: 0.8, z: 0 },
+		scale: 2.52
+	},
+	tpHandTransform: {
+		translation: { x: -0.7, y: -1.3, z: -0.75 },
+		rotation: { x: -17, y: -102, z: 22 },
+		scale: 0.68
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.8, z: 0.5299 },
+		scale: 2.8
+	}
+}

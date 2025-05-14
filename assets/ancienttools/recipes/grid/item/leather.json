@@ -18,7 +18,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "game:leather-normal-plain",
+			code: "ancienttools:buckskin",
 			quantity: 1
 		}
 	},
@@ -41,7 +41,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "game:leather-normal-plain",
+			code: "ancienttools:buckskin",
 			quantity: 2
 		}
 	},
@@ -64,7 +64,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "game:leather-normal-plain",
+			code: "ancienttools:buckskin",
 			quantity: 3
 		}
 	},
@@ -87,7 +87,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "game:leather-normal-plain",
+			code: "ancienttools:buckskin",
 			quantity: 5
 		}
 	},
@@ -110,7 +110,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "game:leather-normal-plain",
+			code: "ancienttools:buckskin",
 			quantity: 1
 		}
 	},
@@ -133,7 +133,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "game:leather-normal-plain",
+			code: "ancienttools:buckskin",
 			quantity: 2
 		}
 	},
@@ -156,7 +156,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "game:leather-normal-plain",
+			code: "ancienttools:buckskin",
 			quantity: 3
 		}
 	},
@@ -179,7 +179,7 @@
 		},
 		output: { 
 			type: "item", 
-			code: "game:leather-normal-plain",
+			code: "ancienttools:buckskin",
 			quantity: 5
 		}
 	}

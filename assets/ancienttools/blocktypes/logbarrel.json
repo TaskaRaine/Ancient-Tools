@@ -1,6 +1,12 @@
 ﻿{
     "code": "logbarrel",
     creativeinventory: { "general": ["*"], "ancienttools": ["*"] },
+	"classByType": {
+		"*-sealed": "BlockBarrel"
+	},
+	entityClassByType: {
+		"*-sealed": "ATBELogBarrel"
+	},
     attributes: {
 		handbook: {
 			groupBy: ["logbarrel-{wood}"]
@@ -16,13 +22,38 @@
 				"nextStage": "ancienttools:logbarrel-{wood}-4"
 			},
 		},
+		"partialAttachable": true,
+		"reinforcableByType": {
+			"*-sealed": true
+		},
+		"capacityLitresByType": {
+			"*-sealed": 20
+		},
+		"emptyShapeByType": {
+			"*-sealed": "ancienttools:block/logbarrel/logbarrel4"
+		},
+		"sealedShapeByType": {
+			"*-sealed": "ancienttools:block/logbarrel/closed"
+		},
+		"liquidContentsShapeByType": {
+			"*-sealed": "ancienttools:block/logbarrel/logbarrelliquidcontents"
+		},
+		"opaqueLiquidContentsShapeByType": {
+			"*-sealed": "ancienttools:block/logbarrel/logbarrelopaqueliquidcontents"
+		},
+		"contentsShapeByType": {
+			"*-sealed": "ancienttools:block/logbarrel/logbarrelcontents"
+		}
 	},
 	variantgroups: [
         { code: "wood", loadFromProperties: "game:block/wood", states:["aged"] },
 		{ code: "stage", states: ["1", "2", "3", "4", "sealed"] }
     ],
 	"allowedVariants": ["logbarrel-aged-*", "logbarrel-birch-*", "logbarrel-oak-*", "logbarrel-maple-*", "logbarrel-pine-*", "logbarrel-acacia-*", "logbarrel-baldcypress-*", "logbarrel-larch-*", "logbarrel-redwood-*", "logbarrel-ebony-*", "logbarrel-walnut-*", "logbarrel-purpleheart-*"],
-	"behaviors": [{ "name": "CarveLogBarrel" }],
+	"behaviorsByType": {
+		"@logbarrel-*-(1|2|3)": [{ "name": "CarveLogBarrel" }, { name: "Lockable" }, { name: "UnstableFalling" } ],
+		"*": [{ name: "Lockable" }, { name: "UnstableFalling" }]
+	},
 	drawtype: "json",
 	shapeByType: { 
 		"*-1": { 

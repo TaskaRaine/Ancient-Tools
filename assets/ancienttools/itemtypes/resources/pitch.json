@@ -21,6 +21,15 @@
 				"properties": {
 					"repairTime": 5
 				}
+			},
+			{
+				name: "ConvertBlockUsingIngredient", 
+				properties: {
+					convertFromBlockCode: "ancienttools:logbarrel-{wood}-4",
+					convertToBlockCode: "ancienttools:logbarrel-{wood}-sealed",
+					"wildcard": "wood",
+					"quantityNeeded": 1
+				}
 			}
 		]
 	},

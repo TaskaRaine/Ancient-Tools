@@ -1,0 +1,29 @@
+﻿[
+    {
+		ingredientPattern: "BRBBDB",
+		width: 3,
+		height: 2,
+		ingredients: {
+			"B": { 
+				type: "item",
+				code: "ancienttools:buckskin",
+				"quantity": 2
+			},
+			"D": { 
+				type: "item",
+				code: "ancienttools:buckskin",
+				"quantity": 4
+			},
+			"R": {
+				type: "item",
+				code: "game:rope"
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "ancienttools:breechcloth",
+			quantity: 1
+		}
+	}
+]

@@ -50,6 +50,9 @@
     <None Remove="assets\ancienttools\blocktypes\logbarrel.json" />
     <None Remove="assets\ancienttools\blocktypes\pitcherpump.json" />
     <None Remove="assets\ancienttools\blocktypes\shaduf.json" />
+    <None Remove="assets\ancienttools\itemtypes\clothes\native\breechcloth.json" />
+    <None Remove="assets\ancienttools\itemtypes\clothes\native\moccassins.json" />
+    <None Remove="assets\ancienttools\itemtypes\clothes\native\warshirt.json" />
     <None Remove="assets\ancienttools\itemtypes\food\barkbread.json" />
     <None Remove="assets\ancienttools\itemtypes\food\barkdough.json" />
     <None Remove="assets\ancienttools\itemtypes\food\barkflour.json" />
@@ -59,6 +62,7 @@
     <None Remove="assets\ancienttools\itemtypes\liquids\barkliquor.json" />
     <None Remove="assets\ancienttools\itemtypes\resources\barkash.json" />
     <None Remove="assets\ancienttools\itemtypes\resources\barkchunk.json" />
+    <None Remove="assets\ancienttools\itemtypes\resources\buckskin.json" />
     <None Remove="assets\ancienttools\itemtypes\resources\hide.json" />
     <None Remove="assets\ancienttools\itemtypes\resources\leather.json" />
     <None Remove="assets\ancienttools\patches\block\chamberstick.json" />
@@ -67,6 +71,9 @@
     <None Remove="assets\ancienttools\recipes\barrel\barkleather.json" />
     <None Remove="assets\ancienttools\recipes\grid\block\bark leather vanilla\antlermount.json" />
     <None Remove="assets\ancienttools\recipes\grid\block\bark leather vanilla\book.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\clothes\breechcloth.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\clothes\moccassins.json" />
+    <None Remove="assets\ancienttools\recipes\grid\item\clothes\warshirt.json" />
     <None Remove="assets\ancienttools\recipes\grid\item\gear\armorrepair\jerkinbody.json" />
     <None Remove="assets\ancienttools\recipes\grid\item\gear\armorrepair\jerkinlegs.json" />
     <None Remove="assets\ancienttools\recipes\grid\item\gear\armorrepair\leatherbody.json" />

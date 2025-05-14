@@ -1,0 +1,64 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"buckskin": "C:/Projects/VintageStory/Mods/ancienttools/assets/ancienttools/textures/item/resource/buckskin"
+	},
+	"elements": [
+		{
+			"name": "Origin",
+			"from": [ 8.0, 0.0, 8.0 ],
+			"to": [ 9.0, 1.0, 9.0 ],
+			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"faces": {
+			},
+			"children": [
+				{
+					"name": "Cube2",
+					"from": [ -2.0, 0.0, -2.0 ],
+					"to": [ 2.0, 1.0, 2.0 ],
+					"faces": {
+						"north": { "texture": "#buckskin", "uv": [ 2.0, 2.0, 6.0, 3.0 ] },
+						"east": { "texture": "#buckskin", "uv": [ 8.0, 13.5, 12.0, 14.5 ] },
+						"south": { "texture": "#buckskin", "uv": [ 2.0, 7.5, 6.0, 8.5 ] },
+						"west": { "texture": "#buckskin", "uv": [ 4.0, 3.0, 8.0, 4.0 ], "autoUv": false },
+						"up": { "texture": "#buckskin", "uv": [ 10.5, 0.0, 14.5, 4.0 ] },
+						"down": { "texture": "#buckskin", "uv": [ 1.5, 11.5, 5.5, 15.5 ] }
+					}
+				},
+				{
+					"name": "Cube3",
+					"from": [ 2.0, 0.5, -1.99 ],
+					"to": [ 3.0, 1.0, 1.99 ],
+					"rotationOrigin": [ 2.0, 1.0, 0.0 ],
+					"rotationZ": -22.5,
+					"faces": {
+						"north": { "texture": "#buckskin", "uv": [ 2.5, 2.5, 3.5, 3.0 ] },
+						"east": { "texture": "#buckskin", "uv": [ 1.0, 5.0, 4.5, 5.5 ] },
+						"south": { "texture": "#buckskin", "uv": [ 4.0, 8.5, 5.0, 9.0 ] },
+						"up": { "texture": "#buckskin", "uv": [ 10.5, 0.0, 11.5, 3.5 ] },
+						"down": { "texture": "#buckskin", "uv": [ 8.0, 12.5, 11.5, 13.5 ], "rotation": 270 }
+					}
+				},
+				{
+					"name": "Cube4",
+					"from": [ -3.0, 0.0, -2.0 ],
+					"to": [ -2.0, 0.5, 2.0 ],
+					"rotationOrigin": [ -3.0, 0.0, 0.0 ],
+					"faces": {
+						"north": { "texture": "#buckskin", "uv": [ 4.5, 3.5, 5.5, 4.0 ] },
+						"south": { "texture": "#buckskin", "uv": [ 3.5, 8.0, 4.5, 8.5 ] },
+						"west": { "texture": "#buckskin", "uv": [ 1.0, 6.5, 5.0, 7.0 ] },
+						"up": { "texture": "#buckskin", "uv": [ 0.5, 2.0, 1.5, 6.0 ] },
+						"down": { "texture": "#buckskin", "uv": [ 4.0, 12.0, 8.0, 13.0 ], "rotation": 270 }
+					}
+				}
+			]
+		}
+	]}

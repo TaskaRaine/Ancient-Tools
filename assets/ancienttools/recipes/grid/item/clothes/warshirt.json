@@ -1,0 +1,19 @@
+﻿[
+    {
+		ingredientPattern: "B BBBBBBB",
+		width: 3,
+		height: 3,
+		ingredients: {
+			"B": { 
+				type: "item",
+				code: "ancienttools:buckskin",
+				"quantity": 2
+			}
+		},
+		output: { 
+			type: "item", 
+			code: "ancienttools:warshirt",
+			quantity: 1
+		}
+	}
+]
