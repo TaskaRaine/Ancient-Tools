@@ -9,7 +9,8 @@
 		waterproofFuel: true,
 		"repairPercentageByType": {
 			"*-stick": 0.25
-		}
+		},
+		"canSealPrimitiveBarrel": true
 	},
 	variantgroups:[
 		{ code: "type", states: [ "ball", "stick" ] }

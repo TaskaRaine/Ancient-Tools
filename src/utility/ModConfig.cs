@@ -31,8 +31,10 @@ namespace AncientTools.Utility
 
             api.World.Config.SetInt("MortarOutputModifier", config.MortarOutputModifier);
             api.World.Config.SetFloat("MortarGrindTime", config.MortarGrindTime);
+            api.World.Config.SetBool("AllowMortarGrindablePlaceableWithSneak", config.AllowMortarGrindablePlaceableWithSneak);
             api.World.Config.SetInt("BarkPerLog", config.BarkPerLog);
             api.World.Config.SetDouble("BaseBarkStrippingSpeed", config.BaseBarkStrippingSpeed);
+            api.World.Config.SetDouble("BasePrimitiveBarrelCarvingSpeed", config.BasePrimitiveBarrelCarvingSpeed);
             api.World.Config.SetDouble("SalveMixTime", config.SalveMixTime);
             api.World.Config.SetBool("BarkBreadEnabled", config.BarkBreadEnabled);
             api.World.Config.SetBool("DisableVanillaHideCrafting", config.DisableVanillaHideCrafting);
@@ -41,11 +43,12 @@ namespace AncientTools.Utility
             api.World.Config.SetBool("SalveEnabled", config.SalveEnabled);
             api.World.Config.SetBool("AllowCarvingForResin", config.AllowCarvingForResin);
             api.World.Config.SetFloat("SkinningTime", config.SkinningTime);
-            api.World.Config.SetFloat("WaterSackConversionHours", config.WaterSackConversionHours);
+            api.World.Config.SetDouble("WaterSackConversionHours", config.WaterSackConversionHours);
             api.World.Config.SetInt("BrainsPerBrainingSolutionCraft", config.BrainsPerBrainingSolutionCraft);
             api.World.Config.SetFloat("BrainedHideSealHours", config.BrainedHideSealHours);
             api.World.Config.SetFloat("BrainedHideSmokingSeconds", config.BrainedHideSmokingSeconds);
             api.World.Config.SetBool("InWorldBeamCraftingOnly", config.InWorldBeamCraftingOnly);
+            api.World.Config.SetBool("DisableWedgePickupWireframe", config.DisableWedgePickupWireframe);
             api.World.Config.SetBool("AdzeStrippingOnly", config.AdzeStrippingOnly);
             api.World.Config.SetInt("CandleChamberstickLightLevel", config.CandleChamberstickLightLevel);
             api.World.Config.SetInt("PitchChamberstickLightLevel", config.PitchChamberstickLightLevel);

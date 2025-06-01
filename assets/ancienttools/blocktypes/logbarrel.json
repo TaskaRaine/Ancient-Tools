@@ -9,7 +9,8 @@
 	},
     attributes: {
 		handbook: {
-			groupBy: ["logbarrel-{wood}"]
+			groupBy: ["logbarrel-{wood}"],
+			createdBy: "ancienttools:handbook-adzecarving-craftinfo"
 		},
 		"primitiveBarrelPropsByType": {
 			"*-1": {
@@ -51,8 +52,9 @@
     ],
 	"allowedVariants": ["logbarrel-aged-*", "logbarrel-birch-*", "logbarrel-oak-*", "logbarrel-maple-*", "logbarrel-pine-*", "logbarrel-acacia-*", "logbarrel-baldcypress-*", "logbarrel-larch-*", "logbarrel-redwood-*", "logbarrel-ebony-*", "logbarrel-walnut-*", "logbarrel-purpleheart-*"],
 	"behaviorsByType": {
-		"@logbarrel-*-(1|2|3)": [{ "name": "CarveLogBarrel" }, { name: "Lockable" }, { name: "UnstableFalling" } ],
-		"*": [{ name: "Lockable" }, { name: "UnstableFalling" }]
+		"*-sealed": [{ name: "Lockable" }, { name: "UnstableFalling" }],
+		"*-4": [{ "name": "ATSealLogBarrelInfo" }, { name: "Lockable" }, { name: "UnstableFalling" }],
+		"*": [{ "name": "ATCarveLogBarrel" }, { name: "Lockable" }, { name: "UnstableFalling" } ],
 	},
 	drawtype: "json",
 	shapeByType: { 

@@ -1,25 +1,53 @@
 ﻿using AncientTools.Blocks;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
 namespace AncientTools.CollectibleBehaviors
 {
     public class CollectibleBehaviorChopBarkStack: CollectibleBehavior
     {
+        private WorldInteraction[] ChopBarkInteractions { get; set; } = null;
+
         public CollectibleBehaviorChopBarkStack(CollectibleObject collObj) : base(collObj)
         {
             
+        }
+        public override void OnLoaded(ICoreAPI api)
+        {
+            base.OnLoaded(api);
+
+            WorldInteraction chopBarkInteraction = new WorldInteraction
+            {
+                ActionLangCode = "ancienttools:itemhelp-chopbark",
+                MouseButton = EnumMouseButton.Left
+            };
+
+            ChopBarkInteractions = ObjectCacheUtil.GetOrCreate(api, "chopBarkInteraction", () =>
+            {
+                return new WorldInteraction[]
+                {
+                    chopBarkInteraction
+                };
+            });
+        }
+        public override WorldInteraction[] GetHeldInteractionHelp(ItemSlot inSlot, ref EnumHandling handling)
+        {
+            return base.GetHeldInteractionHelp(inSlot, ref handling).Append(ChopBarkInteractions);
         }
         public override void OnHeldAttackStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, ref EnumHandHandling handHandling, ref EnumHandling handling)
         {
             IPlayer byPlayer = (byEntity as EntityPlayer)?.Player;
             if (byPlayer == null || blockSel == null) return;
 
-            if (byEntity.World.BlockAccessor.GetBlock(blockSel.Position).GetType() != typeof(BlockGroundStorage) || byEntity.World.Side == EnumAppSide.Client)
+            if (byEntity.World.BlockAccessor.GetBlock(blockSel.Position).GetType() != typeof(BlockGroundStorage))
             {
                 base.OnHeldAttackStart(slot, byEntity, blockSel, entitySel, ref handHandling, ref handling);
 

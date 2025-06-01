@@ -36,7 +36,6 @@ namespace AncientTools.CollectibleBehaviors
         }
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling, ref EnumHandling handling)
         {
-            //-- NEED TO ADD THE ABILITY TO UTILIZE WILDCARDS. LOG BARREL NEEDS TO CONVERT TO THE SAME WOOD VARIANT USING FAT OR PITCH, BUT NEXT STAGE --//
             if (blockSel == null)
                 return;
 
@@ -57,7 +56,7 @@ namespace AncientTools.CollectibleBehaviors
                     }
                 }
 
-                if (slot.StackSize <= quantityNeeded)
+                if (slot.StackSize >= quantityNeeded)
                 {
                     if (interactedBlock is BlockGroundStorage)
                     {

@@ -10,6 +10,8 @@
 
 ### Releases
 #### Vintage Story 1.20.0+
+[Version 1.6.0-pre.1](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.6.0-pre.1/AncientTools_V1.6.0-pre.1.zip)
+
 [Version 1.5.22](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.22/AncientTools_V1.5.22.zip)
 
 [Version 1.5.21](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.5.21/AncientTools_V1.5.21.zip)
@@ -114,6 +116,55 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.6.0
+Buckskin/Brain Tanning
+Buckskin is now the resulting product from the brain tanning method.
+
+Buckskin can be crafted into three different articles of clothing: Warshirt, Breechcloth, and Moccasins
+
+Bark Tanning
+All variants of bark can now be piled into stacks.
+
+Using a mallet or axe, bark piles can be attacked to create 'bark chunks'.
+
+Bark chunks can be soaked in water, inside a barrel, to create 'Weak Bark Liquor', and further bark chinks can be soaked to create 'Strong Bark Liquor'. This process is the same as the vanilla crafting of oak tannin.
+
+Just like in vanilla, scraped hides can be soaked TWICE in the two different liquor strengths to create leather. The difference with the bark tanning technique is that the hides will adopt the colour of the bark used for tanning.
+
+Introduced tree-typed variants of leather. These typed leathers can be crafted into coloured variants of backpacks, leather armor, and jerkin. 
+
+Typed leathers can still be used to craft antler mounts, books, etc. HOWEVER, not ALL things can be crafted with it yet. More recipes should come for the official launch of the mod.
+
+Bark Ash
+Bark Ash has been implemented as an alternative for lime in leather crafting. 
+
+Bark Ash can be created by stacking 32 bark in a pit kiln and fired.
+
+Bark Ash can be used as fertilizer for crops.
+
+Misc
+Primitive Barrels, which is a low-capacity barrel carved from a log, can be created via in-world crafting with an adze.
+
+Grindables in the mortar can now be ground with a like-item in the players hand, instead of just while they have an empty hand.
+
+Pitch torches can now be picked up with an empty hand by using right click.
+
+Salve and pitch containers can now be picked up with an empty hand by using right click.
+
+All Ancient Tools hides and bark breads have been moved from the GAME domain and into the ANCIENT TOOLS domain. 
+
+Adze tool logic has been shifted into a block behavior.
+
+Fauna of the Stone Age mod compatibility has been removed. Those mods will handle the compatibility instead.
+
+Directional Resin block drops have been changed to 'dropsByType' for better compatibility.
+
+Fixed an issue that caused fat behaviors to be overwritten.
+
+Updated CollectibleBehaviorIngredientConverstion logic to allow the conversion to occur to full blocks, and not just ground storage items. 
+
+Adjusted various renderers to utilize MultiTextureMeshes, which should help reduce texture atlas overflow
+
 #### Version 1.5.25
 Bark Baskets can now be placed on rafts and boats. 
 IMPORTANT NOTE: Break or place your bark baskets in the crafting grid to update them! NOT doing this will result in any basket being placed on a boat to cause a crash loop! To fix the crashing, either disable this mod OR set `enabled:false,` in the barkbasket.json file found within `assets/ancienttools/blocktypes/`, then reload the world. The broken basket will be flushed from the boat inventory automatically and you will be fine to reload with the mod installed. If you don't care about using them for boats, feel free to continue using them as is.

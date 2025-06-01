@@ -85,6 +85,15 @@ namespace AncientTools.Blocks
         {
             if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BESalveContainer salveEntity)
             {
+                if (salveEntity.Inventory.Empty)
+                {
+                    if (byPlayer.InventoryManager.ActiveHotbarSlot.Empty)
+                    {
+                        ReturnContainer(byPlayer, blockSel.Position);
+                        return true;
+                    }
+                }
+
                 salveEntity.OnInteract(byPlayer);
                 salveEntity.ConvertIfComplete();
 
@@ -92,6 +101,17 @@ namespace AncientTools.Blocks
             }
 
             return false;
+        }
+        private WorldInteraction GetPickupInteraction()
+        {
+            WorldInteraction pickupInteraction = new WorldInteraction()
+            {
+                ActionLangCode = "game:blockhelp-behavior-rightclickpickup",
+                RequireFreeHand = true,
+                MouseButton = EnumMouseButton.Right
+            };
+
+            return pickupInteraction;
         }
         private WorldInteraction GetBarkInteractions()
         {
@@ -194,6 +214,7 @@ namespace AncientTools.Blocks
 
             if (resourceSlot.Empty && liquidSlot.Empty)
             {
+                generatedInteraction.Add(GetPickupInteraction());
                 generatedInteraction.Add(GetBarkInteractions());
                 generatedInteraction.Add(GetOilInteractions());
                 generatedInteraction.Add(GetThickenerInteractions());
@@ -222,6 +243,13 @@ namespace AncientTools.Blocks
             }
 
             return generatedInteraction.ToArray();
+        }
+        private void ReturnContainer(IPlayer byPlayer, BlockPos blockPos)
+        {
+            byPlayer.Entity.TryGiveItemStack(new ItemStack(api.World.GetBlock(this.Id)));
+            api.World.BlockAccessor.SetBlock(0, blockPos);
+
+            api.World.BlockAccessor.MarkBlockDirty(blockPos, byPlayer);
         }
     }
 }

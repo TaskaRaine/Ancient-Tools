@@ -48,8 +48,15 @@ namespace AncientTools.Blocks
                         new WorldInteraction()
                         {
                             ActionLangCode = "ancienttools:blockhelp-grind-mortar",
-                            RequireFreeHand = true,
                             HotKeyCode = "sneak",
+                            MouseButton = EnumMouseButton.Right,
+                            Itemstacks = grindablesList.ToArray()
+                        },
+                        new WorldInteraction()
+                        {
+                            ActionLangCode = "ancienttools:blockhelp-grind-mortar-emptyhand",
+                            HotKeyCode = "sneak",
+                            RequireFreeHand = true,
                             MouseButton = EnumMouseButton.Right
                         }
                     };

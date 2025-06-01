@@ -45,7 +45,7 @@ namespace AncientTools.Blocks
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
             if (byPlayer.InventoryManager.ActiveHotbarSlot == null || byPlayer.InventoryManager.ActiveHotbarSlot.Empty)
-                return false;
+                return base.OnBlockInteractStart(world, byPlayer, blockSel);
 
             AssetLocation interactedItemCode = byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.Code;
 
@@ -66,7 +66,7 @@ namespace AncientTools.Blocks
                 }
             }
 
-            return false;
+            return base.OnBlockInteractStart(world, byPlayer, blockSel);
         }
     }
 }

@@ -215,7 +215,7 @@ namespace AncientTools.BlockEntities
         }
         public void OnInteract(IPlayer byPlayer)
         {
-            if (!byPlayer.Entity.Controls.Sneak)
+            if (!byPlayer.Entity.Controls.Sneak || Api.World.Config.GetBool("AllowMortarGrindablePlaceableWithSneak"))
             {
                 ItemSlot activeSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
 
@@ -286,23 +286,27 @@ namespace AncientTools.BlockEntities
         }
         public bool OnSneakInteract(IPlayer byPlayer)
         {
-            if (!byPlayer.Entity.Controls.Sneak || PestleSlot.Empty || ResourceSlot.Empty || !byPlayer.InventoryManager.ActiveHotbarSlot.Empty || !ResourceSlot.Itemstack.Collectible.Attributes["mortarProperties"].Exists)
+            if (!byPlayer.Entity.Controls.Sneak || PestleSlot.Empty || ResourceSlot.Empty || !ResourceSlot.Itemstack.Collectible.Attributes["mortarProperties"].Exists)
             {
                 return false;
             }
 
-            BeginGrind(byPlayer);
-            PerformGrind(byPlayer);
+            SetGroundItemstack();
 
-            return true;
+            if (byPlayer.InventoryManager.ActiveHotbarSlot.Empty || ResourceSlot.Itemstack.Collectible.Code.Equals(byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.Code))
+            {
+                BeginGrind(byPlayer);
+                PerformGrind(byPlayer);
+
+                return true;
+            }
+
+            return false;
         }
         private void BeginGrind(IPlayer byPlayer)
         {
             if (grindStartTime < 0)
             {
-                //-- Setting the ground itemstack here so that there are no exceptions when a mortar is loaded with item already in the mortar --//
-                SetGroundItemstack();
-
                 grindStartTime = Api.World.ElapsedMilliseconds;
                 isGrinding = true;
 

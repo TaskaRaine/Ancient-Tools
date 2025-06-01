@@ -1,4 +1,5 @@
-﻿using Vintagestory.API.Common;
+﻿using AncientTools.Utility;
+using Vintagestory.API.Common;
 
 namespace AncientTools.CollectibleBehaviors
 {
@@ -15,6 +16,7 @@ namespace AncientTools.CollectibleBehaviors
             api.RegisterCollectibleBehaviorClass("MobileStorageRepair", typeof(CollectibleBehaviorMobileStorageRepair));
             api.RegisterCollectibleBehaviorClass("AttemptRepairClutter", typeof(CollectibleBehaviorAttemptRepairClutter));
             api.RegisterCollectibleBehaviorClass("ATChopBarkStack", typeof(CollectibleBehaviorChopBarkStack));
+            api.RegisterCollectibleBehaviorClass("ATPreventGroundStorageStacking", typeof(CollectibleBehaviorPreventGroundStorageStacking));
         }
     }
 }

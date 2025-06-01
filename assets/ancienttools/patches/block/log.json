@@ -45,7 +45,7 @@
     {
         "op": "add",
         "path": "/behaviorsByType/*/-",
-        "value": { "name": "CarveLogBarrel" },
+        "value": { "name": "ATCarveLogBarrel" },
         "file": "game:blocktypes/wood/woodtyped/log",
         "side": "Server",
     },

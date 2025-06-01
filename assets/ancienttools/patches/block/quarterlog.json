@@ -1,0 +1,39 @@
+﻿[
+    {
+        "op": "add",
+        "path": "/attributes/woodStrippableByType",
+        "value": {
+            "*-placed-*": {
+                "resultingLog": "game:logquad-debarked-{wood}-{rotation}", 
+                "barkMultiplier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/woodtyped/log-quad",
+		"side": "Server"
+    },
+    {
+        "op": "add",
+        "path": "/behaviorsByType/*-placed-*",
+        "value": [
+            { "name": "AdzeStrip" },
+            { name: "Pillar" }, 
+            { name: "WrenchOrientable", properties: { baseCode: "logquad-{type}-{wood}"  } }
+        ],
+        "file": "game:blocktypes/wood/woodtyped/log-quad",
+        "side": "Server",
+    },
+    {
+        "op": "move",
+		"frompath": "/behaviorsByType/*",
+		"path": "/temp",
+		"file": "game:blocktypes/wood/woodtyped/log-quad",
+		"side": "Server"
+    },
+    {
+        "op": "move",
+		"frompath": "/temp",
+		"path": "/behaviorsByType/*",
+		"file": "game:blocktypes/wood/woodtyped/log-quad",
+		"side": "Server"
+    }
+]

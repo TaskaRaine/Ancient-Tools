@@ -1,0 +1,10 @@
+﻿[
+    {
+		code: "barkashsolution",
+		ingredients: [
+			{ type: "item", code: "ancienttools:barkash",  quantity: 8 },
+			{ type: "item", code: "game:waterportion",  litres: 10 },
+		],
+		output: { type: "item", code: "ancienttools:barkashsolution", litres: 10 }
+	}
+]

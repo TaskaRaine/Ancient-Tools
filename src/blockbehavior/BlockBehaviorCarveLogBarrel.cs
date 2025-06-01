@@ -1,11 +1,17 @@
-﻿using Vintagestory.API.Client;
+﻿using AncientTools.Items;
+using System.Collections.Generic;
+using System.Linq;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Util;
 
 namespace AncientTools.BlockBehaviors
 {
     public class BlockBehaviorCarveLogBarrel : BlockBehavior
     {
+        public WorldInteraction[] CarveLogInteractions { get; set; } = null;
+
         private double CarvingTime { get; set; } = 1.0;
 
         private SimpleParticleProperties WoodParticles { get; set; }
@@ -18,9 +24,39 @@ namespace AncientTools.BlockBehaviors
         {
             base.OnLoaded(api);
 
-            CarvingTime = api.World.Config.GetDouble("BaseBarkStrippingSpeed", CarvingTime);
+            List<ItemStack> adze = new List<ItemStack>();
+
+            foreach(Item item in api.World.Items)
+            {
+                if(item.Attributes == null) continue;
+
+                if (item.Attributes["carvingTimeModifier"].Exists)
+                    adze.Add(new ItemStack(item));
+            }
+
+            WorldInteraction carveInteraction = new WorldInteraction()
+            {
+                ActionLangCode = "ancienttools:blockhelp-carve-logbarrel",
+                MouseButton = EnumMouseButton.Right,
+                HotKeyCode = "sprint",
+                Itemstacks = adze.ToArray()
+            };
+
+            CarveLogInteractions = ObjectCacheUtil.GetOrCreate(api, "carveLogInteractions", () =>
+            {
+                return new WorldInteraction[]
+                {
+                    carveInteraction
+                };
+            });
+
+            CarvingTime = api.World.Config.GetDouble("BasePrimitiveBarrelCarvingSpeed", CarvingTime);
 
             WoodParticles = InitializeWoodParticles();
+        }
+        public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer, ref EnumHandling handling)
+        {
+            return base.GetPlacedBlockInteractionHelp(world, selection, forPlayer, ref handling).Append(CarveLogInteractions);
         }
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
         {

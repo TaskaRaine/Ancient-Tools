@@ -7,11 +7,14 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Util;
 
 namespace AncientTools.BlockBehaviors
 {
     public class BlockBehaviorAdzeStrip : BlockBehavior
     {
+        public WorldInteraction[] StripLogInteractions { get; set; } = null;
+
         private int BarkAmount { get; set; } = 4;
         private double StrippingTime { get; set; } = 1.0;
 
@@ -25,10 +28,40 @@ namespace AncientTools.BlockBehaviors
         {
             base.OnLoaded(api);
 
+            List<ItemStack> adze = new List<ItemStack>();
+
+            foreach (Item item in api.World.Items)
+            {
+                if (item.Attributes == null) continue;
+
+                if (item.Attributes["strippingTimeModifier"].Exists)
+                    adze.Add(new ItemStack(item));
+            }
+
+            WorldInteraction stripInteraction = new WorldInteraction()
+            {
+                ActionLangCode = "ancienttools:blockhelp-adze-strip",
+                MouseButton = EnumMouseButton.Right,
+                HotKeyCode = "sneak",
+                Itemstacks = adze.ToArray()
+            };
+
+            StripLogInteractions = ObjectCacheUtil.GetOrCreate(api, "stripLogInteractions", () =>
+            {
+                return new WorldInteraction[]
+                {
+                    stripInteraction
+                };
+            });
+
             BarkAmount = api.World.Config.GetInt("BarkPerLog", BarkAmount);
             StrippingTime = api.World.Config.GetDouble("BaseBarkStrippingSpeed", StrippingTime);
 
             WoodParticles = InitializeWoodParticles();
+        }
+        public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer, ref EnumHandling handling)
+        {
+            return base.GetPlacedBlockInteractionHelp(world, selection, forPlayer, ref handling).Append(StripLogInteractions);
         }
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
         {
@@ -95,7 +128,7 @@ namespace AncientTools.BlockBehaviors
                 world.BlockAccessor.MarkBlockDirty(blockSel.Position);
 
                 for (int i = 0; i < world.Config.GetInt("BarkPerLog") * block.Attributes["woodStrippable"]["barkMultiplier"].AsFloat(); i++)
-                    world.SpawnItemEntity(new ItemStack(world.GetItem(new AssetLocation("ancienttools", "bark-" + strippedLog.Code.SecondCodePart())), 1), blockSel.Position.ToVec3d() +
+                    world.SpawnItemEntity(new ItemStack(world.GetItem(new AssetLocation("ancienttools", "bark-" + strippedLog.VariantStrict["wood"])), 1), blockSel.Position.ToVec3d() +
                         new Vec3d(0.5, 0.5, 0.5));
 
                     byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(world, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, 1);

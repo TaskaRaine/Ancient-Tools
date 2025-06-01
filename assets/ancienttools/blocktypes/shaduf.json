@@ -1,4 +1,5 @@
 ﻿{
+    "enabled": false,
     "code": "shaduf",
     "classByType": {
         "*-bottom-*": "ATShadufBase"

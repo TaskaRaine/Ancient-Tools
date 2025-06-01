@@ -1,0 +1,31 @@
+﻿[
+    {
+        "op": "add",
+        "path": "/attributes/woodStrippableByType",
+        "value": {
+            "*-barkedcorner-*": {
+                "resultingLog": "game:logquad-debarkedcorner-{wood}-{side}", 
+                "barkMultiplier": 1
+            }
+        },
+        "file": "game:blocktypes/wood/woodtyped/log-quad-corner",
+		"side": "Server"
+    },
+    {
+        "op": "addmerge",
+        "path": "/behaviorsByType",
+        "value": {
+            "*-barkedcorner-*": [
+                { "name": "AdzeStrip" },
+                { name: "HorizontalOrientable" },
+                { name: "WrenchOrientable", properties: { baseCode: "logquad-{type}-{wood}"} }
+            ],
+            "*": [
+                {name: "HorizontalOrientable"}, 
+		        {name: "WrenchOrientable", properties: { baseCode: "logquad-{type}-{wood}"}}
+            ]
+        },
+        "file": "game:blocktypes/wood/woodtyped/log-quad-corner",
+        "side": "Server",
+    }
+]

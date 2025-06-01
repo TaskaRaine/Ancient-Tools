@@ -14,7 +14,7 @@ namespace AncientTools.BlockEntityRenderer
         private ICoreClientAPI api;
         private BlockPos pos;
 
-        MeshRef meshref;
+        MultiTextureMeshRef meshref;
         public Matrixf ModelMat = new Matrixf();
 
         public bool ShouldRender = false;
@@ -46,18 +46,19 @@ namespace AncientTools.BlockEntityRenderer
 
         public void UpdateMesh(MeshData mesh)
         {
+            DisposeMesh();
+
             if(mesh != null)
             {
-                if (meshref == null)
-                    meshref = api.Render.UploadMesh(mesh);
-                else
-                {
-                    //-- I should be able to use api.Render.UpdateMesh instead of uploading a brand new mesh object but this seems to cause a crash in VS 1.17 --//
-                    api.Render.DeleteMesh(meshref);
-                    meshref = null;
-
-                    meshref = api.Render.UploadMesh(mesh);
-                }
+                meshref = api.Render.UploadMultiTextureMesh(mesh);
+            }
+        }
+        public void DisposeMesh()
+        {
+            if (meshref != null)
+            {
+                meshref.Dispose();
+                meshref = null;
             }
         }
         public void Dispose()
@@ -79,8 +80,6 @@ namespace AncientTools.BlockEntityRenderer
             rpi.GlToggleBlend(true);
 
             IStandardShaderProgram prog = rpi.PreparedStandardShader(pos.X, pos.Y, pos.Z);
-            prog.Tex2D = api.BlockTextureAtlas.AtlasTextures[0].TextureId;
-
 
             prog.ModelMatrix = ModelMat
                 .Identity()
@@ -95,7 +94,7 @@ namespace AncientTools.BlockEntityRenderer
 
             prog.ViewMatrix = rpi.CameraMatrixOriginf;
             prog.ProjectionMatrix = rpi.CurrentProjectionMatrix;
-            rpi.RenderMesh(meshref);
+            rpi.RenderMultiTextureMesh(meshref, "tex");
             prog.Stop();
 
             if(ShouldAnimate)

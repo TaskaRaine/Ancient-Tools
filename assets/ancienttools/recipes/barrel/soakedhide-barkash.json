@@ -1,0 +1,75 @@
+﻿[
+	{
+		code: "soakedhidebarkash",
+		sealHours: 20,
+			ingredients: [
+			{ type: "item", code: "barkashsolution", litres: 2, consumeLitres: 2 },
+			{ type: "item", code: "game:hide-raw-small", quantity: 1 }
+		],
+		output: { type: "item", code: "game:hide-soaked-small", stackSize: 1 }
+	},
+	{
+		code: "soakedhidebarkash",
+		sealHours: 20,
+		ingredients: [
+			{ type: "item", code: "barkashsolution", litres: 4, consumeLitres: 4 },
+			{ type: "item", code: "game:hide-raw-medium", quantity: 1 }
+		],
+		output: { type: "item", code: "game:hide-soaked-medium", stackSize: 1 }
+	},
+	{
+		code: "soakedhidebarkash",
+		sealHours: 20,
+		ingredients: [
+			{ type: "item", code: "barkashsolution", litres: 6, consumeLitres: 6 },
+			{ type: "item", code: "game:hide-raw-large", quantity: 1 }
+		],
+		output: { type: "item", code: "game:hide-soaked-large", stackSize: 1 }
+	},
+	{
+		code: "soakedhidebarkash",
+		sealHours: 20,
+		ingredients: [
+			{ type: "item", code: "barkashsolution", litres: 10, consumeLitres: 10 },
+			{ type: "item", code: "game:hide-raw-huge", quantity: 1 }
+		],
+		output: { type: "item", code: "game:hide-soaked-huge", stackSize: 1}
+	},
+	
+	{
+		code: "soakedhidebarkash",
+		sealHours: 20,
+			ingredients: [
+			{ type: "item", code: "barkashsolution", litres: 2, consumeLitres: 2 },
+			{ type: "item", code: "game:hide-salted-small", quantity: 1 }
+		],
+		output: { type: "item", code: "game:hide-soaked-small", stackSize: 1 }
+	},
+	{
+		code: "soakedhidebarkash",
+		sealHours: 20,
+		ingredients: [
+			{ type: "item", code: "barkashsolution", litres: 4, consumeLitres: 4 },
+			{ type: "item", code: "game:hide-salted-medium", quantity: 1 }
+		],
+		output: { type: "item", code: "game:hide-soaked-medium", stackSize: 1 }
+	},
+	{
+		code: "soakedhidebarkash",
+		sealHours: 20,
+		ingredients: [
+			{ type: "item", code: "barkashsolution", litres: 6, consumeLitres: 6 },
+			{ type: "item", code: "game:hide-salted-large", quantity: 1 }
+		],
+		output: { type: "item", code: "game:hide-soaked-large", stackSize: 1 }
+	},
+	{
+		code: "soakedhidebarkash",
+		sealHours: 20,
+		ingredients: [
+			{ type: "item", code: "barkashsolution", litres: 10, consumeLitres: 10 },
+			{ type: "item", code: "game:hide-salted-huge", quantity: 1 }
+		],
+		output: { type: "item", code: "game:hide-soaked-huge", stackSize: 1}
+	}
+]

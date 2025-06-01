@@ -5,6 +5,28 @@
 		fertilizerProps: { n: 0, p: 0, k: 30 },
 		dissolveInWater: true,
     },
+	"behaviors": [
+		{ "name": "ATPreventGroundStorageStacking" },
+		{
+			name: "GroundStorable",
+			properties: {
+				layout: "Stacking",
+				placeRemoveSound: "game:block/leather",
+				stackingModel: "ancienttools:item/resource/barkash",
+				stackingTextures: {
+					ash: "ancienttools:item/resource/barkash",
+				},
+				tessQuantityElements: 3,
+				stackingCapacity: 12,
+				"maxStackingHeight":  1,
+				collisionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0625, z2: 1 },
+				cbScaleYByLayer: 0.0625,
+				transferQuantity: 1,
+				bulkTransferQuantity: 4,
+				"upSolid": false,
+			}
+		}
+	],
     drawtype: "json",
     shape: { base: "item/resource/barkash" },
     textures: {

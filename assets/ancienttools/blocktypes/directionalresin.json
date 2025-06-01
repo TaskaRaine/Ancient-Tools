@@ -124,9 +124,9 @@
 			"Axe": { hit: "game:block/chop", break: "game:block/planks" }
 		}
 	},
-	drops: [
-		{ type: "block", code: "game:log-placed-{wood}-ud", quantity: { avg: 1 }  }
-	],
+	dropsByType: {
+        "directionalresin-*-*-*-*": [ {type: "block", code: "game:log-placed-{wood}-ud", quantity: { avg: 1 }, states: ["pine","acacia"]} ]
+    },
 	combustiblePropsByType: {
 		"directionalresin-*-*-*-*": {
 			burnTemperature: 800,

@@ -7,8 +7,10 @@ namespace AncientTools.Config
     {
         public float MortarGrindTime = 4.0f;
         public int MortarOutputModifier = 1;
+        public bool AllowMortarGrindablePlaceableWithSneak = false;
         public int BarkPerLog = 4;
         public double BaseBarkStrippingSpeed = 1.0;
+        public double BasePrimitiveBarrelCarvingSpeed = 1.0;
         public double SalveMixTime = 1.5;
         public bool BarkBreadEnabled = true;
         public bool SalveEnabled = true;
@@ -17,11 +19,12 @@ namespace AncientTools.Config
         public bool DisableVanillaGlue = false;
         public bool AllowCarvingForResin = true;
         public float SkinningTime = 4.0f;
-        public float WaterSackConversionHours = 48.0f;
+        public double WaterSackConversionHours = 48.0;
         public int BrainsPerBrainingSolutionCraft = 1;
         public float BrainedHideSealHours = 96.0f;
         public float BrainedHideSmokingSeconds = 1200.0f;
         public bool InWorldBeamCraftingOnly = true;
+        public bool DisableWedgePickupWireframe = false;
         public bool AdzeStrippingOnly = true;
         public int CandleChamberstickLightLevel = 14;
         public int PitchChamberstickLightLevel = 16;
@@ -34,8 +37,10 @@ namespace AncientTools.Config
         {
             MortarGrindTime = previousConfig.MortarGrindTime;
             MortarOutputModifier = previousConfig.MortarOutputModifier;
+            AllowMortarGrindablePlaceableWithSneak = previousConfig.AllowMortarGrindablePlaceableWithSneak;
             BarkPerLog = previousConfig.BarkPerLog;
             BaseBarkStrippingSpeed = previousConfig.BaseBarkStrippingSpeed;
+            BasePrimitiveBarrelCarvingSpeed = previousConfig.BasePrimitiveBarrelCarvingSpeed;
             SalveMixTime = previousConfig.SalveMixTime;
             BarkBreadEnabled = previousConfig.BarkBreadEnabled;
             SalveEnabled = previousConfig.SalveEnabled;
@@ -49,6 +54,7 @@ namespace AncientTools.Config
             BrainedHideSealHours = previousConfig.BrainedHideSealHours;
             BrainedHideSmokingSeconds = previousConfig.BrainedHideSmokingSeconds;
             InWorldBeamCraftingOnly = previousConfig.InWorldBeamCraftingOnly;
+            DisableWedgePickupWireframe = previousConfig.DisableWedgePickupWireframe;
             AdzeStrippingOnly = previousConfig.AdzeStrippingOnly;
             CandleChamberstickLightLevel = previousConfig.CandleChamberstickLightLevel;
             PitchChamberstickLightLevel = previousConfig.PitchChamberstickLightLevel;

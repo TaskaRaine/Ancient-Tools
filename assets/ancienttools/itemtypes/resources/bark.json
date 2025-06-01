@@ -18,10 +18,14 @@
 				extraSections: [{
 					title: "ancienttools:handbook-usedfor-handbookinfo",
 					text: "ancienttools:handbook-salve-craftinfo-dot"
+				},
+				{
+					title: "ancienttools:handbook-usedfor-handbookinfo",
+					text: "ancienttools:handbook-barktanning-craftinfo-dot"
 				}],
 				groupBy: ["bark-*"],
 				createdBy: "ancienttools:handbook-barkstripping-craftinfo"
-			},
+			}
 		},
 		"@bark-(oak|acacia)": {
 			salveProperties: {
@@ -32,6 +36,10 @@
 				extraSections: [{
 					title: "ancienttools:handbook-usedfor-handbookinfo",
 					text: "ancienttools:handbook-salve-craftinfo-dot"
+				},
+				{
+					title: "ancienttools:handbook-usedfor-handbookinfo",
+					text: "ancienttools:handbook-barktanning-craftinfo-dot"
 				}],
 				groupBy: ["bark-*"],
 				createdBy: "ancienttools:handbook-barkstripping-craftinfo"
@@ -80,7 +88,8 @@
 					cbScaleYByLayer: 0.25,
 					transferQuantity: 1,
 					bulkTransferQuantity: 4,
-					"upSolid": false
+					"upSolid": false,
+					maxFireable: 32,
 				}
 			}
 		],
@@ -105,7 +114,8 @@
 					cbScaleYByLayer: 0.25,
 					transferQuantity: 1,
 					bulkTransferQuantity: 4,
-					"upSolid": false
+					"upSolid": false,
+					maxFireable: 32,
 				}
 			}
 		]
@@ -130,9 +140,9 @@
 			burnDuration: 4,
 			meltingPoint: 650,
 			meltingDuration: 45,
-			smeltedRatio: 64,
+			smeltedRatio: 4,
 			smeltingType: "fire",
-			smeltedStack: { type: "item", code: "ancienttools:barkash", "stacksize": 16 },
+			smeltedStack: { type: "item", code: "ancienttools:barkash" },
 			requiresContainer: false
 		},
 		"*": {
@@ -140,9 +150,9 @@
 			burnDuration: 8,
 			meltingPoint: 650,
 			meltingDuration: 45,
-			smeltedRatio: 64,
+			smeltedRatio: 4,
 			smeltingType: "fire",
-			smeltedStack: { type: "item", code: "ancienttools:barkash", "stacksize": 16 },
+			smeltedStack: { type: "item", code: "ancienttools:barkash" },
 			requiresContainer: false
 		}
 	},

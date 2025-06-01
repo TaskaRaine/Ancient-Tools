@@ -10,7 +10,8 @@
 	],
 	creativeinventory: { "general": ["*-up"], "decorative": ["*-up"], "ancienttools": ["*-up"] },
 	behaviorsByType: {
-		"*-lit-*": [{name: "CanIgnite"}],
+		"*-lit-*": [{ name: "CanIgnite" },{ name: "RightClickPickup" }],
+		"*": [{ name: "RightClickPickup" }]
 	},
 	attributes: {
 		transientPropsbyType: {

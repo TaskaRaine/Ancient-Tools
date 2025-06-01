@@ -66,7 +66,7 @@ namespace AncientTools.BlockBehaviors
         {
             ItemSlot activeHotbarSlot = capi.World.Player?.InventoryManager?.ActiveHotbarSlot;
 
-            if(activeHotbarSlot?.Itemstack?.Collectible is ItemWedge || activeHotbarSlot.Empty)
+            if(activeHotbarSlot?.Itemstack?.Collectible is ItemWedge || activeHotbarSlot.Empty && capi.World.Config.GetBool("DisableWedgePickupWireframe", false) == false)
             {
                 block.SelectionBoxes = OriginalSelectionBoxes.Append(WedgeSelectionBoxes);
             }

@@ -14,7 +14,8 @@
 			scale: 0.65
 		},
 		handbook: {
-			groupBy: ["leather-*"]
+			groupBy: ["leather-*"],
+			createdBy: "ancienttools:handbook-barktanning-craftinfo"
 		},
 	},
 	variantgroups: [

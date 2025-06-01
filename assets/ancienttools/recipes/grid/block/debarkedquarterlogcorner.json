@@ -1,0 +1,314 @@
+﻿[
+    {
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:logquad-barkedcorner-birch-north",
+				returnedStack: { type: "block", code: "game:logquad-debarkedcorner-birch-north" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-birch",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:logquad-barkedcorner-oak-north",
+				returnedStack: { type: "block", code: "game:logquad-debarkedcorner-oak-north" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-oak",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:logquad-barkedcorner-maple-north",
+				returnedStack: { type: "block", code: "game:logquad-debarkedcorner-maple-north" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-maple",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:logquad-barkedcorner-pine-north",
+				returnedStack: { type: "block", code: "game:logquad-debarkedcorner-pine-north" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-pine",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:logquad-barkedcorner-acacia-north",
+				returnedStack: { type: "block", code: "game:logquad-debarkedcorner-acacia-north" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-acacia",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:logquad-barkedcorner-kapok-north",
+				returnedStack: { type: "block", code: "game:logquad-debarkedcorner-kapok-north" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-kapok",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:logquad-barkedcorner-baldcypress-north",
+				returnedStack: { type: "block", code: "game:logquad-debarkedcorner-baldcypress-north" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-baldcypress",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:logquad-barkedcorner-larch-north",
+				returnedStack: { type: "block", code: "game:logquad-debarkedcorner-larch-north" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-larch",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:logquad-barkedcorner-redwood-north",
+				returnedStack: { type: "block", code: "game:logquad-debarkedcorner-redwood-north" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-redwood",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:logquad-barkedcorner-ebony-north",
+				returnedStack: { type: "block", code: "game:logquad-debarkedcorner-ebony-north" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-ebony",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:logquad-barkedcorner-walnut-north",
+				returnedStack: { type: "block", code: "game:logquad-debarkedcorner-walnut-north" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-walnut",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:logquad-barkedcorner-purpleheart-north",
+				returnedStack: { type: "block", code: "game:logquad-debarkedcorner-purpleheart-north" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-purpleheart",
+			quantity: 4
+		}
+	},
+	{
+		ingredientPattern: "LA",
+		width: 2,
+		height: 1,
+		shapeless: true,
+		ingredients: {
+			"L": { 
+				type: "block",
+				code: "game:logquad-barkedcorner-aged-north",
+				returnedStack: { type: "block", code: "game:logquad-debarkedcorner-aged-north" }
+			},
+			"A": {
+				type: "item",
+				code: "adze-*",
+				isTool: true
+			}
+
+		},
+		output: { 
+			type: "item", 
+			code: "bark-aged",
+			quantity: 4
+		}
+	},
+]

@@ -25,18 +25,38 @@
 	},
 	{
 		"op": "add",
-		"path": "/behaviors",
-		"value": [
-			{ 
-				name: "ConvertBlockUsingIngredient", 
-				properties: {
-					convertFromBlockCode: "game:claypot-burned",
-					convertToBlockCode: "ancienttools:salvepot-empty"
-				} 
-			}
-		],
+		"path": "/attributes/canSealPrimitiveBarrel",
+		"value": true,
+		"file": "game:itemtypes/resource/fat",
+		"side": "Server",
+	},
+	{
+		"op": "add",
+		"path": "/behaviors/-",
+		"value": { 
+			name: "ConvertBlockUsingIngredient", 
+			properties: {
+				convertFromBlockCode: "game:claypot-burned",
+				convertToBlockCode: "ancienttools:salvepot-empty"
+			} 
+		},
 		"file": "game:itemtypes/resource/fat",
 		"side": "Server",
 		"condition": { "when": "SalveEnabled", "isValue": "true" }
+	},
+	{
+		"op": "add",
+		"path": "/behaviors/-",
+		"value": { 
+			name: "ConvertBlockUsingIngredient", 
+			properties: {
+				convertFromBlockCode: "ancienttools:logbarrel-{wood}-4",
+				convertToBlockCode: "ancienttools:logbarrel-{wood}-sealed",
+				"wildcard": "wood",
+				"quantityNeeded": 1
+			}
+		},
+		"file": "game:itemtypes/resource/fat",
+		"side": "Server"
 	}
 ]

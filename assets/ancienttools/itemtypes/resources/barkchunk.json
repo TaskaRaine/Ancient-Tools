@@ -6,7 +6,12 @@
     ],
 	attributes: {
 		handbook: {
-			groupBy: ["barkchunk-*"]
+			groupBy: ["barkchunk-*"],
+			createdBy: "ancienttools:handbook-smashingbark-craftinfo",
+			extraSections: [{
+					title: "ancienttools:handbook-usedfor-handbookinfo",
+					text: "ancienttools:handbook-barktanning-craftinfo-dot"
+			}],
 		}
 	},
 	drawtype: "json",

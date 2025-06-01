@@ -1,4 +1,5 @@
 ﻿{
+    "enabled": false,
     "code": "pitcherpump",
     creativeinventory: { "general": ["*-south"], "ancienttools": ["*-south"] },
     attributes: {

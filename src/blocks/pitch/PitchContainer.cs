@@ -40,6 +40,12 @@ namespace AncientTools.Blocks
                     grassList.Add(new ItemStack(item));
             }
 
+            WorldInteraction pickupInteraction = new WorldInteraction()
+            {
+                ActionLangCode = "game:blockhelp-behavior-rightclickpickup",
+                RequireFreeHand = true,
+                MouseButton = EnumMouseButton.Right
+            };
             WorldInteraction charcoalInteraction = new WorldInteraction()
             {
                 ActionLangCode = "ancienttools:blockhelp-insert-powderedcharcoal",
@@ -63,6 +69,7 @@ namespace AncientTools.Blocks
             {
                 return new WorldInteraction[]
                 {
+                    pickupInteraction,
                     charcoalInteraction,
                     resinInteraction,
                     grassInteraction
@@ -204,6 +211,15 @@ namespace AncientTools.Blocks
         {
             if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BEPitchContainer pitchEntity)
             {
+                if(pitchEntity.Inventory.Empty)
+                {
+                    if (byPlayer.InventoryManager.ActiveHotbarSlot.Empty)
+                    {
+                        ReturnContainer(byPlayer, blockSel.Position);
+                        return true;
+                    }
+                }
+
                 pitchEntity.OnInteract(byPlayer);
                 pitchEntity.ConvertIfComplete();
 
@@ -211,6 +227,13 @@ namespace AncientTools.Blocks
             }
 
             return false;
+        }
+        private void ReturnContainer(IPlayer byPlayer, BlockPos blockPos)
+        {
+            byPlayer.Entity.TryGiveItemStack(new ItemStack(api.World.GetBlock(this.Id)));
+            api.World.BlockAccessor.SetBlock(0, blockPos);
+
+            api.World.BlockAccessor.MarkBlockDirty(blockPos, byPlayer);
         }
     }
 }

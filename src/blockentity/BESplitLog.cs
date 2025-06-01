@@ -234,7 +234,7 @@ namespace AncientTools.BlockEntities
 
             if (activeCollectible == null)
             {
-                if (!WedgeSlot(index).Empty)
+                if (!WedgeSlot(index).Empty && Api.World.Config.GetBool("DisableWedgePickupWireframe", false) == false)
                 {
                     GiveObject(byPlayer, index);
                     return true;

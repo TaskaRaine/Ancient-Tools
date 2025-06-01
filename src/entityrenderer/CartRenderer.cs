@@ -90,14 +90,12 @@ namespace AncientTools.EntityRenderers
         }
         //public Shape InventoryShape { get; set; }
 
-        public MeshRef MeshRef { get; set; }
+        public MultiTextureMeshRef MeshRef { get; set; }
         public MeshData MeshData { get; set; } = new MeshData();
 
         public Matrixf ModelMat = new Matrixf();
 
         public bool UpdatedInventory { get; set; } = false;
-
-        private int PreviousVerticesCount, PreviousIndicesCount;
 
         //public Vec3f LookAtVector { get; set; } = new Vec3f(DROPPED_HEIGHT, 0.0f, 0.0f);
 
@@ -213,24 +211,16 @@ namespace AncientTools.EntityRenderers
             if (mesh != null)
             {
                 if (MeshRef == null)
-                    MeshRef = Capi.Render.UploadMesh(mesh);
+                    MeshRef = Capi.Render.UploadMultiTextureMesh(mesh);
                 else
                 {
-                    if(!UpdatedInventory || mesh.VerticesCount == PreviousVerticesCount || mesh.IndicesCount == PreviousIndicesCount )
-                        Capi.Render.UpdateMesh(MeshRef, mesh);
-                    else
-                    {
-                        Capi.Render.DeleteMesh(MeshRef);
-                        MeshRef = null;
+                    MeshRef?.Dispose();
+                    MeshRef = null;
 
-                        MeshRef = Capi.Render.UploadMesh(mesh);
+                    MeshRef = Capi.Render.UploadMultiTextureMesh(mesh);
 
-                        UpdatedInventory = false;
-                    }
+                    UpdatedInventory = false;
                 }
-
-                PreviousVerticesCount = mesh.VerticesCount;
-                PreviousIndicesCount = mesh.IndicesCount;
             }
         }
         public override void DoRender3DOpaque(float dt, bool isShadowPass)
@@ -247,7 +237,6 @@ namespace AncientTools.EntityRenderers
 
                 IStandardShaderProgram prog = rapi.PreparedStandardShader((int)entity.Pos.X, (int)(entity.Pos.Y + 0.2), (int)entity.Pos.Z);
                 Vec3d camPos = capi.World.Player.Entity.CameraPos;
-                prog.Tex2D = Capi.EntityTextureAtlas.AtlasTextures[0].TextureId;
                 prog.ModelMatrix = ModelMat
                     .Identity()
                     .Translate(entity.Pos.X - camPos.X, entity.Pos.Y - camPos.Y, entity.Pos.Z - camPos.Z)
@@ -259,7 +248,7 @@ namespace AncientTools.EntityRenderers
                 ;
                 prog.ViewMatrix = rapi.CameraMatrixOriginf;
                 prog.ProjectionMatrix = rapi.CurrentProjectionMatrix;
-                rapi.RenderMesh(MeshRef);
+                rapi.RenderMultiTextureMesh(MeshRef, "tex");
                 prog.Stop();
             }
                 //Capi.Render.RenderMesh(MeshRef);

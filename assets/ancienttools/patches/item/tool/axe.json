@@ -1,0 +1,22 @@
+﻿[
+    {
+		"enabled": true,
+		"op": "add",
+		"path": "/behaviors/-",
+		"value": {
+			name: "ATChopBarkStack"
+		},
+		"file": "game:itemtypes/tool/axe-metal",
+		"side": "Server",
+	},
+	{
+		"enabled": true,
+		"op": "add",
+		"path": "/behaviors/-",
+		"value": {
+			name: "ATChopBarkStack"
+		},
+		"file": "game:itemtypes/tool/axe-stone",
+		"side": "Server",
+	}
+]
