@@ -76,7 +76,7 @@ namespace AncientTools.Blocks
 
             if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BEMortar mortarEntity)
             {
-                return mortarEntity.OnShiftInteract(byPlayer);
+                return mortarEntity.OnSneakInteract(byPlayer);
             }
             return false;
         }

@@ -284,7 +284,7 @@ namespace AncientTools.BlockEntities
 
             UpdateMeshes();
         }
-        public bool OnShiftInteract(IPlayer byPlayer)
+        public bool OnSneakInteract(IPlayer byPlayer)
         {
             if (!byPlayer.Entity.Controls.ShiftKey || PestleSlot.Empty || ResourceSlot.Empty || !byPlayer.InventoryManager.ActiveHotbarSlot.Empty || !ResourceSlot.Itemstack.Collectible.Attributes["mortarProperties"].Exists)
             {
