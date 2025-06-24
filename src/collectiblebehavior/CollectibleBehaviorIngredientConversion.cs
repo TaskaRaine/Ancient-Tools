@@ -9,6 +9,8 @@ namespace AncientTools.CollectibleBehaviors
     {
         private AssetLocation convertFromBlockCode;
         private AssetLocation convertToBlockCode;
+        private AssetLocation resolvedFromBlockCode;
+        private AssetLocation resolvedToBlockCode;
 
         string wildcard;
         int quantityNeeded;
@@ -33,6 +35,8 @@ namespace AncientTools.CollectibleBehaviors
 
             convertFromBlockCode = new AssetLocation(fromCode[0], fromCode[1]);
             convertToBlockCode = new AssetLocation(toCode[0], toCode[1]);
+            resolvedFromBlockCode = new AssetLocation(fromCode[0], string.Empty);
+            resolvedToBlockCode = new AssetLocation(fromCode[0], string.Empty);
         }
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handHandling, ref EnumHandling handling)
         {
@@ -52,7 +56,7 @@ namespace AncientTools.CollectibleBehaviors
                 {
                     if(interactedBlock.Variant.TryGetValue(wildcard) is string variant)
                     {
-                        ResolveWildcard(variant, ref convertToBlockCode, ref convertFromBlockCode);
+                        ResolveWildcard(variant, convertToBlockCode, convertFromBlockCode, ref resolvedToBlockCode, ref resolvedFromBlockCode);
                     }
                 }
 
@@ -62,41 +66,42 @@ namespace AncientTools.CollectibleBehaviors
                     {
                         if (api.World.BlockAccessor.GetBlockEntity(blockSel.Position) is BlockEntityGroundStorage groundStorageEntity)
                         {
-                            if (groundStorageEntity.TotalStackSize == 1 && groundStorageEntity.Inventory.FirstNonEmptySlot.Itemstack.Collectible.Code.Equals(convertFromBlockCode))
+                            if (groundStorageEntity.TotalStackSize == 1 && groundStorageEntity.Inventory.FirstNonEmptySlot.Itemstack.Collectible.Code.Equals(resolvedFromBlockCode))
                             {
                                 api.World.BlockAccessor.RemoveBlockEntity(blockSel.Position);
-                                api.World.BlockAccessor.SetBlock(api.World.BlockAccessor.GetBlock(convertToBlockCode).Id, blockSel.Position);
+                                api.World.BlockAccessor.SetBlock(api.World.BlockAccessor.GetBlock(resolvedToBlockCode).Id, blockSel.Position);
                                 api.World.BlockAccessor.MarkBlockDirty(blockSel.Position);
+
+                                ConsumeResource(quantityNeeded, slot);
 
                                 handling = EnumHandling.PreventDefault;
                                 handHandling = EnumHandHandling.PreventDefault;
+
+                                return;
                             }
                         }
-                        return;
                     }
-                    else if (interactedBlock.Code.Equals(convertFromBlockCode))
+                    else if (interactedBlock.Code.Equals(resolvedFromBlockCode))
                     {
-                        api.World.BlockAccessor.SetBlock(api.World.BlockAccessor.GetBlock(convertToBlockCode).Id, blockSel.Position);
+                        api.World.BlockAccessor.SetBlock(api.World.BlockAccessor.GetBlock(resolvedToBlockCode).Id, blockSel.Position);
                         api.World.BlockAccessor.MarkBlockDirty(blockSel.Position);
+
+                        ConsumeResource(quantityNeeded, slot);
 
                         handling = EnumHandling.PreventDefault;
                         handHandling = EnumHandHandling.PreventDefault;
-                    }
 
-                    if (quantityNeeded > 0)
-                    {
-                        slot.TakeOut(quantityNeeded);
-                        slot.MarkDirty();
+                        return;
                     }
                 }
             }
 
             handling = EnumHandling.PassThrough;
         }
-        private void ResolveWildcard(string variant, ref AssetLocation toBlockCode, ref AssetLocation fromBlockCode)
+        private void ResolveWildcard(string variant, AssetLocation toBlockCode, AssetLocation fromBlockCode, ref AssetLocation resolvedToBlockCode, ref AssetLocation resolvedFromBlockCode)
         {
-            toBlockCode.Path = ReplaceWildcard(toBlockCode.Path, variant);
-            fromBlockCode.Path = ReplaceWildcard(fromBlockCode.Path, variant);
+            resolvedToBlockCode.Path = ReplaceWildcard(toBlockCode.Path, variant);
+            resolvedFromBlockCode.Path = ReplaceWildcard(fromBlockCode.Path, variant);
         }
         private string ReplaceWildcard(string path, string variant)
         {
@@ -110,6 +115,14 @@ namespace AncientTools.CollectibleBehaviors
             string textAfter = path.Substring(indexWildcardEnd + 1);
 
             return textBefore + variant + textAfter;
+        }
+        private void ConsumeResource(int consumptionAmount, ItemSlot slot)
+        {
+            if (consumptionAmount > 0)
+            {
+                slot.TakeOut(consumptionAmount);
+                slot.MarkDirty();
+            }
         }
     }
 }

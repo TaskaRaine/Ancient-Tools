@@ -138,7 +138,13 @@ namespace AncientTools.BlockBehaviors
         }
         public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
         {
-            if(secondsUsed > 1)
+            if (blockSel == null || byPlayer.InventoryManager.ActiveTool != EnumTool.Knife || beginScrape == false)
+            {
+                base.OnBlockInteractStop(secondsUsed, world, byPlayer, blockSel, ref handling);
+                return;
+            }
+
+            if (secondsUsed > 1)
             {
                 string woodType = block.FirstCodePart(2);
                 string woodOrientation = block.FirstCodePart(3);

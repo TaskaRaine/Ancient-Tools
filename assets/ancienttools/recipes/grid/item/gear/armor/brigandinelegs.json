@@ -4,7 +4,7 @@
       recipeGroup: 1,
       ingredients: {
           "J": { type: "item", code: "ancienttools:barkjerkinarmor-legs-acacia", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-acacia", stacksize: 6 } } },
-          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 },
           "L": { "type": "item", "code": "game:leather-normal-plain" }
       },
       width: 3,
@@ -16,7 +16,7 @@
       recipeGroup: 1,
       ingredients: {
           "J": { type: "item", code: "ancienttools:barkjerkinarmor-legs-aged", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-aged", stacksize: 6 } } },
-          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 },
           "L": { "type": "item", "code": "game:leather-normal-plain" }
       },
       width: 3,
@@ -28,7 +28,7 @@
       recipeGroup: 1,
       ingredients: {
           "J": { type: "item", code: "ancienttools:barkjerkinarmor-legs-baldcypress", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-baldcypress", stacksize: 6 } } },
-          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 },
           "L": { "type": "item", "code": "game:leather-normal-plain" }
       },
       width: 3,
@@ -40,7 +40,7 @@
       recipeGroup: 1,
       ingredients: {
           "J": { type: "item", code: "ancienttools:barkjerkinarmor-legs-birch", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-birch", stacksize: 6 } } },
-          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 },
           "L": { "type": "item", "code": "game:leather-normal-plain" }
       },
       width: 3,
@@ -52,7 +52,7 @@
       recipeGroup: 1,
       ingredients: {
           "J": { type: "item", code: "ancienttools:barkjerkinarmor-legs-cypress", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-cypress", stacksize: 6 } } },
-          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 },
           "L": { "type": "item", "code": "game:leather-normal-plain" }
       },
       width: 3,
@@ -64,7 +64,7 @@
       recipeGroup: 1,
       ingredients: {
           "J": { type: "item", code: "ancienttools:barkjerkinarmor-legs-ebony", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-ebony", stacksize: 6 } } },
-          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 },
           "L": { "type": "item", "code": "game:leather-normal-plain" }
       },
       width: 3,
@@ -76,7 +76,7 @@
       recipeGroup: 1,
       ingredients: {
           "J": { type: "item", code: "ancienttools:barkjerkinarmor-legs-kapok", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-kapok", stacksize: 6 } } },
-          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 },
           "L": { "type": "item", "code": "game:leather-normal-plain" }
       },
       width: 3,
@@ -88,7 +88,7 @@
       recipeGroup: 1,
       ingredients: {
           "J": { type: "item", code: "ancienttools:barkjerkinarmor-legs-larch", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-larch", stacksize: 6 } } },
-          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 },
           "L": { "type": "item", "code": "game:leather-normal-plain" }
       },
       width: 3,
@@ -100,7 +100,7 @@
       recipeGroup: 1,
       ingredients: {
           "J": { type: "item", code: "ancienttools:barkjerkinarmor-legs-maple", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-maple", stacksize: 6 } } },
-          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 },
           "L": { "type": "item", "code": "game:leather-normal-plain" }
       },
       width: 3,
@@ -112,7 +112,7 @@
       recipeGroup: 1,
       ingredients: {
           "J": { type: "item", code: "ancienttools:barkjerkinarmor-legs-pine", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-pine", stacksize: 6 } } },
-          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 },
           "L": { "type": "item", "code": "game:leather-normal-plain" }
       },
       width: 3,
@@ -124,7 +124,7 @@
       recipeGroup: 1,
       ingredients: {
           "J": { type: "item", code: "ancienttools:barkjerkinarmor-legs-purpleheart", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-purpleheart", stacksize: 6 } } },
-          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 },
           "L": { "type": "item", "code": "game:leather-normal-plain" }
       },
       width: 3,
@@ -136,7 +136,7 @@
       recipeGroup: 1,
       ingredients: {
           "J": { type: "item", code: "ancienttools:barkjerkinarmor-legs-redwood", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-redwood", stacksize: 6 } } },
-          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 },
           "L": { "type": "item", "code": "game:leather-normal-plain" }
       },
       width: 3,
@@ -148,7 +148,7 @@
       recipeGroup: 1,
       ingredients: {
           "J": { type: "item", code: "ancienttools:barkjerkinarmor-legs-walnut", quantity: 1, recipeAttributes: { repairMat: { type: "item", code: "ancienttools:leather-normal-walnut", stacksize: 6 } } },
-          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 }
+          "P": { type: "item", code: "game:metalplate-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron", "meteoriciron", "steel"], quantity: 1 },
           "L": { "type": "item", "code": "game:leather-normal-plain" }
       },
       width: 3,

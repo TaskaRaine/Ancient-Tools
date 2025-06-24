@@ -116,7 +116,25 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
-#### Version 1.6.0
+#### Version 1.6.0-pre.3
+Fixed an issue that prevented some in-world block/item conversions under certain conditions.
+
+Fixed an issue that prevented the log barrel creation from being processed on the server.
+
+Fixed an issue that caused scraping for resin to produce a debarked log instead.
+
+Added unique sounds to the primitive barrel.
+
+#### Version 1.6.0-pre.2
+Fixed a crash that occurred when a player would smash the bark stack with a tool and the bark stack was not a multiple of 4
+
+Fixed a crash that occurred when interacting with logs that have no directional resin block
+
+Fixed a brigadine armor recipe error 
+
+Added a sound effect for bark stack smashing
+
+#### Version 1.6.0-pre.1
 Buckskin/Brain Tanning
 Buckskin is now the resulting product from the brain tanning method.
 

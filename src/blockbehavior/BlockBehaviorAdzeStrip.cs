@@ -115,10 +115,12 @@ namespace AncientTools.BlockBehaviors
         public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
         {
             if (block.Attributes == null || !block.Attributes["woodStrippable"].Exists || !byPlayer.Entity.Controls.Sneak)
-            {
-                handling = EnumHandling.Handled;
                 return;
-            }
+
+            ItemStack interactedStack = byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack;
+
+            if (interactedStack.Attributes == null || !interactedStack.Collectible.Attributes["strippingTimeModifier"].Exists)
+                return;
 
             if (secondsUsed >= StrippingTime)
             {
@@ -132,6 +134,8 @@ namespace AncientTools.BlockBehaviors
                         new Vec3d(0.5, 0.5, 0.5));
 
                     byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(world, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, 1);
+
+                handling = EnumHandling.Handled;
             }
         }
         private SimpleParticleProperties InitializeWoodParticles()

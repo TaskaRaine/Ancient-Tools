@@ -67,22 +67,28 @@ namespace AncientTools.CollectibleBehaviors
 
                 if (collectibleCode.Domain == "ancienttools" && collectibleCode.FirstCodePart() == "bark")
                 {
-                    if (groundStorageEntity.Inventory.FirstNonEmptySlot.StackSize <= 64 / (groundStorageEntity.Inventory.FirstNonEmptySlot.StackSize / 4))
-                    {
-                        byEntity.Api.World.BlockAccessor.BreakBlock(blockSel.Position, byPlayer);
+                    int multiplier = (64 / groundStorageEntity.Inventory.FirstNonEmptySlot.StackSize) * 4;
 
-                        handling = EnumHandling.Handled;
-                        handHandling = EnumHandHandling.Handled;
+                    if (multiplier > groundStorageEntity.Inventory.FirstNonEmptySlot.StackSize)
+                        multiplier = groundStorageEntity.Inventory.FirstNonEmptySlot.StackSize;
+
+                    if (groundStorageEntity.Inventory.FirstNonEmptySlot.StackSize <= multiplier)
+                    {
+                        byEntity.Api.World.BlockAccessor.ExchangeBlock(0, blockSel.Position);
+                        byEntity.Api.World.BlockAccessor.RemoveBlockEntity(blockSel.Position);
                     }
 
-                    ItemStack barkStack = groundStorageEntity.Inventory.FirstNonEmptySlot.TakeOut(64 / (groundStorageEntity.Inventory.FirstNonEmptySlot.StackSize / 4));
+                    groundStorageEntity.Inventory.FirstNonEmptySlot.TakeOut(multiplier);
                     ItemStack barkChunkStack = new ItemStack(byEntity.World.GetItem(new AssetLocation("ancienttools", "barkchunk-" + collectibleCode.Path.Split('-')[1])));
 
-                    for (int i = 0; i < barkStack.StackSize; i++)
+                    for (int i = 0; i < multiplier; i++)
                     {
                         Vec3d velocityVector = new Vec3d(byEntity.World.Rand.Next(-1, 2) * byEntity.World.Rand.NextDouble() / 10, 0.5 * (byEntity.World.Rand.NextDouble() / 5), byEntity.World.Rand.Next(-1, 2) * (byEntity.World.Rand.NextDouble() / 10));
                         byEntity.World.SpawnItemEntity(barkChunkStack.Clone(), blockSel.Position, velocityVector);
                     }
+
+                    if (byEntity.Api.World.Side == EnumAppSide.Server)
+                        byEntity.Api.World.PlaySoundAt(new AssetLocation("ancienttools", "sounds/item/popsiclesnap"), blockSel.Position, 0, null, true, 32f, 1.0f);
 
                     groundStorageEntity.MarkDirty(true);
 

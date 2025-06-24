@@ -100,14 +100,14 @@ namespace AncientTools.BlockBehaviors
                 return false;
             }
 
-            handling = EnumHandling.PreventSubsequent;
+            handling = EnumHandling.Handled;
             return true;
         }
         public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
         {
             if (block.Attributes == null || !block.Attributes["primitiveBarrelProps"].Exists || !byPlayer.Entity.Controls.Sprint)
             {
-                handling = EnumHandling.Handled;
+                handling = EnumHandling.PassThrough;
                 return;
             }
             if (secondsUsed >= CarvingTime)
@@ -118,6 +118,8 @@ namespace AncientTools.BlockBehaviors
                 world.BlockAccessor.MarkBlockDirty(blockSel.Position);
 
                 byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(world, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, 1);
+
+                handling = EnumHandling.Handled;
             }
         }
         private SimpleParticleProperties InitializeWoodParticles()
