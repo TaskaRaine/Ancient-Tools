@@ -180,9 +180,9 @@ namespace AncientTools.BlockEntities
                         if (LiquidSlot.Itemstack.StackSize == 4)
                         {
                             if (Block.Code.EndVariant() == "residuecovered")
-                                Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-" + ResourceSlot.Itemstack.Collectible.Variant["bark"] + "residuecovered")).Id, Pos);
+                                Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-" + Block.VariantStrict["color"] + "-" + ResourceSlot.Itemstack.Collectible.Variant["bark"] + "residuecovered")).Id, Pos);
                             else
-                                Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-" + ResourceSlot.Itemstack.Collectible.Variant["bark"])).Id, Pos);
+                                Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-" + Block.VariantStrict["color"] + "-" + ResourceSlot.Itemstack.Collectible.Variant["bark"])).Id, Pos);
                             
                             Api.World.BlockAccessor.RemoveBlockEntity(Pos);
                             Api.World.BlockAccessor.MarkBlockDirty(Pos);
@@ -195,9 +195,9 @@ namespace AncientTools.BlockEntities
                         if (LiquidSlot.Itemstack.StackSize == 4)
                         {
                             if (Block.Code.EndVariant() == "residuecovered")
-                                Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-hardwaxresiduecovered")).Id, Pos);
+                                Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-" + Block.VariantStrict["color"] + "-hardwaxresiduecovered")).Id, Pos);
                             else
-                                Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-hardwax")).Id, Pos);
+                                Api.World.BlockAccessor.SetBlock(Api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-" + Block.VariantStrict["color"] + "-hardwax")).Id, Pos);
                             
                             Api.World.BlockAccessor.RemoveBlockEntity(Pos);
                             Api.World.BlockAccessor.MarkBlockDirty(Pos);

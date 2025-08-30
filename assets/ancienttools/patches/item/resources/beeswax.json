@@ -30,13 +30,31 @@
 			{ 
 				name: "ConvertBlockUsingIngredient", 
 				properties: {
-					convertFromBlockCode: "game:claypot-burned",
-					convertToBlockCode: "ancienttools:salvepot-empty"
+					convertFromBlockCode: "game:claypot-{color}-fired",
+					convertToBlockCode: "ancienttools:salvepot-{color}-empty",
+					"wildcard": "color",
+					"quantityNeeded": 1
 				}
 			}
 		],
 		"file": "game:itemtypes/resource/beeswax",
 		"side": "Server",
 		"condition": { "when": "SalveEnabled", "isValue": "true" }
-	}
+	},
+	{
+		"op": "add",
+		"path": "/behaviors/-",
+		"value": { 
+			name: "ConvertBlockUsingIngredient", 
+			properties: {
+				convertFromBlockCode: "game:dirtyclaypot-{color}-empty",
+				convertToBlockCode: "ancienttools:salvepot-{color}-residuecovered",
+				"wildcard": "color",
+				"quantityNeeded": 1
+			}
+		},
+		"file": "game:itemtypes/resource/beeswax",
+		"side": "Server",
+		"condition": { "when": "SalveEnabled", "isValue": "true" }
+	},
 ]

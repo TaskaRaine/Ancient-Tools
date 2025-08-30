@@ -3,57 +3,33 @@
 		"op": "addmerge",
 		"path": "/behaviorConfigs",
 		"value": {},
-		"file": "game:entities/land/hare-female",
-		"side": "Server"
-	},
-	{
-		"op": "addmerge",
-		"path": "/behaviorConfigs",
-		"value": {},
-		"file": "game:entities/land/hare-male",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hare-adult",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
 	{
 		"op": "addmerge",
 		"path": "/behaviorConfigs/harvestable",
 		"value": {},
-		"file": "game:entities/land/hare-female",
-		"side": "Server"
-	},
-	{
-		"op": "addmerge",
-		"path": "/behaviorConfigs/harvestable",
-		"value": {},
-		"file": "game:entities/land/hare-male",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hare-adult",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
 	{
 		"op": "addmerge",
 		"path": "/behaviorConfigs/harvestable/drops",
 		"value": [],
-		"file": "game:entities/land/hare-female",
-		"side": "Server"
-	},
-	{
-		"op": "addmerge",
-		"path": "/behaviorConfigs/harvestable/drops",
-		"value": [],
-		"file": "game:entities/land/hare-male",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hare-adult",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
 	{
 		"op": "addmerge",
 		"path": "/behaviorConfigs/harvestable/quantitySlots",
 		"value": 8,
-		"file": "game:entities/land/hare-female",
-		"side": "Server"
-	},
-	{
-		"op": "addmerge",
-		"path": "/behaviorConfigs/harvestable/quantitySlots",
-		"value": 8,
-		"file": "game:entities/land/hare-male",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hare-adult",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
 	{
 		"op": "add",
@@ -63,18 +39,8 @@
 			code: "ancienttools:brain",
 			quantity: { avg: 0.25, var: 0 } 
 		},
-		"file": "game:entities/land/hare-female",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hare-adult",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
-	{
-		"op": "add",
-		"path": "/behaviorConfigs/harvestable/drops/-",
-		"value": {
-			type: "item",
-			code: "ancienttools:brain",
-			quantity: { avg: 0.25, var: 0 } 
-		},
-		"file": "game:entities/land/hare-male",
-		"side": "Server"
-	}
 ]

@@ -24,35 +24,51 @@
 		"side": "Server",
 	},
 	{
-		"op": "add",
-		"path": "/attributesByType/*/mortarPropertiesByType",
+		"op": "addmerge",
+		"path": "attributesByType/*-whitemarble",
 		"value": {
-			"*-whitemarble": {
-				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_stone_{rock}",
-				texturePaths: [{ code: "{rock}", path: "game:block/stone/rock/{rock}1" }],
-				groundStack: { type: "item", code: "game:lime" },
-				resultQuantity: 1
-			},
-			"*-redmarble": {
-				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_stone_{rock}",
-				texturePaths: [{ code: "{rock}", path: "game:block/stone/rock/{rock}1" }],
-				groundStack: { type: "item", code: "game:lime" },
-				resultQuantity: 1
-			},
-			"*-greenmarble": {
-				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_stone_{rock}",
-				texturePaths: [{ code: "{rock}", path: "game:block/stone/rock/{rock}1" }],
-				groundStack: { type: "item", code: "game:lime" },
-				resultQuantity: 1
-			},
-			"*-halite": {
-				shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_stone_{rock}",
-				texturePaths: [{ code: "{rock}", path: "game:block/stone/rock/{rock}1" }],
-				groundStack: { type: "item", code: "game:salt" },
-				resultQuantity: 2
-			}
+			shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_stone_{rock}",
+			texturePaths: [{ code: "{rock}", path: "game:block/stone/rock/{rock}1" }],
+			groundStack: { type: "item", code: "game:lime" },
+			resultQuantity: 1
 		},
 		"file": "game:itemtypes/resource/stone",
 		"side": "Server",
 	},
+	{
+		"op": "addmerge",
+		"path": "attributesByType/*-redmarble",
+		"value": {
+			shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_stone_{rock}",
+			texturePaths: [{ code: "{rock}", path: "game:block/stone/rock/{rock}1" }],
+			groundStack: { type: "item", code: "game:lime" },
+			resultQuantity: 1
+		},
+		"file": "game:itemtypes/resource/stone",
+		"side": "Server",
+	},
+	{
+		"op": "addmerge",
+		"path": "attributesByType/*-greenmarble",
+		"value": {
+			shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_stone_{rock}",
+			texturePaths: [{ code: "{rock}", path: "game:block/stone/rock/{rock}1" }],
+			groundStack: { type: "item", code: "game:lime" },
+			resultQuantity: 1
+		},
+		"file": "game:itemtypes/resource/stone",
+		"side": "Server",
+	},
+	{
+		"op": "addmerge",
+		"path": "attributesByType/*-halite",
+		"value": {
+			shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_stone_{rock}",
+			texturePaths: [{ code: "{rock}", path: "game:block/stone/rock/{rock}1" }],
+			groundStack: { type: "item", code: "game:lime" },
+			resultQuantity: 1
+		},
+		"file": "game:itemtypes/resource/stone",
+		"side": "Server",
+	}
 ]

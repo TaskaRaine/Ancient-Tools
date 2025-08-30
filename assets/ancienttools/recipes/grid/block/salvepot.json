@@ -6,12 +6,13 @@
 		ingredients: {
 			"P": { 
 				type: "block",
-				code: "salvepot-empty" 
+				"name": "color",
+				code: "salvepot-*-empty" 
 			}
 		},
 		output: { 
 			type: "block", 
-			code: "game:claypot-burned",
+			code: "game:claypot-{color}-fired",
 			quantity: 1
 		}
 	},
@@ -22,12 +23,13 @@
 		ingredients: {
 			"P": { 
 				type: "block",
-				code: "salvepot-residuecovered" 
+				"name": "color",
+				code: "salvepot-*-residuecovered" 
 			}
 		},
 		output: { 
 			type: "block", 
-			code: "game:dirtyclaypot-empty",
+			code: "game:dirtyclaypot-{color}-empty",
 			quantity: 1
 		}
 	},
@@ -45,12 +47,13 @@
 			},
 			"P": { 
 				type: "block",
-				code: "game:claypot-burned" 
+				"name": "color",
+				code: "game:claypot-*-fired" 
 			},
 		},
 		output: { 
 			type: "block", 
-			code: "salvepot-empty",
+			code: "salvepot-{color}-empty",
 			quantity: 1
 		}
 	},
@@ -68,12 +71,13 @@
 			},
 			"P": { 
 				type: "block",
-				code: "game:claypot-burned" 
+				"name": "color",
+				code: "game:claypot-*-fired" 
 			},
 		},
 		output: { 
 			type: "block", 
-			code: "salvepot-empty",
+			code: "salvepot-{color}-empty",
 			quantity: 1
 		}
 	},
@@ -91,12 +95,13 @@
 			},
 			"P": { 
 				type: "block",
-				code: "game:claypot-burned" 
+				"name": "color",
+				code: "game:claypot-*-fired" 
 			},
 		},
 		output: { 
 			type: "block", 
-			code: "salvepot-empty",
+			code: "salvepot-{color}-empty",
 			quantity: 1
 		}
 	},
@@ -114,12 +119,13 @@
 			},
 			"P": { 
 				type: "block",
-				code: "game:claypot-burned" 
+				"name": "color",
+				code: "game:claypot-*-fired" 
 			},
 		},
 		output: { 
 			type: "block", 
-			code: "salvepot-empty",
+			code: "salvepot-{color}-empty",
 			quantity: 1
 		}
 	},
@@ -137,12 +143,13 @@
 			},
 			"P": { 
 				type: "block",
-				code: "game:dirtyclaypot-empty" 
+				"name": "color",
+				code: "game:dirtyclaypot-*-empty" 
 			},
 		},
 		output: { 
 			type: "block", 
-			code: "salvepot-residuecovered",
+			code: "salvepot-{color}-residuecovered",
 			quantity: 1
 		}
 	},
@@ -160,12 +167,13 @@
 			},
 			"P": { 
 				type: "block",
-				code: "game:dirtyclaypot-empty" 
+				"name": "color",
+				code: "game:dirtyclaypot-*-empty" 
 			},
 		},
 		output: { 
 			type: "block", 
-			code: "salvepot-residuecovered",
+			code: "salvepot-{color}-residuecovered",
 			quantity: 1
 		}
 	},
@@ -183,12 +191,13 @@
 			},
 			"P": { 
 				type: "block",
-				code: "game:dirtyclaypot-empty" 
+				"name": "color",
+				code: "game:dirtyclaypot-*-empty" 
 			},
 		},
 		output: { 
 			type: "block", 
-			code: "salvepot-residuecovered",
+			code: "salvepot-{color}-residuecovered",
 			quantity: 1
 		}
 	},
@@ -206,12 +215,13 @@
 			},
 			"P": { 
 				type: "block",
-				code: "game:dirtyclaypot-empty" 
+				"name": "color",
+				code: "game:dirtyclaypot-*-empty" 
 			},
 		},
 		output: { 
 			type: "block", 
-			code: "salvepot-residuecovered",
+			code: "salvepot-{color}-residuecovered",
 			quantity: 1
 		}
 	},
@@ -229,12 +239,13 @@
 			},
 			"P": { 
 				type: "block",
-				code: "game:dirtyclaypot-empty" 
+				"name": "color",
+				code: "game:dirtyclaypot-*-empty" 
 			},
 		},
 		output: { 
 			type: "block", 
-			code: "salvepot-residuecovered",
+			code: "salvepot-{color}-residuecovered",
 			quantity: 1
 		}
 	},
@@ -246,12 +257,13 @@
 		ingredients: {
 			"P": { 
 				type: "block",
-				code: "salvepot-empty" 
+				"name": "color",
+				code: "salvepot-*-empty" 
 			},
 		},
 		output: { 
 			type: "block", 
-			code: "game:claypot-burned",
+			code: "game:claypot-{color}-fired",
 			quantity: 1
 		}
 	},
@@ -263,12 +275,13 @@
 		ingredients: {
 			"P": { 
 				type: "block",
-				code: "salvepot-residuecovered" 
+				"name": "color",
+				code: "salvepot-*-residuecovered" 
 			},
 		},
 		output: { 
 			type: "block", 
-			code: "game:dirtyclaypot-empty",
+			code: "game:dirtyclaypot-{color}-empty",
 			quantity: 1
 		}
 	}

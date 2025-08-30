@@ -54,7 +54,7 @@ namespace AncientTools.Blocks
                 if (inSlot.Itemstack.Attributes.HasAttribute("timeremaining"))
                     dsc.Append("\n" + Lang.Get("ancienttools:blockdesc-hidewatersack-soak-x-hours-when-placed", (int)(inSlot.Itemstack.Attributes.GetDouble("timeremaining") + 0.5)));
                 else
-                    dsc.Append("\n" + Lang.Get("ancienttools:blockdesc-hidewatersack-soak-x-hours-when-placed", api.World.Config.GetFloat("WaterSackConversionHours", 48.0f)));
+                    dsc.Append("\n" + Lang.Get("ancienttools:blockdesc-hidewatersack-soak-when-placed"));
                 }
             }
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
@@ -64,7 +64,12 @@ namespace AncientTools.Blocks
 
             if(this.FirstCodePart(1) == "soaked")
             {
-                ItemStack soakedHide = new ItemStack(world.GetItem(new AssetLocation("game", "hide-soaked-" + this.LastCodePart())));
+                ItemStack soakedHide = null;
+
+                if (this.FirstCodePart() == "hidewatersack")
+                    soakedHide = new ItemStack(world.GetItem(new AssetLocation("game", "hide-soaked-" + this.LastCodePart())));
+                else
+                    soakedHide = new ItemStack(world.GetItem(new AssetLocation("game", "hide-soaked-bear-" + this.LastCodePart()) + "-complete"));
 
                 if (!byPlayer.Entity.TryGiveItemStack(soakedHide))
                 {
@@ -82,7 +87,8 @@ namespace AncientTools.Blocks
             }
             else if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BEHideWaterSack waterSackEntity)
             {
-                ItemStack rawHide = new ItemStack(world.GetBlock(new AssetLocation("ancienttools", "hidewatersack-" + this.FirstCodePart(1) + "-" + this.LastCodePart())));
+                ItemStack rawHide = new ItemStack(world.GetBlock(new AssetLocation("ancienttools", this.FirstCodePart(0) + "-" + this.FirstCodePart(1) + "-" + this.LastCodePart())));
+
                 rawHide.Attributes.SetDouble("timeremaining", waterSackEntity.GetTimeRemaining());
 
                 if (!byPlayer.Entity.TryGiveItemStack(rawHide))

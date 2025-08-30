@@ -20,6 +20,7 @@ namespace AncientTools.Config
         public bool AllowCarvingForResin = true;
         public float SkinningTime = 4.0f;
         public double WaterSackConversionHours = 48.0;
+        public bool DisableBrainDrops = false;
         public int BrainsPerBrainingSolutionCraft = 1;
         public float BrainedHideSealHours = 96.0f;
         public float BrainedHideSmokingSeconds = 1200.0f;
@@ -50,6 +51,7 @@ namespace AncientTools.Config
             AllowCarvingForResin = previousConfig.AllowCarvingForResin;
             SkinningTime = previousConfig.SkinningTime;
             WaterSackConversionHours = previousConfig.WaterSackConversionHours;
+            DisableBrainDrops = previousConfig.DisableBrainDrops;
             BrainsPerBrainingSolutionCraft = previousConfig.BrainsPerBrainingSolutionCraft;
             BrainedHideSealHours = previousConfig.BrainedHideSealHours;
             BrainedHideSmokingSeconds = previousConfig.BrainedHideSmokingSeconds;

@@ -91,7 +91,7 @@ namespace AncientTools.BlockEntities
 
             if (timeRemaining <= 0)
             {
-                coreAPI.World.BlockAccessor.ExchangeBlock(coreAPI.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "hidewatersack-soaked-" + Block.LastCodePart())).Id, this.Pos);
+                coreAPI.World.BlockAccessor.ExchangeBlock(coreAPI.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", Block.FirstCodePart(0) + "-soaked-" + Block.LastCodePart())).Id, this.Pos);
                 OnBlockRemoved();
                 coreAPI.World.BlockAccessor.RemoveBlockEntity(this.Pos);
             }

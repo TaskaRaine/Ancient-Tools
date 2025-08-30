@@ -116,6 +116,39 @@
 [Version 1.0.0](https://github.com/TaskaRaine/Ancient-Tools/releases/download/1.0.0/AncientTools_V1.0.0.zip)
 
 ### Change Log
+#### Version 1.6.0-pre.4
+Added a simple guide for adze stripping, which details how to create log barrels. More will likely be added to this another time.
+
+Added a config option that allows players to remove brain drops.
+
+Fixed a crash that would occur when the adze would break.
+
+Oak bark tannin configuration patch has been removed as it is no longer needed in AT 1.6.0
+
+
+Vintage Story 1.21.0 Compatibility:
+
+Deer, Fox, Goat, and Moose patches have been adjusted to account for single files being split into multiple files within the vanilla assets.
+
+All brain drop patches needed to be adjusted to account for vanilla entity file restructuring.
+
+Scraped hide config patch was tweaked to account for additional recipes within the file.
+
+Pitch pots can now be made from any colored clay pot. Remaps have been added to convert old pots to the new code, please run them when prompted.
+
+Salve pots can now be made from any colored clay pot. Remaps have been added to convert old pots to the new code, please run them when prompted.
+
+Brain Stew patch was adjusted to account for changes in the vanilla claypot blocktype.
+
+New hide sack blocks have been created for the bear hide skins. The old huge sacks should still work proper, there's just no way to create regular huge hides in vanilla anymore.
+
+Patches targetting the vanilla vessel have been updated to account for the vanilla vessel file being moved.
+
+Bark dough should now be craftable with the new clay variant bowls.
+
+Using pitch to seal crocks should now be working again, and colored clay crocks are now usable in the recipe.
+
+
 #### Version 1.6.0-pre.3
 Fixed an issue that prevented some in-world block/item conversions under certain conditions.
 

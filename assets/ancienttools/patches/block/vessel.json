@@ -1,34 +1,58 @@
 [
     {
 		"op": "add",
-		"path": "/attributes/cartPlacableByType",
+		"path": "/attributes/cartPlacable",
 		"value": {
-			"@*-(ashforest|chthonic|copper|earthen|rain|burned|cowrie|rime|oxblood|loam|undergrowth|beehive|harvest|honeydew|rutile|seasalt|springflowers|volcanic|cloisonne|cornflower|talik|caveaurora|collonade|rattlesnake|waves|wintersea)": {
-				"normal":  {
-					translation: [-8.0, 7.0, -5.0],
-					rotation: [0.0, 0.0, 0.0],
-					scale: 1.0
-				}
+			"normal":  {
+				translation: [-8.0, 7.0, -5.0],
+				rotation: [0.0, 0.0, 0.0],
+				scale: 1.0
 			}
 		},
-		"file": "game:blocktypes/clay/storagevessel",
+		"file": "game:blocktypes/clay/storagevessel-fancy",
 		"side": "Server"
     },
 	{
 		"op": "add",
-		"path": "/attributes/mobileStoragePropsByType",
+		"path": "/attributes/mobileStorageProps",
 		"value": {
-			"@*-(ashforest|chthonic|copper|earthen|rain|burned|cowrie|rime|oxblood|loam|undergrowth|beehive|harvest|honeydew|rutile|seasalt|springflowers|volcanic|cloisonne|cornflower|talik|caveaurora|collonade|rattlesnake|waves|wintersea)": {
-				"normal":  {
-					shape: "ancienttools:shapes/block/storagevessel",
-					openSound: "game:sounds/block/vesselopen",
-					closeSound: "game:sounds/block/vesselclose",
-					placementSound: "game:sounds/block/ceramicplace", 
-					quantitySlots: 12
-				}
+			"normal":  {
+				shape: "ancienttools:shapes/block/storagevessel",
+				openSound: "game:sounds/block/vesselopen",
+				closeSound: "game:sounds/block/vesselclose",
+				placementSound: "game:sounds/block/ceramicplace", 
+				quantitySlots: 12
 			}
 		},
-		"file": "game:blocktypes/clay/storagevessel",
+		"file": "game:blocktypes/clay/storagevessel-fancy",
 		"side": "Server"
-	}
+	},
+	{
+		"op": "add",
+		"path": "/attributes/cartPlacable",
+		"value": {
+			"normal":  {
+				translation: [-8.0, 7.0, -5.0],
+				rotation: [0.0, 0.0, 0.0],
+				scale: 1.0
+			}
+		},
+		"file": "game:blocktypes/clay/fired/storagevessel",
+		"side": "Server"
+    },
+	{
+		"op": "add",
+		"path": "/attributes/mobileStorageProps",
+		"value": {
+			"normal":  {
+				shape: "ancienttools:shapes/block/storagevessel",
+				openSound: "game:sounds/block/vesselopen",
+				closeSound: "game:sounds/block/vesselclose",
+				placementSound: "game:sounds/block/ceramicplace", 
+				quantitySlots: 12
+			}
+		},
+		"file": "game:blocktypes/clay/fired/storagevessel",
+		"side": "Server"
+	},
 ]

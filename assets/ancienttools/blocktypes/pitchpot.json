@@ -2,16 +2,16 @@
 	code: "pitchpot",
 	renderpass: "OpaqueNoCull",
 	classByType: {
-		"@pitchpot-(empty|residuecovered)": "BlockPitchContainer",
+		"@pitchpot-(blue|fire|black|brown|cream|gray|orange|red|tan)-(empty|residuecovered)": "BlockPitchContainer",
 		"*-finishedpitchinventory": "BlockPitchInventory",
 		"*-finishedpitch": "BlockPitch"
 	},
 	entityclassByType: {
-		"@pitchpot-(empty|residuecovered)": "BEPitchContainer",
+		"@pitchpot-(blue|fire|black|brown|cream|gray|orange|red|tan)-(empty|residuecovered)": "BEPitchContainer",
 		"*-finishedpitch": "BEFinishedPitch"
 	},
 	attributesByType: {
-		"@pitchpot-(unmixed|unmixedresiduecovered|finishedpitchinventory)": {
+		"@pitchpot-(blue|fire|black|brown|cream|gray|orange|red|tan)-(unmixed|unmixedresiduecovered|finishedpitchinventory)": {
 			inFirePitProps: {
 				transform: { 
 					translation: { x: 0, y: 0.125, z: 0 } 
@@ -19,52 +19,61 @@
 				useFirepitModel: "Wide"
 			},
 			handbook: {
-				createdBy: "ancienttools:handbook-mixingpitch-craftinfo"
+				createdBy: "ancienttools:handbook-mixingpitch-craftinfo",
+				groupBy: ["pitchpot-*-{type}"]
+			}
+		},
+		"*": {
+			handbook: {
+				groupBy: ["pitchpot-*-{type}"]
 			}
 		}
 	},
 	behaviorsByType: {
-		"@pitchpot-(unmixed|unmixedresiduecovered)": [
+		"@pitchpot-(blue|fire|black|brown|cream|gray|orange|red|tan)-(unmixed|unmixedresiduecovered)": [
 			{ name: "UnstableFalling" }, { name: "RightClickPickup" }
 		],
-		"@pitchpot-(empty|finishedpitch)": [
+		"@pitchpot-(blue|fire|black|brown|cream|gray|orange|red|tan)-(empty|finishedpitch)": [
 			{ name: "UnstableFalling" }
 		]
 	},
 	variantgroups: [
+		{ "code": "color", "states": ["blue", "fire", "black", "brown", "cream", "gray", "orange", "red", "tan"]},
 		{ code:"type", states: ["empty", "residuecovered", "unmixed", "unmixedresiduecovered", "finishedpitchinventory", "finishedpitch"] },
 	],
-	creativeinventory: { "general": ["pitchpot-empty", "pitchpot-residuecovered", "pitchpot-unmixed", "pitchpot-finishedpitchinventory"], 
-	"decorative": ["pitchpot-empty", "pitchpot-residuecovered", "pitchpot-unmixed", "pitchpot-finishedpitchinventory"], 
-	"mechanics": ["pitchpot-empty", "pitchpot-residuecovered", "pitchpot-unmixed", "pitchpot-finishedpitchinventory"], 
-	"ancienttools": ["pitchpot-empty", "pitchpot-residuecovered", "pitchpot-unmixed", "pitchpot-finishedpitchinventory"] },
+	creativeinventory: { "general": ["pitchpot-*-empty", "pitchpot-*-residuecovered", "pitchpot-*-unmixed", "pitchpot-*-finishedpitchinventory"], 
+	"decorative": ["pitchpot-*-empty", "pitchpot-*-residuecovered", "pitchpot-*-unmixed", "pitchpot-*-finishedpitchinventory"], 
+	"mechanics": ["pitchpot-*-empty", "pitchpot-*-residuecovered", "pitchpot-*-unmixed", "pitchpot-*-finishedpitchinventory"], 
+	"ancienttools": ["pitchpot-*-empty", "pitchpot-*-residuecovered", "pitchpot-*-unmixed", "pitchpot-*-finishedpitchinventory"] },
 	shapeByType: {
-		"@pitchpot-(empty|residuecovered)": { base: "game:block/clay/pot-opened-empty" },
-		"@pitchpot-(unmixed|unmixedresiduecovered)": { base: "block/pitch/preparedpitch" },
+		"@pitchpot-(blue|fire|black|brown|cream|gray|orange|red|tan)-(empty|residuecovered)": { base: "game:block/clay/pot-opened-empty" },
+		"@pitchpot-(blue|fire|black|brown|cream|gray|orange|red|tan)-(unmixed|unmixedresiduecovered)": { base: "block/pitch/preparedpitch" },
 		"*-finishedpitchinventory": { base: "block/pitch/finishedpitch" },
 		"*-finishedpitch": { base: "game:block/clay/pot-opened-empty" }
 	},
 	texturesByType: {
 		"*-empty": {
-			ceramic: { base: "game:block/clay/pot-side" }
+			ceramic: { base: "game:block/clay/hardened/{color}", overlays: [ "game:block/clay/overlay/pot" ]},
+			"dark": { base: "game:block/clay/hardened/{color}", overlays: [ "game:block/clay/overlay/dark" ] },
 		},
 		"*-residuecovered": {
-			"ceramic": { "base": "game:block/clay/ceramic-dirty" }
+			"ceramic": { "base": "game:block/clay/pot/{color}", "overlays": ["game:block/clay/pot/dirty"] },
 		},
 		"*-unmixed": {
-			ceramic: { base: "game:block/clay/pot-side" },
+			ceramic: { base: "game:block/clay/hardened/{color}", overlays: [ "game:block/clay/overlay/pot" ] },
+			"dark": { base: "game:block/clay/hardened/{color}", overlays: [ "game:block/clay/overlay/dark" ] },
 			resin: { base: "game:block/resin" },
 			drygrass: { base: "game:block/hay/bundle" },
 			string: { base: "game:item/tool/material/string" }
 		},
 		"*-unmixedresiduecovered": {
-			"ceramic": { "base": "game:block/clay/ceramic-dirty" },
+			"ceramic": { "base": "game:block/clay/pot/{color}", "overlays": ["game:block/clay/pot/dirty"] },
 			resin: { base: "game:block/resin" },
 			drygrass: { base: "game:block/hay/bundle" },
 			string: { base: "game:item/tool/material/string" }
 		},
-		"@pitchpot-(finishedpitch|finishedpitchinventory)": {	
-			ceramic: { base: "game:block/clay/ceramic-dirty" },
+		"@pitchpot-(blue|fire|black|brown|cream|gray|orange|red|tan)-(finishedpitch|finishedpitchinventory)": {	
+			"ceramic": { "base": "game:block/clay/pot/{color}", "overlays": ["game:block/clay/pot/dirty"] },
 			pitch: { base: "block/pitch/pitch" }
 		}
 	},
@@ -72,12 +81,12 @@
 	heldTpUseAnimation: "twohandplaceblock",
 	blockmaterial: "Ceramic",
 	combustiblePropsByType: {
-		"@pitchpot-(unmixed|unmixedresiduecovered)": {
+		"@pitchpot-(blue|fire|black|brown|cream|gray|orange|red|tan)-(unmixed|unmixedresiduecovered)": {
 			meltingPoint: 215,
 			meltingDuration: 60,
 			smeltedRatio: 1,
 			smeltingType: "cook",
-			smeltedStack: { type: "block", code: "pitchpot-finishedpitchinventory" },
+			smeltedStack: { type: "block", code: "pitchpot-{color}-finishedpitchinventory" },
 			requiresContainer: false
 		}
 	},

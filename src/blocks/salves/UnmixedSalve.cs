@@ -24,7 +24,7 @@ namespace AncientTools.Blocks
             {
                 if (this.LastCodePart() == "barkoil")
                 {
-                    ItemStack[] waxStack = { new ItemStack(api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-softwax"))) };
+                    ItemStack[] waxStack = { new ItemStack(api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-" + VariantStrict["color"] + "-softwax"))) };
 
                     return new WorldInteraction[]
                     {
@@ -39,7 +39,7 @@ namespace AncientTools.Blocks
                 }
                 else if (this.LastCodePart() == "softwax")
                 {
-                    ItemStack[] barkoilStack = { new ItemStack(api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-barkoil"))) };
+                    ItemStack[] barkoilStack = { new ItemStack(api.World.BlockAccessor.GetBlock(new AssetLocation("ancienttools", "salvepot-" + VariantStrict["color"] + "-barkoil"))) };
 
                     return new WorldInteraction[]
                     {
@@ -163,8 +163,8 @@ namespace AncientTools.Blocks
                     return;
 
                 slot.TakeOut(1);
-                byEntity.TryGiveItemStack(new ItemStack(api.World.GetBlock(new AssetLocation("ancienttools", "salvepot-residuecovered"))));
-                api.World.BlockAccessor.SetBlock(api.World.GetBlock(new AssetLocation("ancienttools", "salvepot-finishedsalve")).Id, blockSel.Position);
+                byEntity.TryGiveItemStack(new ItemStack(api.World.GetBlock(new AssetLocation("ancienttools", "salvepot-" + VariantStrict["color"] + "-residuecovered"))));
+                api.World.BlockAccessor.SetBlock(api.World.GetBlock(new AssetLocation("ancienttools", "salvepot-" + VariantStrict["color"] + "-finishedsalve")).Id, blockSel.Position);
                 api.World.BlockAccessor.MarkBlockDirty(blockSel.Position);
 
 

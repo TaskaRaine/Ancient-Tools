@@ -66,18 +66,28 @@ namespace AncientTools.CollectibleBehaviors
                     {
                         if (api.World.BlockAccessor.GetBlockEntity(blockSel.Position) is BlockEntityGroundStorage groundStorageEntity)
                         {
-                            if (groundStorageEntity.TotalStackSize == 1 && groundStorageEntity.Inventory.FirstNonEmptySlot.Itemstack.Collectible.Code.Equals(resolvedFromBlockCode))
+                            if(groundStorageEntity.TotalStackSize == 1)
                             {
-                                api.World.BlockAccessor.RemoveBlockEntity(blockSel.Position);
-                                api.World.BlockAccessor.SetBlock(api.World.BlockAccessor.GetBlock(resolvedToBlockCode).Id, blockSel.Position);
-                                api.World.BlockAccessor.MarkBlockDirty(blockSel.Position);
+                                CollectibleObject groundStorageCollectible = groundStorageEntity.Inventory.FirstNonEmptySlot.Itemstack.Collectible;
 
-                                ConsumeResource(quantityNeeded, slot);
+                                if(groundStorageCollectible.Variant.TryGetValue(wildcard) is string variant)
+                                { 
+                                    ResolveWildcard(variant, convertToBlockCode, convertFromBlockCode, ref resolvedToBlockCode, ref resolvedFromBlockCode);
 
-                                handling = EnumHandling.PreventDefault;
-                                handHandling = EnumHandHandling.PreventDefault;
+                                    if (groundStorageEntity.Inventory.FirstNonEmptySlot.Itemstack.Collectible.Code.Equals(resolvedFromBlockCode))
+                                    {
+                                        api.World.BlockAccessor.RemoveBlockEntity(blockSel.Position);
+                                        api.World.BlockAccessor.SetBlock(api.World.BlockAccessor.GetBlock(resolvedToBlockCode).Id, blockSel.Position);
+                                        api.World.BlockAccessor.MarkBlockDirty(blockSel.Position);
 
-                                return;
+                                        ConsumeResource(quantityNeeded, slot);
+
+                                        handling = EnumHandling.PreventDefault;
+                                        handHandling = EnumHandHandling.PreventDefault;
+
+                                        return;
+                                    }
+                                }
                             }
                         }
                     }
@@ -100,7 +110,10 @@ namespace AncientTools.CollectibleBehaviors
         }
         private void ResolveWildcard(string variant, AssetLocation toBlockCode, AssetLocation fromBlockCode, ref AssetLocation resolvedToBlockCode, ref AssetLocation resolvedFromBlockCode)
         {
+            resolvedToBlockCode.Domain = toBlockCode.Domain;
             resolvedToBlockCode.Path = ReplaceWildcard(toBlockCode.Path, variant);
+
+            resolvedFromBlockCode.Domain = fromBlockCode.Domain;
             resolvedFromBlockCode.Path = ReplaceWildcard(fromBlockCode.Path, variant);
         }
         private string ReplaceWildcard(string path, string variant)

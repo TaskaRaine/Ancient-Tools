@@ -187,6 +187,15 @@ Using these colored leathers, different variants of leather products, such as <a
 
 Note: Different barks have different tannin concentrations. Some barks are more effective than others! 
 	",
+	"game:ancienttools-quickstart-guide-adzecarving": "Adze Carving Guide",
+	"game:ancienttools-quickstart-title-adzecarving": "Ancient Tools Crafting Mechanic: Adze Carving",
+	"game:ancienttools-quickstart-text-adzecarving": " 
+<font weight='bold' align='center'>Adze Carving Guide</font><br>
+Certain wooden blocks can only be crafted through in-world interaction with an <a href=\'handbooksearch://adze\'>adze</a>. This guide entry is intended to describe how these blocks can be made.
+			
+<font weight='bold' align='center'>Primitive Barrel</font><br> 
+This barrel functions identically to a typical barrel made from planks, but has a diminished capacity. It can be crafted from a single <a href=\'handbooksearch://log\'>log</a> by holding <hk>ctrl</hk> and <icon name='rightmousebutton'></icon> simultaneously. This action must be repeated for several stages until it becomes an <a href=\'handbooksearch://primitive barrel\'>primitive barrel</a>. At the final stage, apply some <a href=\'handbook://item-fat\'>animal fat</a> or <a href=\'handbook://ancientttools:item-pitch-stick\'>pitch</a> to the primitive barrel to seal it for use.
+	",
 	"debug-displayinventory-texturenotfound": "An Ancient Tools Display Inventory texture could not be found in the texture atlas. Either the file path is incorrect, or the player needs to increase the size of their texture atlas.",
 	
 	"commandname-removemobilestoragedebuff": "removemobilestoragedebuff",									
@@ -209,7 +218,7 @@ Note: Different barks have different tannin concentrations. Some barks are more 
 	"handbook-nativetanning-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-tanning\">Buckskin Tanning</a>",
 	"handbook-barktanning-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-barktanning\">Bark Tanning</a>",
 	"handbook-smashingbark-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-barktanning\">Smashing Bark</a>",
-	"handbook-adzecarving-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-tanning\">Adze Carving</a>",
+	"handbook-adzecarving-craftinfo": "<a href=\"handbook://ancienttools-quickstart-guide-adzecarving\">Adze Carving</a>",
 
 	"handbook-smelting-craftinfo-dot": "• <a href=\"handbook://craftinginfo-smelting\">Smelting</a>",
 	"handbook-barkstripping-craftinfo-dot": "• <a href=\"handbook://ancienttools-quickstart-guide-barkstripping\">Bark Stripping</a>",
@@ -369,21 +378,21 @@ Note: Different barks have different tannin concentrations. Some barks are more 
 
 	"blockdesc-barkbaskettyped-*": "A small basket woven from malleable tree bark used to hold just a few things",
 
-	"block-salvepot-empty": "Empty Salve Container",
-	"block-salvepot-residuecovered": "Empty Salve Container",
-	"block-salvepot-birch": "Unprepared Salve Mixture(birch bark/fat)",
-	"block-salvepot-birchresiduecovered": "Unprepared Salve Mixture(birch bark/fat)",
-	"block-salvepot-pine": "Unprepared Salve Mixture(pine bark/fat)",
-	"block-salvepot-pineresiduecovered": "Unprepared Salve Mixture(pine bark/fat)",
-	"block-salvepot-oak": "Unprepared Salve Mixture(oak bark/fat)",
-	"block-salvepot-oakresiduecovered": "Unprepared Salve Mixture(oak bark/fat)",
-	"block-salvepot-acacia": "Unprepared Salve Mixture(acacia bark/fat)",
-	"block-salvepot-acaciaresiduecovered": "Unprepared Salve Mixture(acacia bark/fat)",
-	"block-salvepot-barkoil": "Prepared Salve Mixture(barkoil)",
-	"block-salvepot-hardwax": "Hardened Salve Thickener(beeswax)",
-	"block-salvepot-hardwaxresiduecovered)": "Hardened Salve Thickener(beeswax)",
-	"block-salvepot-softwax": "Melted Salve Thickener(beeswax)",
-	"block-salvepot-finishedsalve": "Bark Healing Salve",
+	"block-salvepot-*-empty": "Empty Salve Container",
+	"block-salvepot-*-residuecovered": "Empty Salve Container",
+	"block-salvepot-*-birch": "Unprepared Salve Mixture(birch bark/fat)",
+	"block-salvepot-*-birchresiduecovered": "Unprepared Salve Mixture(birch bark/fat)",
+	"block-salvepot-*-pine": "Unprepared Salve Mixture(pine bark/fat)",
+	"block-salvepot-*-pineresiduecovered": "Unprepared Salve Mixture(pine bark/fat)",
+	"block-salvepot-*-oak": "Unprepared Salve Mixture(oak bark/fat)",
+	"block-salvepot-*-oakresiduecovered": "Unprepared Salve Mixture(oak bark/fat)",
+	"block-salvepot-*-acacia": "Unprepared Salve Mixture(acacia bark/fat)",
+	"block-salvepot-*-acaciaresiduecovered": "Unprepared Salve Mixture(acacia bark/fat)",
+	"block-salvepot-*-barkoil": "Prepared Salve Mixture(barkoil)",
+	"block-salvepot-*-hardwax": "Hardened Salve Thickener(beeswax)",
+	"block-salvepot-*-hardwaxresiduecovered": "Hardened Salve Thickener(beeswax)",
+	"block-salvepot-*-softwax": "Melted Salve Thickener(beeswax)",
+	"block-salvepot-*-finishedsalve": "Bark Healing Salve",
 
 	"block-stretchingframe-birch-*": "Birch Stretching Frame",
 	"block-stretchingframe-oak-*": "Oak Stretching Frame",
@@ -413,17 +422,23 @@ Note: Different barks have different tannin concentrations. Some barks are more 
 	"block-hidewatersack-soaked-large": "Large Soaked Hide Water Sack",
 	"block-hidewatersack-soaked-medium": "Medium Soaked Hide Water Sack",
 	"block-hidewatersack-soaked-small": "Small Soaked Hide Water Sack",
+	"block-hidewatersackbear-raw-*": "Huge Raw Hide Water Sack",
+	"block-hidewatersackbear-salted-*": "Huge Salted Hide Water Sack",
+	"block-hidewatersackbear-soaked-*": "Huge Soaked Hide Water Sack",
 
 	"blockdesc-hidewatersack-raw-*": "This sack is filled with water from a nearby water source. The hide is not yet soaked through...",
 	"blockdesc-hidewatersack-salted-*": "This sack is filled with water from a nearby water source. The hide is not yet soaked through...",
 	"blockdesc-hidewatersack-soaked-*": "This sack is filled with water from a nearby water source. The hide is thoroughly soaked...",
+	"blockdesc-hidewatersackbear-raw-*": "This sack is filled with water from a nearby water source. The hide is not yet soaked through...",
+	"blockdesc-hidewatersackbear-salted-*": "This sack is filled with water from a nearby water source. The hide is not yet soaked through...",
+	"blockdesc-hidewatersackbear-soaked-*": "This sack is filled with water from a nearby water source. The hide is thoroughly soaked...",
 
-	"block-pitchpot-empty": "Empty Pitch Container",
-	"block-pitchpot-residuecovered": "Empty Pitch Container",
-	"block-pitchpot-unmixed": "Unprepared Pitch Mixture",
-	"block-pitchpot-unmixedresiduecovered": "Unprepared Pitch Mixture",
-	"block-pitchpot-finishedpitchinventory": "Prepared Pitch",
-	"block-pitchpot-finishedpitch": "Prepared Pitch",
+	"block-pitchpot-*-empty": "Empty Pitch Container",
+	"block-pitchpot-*-residuecovered": "Empty Pitch Container",
+	"block-pitchpot-*-unmixed": "Unprepared Pitch Mixture",
+	"block-pitchpot-*-unmixedresiduecovered": "Unprepared Pitch Mixture",
+	"block-pitchpot-*-finishedpitchinventory": "Prepared Pitch",
+	"block-pitchpot-*-finishedpitch": "Prepared Pitch",
 
 	"block-pitchtorch-extinct-*": "Unlit Pitch Torch",
 	"block-pitchtorch-lit-*": "Lit Pitch Torch",
@@ -591,6 +606,7 @@ Note: Different barks have different tannin concentrations. Some barks are more 
 	"itemdesc-saltedmeat-cure-x-days": "When Racked: Will cure in {0} days.",
 
 	"blockdesc-hidewatersack-soak-x-hours-when-placed": "When Placed: Fully soaked in {0} hours.",
+	"blockdesc-hidewatersack-soak-when-placed": "When Placed: Fully soaks over time.",
 	"blockdesc-hidewatersack-soak-x-hours": "Fully soaked in {0} hours.",
 
 	"item-pestle-peridotite": "Peridotite Pestle",
@@ -878,9 +894,9 @@ Note: Different barks have different tannin concentrations. Some barks are more 
 	"game:incontainer-item-barkliquorportion-weak-baldcypress": "Weak Bald Cypress Bark Liquor",
 	"incontainer-item-barkliquorportion-weak-baldcypress": "Weak Bald Cypress Bark Liquor",
 
-	"item-barkliquorportion-weak-baldcypress": "Weak Larch Bark Liquor",
-	"game:incontainer-item-barkliquorportion-weak-baldcypress": "Weak Larch Bark Liquor",
-	"incontainer-item-barkliquorportion-weak-baldcypress": "Weak Larch Bark Liquor",
+	"item-barkliquorportion-weak-larch": "Weak Larch Bark Liquor",
+	"game:incontainer-item-barkliquorportion-weak-larch": "Weak Larch Bark Liquor",
+	"incontainer-item-barkliquorportion-weak-larch": "Weak Larch Bark Liquor",
 
 	"item-barkliquorportion-weak-redwood": "Weak Redwood Bark Liquor",
 	"game:incontainer-item-barkliquorportion-weak-redwood": "Weak Redwood Bark Liquor",

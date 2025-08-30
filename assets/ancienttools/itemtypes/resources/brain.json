@@ -3,6 +3,7 @@
 	class: "ItemBrain",
 	creativeinventory: { "general": ["*"], "items": ["*"], "ancienttools": ["*"] },
 	attributes: {
+		foodTags: ["meat"],
 		nutritionPropsWhenInMeal: { satiety: 300, foodcategory: "Protein" },
 	},
 	drawtype: "json",

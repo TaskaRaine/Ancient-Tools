@@ -11,7 +11,8 @@
 			"H": {
 				type: "item",
 				code: "game:hide-raw-*",
-				name: "size"
+				name: "size",
+				"allowedVariants": ["small", "medium", "large", "huge"]
 			}
 		},
 		attributes: {
@@ -37,7 +38,8 @@
 			"H": {
 				type: "item",
 				code: "game:hide-salted-*",
-				name: "size"
+				name: "size",
+				"allowedVariants": ["small", "medium", "large", "huge"]
 			}
 		},
 		attributes: {

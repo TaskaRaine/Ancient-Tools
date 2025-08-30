@@ -83,7 +83,7 @@ namespace AncientTools.BlockBehaviors
 
             ItemStack interactedStack = byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack;
 
-            if (interactedStack.Attributes == null || !interactedStack.Collectible.Attributes["carvingTimeModifier"].Exists)
+            if (interactedStack == null || interactedStack.Attributes == null || !interactedStack.Collectible.Attributes["carvingTimeModifier"].Exists)
                 return false;
 
             if (world.Side == EnumAppSide.Client)

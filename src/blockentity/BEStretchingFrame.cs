@@ -220,6 +220,10 @@ namespace AncientTools.BlockEntities
         {
             string hideSize = HideSlot.Itemstack.Item.LastCodePart();
 
+            //-- Messy check to see if the hide is not one of the normal hides --//
+            if (hideSize == "body" || hideSize == "complete")
+                hideSize = "huge";
+
             HideSlot.TakeOutWhole();
 
             HideSlot.Itemstack = new ItemStack(Api.World.GetItem(new AssetLocation("game", "hide-scraped-" + hideSize)));

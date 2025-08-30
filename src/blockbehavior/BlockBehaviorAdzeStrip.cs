@@ -92,7 +92,7 @@ namespace AncientTools.BlockBehaviors
 
             ItemStack interactedStack = byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack;
 
-            if (interactedStack.Attributes == null || !interactedStack.Collectible.Attributes["strippingTimeModifier"].Exists)
+            if (interactedStack == null || interactedStack.Attributes == null || !interactedStack.Collectible.Attributes["strippingTimeModifier"].Exists)
                 return false;
 
             if(world.Side == EnumAppSide.Client)
@@ -119,7 +119,7 @@ namespace AncientTools.BlockBehaviors
 
             ItemStack interactedStack = byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack;
 
-            if (interactedStack.Attributes == null || !interactedStack.Collectible.Attributes["strippingTimeModifier"].Exists)
+            if (interactedStack == null || interactedStack.Attributes == null || !interactedStack.Collectible.Attributes["strippingTimeModifier"].Exists)
                 return;
 
             if (secondsUsed >= StrippingTime)

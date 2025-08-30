@@ -44,6 +44,7 @@ namespace AncientTools.Utility
             api.World.Config.SetBool("AllowCarvingForResin", config.AllowCarvingForResin);
             api.World.Config.SetFloat("SkinningTime", config.SkinningTime);
             api.World.Config.SetDouble("WaterSackConversionHours", config.WaterSackConversionHours);
+            api.World.Config.SetBool("DisableBrainDrops", config.DisableBrainDrops);
             api.World.Config.SetInt("BrainsPerBrainingSolutionCraft", config.BrainsPerBrainingSolutionCraft);
             api.World.Config.SetFloat("BrainedHideSealHours", config.BrainedHideSealHours);
             api.World.Config.SetFloat("BrainedHideSmokingSeconds", config.BrainedHideSmokingSeconds);

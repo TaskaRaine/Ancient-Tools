@@ -2,12 +2,12 @@
 	{
 		ingredientPattern: "C,F",
 		ingredients: {
-			"C": { type: "block", code: "game:crock-burned-east" },
+			"C": { type: "block", "name": "color", code: "game:crock-*-fired" },
 			"F": { type: "item", code: "pitch-stick", returnedStack: { type: "item", code: "game:stick" } }
 		},
 		width: 1,
 		height: 2,
 		shapeless: true,
-		output: { type: "block", code: "game:crock-burned-east", quantity: 1  }
+		output: { type: "block", code: "game:crock-{color}-fired", quantity: 1  }
 	}
 ]

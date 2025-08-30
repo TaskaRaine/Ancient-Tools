@@ -1,0 +1,11 @@
+﻿[
+    {
+		"op": "add",
+		"path": "/attributes/stretchableShapeByType",
+		"value": {
+			"@hide-soaked-bear-(black|brown|panda|polar|sun)-(body|complete)": "ancienttools:shapes/block/stretchingframe/resourceshapes/meshhide/{species}bearhide{form}_meshhide"
+		},
+		"file": "game:itemtypes/resource/hide-species",
+		"side": "Server"
+	},
+]

@@ -29,8 +29,10 @@
 			name: "ConvertBlockUsingIngredient",
 			propertiesByType: {
 				"*-charcoal": {
-					convertFromBlockCode: "game:claypot-burned",
-					convertToBlockCode: "ancienttools:pitchpot-empty"
+					convertFromBlockCode: "game:claypot-{color}-fired",
+					convertToBlockCode: "ancienttools:pitchpot-{color}-empty",
+					"wildcard": "color",
+					"quantityNeeded": 1
 				}
 			}
 		},
@@ -44,8 +46,10 @@
 			name: "ConvertBlockUsingIngredient",
 			propertiesByType: {
 				"*-charcoal": {
-					convertFromBlockCode: "game:dirtyclaypot-empty",
-					convertToBlockCode: "ancienttools:pitchpot-residuecovered"
+					convertFromBlockCode: "game:dirtyclaypot-{color}-empty",
+					convertToBlockCode: "ancienttools:pitchpot-{color}-residuecovered",
+					"wildcard": "color",
+					"quantityNeeded": 1
 				}
 			}
 		},

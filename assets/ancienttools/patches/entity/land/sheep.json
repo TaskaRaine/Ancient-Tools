@@ -3,85 +3,65 @@
 		"op": "addmerge",
 		"path": "/behaviorConfigs",
 		"value": {},
-		"file": "game:entities/land/sheep-bighorn-male",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hooved/sheep-adult",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
 	{
 		"op": "addmerge",
 		"path": "/behaviorConfigs",
 		"value": {},
-		"file": "game:entities/land/sheep-bighorn-female",
-		"side": "Server"
-	},
-	{
-		"op": "addmerge",
-		"path": "/behaviorConfigs",
-		"value": {},
-		"file": "game:entities/land/sheep-bighorn-lamb",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hooved/sheep-baby",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
 	{
 		"op": "addmerge",
 		"path": "/behaviorConfigs/harvestable",
 		"value": {},
-		"file": "game:entities/land/sheep-bighorn-male",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hooved/sheep-adult",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
 	{
 		"op": "addmerge",
 		"path": "/behaviorConfigs/harvestable",
 		"value": {},
-		"file": "game:entities/land/sheep-bighorn-female",
-		"side": "Server"
-	},
-	{
-		"op": "addmerge",
-		"path": "/behaviorConfigs/harvestable",
-		"value": {},
-		"file": "game:entities/land/sheep-bighorn-lamb",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hooved/sheep-baby",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
 	{
 		"op": "addmerge",
 		"path": "/behaviorConfigs/harvestable/drops",
 		"value": [],
-		"file": "game:entities/land/sheep-bighorn-male",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hooved/sheep-adult",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
 	{
 		"op": "addmerge",
 		"path": "/behaviorConfigs/harvestable/drops",
 		"value": [],
-		"file": "game:entities/land/sheep-bighorn-female",
-		"side": "Server"
-	},
-	{
-		"op": "addmerge",
-		"path": "/behaviorConfigs/harvestable/drops",
-		"value": [],
-		"file": "game:entities/land/sheep-bighorn-lamb",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hooved/sheep-baby",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
 	{
 		"op": "addmerge",
 		"path": "/behaviorConfigs/harvestable/quantitySlots",
 		"value": 8,
-		"file": "game:entities/land/sheep-bighorn-male",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hooved/sheep-adult",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
 	{
 		"op": "addmerge",
 		"path": "/behaviorConfigs/harvestable/quantitySlots",
 		"value": 8,
-		"file": "game:entities/land/sheep-bighorn-female",
-		"side": "Server"
-	},
-	{
-		"op": "addmerge",
-		"path": "/behaviorConfigs/harvestable/quantitySlots",
-		"value": 8,
-		"file": "game:entities/land/sheep-bighorn-lamb",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hooved/sheep-baby",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
 	{
 		"op": "add",
@@ -91,19 +71,9 @@
 			code: "ancienttools:brain",
 			quantity: { avg: 0.35, var: 0 } 
 		},
-		"file": "game:entities/land/sheep-bighorn-male",
-		"side": "Server"
-	},
-	{
-		"op": "add",
-		"path": "/behaviorConfigs/harvestable/drops/-",
-		"value": {
-			type: "item",
-			code: "ancienttools:brain",
-			quantity: { avg: 0.35, var: 0 } 
-		},
-		"file": "game:entities/land/sheep-bighorn-female",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hooved/sheep-adult",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
 	{
 		"op": "add",
@@ -113,7 +83,8 @@
 			code: "ancienttools:brain",
 			quantity: { avg: 0.25, var: 0 } 
 		},
-		"file": "game:entities/land/sheep-bighorn-lamb",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hooved/sheep-baby",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	}
 ]

@@ -3,29 +3,33 @@
 		"op": "addmerge",
 		"path": "/behaviorConfigs",
 		"value": {},
-		"file": "game:entities/land/hooved/goat",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hooved/goat-adult",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
 	{
 		"op": "addmerge",
 		"path": "/behaviorConfigs/harvestable",
 		"value": {},
-		"file": "game:entities/land/hooved/goat",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hooved/goat-adult",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
 	{
 		"op": "addmerge",
 		"path": "/behaviorConfigs/harvestable/drops",
 		"value": [],
-		"file": "game:entities/land/hooved/goat",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hooved/goat-adult",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
     {
 		"op": "addmerge",
 		"path": "/behaviorConfigs/harvestable/quantitySlots",
 		"value": 8,
-		"file": "game:entities/land/hooved/goat",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hooved/goat-adult",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	},
 	{
 		"op": "add",
@@ -33,13 +37,10 @@
 		"value": {
 			type: "item",
 			code: "ancienttools:brain",
-			quantityByType: {
-				"*-baby": { avg: 0.0, var: 0 },
-				"*-male": { avg: 0.25, var: 0 },
-				"*-female": { avg: 0.25, var: 0 },
-			}
+			"quantity": { avg: 0.25, var: 0 }
 		},
-		"file": "game:entities/land/hooved/goat",
-		"side": "Server"
+		"file": "game:entities/animal/mammal/hooved/goat-adult",
+		"side": "Server",
+		"condition": { "when": "DisableBrainDrops", "isValue": "false" }
 	}
 ]

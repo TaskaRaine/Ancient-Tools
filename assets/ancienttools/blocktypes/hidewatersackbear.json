@@ -1,0 +1,97 @@
+﻿{
+	code: "hidewatersackbear",
+	class: "BlockHideWaterSack",
+	entityClassByType: {
+		"@hidewatersackbear-(raw|salted)-(brown|black|panda|polar|sun)": "BEHideWaterSack"
+	},
+	behaviorsByType: {
+		"*": [
+			{ name: "UnstableFalling" },
+		]
+	},
+	creativeinventory: { "general": ["*"], "ancienttools": ["*"] },
+	attributesByType: {
+		"*": {
+			handbook: {
+				groupBy: ["hidewatersackbear-{hide}-*"],
+				"createdBy": "ancienttools:handbook-nativetanning-craftinfo"
+			}
+		}
+	},
+	variantgroups: [
+		{ code: "hide", states: ["raw", "salted", "soaked"] },
+		{ code: "species", states: ["brown", "black", "panda", "polar", "sun"] }
+	],
+	drawtype: "json",
+	shape: {
+			base: "block/hidewatersack/hidewatersack_bear"
+	},
+	texturesbytype: {
+		"*-raw-panda": {
+			hide: { base: "ancienttools:item/resource/hide/blackbearhide" },
+			"furside": { base: "game:item/resource/hide/flesh" },
+			string: { base: "game:item/tool/material/string" },
+			"bear": { "base": "game:entity/animal/mammal/bear/{species}-adult1" }
+		},
+		"*-raw-*": {
+			hide: { base: "ancienttools:item/resource/hide/{species}bearhide" },
+			"furside": { base: "game:item/resource/hide/flesh" },
+			string: { base: "game:item/tool/material/string" },
+			"bear": { "base": "game:entity/animal/mammal/bear/{species}-adult1" }
+		},
+		"*-salted-panda": {
+			hide: { base: "ancienttools:item/resource/hide/blackbearhide", "overlays": ["ancienttools:item/resource/hide/salt32pxoverlay"] },
+			"furside": { base: "game:item/resource/hide/flesh", "overlays": ["ancienttools:item/resource/hide/salt32pxoverlay"] },
+			string: { base: "game:item/tool/material/string" },
+			"bear": { "base": "game:entity/animal/mammal/bear/{species}-adult1", "overlays": ["game:item/resource/hide/salt2"] }
+		},
+		"*-salted-*": {
+			hide: { base: "ancienttools:item/resource/hide/{species}bearhide", "overlays": ["ancienttools:item/resource/hide/salt32pxoverlay"] },
+			"furside": { base: "game:item/resource/hide/flesh", "overlays": ["ancienttools:item/resource/hide/salt32pxoverlay"] },
+			string: { base: "game:item/tool/material/string" },
+			"bear": { "base": "game:entity/animal/mammal/bear/{species}-adult1", "overlays": ["game:item/resource/hide/salt2"] }
+		},
+		"*-soaked-panda": {
+			hide: { base: "ancienttools:item/resource/hide/blackbearhide", "overlays": ["ancienttools:item/resource/hide/soak32pxoverlay"] },
+			"furside": { base: "game:item/resource/hide/flesh", "overlays": ["ancienttools:item/resource/hide/soak32pxoverlay"] },
+			string: { base: "game:item/tool/material/string" },
+			"bear": { "base": "game:entity/animal/mammal/bear/{species}-adult1", "overlays": ["game:item/resource/hide/soak2"] }
+		},
+		"*-soaked-*": { 
+			hide: { base: "ancienttools:item/resource/hide/{species}bearhide", "overlays": ["ancienttools:item/resource/hide/soak32pxoverlay"] },
+			"furside": { base: "game:item/resource/hide/flesh", "overlays": ["ancienttools:item/resource/hide/soak32pxoverlay"] },
+			string: { base: "game:item/tool/material/string" },
+			"bear": { "base": "game:entity/animal/mammal/bear/{species}-adult1", "overlays": ["game:item/resource/hide/soak2"] }
+		}
+	},
+	blockmaterial: "Cloth",
+	heldTpIdleAnimation: "holdbothhands",
+	heldTpUseAnimation: "twohandplaceblock",
+    sidesolid: { all: false },
+    sideopaque: { all: false },
+    lightAbsorption: 0,
+	collisionSelectionBoxes:  [
+		{ x1: 0.1875, y1: 0, z1: 0.1875, x2: 0.8125, y2: 0.625, z2: 0.8125 }
+	],
+	sounds: {
+		"place": "game:block/leather",
+		"hit": "game:block/leather",
+		"break": "game:block/leather",
+		"walk": "game:walk/leather"
+	},
+	guiTransform: {
+		origin: { x: 0.5, y: 0.3, z: 0.5 },
+		scale: 1.4
+	},
+	fpHandTransform: {
+		translation: { x: 0, y: 0.15, z: 0.5 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 1.31
+	},
+	tpHandTransform: {
+		translation: { x: -1.1, y: 0, z: -0.9 },
+		rotation: { x: 12, y: 16, z: -90 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.5
+	}
+}

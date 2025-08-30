@@ -1,21 +1,21 @@
 ﻿[
 	{
         "op": "add",
-        "path": "/texturesByType/*/brain",
+        "path": "/textures/brain",
         "value": {
           "base": "ancienttools:item/resource/brain"
         },
-        "file": "game:blocktypes/clay/pot.json",
+        "file": "game:blocktypes/clay/fired/pot.json",
         "side": "Server"
     },
     {
         "op": "add",
-        "path": "/attributesByType/claypot-cooked/textureMapping/ancienttools:brain",
+        "path": "/attributesByType/claypot-blue-cooked/textureMapping/ancienttools:brain",
         "value": [
             "meat",
             "brain"
         ],
-        "file": "game:blocktypes/clay/pot.json",
+        "file": "game:blocktypes/clay/fired/pot.json",
         "side": "Server"
     },
 ]

@@ -69,8 +69,19 @@
 			{ 
 				name: "ConvertBlockUsingIngredient", 
 				properties: {
-					convertFromBlockCode: "game:claypot-burned",
-					convertToBlockCode: "ancienttools:salvepot-empty"
+					convertFromBlockCode: "game:claypot-{color}-fired",
+					convertToBlockCode: "ancienttools:salvepot-{color}-empty",
+					"wildcard": "color",
+					"quantityNeeded": 1
+				}
+			},
+			{ 
+				name: "ConvertBlockUsingIngredient", 
+				properties: {
+					convertFromBlockCode: "game:dirtyclaypot-{color}-empty",
+					convertToBlockCode: "ancienttools:salvepot-{color}-residuecovered",
+					"wildcard": "color",
+					"quantityNeeded": 1
 				}
 			},
 			{

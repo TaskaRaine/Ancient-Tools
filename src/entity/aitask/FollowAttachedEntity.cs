@@ -2,6 +2,7 @@
 using System;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
+using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 
 namespace AncientTools.Entities.Tasks
@@ -15,7 +16,7 @@ namespace AncientTools.Entities.Tasks
         private float ParkedDistance { get; set; } = 1.0f;
         private Vec3d BehindVector { get; set; }
 
-        public AITaskFollowAttachedEntity(EntityAgent entity) : base(entity)
+        public AITaskFollowAttachedEntity(EntityAgent entity, JsonObject taskConfig, JsonObject aiConfig) : base(entity, taskConfig, aiConfig)
         {
             if (entity is EntityMobileStorage)
                 mobileStorageEntity = entity as EntityMobileStorage;
