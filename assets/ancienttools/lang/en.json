@@ -648,8 +648,10 @@ This barrel functions identically to a typical barrel made from planks, but has 
 
 	"itemcraftdesc-adzehead-*": "For peeling bark from trees",
 
-	"block-toolmoldancienttools-raw-adze": "Raw Adzehead Mold",
-	"block-toolmoldancienttools-burned-adze": "Adzehead Mold",
+	"block-toolmoldancienttools-blue-raw-adze": "Raw Blue Clay Adzehead Mold",
+	"block-toolmoldancienttools-blue-fired-adze": "Dark Brown Ceramic Adzehead Mold",
+	"block-toolmoldancienttools-fire-raw-adze": "Raw Blue Clay Adzehead Mold",
+	"block-toolmoldancienttools-fire-fired-adze": "Dark Brown Ceramic Adzehead Mold",
 
 	"item-bark-birch": "Birch Bark",
 	"item-bark-oak": "Oak Bark",

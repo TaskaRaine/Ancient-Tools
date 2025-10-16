@@ -2,7 +2,7 @@
 	code: "toolmoldancienttools",
 	classByType: {
 		"*-raw-*": "Block",
-		"*-burned-*": "BlockToolMold",
+		"*-fired-*": "BlockToolMold",
 	},
 	behaviorsByType: {
 		"*-raw-*": [
@@ -13,11 +13,20 @@
 		"*": [{name: "UnstableFalling"}],
 	},
 	variantgroups: [
-		{ code:"materialtype", states: ["raw", "burned"] },
+		{ "code": "color", "states": ["blue", "fire", "black", "brown", "cream", "gray", "orange", "red", "tan"] }
+		{ code:"materialtype", states: ["raw", "fired"] },
 		{ code:"tooltype", states: ["adze", "wedge", "mallet"] }
 	],
+	skipVariants: [
+		"*-black-raw-*",
+		"*-brown-raw-*",
+		"*-cream-raw-*",
+		"*-gray-raw-*",
+		"*-orange-raw-*",
+		"*-tan-raw-*"
+	],
 	attributesByType: {
-		"*-burned-adze": {
+		"*-fired-adze": {
 			"requiredUnits": 100,
 			"fillHeight": 1,
 			"moldrackable": true,
@@ -27,7 +36,7 @@
 				"code": "{tooltype}head-{metal}"
 			}
 		},
-		"*-burned-wedge": {
+		"*-fired-wedge": {
 			"requiredUnits": 100,
 			"fillHeight": 1,
 			"moldrackable": true,
@@ -38,7 +47,7 @@
 				"quantity": 4
 			}
 		},
-		"*-burned-mallet": {
+		"*-fired-mallet": {
 			"requiredUnits": 100,
 			"fillHeight": 1,
 			"moldrackable": true,
@@ -50,7 +59,7 @@
 		}
 	},
 	entityClassByType: {
-		"*-burned-*": "ToolMold",
+		"*-fired-*": "ToolMold",
 	},
 	combustiblePropsByType: {
 		"*-raw-*": {
@@ -58,7 +67,7 @@
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "fire",
-			smeltedStack: { type: "block", code: "toolmoldancienttools-burned-{tooltype}" },
+			smeltedStack: { type: "block", code: "toolmoldancienttools-{color}-fired-{tooltype}" },
 			requiresContainer: false
 		}
 	},
@@ -69,8 +78,8 @@
 	maxStackSize: 8,
 	lightAbsorption: 0,
 	texturesByType: {
-		"*-raw-*": {  all: { base: "game:block/clay/blueclay" } },
-		"*-burned-*": {  floor: { base: "game:block/clay/ceramic-dark" }, other: { base: "game:block/clay/ceramic" } }
+		"*-raw-*": {  all: { base: "game:block/clay/{color}clay" } },
+		"*-fired-*": {  { base: "game:block/clay/hardened/{color}" }, other: { base: "game:block/clay/hardened/{color}" } }
 	},
 	shapeByType: {
 		"*-wedge": { "base": "block/clay/mold/{tooltype}" },

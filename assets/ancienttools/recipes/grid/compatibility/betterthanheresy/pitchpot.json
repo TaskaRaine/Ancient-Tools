@@ -14,12 +14,13 @@
 			},
 			"P": { 
 				type: "block",
-				code: "game:claypot-burned" 
+				"name": "color",
+				code: "game:claypot-*-burned" 
 			},
 		},
 		output: { 
 			type: "block", 
-			code: "pitchpot-empty",
+			code: "pitchpot-{color}-empty",
 			quantity: 1
 		}
 	},

@@ -10,8 +10,13 @@
 		"repairPercentageByType": {
 			"*-stick": 0.25
 		},
-		"canSealPrimitiveBarrel": true
-	},
+		"canSealPrimitiveBarrelByType": {
+			"*-stick": true	
+		},
+		"canSealCrockByType": {
+			"*-stick": true
+			}
+		},
 	variantgroups:[
 		{ code: "type", states: [ "ball", "stick" ] }
 	],

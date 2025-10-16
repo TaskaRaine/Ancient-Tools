@@ -12,7 +12,7 @@ namespace AncientTools.Blocks
 
             if(api.Side == EnumAppSide.Server)
             {
-                world.BlockAccessor.SetBlock(api.World.GetBlock(new AssetLocation("ancienttools", "pitchpot-finishedpitch")).Id, blockPos);
+                world.BlockAccessor.SetBlock(api.World.GetBlock(new AssetLocation("ancienttools", "pitchpot-" + this.VariantStrict["color"] + "-finishedpitch")).Id, blockPos);
 
                 world.BlockAccessor.MarkBlockDirty(blockPos);
 

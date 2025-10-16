@@ -76,6 +76,8 @@ namespace AncientTools.CollectibleBehaviors
                     {
                         byEntity.Api.World.BlockAccessor.ExchangeBlock(0, blockSel.Position);
                         byEntity.Api.World.BlockAccessor.RemoveBlockEntity(blockSel.Position);
+
+                        byEntity.StopAnimation(byEntity.ActiveHandItemSlot.Itemstack.Collectible.GetHeldTpHitAnimation(slot, byEntity));
                     }
 
                     groundStorageEntity.Inventory.FirstNonEmptySlot.TakeOut(multiplier);

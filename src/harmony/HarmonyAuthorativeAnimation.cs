@@ -21,9 +21,23 @@ namespace AncientTools
             }
             else if (byEntity.World.BlockAccessor.GetBlock(blockSel.Position) is BlockGroundStorage && byEntity.ActiveHandItemSlot.Itemstack.Collectible.HasBehavior<CollectibleBehaviorChopBarkStack>())
             {
-                handHandling = EnumHandHandling.PreventDefaultAction;
+                handHandling = EnumHandHandling.PreventDefaultAnimation;
                 handling = EnumHandling.PreventDefault;
             }
+        }
+    }
+    [HarmonyPatch(typeof(CollectibleBehaviorAnimationAuthoritative), "OnHeldAttackStep", MethodType.Normal)]
+    public class HarmonyAnimationAuthorativeAttackStep
+    {
+        static bool Postfix(bool __result, CollectibleBehaviorAnimationAuthoritative __instance, float secondsPassed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSelection, EntitySelection entitySel, ref EnumHandling handling)
+        {
+            if (blockSelection == null || byEntity == null || byEntity.ActiveHandItemSlot.Empty) return __result;
+            else if (byEntity.World.BlockAccessor.GetBlock(blockSelection.Position) is BlockGroundStorage && byEntity.ActiveHandItemSlot.Itemstack.Collectible.HasBehavior<CollectibleBehaviorChopBarkStack>())
+            {
+                handling = EnumHandling.PreventDefault;
+                return false;
+            }
+            return __result;
         }
     }
 }
