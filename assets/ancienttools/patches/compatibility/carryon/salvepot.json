@@ -1,7 +1,7 @@
 ﻿[
 	{
 		"op": "add",
-		"path": "/behaviorsByType/@salvepot-(birch|birchresiduecovered|pine|pineresiduecovered|maple|mapleresiduecovered|oak|oakresiduecovered|acacia|acaciaresiduecovered|hardwax|hardwaxresiduecovered|softwax|barkoil)/-",
+		"path": "/behaviorsByType/@salvepot-(blue|fire|black|brown|cream|gray|orange|red|tan)-(birch|birchresiduecovered|pine|pineresiduecovered|maple|mapleresiduecovered|oak|oakresiduecovered|acacia|acaciaresiduecovered|hardwax|hardwaxresiduecovered|softwax|barkoil)/-",
 		"value": {
 			name: "Carryable", properties: {
 
@@ -25,7 +25,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/behaviorsByType/@salvepot-(empty|residuecovered|finishedsalve)/-",
+		"path": "/behaviorsByType/@salvepot-(blue|fire|black|brown|cream|gray|orange|red|tan)-(empty|residuecovered|finishedsalve)/-",
 		"value": {
 			name: "Carryable", properties: {
 
