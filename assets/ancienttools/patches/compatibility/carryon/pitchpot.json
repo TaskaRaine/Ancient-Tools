@@ -1,7 +1,7 @@
 ﻿[
 	{
 		"op": "add",
-		"path": "/behaviorsByType/@pitchpot-(unmixed|unmixedresiduecovered)/-",
+		"path": "/behaviorsByType/@pitchpot-(blue|fire|black|brown|cream|gray|orange|red|tan)-(unmixed|unmixedresiduecovered)/-",
 		"value": {
 			name: "Carryable", properties: {
 
@@ -9,7 +9,7 @@
 			rotation: [ 0, 0, 0 ],
 			origin: [ 0.5, 0.5, 0.5 ],
 			scale: [ 0.5, 0.5, 0.5 ],
-    
+
 			interactDelay: 0.4,
 				slots: {
 				"Hands": {
@@ -17,7 +17,7 @@
 					walkSpeedModifier: -0.15,
 				}
 				}
-			} 
+			}
 		},
 		"file": "ancienttools:blocktypes/pitchpot",
 		"dependsOn": [{ "modid": "carryon" }],
@@ -25,7 +25,7 @@
 	},
 	{
 		"op": "add",
-		"path": "/behaviorsByType/@pitchpot-(empty|finishedpitch)/-",
+		"path": "/behaviorsByType/@pitchpot-(blue|fire|black|brown|cream|gray|orange|red|tan)-(empty|finishedpitch)/-",
 		"value": {
 			name: "Carryable", properties: {
 
@@ -33,7 +33,7 @@
 			rotation: [ 0, 0, 0 ],
 			origin: [ 0.5, 0.5, 0.5 ],
 			scale: [ 0.5, 0.5, 0.5 ],
-    
+
 			interactDelay: 0.4,
 				slots: {
 				"Hands": {
@@ -41,7 +41,7 @@
 					walkSpeedModifier: -0.15,
 				},
 				}
-			} 
+			}
 		},
 		"file": "ancienttools:blocktypes/pitchpot",
 		"dependsOn": [{ "modid": "carryon" }],
