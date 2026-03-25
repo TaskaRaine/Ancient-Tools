@@ -7,6 +7,6 @@
   "description": "A collection of useful tools from ancient times.",
   "version": "1.6.1",
   "dependencies": {
-    "game": "1.21.0", "combatoverhaul": "0.15.0", "overhaullib": "1.19.9", "armory": "1.10.2"
+    "armory": "1.10.2"
   }
 }
