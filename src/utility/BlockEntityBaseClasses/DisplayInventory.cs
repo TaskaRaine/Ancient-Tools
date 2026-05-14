@@ -158,7 +158,7 @@ namespace AncientTools.Utility
 
             if (dynBlock != null)
             {
-                mesh = dynBlock.GenMesh(stack, Capi.BlockTextureAtlas, Pos);
+                mesh = dynBlock.GenMesh(new DummySlot(stack), Capi.BlockTextureAtlas, Pos);
                 mesh.Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0, Block.Shape.rotateY * GameMath.DEG2RAD, 0);
             }
             else

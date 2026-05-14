@@ -43,7 +43,7 @@ namespace AncientTools.Utility
         {
             base.Initialize(properties, api, InChunkIndex3d);
 
-            EntityTransform = this.SidedPos;
+            EntityTransform = this.Pos;
             Capi = api as ICoreClientAPI;
             Sapi = api as ICoreServerAPI;
 
@@ -165,8 +165,7 @@ namespace AncientTools.Utility
         }
         public void SyncPosition()
         {
-            ServerPos.SetFrom(EntityTransform);
-            Pos.SetFrom(ServerPos);
+            Pos.SetFrom(EntityTransform);
         }
         public void SetLookAtVector(Vec3f cartPos, float xPos, float yPos, float zPos)
         {

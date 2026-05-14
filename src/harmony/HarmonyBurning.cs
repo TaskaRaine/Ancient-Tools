@@ -29,7 +29,7 @@ namespace AncientTools
                     for (int i = 0; i < entities.Length; i++)
                     {
                         Entity entity = entities[i];
-                        if (!CollisionTester.AabbIntersect(entity.SelectionBox, entity.ServerPos.X, entity.ServerPos.Y, entity.ServerPos.Z, ___fireCuboid, ownPos)) continue;
+                        if (!CollisionTester.AabbIntersect(entity.SelectionBox, entity.Pos.X, entity.Pos.Y, entity.Pos.Z, ___fireCuboid, ownPos)) continue;
 
                         if (entity.Alive)
                         {
