@@ -30,37 +30,37 @@
 		"*-raw-panda": {
 			hide: { base: "ancienttools:item/resource/hide/blackbearhide" },
 			"furside": { base: "game:item/resource/hide/flesh" },
-			string: { base: "game:item/tool/material/string" },
+			string: { base: "game:item/resource/string" },
 			"bear": { "base": "game:entity/animal/mammal/bear/{species}-adult1" }
 		},
 		"*-raw-*": {
 			hide: { base: "ancienttools:item/resource/hide/{species}bearhide" },
 			"furside": { base: "game:item/resource/hide/flesh" },
-			string: { base: "game:item/tool/material/string" },
+			string: { base: "game:item/resource/string" },
 			"bear": { "base": "game:entity/animal/mammal/bear/{species}-adult1" }
 		},
 		"*-salted-panda": {
 			hide: { base: "ancienttools:item/resource/hide/blackbearhide", "overlays": ["ancienttools:item/resource/hide/salt32pxoverlay"] },
 			"furside": { base: "game:item/resource/hide/flesh", "overlays": ["ancienttools:item/resource/hide/salt32pxoverlay"] },
-			string: { base: "game:item/tool/material/string" },
+			string: { base: "game:item/resource/string" },
 			"bear": { "base": "game:entity/animal/mammal/bear/{species}-adult1", "overlays": ["game:item/resource/hide/salt2"] }
 		},
 		"*-salted-*": {
 			hide: { base: "ancienttools:item/resource/hide/{species}bearhide", "overlays": ["ancienttools:item/resource/hide/salt32pxoverlay"] },
 			"furside": { base: "game:item/resource/hide/flesh", "overlays": ["ancienttools:item/resource/hide/salt32pxoverlay"] },
-			string: { base: "game:item/tool/material/string" },
+			string: { base: "game:item/resource/string" },
 			"bear": { "base": "game:entity/animal/mammal/bear/{species}-adult1", "overlays": ["game:item/resource/hide/salt2"] }
 		},
 		"*-soaked-panda": {
 			hide: { base: "ancienttools:item/resource/hide/blackbearhide", "overlays": ["ancienttools:item/resource/hide/soak32pxoverlay"] },
 			"furside": { base: "game:item/resource/hide/flesh", "overlays": ["ancienttools:item/resource/hide/soak32pxoverlay"] },
-			string: { base: "game:item/tool/material/string" },
+			string: { base: "game:item/resource/string" },
 			"bear": { "base": "game:entity/animal/mammal/bear/{species}-adult1", "overlays": ["game:item/resource/hide/soak2"] }
 		},
 		"*-soaked-*": { 
 			hide: { base: "ancienttools:item/resource/hide/{species}bearhide", "overlays": ["ancienttools:item/resource/hide/soak32pxoverlay"] },
 			"furside": { base: "game:item/resource/hide/flesh", "overlays": ["ancienttools:item/resource/hide/soak32pxoverlay"] },
-			string: { base: "game:item/tool/material/string" },
+			string: { base: "game:item/resource/string" },
 			"bear": { "base": "game:entity/animal/mammal/bear/{species}-adult1", "overlays": ["game:item/resource/hide/soak2"] }
 		}
 	},

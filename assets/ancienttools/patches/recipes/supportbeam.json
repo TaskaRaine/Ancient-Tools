@@ -3,7 +3,7 @@
         "op": "add",
         "path": "/0/enabled",
         "value": false,
-        "file": "game:recipes/grid/beams",
+        "file": "game:recipes/grid/supportbeams",
         "side": "Server",
         "condition": { "when": "InWorldBeamCraftingOnly", "isValue": "true" },
         "dependsOn": [{"modid": "indappledgroves", "invert":  true}],

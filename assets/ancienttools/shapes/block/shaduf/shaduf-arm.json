@@ -1,4 +1,4 @@
-{
+﻿{
 	"editor": {
 		"allAngles": false,
 		"entityTextureMode": false
@@ -15,7 +15,7 @@
 		"aged": "H:/VintageStory 1.20.4/assets/survival/textures/block/wood/debarked/aged",
 		"beams": "H:/VintageStory 1.20.4/assets/survival/textures/block/wood/debarked/oak",
 		"top": "H:/VintageStory 1.20.4/assets/survival/textures/block/wood/debarked/oak",
-		"string": "H:/VintageStory 1.20.4/assets/survival/textures/item/tool/material/string"
+		"string": "H:/VintageStory 1.20.4/assets/survival/textures/item/resource/string"
 	},
 	"elements": [
 		{

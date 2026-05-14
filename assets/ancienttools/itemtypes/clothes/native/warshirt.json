@@ -1,6 +1,6 @@
 ﻿{
     code: "warshirt",
-	class: "ItemWearable",
+	behaviors: [{ name: "Wearable" }],
 	"attributes": {
 		clothescategory: "upperbody",
 		wearableAttachment: true,

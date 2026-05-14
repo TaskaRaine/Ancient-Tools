@@ -1,38 +1,30 @@
-﻿[
+[
 	{
-		"op": "add",
-		"path": "/attributesByType/*-flax/mortarProperties",
+		"op": "addmerge",
+		"path": "/attributes",
 		"value": {
-			shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_grain",
-			texturePaths: [{ code: "grain", path: "ancienttools:block/mortar/mortar_{type}" }],
-			groundStack: { type: "item", code: "game:flour-{type}" },
-			resultQuantity: 1
+			"mortarPropertiesByType": {
+				"*-flax": {
+					shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_grain",
+					texturePaths: [{ code: "grain", path: "ancienttools:block/mortar/mortar_{type}" }],
+					groundStack: { type: "item", code: "game:flour-{type}" },
+					resultQuantity: 1
+				},
+				"*-rice": {
+					shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_grain",
+					texturePaths: [{ code: "grain", path: "ancienttools:block/mortar/mortar_{type}" }],
+					groundStack: { type: "item", code: "game:flour-{type}" },
+					resultQuantity: 1
+				},
+				"*": {
+					shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_grain",
+					texturePaths: [{ code: "grain", path: "ancienttools:block/mortar/mortar_{type}" }],
+					groundStack: { type: "item", code: "game:flour-{type}" },
+					resultQuantity: 1
+				}
+			}
 		},
 		"file": "game:itemtypes/food/grain",
-		"side": "Server",
-	},
-	{
-		"op": "add",
-		"path": "/attributesByType/*-rice/mortarProperties",
-		"value": {
-			shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_grain",
-			texturePaths: [{ code: "grain", path: "ancienttools:block/mortar/mortar_{type}" }],
-			groundStack: { type: "item", code: "game:flour-{type}" },
-			resultQuantity: 1
-		},
-		"file": "game:itemtypes/food/grain",
-		"side": "Server",
-	},
-	{
-		"op": "add",
-		"path": "/attributesByType/*/mortarProperties",
-		"value": {
-			shapePath: "ancienttools:shapes/block/mortar/resourceshapes/resource_game_grain",
-			texturePaths: [{ code: "grain", path: "ancienttools:block/mortar/mortar_{type}" }],
-			groundStack: { type: "item", code: "game:flour-{type}" },
-			resultQuantity: 1
-		},
-		"file": "game:itemtypes/food/grain",
-		"side": "Server",
+		"side": "Server"
 	}
 ]

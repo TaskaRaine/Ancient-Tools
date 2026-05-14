@@ -1,4 +1,4 @@
-{
+﻿{
 	"editor": {
 		"allAngles": false,
 		"entityTextureMode": false
@@ -9,7 +9,7 @@
 	},
 	"textures": {
 		"soaked": "game:item/resource/hide/soaked",
-		"string": "game:item/tool/material/string"
+		"string": "game:item/resource/string"
 	},
 	"elements": [
 		{

@@ -1,4 +1,4 @@
-{
+﻿{
 	"editor": {
 		"allAngles": false,
 		"entityTextureMode": true
@@ -14,7 +14,7 @@
 	"textures": {
 		"furside": "ancienttools:item/resource/hide/sunbearhide",
 		"flesh": "game:item/resource/hide/flesh",
-		"string": "game:item/tool/material/string",
+		"string": "game:item/resource/string",
 		"bear": "game:entity/animal/mammal/bear/brown-adult1"
 	},
 	"elements": [

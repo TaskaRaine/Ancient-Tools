@@ -1,4 +1,4 @@
-{
+﻿{
 	"editor": {
 		"allAngles": false,
 		"entityTextureMode": false
@@ -10,7 +10,7 @@
 	"textures": {
 		"furside": "game:item/resource/hide/scraped",
 		"flesh": "game:item/resource/hide/flesh",
-		"string": "game:item/tool/material/string"
+		"string": "game:item/resource/string"
 	},
 	"elements": [
 		{
