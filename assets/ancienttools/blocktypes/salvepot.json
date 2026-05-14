@@ -60,7 +60,7 @@
 			"dark": { base: "game:block/clay/hardened/{color}", overlays: [ "game:block/clay/overlay/dark" ] },
 		},
 		"*-residuecovered": {
-			ceramic: { base: "game:block/clay/pot/{color}", "overlays": ["game:block/clay/pot/dirty"] },
+			ceramic: { base: "game:block/clay/pot/dirty{color}" },
 		},
 		"@salvepot-(blue|fire|black|brown|cream|earthyorange|gray|orange|red|tan)-(birch|pine|maple|oak|acacia)": {
 			ceramic: { base: "game:block/clay/hardened/{color}",  overlays: [ "game:block/clay/overlay/pot" ]},
@@ -69,27 +69,27 @@
 			animalfat: { base: "game:item/resource/fat" }
 		},
 		"*-birchresiduecovered": {
-			ceramic: { base: "game:block/clay/pot/{color}", "overlays": ["game:block/clay/pot/dirty"] },
+			ceramic: { base: "game:block/clay/pot/dirty{color}" },
 			bark: { base:  "game:block/wood/bark/birch"},
 			animalfat: { base: "game:item/resource/fat" }
 		},
 		"*-pineresiduecovered": {
-			ceramic: { base: "game:block/clay/pot/{color}", "overlays": ["game:block/clay/pot/dirty"] },
+			ceramic: { base: "game:block/clay/pot/dirty{color}" },
 			bark: { base:  "game:block/wood/bark/pine"},
 			animalfat: { base: "game:item/resource/fat" }
 		},
 		"*-mapleresiduecovered": {
-			ceramic: { base: "game:block/clay/pot/{color}", "overlays": ["game:block/clay/pot/dirty"] },
+			ceramic: { base: "game:block/clay/pot/dirty{color}" },
 			bark: { base:  "game:block/wood/bark/maple"},
 			animalfat: { base: "game:item/resource/fat" }
 		},
 		"*-oakresiduecovered": {
-			ceramic: { base: "game:block/clay/pot/{color}", "overlays": ["game:block/clay/pot/dirty"] },
+			ceramic: { base: "game:block/clay/pot/dirty{color}" },
 			bark: { base:  "game:block/wood/bark/oak"},
 			animalfat: { base: "game:item/resource/fat" }
 		},
 		"*-acaciaresiduecovered": {
-			ceramic: { base: "game:block/clay/pot/{color}", "overlays": ["game:block/clay/pot/dirty"] },
+			ceramic: { base: "game:block/clay/pot/dirty{color}" },
 			bark: { base:  "game:block/wood/bark/acacia"},
 			animalfat: { base: "game:item/resource/fat" }
 		},
@@ -99,19 +99,19 @@
 			wax: { base: "game:item/resource/beeswax" },
 		},
 		"*-hardwaxresiduecovered": {
-			ceramic: { base: "game:block/clay/pot/{color}", "overlays": ["game:block/clay/pot/dirty"] },
+			ceramic: { base: "game:block/clay/pot/dirty{color}" },
 			wax: { base: "game:item/resource/beeswax" },
 		},
 		"*-softwax": {
-			ceramic: { base: "game:block/clay/pot/{color}", "overlays": ["game:block/clay/pot/dirty"] },
+			ceramic: { base: "game:block/clay/pot/dirty{color}" },
 			wax: { base: "block/salve/softwax" }
 		},
 		"*-barkoil": {
-			ceramic: { base: "game:block/clay/pot/{color}", "overlays": ["game:block/clay/pot/dirty"] },
+			ceramic: { base: "game:block/clay/pot/dirty{color}" },
 			barkoil: { base: "block/salve/barkoil" }
 		},
 		"*-finishedsalve": {
-			ceramic: { base: "game:block/clay/pot/{color}", "overlays": ["game:block/clay/pot/dirty"] },
+			ceramic: { base: "game:block/clay/pot/dirty{color}" },
 			finishedsalve: { base: "item/medicine/salveportion" }
 		}
 	},
