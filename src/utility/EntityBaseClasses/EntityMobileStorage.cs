@@ -241,7 +241,7 @@ namespace AncientTools.Utility
 
             foreach (ItemSlot inventoryStorage in MobileStorageInventory)
             {
-                if (!inventoryStorage.Empty)
+                if (!inventoryStorage.Empty && inventoryStorage.Itemstack.Block?.Shape?.Base != null)
                     inventoryShapes.Enqueue(Api.Assets.TryGet(inventoryStorage.Itemstack.Block.Shape.Base) as Shape);
             }
 

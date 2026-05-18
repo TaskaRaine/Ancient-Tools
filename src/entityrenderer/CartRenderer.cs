@@ -145,7 +145,9 @@ namespace AncientTools.EntityRenderers
                     }
                     catch
                     {
-                        InventoryShapes[0] = Capi.Assets.Get<Shape>(new AssetLocation(CartEntity.MobileStorageInventory[0].Itemstack.Block.Shape.Base.Domain, "shapes/" + CartEntity.MobileStorageInventory[0].Itemstack.Block.Shape.Base.Path + ".json")) as Shape;
+                        var shapeBase = CartEntity.MobileStorageInventory[0].Itemstack.Block?.Shape?.Base;
+                        if (shapeBase != null)
+                            InventoryShapes[0] = Capi.Assets.Get<Shape>(new AssetLocation(shapeBase.Domain, "shapes/" + shapeBase.Path + ".json")) as Shape;
                     }
                 }
                 else
