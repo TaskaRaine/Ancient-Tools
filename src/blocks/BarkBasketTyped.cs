@@ -84,7 +84,7 @@ namespace AncientTools.Blocks
             shape.SubclassForStepParenting(texturePrefixCode);
             return shape;
         }
-        new public int GetProvideSlots(ItemStack stack)
+        public int GetProvideSlots(ItemStack stack)
         {
             string type  = GetTypeFromStackAttributes(stack);
 
