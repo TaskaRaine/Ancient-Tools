@@ -5,10 +5,9 @@ using Vintagestory.GameContent;
 
 namespace AncientTools
 {
-    [HarmonyPatch(typeof(BlockEntityFirepit), "igniteFuel", MethodType.Normal)]
     public class SetFireproof
     {
-        static void Prefix(BlockEntityFirepit __instance)
+        public static void Prefix(BlockEntityFirepit __instance)
         {
             try
             {

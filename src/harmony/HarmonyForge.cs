@@ -13,10 +13,10 @@ namespace AncientTools
     // commented out to disable this patch. The fireproof-fuel feature (waterproof fuel in
     // the forge) is therefore inert pending a rewrite against the new forge tick API.
     //
-    // [HarmonyPatch(typeof(BlockEntityForge), "OnCommonTick", MethodType.Normal)]
+    // Disabled in 1.22 (see comment above). When re-enabled, register from HarmonySetup.ApplyPatches.
     public class HarmonyForgeIgnite
     {
-        static bool Prefix(BlockEntityForge __instance, ref bool ___burning, ref double ___lastTickTotalHours, ref float ___fuelLevel, ref ItemStack ___contents)
+        public static bool Prefix(BlockEntityForge __instance, ref bool ___burning, ref double ___lastTickTotalHours, ref float ___fuelLevel, ref ItemStack ___contents)
         {
             try
             {
@@ -62,10 +62,9 @@ namespace AncientTools
             return true;
         }
     }
-    [HarmonyPatch(typeof(BlockEntityForge), "OnPlayerInteract", MethodType.Normal)]
     public class HarmonyForgeInteract
     {
-        static void Prefix(BlockEntityForge __instance, IPlayer byPlayer)
+        public static void Prefix(BlockEntityForge __instance, IPlayer byPlayer)
         {
             try
             {

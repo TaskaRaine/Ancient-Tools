@@ -7,10 +7,9 @@ using Vintagestory.GameContent;
 
 namespace AncientTools
 {
-    [HarmonyPatch(typeof(CollectibleBehaviorAnimationAuthoritative), "OnHeldAttackStart", MethodType.Normal)]
     public class HarmonyAnimationAuthorativeAttackStart
     {
-        static void Postfix(EntityAgent byEntity, BlockSelection blockSel, ref EnumHandHandling handHandling, ref EnumHandling handling)
+        public static void Postfix(EntityAgent byEntity, BlockSelection blockSel, ref EnumHandHandling handHandling, ref EnumHandling handling)
         {
             if (blockSel == null || byEntity == null || byEntity.ActiveHandItemSlot.Empty) return;
 
@@ -26,10 +25,9 @@ namespace AncientTools
             }
         }
     }
-    [HarmonyPatch(typeof(CollectibleBehaviorAnimationAuthoritative), "OnHeldAttackStep", MethodType.Normal)]
     public class HarmonyAnimationAuthorativeAttackStep
     {
-        static bool Postfix(bool __result, CollectibleBehaviorAnimationAuthoritative __instance, float secondsPassed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSelection, EntitySelection entitySel, ref EnumHandling handling)
+        public static bool Postfix(bool __result, CollectibleBehaviorAnimationAuthoritative __instance, float secondsPassed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSelection, EntitySelection entitySel, ref EnumHandling handling)
         {
             if (blockSelection == null || byEntity == null || byEntity.ActiveHandItemSlot.Empty) return __result;
             else if (byEntity.World.BlockAccessor.GetBlock(blockSelection.Position) is BlockGroundStorage && byEntity.ActiveHandItemSlot.Itemstack.Collectible.HasBehavior<CollectibleBehaviorChopBarkStack>())

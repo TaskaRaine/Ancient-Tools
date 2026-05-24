@@ -7,10 +7,9 @@ using Vintagestory.GameContent;
 
 namespace AncientTools
 {
-    [HarmonyPatch(typeof(BEBehaviorBurning), "OnSlowServerTick", MethodType.Normal)]
     public class HarmonyBurningSlowTick
     {
-        static bool Prefix(BEBehaviorBurning __instance, Block ___fireBlock, Cuboidf ___fireCuboid)
+        public static bool Prefix(BEBehaviorBurning __instance, Block ___fireBlock, Cuboidf ___fireCuboid)
         {
             try
             {
