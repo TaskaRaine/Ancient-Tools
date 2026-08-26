@@ -6,10 +6,17 @@ using Vintagestory.GameContent;
 
 namespace AncientTools
 {
-    [HarmonyPatch(typeof(BlockEntityForge), "OnCommonTick", MethodType.Normal)]
+    // 1.22 NOTE: BlockEntityForge.OnCommonTick was renamed to OnCommonTick200ms and the
+    // private fields fuelLevel/contents were restructured (partialFuelConsumed + inventory
+    // access). The patch below targeted the old shape and cannot bind in 1.22 — Harmony
+    // PatchAll fails on it which also blocks the OnPlayerInteract patch below. Attribute
+    // commented out to disable this patch. The fireproof-fuel feature (waterproof fuel in
+    // the forge) is therefore inert pending a rewrite against the new forge tick API.
+    //
+    // Disabled in 1.22 (see comment above). When re-enabled, register from HarmonySetup.ApplyPatches.
     public class HarmonyForgeIgnite
     {
-        static bool Prefix(BlockEntityForge __instance, ref bool ___burning, ref double ___lastTickTotalHours, ref float ___fuelLevel, ref ItemStack ___contents)
+        public static bool Prefix(BlockEntityForge __instance, ref bool ___burning, ref double ___lastTickTotalHours, ref float ___fuelLevel, ref ItemStack ___contents)
         {
             try
             {
@@ -55,10 +62,9 @@ namespace AncientTools
             return true;
         }
     }
-    [HarmonyPatch(typeof(BlockEntityForge), "OnPlayerInteract", MethodType.Normal)]
     public class HarmonyForgeInteract
     {
-        static void Prefix(BlockEntityForge __instance, IPlayer byPlayer)
+        public static void Prefix(BlockEntityForge __instance, IPlayer byPlayer)
         {
             try
             {

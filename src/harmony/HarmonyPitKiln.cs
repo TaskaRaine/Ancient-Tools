@@ -5,10 +5,9 @@ using Vintagestory.GameContent;
 
 namespace AncientTools
 {
-    [HarmonyPatch(typeof(BlockEntityPitKiln), "OnPlayerInteractStart", MethodType.Normal)]
     public class HarmonyPitKilnInteract
     {
-        static void Prefix(BlockEntityPitKiln __instance, IPlayer player)
+        public static void Prefix(BlockEntityPitKiln __instance, IPlayer player)
         {
             BlockEntityBehaviorFireproofFuel fireproofFuelBehavior = __instance.GetBehavior<BlockEntityBehaviorFireproofFuel>();
 

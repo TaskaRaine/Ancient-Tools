@@ -40,15 +40,15 @@
 	texturesbytype: {
 		"*-raw-*": {
 			hide: { base: "game:item/resource/hide/raw" },
-			string: { base: "game:item/tool/material/string" }
+			string: { base: "game:item/resource/string" }
 		},
 		"*-salted-*": {
 			hide: { base: "game:item/resource/hide/salted" },
-			string: { base: "game:item/tool/material/string" }
+			string: { base: "game:item/resource/string" }
 		},
 		"*-soaked-*": { 
 			hide: { base: "game:item/resource/hide/soaked" },
-			string: { base: "game:item/tool/material/string" }
+			string: { base: "game:item/resource/string" }
 		}
 	},
 	blockmaterial: "Cloth",

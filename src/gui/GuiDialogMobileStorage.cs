@@ -9,7 +9,6 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.MathTools;
-using static Vintagestory.API.Client.GuiDialogBlockEntity;
 
 namespace AncientTools.Gui
 {
@@ -233,57 +232,5 @@ namespace AncientTools.Gui
 
         }
 
-
-        public EnumPosFlag GetFreePos(string code)
-        {
-            var values = Enum.GetValues(typeof(EnumPosFlag));
-
-            int flags = 0;
-            posFlagDict().TryGetValue(code, out flags);
-
-            foreach (EnumPosFlag flag in values)
-            {
-                if ((flags & (int)flag) > 0) continue;
-
-                return flag;
-            }
-
-            return 0;
-        }
-
-        public void OccupyPos(string code, EnumPosFlag pos)
-        {
-            int flags = 0;
-            posFlagDict().TryGetValue(code, out flags);
-            posFlagDict()[code] = flags | (int)pos;
-        }
-
-        public void FreePos(string code, EnumPosFlag pos)
-        {
-            int flags = 0;
-            posFlagDict().TryGetValue(code, out flags);
-            posFlagDict()[code] = flags & ~(int)pos;
-        }
-
-        Dictionary<string, int> posFlagDict()
-        {
-            object valObj;
-            capi.ObjectCache.TryGetValue("dialogCount", out valObj);
-            Dictionary<string, int> val = valObj as Dictionary<string, int>;
-            if (val == null) capi.ObjectCache["dialogCount"] = val = new Dictionary<string, int>();
-            return val;
-        }
-
-        protected bool IsRight(EnumPosFlag flag)
-        {
-            return flag == EnumPosFlag.RightBot || flag == EnumPosFlag.RightMid || flag == EnumPosFlag.RightTop;
-        }
-
-        protected float YOffsetMul(EnumPosFlag flag)
-        {
-            if (flag == EnumPosFlag.RightTop || flag == EnumPosFlag.LeftTop) return -1;
-            if (flag == EnumPosFlag.RightBot || flag == EnumPosFlag.LeftBot) return 1;
-            return 0;
-        }
     }
 }

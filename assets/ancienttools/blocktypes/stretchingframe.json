@@ -35,7 +35,7 @@
 		"*": {
 			core: { base: "game:block/wood/debarked/{wood}" },
 			soaked: { base: "game:item/resource/hide/soaked"},
-			string: { base: "game:item/tool/material/string"},
+			string: { base: "game:item/resource/string"},
 		} 
 	},
 	blockmaterial: "Wood",

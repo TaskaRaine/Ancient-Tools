@@ -31,9 +31,15 @@
 		base: "item/resource/beam"
 	},
 	drawtype: "json",
-	textures: {
-		"side": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
-		"end": { base: "game:block/wood/treetrunk/{wood}" },
+	texturesByType: {
+		"*-veryagedrotten": {
+			"side": { base: "game:block/wood/debarked/veryaged", overlays: ["game:block/wood/debarked/rotten"], rotation: 90 },
+			"end": { base: "game:block/wood/treetrunk/veryagedrotten" },
+		},
+		"*": {
+			"side": { base: "game:block/wood/debarked/{wood}", rotation: 90 },
+			"end": { base: "game:block/wood/treetrunk/{wood}" },
+		},
 	},
 	combustibleProps: {
 		burnTemperature: 800,

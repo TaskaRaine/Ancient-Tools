@@ -1,6 +1,6 @@
 ﻿{
     code: "breechcloth",
-	class: "ItemWearable",
+	behaviors: [{ name: "Wearable" }],
 	"attributes": {
 		clothescategory: "lowerbody",
 		wearableAttachment: true,

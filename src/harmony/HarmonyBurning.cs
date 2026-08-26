@@ -7,10 +7,9 @@ using Vintagestory.GameContent;
 
 namespace AncientTools
 {
-    [HarmonyPatch(typeof(BEBehaviorBurning), "OnSlowServerTick", MethodType.Normal)]
     public class HarmonyBurningSlowTick
     {
-        static bool Prefix(BEBehaviorBurning __instance, Block ___fireBlock, Cuboidf ___fireCuboid)
+        public static bool Prefix(BEBehaviorBurning __instance, Block ___fireBlock, Cuboidf ___fireCuboid)
         {
             try
             {
@@ -29,7 +28,7 @@ namespace AncientTools
                     for (int i = 0; i < entities.Length; i++)
                     {
                         Entity entity = entities[i];
-                        if (!CollisionTester.AabbIntersect(entity.SelectionBox, entity.ServerPos.X, entity.ServerPos.Y, entity.ServerPos.Z, ___fireCuboid, ownPos)) continue;
+                        if (!CollisionTester.AabbIntersect(entity.SelectionBox, entity.Pos.X, entity.Pos.Y, entity.Pos.Z, ___fireCuboid, ownPos)) continue;
 
                         if (entity.Alive)
                         {

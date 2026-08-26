@@ -1,6 +1,6 @@
 ﻿{
 	code: "barkjerkinarmor",
-	class: "ItemWearable",
+	behaviors: [{ name: "Wearable" }],
 	heldTpIdleAnimation: "holdunderarm",
 	variantgroups: [
 		{ code: "bodypart",  states: ["body", "legs"] },

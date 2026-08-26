@@ -12,10 +12,9 @@ using Vintagestory.GameContent;
 
 namespace AncientTools
 {
-    [HarmonyPatch(typeof(BEBehaviorTemperatureSensitive), "onTick", MethodType.Normal)]
     public class RunFireproofCheck
     {
-        static bool Prefix(BEBehaviorTemperatureSensitive __instance)
+        public static bool Prefix(BEBehaviorTemperatureSensitive __instance)
         {
             try
             {

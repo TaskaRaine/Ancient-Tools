@@ -7,6 +7,7 @@
   "description": "A collection of useful tools from ancient times.",
   "version": "1.6.1",
   "dependencies": {
-    "game": "1.21.0"
+    "game": "1.22.0",
+    "survival": ""
   }
 }

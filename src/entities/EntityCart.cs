@@ -185,8 +185,8 @@ namespace AncientTools.Entities
             {
                 if (AttachedEntity != null)
                 {
-                    if (EntityTransform.DistanceTo(AttachedEntity.SidedPos) <= 20.0)
-                        SetLookAtVector(EntityTransform.XYZFloat, AttachedEntity.SidedPos.XYZFloat, AttachedEntity.LocalEyePos.ToVec3f());
+                    if (EntityTransform.DistanceTo(AttachedEntity.Pos) <= 20.0)
+                        SetLookAtVector(EntityTransform.XYZFloat, AttachedEntity.Pos.XYZFloat, AttachedEntity.LocalEyePos.ToVec3f());
                     else
                     {
                         AttachedEntity.Stats.Remove("walkspeed", "cartspeedmodifier");
@@ -206,7 +206,7 @@ namespace AncientTools.Entities
             {
                 if (AttachedEntity != null)
                 {
-                    if (EntityTransform.DistanceTo(AttachedEntity.SidedPos) > 20.0)
+                    if (EntityTransform.DistanceTo(AttachedEntity.Pos) > 20.0)
                     {
                         AttachedEntity.Stats.Remove("walkspeed", "cartspeedmodifier");
                         SyncAttachedEntity(-1);
@@ -257,7 +257,7 @@ namespace AncientTools.Entities
                 {
                     if (AttachedEntity == null)
                     {
-                        double entityDistance = EntityTransform.DistanceTo(byEntity.SidedPos);
+                        double entityDistance = EntityTransform.DistanceTo(byEntity.Pos);
 
                         if (CanAccessInClaim(byEntity as EntityPlayer, EnumBlockAccessFlags.Use))
                         {
@@ -279,7 +279,7 @@ namespace AncientTools.Entities
                                         SyncAttachedEntity(byEntity.EntityId);
 
                                     if (Api.Side == EnumAppSide.Client)
-                                        SetLookAtVector(EntityTransform.XYZFloat, AttachedEntity.SidedPos.XYZFloat, AttachedEntity.LocalEyePos.ToVec3f());
+                                        SetLookAtVector(EntityTransform.XYZFloat, AttachedEntity.Pos.XYZFloat, AttachedEntity.LocalEyePos.ToVec3f());
                                 }
                             }
                         }

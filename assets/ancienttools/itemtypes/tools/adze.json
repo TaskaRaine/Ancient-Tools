@@ -64,27 +64,27 @@
 	texturesByType: {
 		"@adze-wood-(chert|granite|andesite|basalt|obsidian|peridotite)": { 
 			"material": { base: "game:block/stone/rock/{material}1" },
-			"string": { base: "game:item/tool/material/string" },
-			"handle": { base: "game:item/tool/material/handle" }
+			"string": { base: "game:item/resource/string" },
+			"handle": { base: "game:item/tool/handle" }
 		},
 		"@adze-bone-(chert|granite|andesite|basalt|obsidian|peridotite)": { 
 			"material": { base: "game:block/stone/rock/{material}1" },
-			"string": { base: "game:item/tool/material/string" },
+			"string": { base: "game:item/resource/string" },
 			"handle": { base: "game:block/creature/bone-yellow" }
 		},
 		"adze-wood-flint": { 
 			"material": { base: "game:block/stone/{material}" },
-			"string": { base: "game:item/tool/material/string" },
-			"handle": { base: "game:item/tool/material/handle" } 
+			"string": { base: "game:item/resource/string" },
+			"handle": { base: "game:item/tool/handle" } 
 		},
 		"adze-bone-flint": { 
 			"material": { base: "game:block/stone/{material}" },
-			"string": { base: "game:item/tool/material/string" },
+			"string": { base: "game:item/resource/string" },
 			"handle": { base: "game:block/creature/bone-yellow" }
 		},
 		"@adze-wood-(copper|tinbronze|bismuthbronze|blackbronze|gold|silver|iron|meteoriciron|steel)": {
 			"metal": { base: "game:block/metal/ingot/{material}" },
-			"handle": { base: "game:item/tool/material/handle" }
+			"handle": { base: "game:item/tool/handle" }
 		}
 	},
 	maxstacksize: 1,

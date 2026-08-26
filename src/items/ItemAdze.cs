@@ -16,7 +16,6 @@ namespace AncientTools.Items
         private double strippingTime;
 
         private SimpleParticleProperties strippingWoodParticles;
-        private SimpleParticleProperties barrelWoodParticles;
 
         private bool isSneaking;
 

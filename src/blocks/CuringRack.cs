@@ -430,7 +430,7 @@ namespace AncientTools.Blocks
         {
             Block blockBelow = api.World.BlockAccessor.GetBlock(blockPos.DownCopy(), BlockLayersAccess.SolidBlocks);
 
-            if (blockBelow.BlockMaterial == EnumBlockMaterial.Air || blockBelow.BlockMaterial == EnumBlockMaterial.Liquid || blockBelow.BlockMaterial == EnumBlockMaterial.Lava || blockBelow.SideSolid[4] == false)
+            if (blockBelow.BlockMaterial == EnumBlockMaterial.Air || blockBelow.BlockMaterial == EnumBlockMaterial.Water || blockBelow.BlockMaterial == EnumBlockMaterial.Lava || blockBelow.SideSolid[4] == false)
             {
                 //-- If the block is placed over air, liquid, lava, or a block with no solid up side, render without the supports --//
                 if (rotation == "ew")

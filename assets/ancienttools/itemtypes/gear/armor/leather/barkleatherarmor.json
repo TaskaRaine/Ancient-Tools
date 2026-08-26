@@ -1,6 +1,6 @@
 ﻿{
 	code: "barkleatherarmor",
-	class: "ItemWearable",
+	behaviors: [{ name: "Wearable" }],
 	heldTpIdleAnimation: "holdunderarm",
 	variantgroups: [
 		{ code: "bodypart",  states: ["head", "body", "legs"] },

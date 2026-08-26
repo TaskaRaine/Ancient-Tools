@@ -32,7 +32,7 @@
         "*": {
             "top": { base: "game:block/wood/debarked/oak" },
             "beams": { base: "game:block/wood/debarked/{wood}" },
-            "string": { base: "game:item/tool/material/string" },
+            "string": { base: "game:item/resource/string" },
             "blackbronze2": { "base": "game:block/metal/sheet/blackbronze2"},
             "sides": { "base": "game:block/wood/bucket/sides"},
             "charred": { "base": "game:block/wood/charred"},
